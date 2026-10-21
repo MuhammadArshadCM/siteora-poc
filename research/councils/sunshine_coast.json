@@ -1,0 +1,1212 @@
+{
+  "council": "Sunshine Coast Council (Sunshine Coast Regional Council)",
+  "planning_scheme": {
+    "name": "Sunshine Coast Planning Scheme 2014",
+    "version": "Version 27 incorporating Sunshine Coast Planning Scheme (Major Amendment) No. 27 - Site Specific and Editorial Matters (Appendix 2 Table AP2.1); code PDF footers read 'Amended 23 January 2024'",
+    "version_commenced": "2024-01-23",
+    "official_urls": [
+      "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014",
+      "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014/view-the-sunshine-coast-planning-scheme-2014-text",
+      "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014/view-the-sunshine-coast-planning-scheme-2014-text/part-9-development-codes",
+      "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007615/File/document",
+      "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007638/File/document",
+      "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014/amendments-to-the-sunshine-coast-planning-scheme-2014/adopted-amendments"
+    ],
+    "notes": "The scheme commenced on 21 May 2014 (Citation and commencement: 'The commencement date for the planning scheme was 21 May 2014.'). The latest adopted amendment is No. 27 (adopted 27 July 2023, effective 23 January 2024). Neither the adopted-amendments page nor Appendix 2 lists anything later as at October 2026 (the web page was last updated 29 Sep 2026). The proposed NEW Sunshine Coast Planning Scheme was on public notification from 15 Jul to 19 Sep 2025 and is still at the submissions review / final State approval stage. Council's FAQ says: 'It is difficult to predict with any certainty how long these steps will take.' No commencement date was found, so the 2014 scheme remains in force at October 2026. TLPIs in effect: TLPI 01/2025 Accommodation Hotel Incentive Measures (from 4 Apr 2025) and TLPI 04/2025 Kawana Waters Town Centre (from 13 Apr 2026, affects DCP 1 Kawana Waters); neither targets dwelling house siting. State Priority Development Areas (e.g. Caloundra South/Aura, Maroochydore City Centre) and DCP 1 Kawana Waters (Part 10) have their own controls, which are not captured here."
+  },
+  "qdc_qhc_relationship": {
+    "summary": "Part 1 s1.6 / Table 1.6.1 says the Dwelling house code (s9.3.6) contains (i) alternative provisions to the QDC for boundary clearance (setback) and site cover for a dwelling house or a class 10 building/structure on the same lot, (ii) provisions about QDC MP1.1/1.2 performance criteria 4 and 8, and (iii) amenity and aesthetics provisions. Within the code, these AOs are tagged 'alternative provision to QDC': AO2.1(a) (6 m road setback for garages/carports/sheds in residential zones), AO3 (house road setback: 4.5 m ground storey / 6 m upper storeys), AO4.1 and AO4.2 (rural/RR/LDLR road setbacks), AO5.1 and AO5.2 (rural/RR/LDLR side and rear setbacks), AO6 (4.5 m canal setback), AO17 (Buderim, Gloucester Rd 10 m) and AO18 (Caloundra LPP-2, 6 m primary frontage). Residential zones have NO side/rear setback or site cover provisions, so QDC/QHC Part 1.1/1.2 values govern those. A dwelling house (including outbuildings) is accepted development subject to the Dwelling house code in the LDR, MDR, RR and LDLR zones. The scheme has NOT been amended to refer to the Queensland Housing Code (there is no amendment after No. 27), and council's sheds page (updated 29 Sep 2026) still cites QDC MP1.1/MP1.2. State transitional provisions (Building and Other Legislation Amendment Regulation 2026, SL 2026 No. 115) reportedly keep the former Building Regulation provisions applying to planning schemes until a scheme is amended or 1 Sept 2029. This was read only through a summarising tool and is NOT verified verbatim.",
+    "quotes": [
+      {
+        "text": "QDC alternative provisions Alternative provisions to the QDC for boundary clearance (setback) and site cover provisions for a dwelling house or a class 10 building or structure located on the same lot as a dwelling house. ... Section 9.3.6 Dwelling house code",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007637/File/document",
+        "clause": "1.6(4) Table 1.6.1 Building assessment provisions"
+      },
+      {
+        "text": "Provisions about performance criteria 4 and 8 under parts 1.1 and 1.2 of the QDC for a dwelling house or a class 10 building or structure located on the same lot as a dwelling house. ... Amenity and aesthetics provisions for a dwelling house or a class 10 building or structure located on the same lot as a dwelling house. ... Section 9.3.6 Dwelling house code",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007637/File/document",
+        "clause": "1.6(4) Table 1.6.1"
+      },
+      {
+        "text": "(c) specify alternative planning scheme provisions under section 33 of the Building Act 1975. This relates to alternative design solutions for boundary clearance and site cover provisions MP 1.1, 1.2 and 1.3 of the QDC.",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007637/File/document",
+        "clause": "1.6(3) Editor's note"
+      },
+      {
+        "text": "Note--AO2.1(a) alternative provision to QDC.",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+        "clause": "9.3.6 Table 9.3.6.3.1 AO2.1"
+      },
+      {
+        "text": "Note--AO3 alternative provision to QDC.",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+        "clause": "AO3"
+      },
+      {
+        "text": "Note--AO4.1 and AO4.2 alternative provisions to QDC.",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+        "clause": "AO4"
+      },
+      {
+        "text": "Note--AO5.1 and AO5.2 alternative provisions to QDC.",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+        "clause": "AO5"
+      },
+      {
+        "text": "Note--AO6 alternative provision to QDC.",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+        "clause": "AO6"
+      },
+      {
+        "text": "Note--AO17 alternative provision to QDC.",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+        "clause": "AO17"
+      },
+      {
+        "text": "Note--AO18.1 alternative provision to QDC.",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+        "clause": "AO18"
+      }
+    ]
+  },
+  "levels_of_assessment": [
+    {
+      "use_or_work": "Dwelling house (MCU)",
+      "zone": "Low density residential zone",
+      "level": "Accepted development (subject to requirements)",
+      "conditions": "Requirements = Dwelling house code acceptable outcomes; overlays may change the category (Table 5.10.1)",
+      "quote": "Dwelling house | Accepted development | Dwelling house code",
+      "clause": "Table 5.5.1",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407271/File/document"
+    },
+    {
+      "use_or_work": "Dwelling house (MCU)",
+      "zone": "Medium density residential zone",
+      "level": "Accepted development (subject to requirements)",
+      "conditions": "Dwelling house code",
+      "quote": "Dwelling house | Accepted development | Dwelling house code",
+      "clause": "Table 5.5.2",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407273/File/document"
+    },
+    {
+      "use_or_work": "Dwelling house (MCU)",
+      "zone": "Rural residential zone",
+      "level": "Accepted development (subject to requirements)",
+      "conditions": "Dwelling house code",
+      "quote": "Dwelling house | Accepted development | Dwelling house code",
+      "clause": "Table 5.5.20",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407294/File/document"
+    },
+    {
+      "use_or_work": "Dwelling house (MCU)",
+      "zone": "Limited development (landscape residential) zone",
+      "level": "Accepted development (subject to requirements)",
+      "conditions": "Dwelling house code",
+      "quote": "Dwelling house | Accepted development | Dwelling house code",
+      "clause": "Table 5.5.18",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407292/File/document"
+    },
+    {
+      "use_or_work": "Building work (not involving MCU), including Class 10a outbuildings associated with a dwelling house",
+      "zone": "All zones",
+      "level": "Accepted development; accepted subject to requirements; otherwise code assessment",
+      "conditions": "Accepted with no requirements if minor building work, or if associated with a use made accepted by another table. Accepted subject to the use code's AOs where that code has AOs for accepted development (the Dwelling house code does). Code assessment otherwise.",
+      "quote": "Accepted development if:- (a) involving minor building work; or (b) associated with a use that is made accepted development by another table of assessment. | No requirements applicable / Accepted development if the applicable use code identifies acceptable outcomes applicable to accepted development. | The use code applicable to the use for which the building work is to be undertaken; Transport and parking code / Code assessment if not otherwise specified above. | ... The local plan code applicable to the site on which the building work is to be undertaken; Transport and parking code",
+      "clause": "Table 5.7.1 Building work",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407299/File/document"
+    },
+    {
+      "use_or_work": "Accepted development that does not comply with AOs",
+      "zone": "All",
+      "level": "Code assessment (limited to the non-complying matters)",
+      "conditions": "",
+      "quote": "(2) Accepted development that does not comply with one or more of the relevant acceptable outcomes in the relevant parts of the applicable code(s) becomes assessable development requiring code assessment unless otherwise specified.",
+      "clause": "5.3.3(2)",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007631/File/document"
+    },
+    {
+      "use_or_work": "Any development exceeding the mapped height",
+      "zone": "All (dwelling house is not excepted)",
+      "level": "Impact assessment",
+      "conditions": "exceeds the maximum height on the Height of Buildings and Structures Overlay Map",
+      "quote": "Any development if:- (a) exceeding the maximum height specified for the site on the applicable Height of Buildings and Structures Overlay Map 13; and (b) for a use or purpose other than:- ... | Impact assessment | The planning scheme",
+      "clause": "Table 5.10.1 Height of buildings and structures overlay",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407314/File/document"
+    },
+    {
+      "use_or_work": "Building work (other than minor building work) in bushfire / flood / landslide overlay areas",
+      "zone": "All",
+      "level": "No change (the overlay code's requirements for accepted development apply)",
+      "conditions": "",
+      "quote": "Building work not associated with a material change of use, other than minor building work, if within a flood and inundation area as identified on a Flood Hazard Overlay Map. | No change | Flood hazard overlay code",
+      "clause": "Table 5.10.1",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407314/File/document"
+    },
+    {
+      "use_or_work": "Building work in a character area",
+      "zone": "All",
+      "level": "Code assessment",
+      "conditions": "external work to a character building, including extensions or structures forward of the existing front building alignment, or extensions over 10 m2 GFA that are not forward of it",
+      "quote": "Building work not associated with a material change of use if:- (a) within a character area as identified on a Heritage and Character Areas Overlay Map; and (b) involving any of the following external building work to a character building:- (i) extensions or other structures located forward of the existing front building alignment; (ii) extensions not forward of the existing front building alignment having a gross floor area exceeding 10m2; ... | Code assessment | Heritage and character areas overlay code",
+      "clause": "Table 5.10.1 Heritage and character areas overlay",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407314/File/document"
+    },
+    {
+      "use_or_work": "Building work for a dwelling house in a coastal protection area",
+      "zone": "All",
+      "level": "No change (Coastal protection overlay code AO1 applies)",
+      "conditions": "except temporary/relocatable structures or landward extensions",
+      "quote": "Building work if:- (a) within a coastal protection area as identified on a Coastal Protection Overlay Map; and (b) involving the following:- (i) a dwelling house; ... | No change | Coastal protection overlay code",
+      "clause": "Table 5.10.1",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407314/File/document"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Setback",
+      "text": "For a building or structure, the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.",
+      "clause": "Schedule 1 SC1.2",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document"
+    },
+    {
+      "term": "Site cover",
+      "text": "The proportion of the site covered by a building(s), structure(s) attached to the building(s) and carport(s), calculated to the outer most projections of the building(s) and is expressed as a percentage. The term does not include:- (a) any structure or part thereof included in a landscaped open space area such as a gazebo or shade structure; (b) basement car parking areas located wholly below ground level; (c) eaves and sun shading devices.",
+      "clause": "Schedule 1 SC1.2",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document"
+    },
+    {
+      "term": "Building height",
+      "text": "Means:- (a) if specified in metres--the vertical distance between the ground level and the highest point of the building roof (apex) or parapet at any point, but not including any load bearing antenna, aerial, chimney, flagpole or the like; (b) if specified in storeys--the number of storeys above ground level; or (c) if specified in both metres and storeys, both (a) and (b) apply. Note--Notwithstanding the definition of ground level, for the purpose of determining building height in Precinct CAL LPP-4 (Moffat Beach/Shelly Beach/Dicky Beach), ground level is the level of the land at the time the original estate was subdivided and roads created as determined by a cadastral surveyor, or if this level is not known, the natural level of the ground or probable natural level of the ground as determined by a cadastral surveyor.",
+      "clause": "Schedule 1 SC1.2",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document"
+    },
+    {
+      "term": "Ground level",
+      "text": "The level of the natural ground, or, where the level of the natural ground has been changed, the level as lawfully changed.",
+      "clause": "Schedule 1 SC1.2",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document"
+    },
+    {
+      "term": "Frontage",
+      "text": "Any boundary line, or part thereof, of a lot which coincides with the alignment of a road.",
+      "clause": "Schedule 1 SC1.2",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document"
+    },
+    {
+      "term": "Storey",
+      "text": "A space that is situated between one floor level and the floor level next above, or if there is no floor above, the ceiling or roof above, but not a space that contains only:- (a) a lift shaft, stairway or meter room; (b) a bathroom, shower room, laundry, water closet, or other sanitary compartment; or (c) a combination of the above. A mezzanine is a storey. A roofed structure on or part of a rooftop that does not solely accommodate building plant and equipment is a storey. A basement is not a storey.",
+      "clause": "Schedule 1 SC1.2",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document"
+    },
+    {
+      "term": "Basement",
+      "text": "A space that is situated between one floor level and the floor level next below where no part of the space projects more than one metre above ground level.",
+      "clause": "Schedule 1 SC1.2",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document"
+    },
+    {
+      "term": "Dwelling house",
+      "text": "A residential use of premises for one household that contains a single dwelling. The use includes out-buildings and works normally associated with a dwelling house and may include a secondary dwelling.",
+      "clause": "Schedule 1 SC1.1 use definitions",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document"
+    },
+    {
+      "term": "Dwelling house (code editor's note)",
+      "text": "Editor's note--in accordance with Schedule 1 (Definitions), a reference to a `dwelling house' in the planning scheme includes a reference to any secondary dwelling or home office associated with the dwelling house, and all outbuildings, structures and works normally associated with a dwelling house.",
+      "clause": "9.3.6 footnote 3",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document"
+    },
+    {
+      "term": "Residential zone",
+      "text": "Means each of the following zones:- (a) Low density residential zone; (b) Medium density residential zone; (c) High density residential zone; and (d) Tourist accommodation zone.",
+      "clause": "Schedule 1 SC1.2",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document"
+    },
+    {
+      "term": "Secondary dwelling",
+      "text": "A dwelling used in conjunction with, and subordinate to, a dwelling house on the same lot. A secondary dwelling may be constructed under a dwelling house, be attached to a dwelling house or be freestanding.",
+      "clause": "Schedule 1",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document"
+    },
+    {
+      "term": "Minor building work",
+      "text": "An alteration, addition or extension to an existing building(s):- (a) which results in an increase in the gross floor area, of the building(s) of less than five per cent of the gross floor area of the existing building(s) or 50m², whichever is the lesser; and (b) where the building work does not intrude into any boundary setback specified as an acceptable solution in an applicable use code.",
+      "clause": "Schedule 1 SC1.2",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document"
+    },
+    {
+      "term": "Outbuilding / Class 10 / secondary frontage / wall height",
+      "text": "NOT DEFINED in Schedule 1. No definitions were found for 'outbuilding', 'class 10', 'secondary frontage' or 'wall height'; the code uses 'garage, carport or shed' and 'any road frontage'.",
+      "clause": "Schedule 1 (searched)",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document"
+    }
+  ],
+  "rules": [
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Basis: 'Note--AO2.1(a) alternative provision to QDC.' plus Part 1 Table 1.6.1, which lists s9.3.6 as containing the QDC alternative provisions. PDF text renders the superscript 2 in 'm2' as a replacement glyph; transcribed here as 'm²'.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_garage_carport_shed_road_setback_res",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO2.1(a)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone"
+      ],
+      "structure_scope": "garage, carport or shed (Class 10a) on a lot in a residential zone; (a) also applies to a garage under the main roof (the exclusion note covers only (b) and (c))",
+      "topic": "GARAGE_CARPORT_FRONTAGE",
+      "verbatim_text": "AO2.1 Where located on a lot in a residential zone, a garage, carport or shed:- (a) is setback at least 6 metres from any road frontage; (b) does not exceed a height of 3.6 metres; and (c) has a total floor area that does not exceed 56m². Note--AO2.1(b) and (c) do not apply to a garage under the main roof of a dwelling house. Note--AO2.1(a) alternative provision to QDC.",
+      "structured": {
+        "parameter": "road_frontage_setback_garage_carport_shed",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "lot in a residential zone (LDR, MDR, HDR, Tourist accommodation)",
+          "applies to ANY road frontage (primary and secondary)"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "page_or_anchor": "Page 9-23"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Only AO2.1(a) is tagged as an alternative provision. AO2.1(b)/(c) are requirements for accepted development; if they are not met, the work becomes code assessable for that matter (s5.3.3(2)). Table 1.6.1 also lists 'Amenity and aesthetics provisions for a dwelling house or a class 10 building' as being in s9.3.6, so (b)/(c) may also act as amenity and aesthetics provisions for building assessment.",
+      "measurement_notes": "'Height' is not separately defined for this AO. Under 'Building height' (Schedule 1), a height in metres is the vertical distance between ground level and the highest point of the building roof (apex) or parapet.",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_outbuilding_max_height_res",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO2.1(b)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone"
+      ],
+      "structure_scope": "garage, carport or shed in a residential zone (not a garage under the main roof)",
+      "topic": "OUTBUILDING_SIZE",
+      "verbatim_text": "AO2.1 Where located on a lot in a residential zone, a garage, carport or shed:- ... (b) does not exceed a height of 3.6 metres; ... Note--AO2.1(b) and (c) do not apply to a garage under the main roof of a dwelling house.",
+      "structured": {
+        "parameter": "outbuilding_height",
+        "operator": "<=",
+        "value": 3.6,
+        "unit": "m",
+        "conditions": [
+          "lot in a residential zone"
+        ],
+        "exceptions": [
+          "garage under the main roof of a dwelling house"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "Page 9-23"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Need to confirm whether 'total floor area' is per building or combined. PDF text renders the superscript 2 in 'm2' as a replacement glyph; transcribed here as 'm²'.",
+      "measurement_notes": "'total floor area' is not a defined term. It is unclear whether 56 m² applies per structure or to all garages, carports and sheds on the lot combined.",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_outbuilding_max_floor_area_res",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO2.1(c)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone"
+      ],
+      "structure_scope": "garage, carport or shed in a residential zone (not a garage under the main roof)",
+      "topic": "OUTBUILDING_SIZE",
+      "verbatim_text": "AO2.1 Where located on a lot in a residential zone, a garage, carport or shed:- ... (c) has a total floor area that does not exceed 56m². Note--AO2.1(b) and (c) do not apply to a garage under the main roof of a dwelling house.",
+      "structured": {
+        "parameter": "outbuilding_total_floor_area",
+        "operator": "<=",
+        "value": 56,
+        "unit": "m2",
+        "conditions": [
+          "lot in a residential zone"
+        ],
+        "exceptions": [
+          "garage under the main roof of a dwelling house"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "Page 9-23"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Not tagged as an alternative provision. No limit on garage width relative to lot frontage is stated.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_garage_door_width_res",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO2.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone"
+      ],
+      "structure_scope": "garage doors facing a street and visible from the road frontage",
+      "topic": "GARAGE_CARPORT_FRONTAGE",
+      "verbatim_text": "AO2.2 Where located on a lot in a residential zone, the total width of a garage door facing a street (and that is visible from the road frontage) does not exceed 6 metres within any one plane, with any additional garage door being set back a further 1 metre from the street frontage to break up the apparent width of the garage facade.",
+      "structured": {
+        "parameter": "garage_door_width_per_plane",
+        "operator": "<=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "lot in a residential zone",
+          "garage door faces a street and is visible from the road frontage",
+          "any additional garage door is set back a further 1 m from the street frontage"
+        ],
+        "exceptions": [],
+        "formula_text": "total garage door width within any one plane <= 6 m; each additional garage door set back >= 1 m further than the first plane"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "Page 9-23"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Basis: 'Note--AO3 alternative provision to QDC.' There is no separate, reduced secondary-frontage setback; 'any road frontage' applies. Decks, patios and pergolas attached to the house are not addressed separately; as part of the dwelling house they would fall under AO3.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_front_setback_res",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO3",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone"
+      ],
+      "structure_scope": "dwelling house (other than a garage, carport or shed)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO3 Where located in a residential zone, the dwelling house (other than a garage, carport or shed) is setback to any road frontage at least:- (a) 4.5 metres for the ground storey; and (b) 6 metres for any levels above the ground storey. Note--AO3 alternative provision to QDC.",
+      "structured": {
+        "parameter": "road_frontage_setback_dwelling",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "ground storey >= 4.5 m",
+          "levels above the ground storey >= 6 m",
+          "applies to any road frontage, so it includes the secondary frontage on corner lots"
+        ],
+        "exceptions": [
+          "garage, carport or shed (see AO2.1(a): 6 m)"
+        ],
+        "formula_text": "ground storey >= 4.5 m; upper storeys >= 6 m from any road frontage"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "page_or_anchor": "Page 9-23"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Derived rule: the code has no separate secondary-frontage provision. Confirm whether council and certifiers accept the QDC/QHC secondary-frontage concessions on corner lots in practice.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_secondary_frontage_setback_res",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO2.1(a) and AO3",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone"
+      ],
+      "structure_scope": "dwelling house and garage/carport/shed on corner lots",
+      "topic": "SECONDARY_FRONTAGE_SETBACK",
+      "verbatim_text": "AO3 ... the dwelling house (other than a garage, carport or shed) is setback to any road frontage at least:- (a) 4.5 metres for the ground storey; and (b) 6 metres for any levels above the ground storey. / AO2.1 ... a garage, carport or shed:- (a) is setback at least 6 metres from any road frontage",
+      "structured": {
+        "parameter": "secondary_frontage_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "the code says 'any road frontage', so the same values apply to every road frontage"
+        ],
+        "exceptions": [],
+        "formula_text": "house: ground storey 4.5 m, upper storeys 6 m; garage/carport/shed: 6 m"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "page_or_anchor": "Page 9-23"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Council's sheds web page (COUNCIL_FACTSHEET, updated 29 Sep 2026) says that in residential zones side and rear boundaries are 'per Queensland Development Code MP 1.1 or MP 1.2'. So QHC Part 1.1/1.2 governs side and rear setbacks, built-to-boundary walls and site cover in residential zones.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_side_rear_setback_res_none",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 (absence)",
+      "provision_type": "OTHER",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone"
+      ],
+      "structure_scope": "dwelling house and Class 10a in residential zones",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(The Dwelling house code has no side or rear boundary setback acceptable outcome for residential zones. Side and rear setbacks AO5.1 and AO5.2 apply only to the Rural, Rural residential and Limited development (landscape residential) zones.)",
+      "structured": {
+        "parameter": "side_rear_setback",
+        "operator": "=",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "defer to QDC/QHC Part 1.1 / 1.2"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "Pages 9-23 to 9-24"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Checked the Dwelling house code and the LDR, MDR, RR and LDLR zone codes. The zone codes contain only purpose and overall outcomes, with no acceptable outcomes for dwelling houses.",
+      "measurement_notes": "A 'Site cover' definition exists in Schedule 1 but is used by other codes.",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_site_cover_none",
+      "clause": "9.3.6 (absence)",
+      "provision_type": "OTHER",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone",
+        "Rural zone",
+        "Rural residential zone",
+        "Limited development (landscape residential) zone"
+      ],
+      "structure_scope": "dwelling house including Class 10a",
+      "topic": "SITE_COVER",
+      "verbatim_text": "(Neither the Dwelling house code nor the Low density or Medium density residential zone codes has a site cover acceptable outcome.)",
+      "structured": {
+        "parameter": "site_cover",
+        "operator": "=",
+        "value": null,
+        "unit": "%",
+        "conditions": [
+          "defer to QDC/QHC"
+        ],
+        "exceptions": [
+          "Blackall Range local plan area: total footprint cap of 280 m² (AO16.2)"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "n/a"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Mapped height values were NOT verified (8.5 m is commonly cited for low density areas): the overlay maps are JavaScript/image-based. Council's sheds page (COUNCIL_FACTSHEET) mentions 'Maximum 8.5m building height' for rural and rural residential zones. Under Table 5.10.1, exceeding the mapped height makes 'Any development' impact assessable.",
+      "measurement_notes": "Building height (Schedule 1): '(a) if specified in metres--the vertical distance between the ground level and the highest point of the building roof (apex) or parapet at any point...'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_building_height_overlay",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone",
+        "Rural zone",
+        "Rural residential zone",
+        "Limited development (landscape residential) zone"
+      ],
+      "structure_scope": "dwelling house (includes outbuildings by definition)",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "AO1 The height of the dwelling house does not exceed the height specified for the site on the applicable Height of Buildings and Structures Overlay Map.",
+      "structured": {
+        "parameter": "max_building_height",
+        "operator": "<=",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "the value is site-specific, from the Height of Buildings and Structures Overlay Map (Schedule 2)"
+        ],
+        "exceptions": [
+          "flood hazard allowance under 8.2.8 PO2 (max 1 m for a dwelling house in the LDR zone)"
+        ],
+        "formula_text": "height <= OMH (mapped); in a flooding and inundation area MH = OMH + FHA, with FHA <= 1 m for a dwelling house in the LDR zone"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "Page 9-22"
+    },
+    {
+      "code": "8.2.8 Height of buildings and structures overlay code",
+      "overlay": "Flood hazard overlay (flooding and inundation area)",
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "This code applies to assessable development. Note 13 of Table 5.10.1 brings the formula into the height-exceedance trigger.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407378/File/document",
+      "rule_key": "height_overlay_flood_allowance",
+      "clause": "8.2.8.3 Table 8.2.8.3.1 PO2",
+      "provision_type": "PERFORMANCE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "structure_scope": "dwelling house / dual occupancy in the LDR zone within a flooding and inundation area",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "Despite PO1 above, for development on a site within a flooding and inundation area, as identified on a Flood Hazard Overlay Map, the maximum height of a building or structure is calculated in accordance with the following formula:- MH = OMH + FHA ... Note--for a dual occupancy or dwelling house on a site within the Low density residential zone, the flood hazard allowance calculated in accordance with the above formula is not to exceed 1 metre.",
+      "structured": {
+        "parameter": "max_height_flood_adjusted",
+        "operator": "formula",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "site is within a flooding and inundation area"
+        ],
+        "exceptions": [],
+        "formula_text": "MH = OMH + FHA; FHA = vertical difference between ground level and the minimum design floor level (Column 3B, Table 8.2.7.3.3); for a dwelling house in the LDR zone, FHA <= 1 m"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "Page 8-44"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lot with a boundary adjacent to a canal or artificial waterway/waterbody",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Basis: 'Note--AO6 alternative provision to QDC.' In practice this also controls raised pools, decks, sheds and pergolas near canal boundaries.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_canal_setback",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO6",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone",
+        "Rural zone",
+        "Rural residential zone",
+        "Limited development (landscape residential) zone"
+      ],
+      "structure_scope": "buildings and structures more than 1 m above ground level, including pools and decks; excludes pool fencing that is at least 75% transparent",
+      "topic": "POOL_SETBACK",
+      "verbatim_text": "AO6 Buildings and structures exceeding 1 metre in height above ground level (other than pool fencing which is at least 75% transparent) are setback a minimum of 4.5 metres from the property boundary adjacent to the canal or artificial waterway/waterbody. Note--AO6 alternative provision to QDC.",
+      "structured": {
+        "parameter": "canal_waterway_boundary_setback",
+        "operator": ">=",
+        "value": 4.5,
+        "unit": "m",
+        "conditions": [
+          "structure is more than 1 m above ground level",
+          "boundary is adjacent to a canal or artificial waterway/waterbody (e.g. lakes)"
+        ],
+        "exceptions": [
+          "pool fencing at least 75% transparent",
+          "structures not more than 1 m above ground level"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "page_or_anchor": "Page 9-24"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lot area > 2 ha",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_rural_large_road_setback",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO4.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural zone"
+      ],
+      "structure_scope": "dwelling house including any associated garage, carport or shed",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO4.1 Where located on a lot in the Rural zone, and the lot has an area of more than 2 hectares, the dwelling house (including any associated garage, carport or shed) is set back at least:- (a) 40 metres from a State controlled road or an extractive industry transport route; (b) 20 metres from any other road; or (c) if an extension not exceeding 50m2 gross floor area and within, under or structurally part of an existing dwelling house, the setback of the existing dwelling house on the site. Note--AO4.1 and AO4.2 alternative provisions to QDC.",
+      "structured": {
+        "parameter": "road_setback_rural_large",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "40 m from a State-controlled road or extractive industry transport route",
+          "20 m from any other road"
+        ],
+        "exceptions": [
+          "extension <= 50 m² GFA within, under or structurally part of the existing house: existing setback"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "page_or_anchor": "Page 9-23"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "Rural zone lot area <= 2 ha; any lot in the RR or LDLR zone",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_rural_small_rr_ldlr_road_setback",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO4.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural zone",
+        "Rural residential zone",
+        "Limited development (landscape residential) zone"
+      ],
+      "structure_scope": "dwelling house including any associated garage, carport or shed",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO4.2 Where located on a lot in the Rural zone, and the lot has an area of not more than 2 hectares, or where located on a lot in the Rural residential zone or the Limited development (landscape residential) zone, the dwelling house (including any associated garage, carport or shed) is set back at least:- (a) 10 metres from any road frontage; or (b) if an extension not exceeding 50m2 gross floor area and within, under or structurally part of an existing dwelling house, the setback of the existing dwelling house on the site. Note--AO4.1 and AO4.2 alternative provisions to QDC.",
+      "structured": {
+        "parameter": "road_setback_rural_residential",
+        "operator": ">=",
+        "value": 10,
+        "unit": "m",
+        "conditions": [
+          "any road frontage"
+        ],
+        "exceptions": [
+          "extension <= 50 m² GFA within, under or structurally part of the existing house: existing setback"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "page_or_anchor": "Pages 9-23 to 9-24"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Applies to both side AND rear boundaries.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_rural_side_rear_setback",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO5.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural zone"
+      ],
+      "structure_scope": "dwelling house including any associated garage, carport or shed",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO5.1 Where located on a lot in the Rural zone, the dwelling house (including any associated garage, carport or shed) is set back from any side or rear boundary at least:- (a) 3 metres where the lot has an area of 2 hectares or less; or (b) 10 metres where the lot has an area of more than 2 hectares. Note--AO5.1 and AO5.2 alternative provisions to QDC.",
+      "structured": {
+        "parameter": "side_rear_setback_rural",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "lot <= 2 ha: >= 3 m",
+          "lot > 2 ha: >= 10 m"
+        ],
+        "exceptions": [],
+        "formula_text": "side and rear >= 3 m (lot <= 2 ha) or >= 10 m (lot > 2 ha)"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "page_or_anchor": "Page 9-24"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Applies to both side AND rear boundaries.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_rr_ldlr_side_rear_setback",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO5.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural residential zone",
+        "Limited development (landscape residential) zone"
+      ],
+      "structure_scope": "dwelling house including any associated garage, carport or shed",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO5.2 Where located on a lot in the Rural residential zone or Limited development (landscape residential) zone, the dwelling house (including any associated garage, carport or shed) is setback at least 3 metres from any side or rear boundary. Note--AO5.1 and AO5.2 alternative provisions to QDC.",
+      "structured": {
+        "parameter": "side_rear_setback_rr",
+        "operator": ">=",
+        "value": 3,
+        "unit": "m",
+        "conditions": [
+          "side and rear boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "page_or_anchor": "Page 9-24"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": "Blackall Range local plan area",
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "",
+      "measurement_notes": "Storey and Building height are defined in Schedule 1 (a basement is not a storey).",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_blackall_range_storeys",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO16.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "all zones in the Blackall Range local plan area"
+      ],
+      "structure_scope": "dwelling house",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "Additional Requirements for Dwelling Houses in Certain Areas and Precincts / Blackall Range Local Plan Area ... AO16.1 The height of the dwelling house does not exceed 2 storeys.",
+      "structured": {
+        "parameter": "max_storeys",
+        "operator": "<=",
+        "value": 2,
+        "unit": "storeys",
+        "conditions": [
+          "Blackall Range local plan area"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "Page 9-27"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": "Blackall Range local plan area",
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Not tagged as an alternative provision. This is an absolute footprint cap, not a percentage site cover. PDF text renders the superscript 2 in 'm2' as a replacement glyph; transcribed here as 'm²'.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_blackall_range_footprint",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO16.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "all zones in the Blackall Range local plan area"
+      ],
+      "structure_scope": "dwelling house including any associated garage, carport or shed",
+      "topic": "SITE_COVER",
+      "verbatim_text": "AO16.2 The total footprint of the dwelling house, including any associated garage, carport or shed, does not exceed 280m².",
+      "structured": {
+        "parameter": "total_footprint",
+        "operator": "<=",
+        "value": 280,
+        "unit": "m2",
+        "conditions": [
+          "Blackall Range local plan area"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "Page 9-27"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": "Buderim local plan - Precinct BUD LPP-1 (Gloucester Road South), Local Plan Map LPM32",
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_buderim_gloucester_rd_setback",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO17",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "structure_scope": "dwelling house including any garage, carport or shed",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO17 The dwelling house (including any garage, carport or shed) is setback at least 10 metres from Gloucester Road. Note--AO17 alternative provision to QDC.",
+      "structured": {
+        "parameter": "setback_to_gloucester_road",
+        "operator": ">=",
+        "value": 10,
+        "unit": "m",
+        "conditions": [
+          "Precinct BUD LPP-1"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "page_or_anchor": "Page 9-27"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": "Caloundra local plan - Precinct CAL LPP-2 (Moffat Beach/Shelly Beach/Dicky Beach), Local Plan Map LPM45",
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "The note refers to 'AO18.1' although the AO is numbered AO18 (a drafting inconsistency). 'Primary street frontage' is not defined.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_caloundra_lpp2_front_setback",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO18",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone"
+      ],
+      "structure_scope": "dwelling house including any garage, carport or shed",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO18 The dwelling house (including any garage, carport or shed) is setback a minimum of 6 metres from the primary street frontage. Note--AO18.1 alternative provision to QDC.",
+      "structured": {
+        "parameter": "primary_street_setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "Precinct CAL LPP-2",
+          "primary street frontage only (a secondary frontage falls back to AO3/AO2.1)"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "page_or_anchor": "Page 9-27"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": "Appears under the Caloundra local plan Precinct CAL LPP-2 heading (to verify)",
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Not Class 10a. Included because PO19/AO19 follow the CAL LPP-2 heading with no new heading; the area it applies to needs confirming.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_secondary_dwelling_lpp2",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO19.1, AO19.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone"
+      ],
+      "structure_scope": "secondary dwelling",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "AO19.1 Any secondary dwelling has a maximum gross floor area of 45m2. AO19.2 Any secondary dwelling does not exceed 4 metres in height from ground level.",
+      "structured": {
+        "parameter": "secondary_dwelling_height",
+        "operator": "<=",
+        "value": 4,
+        "unit": "m",
+        "conditions": [
+          "secondary dwelling; GFA <= 45 m2"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "Page 9-28"
+    },
+    {
+      "code": "9.3.6 Dwelling house code",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document",
+      "rule_key": "dh_filling_excavation",
+      "clause": "9.3.6.3 Table 9.3.6.3.1 AO15",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone",
+        "Rural zone",
+        "Rural residential zone",
+        "Limited development (landscape residential) zone"
+      ],
+      "structure_scope": "filling or excavation associated with a dwelling house (including outbuildings and pools)",
+      "topic": "OTHER",
+      "verbatim_text": "AO15 Except where located on a site having a slope of greater than 15% as identified on an applicable Landslide Hazard and Steep Land Overlay Map:- (a) the extent of excavation (cut) or fill does not involve a total change of more than 1.0 metre relative to ground level at any point; and (b) no part of any un-retained cut or fill batter is within 1.5 metres of any property boundary except cut and fill involving a change in ground level of less than 200mm. OR Filling and/or excavation is confined to within the plan area of the dwelling house with ground level being retained around external walls of the building. OR Where on a lot in an identified drainage deficient area, filling is undertaken in accordance with a current drainage deficient area flood information certificate issued by the Council for the site.",
+      "structured": {
+        "parameter": "cut_fill_depth",
+        "operator": "<=",
+        "value": 1.0,
+        "unit": "m",
+        "conditions": [
+          "no un-retained batter within 1.5 m of a boundary unless the change is < 200 mm"
+        ],
+        "exceptions": [
+          "slope > 15% on the Landslide overlay map",
+          "cut/fill confined to the plan area of the house",
+          "drainage deficient area certificate"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "Pages 9-26 to 9-27"
+    },
+    {
+      "code": "8.2.5 Coastal protection overlay code",
+      "overlay": "Coastal protection overlay - coastal protection area",
+      "local_plan": null,
+      "lot_conditions": "site within a coastal protection area; the second limb applies where there is no coastal building line and the site adjoins the beachfront or a beachfront reserve",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 5.10.1: building work for a dwelling house in a coastal protection area is 'No change' to the category of assessment, but this overlay code's requirements apply.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407375/File/document",
+      "rule_key": "coastal_dh_seaward_setback",
+      "clause": "8.2.5.3 Table 8.2.5.3.1 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "all zones"
+      ],
+      "structure_scope": "all buildings and permanent structures of a dwelling house, including swimming pools and retaining walls",
+      "topic": "POOL_SETBACK",
+      "verbatim_text": "AO1 All buildings and other permanent structures are located landward of the coastal building line for the site. ... OR Where there is no coastal building line for the site, and the site adjoins the beachfront or a beachfront reserve, all buildings and permanent structures are located:- (a) landward or equal to the seaward alignment of any buildings on neighbouring properties; or (b) where there are no neighbouring properties, at least 6 metres from the seaward property boundary of the site. Note--`permanent structures' include swimming pools and retaining walls.",
+      "structured": {
+        "parameter": "seaward_setback",
+        "operator": "conditional",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "landward of the declared coastal building line; otherwise landward of or equal to the neighbours' seaward alignment; otherwise >= 6 m from the seaward boundary"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "Table 8.2.5.3.1"
+    },
+    {
+      "code": "Schedule 1 Definitions",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Minor building work is accepted development with no requirements (Table 5.7.1) and is excluded from the bushfire, flood and landslide overlay building-work triggers. PDF text renders the superscript 2 in 'm2' as a replacement glyph; transcribed here as 'm²'.",
+      "measurement_notes": "Setback per Schedule 1: 'the shortest distance measured horizontally from the outermost projection of a building or structure to the vertical projection of the boundary of the lot.'",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document",
+      "rule_key": "minor_building_work_definition",
+      "clause": "SC1.2 'Minor building work'",
+      "provision_type": "DEFINITION",
+      "zones": [
+        "all zones"
+      ],
+      "structure_scope": "alterations, additions or extensions to existing buildings",
+      "topic": "OTHER",
+      "verbatim_text": "Minor building work: An alteration, addition or extension to an existing building(s):- (a) which results in an increase in the gross floor area, of the building(s) of less than five per cent of the gross floor area of the existing building(s) or 50m², whichever is the lesser; and (b) where the building work does not intrude into any boundary setback specified as an acceptable solution in an applicable use code.",
+      "structured": {
+        "parameter": "minor_building_work_gfa_increase",
+        "operator": "<",
+        "value": null,
+        "unit": "m2",
+        "conditions": [
+          "< the lesser of 5% of existing GFA or 50 m²",
+          "does not intrude into AO boundary setbacks"
+        ],
+        "exceptions": [],
+        "formula_text": "increase < min(0.05 * existing GFA, 50 m²)"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "page_or_anchor": "Page SC1-35"
+    },
+    {
+      "code": "Council webpage: Sheds (Class 10a)",
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "verification_status": "COUNCIL_FACTSHEET",
+      "needs_manual_review": true,
+      "notes": "This council page was updated on 29 Sep 2026, after the QHC commenced, but still cites QDC MP 1.1/MP 1.2 rather than the Queensland Housing Code. It was fetched through a summarising tool, so some wording may be paraphrased.",
+      "measurement_notes": "",
+      "source_url": "https://sunshinecoast.qld.gov.au/development/building/sheds",
+      "rule_key": "factsheet_sheds_residential",
+      "clause": "n/a",
+      "provision_type": "OTHER",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Tourist accommodation zone"
+      ],
+      "structure_scope": "sheds, garages, carports (Class 10a)",
+      "topic": "OTHER",
+      "verbatim_text": "(via WebFetch summary) 'not exceed a height of 3.6 metres' and 'have a total floor area that does not exceed 56m²'; 'at least 6 metres from any road frontage property boundary'; Side and rear boundaries per Queensland Development Code MP 1.1 or MP 1.2; Reference Standards: Queensland Development Code MP 1.1 (lots under 450m²) and MP 1.2 (450m² and over); rural: 'Maximum 8.5m building height'",
+      "structured": {
+        "parameter": "n/a",
+        "operator": "=",
+        "value": null,
+        "unit": null,
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "UNKNOWN",
+      "page_or_anchor": "Last updated 29 September 2026"
+    }
+  ],
+  "overlays_affecting_siting": [
+    {
+      "overlay": "Height of buildings and structures overlay",
+      "code": "8.2.8 Height of buildings and structures overlay code",
+      "effect": "Sets a mapped maximum height for each site (Dwelling house code AO1 refers to it); adds a flood hazard allowance formula; exceeding the mapped height triggers impact assessment",
+      "quote": "MH = OMH + FHA ... Note--for a dual occupancy or dwelling house on a site within the Low density residential zone, the flood hazard allowance calculated in accordance with the above formula is not to exceed 1 metre.",
+      "clause": "8.2.8.3 PO2",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407378/File/document"
+    },
+    {
+      "overlay": "Coastal protection overlay (coastal protection area)",
+      "code": "8.2.5 Coastal protection overlay code",
+      "effect": "Requirement for accepted development: buildings and permanent structures (including pools and retaining walls) must be landward of the coastal building line or the neighbours' alignment, otherwise 6 m from the seaward boundary",
+      "quote": "where there are no neighbouring properties, at least 6 metres from the seaward property boundary of the site. Note--`permanent structures' include swimming pools and retaining walls.",
+      "clause": "Table 8.2.5.3.1 AO1",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407375/File/document"
+    },
+    {
+      "overlay": "Heritage and character areas overlay (character areas)",
+      "code": "8.2.9 Heritage and character areas overlay code",
+      "effect": "Makes some building work code assessable; setback consistency is only a performance outcome (no numeric AO)",
+      "quote": "PO3 Development provides front boundary setbacks that ensure new additions and works are consistent in alignment with adjoining lots.",
+      "clause": "8.2.9 character area provisions",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407379/File/document"
+    },
+    {
+      "overlay": "Flood hazard overlay",
+      "code": "8.2.7 Flood hazard overlay code",
+      "effect": "Not a setback rule: habitable floor levels must be 500 mm above DFE/DSTE; the overlay also enables the height allowance",
+      "quote": "AO1 The finished floor level of all habitable rooms is at least 500mm above the defined flood event (DFE) and defined storm tide event (DSTE).",
+      "clause": "Table 8.2.7.3.1 AO1",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407377/File/document"
+    }
+  ],
+  "local_plan_mechanism": {
+    "summary": "Local plan codes (Part 7) apply only to assessable development. For dwelling houses, local-plan-specific siting rules are written directly into the Dwelling house code under 'Additional Requirements for Dwelling Houses in Certain Areas and Precincts' (PO16-PO19: Blackall Range, Buderim BUD LPP-1, Caloundra CAL LPP-2), and some are tagged as alternative provisions to the QDC. Local plan categories of assessment (s5.9) override zone categories (s5.3.2(8)), but none of those checked changes the assessment of a dwelling house. Structure plans and approved plans of development can also vary dwelling house requirements (9.3.6 footnote 4).",
+    "examples": [
+      {
+        "plan": "Buderim local plan code - Precinct BUD LPP-1 (Gloucester Road South)",
+        "quote": "Development in the Low density residential zone in Precinct BUD LPP-1 (Gloucester Road South) where identified on Local Plan Map LPM32:- (a) does not provide for the creation of any additional lots; (b) provides for all buildings and structures to be set back at least 10 metres from Gloucester Road; and (c) blends development into the landscape so as to retain the integrity of the open streetscape in this part of Buderim.",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407345/File/document"
+      },
+      {
+        "plan": "Dwelling house code - Caloundra CAL LPP-2",
+        "quote": "AO18 The dwelling house (including any garage, carport or shed) is setback a minimum of 6 metres from the primary street frontage. Note--AO18.1 alternative provision to QDC.",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document"
+      },
+      {
+        "plan": "Dwelling house code footnote 4 (structure plans / plans of development)",
+        "quote": "Editor's note--a Structure Plan, as varied by an approved master plan or an approved plan of development for a variation approval or reconfiguring a lot, may vary or specify alternative requirements for accepted development or performance outcomes and acceptable outcomes for assessable development for a dwelling house. In such cases, compliance with these alternative requirements ... will be deemed to represent compliance with the comparable provisions of the Dwelling house code.",
+        "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document"
+      }
+    ]
+  },
+  "open_questions": [
+    "The mapped maximum heights (Height of Buildings and Structures Overlay Maps, Schedule 2) were not fetched because the maps are JavaScript/image only. The 8.5 m commonly cited for low density areas is UNVERIFIED; the only mention found is on a council web page, for rural zones.",
+    "Whether the AO2.1(c) 56 m2 'total floor area' applies per structure or to all garages, carports and sheds on the lot combined.",
+    "Which area PO19/AO19 (secondary dwelling, 45 m2 / 4 m) applies to: it appears under the CAL LPP-2 heading.",
+    "The scheme has not yet been amended to reference the Queensland Housing Code. The State transitional provisions (SL 2026 No. 115) need to be confirmed verbatim, specifically how the 'alternative provision to QDC' notes map to QHC Part 1.1/1.2 until 1 Sept 2029.",
+    "Pool setbacks: the scheme has no pool provision for residential lots apart from the AO6 canal setback (structures over 1 m) and coastal overlay AO1. Pool siting otherwise follows the QHC / Building Regulation.",
+    "Plans of development and structure plans (Palmview, Kawana DCP 1, State PDAs such as Caloundra South) may set different siting rules; these are not covered.",
+    "The Low and Medium density residential zone codes contain only purpose and overall outcomes, with no numeric siting AOs. The High density and Tourist accommodation zones were not checked in depth."
+  ],
+  "fetch_log": [
+    "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014/amendments-to-the-sunshine-coast-planning-scheme-2014/adopted-amendments -> latest is No. 27, effective 23 Jan 2024; no 2025/2026 amendments",
+    "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/new-sunshine-coast-planning-scheme/frequently-asked-questions -> consultation completed 19 Sep 2025; no commencement date",
+    "https://haveyoursay.sunshinecoast.qld.gov.au/newplanningscheme/frequently-asked-questions -> timing 'difficult to predict'",
+    "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014/view-the-sunshine-coast-planning-scheme-2014-text (curl) -> section pages with publicdocs PDF links",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007638/File/document -> citation and commencement, 21 May 2014",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007615/File/document -> Appendix 2 Table of amendments, Version 27, 'Amended 23 January 2024'",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document -> 9.3.6 Dwelling house code PDF, full text extracted (pdftotext)",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007637/File/document -> Part 1 s1.6 Table 1.6.1",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007631/File/document -> Part 5 preliminary s5.3.3",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407271/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407273/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407294/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407292/File/document -> Dwelling house rows in the zone tables of assessment",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407299/File/document -> Table 5.7.1 Building work",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407314/File/document -> Table 5.10.1 Overlays",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407378/File/document -> 8.2.8 Height overlay code",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407375/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407377/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407379/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407374/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407380/File/document -> overlay codes (coastal, flood, heritage, bushfire, landslide)",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407316/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407317/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407336/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407334/File/document -> LDR/MDR/RR/LDLR zone codes: no numeric siting AOs",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document -> Schedule 1 definitions",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407345/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407346/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407361/File/document, https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407349/File/document -> local plan codes (Buderim, Caloundra, Mooloolaba, Coolum)",
+    "Local plan tables 5.9.1-5.9.12 (Records 22407301-22407313) -> no change for dwelling house found",
+    "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014/view-the-sunshine-coast-planning-scheme-2014-maps (and local-plan-map-tiles) -> JavaScript only; no map PDFs retrievable",
+    "https://www.sunshinecoast.qld.gov.au/development-advice/building/sheds -> 404; https://sunshinecoast.qld.gov.au/development/building/sheds -> council sheds page (updated 29 Sep 2026)",
+    "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/temporary-local-planning-instruments -> TLPI 01/2025, TLPI 04/2025",
+    "https://www.legislation.qld.gov.au/view/whole/html/asmade/sl-2026-0115 -> transitional provisions available only as a summary, not verbatim"
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "_doc": "Council zoning map services, each tested with a point query on 9 Oct 2026 (no login needed). Fields name the attributes holding zone / precinct / local plan / local-plan precinct text. precinct_layer: precincts live on a separate layer. null_values: strings that mean 'none'. local_plan_layer / local_plan_precinct_layer: neighbourhood plans on separate layers (precinct matched by code, e.g. NPP-001). overlay_layers: overlay polygons; 'map' turns the field text into regs.overlays ids. scheme_viewer: the council's official planning-scheme website (for people; not queried).",
+  "BRISBANE": {
+    "status": "WORKING",
+    "zone_layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Zoning_opendata/FeatureServer/0",
+    "zone_field": "LVL2_ZONE",
+    "precinct_field": "ZONE_PREC",
+    "notes": "Brisbane City Plan 2014 open data (edited 2026-09-17). LVL2_ZONE carries the precinct in brackets, e.g. 'Character residential (Character)'. The zoning layer's NP / NP_PREC fields are empty or repeat the zone precinct (checked 12 Oct 2026), so neighbourhood plans come from the separate NP boundary / precinct layers. Overlays: Traditional building character (sub-category in OVL2_DESC) and Dwelling house character. Not looked up: Pre-1911 building, flood, heritage and other overlays.",
+    "local_plan_layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Neighbourhood_Plan_boundaries/FeatureServer/0",
+    "local_plan_layer_field": "LP",
+    "local_plan_precinct_layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Neighbourhood_Plan_precints/FeatureServer/0",
+    "local_plan_precinct_code_field": "LP_PREC_CODE",
+    "overlay_layers": [
+      {
+        "name": "Traditional building character overlay",
+        "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Traditional_building_character_overlay/FeatureServer/0",
+        "field": "OVL2_DESC",
+        "map": {
+          "Neighbourhood character": [
+            "BCC:OV:TRADITIONAL_BUILDING_CHARACTER_OVERLAY",
+            "BCC:OV:TRADITIONAL_BUILDING_CHARACTER_OVERLAY_NOT_LOCAL_CHARACTER_SIGNIFICANCE_SUB_CATEGORY"
+          ],
+          "Local character significance": [
+            "BCC:OV:TRADITIONAL_BUILDING_CHARACTER_OVERLAY",
+            "BCC:OV:TRADITIONAL_BUILDING_CHARACTER_OVERLAY_LOCAL_CHARACTER_SIGNIFICANCE_SUB_CATEGORY"
+          ]
+        }
+      },
+      {
+        "name": "Dwelling house character overlay",
+        "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Dwelling_house_character_overlay/FeatureServer/0",
+        "field": "OVL2_DESC",
+        "map": {
+          "Dwelling house character": [
+            "BCC:OV:DWELLING_HOUSE_CHARACTER_OVERLAY"
+          ]
+        }
+      }
+    ],
+    "scheme_viewer": "https://cityplan.brisbane.qld.gov.au/eplan"
+  },
+  "GOLD_COAST": {
+    "status": "WORKING",
+    "zone_layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/4",
+    "zone_field": "LVL1_ZONE",
+    "precinct_field": "ZONE_PRECINCT",
+    "null_values": [
+      "None"
+    ],
+    "notes": "City Plan Version 13 open data; the scheme in force is Version 14 (no V14 zone layer published) — check for zoning changes. Overlays (tested 15 Oct 2026): City Plan V13 open data FeatureServer (CC BY 4.0, last edit 2026-06-01), except road widening from the council's V14 MapServer (maps1). Building height: HEIGHT_IN_METRES ('9m', '15m'…; 'HX' and PDA/Spit text give no number).",
+    "overlay_layers": [
+      {
+        "name": "Ridges and significant hills protection overlay",
+        "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/116",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": [
+            "CGC:OV:RIDGES_AND_SIGNIFICANT_HILLS_PROTECTION_OVERLAY",
+            "CGC:OV:RIDGES_AND_SIGNIFICANT_HILLS_PROTECTION_OVERLAY_RIDGES_AND_SIGNIFICANT_HILLS_AREA"
+          ]
+        }
+      },
+      {
+        "name": "Coastal erosion hazard overlay - foreshore seawall site",
+        "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/40",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": [
+            "CGC:OV:COASTAL_EROSION_HAZARD_OVERLAY",
+            "CGC:OV:COASTAL_EROSION_HAZARD_OVERLAY_FORESHORE_SEAWALL"
+          ]
+        }
+      },
+      {
+        "name": "Coastal erosion hazard overlay - foreshore seawall setback",
+        "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/39",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": [
+            "CGC:OV:COASTAL_EROSION_HAZARD_OVERLAY",
+            "CGC:OV:COASTAL_EROSION_HAZARD_OVERLAY_FORESHORE_SEAWALL"
+          ]
+        }
+      },
+      {
+        "name": "Coastal erosion hazard overlay - waterfront development control area",
+        "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/41",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": [
+            "CGC:OV:COASTAL_EROSION_HAZARD_OVERLAY",
+            "CGC:OV:COASTAL_EROSION_HAZARD_OVERLAY_WATERFRONT_DEVELOPMENT_CONTROL_AREA"
+          ]
+        }
+      },
+      {
+        "name": "Road widening overlay (City Plan V14)",
+        "layer": "https://maps1.goldcoast.qld.gov.au/arcgis/rest/services/CityPlanV14_ExtractiveResourcesandRoadWidening/MapServer/3",
+        "field": "Infrastructure",
+        "map": {
+          "*": [
+            "CGC:OV:ROAD_WIDENING_OVERLAY",
+            "CGC:OV:ROAD_WIDENING_OVERLAY_ROAD_WIDENING_REQUIREMENT_AREA"
+          ]
+        }
+      },
+      {
+        "name": "Mudgeeraba Village character overlay",
+        "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/102",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": [
+            "CGC:OV:MUDGEERABA_VILLAGE_CHARACTER_OVERLAY",
+            "CGC:OV:MUDGEERABA_VILLAGE_CHARACTER_OVERLAY_MUDGEERABA_VILLAGE_CHARACTER_AREA"
+          ]
+        }
+      },
+      {
+        "name": "Flood overlay - flood assessment required",
+        "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/81",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": [
+            "CGC:OV:FLOOD_OVERLAY",
+            "CGC:OV:FLOOD_OVERLAY_FLOOD_ASSESSMENT_REQUIRED_AREA"
+          ]
+        }
+      },
+      {
+        "name": "Water supply buffer area",
+        "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/127",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": [
+            "CGC:OV:WATER_CATCHMENTS_AND_DUAL_SUPPLY_SYSTEM_AREA_OVERLAY",
+            "CGC:OV:WATER_CATCHMENTS_AND_DUAL_SUPPLY_SYSTEM_AREA_OVERLAY_WATER_SUPPLY_BUFFER_AREA"
+          ]
+        }
+      },
+      {
+        "name": "Building height overlay",
+        "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/33",
+        "field": "HEIGHT_IN_METRES",
+        "map": {
+          "*": [
+            "CGC:OV:DWELLING_HOUSE_OVERLAY_BUILDING_HEIGHT_OVERLAY_MAP"
+          ]
+        },
+        "value_fact": "mapped_max_height_m"
+      }
+    ],
+    "scheme_viewer": "https://cityplan.goldcoast.qld.gov.au/eplan"
+  },
+  "MORETON_BAY": {
+    "status": "WORKING",
+    "zone_layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/ZM_Zones_WebMercator_OpenData/FeatureServer/0",
+    "zone_field": "LVL1_ZONE",
+    "precinct_field": "ZONE_PREC",
+    "local_plan_field": "LP",
+    "local_plan_precinct_field": "LP_PREC",
+    "notes": "Parcel-based zone polygons; last edited Oct 2024 — may lag recent amendments. Overlays (tested 15 Oct 2026): council open data on ArcGIS Online, CC BY 4.0 (building heights Oct 2021; others 2016 versions, edited 2022). Building height parsed from OVL2_DESC ('Max 8.5m'); OVL2_CAT has a data error. North Lakes Locality is outside the scheme overlays (zoning returns 'Not applicable'). Local plan precincts come from LP / LP_PREC; Caboolture West sub-precincts (e.g. Next generation) are not in any public queryable layer. Changes since Oct 2024 are by TLPI (PlanningScheme_Temporary_Local_Planning_Instruments) — not looked up.",
+    "overlay_layers": [
+      {
+        "name": "Building heights overlay",
+        "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/OM_Building_Heights_WebMercator_OpenData/FeatureServer/0",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": [
+            "CMB:OV:BUILDING_HEIGHTS"
+          ]
+        },
+        "value_fact": "mapped_max_height_m"
+      },
+      {
+        "name": "Bushfire hazard overlay",
+        "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/MBRC_PlanningScheme_OM_BushfireHazard/FeatureServer/0",
+        "field": "OVL2_CAT",
+        "map": {
+          "*": [
+            "CMB:OV:BUSHFIRE_HAZARD"
+          ]
+        }
+      },
+      {
+        "name": "Riparian and wetland setbacks overlay",
+        "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/OM_Riparian_Wetland_Setbacks_WebMercator_OpenData/FeatureServer/0",
+        "field": "OVL2_CAT",
+        "map": {
+          "*": [
+            "CMB:OV:RIPARIAN_AND_WETLAND_SETBACKS"
+          ]
+        }
+      },
+      {
+        "name": "Infrastructure buffers overlay",
+        "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/OM_Infrastructure_Buffers_polygons_WebMercator_OpenData/FeatureServer/0",
+        "field": "OVL2_CAT",
+        "map": {
+          "INF_WS4": [
+            "CMB:OV:INFRASTRUCTURE_BUFFERS",
+            "CMB:OV:INFRASTRUCTURE_BUFFERS_400M_LAKE_BUFFER"
+          ],
+          "*": [
+            "CMB:OV:INFRASTRUCTURE_BUFFERS"
+          ]
+        }
+      },
+      {
+        "name": "Coastal hazard overlay (erosion prone area)",
+        "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/MBRC_PlanningScheme_OM_CoastalHazardErosion/FeatureServer/0",
+        "field": "OVL2_CAT",
+        "map": {
+          "*": [
+            "CMB:OV:COASTAL_HAZARD_EROSION_PRONE_AREA"
+          ]
+        }
+      },
+      {
+        "name": "Heritage and landscape character overlay",
+        "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/MBRC_PlanningScheme_HeritageAreas/FeatureServer/0",
+        "field": "OVL2_CAT",
+        "map": {
+          "*": [
+            "CMB:OV:HERITAGE_AND_LANDSCAPE_CHARACTER"
+          ]
+        }
+      },
+      {
+        "name": "Scenic amenity overlay",
+        "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/MBRC_PlanningScheme_ScenicAmenityOverlay/FeatureServer/0",
+        "field": "OVL2_CAT",
+        "map": {
+          "SCN_RIZ": [
+            "CMB:OV:SCENIC_AMENITY_REGIONALLY_SIGNIFICANT_HILLS"
+          ],
+          "SCN_LIZ": []
+        }
+      }
+    ],
+    "scheme_viewer": "https://eplan.moretonbay.qld.gov.au/"
+  },
+  "SUNSHINE_COAST": {
+    "status": "WORKING",
+    "zone_layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Zoning_SCC/MapServer/5",
+    "zone_field": "LABEL",
+    "precinct_layers": [
+      "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Zoning_SCC/MapServer/1",
+      "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Zoning_SCC/MapServer/2",
+      "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Zoning_SCC/MapServer/3"
+    ],
+    "precinct_layer_field": "LABEL",
+    "notes": "Layer carries no version/date. Overlays and local plans (tested 15 Oct 2026): council MapServers Overlays_SCC / Boundaries_SCC on geoimage.scc.qld.gov.au (current amended scheme; CC BY 3.0 AU). Height from LABEL ('8.5 metres'; 'Unspecified maximum height' gives no number). Do not use the 2024 OpenData copy (lags amendments) or the 'scrcpublic' layers (proposed 2025 scheme, not in force).",
+    "local_plan_layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Boundaries_SCC/MapServer/3",
+    "local_plan_layer_field": "LAPNAME",
+    "local_plan_precinct_layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Boundaries_SCC/MapServer/6",
+    "local_plan_precinct_code_field": "Precinct_Code",
+    "local_plan_precinct_name_field": "PrecinctName",
+    "overlay_layers": [
+      {
+        "name": "Height of buildings and structures overlay",
+        "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/50",
+        "field": "LABEL",
+        "map": {
+          "*": [
+            "SCC:OV:HEIGHT_OF_BUILDINGS_AND_STRUCTURES_OVERLAY"
+          ]
+        },
+        "value_fact": "mapped_max_height_m"
+      },
+      {
+        "name": "Coastal protection overlay",
+        "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/37",
+        "field": "LABEL",
+        "map": {
+          "*": [
+            "SCC:OV:COASTAL_PROTECTION_OVERLAY_COASTAL_PROTECTION_AREA"
+          ]
+        }
+      },
+      {
+        "name": "Flood hazard overlay",
+        "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/46",
+        "field": "LABEL",
+        "map": {
+          "*": [
+            "SCC:OV:FLOOD_HAZARD_OVERLAY",
+            "SCC:OV:FLOOD_HAZARD_OVERLAY_FLOODING_AND_INUNDATION_AREA"
+          ]
+        }
+      },
+      {
+        "name": "Heritage and character areas overlay",
+        "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/57",
+        "field": "Name",
+        "map": {
+          "*": [
+            "SCC:OV:HERITAGE_AND_CHARACTER_AREAS_OVERLAY_CHARACTER_AREAS"
+          ]
+        }
+      }
+    ]
+  },
+  "LOGAN": {
+    "status": "WORKING",
+    "zone_layer": "https://services5.arcgis.com/ZUCWDRj8F77Xo351/arcgis/rest/services/Zones_V9_2_WFL1/FeatureServer/4",
+    "zone_field": "Zone",
+    "precinct_layers": [
+      "https://services5.arcgis.com/ZUCWDRj8F77Xo351/arcgis/rest/services/Zones_V9_2_WFL1/FeatureServer/1"
+    ],
+    "precinct_layer_field": "Zone_Precinct",
+    "notes": "Logan Planning Scheme 2015 v9.2 incorporating TLPI No.1 2024 (registered by Logan City Council on ArcGIS Online, CC BY 3.0 AU). Hosted on a consultant's (WSP) server; service names carry the version and date, so re-check the URL at each amendment (a draft new scheme exists, Aug 2025). The non-TLPI v9_2 service has no TLPI flood layers. Residential overlay (OM-10.00) decides whether the Dwelling house code applies. Tested 15 Oct 2026. Zones and precincts: Logan's own 'Zones_V9_2_WFL1' (edited 17 Jul 2025, after v9.2 commenced; identical to the contractor-hosted v9.2 service: 6,920 zones and 6,710 precincts, the same answer at every one of 197 test points; checked 2026-10-21). Local plans, local-plan precincts and overlays: the contractor-hosted LoganHub service (registered by Logan City Council).",
+    "local_plan_layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/129",
+    "local_plan_layer_field": "Local_Plan",
+    "local_plan_precinct_layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/130",
+    "local_plan_precinct_code_field": "Precinct_Code",
+    "local_plan_precinct_name_field": "Local_Plan_Precinct",
+    "overlay_layers": [
+      {
+        "name": "Residential overlay (OM-10.00)",
+        "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/65",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": []
+        },
+        "flag_fact": "dwelling_house_code_applies"
+      },
+      {
+        "name": "Heritage overlay (OM-07.01)",
+        "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/44",
+        "field": "OVL2_DESC",
+        "map": {
+          "Heritage character local heritage register": [
+            "LCC:OV:HERITAGE_OVERLAY",
+            "LCC:OV:HERITAGE_OVERLAY_LOCAL_HERITAGE_AREA_OM_07_01"
+          ],
+          "*": [
+            "LCC:OV:HERITAGE_OVERLAY"
+          ]
+        }
+      },
+      {
+        "name": "Flood hazard overlay - high flow area (TLPI 1/2024)",
+        "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/35",
+        "field": "Description",
+        "map": {
+          "*": [
+            "LCC:OV:FLOOD_HAZARD_OVERLAY_WITH_TLPI_NO_1_2024",
+            "LCC:OV:FLOOD_HAZARD_OVERLAY_OM_05_02_HIGH_FLOW_AREA_OM_05_04_HIGH_FLOOD_RISK_AREA_AS_AMENDED_BY_TLPI_NO_1_2"
+          ]
+        }
+      },
+      {
+        "name": "Flood hazard overlay - flood risk areas (TLPI 1/2024)",
+        "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/39",
+        "field": "Description",
+        "map": {
+          "High Flood Risk Area": [
+            "LCC:OV:FLOOD_HAZARD_OVERLAY_WITH_TLPI_NO_1_2024",
+            "LCC:OV:FLOOD_HAZARD_OVERLAY_OM_05_02_HIGH_FLOW_AREA_OM_05_04_HIGH_FLOOD_RISK_AREA_AS_AMENDED_BY_TLPI_NO_1_2"
+          ],
+          "*": [
+            "LCC:OV:FLOOD_HAZARD_OVERLAY_WITH_TLPI_NO_1_2024"
+          ]
+        }
+      },
+      {
+        "name": "Landslide hazard and steep slope overlay (OM-08.00 trigger)",
+        "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/46",
+        "field": "Ovl2_Desc",
+        "map": {
+          "*": [
+            "LCC:OV:LANDSLIDE_HAZARD_AND_STEEP_SLOPE_AREA_OVERLAY",
+            "LCC:OV:LANDSLIDE_HAZARD_AND_STEEP_SLOPE_AREA_OVERLAY_OM_08_00_OM_08_01"
+          ]
+        }
+      }
+    ],
+    "null_values": [
+      "(No precinct due to local plan)"
+    ],
+    "scheme_viewer": "https://logan.isoplan.com.au/eplan"
+  },
+  "IPSWICH": {
+    "status": "BLOCKED",
+    "zone_layer": "https://services9.arcgis.com/Rmbsssqb3knXA9RA/arcgis/rest/services/Zones_and_Precincts_V2_A1/FeatureServer/1",
+    "notes": "Ipswich City Plan 2025 zones layer requires a login token (499 Token Required). Choose the zone manually; ask Ipswich City Council for open-data access.",
+    "scheme_viewer": "https://ipswich.isoplan.com.au/eplan"
+  },
+  "REDLAND": {
+    "status": "WORKING",
+    "zone_layer": "https://services7.arcgis.com/VGRM775aS3HJEeB7/arcgis/rest/services/Current_Version_14_City_Plan_Zones_and_Overlays/FeatureServer/44",
+    "zone_field": "QPP_Description",
+    "precinct_field": "QPP_Precinct",
+    "notes": "Redland City Plan Version 14. Precincts are codes (LDR1-LDR5). Overlays from the same open-data service (CC BY-SA 4.0 — share-alike; data 2025-11-10). Precinct values are codes; '<Null>' means none. Canal/lake revetment walls (LDR5 9 m) are only in council asset data (gis.redland.qld.gov.au assets/a_parks_transport/MapServer/18) — not looked up yet.",
+    "null_values": [
+      "<Null>"
+    ],
+    "overlay_layers": [
+      {
+        "name": "Bushfire hazard overlay",
+        "layer": "https://services7.arcgis.com/VGRM775aS3HJEeB7/arcgis/rest/services/Current_Version_14_City_Plan_Zones_and_Overlays/FeatureServer/3",
+        "field": "CLASS",
+        "map": {
+          "*": [
+            "RCC:OV:BUSHFIRE_HAZARD_OVERLAY"
+          ]
+        }
+      },
+      {
+        "name": "Coastal protection (erosion prone areas) overlay",
+        "layer": "https://services7.arcgis.com/VGRM775aS3HJEeB7/arcgis/rest/services/Current_Version_14_City_Plan_Zones_and_Overlays/FeatureServer/5",
+        "field": "OBJECTID",
+        "map": {
+          "*": [
+            "RCC:OV:COASTAL_PROTECTION_EROSION_PRONE_AREAS_OVERLAY"
+          ]
+        }
+      },
+      {
+        "name": "Flood and storm tide hazard overlay",
+        "layer": "https://services7.arcgis.com/VGRM775aS3HJEeB7/arcgis/rest/services/Current_Version_14_City_Plan_Zones_and_Overlays/FeatureServer/11",
+        "field": "CLASS",
+        "map": {
+          "*": [
+            "RCC:OV:FLOOD_AND_STORM_TIDE_HAZARD_OVERLAY"
+          ]
+        }
+      },
+      {
+        "name": "Heritage overlay (local heritage place)",
+        "layer": "https://services7.arcgis.com/VGRM775aS3HJEeB7/arcgis/rest/services/Current_Version_14_City_Plan_Zones_and_Overlays/FeatureServer/14",
+        "field": "SIGNIFICANCE",
+        "map": {
+          "*": [
+            "RCC:OV:HERITAGE_OVERLAY"
+          ]
+        }
+      }
+    ],
+    "scheme_viewer": "https://www.redland.qld.gov.au/info/20292/redland_city_plan"
+  }
+}

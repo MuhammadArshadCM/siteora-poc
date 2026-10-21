@@ -1,0 +1,2190 @@
+{
+ "council": "City of Moreton Bay (formerly Moreton Bay Regional Council)",
+ "planning_scheme": {
+  "name": "Moreton Bay Regional Council Planning Scheme 2016 (MBRC Planning Scheme)",
+  "version": "Version 8 (created by LGIP Amendment No. 2)",
+  "version_commenced": "2026-09-11",
+  "official_urls": [
+   "https://www.moretonbay.qld.gov.au/Services/Building-Development/Planning-Schemes/MBRC",
+   "https://www.moretonbay.qld.gov.au/Services/Building-Development/Planning-Schemes/MBRC/MBRC-Planning-Scheme-Online",
+   "https://www.moretonbay.qld.gov.au/Services/Building-Development/Planning-Schemes/MBRC/Planning-Scheme-Amendments",
+   "https://eplan.moretonbay.qld.gov.au/planningscheme"
+  ],
+  "notes": "Scheme commenced 1 Feb 2016. eScheme (IsoPlan) API revision list (api/l/vpr): revisionId 96 'Version 8', revStatus 'Current', planOperative 09/11/2026 (MM/DD/YYYY = 11 Sep 2026); revisionId 90 'Version 7.1' operative 06/23/2025, Superseded. Citation (rule 202): 'Some parts of the original planning scheme have since been amended and this is version 8 of the instrument.' Council page: 'This LGIP amendment commenced on 11 September 2026, creating version 8 of the planning scheme.' Version 8 changed only the LGIP (Part 4). The dwelling house / zone siting provisions were last changed by the Better Housing Amendment (Major Amendment No. 3, Version 7, commenced 30 Oct 2024) and Administrative Amendment No. 3 (Version 7.1, 23 June 2025, format/numbering only). No replacement scheme is in force: the new City of Moreton Bay planning scheme is at early consultation (survey closed 12 July 2026; statutory consultation on a draft expected 2028). Pending amendments NOT in force: Major Amendment No. 4 (Morayfield South & bushfire, awaiting Minister), Major Amendment No. 5 (Narangba Innovation Precinct East, consultation 27 Jul - 24 Aug 2026). The ePlan front-end is a JavaScript SPA; text was retrieved from its public JSON API, which returns the HTML of each rule, for revision 96 (Version 8). URL pattern: https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/{sectionId}/0/false/11-Sep-2026/false (needs browser-like headers). Section ids: 226 = 9.3.1 Dwelling house code; 111 = 6.2.11 Rural residential zone code; 15 = Part 1; 46 = 5.7 Building work table; 100/99/98 = 5.5.6.1/5.5.6.2/5.5.6.3 GRZ precinct MCU tables; 77 = 5.5.11 Rural residential MCU table; 189 = 7.2.1.6 Redcliffe Kippa-Ring Interim residential precinct; 198 = 8.2.1 Coastal hazard overlay code. Definitions from the revision glossary endpoint https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1."
+ },
+ "qdc_qhc_relationship": {
+  "summary": "Part 1, s1.6, Table 1.6.1 of the MBRC Planning Scheme expressly identifies 'Alternative provisions to QDC boundary clearance and site cover provisions for a dwelling house, including a class 10 building or structure (Building Act 1975 section 33)' as located in s6.2.10 Rural zone code, s6.2.11 Rural residential zone code and s9.3.1 Dwelling house code, limited to 'RADs and performance outcomes identified by notes as a planning scheme matter'. In the Dwelling house code (9.3.1), most Part A RADs (RAD1-RAD6, RAD8-RAD14, RAD16-RAD25, plus RAD7 where not a Class 10 building) carry the note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...' - these are the provisions Table 1.6.1 identifies as alternative provisions (setbacks RAD3, built-to-boundary walls RAD4, site cover RAD5, height RAD1/RAD2, etc.). RAD7 (for a Class 10 building), RAD15 (earthworks) and RAD26 (domestic outbuildings) are declared 'amenity and aesthetic impact' matters (also concurrence). Values-and-constraints (overlay) RADs (RAD27 onward) carry neither note; non-compliance makes the work code assessable (limited assessment under 5.3.3.1.a.ii). In the Rural residential zone code (6.2.11), the 'Concurrence agency issues for building work' table lists RAD6 (roofed area/site cover), RAD8, RAD47 (height), RAD48 (setbacks) and RAD50 under 'Alternative provisions to the QDC', and 'Nil' under amenity/aesthetics. RAD6 and RAD48 also carry notes naming the QDC MP1.2 acceptable solutions they replace. The dwelling house code setback tables still say 'Refer to standard as in QDC' for side/rear setbacks in most precincts, and say 'The calculation for mean height is defined in the QDC'. No reference to the Queensland Housing Code (QHC) was found in any Version 8 text fetched (Part 1, Part 5 tables, 9.3.1, 6.2.6, 6.2.11, local plan and overlay codes), and the council's Dwelling house info sheet does not mention it. So as at Version 8 (11 Sep 2026) the scheme had NOT been amended to refer to the QHC. How the scheme's references to 'QDC part MP1.2' / 'standard as in QDC' operate after the QHC replaced MP1.1/MP1.2 on 1 Sep 2026 depends on Building Act / Building Regulation transitional provisions and is not resolved here.",
+  "quotes": [
+   {
+    "text": "Alternative provisions to QDC boundary clearance and site cover provisions for a dwelling house, including a class 10 building or structure. (Building Act 1975 section 33) || Section 6.2.10 Rural zone code Section 6.2.11 Rural residential zone code Section 9.3.1 Dwelling house code - RADs and performance outcomes identified by 'notes' as a \"planning scheme matter\".",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/15/0/false/11-Sep-2026/false",
+    "clause": "1.6, Table 1.6.1 Building assessment provisions in the planning scheme (rule 245)"
+   },
+   {
+    "text": "Planning scheme provisions about performance criteria 4, 5, 7, 8 and 9 under QDC part 1.1 or QDC part 1.2 for a dwelling house, including a class 10 building or structure. (Building Regulation 2021 section 6) || Section 6.2.10 Rural zone code Section 6.2.11 Rural residential zone code Section 9.3.1 Dwelling house code - RADs and performance outcomes identified by 'notes' as a \"planning scheme matter\".",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/15/0/false/11-Sep-2026/false",
+    "clause": "1.6, Table 1.6.1 (rule 246)"
+   },
+   {
+    "text": "Amenity and aesthetic provisions for a dwelling house, including a class 10 building or structure. (Planning Regulation 2017, schedule 9, Part 3, Division 2, Table 1) || Section 6.2.10 Rural zone code Section 6.2.11 Rural residential zone code",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/15/0/false/11-Sep-2026/false",
+    "clause": "1.6, Table 1.6.1 (rule 247)"
+   },
+   {
+    "text": "specify alternative planning scheme provisions under section 33 of the Building Act 1975. This relates to alternative design solutions for boundary clearance and site cover provisions MP 1.1, 1.2 and 1.3 of the QDC.",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/15/0/false/11-Sep-2026/false",
+    "clause": "1.6 Editor's note (rule 278)"
+   },
+   {
+    "text": "Note - Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role for a building development application under Division 2, Part 3, Schedule 9 of the Planning Regulation 2017.",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+    "clause": "9.3.1 Table 9.3.1.1, note attached to RAD1-RAD6, RAD8-RAD14, RAD16-RAD25"
+   },
+   {
+    "text": "Note - For a Class 10 building or structure, Council has declared that a building or structure that is in a form that does not comply with this RAD, may: - have an extremely adverse effect on the amenity, or likely amenity, of the locality in which it is proposed to be established; or - be in extreme conflict with the character of the locality in which it is proposed to be established. Non-compliance with this RAD is an amenity and aesthetic impact matter for which Council will exercise a concurrence agency role for building work under Division 2, Part 3, Schedule 9 of the Planning Regulation 2017.",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+    "clause": "9.3.1 Table 9.3.1.1 RAD7 (same declaration form on RAD15 and RAD26)"
+   },
+   {
+    "text": "Note - Concurrence agency issues are the matters identified as alternative provisions to the QDC or matters that relate to amenity and aesthetics in the requirements for accepted development contained in table 9.3.1.2. For these matters a concurrence agency response is required from Council as part of any building development application.",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/46/0/false/11-Sep-2026/false",
+    "clause": "5.7 Table 5.7.1 (rule 4424)"
+   },
+   {
+    "text": "Concurrence agency issues for building work || Alternative provisions to the QDC || Matters that relate to amenity and aesthetics || RAD6 || Nil || RAD8 || RAD47 || RAD48 || RAD50",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false",
+    "clause": "6.2.11 concurrence agency issues table (rules 14707-14713; per the raw HTML all RAD codes sit in the 'Alternative provisions to the QDC' column)"
+   },
+   {
+    "text": "Note - For building work associated with a dwelling house, this is an alternative provision to the QDC, part MP1.2, A3 and is a concurrence agency issue.",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false",
+    "clause": "6.2.11 Table 6.2.11.1 RAD6"
+   },
+   {
+    "text": "Note - For building work associated with a dwelling house, this is an alternative provision to the QDC, part MP1.2, A1 (a), (b) and (c), A2 (a), (b) and (d) and is a concurrence agency issue.",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false",
+    "clause": "6.2.11 Table 6.2.11.1 RAD48 (same note on E60)"
+   },
+   {
+    "text": "Editor's note - Side boundary setback standards in Table 9.3.1.5 include specific variations to the QDC for the applicable precincts that ensure the minimum side non-built to boundary wall setback on narrow lots is 1m to wall allowing space for eaves to project over the setback while also maintaining adequate separation between eaves and the side boundary (see figure below illustrating a typical outcome).",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+    "clause": "9.3.1, editor's note after Table 9.3.1.5 (rule 30032)"
+   }
+  ]
+ },
+ "levels_of_assessment": [
+  {
+   "use_or_work": "Building work, not associated with a material change of use, for a Dwelling house (incl. domestic outbuildings)",
+   "zone": "General residential zone (all precincts); Emerging community zone - Transition precinct on a developed lot",
+   "level": "Accepted development / Accepted development subject to requirements / Code assessment (limited)",
+   "conditions": "Accepted (no approval) if within the Table 1.7.7.1 circumstances (e.g. not in the Heritage and landscape character overlay or Erosion Prone Area, increase in GFA/roofed area not more than 50 m2 in GRZ, and complies with setback, site cover, height and roofed area requirements). Otherwise ADSR against 9.3.1 Dwelling house code; non-compliance with concurrence-agency RADs -> Council concurrence agency on the building application; non-compliance with values/constraints RADs -> code assessment.",
+   "quote": "Building work, not associated with a material change of use, for a Dwelling house in the General residential zone or the Emerging community zone, Transition precinct on a developed lot || Accepted development || If complying with the circumstances for accepted development in Table 1.7.7.1 'Accepted development'. Editor's note - Development approval is not required || Accepted development subject to requirements || If not complying with the circumstances for accepted development and: - complying with the relevant requirements for accepted development; or - complying with the relevant criteria for accepted development subject to requirements other than those identified as concurrence agency issues in the Dwelling house code. ... 9.3.1 'Dwelling house code' || Assessable development - Code assessment || If not otherwise specified. Note - For example if not complying with the relevant value and constraint requirements for accepted development or not complying with the circumstances for accepted development. Note - This is a limited assessment to which section 5.3.3.1.a.ii. applies.",
+   "clause": "5.7 Table 5.7.1 Building work (rule 4424)",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/46/0/false/11-Sep-2026/false"
+  },
+  {
+   "use_or_work": "Building work, not associated with a material change of use, for a Dwelling house",
+   "zone": "Rural residential zone; Rural zone; Township zone - Township residential precinct",
+   "level": "Accepted / Accepted development subject to requirements / Code assessment (limited)",
+   "conditions": "As above but the assessment benchmark is the relevant zone code (6.2.11 for Rural residential). Concurrence agency issues = RADs identified in the zone code as alternative provisions to QDC or amenity/aesthetic matters.",
+   "quote": "Building work, not associated with a material change of use, for a Dwelling house; in the following zones: - Township zone - Township residential precinct - Rural zone - Rural residential zone. || Accepted development || If complying with the circumstances for accepted development in Table 1.7.7.1 'Accepted development'. ... Accepted development subject to requirements || If not complying with the circumstances for accepted development and: ... Note - Concurrence agency issues are the matters identified in the relevant zone code as either alternative provisions to the QDC or matters that relate to amenity and aesthetics. For these matters a concurrence agency response is required from Council as part of any building development application. || Relevant zone code (relevant precinct only) ... Assessable development - Code assessment || If not otherwise specified. Note - This is a limited assessment to which section 5.3.3.1.a.ii. applies.",
+   "clause": "5.7 Table 5.7.1 (rule 4425)",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/46/0/false/11-Sep-2026/false"
+  },
+  {
+   "use_or_work": "Accepted development circumstances for building work (Table 1.7.7.1)",
+   "zone": "All zones except those listed",
+   "level": "Accepted development (no approval, no requirements)",
+   "conditions": "Not in Limited development zone, EM&C zone, Township centre/convenience precincts, Coastal planning area on the Erosion Prone Area overlay, or Heritage and landscape character overlay; not associated with a secondary dwelling; no net reduction in landscaping/open space/parking; complies with setback, site cover, height and roofed area requirements; increase in GFA or roofed area not more than 50 m2 in GRZ, Rural residential, Emerging community, Rural or Township residential (80 m2 elsewhere), cumulative.",
+   "quote": "Building work, not associated with a material change of use || If: - not in the following zones, precincts or overlay maps: - Limited development zone; or - Environmental management and conservation zone; or - Township zone - Township centre precinct; or - Township zone - Township convenience precinct; or - Coastal planning area on Overlay map - Coastal hazard (Erosion Prone Area); or - Overlay map - Heritage and landscape character; and - not associated with a secondary dwelling; and - results in no net reduction in the minimum quantity and standard of landscaping, private or communal open space or car parking spaces required under the planning scheme or under an existing Development Permit for the use; and - complies with setback, site cover, building height and roofed area requirements for the applicable zone, precinct or development code; and - results in: - an increase in gross floor area or roofed area of not more than: - 50m2 in the General residential zone, Rural residential zone, Emerging community zone, Rural zone or Township zone - Township residential precinct; or - 80m2 in any other zone and precinct. OR - raising an existing dwelling house up to the maximum height allowed by the requirements for accepted developments and examples that achieve aspects of the performance outcomes for the relevant zone or precinct. Includes any previous increases in gross floor area and roofed area undertaken as accepted development or accepted development subject to requirements under the MBRC Planning Scheme.",
+   "clause": "1.7.7 Table 1.7.7.1 Accepted development (rule 1943)",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/15/0/false/11-Sep-2026/false"
+  },
+  {
+   "use_or_work": "Material change of use - Dwelling house",
+   "zone": "General residential zone - Suburban neighbourhood precinct (same form in Coastal communities and Next generation neighbourhood precincts)",
+   "level": "Accepted development subject to requirements; Code assessment if values/constraints RADs not met",
+   "conditions": "Assessment benchmark 9.3.1 Dwelling house code. Non-compliance with RADs that are alternative provisions to QDC / amenity and aesthetics -> concurrence agency response, not code assessment.",
+   "quote": "Dwelling house || Accepted development subject to requirements || If complying with the relevant requirements for accepted development. Note - If it does not meet requirements for accepted development that are alternative provisions to the QDC, matters that relate to amenity and aesthetics or matters identified in Schedule 9, Part 3, Division 2, Table 1 of the Regulation,as stated in the requirements for accepted development contained in Table 9.3.1.2 a concurrence agency response is required from Council. || 9.3.1 'Dwelling house code' || Assessable development - Code assessment || If it does not meet the relevant value and constraint requirements for accepted development subject to requirements. Note - This is a limited assessment to which section 5.3.3.1.a.ii. applies.",
+   "clause": "5.5.6.2 Suburban neighbourhood precinct MCU table",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/99/0/false/11-Sep-2026/false"
+  },
+  {
+   "use_or_work": "Material change of use - Dwelling house",
+   "zone": "Rural residential zone",
+   "level": "Accepted development subject to requirements (accepted if temporary use)",
+   "conditions": "Assessed against 6.2.11 Rural residential zone code; the Dwelling house code does NOT apply.",
+   "quote": "Dwelling house || Editor's note - A Dwelling house in the Rural residential zone is not subject to the Dwelling house code. || Accepted development || If for a temporary use and complying with the circumstances for accepted development in Table 1.7.7.1 'Accepted development'. ... Accepted development subject to requirements || If not otherwise specified. || 6.2.11 'Rural residential zone code'",
+   "clause": "5.5.11 Rural residential zone MCU table",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/77/0/false/11-Sep-2026/false"
+  },
+  {
+   "use_or_work": "Building work, not associated with a material change of use (incl. dwelling house)",
+   "zone": "Any zone within Flood hazard overlay High risk area / Medium risk area / Drainage investigation area",
+   "level": "Code assessment (Flood hazard overlay code)",
+   "conditions": "Balance flood planning area: no change.",
+   "quote": "Building work not associated with a material change of use. || No change || If in the Balance flood planning area ... Assessable development - Code assessment || If in the following: - High risk area not included in the Limited development zone; or - Medium risk area; or - Drainage investigation area identified on Figure 8.2.2.1 to 8.2.2.10 of the Flood hazard overlay code",
+   "clause": "5.10.2 Flood hazard overlay table",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/53/0/false/11-Sep-2026/false"
+  },
+  {
+   "use_or_work": "Building work, not associated with a material change of use",
+   "zone": "Coastal hazard overlay areas",
+   "level": "Code assessment (Coastal hazard overlay code) in listed areas",
+   "conditions": "Erosion Prone Area with GFA increase > 50 m2, High risk storm tide inundation area (not Limited development zone) or Medium risk storm tide inundation area.",
+   "quote": "Building work not associated with a material change of use || No change || If: - in the Balance coastal planning area; or - in the Erosion Prone Area and not increasing gross floor area by more than 50m2. ... Assessable development - Code assessment || If: - in the Erosion Prone Area and increasing gross floor area by more than 50m2; or - in the following: - High risk storm tide inundation area not included in the Limited development zone; or - Medium risk storm tide inundation area.",
+   "clause": "5.10.1 Coastal hazard overlay table (rule 5588)",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/54/0/false/11-Sep-2026/false"
+  },
+  {
+   "use_or_work": "Building work, not associated with a material change of use, for a Dwelling house",
+   "zone": "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+   "level": "Accepted / ADSR / Code assessment (limited)",
+   "conditions": "Benchmarks are BOTH 9.3.1 Dwelling house code and 7.2.1 Redcliffe Kippa-Ring local plan code (applicable precinct).",
+   "quote": "Building work, not associated with a material change of use, for a Dwelling house in the Interim residential precinct || Accepted development || If complying with the circumstances for accepted development in Table 1.7.7.1 'Accepted development'. ... Accepted development subject to requirements || If: - complying with the relevant requirements for accepted development; and - not complying with the circumstances for accepted development. Note - If it does not meet criteria that are alternative provisions to the QDC or matters that relate to amenity and aesthetics as stated in the assessment criteria contained in table 9.3.1.2. A concurrence agency response is required from Council. || 9.3.1 'Dwelling house code' 7.2.1 'Redcliffe Kippa-Ring local plan code' (applicable precinct)",
+   "clause": "5.9.1.9 Building work (Redcliffe Kippa-Ring local plan)",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/67/0/false/11-Sep-2026/false"
+  }
+ ],
+ "definitions": [
+  {
+   "term": "setback",
+   "text": "For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "outermost projection",
+   "text": "The outermost projection of any part of a building or structure including, in the case of a roof, the outside face of the fascia, or the roof structure where there is no fascia, or attached sunhoods or the like, but does not include retractable blinds, fixed screens, rainwater fittings, or ornamental attachments.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "site cover",
+   "text": "The proportion of the site covered by a building(s), structure(s) attached to the building(s) and carport(s), calculated to the outer most projections of the building(s) and expressed as a percentage. The term does not include: - any structure or part thereof included in a landscaped open space area such as a gazebo or shade structure; - basement car parking areas located wholly below ground level; and - eaves and sun shading devices.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "building height",
+   "text": "If specified: - in metres, the vertical distance between the ground level and the highest point of the building roof (apex) or parapet at any point, but not including load-bearing antenna, aerial, chimney, flagpole or the like; - in storeys, the number of storeys above ground level; or - in both metres and storeys, both (a) and (b) apply. Editor's note - Lift overruns, air conditioners and the like, are excluded from the measure of building height.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "ground level",
+   "text": "The level of the natural ground, or, where the level of the natural ground has been changed, the level as lawfully changed.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "storey",
+   "text": "A space that is situated between one floor level and the floor level next above, or if there is no floor above, the ceiling or roof above, but not a space that contains only: - a lift shaft, stairway or meter room - a bathroom, shower room, laundry, water closet, or other sanitary compartment - a combination of the above. A mezzanine is a storey. A roofed structure on or part of a rooftop that does not solely accommodate building plant and equipment is a storey. A basement is not a storey.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "domestic outbuilding",
+   "text": "A Class 10a building, as defined in the Building Code of Australia , that is ancillary to a residential use on the same premises and is limited to non-habitable buildings for the purpose of a shed, garage and carport. Editor's note - This term includes 'and the like' buildings or roofed structures. Editor's note - This term is a building or other roofed structure that is detached from the dwelling. It is solely a class 10a and does not incorporate a component of any other class. Further, Domestic outbuildings are not garages and carports constructed to appear as an integral part of a dwelling (e.g. a single roof over the dwelling and garage parts of a building) and where the roof of a carport is attached directly to a dwelling (i.e. not attached via an ancillary structure such as a roofed walkway or pergola etc.)",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "dwelling house",
+   "text": "Dwelling house means a residential use of premises involving - 1 dwelling and any domestic outbuildings associated with the dwelling; or - 2 dwellings, 1 of which is a secondary dwelling, and any domestic outbuildings associated with either dwelling.",
+   "clause": "Schedule 1, SC1.1 Use definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "frontage",
+   "text": "* Any boundary line, or part thereof, of a lot which abuts a road reserve.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "primary frontage",
+   "text": "* Means: - for a lot with only one frontage to a road, the frontage to that road; or - for a lot with more than one frontage to a road (including a corner lot); - if the lot has a frontage to a laneway as described in Planning Scheme Policy Neighbourhood Design, the non-laneway frontage; and - if the frontages are to roads of a different order (as shown on the Overlap Map - Road Hierarchy) and excluding a motorway, the highest order road; and - if the frontages are to roads of the same order (as shown on the Overlap Map - Road Hierarchy): - the road that existing development on the land proposed to remain has, or is required to have, its principal pedestrian entrance into the development from (generally in the form of a front door); or - where (A.) does not apply; the road that development on adjoining land (having the same multiple road frontages) has or is required to have its principal pedestrian entrance into the development from (generally in the form of a front door); or - where (A.) and (B.) do not apply, the frontage the development is required to have or will have its principal pedestrian entrance into the development from (generally in the form of a front door). ...",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "secondary frontage",
+   "text": "* A frontage that is not the primary frontage.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "main building line",
+   "text": "* The line extending from the longest wall excluding a garage, carport or other domestic outbuilding in the front elevation of the building. Note - Excludes porticos, etc Figure - Main building line",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "built to boundary wall",
+   "text": "* A wall of a Dwelling house (class 1a) setback 200mm or less from a boundary.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "roofed area",
+   "text": "* The area of the roof of each building or other structure as projected onto a horizontal plane.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "trafficable water body",
+   "text": "* A body of water, whether natural, constructed or artificially improved, which is ordinarily of sufficient size and depth to allow use by any occupied, motorised vessel. The term includes a canal, lake, river or stream, regardless of its salinity level and whether or not it is subject to tidal influence. However, the term specifically excludes any dam which is fully contained within a single lot, wastewater ponds, tailings dams and any other body of water to which entry by the public for motorised boating purposes is not permitted.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "developed lot",
+   "text": "* A lot that is provided with infrastructure and services (including reticulated water and sewer, stormwater, dedicated roads and electricity) of a standard and capacity required for the proposed development.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "plan of development",
+   "text": "* A plan approved by Council (generally as part of a reconfiguring a lot application) that regulates building elements (e.g. Built to boundary walls, driveway location etc) for development on narrow lots (generally lots with a frontage of 12.5m or less).",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "gross floor area",
+   "text": "The total floor area of all storeys of a building (measured from the outside of the external walls or the centre of a common wall), other than areas used for the following: - building services, plant and equipment; - access between levels; - ground floor public lobby; - a mall; - the parking, loading and manoeuvring of motor vehicles; - unenclosed private balconies whether roofed or not.",
+   "clause": "Schedule 1, SC1.2 Administrative definitions",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1"
+  },
+  {
+   "term": "wall height / mean height",
+   "text": "NOT DEFINED in the scheme glossary (no 'wall height' or 'mean height' entry among the 386 glossary terms). The Dwelling house code states: \"Editor's note - The calculation for mean height is defined in the QDC.\" Setback tables use 'Height of wall' without a definition.",
+   "clause": "Schedule 1 (absence) / 9.3.1 RAD26 editor's note",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false"
+  }
+ ],
+ "rules": [
+  {
+   "rule_key": "mb_dh_rad1_building_height_overlay",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.1 RAD1 (Part B: PO1/E1)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct",
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct",
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Dwelling house (not domestic outbuildings)",
+   "topic": "BUILDING_HEIGHT",
+   "verbatim_text": "RAD1 Building height does not exceed that mapped on Overlay map – Building heights. Note - Minimum's mapped on Overlay map - Building heights, do not apply to Dwelling houses. Note - The above does not apply to domestic outbuildings. Refer to requirements for Domestic outbuildings in this code. Note - Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role for a building development application under Division 2, Part 3, Schedule 9 of the Planning Regulation 2017.",
+   "structured": {
+    "parameter": "max_building_height",
+    "operator": "<=",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "value is the maximum mapped on Overlay map - Building heights for the lot"
+    ],
+    "exceptions": [
+     "mapped minimums do not apply to dwelling houses",
+     "domestic outbuildings use RAD26"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Building height = vertical distance between ground level and the highest point of the roof (apex) or parapet.",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 19681",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "Numeric value is map-based (see rule mb_building_heights_overlay_categories). Most low-density residential land is mapped 'Max 8.5m' per council open data, but the lot-specific value must be read from the map."
+  },
+  {
+   "rule_key": "mb_building_heights_overlay_categories",
+   "code": "Overlay map - Building heights (Schedule 2)",
+   "clause": "OM Building heights (open data layer)",
+   "provision_type": "OTHER",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct",
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct",
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Dwelling house (via RAD1/E1)",
+   "topic": "BUILDING_HEIGHT",
+   "verbatim_text": "Open-data layer 'Building heights' service description: \"The Building Heights were assigned with rules using the Zone & Precinct and then adjusted to suit locality and proximity to Train Stations.\" Distinct OVL2_DESC values (polygon counts): 'Max 8.5m' (4242), 'Max 12m' (1148), 'Max 21m & Min 5m' (341), 'Max 15m' (291+1), 'Max 27m & Min 8.5m' (81), 'Max 21m' (36), 'Max 27m' (32), 'Max 39m' (12), 'Max 30m' (3).",
+   "structured": {
+    "parameter": "mapped_max_building_height",
+    "operator": "<=",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "lookup by lot geometry in the layer"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "",
+   "source_url": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/ArcGIS/rest/services/OM_Building_Heights_WebMercator_OpenData/FeatureServer/0",
+   "page_or_anchor": "FeatureServer/0 query groupBy OVL2_DESC",
+   "verification_status": "COUNCIL_FACTSHEET",
+   "needs_manual_review": true,
+   "notes": "Council ArcGIS open data (editingInfo lastEditDate 1646709276531 = March 2022), not the legal map. May not reflect Version 8 maps; verify against the ePlan overlay map. Field names: OVL2_DESC, OVL2_CAT, HT_SPLIT."
+  },
+  {
+   "rule_key": "mb_dh_rad2_tall_structures",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.1 RAD2 (E2)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct",
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct",
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Tall structures (antenna, aerial, chimney, flagpole), dishes",
+   "topic": "BUILDING_HEIGHT",
+   "verbatim_text": "RAD2 The height of tall structures (e.g. antenna, aerial, chimney, flagpole or the like) projects no more than 8.5m above ground level and transmission and receiving dishes are no larger than 1.2m diameter.",
+   "structured": {
+    "parameter": "tall_structure_height_above_ground",
+    "operator": "<=",
+    "value": 8.5,
+    "unit": "m",
+    "conditions": [
+     "dishes <= 1.2 m diameter"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 19682",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_rad3_setback_table_routing_and_carport",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.1 RAD3 (Part B E3.1)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct",
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct",
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a buildings/structures; carports in primary/secondary frontage",
+   "topic": "GARAGE_CARPORT_FRONTAGE",
+   "verbatim_text": "RAD3 Setbacks (excluding built to boundary walls) comply with: - Emerging community zone: - Transition precinct (developed lot) Morayfield South urban area identified in 'Figure 9.3.1.1 Morayfield South - Urban area' - Table 9.3.1.5 'Setbacks' - Transition precinct (developed lot) all other areas - Table 9.3.1.5 'Setbacks' - General residential zone: - Coastal communities precinct - Table 9.3.1.3 'Setbacks' - Suburban neighbourhood precinct - Table 9.3.1.4 'Setbacks' - Next generation neighbourhood precinct - Table 9.3.1.5 'Setbacks' - Urban neighbourhood precinct - Table 9.3.1.6 - Caboolture West local plan: - Urban living precinct - Next generation sub-precinct - Table 9.3.1.5 'Setbacks' - Redcliffe Kippa-Ring local plan: - Interim residential precinct - Table 9.3.1.3 'Setbacks' Except for carports in the primary and secondary frontage where they: - are setback a minimum of: - 5.4m; or - if the dwelling was built before 2005: - not less than the setback to an existing lawfully constructed carport or garage on an adjoining lot having the same road frontage (where a lawfully constructed carport or garage is located on both sides, the lesser of the two is applicable); or - 0.5m, whichever is the greater; and - remain open and are not enclosed by walls, screens, doors or the like. Note - Non-compliance with this RAD is a planning scheme matter ... Editor's Note - Greater setbacks may be required if the lot adjoins an environmental corridor or area (refer to values and constraints for details). Note - The above setbacks apply only to Class 1a and Class 10a buildings/structures, with the exception of domestic outbuildings (e.g garden shed) where in the Caboolture West local plan - Urban living precinct - Next generation sub-precinct and with a maximum roofed area not more than 10m2 and a height of not more than 2.5m.",
+   "structured": {
+    "parameter": "carport_min_road_setback",
+    "operator": "conditional",
+    "value": 5.4,
+    "unit": "m",
+    "conditions": [
+     "carport must remain open (not enclosed by walls, screens, doors)",
+     "applies to primary and secondary frontage"
+    ],
+    "exceptions": [
+     "dwelling built before 2005: not less than setback of lawful carport/garage on adjoining lot with same frontage (lesser if both sides) or 0.5 m, whichever is greater",
+     "setback tables apply only to Class 1a and Class 10a",
+     "Caboolture West Next generation sub-precinct: sheds <= 10 m2 roofed area and <= 2.5 m high exempt from the setback tables"
+    ],
+    "formula_text": "pre-2005 dwelling: max(min(adjoining lawful carport/garage setbacks), 0.5 m); else 5.4 m"
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 19684",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "E3.1 in Part B for Redcliffe Interim residential reads 'Interim residential precinct - Setbacks' (table number omitted) and E3.1 routes Morayfield South to Table 9.3.1.6 whereas RAD3 routes it to Table 9.3.1.5 - internal inconsistency; Table 9.3.1.6's heading names Morayfield South."
+  },
+  {
+   "rule_key": "mb_dh_t93113_coastal_front",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.3 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a dwelling house and Class 10a (covered car parking spaces, domestic outbuildings)",
+   "topic": "FRONT_SETBACK",
+   "verbatim_text": "Table 9.3.1.3 Setbacks - Coastal communities precinct and Redcliffe Kippa-Ring local plan - Interim residential precinct. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 6m || Min 4.5m || Min 5.4 || Min 3m || Min 2m || Min 5.4 || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5m to 8.5m || Min 6m || Min 4.5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5m || Min 6m || Min 4.5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to Standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_primary_frontage_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall height < 4.5 m: to wall Min 6m, to OMP Min 4.5m, to covered car parking space/domestic outbuildings Min 5.4",
+     "wall height 4.5-8.5 m: to wall Min 6m, to OMP Min 4.5m, car/outbuildings N/A",
+     "wall height > 8.5 m: to wall Min 6m, to OMP Min 4.5m, car/outbuildings N/A"
+    ],
+    "exceptions": [
+     "carports: RAD3 exception (5.4 m / pre-2005 rule) applies"
+    ],
+    "formula_text": "select row by height of wall; apply both 'to wall' and 'to OMP' minimums"
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32377, 30074, 30015-30017",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_t93113_coastal_secondary",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.3 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a",
+   "topic": "SECONDARY_FRONTAGE_SETBACK",
+   "verbatim_text": "Table 9.3.1.3 Setbacks - Coastal communities precinct and Redcliffe Kippa-Ring local plan - Interim residential precinct. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 6m || Min 4.5m || Min 5.4 || Min 3m || Min 2m || Min 5.4 || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5m to 8.5m || Min 6m || Min 4.5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5m || Min 6m || Min 4.5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to Standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_secondary_frontage_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "secondary to street, wall < 4.5 m: to wall Min 3m, to OMP Min 2m, car/outbuildings Min 5.4",
+     "secondary to street, wall 4.5-8.5 m: to wall Min 3m, to OMP Min 2m, car/outbuildings N/A",
+     "secondary to street, wall > 8.5 m: to wall Min 3m, to OMP Min 2m, car/outbuildings N/A",
+     "secondary to lane (all elements): Min 0.5 / Min 0.5 / Min 0.5 by height band"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme). Editor's note: 'The boundary to a laneway is not a rear boundary and is always treated as a frontage.'",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32377, 30074, 30015-30017",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_t93113_coastal_side",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.3 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a (non-built-to-boundary walls)",
+   "topic": "SIDE_SETBACK",
+   "verbatim_text": "Table 9.3.1.3 Setbacks - Coastal communities precinct and Redcliffe Kippa-Ring local plan - Interim residential precinct. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 6m || Min 4.5m || Min 5.4 || Min 3m || Min 2m || Min 5.4 || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5m to 8.5m || Min 6m || Min 4.5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5m || Min 6m || Min 4.5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to Standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_side_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall < 4.5 m: Refer to standard as in QDC",
+     "wall 4.5-8.5 m: Refer to standard as in QDC",
+     "wall > 8.5 m: Refer to Standard as in QDC"
+    ],
+    "exceptions": [
+     "built to boundary walls per RAD4/Table 9.3.1.7"
+    ],
+    "formula_text": "'Refer to standard as in QDC' = QDC MP1.1/MP1.2 side boundary clearance (now replaced by QHC) unless a value is stated"
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32377, 30074, 30015-30017",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "Where the cell says 'Refer to standard as in QDC', the numeric value comes from the QDC (now QHC) - the scheme does not itself state a number."
+  },
+  {
+   "rule_key": "mb_dh_t93113_coastal_rear",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.3 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a",
+   "topic": "REAR_SETBACK",
+   "verbatim_text": "Table 9.3.1.3 Setbacks - Coastal communities precinct and Redcliffe Kippa-Ring local plan - Interim residential precinct. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 6m || Min 4.5m || Min 5.4 || Min 3m || Min 2m || Min 5.4 || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5m to 8.5m || Min 6m || Min 4.5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5m || Min 6m || Min 4.5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to Standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_rear_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall < 4.5 m: Refer to standard as in QDC",
+     "wall 4.5-8.5 m: Refer to standard as in QDC",
+     "wall > 8.5 m: Refer to standard as in QDC"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32377, 30074, 30015-30017",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "'Refer to standard as in QDC' cells defer to QDC (now QHC) values."
+  },
+  {
+   "rule_key": "mb_dh_t93113_coastal_waterbody",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.3 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a incl. covered car parking and domestic outbuildings",
+   "topic": "OTHER",
+   "verbatim_text": "Table 9.3.1.3 Setbacks - Coastal communities precinct and Redcliffe Kippa-Ring local plan - Interim residential precinct. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 6m || Min 4.5m || Min 5.4 || Min 3m || Min 2m || Min 5.4 || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5m to 8.5m || Min 6m || Min 4.5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5m || Min 6m || Min 4.5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to Standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_trafficable_water_body_setback",
+    "operator": ">=",
+    "value": 4.5,
+    "unit": "m",
+    "conditions": [
+     "applies to OMP, wall and covered car parking/domestic outbuildings, all wall heights"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32377, 30074, 30015-30017",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_t93114_suburban_front",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.4 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Suburban neighbourhood precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a dwelling house and Class 10a (covered car parking spaces, domestic outbuildings)",
+   "topic": "FRONT_SETBACK",
+   "verbatim_text": "Table 9.3.1.4 Setbacks - General residential zone - Suburban neighbourhood precinct and Township zone - Residential precinct. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 4.5m || Min 3m || Min 5.4 || Min 3m || Min 2m || Min 5.4 || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5m to 8.5m || Min 4.5m || MIn 3m || N/A || Min 3m || Min 2m || N/A || Min 0.5m || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5. || Min 4.5m || Min 3m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_primary_frontage_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall height < 4.5 m: to wall Min 4.5m, to OMP Min 3m, to covered car parking space/domestic outbuildings Min 5.4",
+     "wall height 4.5-8.5 m: to wall Min 4.5m, to OMP MIn 3m, car/outbuildings N/A",
+     "wall height > 8.5 m: to wall Min 4.5m, to OMP Min 3m, car/outbuildings N/A"
+    ],
+    "exceptions": [
+     "carports: RAD3 exception (5.4 m / pre-2005 rule) applies"
+    ],
+    "formula_text": "select row by height of wall; apply both 'to wall' and 'to OMP' minimums"
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32378, 30075, 30021-30023",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "Table heading also names 'Township zone - Residential precinct', but Table 5.7.1 sends Township residential dwelling houses to the Township zone code, not 9.3.1."
+  },
+  {
+   "rule_key": "mb_dh_t93114_suburban_secondary",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.4 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Suburban neighbourhood precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a",
+   "topic": "SECONDARY_FRONTAGE_SETBACK",
+   "verbatim_text": "Table 9.3.1.4 Setbacks - General residential zone - Suburban neighbourhood precinct and Township zone - Residential precinct. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 4.5m || Min 3m || Min 5.4 || Min 3m || Min 2m || Min 5.4 || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5m to 8.5m || Min 4.5m || MIn 3m || N/A || Min 3m || Min 2m || N/A || Min 0.5m || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5. || Min 4.5m || Min 3m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_secondary_frontage_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "secondary to street, wall < 4.5 m: to wall Min 3m, to OMP Min 2m, car/outbuildings Min 5.4",
+     "secondary to street, wall 4.5-8.5 m: to wall Min 3m, to OMP Min 2m, car/outbuildings N/A",
+     "secondary to street, wall > 8.5 m: to wall Min 3m, to OMP Min 2m, car/outbuildings N/A",
+     "secondary to lane (all elements): Min 0.5 / Min 0.5m / Min 0.5 by height band"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme). Editor's note: 'The boundary to a laneway is not a rear boundary and is always treated as a frontage.'",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32378, 30075, 30021-30023",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "Table heading also names 'Township zone - Residential precinct', but Table 5.7.1 sends Township residential dwelling houses to the Township zone code, not 9.3.1."
+  },
+  {
+   "rule_key": "mb_dh_t93114_suburban_side",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.4 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Suburban neighbourhood precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a (non-built-to-boundary walls)",
+   "topic": "SIDE_SETBACK",
+   "verbatim_text": "Table 9.3.1.4 Setbacks - General residential zone - Suburban neighbourhood precinct and Township zone - Residential precinct. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 4.5m || Min 3m || Min 5.4 || Min 3m || Min 2m || Min 5.4 || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5m to 8.5m || Min 4.5m || MIn 3m || N/A || Min 3m || Min 2m || N/A || Min 0.5m || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5. || Min 4.5m || Min 3m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_side_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall < 4.5 m: Refer to standard as in QDC",
+     "wall 4.5-8.5 m: Refer to standard as in QDC",
+     "wall > 8.5 m: Refer to standard as in QDC"
+    ],
+    "exceptions": [
+     "built to boundary walls per RAD4/Table 9.3.1.7"
+    ],
+    "formula_text": "'Refer to standard as in QDC' = QDC MP1.1/MP1.2 side boundary clearance (now replaced by QHC) unless a value is stated"
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32378, 30075, 30021-30023",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "Where the cell says 'Refer to standard as in QDC', the numeric value comes from the QDC (now QHC) - the scheme does not itself state a number. Table heading also names 'Township zone - Residential precinct', but Table 5.7.1 sends Township residential dwelling houses to the Township zone code, not 9.3.1."
+  },
+  {
+   "rule_key": "mb_dh_t93114_suburban_rear",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.4 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Suburban neighbourhood precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a",
+   "topic": "REAR_SETBACK",
+   "verbatim_text": "Table 9.3.1.4 Setbacks - General residential zone - Suburban neighbourhood precinct and Township zone - Residential precinct. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 4.5m || Min 3m || Min 5.4 || Min 3m || Min 2m || Min 5.4 || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5m to 8.5m || Min 4.5m || MIn 3m || N/A || Min 3m || Min 2m || N/A || Min 0.5m || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5. || Min 4.5m || Min 3m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_rear_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall < 4.5 m: Refer to standard as in QDC",
+     "wall 4.5-8.5 m: Refer to standard as in QDC",
+     "wall > 8.5 m: Refer to standard as in QDC"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32378, 30075, 30021-30023",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "'Refer to standard as in QDC' cells defer to QDC (now QHC) values. Table heading also names 'Township zone - Residential precinct', but Table 5.7.1 sends Township residential dwelling houses to the Township zone code, not 9.3.1."
+  },
+  {
+   "rule_key": "mb_dh_t93114_suburban_waterbody",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.4 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Suburban neighbourhood precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a incl. covered car parking and domestic outbuildings",
+   "topic": "OTHER",
+   "verbatim_text": "Table 9.3.1.4 Setbacks - General residential zone - Suburban neighbourhood precinct and Township zone - Residential precinct. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 4.5m || Min 3m || Min 5.4 || Min 3m || Min 2m || Min 5.4 || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5m to 8.5m || Min 4.5m || MIn 3m || N/A || Min 3m || Min 2m || N/A || Min 0.5m || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5. || Min 4.5m || Min 3m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_trafficable_water_body_setback",
+    "operator": ">=",
+    "value": 4.5,
+    "unit": "m",
+    "conditions": [
+     "applies to OMP, wall and covered car parking/domestic outbuildings, all wall heights"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32378, 30075, 30021-30023",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "Table heading also names 'Township zone - Residential precinct', but Table 5.7.1 sends Township residential dwelling houses to the Township zone code, not 9.3.1."
+  },
+  {
+   "rule_key": "mb_dh_t93115_nextgen_front",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.5 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a dwelling house and Class 10a (covered car parking spaces, domestic outbuildings)",
+   "topic": "FRONT_SETBACK",
+   "verbatim_text": "Table 9.3.1.5 Setbacks - Emerging community zone - Transition precinct (developed lot), General residential zone - Next generation neighbourhood precinct and Caboolture West local plan - Urban living precinct - Next generation sub-precinct. Table 9.3.1.5 has an extra column 'Side Non-built to boundary wall and Rear To OMP' = 'As per applicable side or rear boundary standard to wall minus 0.5m' (all rows). *Note - The minimum setback to covered car parking spaces may be reduced to 4.5m where: - the primary or secondary frontage of the lot adjoins a road reserve with a minimum rear verge width of 1m or greater and includes a footpath with a width of 2m or greater; - The lot has a primary frontage greater than 7.5m and no greater than 10m (Lot type B).. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 3m || Min 2m || Min 5.4m* || Min 2m || Min 1m || Min 5.4m* || Min 0.5 || For lots with a primary frontage ≤12m, Min 1m OR For lots with a primary frontage >12m, refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m ; 4.5m to 8.5m || Min 3m || Min 2m || N/A || Min 2m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m ; Greater than 8.5m || Min 6m || Min 5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m",
+   "structured": {
+    "parameter": "min_primary_frontage_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall height < 4.5 m: to wall Min 3m, to OMP Min 2m, to covered car parking space/domestic outbuildings Min 5.4m*",
+     "wall height 4.5-8.5 m: to wall Min 3m, to OMP Min 2m, car/outbuildings N/A",
+     "wall height > 8.5 m: to wall Min 6m, to OMP Min 5m, car/outbuildings N/A"
+    ],
+    "exceptions": [
+     "carports: RAD3 exception (5.4 m / pre-2005 rule) applies",
+     "covered car parking setback may reduce to 4.5 m where verge/footpath conditions met and primary frontage > 7.5 m and <= 10 m"
+    ],
+    "formula_text": "select row by height of wall; apply both 'to wall' and 'to OMP' minimums"
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32379, 30076, 30027-30030",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_t93115_nextgen_secondary",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.5 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a",
+   "topic": "SECONDARY_FRONTAGE_SETBACK",
+   "verbatim_text": "Table 9.3.1.5 Setbacks - Emerging community zone - Transition precinct (developed lot), General residential zone - Next generation neighbourhood precinct and Caboolture West local plan - Urban living precinct - Next generation sub-precinct. Table 9.3.1.5 has an extra column 'Side Non-built to boundary wall and Rear To OMP' = 'As per applicable side or rear boundary standard to wall minus 0.5m' (all rows). *Note - The minimum setback to covered car parking spaces may be reduced to 4.5m where: - the primary or secondary frontage of the lot adjoins a road reserve with a minimum rear verge width of 1m or greater and includes a footpath with a width of 2m or greater; - The lot has a primary frontage greater than 7.5m and no greater than 10m (Lot type B).. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 3m || Min 2m || Min 5.4m* || Min 2m || Min 1m || Min 5.4m* || Min 0.5 || For lots with a primary frontage ≤12m, Min 1m OR For lots with a primary frontage >12m, refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m ; 4.5m to 8.5m || Min 3m || Min 2m || N/A || Min 2m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m ; Greater than 8.5m || Min 6m || Min 5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m",
+   "structured": {
+    "parameter": "min_secondary_frontage_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "secondary to street, wall < 4.5 m: to wall Min 2m, to OMP Min 1m, car/outbuildings Min 5.4m*",
+     "secondary to street, wall 4.5-8.5 m: to wall Min 2m, to OMP Min 1m, car/outbuildings N/A",
+     "secondary to street, wall > 8.5 m: to wall Min 3m, to OMP Min 2m, car/outbuildings N/A",
+     "secondary to lane (all elements): Min 0.5 / Min 0.5 / Min 0.5 by height band"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme). Editor's note: 'The boundary to a laneway is not a rear boundary and is always treated as a frontage.'",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32379, 30076, 30027-30030",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_t93115_nextgen_side",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.5 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a (non-built-to-boundary walls)",
+   "topic": "SIDE_SETBACK",
+   "verbatim_text": "Table 9.3.1.5 Setbacks - Emerging community zone - Transition precinct (developed lot), General residential zone - Next generation neighbourhood precinct and Caboolture West local plan - Urban living precinct - Next generation sub-precinct. Table 9.3.1.5 has an extra column 'Side Non-built to boundary wall and Rear To OMP' = 'As per applicable side or rear boundary standard to wall minus 0.5m' (all rows). *Note - The minimum setback to covered car parking spaces may be reduced to 4.5m where: - the primary or secondary frontage of the lot adjoins a road reserve with a minimum rear verge width of 1m or greater and includes a footpath with a width of 2m or greater; - The lot has a primary frontage greater than 7.5m and no greater than 10m (Lot type B).. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 3m || Min 2m || Min 5.4m* || Min 2m || Min 1m || Min 5.4m* || Min 0.5 || For lots with a primary frontage ≤12m, Min 1m OR For lots with a primary frontage >12m, refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m ; 4.5m to 8.5m || Min 3m || Min 2m || N/A || Min 2m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m ; Greater than 8.5m || Min 6m || Min 5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m",
+   "structured": {
+    "parameter": "min_side_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall < 4.5 m: For lots with a primary frontage ≤12m, Min 1m OR For lots with a primary frontage >12m, refer to standard as in QDC but measured to wall",
+     "wall 4.5-8.5 m: Refer to standard as in QDC but measured to wall",
+     "wall > 8.5 m: Refer to standard as in QDC but measured to wall"
+    ],
+    "exceptions": [
+     "built to boundary walls per RAD4/Table 9.3.1.7"
+    ],
+    "formula_text": "Side to wall: frontage <= 12 m (wall < 4.5 m) -> 1 m; otherwise QDC standard measured to wall. Side/rear to OMP = applicable side or rear standard to wall minus 0.5 m."
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32379, 30076, 30027-30030",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "Where the cell says 'Refer to standard as in QDC', the numeric value comes from the QDC (now QHC) - the scheme does not itself state a number."
+  },
+  {
+   "rule_key": "mb_dh_t93115_nextgen_rear",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.5 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a",
+   "topic": "REAR_SETBACK",
+   "verbatim_text": "Table 9.3.1.5 Setbacks - Emerging community zone - Transition precinct (developed lot), General residential zone - Next generation neighbourhood precinct and Caboolture West local plan - Urban living precinct - Next generation sub-precinct. Table 9.3.1.5 has an extra column 'Side Non-built to boundary wall and Rear To OMP' = 'As per applicable side or rear boundary standard to wall minus 0.5m' (all rows). *Note - The minimum setback to covered car parking spaces may be reduced to 4.5m where: - the primary or secondary frontage of the lot adjoins a road reserve with a minimum rear verge width of 1m or greater and includes a footpath with a width of 2m or greater; - The lot has a primary frontage greater than 7.5m and no greater than 10m (Lot type B).. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 3m || Min 2m || Min 5.4m* || Min 2m || Min 1m || Min 5.4m* || Min 0.5 || For lots with a primary frontage ≤12m, Min 1m OR For lots with a primary frontage >12m, refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m ; 4.5m to 8.5m || Min 3m || Min 2m || N/A || Min 2m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m ; Greater than 8.5m || Min 6m || Min 5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m",
+   "structured": {
+    "parameter": "min_rear_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall < 4.5 m: Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall",
+     "wall 4.5-8.5 m: Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall",
+     "wall > 8.5 m: Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall"
+    ],
+    "exceptions": [],
+    "formula_text": "Rear to wall: 5 m; 3 m if longest side boundary <= 25 m or primary frontage <= 9.5 m; QDC standard measured to wall if frontage <= 9.5 m and lot adjoins/is opposite a park. Rear to OMP = rear standard to wall minus 0.5 m."
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32379, 30076, 30027-30030",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "'Refer to standard as in QDC' cells defer to QDC (now QHC) values."
+  },
+  {
+   "rule_key": "mb_dh_t93115_nextgen_waterbody",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.5 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a incl. covered car parking and domestic outbuildings",
+   "topic": "OTHER",
+   "verbatim_text": "Table 9.3.1.5 Setbacks - Emerging community zone - Transition precinct (developed lot), General residential zone - Next generation neighbourhood precinct and Caboolture West local plan - Urban living precinct - Next generation sub-precinct. Table 9.3.1.5 has an extra column 'Side Non-built to boundary wall and Rear To OMP' = 'As per applicable side or rear boundary standard to wall minus 0.5m' (all rows). *Note - The minimum setback to covered car parking spaces may be reduced to 4.5m where: - the primary or secondary frontage of the lot adjoins a road reserve with a minimum rear verge width of 1m or greater and includes a footpath with a width of 2m or greater; - The lot has a primary frontage greater than 7.5m and no greater than 10m (Lot type B).. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 3m || Min 2m || Min 5.4m* || Min 2m || Min 1m || Min 5.4m* || Min 0.5 || For lots with a primary frontage ≤12m, Min 1m OR For lots with a primary frontage >12m, refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m ; 4.5m to 8.5m || Min 3m || Min 2m || N/A || Min 2m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m ; Greater than 8.5m || Min 6m || Min 5m || N/A || Min 3m || Min 2m || N/A || Min 0.5 || Refer to standard as in QDC but measured to wall || Min 5m OR Where the longest side boundary is ≤25m or where the primary frontage is ≤9.5m - Min 3m OR Where the primary frontage is ≤9.5m and the lot is adjoining a park or directly opposite a park fronting the same street - refer to standard as in QDC but measured to wall || Min 4.5m",
+   "structured": {
+    "parameter": "min_trafficable_water_body_setback",
+    "operator": ">=",
+    "value": 4.5,
+    "unit": "m",
+    "conditions": [
+     "applies to OMP, wall and covered car parking/domestic outbuildings, all wall heights"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32379, 30076, 30027-30030",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_t93116_urban_front",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.6 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a dwelling house and Class 10a (covered car parking spaces, domestic outbuildings)",
+   "topic": "FRONT_SETBACK",
+   "verbatim_text": "Table 9.3.1.6 Setbacks - General residential zone - Urban neighbourhood precinct, and Emerging community zone - Transition precinct (developed lot) and identified in the Morayfield South urban area on Figure 9.3.1.1. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 1m || Min 1m || Min 5.4m || Min 1m || Min 1m || Min 5.4m || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5 to 8.5m || Min 1m || Min 1m || N/A || Min 1m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5m || Min 5m || Min 3m || N/A || Min 2m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_primary_frontage_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall height < 4.5 m: to wall Min 1m, to OMP Min 1m, to covered car parking space/domestic outbuildings Min 5.4m",
+     "wall height 4.5-8.5 m: to wall Min 1m, to OMP Min 1m, car/outbuildings N/A",
+     "wall height > 8.5 m: to wall Min 5m, to OMP Min 3m, car/outbuildings N/A"
+    ],
+    "exceptions": [
+     "carports: RAD3 exception (5.4 m / pre-2005 rule) applies"
+    ],
+    "formula_text": "select row by height of wall; apply both 'to wall' and 'to OMP' minimums"
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32380, 30077, 30039-30041",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_t93116_urban_secondary",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.6 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a",
+   "topic": "SECONDARY_FRONTAGE_SETBACK",
+   "verbatim_text": "Table 9.3.1.6 Setbacks - General residential zone - Urban neighbourhood precinct, and Emerging community zone - Transition precinct (developed lot) and identified in the Morayfield South urban area on Figure 9.3.1.1. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 1m || Min 1m || Min 5.4m || Min 1m || Min 1m || Min 5.4m || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5 to 8.5m || Min 1m || Min 1m || N/A || Min 1m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5m || Min 5m || Min 3m || N/A || Min 2m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_secondary_frontage_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "secondary to street, wall < 4.5 m: to wall Min 1m, to OMP Min 1m, car/outbuildings Min 5.4m",
+     "secondary to street, wall 4.5-8.5 m: to wall Min 1m, to OMP Min 1m, car/outbuildings N/A",
+     "secondary to street, wall > 8.5 m: to wall Min 2m, to OMP Min 1m, car/outbuildings N/A",
+     "secondary to lane (all elements): Min 0.5 / Min 0.5 / Min 0.5 by height band"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme). Editor's note: 'The boundary to a laneway is not a rear boundary and is always treated as a frontage.'",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32380, 30077, 30039-30041",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_t93116_urban_side",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.6 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a (non-built-to-boundary walls)",
+   "topic": "SIDE_SETBACK",
+   "verbatim_text": "Table 9.3.1.6 Setbacks - General residential zone - Urban neighbourhood precinct, and Emerging community zone - Transition precinct (developed lot) and identified in the Morayfield South urban area on Figure 9.3.1.1. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 1m || Min 1m || Min 5.4m || Min 1m || Min 1m || Min 5.4m || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5 to 8.5m || Min 1m || Min 1m || N/A || Min 1m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5m || Min 5m || Min 3m || N/A || Min 2m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_side_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall < 4.5 m: Refer to standard as in QDC",
+     "wall 4.5-8.5 m: Refer to standard as in QDC",
+     "wall > 8.5 m: Refer to standard as in QDC"
+    ],
+    "exceptions": [
+     "built to boundary walls per RAD4/Table 9.3.1.7"
+    ],
+    "formula_text": "'Refer to standard as in QDC' = QDC MP1.1/MP1.2 side boundary clearance (now replaced by QHC) unless a value is stated"
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32380, 30077, 30039-30041",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "Where the cell says 'Refer to standard as in QDC', the numeric value comes from the QDC (now QHC) - the scheme does not itself state a number."
+  },
+  {
+   "rule_key": "mb_dh_t93116_urban_rear",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.6 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a",
+   "topic": "REAR_SETBACK",
+   "verbatim_text": "Table 9.3.1.6 Setbacks - General residential zone - Urban neighbourhood precinct, and Emerging community zone - Transition precinct (developed lot) and identified in the Morayfield South urban area on Figure 9.3.1.1. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 1m || Min 1m || Min 5.4m || Min 1m || Min 1m || Min 5.4m || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5 to 8.5m || Min 1m || Min 1m || N/A || Min 1m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5m || Min 5m || Min 3m || N/A || Min 2m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_rear_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall < 4.5 m: Refer to standard as in QDC",
+     "wall 4.5-8.5 m: Refer to standard as in QDC",
+     "wall > 8.5 m: Refer to standard as in QDC"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32380, 30077, 30039-30041",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "'Refer to standard as in QDC' cells defer to QDC (now QHC) values."
+  },
+  {
+   "rule_key": "mb_dh_t93116_urban_waterbody",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.6 Setbacks (via RAD3/E3.1)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a incl. covered car parking and domestic outbuildings",
+   "topic": "OTHER",
+   "verbatim_text": "Table 9.3.1.6 Setbacks - General residential zone - Urban neighbourhood precinct, and Emerging community zone - Transition precinct (developed lot) and identified in the Morayfield South urban area on Figure 9.3.1.1. Columns: Height of wall || Frontage Primary [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to street [To wall | To OMP | To covered car parking space and domestic outbuildings] || Frontage Secondary to lane || Side || Rear || Trafficable water body. Rows: Less than 4.5m || Min 1m || Min 1m || Min 5.4m || Min 1m || Min 1m || Min 5.4m || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; 4.5 to 8.5m || Min 1m || Min 1m || N/A || Min 1m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m ; Greater than 8.5m || Min 5m || Min 3m || N/A || Min 2m || Min 1m || N/A || Min 0.5 || Refer to standard as in QDC || Refer to standard as in QDC || Min 4.5m",
+   "structured": {
+    "parameter": "min_trafficable_water_body_setback",
+    "operator": ">=",
+    "value": 4.5,
+    "unit": "m",
+    "conditions": [
+     "applies to OMP, wall and covered car parking/domestic outbuildings, all wall heights"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32380, 30077, 30039-30041",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_rad4_btb_general",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.1 RAD4 (E3.2)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct",
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct",
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a buildings/structures",
+   "topic": "BUILT_TO_BOUNDARY",
+   "verbatim_text": "RAD4 Built to boundary walls are: - provided on lots if required by an existing approval issued by Council, and are established in accordance with the plan of development under that existing approval (including any subsequent amendments to that plan of development that are approved by council in writing) OR if no approved plan of development applies to the land, are only established on lots having a primary frontage of 18m or less and where permitted in Table 9.3.1.7 'Built to boundary walls'; - of a length and height not exceeding that specified in Table 9.3.1.7 'Built to boundary walls'; - setback from the side boundary: - if a plan of development provides for only one built to boundary wall on the one boundary, not more than 200mm; or - if a built to boundary wall may be built on each side of the same boundary, not more than 20mm; - on the low side of a sloping lot. ... Note - The above setbacks apply only to Class 1a and Class 10a buildings/structures. Note - Non-compliance with this RAD is a planning scheme matter ...",
+   "structured": {
+    "parameter": "btb_permitted",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "no plan of development: primary frontage <= 18 m and permitted by Table 9.3.1.7",
+     "BTB wall within 200 mm of boundary (one wall) or 20 mm (walls both sides)",
+     "on the low side of a sloping lot"
+    ],
+    "exceptions": [
+     "approved plan of development governs where one exists"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Built to boundary wall = 'A wall of a Dwelling house (class 1a) setback 200mm or less from a boundary.'",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 19685",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_t93117_btb_coastal_suburban",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.7 (via RAD4)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a (incl. garages, carports, sheds)",
+   "topic": "BUILT_TO_BOUNDARY",
+   "verbatim_text": "Table 9.3.1.7 Built to boundary walls. Columns: Lot frontage widths || Mandatory / Optional || [GRZ Coastal communities, Suburban neighbourhood; Redcliffe Interim residential] || [Emerging community Transition (developed lot); GRZ Next generation; Caboolture West Next generation sub-precinct] || [Emerging community Transition (developed lot) in Morayfield South; GRZ Urban neighbourhood]. 7.5m or less || Mandatory - both sides unless a corner lot || Not permitted* || Max length: 80% of the length of the boundary Max Height: 7.5m || Max Length: 80% of the length of the boundary Max Height: 8.5m ; More than 7.5m to 9.5m || Mandatory - one side Optional to both sides in the following locations only unless a corner lot: [Transition, Next generation, Caboolture West Next generation] || Not permitted* || Max Length: 60% of the length of the boundary OR 80% if the lot adjoining that boundary has a frontage of 9.5m or less. Max Height:7.5m || Max Length: 70% of the length of the boundary Max Height: 10.5m ; More than 9.5m to 12.5m || Mandatory - one side || Not permitted* || Max Length: 60% of the length of the boundary OR 80% if the lot adjoining that boundary has a frontage of 7.5m or less. Max Height 7.5m || Max Length: 70% of the length of the boundary Max Height: 10.5m ; More than 12.5m to 18m || Optional: - on 1 boundary only; - where the built to boundary wall adjoins a lot with a frontage less than 18m. Not permitted - Otherwise || Not permitted* || Max Length: the lesser of 15m or 60% of the length of the boundary Max Height: 7.5m || Max Length: the lesser of 15m or 60% of the length of the boundary Max Height: 10.5m ; Greater than 18m || Not permitted* || Not permitted* || Not Permitted* || Not Permitted*. Note - The above setbacks apply only to Class 1a and Class 10a buildings/structures. Note - Max length includes the length of walls of any other buildings on the same boundary. e.g detached garage, carport or shed. Note - For the maximum height of domestic outbuildings refer to the examples that achieve aspects of the performance outcomes for building height and domestic outbuildings. *Note - Built to boundary walls are not permitted, however, reduced side and rear boundary clearances may be permitted as prescribed (e.g QDC).",
+   "structured": {
+    "parameter": "btb_wall_permitted",
+    "operator": "=",
+    "value": null,
+    "unit": null,
+    "conditions": [
+     "Not permitted* in all frontage bands"
+    ],
+    "exceptions": [
+     "*reduced side and rear boundary clearances may be permitted as prescribed (e.g QDC)"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 30043-30052",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "Column alignment confirmed from raw HTML (5 cells per row). The 'Mandatory' column applies only where BTB is permitted. Effect: in Coastal communities/Suburban neighbourhood/Interim residential, walls within 200 mm of the boundary are not permitted by the scheme; whether QDC/QHC reduced boundary clearances for Class 10a (e.g. garages/sheds on the boundary) still apply is uncertain given the '*Note'."
+  },
+  {
+   "rule_key": "mb_dh_t93117_btb_nextgen",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.7 (via RAD4)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a",
+   "topic": "BUILT_TO_BOUNDARY",
+   "verbatim_text": "Table 9.3.1.7 Built to boundary walls. Columns: Lot frontage widths || Mandatory / Optional || [GRZ Coastal communities, Suburban neighbourhood; Redcliffe Interim residential] || [Emerging community Transition (developed lot); GRZ Next generation; Caboolture West Next generation sub-precinct] || [Emerging community Transition (developed lot) in Morayfield South; GRZ Urban neighbourhood]. 7.5m or less || Mandatory - both sides unless a corner lot || Not permitted* || Max length: 80% of the length of the boundary Max Height: 7.5m || Max Length: 80% of the length of the boundary Max Height: 8.5m ; More than 7.5m to 9.5m || Mandatory - one side Optional to both sides in the following locations only unless a corner lot: [Transition, Next generation, Caboolture West Next generation] || Not permitted* || Max Length: 60% of the length of the boundary OR 80% if the lot adjoining that boundary has a frontage of 9.5m or less. Max Height:7.5m || Max Length: 70% of the length of the boundary Max Height: 10.5m ; More than 9.5m to 12.5m || Mandatory - one side || Not permitted* || Max Length: 60% of the length of the boundary OR 80% if the lot adjoining that boundary has a frontage of 7.5m or less. Max Height 7.5m || Max Length: 70% of the length of the boundary Max Height: 10.5m ; More than 12.5m to 18m || Optional: - on 1 boundary only; - where the built to boundary wall adjoins a lot with a frontage less than 18m. Not permitted - Otherwise || Not permitted* || Max Length: the lesser of 15m or 60% of the length of the boundary Max Height: 7.5m || Max Length: the lesser of 15m or 60% of the length of the boundary Max Height: 10.5m ; Greater than 18m || Not permitted* || Not permitted* || Not Permitted* || Not Permitted*. Note - The above setbacks apply only to Class 1a and Class 10a buildings/structures. Note - Max length includes the length of walls of any other buildings on the same boundary. e.g detached garage, carport or shed. Note - For the maximum height of domestic outbuildings refer to the examples that achieve aspects of the performance outcomes for building height and domestic outbuildings. *Note - Built to boundary walls are not permitted, however, reduced side and rear boundary clearances may be permitted as prescribed (e.g QDC).",
+   "structured": {
+    "parameter": "btb_max_length_height",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m|%",
+    "conditions": [
+     "frontage <= 7.5 m: mandatory both sides (unless corner), max 80% boundary length, max height 7.5 m",
+     "> 7.5-9.5 m: mandatory one side (optional both), max 60% (80% if adjoining lot frontage <= 9.5 m), height 7.5 m",
+     "> 9.5-12.5 m: mandatory one side, max 60% (80% if adjoining lot frontage <= 7.5 m), height 7.5 m",
+     "> 12.5-18 m: optional on 1 boundary where adjoining lot frontage < 18 m, max lesser of 15 m or 60%, height 7.5 m",
+     "> 18 m: not permitted"
+    ],
+    "exceptions": [
+     "length includes walls of other buildings on same boundary (garage, carport, shed)"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 30043-30052",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_t93117_btb_urban",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.7 (via RAD4)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Class 1a and Class 10a",
+   "topic": "BUILT_TO_BOUNDARY",
+   "verbatim_text": "Table 9.3.1.7 Built to boundary walls. Columns: Lot frontage widths || Mandatory / Optional || [GRZ Coastal communities, Suburban neighbourhood; Redcliffe Interim residential] || [Emerging community Transition (developed lot); GRZ Next generation; Caboolture West Next generation sub-precinct] || [Emerging community Transition (developed lot) in Morayfield South; GRZ Urban neighbourhood]. 7.5m or less || Mandatory - both sides unless a corner lot || Not permitted* || Max length: 80% of the length of the boundary Max Height: 7.5m || Max Length: 80% of the length of the boundary Max Height: 8.5m ; More than 7.5m to 9.5m || Mandatory - one side Optional to both sides in the following locations only unless a corner lot: [Transition, Next generation, Caboolture West Next generation] || Not permitted* || Max Length: 60% of the length of the boundary OR 80% if the lot adjoining that boundary has a frontage of 9.5m or less. Max Height:7.5m || Max Length: 70% of the length of the boundary Max Height: 10.5m ; More than 9.5m to 12.5m || Mandatory - one side || Not permitted* || Max Length: 60% of the length of the boundary OR 80% if the lot adjoining that boundary has a frontage of 7.5m or less. Max Height 7.5m || Max Length: 70% of the length of the boundary Max Height: 10.5m ; More than 12.5m to 18m || Optional: - on 1 boundary only; - where the built to boundary wall adjoins a lot with a frontage less than 18m. Not permitted - Otherwise || Not permitted* || Max Length: the lesser of 15m or 60% of the length of the boundary Max Height: 7.5m || Max Length: the lesser of 15m or 60% of the length of the boundary Max Height: 10.5m ; Greater than 18m || Not permitted* || Not permitted* || Not Permitted* || Not Permitted*. Note - The above setbacks apply only to Class 1a and Class 10a buildings/structures. Note - Max length includes the length of walls of any other buildings on the same boundary. e.g detached garage, carport or shed. Note - For the maximum height of domestic outbuildings refer to the examples that achieve aspects of the performance outcomes for building height and domestic outbuildings. *Note - Built to boundary walls are not permitted, however, reduced side and rear boundary clearances may be permitted as prescribed (e.g QDC).",
+   "structured": {
+    "parameter": "btb_max_length_height",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m|%",
+    "conditions": [
+     "frontage <= 7.5 m: max 80% length, height 8.5 m",
+     "> 7.5-12.5 m: max 70% length, height 10.5 m",
+     "> 12.5-18 m: lesser of 15 m or 60%, height 10.5 m",
+     "> 18 m: not permitted"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 30043-30052",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_rad5_site_cover_50",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.1 RAD5 (E4)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Dwelling house incl. enclosed Class 10a",
+   "topic": "SITE_COVER",
+   "verbatim_text": "RAD5 Site cover (excluding eaves, sun shading devices, patios, balconies and other unenclosed structures) does not exceed: - Emerging community zone: - Transition precinct (developed lot) - in accordance with Table 9.3.1.8 - General residential zone: - Coastal communities precinct – 50% - Suburban neighbourhood precinct – 50% - Next generation neighbourhood precinct – in accordance with Table 9.3.1.8 - Urban neighbourhood precinct – in accordance with Table 9.3.1.9 - Caboolture West local plan: - Urban living precinct - Next generation sub-precinct - in accordance with Table 9.3.1.8 - Redcliffe Kippa-Ring local plan: - Interim residential precinct - 50% Note - Non-compliance with this RAD is a planning scheme matter ...",
+   "structured": {
+    "parameter": "max_site_cover",
+    "operator": "<=",
+    "value": 50,
+    "unit": "%",
+    "conditions": [
+     "any lot size"
+    ],
+    "exceptions": [
+     "excludes eaves, sun shading devices, patios, balconies and other unenclosed structures"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "Site cover per Schedule 1 definition, calculated to outermost projections; RAD5 additionally excludes patios, balconies and other unenclosed structures (so open carports/patios/pergolas are excluded, though the definition itself includes carports).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 19687",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "Conflict to resolve: the 'site cover' definition includes carport(s), but RAD5 excludes 'other unenclosed structures'."
+  },
+  {
+   "rule_key": "mb_dh_t93118_site_cover_nextgen",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.8 Site cover (via RAD5/E4)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Dwelling house incl. enclosed Class 10a",
+   "topic": "SITE_COVER",
+   "verbatim_text": "Table 9.3.1.8 Site cover - Emerging community zone - Transition precinct (developed lot), General residential zone - Next generation neighbourhood precinct and Caboolture West local plan - Urban living precinct - Next generation sub-precinct. Building height || Lot Size: 300m2 or less [terrace: Primary frontage width is less than 7.5m; built to boundary walls are provided to both side boundaries | terrace: Primary frontage width is 7.5m to 9.5m; built to boundary walls are provided to both side boundaries | traditional: Any built to boundary walls are limited to one side boundary only] || 301-400m2 || 401-500m2 || 501-1000m2 || Greater than 1000m2. 8.5m or less || 80% || 75% || 60% || 60% || 60% || 60% || 60% ; >8.5m - 12.0m || 50% || 50% || 50% || 50% || 60% || 50% || 50% ; >12.0m || N/A || N/A || N/A || N/A || N/A || 50% || 40%",
+   "structured": {
+    "parameter": "max_site_cover",
+    "operator": "conditional",
+    "value": null,
+    "unit": "%",
+    "conditions": [
+     "height <= 8.5 m: <=300 m2 terrace (<7.5 m frontage, BTB both sides) 80%; <=300 m2 terrace (7.5-9.5 m) 75%; <=300 m2 traditional 60%; 301-400 60%; 401-500 60%; 501-1000 60%; >1000 60%",
+     "height > 8.5-12 m: 50/50/50/50/60/50/50 (sic - 60% in 401-500 m2 column)",
+     "height > 12 m: N/A except 501-1000 m2 50%, >1000 m2 40%"
+    ],
+    "exceptions": [
+     "excludes eaves, sun shading devices, patios, balconies and other unenclosed structures (RAD5)"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32381, 30096, 30056-30058",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "Column mapping verified from raw HTML colspans (300 m2 or less spans 3 sub-columns). The 60% in the >8.5-12 m / 401-500 m2 cell is as published."
+  },
+  {
+   "rule_key": "mb_dh_t93119_site_cover_urban",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.9 Site cover (via RAD5/E4)",
+   "provision_type": "TABLE",
+   "zones": [
+    "General residential zone - Urban neighbourhood precinct"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Dwelling house incl. enclosed Class 10a",
+   "topic": "SITE_COVER",
+   "verbatim_text": "Table 9.3.1.9 Site cover - General residential zone - Urban neighourhood precinct. Building height || Lot Size: 300m2 or less || 301-400m2 || 401-500m2 || 501-1000m2 || Greater than 1000m2. 8.5m or less || 75% || 70% || 60% || 60% || 60% ; >8.5m - 12.0m || 50% || 50% || 60% || 50% || 50% ; >12.0m || N/A || N/A || N/A || 50% || 40%",
+   "structured": {
+    "parameter": "max_site_cover",
+    "operator": "conditional",
+    "value": null,
+    "unit": "%",
+    "conditions": [
+     "height <= 8.5 m: 75/70/60/60/60",
+     "> 8.5-12 m: 50/50/60/50/50",
+     "> 12 m: N/A/N/A/N/A/50/40"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rules 32382, 30097, 30062-30064",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_rad7_garage_openings",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.1 RAD7 (PO7/E7)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct",
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct",
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Garage and carport openings within 20 m of the site frontage",
+   "topic": "GARAGE_CARPORT_FRONTAGE",
+   "verbatim_text": "RAD7 Garage and carport openings, where located within 20m of the site frontage, are in accordance with the table below: Primary or Secondary frontage || Covered car space opening(s) per street frontage ; Greater than 18m || Not specified ; 12.5m to 18m || 6m wide maximum ; Less than 12.5m* || Single storey dwelling: - maximum 50% of the frontage width (being the frontage vehicle access is from); - recessed: - at least 1.0m behind the main building line;or - at least 1.0m behind a front portico and no more than 2.0m in front of the main building line. Two storey dwelling: - 6.0m wide maximum; - recessed 1.0m behind the front wall or balcony of upper level. Editor's note - Front wall is to have a minimum length of 40% of the adjoining frontage. OR For a laneway lot (Single or two storey): no maximum. Note - *For a laneway lot, vehicle access and parking must be provided via the laneway. ... Note - Where not associated with a Class 10 building or structure, non-compliance with this RAD is a planning scheme matter ... Note - For a Class 10 building or structure, Council has declared that a building or structure that is in a form that does not comply with this RAD, may: ... Non-compliance with this RAD is an amenity and aesthetic impact matter ...",
+   "structured": {
+    "parameter": "max_garage_opening_width",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m|%",
+    "conditions": [
+     "frontage > 18 m: not specified",
+     "frontage 12.5-18 m: 6 m max",
+     "frontage < 12.5 m single storey: <= 50% frontage width and recessed >= 1.0 m behind main building line (or >= 1.0 m behind portico and <= 2.0 m in front of MBL)",
+     "frontage < 12.5 m two storey: 6.0 m max, recessed 1.0 m behind upper level front wall/balcony",
+     "laneway lot: no maximum"
+    ],
+    "exceptions": [
+     "only openings within 20 m of the site frontage"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES for non-Class 10 work ('planning scheme matter'); for a Class 10 building it is an amenity and aesthetic concurrence matter, not an alternative provision.",
+   "measurement_notes": "Main building line = line extending from the longest wall excluding garage, carport or other domestic outbuilding in the front elevation (excludes porticos).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 19690",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_rad8_driveway_width",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.1 RAD8 (E8.x)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct",
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct",
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Crossovers and driveways",
+   "topic": "GARAGE_CARPORT_FRONTAGE",
+   "verbatim_text": "RAD8 Any new crossovers and driveways or changes to existing crossovers and driveways: - if there is an approved plan of development, are located in accordance with the plan of development approved by council as part of a development approval or as otherwise amended by council in writing; or - if no approved plan of development applies to the land, are a maximum 40% of the frontage from which access is being obtained or 5m, whichever is lesser, in accordance with Planning scheme policy - Integrated design (Appendix A).",
+   "structured": {
+    "parameter": "max_driveway_width",
+    "operator": "<=",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "no POD: lesser of 40% of frontage or 5 m"
+    ],
+    "exceptions": [
+     "approved POD governs"
+    ],
+    "formula_text": "min(0.4 * frontage, 5 m)"
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 19692",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_rad26_outbuilding_roofed_area",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.1 RAD26(a) (PO22/E22)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct",
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct",
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Domestic outbuildings (detached Class 10a shed, garage, carport) - total combined",
+   "topic": "OUTBUILDING_SIZE",
+   "verbatim_text": "RAD26 Domestic outbuildings: - have a total combined maximum roofed area as outlined in the table below: Size of lot || Maximum roofed area ; Less than 600m2 || 50m2 ; 600m2 - 1000m2 || 70m2 ; >1000m2 – 2000m2 || 80m2 ; Greater than 2000m2 || 150m2 - have a maximum and mean building height as follows: - where in front of the main building line for a carport - have a maximum building height of 3.3m and a mean height not exceeding 2.7m; or - for all other instances - have a maximum building height of 4m and a mean height not exceeding 3.5m; - are located behind the main building line and not within the primary frontage, secondary frontage or trafficable water body setbacks except where for a carport and complying with the front setback for carports specified in this code. Note - for c. above to determine the main building line a trafficable water body boundary is to be treated the same as a secondary frontage. Note - Council has declared that a building or structure that is in a form that does not comply with this RAD, may: ... Non-compliance with this RAD is an amenity and aesthetic impact matter for which Council will exercise a concurrence agency role for building work under Division 2, Part 3, Schedule 9 of the Planning Regulation 2017. Editor's note - The calculation for mean height is defined in the QDC.",
+   "structured": {
+    "parameter": "max_total_outbuilding_roofed_area",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m2",
+    "conditions": [
+     "lot < 600 m2: 50 m2",
+     "600-1000 m2: 70 m2",
+     "> 1000-2000 m2: 80 m2",
+     "> 2000 m2: 150 m2"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "NO - not an alternative provision; the RAD is declared an 'amenity and aesthetic impact matter' (Planning Regulation sch 9 pt 3 div 2) for which Council is concurrence agency.",
+   "measurement_notes": "Roofed area = area of the roof projected onto a horizontal plane; combined across all domestic outbuildings. Attached garages/carports under the dwelling roof are not 'domestic outbuildings'.",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 19717",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_rad26_outbuilding_height",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.1 RAD26(b)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct",
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct",
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Domestic outbuildings; carports in front of main building line",
+   "topic": "BUILDING_HEIGHT",
+   "verbatim_text": "RAD26 Domestic outbuildings: - have a total combined maximum roofed area as outlined in the table below: Size of lot || Maximum roofed area ; Less than 600m2 || 50m2 ; 600m2 - 1000m2 || 70m2 ; >1000m2 – 2000m2 || 80m2 ; Greater than 2000m2 || 150m2 - have a maximum and mean building height as follows: - where in front of the main building line for a carport - have a maximum building height of 3.3m and a mean height not exceeding 2.7m; or - for all other instances - have a maximum building height of 4m and a mean height not exceeding 3.5m; - are located behind the main building line and not within the primary frontage, secondary frontage or trafficable water body setbacks except where for a carport and complying with the front setback for carports specified in this code. Note - for c. above to determine the main building line a trafficable water body boundary is to be treated the same as a secondary frontage. Note - Council has declared that a building or structure that is in a form that does not comply with this RAD, may: ... Non-compliance with this RAD is an amenity and aesthetic impact matter for which Council will exercise a concurrence agency role for building work under Division 2, Part 3, Schedule 9 of the Planning Regulation 2017. Editor's note - The calculation for mean height is defined in the QDC.",
+   "structured": {
+    "parameter": "max_outbuilding_height",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "carport in front of main building line: max 3.3 m, mean <= 2.7 m",
+     "all other: max 4 m, mean <= 3.5 m"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "NO - not an alternative provision; the RAD is declared an 'amenity and aesthetic impact matter' (Planning Regulation sch 9 pt 3 div 2) for which Council is concurrence agency.",
+   "measurement_notes": "Building height to apex/parapet from ground level; mean height per QDC (now QHC) method.",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 19717",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_rad26_outbuilding_location",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.1 RAD26(c)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct",
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct",
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Domestic outbuildings",
+   "topic": "FRONT_SETBACK",
+   "verbatim_text": "RAD26 Domestic outbuildings: - have a total combined maximum roofed area as outlined in the table below: Size of lot || Maximum roofed area ; Less than 600m2 || 50m2 ; 600m2 - 1000m2 || 70m2 ; >1000m2 – 2000m2 || 80m2 ; Greater than 2000m2 || 150m2 - have a maximum and mean building height as follows: - where in front of the main building line for a carport - have a maximum building height of 3.3m and a mean height not exceeding 2.7m; or - for all other instances - have a maximum building height of 4m and a mean height not exceeding 3.5m; - are located behind the main building line and not within the primary frontage, secondary frontage or trafficable water body setbacks except where for a carport and complying with the front setback for carports specified in this code. Note - for c. above to determine the main building line a trafficable water body boundary is to be treated the same as a secondary frontage. Note - Council has declared that a building or structure that is in a form that does not comply with this RAD, may: ... Non-compliance with this RAD is an amenity and aesthetic impact matter for which Council will exercise a concurrence agency role for building work under Division 2, Part 3, Schedule 9 of the Planning Regulation 2017. Editor's note - The calculation for mean height is defined in the QDC.",
+   "structured": {
+    "parameter": "outbuilding_location",
+    "operator": "=",
+    "value": null,
+    "unit": null,
+    "conditions": [
+     "behind the main building line",
+     "not within the primary frontage, secondary frontage or trafficable water body setbacks"
+    ],
+    "exceptions": [
+     "carports complying with the RAD3 carport setback"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "NO - not an alternative provision; the RAD is declared an 'amenity and aesthetic impact matter' (Planning Regulation sch 9 pt 3 div 2) for which Council is concurrence agency.",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 19717",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_dh_po3_setbacks_performance",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.2 PO3",
+   "provision_type": "PERFORMANCE_OUTCOME",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct",
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct",
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Dwelling houses and structures",
+   "topic": "OTHER",
+   "verbatim_text": "PO3 Dwelling houses and structures are setback to; - be consistent with the intended character of the streetscape, precinct and zone; ... - ensure covered car parking spaces and domestic outbuildings that are visible from the street or public place are of a scale, location and built form that is consistent with the existing streetscape and character of the precinct and avoids dominating or otherwise negatively impacting the streetscape or adjoining properties. ... Note - This performance outcome is a planning scheme matter against which Council must undertake its concurrence agency assessment under Division 2, Part 3, Schedule 9 of the Planning Regulation 2017 for non-compliance with the corresponding RAD(s) ... Editor's note - The boundary to a laneway is not a rear boundary and is always treated as a frontage.",
+   "structured": {
+    "parameter": "qualitative",
+    "operator": "conditional",
+    "value": null,
+    "unit": null,
+    "conditions": [],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - RAD carries note 'Non-compliance with this RAD is a planning scheme matter for which Council will exercise a concurrence agency role ...'; Table 1.6.1 identifies 9.3.1 'RADs and performance outcomes identified by notes as a planning scheme matter' as the alternative provisions to QDC boundary clearance and site cover provisions (Building Act s33).",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 29911",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": "Qualitative benchmark used by Council in concurrence assessment when RAD3/RAD4 not met."
+  },
+  {
+   "rule_key": "mb_dh_rad54_riparian_setbacks",
+   "code": "9.3.1 Dwelling house code",
+   "clause": "Table 9.3.1.1 RAD54",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "General residential zone - Coastal communities precinct",
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "General residential zone - Suburban neighbourhood precinct",
+    "General residential zone - Next generation neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) (other than Morayfield South urban area)",
+    "Caboolture West local plan - Urban living precinct - Next generation sub-precinct",
+    "General residential zone - Urban neighbourhood precinct",
+    "Emerging community zone - Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"
+   ],
+   "overlay": "Riparian and wetland setbacks",
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "All development",
+   "topic": "OTHER",
+   "verbatim_text": "RAD54 No development is to occur within: - 50m from top of bank for W1 waterway and drainage line - 30m from top of bank for W2 waterway and drainage line - 20m from top of bank for W3 waterway and drainage line - 100m from the edge of a Ramsar wetland, 50m from all other wetlands. ... Note - The minimum setback distance applies to the each side of waterway.",
+   "structured": {
+    "parameter": "min_waterway_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "W1 50 m, W2 30 m, W3 20 m from top of bank",
+     "Ramsar wetland 100 m, other wetlands 50 m"
+    ],
+    "exceptions": [
+     "values/constraints criteria do not apply where consistent with a current RAL/MCU/OPW permit that addressed the constraint"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "NO - values and constraints RAD; non-compliance makes the work code assessable.",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 19754",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_rr_rad2_height_general",
+   "code": "6.2.11 Rural residential zone code",
+   "clause": "Table 6.2.11.1 RAD2 (E3)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "Rural residential zone"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "All buildings and structures unless otherwise specified",
+   "topic": "BUILDING_HEIGHT",
+   "verbatim_text": "RAD2 Unless otherwise specified elsewhere in this code, the building height of all buildings and structures does not exceed 5m.",
+   "structured": {
+    "parameter": "max_building_height",
+    "operator": "<=",
+    "value": 5,
+    "unit": "m",
+    "conditions": [],
+    "exceptions": [
+     "dwelling houses and their outbuildings: RAD47"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "NO (not listed in the concurrence agency issues table)",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 14723",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_rr_rad3_setbacks_general",
+   "code": "6.2.11 Rural residential zone code",
+   "clause": "Table 6.2.11.1 RAD3 (E4)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "Rural residential zone"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "All buildings unless otherwise specified",
+   "topic": "SIDE_SETBACK",
+   "verbatim_text": "RAD3 Unless otherwise specified elsewhere in this code, the minimum setbacks from a property boundary are as follows: - road boundary – 6m - side boundary – 4.5m - rear boundary – 4.5m. Note - This provision does not apply where a development footprint exists for a lot. Note - This provision does not apply to swimming pools. For swimming pools, refer to Queensland Development Codes, Acceptable Solutions. Note - Where located in a bushfire hazard area (see Overlay map - Bushfire hazard) a greater setback may be required. See values and constraints requirements Bushfire hazard.",
+   "structured": {
+    "parameter": "min_setbacks",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "road 6 m",
+     "side 4.5 m",
+     "rear 4.5 m"
+    ],
+    "exceptions": [
+     "development footprint",
+     "swimming pools",
+     "dwelling houses incl. domestic outbuildings: RAD48 is the specific provision"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "NO (not listed as concurrence issue)",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 14725",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "For dwelling-house building work RAD48 'otherwise specifies' the setbacks; RAD3 relevant to other buildings."
+  },
+  {
+   "rule_key": "mb_rr_rad6_roofed_area",
+   "code": "6.2.11 Rural residential zone code",
+   "clause": "Table 6.2.11.1 RAD6 (E8)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "Rural residential zone"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "All buildings incl. domestic outbuildings",
+   "topic": "SITE_COVER",
+   "verbatim_text": "RAD6 The maximum total roofed area of all buildings (including domestic outbuildings) on a lot does not exceed: Lot size || Maximum roofed area ; Less than 1500m2 || 50% of the lot ; 1500m2 to 3000m2 || 750m2 ; Greater than 3000m2 to 6000m2 || 25% of the lot ; Greater than 6000m2 || 1500m2. Note - For building work associated with a dwelling house, this is an alternative provision to the QDC, part MP1.2, A3 and is a concurrence agency issue.",
+   "structured": {
+    "parameter": "max_total_roofed_area",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m2|%",
+    "conditions": [
+     "lot < 1500 m2: 50% of lot",
+     "1500-3000 m2: 750 m2",
+     "> 3000-6000 m2: 25% of lot",
+     "> 6000 m2: 1500 m2"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - 'Note - For building work associated with a dwelling house, this is an alternative provision to the QDC, part MP1.2, A3 and is a concurrence agency issue.'",
+   "measurement_notes": "Roofed area projected onto horizontal plane (not site cover).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 14731",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_rr_rad47_height_dwelling_outbuilding",
+   "code": "6.2.11 Rural residential zone code",
+   "clause": "Table 6.2.11.1 RAD47 (E59)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "Rural residential zone"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Dwelling house; domestic outbuildings and free standing carports and garages",
+   "topic": "BUILDING_HEIGHT",
+   "verbatim_text": "RAD47 Building height for a dwelling house does not exceed: - that on Overlay map - Building heights for a dwelling house; or - for domestic outbuildings and free standing carports and garages, building height does not exceed 4.5m.",
+   "structured": {
+    "parameter": "max_outbuilding_height",
+    "operator": "<=",
+    "value": 4.5,
+    "unit": "m",
+    "conditions": [
+     "dwelling house: mapped Overlay map - Building heights value"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - listed under 'Alternative provisions to the QDC' in the 6.2.11 concurrence agency issues table.",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 14785",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_rr_rad48_road_setback",
+   "code": "6.2.11 Rural residential zone code",
+   "clause": "Table 6.2.11.1 RAD48 (E60)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "Rural residential zone"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Dwelling house incl. domestic outbuildings",
+   "topic": "FRONT_SETBACK",
+   "verbatim_text": "RAD48 Setbacks (including domestic outbuildings) comply with the following: - Road boundary - 6m - Side and rear boundary: Height of wall || Minimum setback from side or rear boundary ; 3m or less || 1.5m ; Greater than 3m to 4.5m || 2m ; Greater than 4.5m || 4m. Note - For building work associated with a dwelling house, this is an alternative provision to the QDC, part MP1.2, A1 (a), (b) and (c), A2 (a), (b) and (d) and is a concurrence agency issue. Note - This provision does not apply where a development footprint exists for a lot.",
+   "structured": {
+    "parameter": "min_road_setback",
+    "operator": ">=",
+    "value": 6,
+    "unit": "m",
+    "conditions": [
+     "all road boundaries (no primary/secondary distinction)"
+    ],
+    "exceptions": [
+     "development footprint"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - 'this is an alternative provision to the QDC, part MP1.2, A1 (a), (b) and (c), A2 (a), (b) and (d)'",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme).",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 14786",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_rr_rad48_side_rear_setback",
+   "code": "6.2.11 Rural residential zone code",
+   "clause": "Table 6.2.11.1 RAD48 (E60)",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "Rural residential zone"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Dwelling house incl. domestic outbuildings (side and rear)",
+   "topic": "SIDE_SETBACK",
+   "verbatim_text": "RAD48 Setbacks (including domestic outbuildings) comply with the following: - Road boundary - 6m - Side and rear boundary: Height of wall || Minimum setback from side or rear boundary ; 3m or less || 1.5m ; Greater than 3m to 4.5m || 2m ; Greater than 4.5m || 4m. Note - For building work associated with a dwelling house, this is an alternative provision to the QDC, part MP1.2, A1 (a), (b) and (c), A2 (a), (b) and (d) and is a concurrence agency issue. Note - This provision does not apply where a development footprint exists for a lot.",
+   "structured": {
+    "parameter": "min_side_rear_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall height <= 3 m: 1.5 m",
+     "> 3 m to 4.5 m: 2 m",
+     "> 4.5 m: 4 m",
+     "same values apply to rear boundary"
+    ],
+    "exceptions": [
+     "development footprint"
+    ],
+    "formula_text": "wall height h: h<=3 -> 1.5; 3<h<=4.5 -> 2; h>4.5 -> 4"
+   },
+   "alternative_provision_to_qdc_qhc": "YES - 'this is an alternative provision to the QDC, part MP1.2, A1 (a), (b) and (c), A2 (a), (b) and (d)'",
+   "measurement_notes": "Setback = 'shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot'. The tables split columns 'To wall' vs 'To OMP' (outermost projection) and 'To covered car parking space and domestic outbuildings'. Row selection is by 'Height of wall' (not defined in the scheme). 'Height of wall' undefined.",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 14786",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": "Applies to side AND rear; topic recorded as SIDE_SETBACK."
+  },
+  {
+   "rule_key": "mb_rr_rad50_lake_setback",
+   "code": "6.2.11 Rural residential zone code",
+   "clause": "Table 6.2.11.1 RAD50",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "Rural residential zone"
+   ],
+   "overlay": "Infrastructure buffers (400m lake buffer)",
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Dwelling house or outbuilding",
+   "topic": "OTHER",
+   "verbatim_text": "RAD50 For Lake Samsonvale or Lake Kurwongbah, a setback of no less than 400m is maintained between the following nominated full supply levels to those lakes and any dwelling house or outbuilding on the land:- - RL 39.63m AHD being the full supply level of Lake Samsonvale; and - RL 21m AHD being the full supply level of Lake Kurwongbah. OR No part of any dwelling house or outbuilding on Lot 5 RP111651 or Lot RP111653 is any closer than 80m to the full supply level of RL 21m AHD to Lake Kurwongbah.",
+   "structured": {
+    "parameter": "min_lake_setback",
+    "operator": ">=",
+    "value": 400,
+    "unit": "m",
+    "conditions": [
+     "from full supply level"
+    ],
+    "exceptions": [
+     "Lot 5 RP111651 / Lot RP111653: 80 m"
+    ],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "YES - listed under 'Alternative provisions to the QDC' in 6.2.11 concurrence table.",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 14788",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": ""
+  },
+  {
+   "rule_key": "mb_rr_rad3_pool_note",
+   "code": "6.2.11 Rural residential zone code",
+   "clause": "Table 6.2.11.1 RAD3 note",
+   "provision_type": "OTHER",
+   "zones": [
+    "Rural residential zone"
+   ],
+   "overlay": null,
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Swimming pools",
+   "topic": "POOL_SETBACK",
+   "verbatim_text": "Note - This provision does not apply to swimming pools. For swimming pools, refer to Queensland Development Codes, Acceptable Solutions.",
+   "structured": {
+    "parameter": "pool_setback",
+    "operator": "=",
+    "value": null,
+    "unit": null,
+    "conditions": [
+     "planning scheme setback RAD3 excluded for pools; defer to QDC (now QHC)"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "NO",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 14725",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": false,
+   "notes": "No pool setback provisions were found in 9.3.1 Dwelling house code; pools there are only mentioned re pool fencing editor's notes."
+  },
+  {
+   "rule_key": "mb_rr_rad100_bushfire_separation",
+   "code": "6.2.11 Rural residential zone code",
+   "clause": "Table 6.2.11.1 RAD100",
+   "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+   "zones": [
+    "Rural residential zone"
+   ],
+   "overlay": "Bushfire hazard",
+   "local_plan": null,
+   "lot_conditions": null,
+   "structure_scope": "Buildings and structures in bushfire hazard area",
+   "topic": "SEPARATION",
+   "verbatim_text": "RAD100 Buildings and structures have contained within the site: - a separation from classified vegetation of 20m or the distance required to achieve a bushfire attack level (BAL) at the building, roofed structure or fire fighting water supply of no more than 29, whichever is the greater; - a separation from low threat vegetation of 10m or the distance required to achieve a bushfire attack level (BAL) at the building, roofed structure or fire fighting water supply of no more than 29, whichever is the greater; ...",
+   "structured": {
+    "parameter": "min_vegetation_separation",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "classified vegetation: max(20 m, distance for BAL <= 29)",
+     "low threat vegetation: max(10 m, distance for BAL <= 29)"
+    ],
+    "exceptions": [],
+    "formula_text": null
+   },
+   "alternative_provision_to_qdc_qhc": "NO - values and constraints requirement",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false",
+   "page_or_anchor": "RAD100",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "RAD number from flattened text; verify numbering."
+  },
+  {
+   "rule_key": "mb_rkr_interim_setbacks_table_72163",
+   "code": "7.2.1 Redcliffe Kippa-Ring local plan code",
+   "clause": "7.2.1.6 Table 7.2.1.6.3 Setbacks (via RAD3, Part K)",
+   "provision_type": "TABLE",
+   "zones": [
+    "Redcliffe Kippa-Ring local plan - Interim residential precinct"
+   ],
+   "overlay": null,
+   "local_plan": "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+   "lot_conditions": null,
+   "structure_scope": "Residential uses",
+   "topic": "SIDE_SETBACK",
+   "verbatim_text": "Table 7.2.1.6.3 Setbacks - Residential uses. Height of wall || Frontage Primary [To wall | To OMP | To car parking space] || Frontage Secondary to Street [To wall | To OMP | To car parking space] || Frontage Secondary to lane || Side To OMP and wall || Rear To OMP and wall. Less than 4.5m || Min 6m || Min 4.5m || Min 5.4m || Min 3m || Min 2m || Min 5.4m || Min 0.5m || Min 1.5m || Min 1.5m ; 4.5m to 8.5m || Min 6m || Min 4.5m || N/A || Min 3m || Min 2m || N/A || Min 0.5m || Min 2m || Min 2m ; Greater than 8.5m || Min 6m || Min 4.5m || N/A || Min 3m || Min 2m || N/A || Min 0.5m || Min 2m up to 8.5m in height; plus 0.5m for every 3m in height (or storey) or part thereof over 8.5m || Min 2m up to 8.5m in height; plus 0.5m for every 3m in height (or storey) or part thereof over 8.5m",
+   "structured": {
+    "parameter": "min_side_rear_setback",
+    "operator": "conditional",
+    "value": null,
+    "unit": "m",
+    "conditions": [
+     "wall < 4.5 m: side/rear 1.5 m",
+     "4.5-8.5 m: 2 m",
+     "> 8.5 m: 2 m + 0.5 m per 3 m (or storey) or part over 8.5 m"
+    ],
+    "exceptions": [],
+    "formula_text": "h>8.5: 2 + 0.5*ceil((h-8.5)/3)"
+   },
+   "alternative_provision_to_qdc_qhc": "UNKNOWN",
+   "measurement_notes": "",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/189/0/false/11-Sep-2026/false",
+   "page_or_anchor": "rule 24823-24825",
+   "verification_status": "VERIFIED_VERBATIM",
+   "needs_manual_review": true,
+   "notes": "Part K (RADs for the Interim residential precinct) of the local plan code; Table 5.9.1.9 lists both 9.3.1 and 7.2.1 for dwelling-house building work there, and 1.5 says local plan codes prevail over use codes. But 9.3.1 RAD3 sends the same precinct to Table 9.3.1.3 (side/rear 'Refer to standard as in QDC'). Which table governs a dwelling house, and whether 7.2.1 is an alternative provision (it is not listed in Table 1.6.1), needs manual review. Local plan RAD1 also sets domestic outbuildings (incl. free standing carports and garages) to 4m and mean height 3.5m."
+  }
+ ],
+ "overlays_affecting_siting": [
+  {
+   "overlay": "Building heights",
+   "code": "9.3.1 Dwelling house code RAD1/E1; 6.2.11 RAD47",
+   "effect": "Sets the maximum dwelling-house height by map category (typically 'Max 8.5m' in low-density areas per open data).",
+   "quote": "Building height does not exceed that mapped on Overlay map – Building heights.",
+   "clause": "9.3.1 RAD1",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false"
+  },
+  {
+   "overlay": "Riparian and wetland setbacks",
+   "code": "9.3.1 Dwelling house code (values and constraints)",
+   "effect": "No development within 20-50 m of mapped waterway top of bank or 50/100 m of wetlands.",
+   "quote": "No development is to occur within: - 50m from top of bank for W1 waterway and drainage line - 30m from top of bank for W2 waterway and drainage line - 20m from top of bank for W3 waterway and drainage line - 100m from the edge of a Ramsar wetland, 50m from all other wetlands.",
+   "clause": "9.3.1 RAD54",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false"
+  },
+  {
+   "overlay": "Heritage and landscape character",
+   "code": "9.3.1 Dwelling house code (values and constraints); Table 1.7.7.1",
+   "effect": "No building within 20 m of a mapped significant tree; building work on the overlay is excluded from Table 1.7.7.1 accepted development.",
+   "quote": "The following development does not occur within 20m of the base of any significant tree, identified on Overlay map – Heritage and landscape character and listed in Appendix 2 of Planning scheme policy – Heritage and landscape character: - construction of any building; ...",
+   "clause": "9.3.1 RAD45",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false"
+  },
+  {
+   "overlay": "Infrastructure buffers",
+   "code": "9.3.1 Dwelling house code",
+   "effect": "No buildings or structures in Bulk water supply infrastructure buffer or Gas pipeline buffer; habitable rooms >= 10 m from substations.",
+   "quote": "Development does not involve the construction of any buildings or structures within a Bulk water supply infrastructure buffer.",
+   "clause": "9.3.1 RAD48 (also RAD50, RAD52)",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false"
+  },
+  {
+   "overlay": "Coastal hazard (Erosion Prone Area)",
+   "code": "8.2.1 Coastal hazard overlay code",
+   "effect": "Siting limited to outside the EPA or no further seaward than adjacent buildings.",
+   "quote": "Development is located outside the Erosion Prone Area, or otherwise does not extend any further seaward than existing immediately adjacent buildings.",
+   "clause": "8.2.1 PO2/E2",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/198/0/false/11-Sep-2026/false"
+  },
+  {
+   "overlay": "Bushfire hazard",
+   "code": "6.2.11 Rural residential zone code",
+   "effect": "Separation from classified (20 m+) and low threat (10 m+) vegetation; RAD3 note says greater setbacks may be required.",
+   "quote": "a separation from classified vegetation of 20m or the distance required to achieve a bushfire attack level (BAL) at the building, roofed structure or fire fighting water supply of no more than 29, whichever is the greater;",
+   "clause": "6.2.11 RAD100",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/111/0/false/11-Sep-2026/false"
+  },
+  {
+   "overlay": "Scenic amenity - Regionally significant (Hills)",
+   "code": "9.3.1 Dwelling house code",
+   "effect": "Buildings not on hill tops/ridge lines; colour/reflectivity limits (no numeric setback).",
+   "quote": "Where located in the Regionally significant (Hills) scenic amenity overlay, buildings and structures are not: - located on a hill top or ridge line; and - all parts of the building and structure are located below the hill top or ridge line.",
+   "clause": "9.3.1 RAD55",
+   "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/226/0/false/11-Sep-2026/false"
+  }
+ ],
+ "local_plan_mechanism": {
+  "summary": "Local plans (Part 7: Redcliffe Kippa-Ring, Woodfordia, Caboolture West) have their own tables of assessment in 5.9 that replace the zone tables where they apply (5.3.1/5.3.2), and their codes prevail over zone and use codes to the extent of inconsistency (1.5). For dwelling houses, the local plan table either points to the 9.3.1 Dwelling house code (Redcliffe Interim residential precinct, Caboolture West Urban living - Next generation sub-precinct, which 9.3.1 RAD3/RAD5 route to particular setback/site cover tables) or adds the local plan code as a further benchmark. There are no separate 'neighbourhood plans' in this scheme; zone precincts act as the main variation layer.",
+  "examples": [
+   {
+    "plan": "Redcliffe Kippa-Ring local plan - Interim residential precinct",
+    "quote": "Building work, not associated with a material change of use, for a Dwelling house in the Interim residential precinct ... 9.3.1 'Dwelling house code' 7.2.1 'Redcliffe Kippa-Ring local plan code' (applicable precinct)",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/67/0/false/11-Sep-2026/false"
+   },
+   {
+    "plan": "Caboolture West local plan - Urban living precinct (Next generation sub-precinct)",
+    "quote": "Dwelling house || Accepted development subject to requirements || If: - on a developed lot; - in a Next generation sub-precinct on an approved Neighbourhood development plan; and - complying with the relevant requirements for accepted development. ... 9.3.1 'Dwelling house code'",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/65/0/false/11-Sep-2026/false"
+   },
+   {
+    "plan": "Hierarchy rule",
+    "quote": "local plan codes prevail over zone codes, use codes and other development codes to the extent of the inconsistency;",
+    "source_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/r/15/0/false/11-Sep-2026/false"
+   }
+  ]
+ },
+ "open_questions": [
+  "QHC transition: the scheme (Version 8, 11 Sep 2026) still refers to 'QDC part MP1.2' and 'standard as in QDC'. No QHC amendment was found. Confirm how Building Act/Regulation transitional provisions apply these references after the QHC commenced on 1 Sep 2026, especially the side/rear cells that say 'Refer to standard as in QDC' and the QDC mean-height method.",
+  "Alternative provisions in 9.3.1 are identified indirectly (Table 1.6.1 plus 'planning scheme matter' notes), not by an explicit 'alternative provision to QDC A1...' statement per RAD as in 6.2.11. RAD26 (outbuilding size/height/location) and RAD15 are amenity/aesthetic matters, not alternative provisions - confirm the engine's treatment.",
+  "Redcliffe Interim residential precinct: 9.3.1 RAD3 points to Table 9.3.1.3 while the local plan Part K RAD3 points to Table 7.2.1.6.3 (side/rear 1.5 m / 2 m). Which governs dwelling-house building work?",
+  "Morayfield South (Emerging community Transition precinct): RAD3 routes it to Table 9.3.1.5, while E3.1 and the Table 9.3.1.6 heading route it to Table 9.3.1.6.",
+  "Table 9.3.1.4 heading includes 'Township zone - Residential precinct', but Table 5.7.1 assesses Township residential dwelling houses against the Township zone code (not fetched).",
+  "Building heights overlay values come from 2022 council open data, not the Version 8 legal map; lot-specific verification is needed.",
+  "Site cover: the definition includes carports, but RAD5 excludes 'patios, balconies and other unenclosed structures'. Decide how to treat open carports.",
+  "Not fetched: 6.2.10 Rural zone code (also an alternative-provision code), 6.2.12 Township zone code, 6.2.3 Emerging community zone code, Woodfordia local plan, Planning scheme policy - Residential design.",
+  "No swimming pool setback provisions were found in 9.3.1; RR code RAD3 excludes pools and refers to the QDC.",
+  "Rural residential: RAD3 (6 m / 4.5 m / 4.5 m) vs RAD48 (6 m road, 1.5-4 m by wall height) - RAD48 is specific to dwelling houses and outbuildings; confirm RAD3 does not also apply."
+ ],
+ "fetch_log": [
+  "https://www.moretonbay.qld.gov.au/Services/Building-Development/Planning-Schemes/MBRC -> commenced 1 Feb 2016; link to eScheme",
+  "https://www.moretonbay.qld.gov.au/Services/Building-Development/Planning-Schemes/MBRC/MBRC-Planning-Scheme-Online -> 'This LGIP amendment commenced on 11 September 2026, creating version 8 of the planning scheme.'",
+  "https://www.moretonbay.qld.gov.au/Services/Building-Development/Planning-Schemes/MBRC/Planning-Scheme-Amendments -> amendment history (Better Housing 30 Oct 2024 v7; Admin No.3 23 Jun 2025 v7.1; LGIP No.2 11 Sep 2026; MA4/MA5 pending)",
+  "WebSearch -> new City of Moreton Bay planning scheme at early consultation; draft expected 2028",
+  "https://eplan.moretonbay.qld.gov.au/planningscheme -> WebFetch 403; curl returns JS SPA shell (IsoPlan)",
+  "https://eplan.moretonbay.qld.gov.au/planningscheme/api/y/cfg -> 403 without browser headers; 200 with headers (news item confirms Version 8)",
+  "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/vpr -> revisions: 96 'Version 8' Current (operative 09/11/2026); 90 'Version 7.1' Superseded",
+  "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/rev/96/11-Sep-2026/1 -> 386 glossary definitions",
+  "https://eplan.moretonbay.qld.gov.au/planningscheme/api/l/s/_/0/_/false/11-Sep-2026/1/96 -> table of contents (section ids)",
+  "api/l/r/{id}/0/false/11-Sep-2026/false for ids 15,16,46,49,50,51,43,53,54,57,55,67,70,65,77,98,99,100,111,116,136,137,138,161,164,166,189,197,198,226,230,231 -> rule HTML; ids 82 and 85 returned null rules (parent headings only)",
+  "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/ArcGIS/rest/services/OM_Building_Heights_WebMercator_OpenData/FeatureServer/0/query -> distinct building height categories",
+  "https://moretonbay.qld.gov.au/Services/Building-Development/Planning-Schemes/MBRC/Info-Sheets/Dwelling-House -> council info sheet; no QHC mention",
+  "WebSearch 'Moreton Bay Queensland Housing Code planning scheme' -> no council QHC amendment found"
+ ]
+}

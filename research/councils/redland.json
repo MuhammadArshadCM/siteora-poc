@@ -1,0 +1,949 @@
+{
+  "council": "Redland City Council",
+  "planning_scheme": {
+    "name": "Redland City Plan 2018 (cited as the 'Redland planning scheme')",
+    "version": "Version 14 (Major amendment; PDF consolidation 'updated 23 September 2026 with changes to SC 5')",
+    "version_commenced": "2025-11-10",
+    "official_urls": [
+      "https://www.redland.qld.gov.au/Planning-building-and-development/Redland-City-Plan",
+      "https://www.redland.qld.gov.au/info/20292/redland_city_plan",
+      "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    ],
+    "notes": "Scheme commenced 8 October 2018 (Citation and commencement). Appendix 2 Table AP2.1: version 14 'Adopted 17 September 2025 ... Effective 10 November 2025', Major amendment (MDR, LMDR and TA zone codes; ROL code; tables of assessment for LMDR/MDR; PSP 7). The council-hosted PDF is labelled 'updated 23 September 2026 with changes to SC 5' (Schedule 5 change; version number unchanged). Pending: Major Amendment 02/25 - Residential (and 03/25 Non-residential): council resolved 15 July 2026 to seek Planning Minister approval to adopt; NOT in force as at 8 Oct 2026. There are no local plans in the scheme; precincts within zone codes do the localisation. A new 'Redlands Coast City Plan (RCCP)' is in preparation (council page link)."
+  },
+  "qdc_qhc_relationship": {
+    "summary": "City Plan v14 refers only to QDC MP1.1/MP1.2/MP1.3; it has NOT been amended to refer to the Queensland Housing Code (no 'Housing Code'/'QHC' text in v14 or in the 02/25 consultation draft). Section 1.6 names the LDR zone code (plus bushfire, coastal, flood, heritage overlay codes and Tables 5.6.1/5.9.1) as containing building assessment provisions. Only Low density residential zone precinct provisions (LDR2, LDR4, LDR1/LDR2 site cover, LDR5 canal setback, LDR3 site cover/component size/height) are expressly alternative provisions. Other LDR precinct AOs are expressly NOT alternative provisions and instead trigger code-assessable 'Building Work Assessable Against the Planning Scheme'. Everywhere else QDC (now QHC) siting applies unmodified. How the QDC references map to the QHC after 1 Sept 2026 is a transitional/interpretation question for the Building Act - not addressed in the scheme.",
+    "quotes": [
+      {
+        "text": "(5) All parts of the Queensland Development Code MP1.1 and MP1.2 including performance criteria 4, 5, 7, 8 and 9 and the corresponding acceptable solutions apply to relevant development pursuant to Section 6 of the Building Regulation 2021 (unless a relevant alternative provision applies.",
+        "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+        "clause": "s1.6(5), printed p.15"
+      },
+      {
+        "text": "(4) The building assessment provisions are contained in the following parts of this planning scheme: (a) Table 5.6.1 Building work; (b) Table 5.9.1 Assessment benchmarks for overlays; (c) 6.2.1 Low density residential zone code; (d) 8.2.2 Bushfire hazard overlay code; (e) 8.2.3 Coastal protection (erosion prone areas) overlay code; (f) 8.2.6 Flood and storm tide hazard overlay code; and (g) 8.2.7 Heritage overlay code.",
+        "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+        "clause": "s1.6(4)"
+      },
+      {
+        "text": "specify alternative boundary clearances and site cover provisions for Class 1 and 10 structures under section 33 of the Building Act 1975.",
+        "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+        "clause": "s1.6(3) editor's note"
+      },
+      {
+        "text": "Editor's note--Some of the acceptable outcomes for detached houses in the Low density residential code are alternative provisions to the Queensland Development Code.",
+        "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+        "clause": "Table 5.6.1, printed p.103"
+      },
+      {
+        "text": "Editor's note--The following acceptable outcomes are alternative provisions for the purposes of the Queensland Development Code.",
+        "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+        "clause": "Table 6.2.1.3.1 'Dwelling houses' heading (PO4-PO5)"
+      },
+      {
+        "text": "The Redland City Plan can identify alternative and/or additional requirements where a more locally specific outcome is sought. In these cases, City Plan will override the QDC.",
+        "source_url": "https://www.redland.qld.gov.au/Planning-building-and-development/What-approvals-do-I-need/Queensland-Development-Code",
+        "clause": "Council web page (COUNCIL_FACTSHEET)"
+      }
+    ]
+  },
+  "levels_of_assessment": [
+    {
+      "use_or_work": "Dwelling house (MCU)",
+      "zone": "Low density residential zone",
+      "level": "Accepted; Accepted subject to requirements if in precincts LDR1-LDR5",
+      "conditions": "Accepted subject to requirements (LDR zone code) if in precincts LDR1, LDR2, LDR3, LDR4 or LDR5; otherwise Accepted",
+      "quote": "Dwelling house | Accepted | If not accepted subject to requirements | Accepted subject to requirements | Editor's note--Dwelling houses not complying with the relevant acceptable outcomes will require a concurrence agency referral to Council under Schedule 9 of the Regulation. | If in precincts LDR1, LDR2, LDR3, LDR4 or LDR5. | Low density residential zone code",
+      "clause": "Table 5.4.1",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "Building work",
+      "zone": "Low density residential zone",
+      "level": "Accepted; Accepted subject to requirements for listed cases",
+      "conditions": "(1) dwelling house in LDR1-LDR5; (2) dual occupancy in LDR5; (3)/(4) building work associated with a dwelling house or dual occupancy in LDR5",
+      "quote": "Accepted subject to requirements ... If: (1) a dwelling house in precincts LDR1, LDR2, LDR3, LDR4 or LDR5; or (2) a dual occupancy in precinct LDR5; or (3) Building work associated with a dwelling house in LDR5; or (4) Building work associated with a dual occupancy in LDR5. Editor's note: Building work is defined by the Building Act 1975. | Low density residential zone code ... Accepted development Any other building work not listed in this table.",
+      "clause": "Table 5.6.1, printed p.103",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "Building work (non-compliance consequence)",
+      "zone": "Low density residential zone",
+      "level": "Concurrence referral or code assessment",
+      "conditions": "Depends on whether the failed AO is an alternative provision",
+      "quote": "Editor's note--Building work for dwelling houses not complying with the relevant acceptable outcomes will require a concurrence agency referral to Council under Schedule 9 of the Regulation, or trigger a code assessable Building Work Assessable Against the Planning Scheme application. Refer to the editor's notes in Table 6.2.1.3.1 for further clarification.",
+      "clause": "Table 5.6.1",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Low-medium density residential zone",
+      "level": "Accepted",
+      "conditions": "none stated",
+      "quote": "Dwelling house Park Sales office Landing ... | Accepted",
+      "clause": "Table 5.4.2",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Medium density residential zone",
+      "level": "Accepted",
+      "conditions": "none stated",
+      "quote": "Dwelling house Park Sales office Landing ... | Accepted",
+      "clause": "Table 5.4.3",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Character residential zone",
+      "level": "Accepted",
+      "conditions": "none stated (amendment 02/25 proposes accepted subject to requirements + a road-setback alternative provision - not in force)",
+      "quote": "Cropping Dwelling house Park Sales office Landing ... | Accepted",
+      "clause": "Table 5.4.5",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Tourist accommodation zone",
+      "level": "Accepted",
+      "conditions": "none stated",
+      "quote": "Dwelling house Park Sales office Landing ... | Accepted",
+      "clause": "Table 5.4.6",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Environmental management zone",
+      "level": "Accepted",
+      "conditions": "no more than one dwelling on the lot",
+      "quote": "Dwelling house Caretaker's accommodation Dwelling unit | Accepted | If no more than one dwelling of any kind on the lot Note--A dwelling house containing a secondary dwelling will still be taken to be one dwelling for the purposes of this assessment trigger",
+      "clause": "Table 5.4.14",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Emerging community zone",
+      "level": "Accepted",
+      "conditions": "no more than one dwelling on the lot",
+      "quote": "Dwelling house Caretaker's accommodation Dwelling unit | Accepted | If no more than one dwelling of any kind on the lot",
+      "clause": "Table 5.4.21",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Rural zone",
+      "level": "Accepted",
+      "conditions": "none stated",
+      "quote": "Animal husbandry Dwelling house Environment facility Park Sales office Telecommunications facility Landing ... | Accepted",
+      "clause": "Table 5.4.22",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Conservation zone",
+      "level": "Impact assessment (not listed)",
+      "conditions": "Dwelling house not listed in Table 5.4.15; falls to 'Any other use not listed in this table' - inferred, manual review",
+      "quote": "Any other use not listed in this table. ... | The planning scheme",
+      "clause": "Table 5.4.15",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "MCU or building work for dwelling house",
+      "zone": "Any (Coastal protection (erosion prone areas) overlay)",
+      "level": "Code assessment",
+      "conditions": "land shown on overlay map as erosion prone",
+      "quote": "If on land shown on the overlay map as erosion prone, material change of use or building work for: (1) dual occupancy; (2) dwelling house; or (3) community residence | Code assessment | Coastal protection (erosion prone areas) overlay code",
+      "clause": "Table 5.9.1",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "MCU or building work for dwelling house",
+      "zone": "Any (Flood and storm tide hazard overlay - drainage constrained, Southern Moreton Bay Islands)",
+      "level": "Code assessment",
+      "conditions": "land shown as drainage constrained on the Southern Moreton Bay Islands",
+      "quote": "If on land shown on the overlay map as drainage constrained, material change of use or building work for: (1) dwelling house; or (2) community residence ... on the Southern Moreton Bay Islands. | Code assessment | Flood and storm tide hazard overlay code",
+      "clause": "Table 5.9.1, printed p.109-110",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "use_or_work": "Building work on a local heritage place",
+      "zone": "Any (Heritage overlay)",
+      "level": "Code assessment (impact if demolition/relocation)",
+      "conditions": "alterations, extensions, or erecting a new or separate building on a local heritage place",
+      "quote": "Any building work involving: (1) interior or exterior alterations to a local heritage place; (2) extensions to a local heritage place; (3) erecting a new or separate building on a local heritage place. | Code assessment | Heritage overlay code",
+      "clause": "Table 5.9.1, printed p.107",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Administrative definitions (adoption)",
+      "text": "Note--As prescribed by section 8(1) of the Planning Regulation the administrative terms and their definitions are located in schedule 4 columns 1 and 2 of the Regulation.",
+      "clause": "SC1.2",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "term": "setback",
+      "text": "setback, for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.",
+      "clause": "Planning Regulation 2017 sch 4 (current as at 11 Sept 2026), adopted via SC1.2",
+      "source_url": "https://www.legislation.qld.gov.au/view/pdf/inforce/current/sl-2017-0078"
+    },
+    {
+      "term": "site cover",
+      "text": "site cover, of development, means the portion of the site, expressed as a percentage, that will be covered by a building or structure, measured to its outermost projection, after the development is carried out, other than a building or structure, or part of a building or structure, that is-- (a) in a landscaped or open space area, including, for example, a gazebo or shade structure; or (b) a basement that is completely below ground level and used for car parking; or (c) the eaves of a building; or (d) a sun shade.",
+      "clause": "Planning Regulation 2017 sch 4",
+      "source_url": "https://www.legislation.qld.gov.au/view/pdf/inforce/current/sl-2017-0078"
+    },
+    {
+      "term": "building height",
+      "text": "building height, of a building, means-- (a) the vertical distance, measured in metres, between the ground level of the building and the highest point on the roof of the building, other than a point that is part of an aerial, chimney, flagpole or load-bearing antenna; or (b) the number of storeys in the building above ground level.",
+      "clause": "Planning Regulation 2017 sch 4",
+      "source_url": "https://www.legislation.qld.gov.au/view/pdf/inforce/current/sl-2017-0078"
+    },
+    {
+      "term": "outermost projection",
+      "text": "outermost projection, of a building or structure, means the outermost part of the building or structure, other than a part that is-- (a) a retractable blind; or (b) a fixed screen; or (c) a rainwater fitting; or (d) an ornamental attachment.",
+      "clause": "Planning Regulation 2017 sch 4",
+      "source_url": "https://www.legislation.qld.gov.au/view/pdf/inforce/current/sl-2017-0078"
+    },
+    {
+      "term": "site",
+      "text": "site, of development, means the land that the development is to be carried out on.",
+      "clause": "Planning Regulation 2017 sch 4",
+      "source_url": "https://www.legislation.qld.gov.au/view/pdf/inforce/current/sl-2017-0078"
+    },
+    {
+      "term": "ground level",
+      "text": "ground level means-- (a) the level of the natural ground; or (b) if the level of the natural ground has changed, the level as lawfully changed.",
+      "clause": "Planning Regulation 2017 sch 24 (Dictionary)",
+      "source_url": "https://www.legislation.qld.gov.au/view/pdf/inforce/current/sl-2017-0078"
+    },
+    {
+      "term": "storey",
+      "text": "storey-- (a) means a space within a building between 2 floor levels, or a floor level and a ceiling or roof, other than-- (i) a space containing only a lift shaft, stairway or meter room; or (ii) a space containing only a bathroom, shower room, laundry, toilet or other sanitary compartment; or (iii) a space containing only a combination of the things stated in subparagraph (i) or (ii); or (iv) a basement with a ceiling that is not more than 1m above ground level; and (b) includes-- (i) a mezzanine; and (ii) a roofed structured that is on, or part of, a rooftop, if the structure does not only accommodate building plant and equipment.",
+      "clause": "Planning Regulation 2017 sch 24 (sch 4 cross-refers)",
+      "source_url": "https://www.legislation.qld.gov.au/view/pdf/inforce/current/sl-2017-0078"
+    },
+    {
+      "term": "domestic outbuilding",
+      "text": "domestic outbuilding means a non-habitable class 10a building that is-- (a) a shed, garage or carport; and (b) ancillary to a residential use carried out on the premises where the building is.",
+      "clause": "Planning Regulation 2017 sch 24",
+      "source_url": "https://www.legislation.qld.gov.au/view/pdf/inforce/current/sl-2017-0078"
+    },
+    {
+      "term": "dwelling house",
+      "text": "dwelling house means a residential use of premises involving-- (a) 1 dwelling and any domestic outbuildings associated with the dwelling; or (b) 2 dwellings, 1 of which is a secondary dwelling, and any domestic outbuildings associated with either dwelling.",
+      "clause": "Planning Regulation 2017 sch 24 (sch 3 cross-refers); adopted by SC1.1",
+      "source_url": "https://www.legislation.qld.gov.au/view/pdf/inforce/current/sl-2017-0078"
+    },
+    {
+      "term": "Building footprint (scheme-specific)",
+      "text": "The two-dimensional extent of built development, including balconies, covered private outdoor living areas and enclosed spaces but excluding the part of a building or structure that is: - an eave or a roof; or - a sunhood or the like attached to the wall of a building or structure to provide shade or shelter to the wall.",
+      "clause": "Table SC1.2.1",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "term": "Low-rise (scheme-specific)",
+      "text": "One to two storeys.",
+      "clause": "Table SC1.2.1",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "term": "Rear lot (scheme-specific)",
+      "text": "A lot which has access to a road by means only of an access strip which forms part of the lot, or by means only of an easement over adjoining land.",
+      "clause": "Table SC1.2.1",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "term": "frontage / secondary frontage / wall height / front building line",
+      "text": "NOT DEFINED in City Plan v14 Table SC1.2.1 or in Planning Regulation 2017 sch 4 as checked; 'front building line' is used in LDR3 AO15.1 without definition.",
+      "clause": "n/a",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    }
+  ],
+  "rules": [
+    {
+      "rule_key": "ldr2_road_setback_10m",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO4 / AO4.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR2 park residential (zone precinct)",
+      "lot_conditions": null,
+      "structure_scope": "dwelling houses (including outbuildings)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "PO4 Development in precinct LDR2 park residential maintains the amenity of adjoining premises by ensuring substantial separation between dwelling houses on adjoining land, and between dwelling houses and the street frontage. AO4.1 In precinct LDR2 park residential, dwelling houses (including outbuildings) are set back 10m from a road frontage and 10m from a side or rear boundary.",
+      "structured": {
+        "parameter": "road frontage setback",
+        "operator": ">=",
+        "value": 10,
+        "unit": "m",
+        "conditions": [
+          "land in precinct LDR2 park residential"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "No setback-specific measurement rule in the code; 'setback' is a Planning Regulation 2017 sch 4 administrative term adopted by the scheme (SC1.2): shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.122 (PDF p.126), heading 'Dwelling houses'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Basis: 'Editor's note--The following acceptable outcomes are alternative provisions for the purposes of the Queensland Development Code.' (heading note above PO4/PO5). Applies to all road frontages (no primary/secondary distinction). Text refers to QDC, not QHC; v14 has not been amended to reference the QHC."
+    },
+    {
+      "rule_key": "ldr2_side_rear_setback_10m",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO4 / AO4.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR2 park residential (zone precinct)",
+      "lot_conditions": null,
+      "structure_scope": "dwelling houses (including outbuildings)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO4.1 In precinct LDR2 park residential, dwelling houses (including outbuildings) are set back 10m from a road frontage and 10m from a side or rear boundary.",
+      "structured": {
+        "parameter": "side and rear boundary setback",
+        "operator": ">=",
+        "value": 10,
+        "unit": "m",
+        "conditions": [
+          "land in precinct LDR2 park residential",
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "No setback-specific measurement rule in the code; 'setback' is a Planning Regulation 2017 sch 4 administrative term adopted by the scheme (SC1.2): shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.122 (PDF p.126)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Basis: 'Editor's note--The following acceptable outcomes are alternative provisions for the purposes of the Queensland Development Code.'. Same value for rear boundary (topic REAR_SETBACK also). No height-dependent variation; outbuildings expressly included, so QDC/QHC built-to-boundary/Class 10a concessions do not apply in LDR2 under this AO."
+    },
+    {
+      "rule_key": "ldr4_milner_place_setback_5m",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO5 / AO5.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR4 Kinross Road (zone precinct)",
+      "lot_conditions": "lot boundary shared with existing lots accessed from Milner Place",
+      "structure_scope": "dwelling houses (including outbuildings)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "PO5 Development in precinct LDR4 Kinross Road maintains the amenity of any adjoining premises which have a frontage to or gains access from Milner Place by ensuring substantial separation to existing dwellings within the precinct. AO5.1 In precinct LDR4 Kinross Road, dwelling houses (including outbuildings) are set back 5m from lot boundaries shared with existing lots accessed from Milner Place.",
+      "structured": {
+        "parameter": "setback from boundaries shared with existing lots accessed from Milner Place",
+        "operator": ">=",
+        "value": 5,
+        "unit": "m",
+        "conditions": [
+          "precinct LDR4 Kinross Road",
+          "only boundaries shared with existing lots accessed from Milner Place"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "No setback-specific measurement rule in the code; 'setback' is a Planning Regulation 2017 sch 4 administrative term adopted by the scheme (SC1.2): shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.122 (PDF p.126)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Basis: 'Editor's note--The following acceptable outcomes are alternative provisions for the purposes of the Queensland Development Code.'. Requires cadastral knowledge of which neighbouring lots are accessed from Milner Place - flag for manual mapping."
+    },
+    {
+      "rule_key": "ldr1_ldr2_site_cover_30pct",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO6 / AO6.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precincts LDR1 large lot and LDR2 park residential (zone precincts)",
+      "lot_conditions": null,
+      "structure_scope": "buildings (dwelling houses and associated buildings)",
+      "topic": "SITE_COVER",
+      "verbatim_text": "Dwelling houses in precincts LDR1: Large lot precinct and LDR2: Park residential precinct. Editor's note--A number of the following acceptable outcomes are alternative provisions for the purposes of the Queensland Development Code. PO6 Buildings have a limited site cover in order to maintain an open, low density character AO6.1 Site cover does not exceed 30% of site area.",
+      "structured": {
+        "parameter": "site cover",
+        "operator": "<=",
+        "value": 30,
+        "unit": "%",
+        "conditions": [
+          "precinct LDR1 or LDR2",
+          "dwelling houses"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Site cover per Planning Regulation 2017 sch 4: portion of the site covered by a building or structure measured to its outermost projection, excluding structures in landscaped/open space areas (e.g. gazebo or shade structure), basements fully below ground for parking, eaves, sun shades.",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.123 (PDF p.127)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Heading note says 'A number of the following' are alternative provisions; AO6.1 is the only AO under that heading and it relates to site cover, a matter s.33 Building Act allows schemes to vary, so treated as YES. Council's QDC web pages likewise describe 'alternative site cover' in LDR precincts (COUNCIL_FACTSHEET-level corroboration)."
+    },
+    {
+      "rule_key": "ldr5_revetment_wall_setback_9m",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO7 / AO7.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR5 Canal and Lakeside Estates (zone precinct)",
+      "lot_conditions": "property boundary adjoining a revetment wall",
+      "structure_scope": "development (dwelling houses and dual occupancies, incl. associated building work)",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "PO7 Development is set back from a property boundary adjoining a revetment wall to: (1) Reduce the risk to new structures from the construction, maintenance, structural deterioration or failure of revetment walls; (2) Maintain the structural stability of revetment walls. AO7.1 Development is set back 9m from the property boundary adjoining a revetment wall. Editor's note - This acceptable outcome is not an alternative provision for the purposes of the Queensland Development Code. Where building work for a dwelling house/dual occupancy does not meet the acceptable solution, a code assessable Building Works Assessable Against the Planning Scheme application will be triggered.",
+      "structured": {
+        "parameter": "setback from boundary adjoining revetment wall",
+        "operator": ">=",
+        "value": 9,
+        "unit": "m",
+        "conditions": [
+          "precinct LDR5",
+          "boundary adjoins a revetment wall"
+        ],
+        "exceptions": [
+          "Editor's note: development at or beyond 9.0m from top of revetment wall, or placing not more than 2.0kPa net positive load on the wall, is unlikely to cause damage"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "No setback-specific measurement rule in the code; 'setback' is a Planning Regulation 2017 sch 4 administrative term adopted by the scheme (SC1.2): shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. Editor's note also references '9.0m from the top of the revetment wall'.",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.123 (PDF p.127)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Planning assessment benchmark, not QDC alternative: non-compliance triggers code assessable building work against the planning scheme (Table 5.6.1 makes building work associated with a dwelling house in LDR5 accepted subject to requirements). Applies to pools/retaining walls as structures (PO7 note mentions pools). Proposed amendment 02/25 would expressly include swimming pools and excavation/filling (not in force)."
+    },
+    {
+      "rule_key": "ldr5_revetment_maintenance_setback_2m",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO8 / AO8.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR5 Canal and Lakeside Estates (zone precinct)",
+      "lot_conditions": "property boundary adjoining a revetment wall",
+      "structure_scope": "development",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "PO8 Development is set back from property boundaries to provide unimpeded access to allow for the maintenance of revetment walls. AO8.1 Development is setback a minimum of 2m from the property boundary adjoining a revetment wall, to allow for maintenance of the revetment wall to be undertaken from the land.",
+      "structured": {
+        "parameter": "setback from boundary adjoining revetment wall (maintenance access)",
+        "operator": ">=",
+        "value": 2,
+        "unit": "m",
+        "conditions": [
+          "precinct LDR5"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "No setback-specific measurement rule in the code; 'setback' is a Planning Regulation 2017 sch 4 administrative term adopted by the scheme (SC1.2): shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.123 (PDF p.127)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Editor's note: 'The above acceptable outcomes (AO8.1 and AO8.2) are not alternative provisions for the purposes of the Queensland Development Code.' and 'They do not override PO7/ AO7.1 or PO9/AO9.1'. Amendment 02/25 consultation proposed 2.5m; council reportedly resolved (July 2026) to retain 2m - not yet in force."
+    },
+    {
+      "rule_key": "ldr5_side_access_1m",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO8 / AO8.2",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR5 Canal and Lakeside Estates (zone precinct)",
+      "lot_conditions": null,
+      "structure_scope": "development",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO8.2 Development provides a minimum 1m side access along the full length of one side of the property to provide a clear path between the road frontage and the revetment wall to allow for access for maintenance of the revetment wall.",
+      "structured": {
+        "parameter": "clear side access along one side boundary (full length)",
+        "operator": ">=",
+        "value": 1,
+        "unit": "m",
+        "conditions": [
+          "precinct LDR5",
+          "one side only"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "Clear path width along one side of property from road frontage to revetment wall.",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.123 (PDF p.127)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Not an alternative provision (editor's note). Effectively requires one side boundary to be kept clear of structures for 1m - relevant to sheds/carports built to boundary in LDR5."
+    },
+    {
+      "rule_key": "ldr5_canal_lake_setback_9m",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO9 / AO9.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR5 Canal and Lakeside Estates (zone precinct)",
+      "lot_conditions": "property boundary adjoining a canal or lake",
+      "structure_scope": "development including domestic outbuildings and other roofed structures, excluding in-ground swimming pools",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "PO9 Development maintains the amenity of adjoining premises and the local area by ensuring that no development (including domestic outbuildings and other roofed structures, but excluding in-ground swimming pools) is established closer to the canal/lake than existing dwellings on adjoining sites. Note - for PO9, `dwelling' is taken to include structures which are attached to the dwelling, but not detached structures on the same lot. AO9.1 Development (including domestic outbuildings and other roofed structures, but excluding in-ground swimming pools) is setback a minimum of 9m from the property boundary adjoining a canal or lake. Editor's note - This acceptable outcome is an alternative provision for the purposes of the Queensland Development Code. Building works for a dwelling house/dual occupancy not complying with this acceptable outcome will require a concurrence agency referral to Council under schedule 9 of the Regulation.",
+      "structured": {
+        "parameter": "setback from boundary adjoining canal or lake",
+        "operator": ">=",
+        "value": 9,
+        "unit": "m",
+        "conditions": [
+          "precinct LDR5",
+          "includes domestic outbuildings and other roofed structures"
+        ],
+        "exceptions": [
+          "in-ground swimming pools excluded"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "No setback-specific measurement rule in the code; 'setback' is a Planning Regulation 2017 sch 4 administrative term adopted by the scheme (SC1.2): shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. PO9 alternative test uses line of adjoining dwellings (Figures 6.2.1.2.6-6.2.1.2.8; centre of site delineates change in line).",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.123-124 (PDF p.127-128)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Express alternative provision (quoted). Above-ground pools and roofed decks/patios/pergolas fall within 'development... other roofed structures' (unroofed decks: UNKNOWN - manual review)."
+    },
+    {
+      "rule_key": "ldr3_site_cover_30pct",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO11 / AO11.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR3 Point Lookout residential (zone precinct)",
+      "lot_conditions": null,
+      "structure_scope": "buildings (dwelling houses)",
+      "topic": "SITE_COVER",
+      "verbatim_text": "PO11 Buildings have a limited site cover in order to maintain an open, low density character. AO11.1 Site cover does not exceed 30% of site area. Editor's note - This acceptable outcome is an alternative provision for the purposes of the Queensland Development Code. Building works for a dwelling house not complying with this acceptable outcome will require a concurrence agency referral to Council under schedule 9 of the Regulation.",
+      "structured": {
+        "parameter": "site cover",
+        "operator": "<=",
+        "value": 30,
+        "unit": "%",
+        "conditions": [
+          "precinct LDR3 Point Lookout (North Stradbroke Island)"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Site cover per Planning Regulation 2017 sch 4 (see definitions).",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.126 (PDF p.130)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Express alternative provision."
+    },
+    {
+      "rule_key": "ldr3_building_component_size",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO12 / AO12.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR3 Point Lookout residential (zone precinct)",
+      "lot_conditions": null,
+      "structure_scope": "any single detached building component (dwelling house and detached outbuildings)",
+      "topic": "OUTBUILDING_SIZE",
+      "verbatim_text": "PO12 Development takes the form of a series of small scale building components which reduce the overall bulk and obtrusiveness of buildings. AO12.1 The size of any single detached building component does not exceed: (1) 150m2 when the building height is not more than 4.5m above ground level; or (2) 140m2 when the building height is over 4.5m above ground level. Editor's note - This acceptable outcome is an alternative provision for the purposes of the Queensland Development Code. Building works for a dwelling house not complying with this acceptable outcome will require a concurrence agency referral to Council under schedule 9 of the Regulation.",
+      "structured": {
+        "parameter": "size of single detached building component",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m2",
+        "conditions": [
+          "precinct LDR3"
+        ],
+        "exceptions": [],
+        "formula_text": "<=150 m2 if building height <=4.5m above ground level; <=140 m2 if building height >4.5m above ground level"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "'Size' basis (GFA vs footprint) not defined in the AO - manual review.",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.126 (PDF p.130)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Express alternative provision."
+    },
+    {
+      "rule_key": "ldr3_building_component_separation_4m",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO12 / AO12.2",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR3 Point Lookout residential (zone precinct)",
+      "lot_conditions": null,
+      "structure_scope": "detached building components",
+      "topic": "SEPARATION",
+      "verbatim_text": "AO12.2 Each detached building component is separated by 4m to the outermost projection of any other detached building on the site. Figure 6.2.1.3.1 illustrates. Editor's note - This acceptable outcome is not an alternative provision for the purposes of the Queensland Development Code. Where building work for a dwelling house does not meet the acceptable solution, a code assessable Building Works Assessable Against the Planning Scheme application will be triggered.",
+      "structured": {
+        "parameter": "separation between detached building components",
+        "operator": ">=",
+        "value": 4,
+        "unit": "m",
+        "conditions": [
+          "precinct LDR3"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "Measured to the outermost projection of any other detached building on the site.",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.126-127 (PDF p.130-131)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Editor's note sits at top of p.127 immediately after AO12.2 (page image checked: notes in this table follow the AO they refer to)."
+    },
+    {
+      "rule_key": "ldr3_building_height_8_5m",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO13 / AO13.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR3 Point Lookout residential (zone precinct)",
+      "lot_conditions": "slope up to 15%",
+      "structure_scope": "buildings; roofs or pergolas covering decks",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "PO13 The height of a building does not unduly: (1) overshadow adjoining houses; and (2) obstruct the outlook from adjoining lots. AO13.1 For slopes up to 15%, building height is 8.5m, except for roofs or pergolas covering decks. These may extend to 10m above ground level, providing: (1) they cover an area of no more than 10m2; (2) there is only one such covered areas on each detached building component on the site; and (3) the covered area is not enclosed by walls. Editor's note--This provision establishes an alternative solution to the Queensland Development Code for buildings on slopes <15%. For buildings on slopes >15%, the acceptable solution under the Queensland Development Code applies.",
+      "structured": {
+        "parameter": "building height",
+        "operator": "<=",
+        "value": 8.5,
+        "unit": "m",
+        "conditions": [
+          "precinct LDR3",
+          "slope up to 15%"
+        ],
+        "exceptions": [
+          "roofs or pergolas covering decks may extend to 10m above ground level if <=10m2, only one per detached building component, not enclosed by walls"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Building height per Planning Regulation 2017 sch 4 (vertical distance from ground level to highest point of roof, excluding aerial, chimney, flagpole or load-bearing antenna).",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.127 (PDF p.131)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Note wording 'alternative solution' (not 'alternative provision'); slopes >15% revert to QDC. Text inconsistency '<15%' vs 'up to 15%' - exactly 15% ambiguous."
+    },
+    {
+      "rule_key": "ldr3_floor_level_height",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO14 / AO14.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR3 Point Lookout residential (zone precinct)",
+      "lot_conditions": null,
+      "structure_scope": "floor levels including decks and verandahs",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "PO14 Buildings are stepped to mirror the slope of the land and do not result in buildings established substantially above ground level. AO14.1 Floor level (including decks and verandahs) does not exceed a height of: (1) 3m above ground level for the first level of the building; and (2) 5.1m above ground level for the uppermost level of the building. Figure 6.2.1.3.2 illustrates. Editor's note - This acceptable outcome is not an alternative provisions for the purposes of the Queensland Development Code. Where building work for a dwelling house does not meet the acceptable solution, a code assessable Building Works Assessable Against the Planning Scheme application will be triggered.",
+      "structured": {
+        "parameter": "floor level height above ground level",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "precinct LDR3"
+        ],
+        "exceptions": [],
+        "formula_text": "first level <= 3m above ground level; uppermost level <= 5.1m above ground level"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": null,
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.127 (PDF p.131) - verified against page image",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Relevant to elevated decks."
+    },
+    {
+      "rule_key": "ldr3_earthworks",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO10 / AO10.1-AO10.3",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR3 Point Lookout residential (zone precinct)",
+      "lot_conditions": null,
+      "structure_scope": "excavation, fill, retaining walls, benched areas",
+      "topic": "OTHER",
+      "verbatim_text": "PO10 Development minimises the extent of earthworks. AO10.1 Excavation and fill is limited to: (1) maximum cut of 1.2m below ground level; and (2) maximum fill of 1.2m above ground level. AO10.2 Retaining walls have a maximum height of 600mm at the street frontage. AO10.3 Benched areas for driveways and landscape areas do not exceed 25m2. Editor's note - The above acceptable outcomes (AO10.1, 10.2 and 10.3) are not alternative provisions for the purposes of the Queensland Development Code. Where building work for a dwelling house does not meet the acceptable solution/s, a code assessable Building Works Assessable Against the Planning Scheme application will be triggered.",
+      "structured": {
+        "parameter": "cut / fill / retaining wall / benched area",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "precinct LDR3"
+        ],
+        "exceptions": [],
+        "formula_text": "cut <=1.2m; fill <=1.2m; retaining wall at street frontage <=0.6m; benched areas <=25 m2"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": null,
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.125-126 (PDF p.129-130)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": null
+    },
+    {
+      "rule_key": "ldr3_fences",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO15 / AO15.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR3 Point Lookout residential (zone precinct)",
+      "lot_conditions": null,
+      "structure_scope": "fences",
+      "topic": "OTHER",
+      "verbatim_text": "PO15 Fences do not dominate the street frontage. AO15.1 Fences: (1) are not established beyond the front building line; (2) have a maximum height of 1.5m; and (3) are of open timber construction. Figure 6.2.1.3.3 illustrates. Editor's note - This acceptable outcome is not an alternative provision for the purposes of the Queensland Development Code. Where building work for a dwelling house does not meet the acceptable solution, a code assessable Building Works Assessable Against the Planning Scheme application will be triggered.",
+      "structured": {
+        "parameter": "fence height",
+        "operator": "<=",
+        "value": 1.5,
+        "unit": "m",
+        "conditions": [
+          "precinct LDR3",
+          "not beyond front building line",
+          "open timber construction"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": null,
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.127-128 (PDF p.131-132)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Relevant to pool barrier fencing forward of the building line in LDR3 (interaction with pool safety standard - manual review)."
+    },
+    {
+      "rule_key": "ldr3_architectural_style",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO16 / AO16.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR3 Point Lookout residential (zone precinct)",
+      "lot_conditions": null,
+      "structure_scope": "buildings not in high/very high potential bushfire intensity area (OM-004)",
+      "topic": "OTHER",
+      "verbatim_text": "AO16.1 Buildings: (1) use light weight finishes such as timber and fibre cement, except for retaining walls and major structural elements; (2) are provided with eaves at least 600mm wide; (3) incorporate verandahs or decks; and (4) use non reflective sheet material for roofing. Editor's note - This acceptable outcome is not an alternative provision for the purposes of the Queensland Development Code. ...",
+      "structured": {
+        "parameter": "eave width",
+        "operator": ">=",
+        "value": 0.6,
+        "unit": "m",
+        "conditions": [
+          "precinct LDR3",
+          "not in high or very high potential bushfire intensity area"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": null,
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.128 (PDF p.132)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Currently applies to all buildings incl. sheds; amendment 02/25 proposes to exempt domestic outbuildings from eaves/verandah requirement (not in force)."
+    },
+    {
+      "rule_key": "ldr3_frontage_landscape_2m",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1, PO17 / AO17.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": "Precinct LDR3 Point Lookout residential (zone precinct)",
+      "lot_conditions": null,
+      "structure_scope": "site frontage",
+      "topic": "LANDSCAPE_OR_IMPERVIOUS",
+      "verbatim_text": "PO17 A landscaped area capable of sustaining mature trees is provided along the full street frontage. AO17.1 A landscape area with a minimum width of 2m is provided along the full frontage of any road (excluding cross over and pedestrian access). Editor's note - This acceptable outcome is not an alternative provision for the purposes of the Queensland Development Code. ...",
+      "structured": {
+        "parameter": "landscape strip width along road frontage",
+        "operator": ">=",
+        "value": 2,
+        "unit": "m",
+        "conditions": [
+          "precinct LDR3"
+        ],
+        "exceptions": [
+          "excluding cross over and pedestrian access"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": null,
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "printed p.128 (PDF p.132)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Effectively a 2m minimum road setback for any structure (incl. carports) in LDR3."
+    },
+    {
+      "rule_key": "ldr_general_no_alt_provisions",
+      "code": "Low density residential zone code",
+      "clause": "Table 5.4.1 / Table 5.6.1 / Table 6.2.1.3.1",
+      "provision_type": "OTHER",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "dwelling house and Class 10a outside precincts LDR1-LDR5",
+      "topic": "OTHER",
+      "verbatim_text": "Dwelling house | Accepted | If not accepted subject to requirements ... Accepted subject to requirements | If in precincts LDR1, LDR2, LDR3, LDR4 or LDR5. | Low density residential zone code",
+      "structured": {
+        "parameter": "applicable siting rules",
+        "operator": "=",
+        "value": null,
+        "unit": null,
+        "conditions": [
+          "LDR zone land not within any precinct"
+        ],
+        "exceptions": [],
+        "formula_text": "No City Plan siting benchmarks for dwelling houses/outbuildings; QDC MP1.1/MP1.2 (now QHC) acceptable solutions apply via Building Regulation 2021"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": null,
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "page_or_anchor": "Table 5.4.1 printed p.57 (PDF p.61); Table 5.6.1 printed p.103 (PDF p.107)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Key engine rule: in the general LDR zone (no precinct) and in LMDR, MDR, character residential, tourist accommodation, environmental management, emerging community and rural zones, dwelling houses are 'Accepted' with no requirements and no City Plan alternative provisions exist (s.1.6(5): QDC MP1.1/MP1.2 apply 'unless a relevant alternative provision applies'). Use state QHC values there."
+    }
+  ],
+  "overlays_affecting_siting": [
+    {
+      "overlay": "Coastal protection (erosion prone areas) overlay",
+      "code": "8.2.3 Coastal protection (erosion prone areas) overlay code",
+      "effect": "Dwelling house MCU/building work on erosion-prone land is code assessable; qualitative seaward-siting limit (no numeric setback). LDR land at Amity (NSI) inside coastal management district: development not in erosion prone area unless coastal-dependent or temporary.",
+      "quote": "Buildings and structures are not established further seaward or closer to the coastal erosion hazard than existing buildings on the site or on a site in the immediate vicinity, unless they are: (1) for coastal-dependent development; or (2) temporary, readily relocatable or able to be abandoned. ... No acceptable outcome is nominated.",
+      "clause": "Table 8.2.3.3.1, PO3 (PO number not extractable from PDF text; inferred from sequence), printed p.344-345",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "overlay": "Flood and storm tide hazard overlay",
+      "code": "8.2.6 Flood and storm tide hazard overlay code",
+      "effect": "No numeric setback/height/site cover. Council designates flood hazard area for Building Regulation s8 (floor levels via QDC MP3.5). Drainage-constrained SMBI land: dwelling house is code assessable; floor levels above water level.",
+      "quote": "Development on land shown as drainage constrained on the southern Moreton Bay islands only occurs where floor levels are established above the water level affecting the site.",
+      "clause": "Table 8.2.6.3.1 (PO number not extractable), printed p.355",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "overlay": "Heritage overlay",
+      "code": "8.2.7 Heritage overlay code",
+      "effect": "Building work on a local heritage place is code assessable; qualitative only (no numeric setback/height).",
+      "quote": "New building elements: (1) are sympathetic to, but do not reproduce traditional building forms; (2) are visually subservient to a heritage building; (3) incorporate similar proportions and building lines, such as window shape, size and positioning and eaves heights; ...",
+      "clause": "Table 8.2.7.3.1",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    },
+    {
+      "overlay": "Bushfire hazard overlay",
+      "code": "8.2.2 Bushfire hazard overlay code",
+      "effect": "Applies only to assessable MCU/ROL (not to accepted dwelling houses); no house setback numbers relevant to Class 10a. Listed in s1.6(4) as containing building assessment provisions.",
+      "quote": "Bushfire hazard overlay code where the development is assessable under the table of assessment for the relevant zone Note--This overlay code is not applicable to development that is accepted subject to requirements.",
+      "clause": "Table 5.9.1",
+      "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+    }
+  ],
+  "local_plan_mechanism": {
+    "summary": "City Plan v14 has NO local plans ('5.8 ... There are no local plans in the planning scheme.'). Localised variation is achieved through zone precincts in the Low density residential zone code (LDR1 large lot, LDR2 park residential, LDR3 Point Lookout residential, LDR4 Kinross Road, LDR5 Canal and Lakeside Estates). Precinct membership is mapped in Figures 6.2.1.2.1-6.2.1.2.5 and on zone maps. Precinct status changes the level of assessment (Table 5.4.1/5.6.1) and brings in precinct-specific AOs, some of which are QDC alternative provisions.",
+    "examples": [
+      {
+        "plan": "Precinct LDR2 park residential",
+        "quote": "AO4.1 In precinct LDR2 park residential, dwelling houses (including outbuildings) are set back 10m from a road frontage and 10m from a side or rear boundary.",
+        "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+      },
+      {
+        "plan": "Precinct LDR5 Canal and Lakeside Estates",
+        "quote": "AO9.1 Development (including domestic outbuildings and other roofed structures, but excluding in-ground swimming pools) is setback a minimum of 9m from the property boundary adjoining a canal or lake.",
+        "source_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf"
+      }
+    ]
+  },
+  "open_questions": [
+    "QHC transition: City Plan v14 alternative provisions reference the QDC (MP1.1/MP1.2) only. Whether/how they continue to operate as alternative provisions against the QHC (QDC Parts 1.1/1.2 from 1 Sept 2026) depends on Building Act/Regulation transitional provisions - not addressed in the scheme; needs state-level confirmation.",
+    "Precinct mapping: rules depend on precinct boundaries (LDR1-LDR5) - need GIS layer (council zoning/precinct mapping) to apply.",
+    "LDR5 AO9.1: whether unroofed decks, above-ground pools and pool equipment are 'development' caught by the 9m canal setback - text says 'including domestic outbuildings and other roofed structures, but excluding in-ground swimming pools'.",
+    "LDR3 AO12.1 'size' of a building component - GFA or footprint undefined.",
+    "LDR1/LDR2 AO6.1: heading note says 'A number of the following' AOs are alternative provisions; only AO6.1 follows - treated as alternative provision.",
+    "Conservation zone: dwelling house not listed in Table 5.4.15 (inferred impact assessable) - confirm.",
+    "Pending Major Amendment 02/25 - Residential (council resolved 15 July 2026 to request Ministerial approval): would make dwelling houses in the character residential zone accepted subject to requirements with a road-setback performance outcome as an alternative provision, add swimming pools/excavation to LDR5 triggers, change LDR3 AO16.1 for domestic outbuildings, and change LDR corner-lot/dual occupancy rules. Re-check after adoption.",
+    "The council PDF is 'Version 14 updated 23 September 2026 with changes to SC 5' - the nature of the SC5 change and whether a new version number applies was not confirmed (Appendix 2 lists v14 as latest)."
+  ],
+  "fetch_log": [
+    "https://www.redland.qld.gov.au/info/20292/redland_city_plan -> OK; identified Version 14 PDF link and 'Effective: 23 September 2026' label",
+    "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf -> OK (curl, 523 pages, 12MB); extracted with pdftotext/PyMuPDF; Parts 1, 5, 6.2.1, 8.2.2-8.2.7, SC1, Appendix 2 read",
+    "https://www.legislation.qld.gov.au/view/pdf/inforce/current/sl-2017-0078 -> OK (Planning Regulation 2017 current as at 11 Sept 2026); sch 4 and sch 24 definitions extracted",
+    "https://www.redland.qld.gov.au/Planning-building-and-development/What-approvals-do-I-need/Queensland-Development-Code -> OK, council statement that City Plan overrides QDC",
+    "https://www.redland.qld.gov.au/Planning-building-and-development/Development-tools-and-advice/Design-and-siting -> OK, general; mentions LDR1-LDR5 alternate siting provisions",
+    "https://www.redland.qld.gov.au/download/downloads/id/2063/residential_development_-_alternative_provisions_to_the_queensland_development_code.pdf -> 404",
+    "https://www.redland.qld.gov.au/Planning-building-and-development/Redland-City-Plan/Redland-City-Plan-amendments -> OK; v14 effective 10 Nov 2025; 02/25 and 03/25 in preparation",
+    "https://yoursay.redland.qld.gov.au/redland-city-plan-amendments -> OK; 15 July 2026 resolution to seek Minister approval",
+    "https://yoursay.redland.qld.gov.au/download_file/3240/1140 -> OK (02/25 Residential consultation version) - reviewed items 3, 5, 9 for pending changes",
+    "https://www.legislation.qld.gov.au/view/html/inforce/current/sl-2017-0172 -> wrong instrument (not used)",
+    "https://www.redlandscoasttoday.com.au/2026/07/city-plan-amendments-advanced-by-council/ and https://redlandbaysidenews.com.au/city-plan-overhaul-advances-after-community-shapes-changes/ -> news context only (2m revetment setback retained in final amendment per news)"
+  ]
+}

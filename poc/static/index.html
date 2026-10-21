@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Siteora POC — siting rules</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://unpkg.com/esri-leaflet@3.0.12/dist/esri-leaflet.js"></script>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1d2330; --mute:#5c6577; --line:#dfe3ea; --accent:#2457d6;
+          --ok:#1d7a46; --warn:#a15c00; --review:#8a3ffc; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:16px 24px; background:var(--card); border-bottom:1px solid var(--line); }
+  header h1 { margin:0; font-size:18px; } header p { margin:4px 0 0; color:var(--mute); }
+  main { max-width:1200px; margin:0 auto; padding:16px 24px 48px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px; margin-bottom:16px; }
+  form { display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:10px 12px; align-items:end; }
+  label { display:flex; flex-direction:column; gap:4px; font-size:12px; color:var(--mute); }
+  input, select { font:inherit; padding:7px 8px; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); }
+  .wide { grid-column:span 3; } .full { grid-column:1 / -1; }
+  .checks { display:flex; gap:16px; flex-wrap:wrap; grid-column:span 4; }
+  .checks label { flex-direction:row; align-items:center; gap:6px; color:var(--ink); font-size:13px; }
+  button { font:inherit; padding:8px 16px; border:0; border-radius:6px; background:var(--accent); color:#fff; cursor:pointer; }
+  button:disabled { opacity:.6; cursor:progress; }
+  .kv { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:8px 16px; }
+  .kv div span { display:block; font-size:12px; color:var(--mute); }
+  table { width:100%; border-collapse:collapse; }
+  th, td { text-align:left; padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-size:12px; color:var(--mute); font-weight:600; }
+  .req { font-weight:600; white-space:nowrap; }
+  .tag { display:inline-block; padding:1px 6px; border-radius:10px; font-size:11px; font-weight:600; }
+  .DETERMINED { background:#e5f4ec; color:var(--ok); } .MANUAL_REVIEW { background:#f1e9ff; color:var(--review); }
+  .BUILDING { background:#e8eefc; color:var(--accent); } .PLANNING { background:#fdf1e1; color:var(--warn); }
+  .POOL_SAFETY { background:#fde8e8; color:#b42318; } .INFRASTRUCTURE { background:#eef0f3; color:var(--mute); }
+  details summary { cursor:pointer; color:var(--accent); font-size:12px; }
+  .quote { white-space:pre-wrap; background:#f8f9fb; border-left:3px solid var(--line); padding:6px 8px; margin:6px 0; font-size:12px; }
+  .warn { color:var(--warn); } .mute { color:var(--mute); } .err { color:#b42318; font-weight:600; }
+  ul { margin:6px 0; padding-left:18px; }
+  #map { height:460px; border-radius:6px; border:1px solid var(--line); }
+  .map-home { font-size:18px; line-height:30px !important; text-align:center; text-decoration:none; color:#333; }
+  .src td a { margin-right:10px; white-space:nowrap; }
+  .hit { font-weight:600; }
+  .popup table td { padding:2px 6px; border-bottom:1px solid var(--line); font-size:12px; }
+  @media (max-width: 800px) { form { grid-template-columns:1fr 1fr; } .wide, .checks { grid-column:1 / -1; } .kv { grid-template-columns:1fr 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Siteora POC — what siting rules apply?</h1>
+  <p>Enter a Queensland address (Brisbane, Gold Coast, Moreton Bay, Sunshine Coast, Logan, Ipswich, Redland) and the proposed structure.</p>
+</header>
+<main>
+  <div class="card">
+    <form id="f">
+      <label class="wide">Address<input name="address" required value="15 Jubilee Terrace, Bardon QLD 4065"></label>
+      <label>Structure<select name="structure">
+        <option value="SHED">Shed</option><option value="GARAGE">Garage</option><option value="CARPORT">Carport</option>
+        <option value="PATIO">Patio (roofed)</option><option value="PERGOLA">Pergola</option><option value="DECK">Deck</option>
+        <option value="DETACHED_LAUNDRY">Detached laundry</option><option value="GATEHOUSE">Gatehouse</option>
+        <option value="POOL_INGROUND">In-ground pool</option><option value="POOL_ABOVEGROUND">Above-ground pool</option>
+        <option value="POOL_FENCE">Pool fence</option></select></label>
+      <label>Height (m)<input name="height_m" type="number" step="0.1" value="3.0"></label>
+      <label>Length (m)<input name="length_m" type="number" step="0.1" value="6"></label>
+      <label>Width (m)<input name="width_m" type="number" step="0.1" value="4"></label>
+      <label>Mean height (m)<input name="mean_height_m" type="number" step="0.1" placeholder="= height"></label>
+      <label>Lot slope (%)<input name="lot_slope_pct" type="number" step="0.5" placeholder="unknown"></label>
+      <label>Neighbour window (m)<input name="window_distance_m" type="number" step="0.1" placeholder="unknown"></label>
+      <label>Existing outbuildings (m²)<input name="existing_outbuildings_m2" type="number" step="1" placeholder="0"></label>
+      <label>Assessment date<input name="date" type="date"></label>
+      <label>Zone (override)<select name="zone_id" id="zone"><option value="">from council map</option></select></label>
+      <div class="checks">
+        <label><input type="checkbox" name="is_roofed" checked> Roofed</label>
+        <label><input type="checkbox" name="is_enclosed" checked> Enclosed</label>
+        <label><input type="checkbox" name="is_attached_to_dwelling"> Attached to house</label>
+        <label><input type="checkbox" name="is_corner_lot"> Corner lot</label>
+        <label><input type="checkbox" name="adjoins_canal_or_lake"> Next to canal/lake</label>
+      </div>
+      <div><button id="go">Find rules</button></div>
+    </form>
+  </div>
+  <div id="out"></div>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const req = r => ['IS_TRUE','IS_FALSE'].includes(r.operator) ? (r.operator === 'IS_TRUE' ? 'must hold' : 'must not occur')
+               : (r.required === 0 && r.operator === '>=') ? 'built to boundary permitted'
+               : `${r.operator} ${r.required ?? '?'} ${r.unit ?? ''}`;
+const ORDER = {'':0, 'PRIMARY_FRONTAGE':1, 'SECONDARY_FRONTAGE_ROAD':2, 'SIDE':3, 'REAR':4};
+let lastLg = null;
+
+// Calls to our own server, with errors in plain words: server not running, too slow, not JSON, or the server's own
+// message (400 bad input, 503 database / map service unavailable, 500 code fault with a log reference).
+async function api(path, timeoutS = 240) {
+  let r;
+  try {
+    r = await fetch(path, {signal: AbortSignal.timeout(timeoutS * 1000)});
+  } catch (e) {
+    if (e.name === 'TimeoutError') throw Object.assign(new Error(`No answer after ${timeoutS} s — a map service may be very slow. Try again.`), {kind: 'warn'});
+    throw Object.assign(new Error(`Cannot reach the Siteora server at ${location.origin}. Is it running? Start it with "npm start" and try again.`), {kind: 'warn'});
+  }
+  let d;
+  try { d = await r.json(); }
+  catch { throw new Error(`The server gave an unexpected answer (HTTP ${r.status}). It may be an older version: restart it with "npm start".`); }
+  if (!r.ok) throw Object.assign(new Error(d.error || `HTTP ${r.status}`), {kind: r.status === 503 ? 'warn' : 'err'});
+  return d;
+}
+
+function showError(e) {
+  $('#out').innerHTML = `<div class="card ${e.kind === 'warn' ? 'warn' : 'err'}">${esc(e.message)}
+    <div style="margin-top:8px"><button type="button" onclick="document.querySelector('#f').requestSubmit()">Try again</button></div></div>`;
+}
+
+async function loadZones(lg) {
+  if (lg === lastLg) return;
+  let z;
+  try { z = await api(`/api/zones?lg_id=${encodeURIComponent(lg)}`, 30); }
+  catch { return; }   // the zone list is optional: the form still works without it
+  lastLg = lg;
+  const sel = $('#zone'), cur = sel.value;
+  sel.innerHTML = '<option value="">from council map</option>' + z.zones.map(x => `<option value="${esc(x.zone_id)}">${esc(x.name)}</option>`).join('');
+  sel.value = cur;
+}
+
+$('#f').addEventListener('submit', async ev => {
+  ev.preventDefault();
+  const fd = new FormData(ev.target), qs = new URLSearchParams();
+  for (const [k, v] of fd) if (v !== '') qs.append(k, v === 'on' ? 'yes' : v);
+  for (const k of ['is_roofed','is_enclosed','is_attached_to_dwelling','is_corner_lot','adjoins_canal_or_lake']) if (!fd.has(k)) qs.set(k, 'no');
+  $('#go').disabled = true; $('#out').innerHTML = '<div class="card mute">Looking up the property and resolving rules…</div>';
+  try {
+    const d = await api('/api/rules?' + qs);
+    try { render(d); }
+    catch (e) { console.error(e); throw new Error(`The result could not be displayed (${e.message}). Please report this with the address used.`); }
+    loadZones(d.location.council.lg_id);
+  } catch (e) { showError(e); }
+  finally { $('#go').disabled = false; }
+});
+
+function render(d) {
+  const L = d.location, p = L.parcel || {}, z = L.zoning;
+  const zoneName = (d.available_zones.find(x => x.zone_id === z.zone_id) || {}).name;
+  const precincts = z.precincts.map(id => (d.available_precincts.find(x => x.precinct_id === id) || {}).name || id).join(', ');
+  let h = `<div class="card"><div class="kv">
+    <div><span>Matched address</span>${esc(L.geocode ? L.geocode.address : `${L.lat}, ${L.lon}`)}</div>
+    <div><span>Council</span>${esc(L.council.lga_name)}</div>
+    <div><span>Lot / plan</span>${esc(p.lotplan ?? '—')}</div>
+    <div><span>Lot area</span>${esc(p.lot_area ?? '—')} m²</div>
+    <div><span>Boundary accuracy</span><span class="${p.boundary_accuracy_m > 0.5 || p.boundary_accuracy_m === null ? 'warn' : ''}"
+      title="${esc(p.boundary_accuracy_code || '')}">${p.boundary_accuracy_m != null ? `±${esc(p.boundary_accuracy_m)} m` : 'unknown'}</span>
+      <span class="mute">(State cadastre${p.boundary_surveyed ? ', surveyed' : ''})</span></div>
+    <div><span>Zone</span>${esc(zoneName || z.zone_id || 'unknown')}${z.manual ? ' <span class="mute">(manual)</span>' : ''}</div>
+    <div><span>Precinct</span>${esc(precincts || '—')}</div>
+    <div><span>Overlays</span>${esc((L.overlays || []).map(o => `${o.name} (${o.text})`).join('; ') || (L.overlays ? 'none found' : '—'))}</div>
+    <div><span>Neighbourhood / local plan</span>${esc([...z.local_plans, ...z.local_plan_precincts].join(', ') || (z.from_map && z.from_map.local_plan_text) || '—')}</div>
+    <div><span>Est. lot width × depth</span>${esc(p.est_width_m ?? '—')} × ${esc(p.est_depth_m ?? '—')} m</div>
+    <div><span>Assessment date</span>${esc(d.assessment_date)}</div></div>
+    ${z.from_map ? `<p class="mute">Council map says: ${esc(z.from_map.zone_text)}${z.from_map.precinct_text ? ' / ' + esc(z.from_map.precinct_text) : ''}</p>` : ''}
+    ${d.warnings.length ? `<ul class="warn">${d.warnings.map(w => `<li>${esc(w)}</li>`).join('')}</ul>` : ''}</div>`;
+
+  const rules = [...d.rules].sort((a, b) => (ORDER[a.boundary || ''] - ORDER[b.boundary || '']) || a.regime.localeCompare(b.regime));
+  h += `<div class="card"><h3 style="margin-top:0">Applicable rules — ${esc(d.structure.label)}</h3><table>
+    <tr><th>Boundary</th><th>Requirement</th><th>Rule</th><th>Source</th><th>Status</th></tr>` +
+    rules.map(r => {
+      const src = (r.source_detail || [])[0] || {};
+      const where = r.boundary || (r.topic === 'SETBACK.WATERWAY' ? 'canal/lake boundary' : 'whole lot');
+      return `<tr><td>${esc(where.replaceAll('_', ' ').toLowerCase())}</td>
+        <td class="req">${esc(req(r))}<div class="mute" style="font-weight:400">${esc(r.topic)}</div></td>
+        <td>${esc(r.title)}<div><span class="tag ${r.regime}">${esc(r.regime)}</span>
+            ${r.on_noncompliance ? `<span class="mute"> if not met: ${esc(r.on_noncompliance.replaceAll('_', ' ').toLowerCase())}</span>` : ''}</div>
+            ${r.via ? `<div class="warn">${esc(r.via)}</div>` : ''}</td>
+        <td>${esc(r.instrument)}<div><b>${esc(r.sources.join('; '))}</b></div>
+            <details><summary>clause text</summary><div class="quote">${esc(src.quote || src.text || '')}</div>
+            ${r.interpretation_notes ? `<div class="mute">${esc(r.interpretation_notes)}</div>` : ''}</details></td>
+        <td><span class="tag ${r.state}">${esc(r.state.replace('_', ' '))}</span></td></tr>`;
+    }).join('') + '</table></div>';
+
+  if (d.missing_inputs.length) h += `<div class="card"><h3 style="margin-top:0">Inputs that would resolve the manual-review items</h3><ul>` +
+    d.missing_inputs.map(m => `<li><b>${esc(m.fact)}</b> — ${esc(m.description)}</li>`).join('') + '</ul></div>';
+  const c = d.council_rules;
+  if (c) {
+    h += `<div class="card"><h3 style="margin-top:0">Council rules checked for this property</h3>
+      <p class="mute">Council rules that apply are in the table above. ${c.other_places_count} more council rules apply only to other zones, precincts, overlays or neighbourhood plans.</p>` +
+      (c.in_scope_not_applicable.length ? `<p><b>In scope here but not applicable to this structure / lot:</b></p><table><tr><th>Rule</th><th>Why not</th><th>Source</th></tr>` +
+        c.in_scope_not_applicable.map(x => `<tr><td>${esc(x.title)}</td><td>${esc(x.why)}</td><td class="mute">${esc(x.sources.join('; '))}</td></tr>`).join('') + '</table>' : '') +
+      (c.not_yet_encoded.length ? `<details><summary><b>Council clauses for this place not yet encoded as rules</b> (${c.not_yet_encoded.reduce((n, g) => n + g.count, 0)}) — read these yourself</summary><ul>` +
+        c.not_yet_encoded.map(g => `<li>${esc(g.code)} (${g.count}): <span class="mute">${g.clauses.map(x => esc(x.source)).join('; ')}</span></li>`).join('') + '</ul></details>' : '') +
+      '</div>';
+  }
+  h += `<div class="card"><details><summary>Instruments in force and facts used</summary>
+    <ul>${d.applicable_instruments.map(i => `<li><span class="tag ${i.regime}">${esc(i.regime)}</span> ${esc(i.instrument)} — ${esc(i.version)}</li>`).join('')}</ul>
+    <table><tr><th>Fact</th><th>Value</th><th>Source</th></tr>${Object.entries(d.facts).map(([k, v]) =>
+      `<tr><td>${esc(k)}</td><td>${esc(JSON.stringify(v.value))}</td><td class="${v.source.startsWith('ASSUMED') || v.source.startsWith('ESTIMATED') ? 'warn' : 'mute'}">${esc(v.source)}</td></tr>`).join('')}</table>
+    ${d.displaced.length ? `<p class="mute">Displaced by precedence: ${d.displaced.map(x => esc(`${x.rule} (${x.why})`)).join('; ')}</p>` : ''}
+    </details></div>`;
+  h += `<div class="card"><h3 style="margin-top:0">Map</h3>
+    <p class="mute">Parcel (red) and the council map layers used for this result, drawn live from the source services.
+    Toggle layers top-right; click a shape to see its attributes. The map stays within ${MAP_LIMIT_KM} km of the property;
+    &#8962; (under + / −) brings it back to the property.</p><div id="map"></div></div>`;
+  h += constraintsCard(d);
+  h += sourcesCard(d);
+  $('#out').innerHTML = h;
+  drawMap(d);
+}
+
+// One colour per constraint category, used in the table and on the map, so a row can be found on the map
+const CAT_COLORS = {
+  Electricity: '#f59e0b', Sewer: '#92400e', Water: '#0284c7', Stormwater: '#0f766e', Easements: '#db2777',
+  Flood: '#2563eb', Vegetation: '#16a34a', Waterway: '#06b6d4', Heritage: '#7e22ce', Bushfire: '#7f1d1d',
+  Coastal: '#0891b2', Slope: '#78716c', Soils: '#a16207', Airport: '#475569', Noise: '#9333ea',
+  Infrastructure: '#be123c', Roads: '#525252',
+};
+const catColor = cat => CAT_COLORS[cat] || '#334155';
+// Banded overlays (noise categories, flood planning areas …) store one polygon per category, and neighbouring bands
+// share an edge, so one colour per layer shows a tangle of identical lines. Shade each band by its value instead:
+// the number in the value (category 0–4, FPA1–5 …) sets the strength, and the rest of the text (e.g. state road vs
+// council road) shifts the hue, so overlapping families stay apart.
+function hexToHsl(hex) {
+  const n = parseInt(hex.slice(1), 16), r = (n >> 16) / 255, g = ((n >> 8) & 255) / 255, b = (n & 255) / 255;
+  const mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2, d = mx - mn;
+  if (!d) return [0, 0, l * 100];
+  const s = d / (1 - Math.abs(2 * l - 1));
+  const h = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4;
+  return [(h * 60 + 360) % 360, s * 100, l * 100];
+}
+// The publisher's own colours (the layer's ArcGIS renderer), so our map matches the council's map — e.g. Brisbane draws
+// flood planning area 1 (most frequent flooding) darkest. Loaded once per layer; bandColor() is the fallback.
+const PUB = {};
+const rgba = c => Array.isArray(c) ? `rgba(${c[0]},${c[1]},${c[2]},${(c[3] ?? 255) / 255})` : null;
+function publisherColors(url) {
+  if (!PUB[url]) PUB[url] = fetch(url + '?f=json').then(r => r.json()).then(j => {
+    const r = (j.drawingInfo || {}).renderer || {};
+    // picture / pattern fills (esriPFS) have no colour: use a lighter version of their outline colour
+    const fillOf = s => s && (rgba(s.color) || (s.outline && Array.isArray(s.outline.color) ? rgba([...s.outline.color.slice(0, 3), 140]) : null));
+    if (r.type === 'uniqueValue') return {field: r.field1,
+      colors: Object.fromEntries((r.uniqueValueInfos || []).map(u => [String(u.value), fillOf(u.symbol)]).filter(([, c]) => c)),
+      labels: Object.fromEntries((r.uniqueValueInfos || []).map(u => [String(u.value), u.label || '']))};
+    if (r.type === 'simple' && fillOf(r.symbol)) return {single: fillOf(r.symbol)};
+    return null;
+  }).catch(() => null);
+  return PUB[url];
+}
+const PUB_DONE = {};   // url -> resolved colours, for synchronous use in style functions
+function areaColor(c, props, value) {
+  const pc = PUB_DONE[c.layer];
+  if (pc) {
+    const v = props ? props[pc.field] : value;
+    if (pc.single) return pc.single;
+    if (v !== undefined && pc.colors[String(v)]) return pc.colors[String(v)];
+  }
+  return bandColor(catColor(c.category), props && c.label_field ? props[c.label_field] : value);
+}
+// After a layer's colours load: recolour its legend swatches in the constraints table
+function applyPublisherColors(c) {
+  return publisherColors(c.layer).then(pc => {
+    if (!pc) return null;
+    PUB_DONE[c.layer] = pc;
+    if (!pc.single && pc.field !== c.label_field) return pc;   // legend values are label_field values
+    document.querySelectorAll('span[data-layer]').forEach(s => {
+      if (s.dataset.layer !== c.layer) return;
+      s.style.background = areaColor(c, null, s.dataset.value);
+      // the publisher's own legend wording, when it adds something (e.g. "Low likelihood (0.2% Annual Chance)")
+      const label = (pc.labels || {})[s.dataset.value];
+      if (label && label !== s.dataset.value && !s.parentNode.querySelector('.publabel'))
+        s.parentNode.insertAdjacentHTML('beforeend', ` <span class="mute publabel">— ${esc(label)}</span>`);
+    });
+    return pc;
+  });
+}
+const hashStr = s => [...String(s)].reduce((a, ch) => (a * 31 + ch.charCodeAt(0)) >>> 0, 7);
+function bandColor(base, value) {
+  if (value === undefined || value === null || value === '') return base;
+  // the band number is the last standalone number ("MP4.4 noise category 2 …" → 2; parts of decimals are skipped)
+  const [h, s] = hexToHsl(base), text = String(value), num = text.match(/(?<![\d.])\d+(?![\d.])/g)?.slice(-1);
+  // the family is the text without its rank (number or risk word), e.g. "noise category # (state road)"
+  const family = text.replace(/\d+/g, '#').replace(/very high|extreme|very low|\bhigh\b|\blow\b|medium|moderate/ig, '~');
+  const hue = (h + ((hashStr(family) % 3) - 1) * 28 + 360) % 360;
+  // risk words rank like numbers: very low 0 … very high 4
+  const word = /very high|extreme/i.test(text) ? 4 : /\bhigh\b/i.test(text) ? 3 : /medium|moderate/i.test(text) ? 2
+    : /very low/i.test(text) ? 0 : /\blow\b/i.test(text) ? 1 : null;
+  const rank = num ? Number(num[0]) % 10 : word;
+  const light = rank !== null ? Math.max(22, 72 - rank * 11) : 30 + hashStr(text) % 4 * 10;
+  return `hsl(${hue.toFixed(0)} ${Math.min(90, s + 10).toFixed(0)}% ${light}%)`;
+}
+const swatch = (col, dashed) => `<span style="display:inline-block;width:18px;height:0;border-top:3px ${dashed ? 'dashed' : 'solid'} ${col};vertical-align:middle"></span>`;
+// Codes the layers use, in words
+const CODES = { ASSET_TYPE: { OH: 'overhead', UG: 'underground' }, UG_OH: { O: 'overhead', U: 'underground' } };
+const isDateField = k => /(^|_)(date|dt)$|date$/i.test(k);
+function fmtVal(k, v) {
+  if (typeof v === 'number' && isDateField(k) && v > 1e11) return new Date(v).toISOString().slice(0, 10);
+  if (CODES[k] && CODES[k][v]) return `${v} (${CODES[k][v]})`;
+  return v;
+}
+const fmtCode = (c, v) => (c.label_field && CODES[c.label_field] && CODES[c.label_field][v]) ? `${v} (${CODES[c.label_field][v]})` : v;
+
+function constraintsCard(d) {
+  const C = d.location.site_constraints || [];
+  if (!C.length) return '';
+  const cats = [...new Set(C.map(c => c.category))];
+  const link = c => `<a href="${esc(c.layer)}?f=html" target="_blank" rel="noopener">layer</a>`;
+  return `<div class="card"><h3 style="margin-top:0">Site constraints on this lot</h3>
+    <p class="mute">Each layer is tested against the whole lot outline${C.some(c => c.distance_m) ? ' (lines and points within the stated distance)' : ''}.
+    Council data is used first; Queensland Government data fills categories the council does not publish.
+    Maps can be incomplete or approximate — confirm services with a Before You Dig Australia (BYDA) enquiry.
+    Colours match the map; layers with a hit are drawn on the map. Power lines: ${swatch(catColor('Electricity'))} overhead,
+    ${swatch(catColor('Electricity'), true)} underground.</p>
+    <table><tr><th>Category</th><th>Layer</th><th>On or near this lot?</th><th>What</th></tr>` +
+    cats.map(cat => C.filter(c => c.category === cat).map((c, i) => `<tr>
+      <td>${i ? '' : `${swatch(catColor(cat))} <b>${esc(cat)}</b>`}</td>
+      <td>${esc(c.name)} <span class="mute">(${esc(c.scope)}${c.distance_m ? `, within ${c.distance_m} m` : ''})</span> ${link(c)}</td>
+      <td class="${c.hit ? 'hit warn' : 'mute'}">${c.status !== 'ok' ? `<span class="err" title="${esc(c.error || '')}">service did not answer</span><br><span class="mute" style="font-size:11px">${esc((c.error || '').slice(0, 90))}</span>` : c.hit ? `Yes (${c.count})${c.distance_m > 1 ? `<br><span class="mute">on or within ${c.distance_m} m</span>` : ''}` : 'No'}</td>
+      <td>${c.geometry === 'polygon' && (c.values || []).length
+        // areas: each value with its map shade, so the table is the legend for banded overlays
+        ? (c.values || []).slice().sort().map(v => `<div><span data-layer="${esc(c.layer)}" data-value="${esc(v)}" style="display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-1px;background:${areaColor(c, null, v)}"></span> ${esc(fmtCode(c, v))}</div>`).join('')
+        : esc((c.values || []).map(v => fmtCode(c, v)).join('; '))}${(c.details || []).length && c.hit ? `<details><summary>details</summary><div class="quote">${esc(c.details.map(x => Object.entries(x).map(([k, v]) => `${k}: ${fmtVal(k, v)}`).join(', ')).join('\n'))}</div></details>` : ''}</td>
+    </tr>`).join('')).join('') + '</table></div>';
+}
+
+function sourcesCard(d) {
+  const S = d.location.sources || [];
+  return `<div class="card"><h3 style="margin-top:0">Sources used for this property</h3>
+    <p class="mute">"API result" opens the exact query for this property in the source service; "Layer" shows the layer's
+    fields and description; "Map viewer" opens the layer on the ArcGIS map viewer at this property.
+    ${d.scheme_viewer ? `Council planning scheme: <a href="${esc(d.scheme_viewer)}" target="_blank" rel="noopener">${esc(d.scheme_viewer)}</a>` : ''}</p>
+    <table class="src"><tr><th>Looked up</th><th>Source</th><th>Result here</th><th>Links</th></tr>` +
+    S.map(s => `<tr><td>${esc(s.what)}</td><td>${esc(s.source)}<div class="mute" style="font-size:11px;word-break:break-all">${esc(s.layer)}</div></td>
+      <td class="${s.hit ? 'hit' : ''}">${esc(s.result)}</td>
+      <td><a href="${esc(s.query_url)}" target="_blank" rel="noopener">API result</a>
+          <a href="${esc(s.layer_url)}" target="_blank" rel="noopener">Layer</a>
+          <a href="${esc(s.viewer_url)}" target="_blank" rel="noopener">Map viewer</a></td></tr>`).join('') + '</table></div>';
+}
+
+// An area layer drawn from /api/features: reloads the visible part after each pan / zoom (from zoom 15), drawn on a
+// canvas (fast for thousands of grid steps), in the publisher's colours (loaded first, so nothing is restyled later).
+const ClippedLayer = window.L ? L.FeatureGroup.extend({
+  initialize(c, style, popupHtml) {
+    L.FeatureGroup.prototype.initialize.call(this);
+    this._c = c; this._style = style; this._popup = popupHtml; this._seq = 0;
+    this._pane = c.category === 'Flood' ? 'flood' : 'constraints';   // flood above other areas: it matters most for siting
+    this._renderer = L.canvas({pane: this._pane, padding: 0.3});
+  },
+  onAdd(map) {
+    L.FeatureGroup.prototype.onAdd.call(this, map);
+    map.on('moveend', this._schedule, this);
+    this._load();
+  },
+  onRemove(map) {
+    map.off('moveend', this._schedule, this);
+    clearTimeout(this._timer);
+    L.FeatureGroup.prototype.onRemove.call(this, map);
+  },
+  _schedule() { clearTimeout(this._timer); this._timer = setTimeout(() => this._load(), 250); },
+  // If our server cannot clip (an older server without /api/features, or an error), draw the layer straight from
+  // the publisher's service instead, so an area layer is never silently missing.
+  _fallBack(why) {
+    if (this._fb || !this._map) return;
+    console.warn(`${this._c.name}: drawing from the source service (${why})`);
+    this.clearLayers();
+    this._fb = L.esri.featureLayer({url: this._c.layer, where: this._c.where || '1=1', simplifyFactor: 0.5, precision: 6,
+      minZoom: 15, pane: this._pane, style: this._style});
+    this._fb.bindPopup(l => this._popup(l.feature));
+    this.addLayer(this._fb);
+  },
+  _load() {
+    const map = this._map;
+    if (!map || this._fb) return;
+    if (map.getZoom() < 15) { this.clearLayers(); return; }
+    const b = map.getBounds().pad(0.15), seq = ++this._seq;
+    const bbox = [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()].map(n => n.toFixed(6)).join(',');
+    Promise.all([applyPublisherColors(this._c),
+      fetch(`/api/features?layer=${encodeURIComponent(this._c.layer)}&bbox=${bbox}`)
+        .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)))])
+      .then(([, fc]) => {
+        if (seq !== this._seq || !this._map) return;
+        if (!fc || fc.error || !Array.isArray(fc.features)) return this._fallBack(fc && fc.error || 'bad response');
+        this.clearLayers();
+        L.geoJSON(fc, {style: this._style, renderer: this._renderer,
+          onEachFeature: (f, l) => l.bindPopup(() => this._popup(f))}).eachLayer(l => this.addLayer(l));
+      }).catch(e => { if (seq === this._seq) this._fallBack(e.message); });
+  },
+}) : null;
+
+let MAP = null;
+const MAP_LIMIT_KM = 10;   // how far from the property the map can be moved
+const COLORS = ['#2457d6', '#1d7a46', '#a15c00', '#8a3ffc', '#b42318', '#0e7490', '#be185d', '#4d7c0f', '#7c2d12', '#334155'];
+function drawMap(d) {
+  if (!window.L || !L.esri) { $('#map').innerHTML = '<p class="err" style="padding:12px">Map libraries could not load (offline?).</p>'; return; }
+  if (MAP) { MAP.remove(); MAP = null; }
+  const L0 = d.location, center = [L0.lat, L0.lon];
+  // the map stays within MAP_LIMIT_KM of the property: panning stops at the edge (viscosity 1 = a hard edge) and the
+  // view cannot be zoomed out further than that area
+  const dLat = MAP_LIMIT_KM / 111.32, dLon = MAP_LIMIT_KM / (111.32 * Math.cos(L0.lat * Math.PI / 180));
+  const limit = L.latLngBounds([L0.lat - dLat, L0.lon - dLon], [L0.lat + dLat, L0.lon + dLon]);
+  MAP = L.map('map', {maxBounds: limit, maxBoundsViscosity: 1.0}).setView(center, 18);
+  MAP.setMinZoom(MAP.getBoundsZoom(limit, true));
+  const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 20, maxNativeZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'}).addTo(MAP);
+  const sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    {maxZoom: 20, maxNativeZoom: 19, attribution: 'Imagery &copy; Esri'});
+  const overlays = {};
+  const popup = f => '<div class="popup"><table>' + Object.entries(f.properties || {})
+      .filter(([k, v]) => v !== null && v !== '' && !/^(shape|objectid|fid)/i.test(k))
+      .map(([k, v]) => `<tr><td>${esc(k)}</td><td>${esc(fmtVal(k, v))}</td></tr>`).join('') + '</table></div>';
+  // drawing order: planning layers at the bottom, site constraints above, power lines on top
+  MAP.createPane('constraints').style.zIndex = 420;
+  MAP.createPane('flood').style.zIndex = 430;
+  MAP.createPane('power').style.zIndex = 440;
+  MAP.createPane('parcel').style.zIndex = 450;
+  (L0.sources || []).filter(s => /Zone|plan|Overlay|Priority/.test(s.what) && /\/(FeatureServer|MapServer)\/\d+$/.test(s.layer))
+    .forEach((s, i) => {
+      const c = COLORS[i % COLORS.length];
+      const lyr = L.esri.featureLayer({url: s.layer, simplifyFactor: 0.5, precision: 6, minZoom: 14,
+        style: () => ({color: c, weight: 2, fillColor: c, fillOpacity: 0.12})});
+      lyr.bindPopup(l => `<b>${esc(s.source)}</b>` + popup(l.feature));
+      const on = s.hit || s.what === 'Zone' || (s.what !== 'Overlay' && !/^(none|not)/.test(s.result));
+      const name = `<span style="color:${c}">&#9632;</span> ${esc(s.what === 'Overlay' ? s.source : s.what)}${s.hit ? ' <b>(on this lot)</b>' : ''}`;
+      overlays[name] = lyr; if (on) lyr.addTo(MAP);
+    });
+  (L0.site_constraints || []).filter(c => c.status === 'ok' && /\/(FeatureServer|MapServer)\/\d+$/.test(c.layer)).forEach(c => {
+    const col = catColor(c.category), power = c.category === 'Electricity';
+    // the same filter as the check, so the map shows what was tested (only easements, only substations …)
+    const style = f => {
+      const p = (f && f.properties) || {};
+      const underground = p.ASSET_TYPE === 'UG' || p.UG_OH === 'U';
+      if (c.geometry === 'polygon') {
+        // areas: the publisher's colours, filled without outlines, as the councils draw them. Flood and other
+        // modelled overlays are traced from 2.5–5 m model grid cells; an outline traces every cell step.
+        // Property-shaped areas (easements, heritage places) keep a thin edge because the boundary itself matters.
+        const fill = areaColor(c, p);
+        const edged = ['Easements', 'Heritage'].includes(c.category);
+        return {stroke: edged, color: fill, weight: 1.5, opacity: 0.9, fillColor: fill,
+          fillOpacity: ['Noise', 'Airport'].includes(c.category) ? 0.15 : 0.3};
+      }
+      return {color: col, weight: power ? 4 : c.hit ? 3 : 2, opacity: 0.95,
+        dashArray: power ? (underground ? '8 6' : null) : '6 4', fillOpacity: 0};
+    };
+    let lyr;
+    if (c.geometry === 'polygon') {
+      // areas through our server (/api/features), clipped to the view: council overlays are often a few city-wide
+      // features (Brisbane's creek flood planning area is 13 MB per view straight from the service)
+      lyr = new ClippedLayer(c, style, f => `<b>${esc(c.name)}</b>` + popup(f));
+    } else {
+      const opts = {url: c.layer, where: c.where || '1=1', simplifyFactor: 0.5, precision: 6, minZoom: 15,
+        pane: power ? 'power' : 'constraints', style};
+      // pointToLayer only for point layers: esri-leaflet treats any layer with it as points when it updates a feature,
+      // which throws for lines and areas and stops the rest of that batch from drawing
+      if (c.geometry === 'point') opts.pointToLayer = (g, ll) => L.circleMarker(ll, {radius: power ? 6 : 5, color: '#fff', weight: 1.5,
+        fillColor: col, fillOpacity: 1, pane: power ? 'power' : 'constraints'});
+      lyr = L.esri.featureLayer(opts);
+      lyr.bindPopup(l => `<b>${esc(c.name)}</b>` + popup(l.feature));
+    }
+    overlays[`${swatch(col)} ${esc(c.category)}: ${esc(c.name)}${c.hit ? ' <b>(on this lot)</b>' : ''}`] = lyr;
+    if (c.hit) lyr.addTo(MAP);
+  });
+  let home = () => MAP.setView(center, 18);
+  if (L0.parcel_geometry) {
+    const parcel = L.polygon(L0.parcel_geometry.map(r => r.map(([x, y]) => [y, x])),
+      {color: '#ef0000', weight: 4, fillOpacity: 0.04, pane: 'parcel'}).addTo(MAP);
+    overlays['<span style="color:#ef0000">&#9632;</span> Parcel'] = parcel;
+    home = () => MAP.fitBounds(parcel.getBounds(), {maxZoom: 19, padding: [40, 40]});
+  }
+  home();
+  // ⌂ in the same group as + / −: back to the property at the starting zoom
+  const a = L.DomUtil.create('a', 'map-home', MAP.zoomControl.getContainer());
+  a.href = '#'; a.title = 'Back to the property'; a.setAttribute('role', 'button'); a.setAttribute('aria-label', 'Back to the property');
+  a.innerHTML = '&#8962;';
+  L.DomEvent.on(a, 'click', e => { L.DomEvent.stop(e); home(); });
+  // Queensland Fire Department's Bushfire Prone Area (SEQ, July 2017): published only as a picture map, so it cannot be
+  // tested against the lot. Shown for reference; switched on where bushfire is not checked automatically (Ipswich).
+  const qfd = L.esri.tiledMapLayer({url: 'https://tiles.arcgis.com/tiles/vkTwD8kHw2woKBqV/arcgis/rest/services/Bushfire_Prone_Areas/MapServer',
+    opacity: 0.55, pane: 'constraints', attribution: 'Bushfire Prone Area &copy; Queensland Fire Department'});
+  overlays[`${swatch('#dc2626')} Bushfire prone area (QFD, picture only)${(L0.not_checked || []).includes('Bushfire') ? ' <b>(not checked automatically)</b>' : ''}`] = qfd;
+  if ((L0.not_checked || []).includes('Bushfire')) qfd.addTo(MAP);
+  L.marker(center).addTo(MAP).bindPopup(esc(L0.geocode ? L0.geocode.address : `${L0.lat}, ${L0.lon}`));
+  L.control.layers({'Streets': osm, 'Aerial imagery': sat}, overlays, {collapsed: Object.keys(overlays).length > 12}).addTo(MAP);
+}
+</script>
+</body>
+</html>

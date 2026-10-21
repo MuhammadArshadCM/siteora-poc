@@ -1,0 +1,2511 @@
+{
+  "_doc": "Site-constraint layers (poc/siteora_poc/site.py): council first per category, STATE fallback ('always': true State layers are added even when the council has the category). Built 16 Oct 2026 from tested council / utility / State services; see docs/13-map-services.md.",
+  "STATE": [
+    {
+      "category": "Easements",
+      "name": "DCDB Easement Parcels Only",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/LandParcelPropertyFramework/MapServer/9",
+      "label_field": "parcel_typ",
+      "always": true,
+      "show_fields": [
+        "feat_name",
+        "alias_name",
+        "shire_name"
+      ],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Resources) 2024"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Regulated vegetation (categories A, B, C, R)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Biota/VegetationManagement/MapServer/109",
+      "label_field": "rvm_cat",
+      "show_fields": [],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Natural Resources and Mines, Manufacturing, and Regional and Rural Development) 202",
+      "where": "rvm_cat IN ('A','B','C','R')",
+      "notes": "Category X (cleared / non-regulated) is excluded."
+    },
+    {
+      "category": "Vegetation",
+      "name": "Essential habitat map",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Biota/VegetationManagement/MapServer/5",
+      "label_field": "ehab",
+      "show_fields": [],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Natural Resources and Mines, Manufacturing, and Regional and Rural Development) 202"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Protected plants trigger map",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Biota/VegetationManagement/MapServer/201",
+      "label_field": "high_risk",
+      "show_fields": [],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Environment and Science), 2023"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Koala priority area",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/KoalaPlan/MapServer/1",
+      "label_field": "kpa",
+      "show_fields": [],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Environment and Science), 2020."
+    },
+    {
+      "category": "Vegetation",
+      "name": "Core koala habitat area",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/KoalaPlan/MapServer/3",
+      "label_field": "hsm_core",
+      "show_fields": [],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Environment and Science), 2020"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Locally refined koala habitat area",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/KoalaPlan/MapServer/5",
+      "label_field": "lrkh",
+      "show_fields": [
+        "lga_name"
+      ],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Environment and Science), 2020."
+    },
+    {
+      "category": "Vegetation",
+      "name": "Koala habitat restoration area",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/KoalaPlan/MapServer/6",
+      "label_field": "khra",
+      "show_fields": [],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Environment and Science), 2020."
+    },
+    {
+      "category": "Vegetation",
+      "name": "MSES wildlife habitat (endangered or vulnerable)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/MattersOfStateEnvironmentalSignificance/MapServer/21",
+      "label_field": "bk_hsm",
+      "show_fields": [],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Queensland Floodplain Assessment Overlay (QFAO)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/AdminBoundariesFramework/MapServer/15",
+      "label_field": "sub_name",
+      "show_fields": [
+        "sub_name",
+        "sub_name2"
+      ],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Resources) 2023"
+    },
+    {
+      "category": "Electricity",
+      "name": "GA Power Lines (transmission incl. Powerlink)",
+      "layer": "https://services.ga.gov.au/gis/rest/services/Electricity_Infrastructure/MapServer/2",
+      "label_field": "FEATURE_SOURCE",
+      "where": "STATE='Queensland'",
+      "always": true,
+      "show_fields": [
+        "FEATURE_TYPE",
+        "FEATURE_SUBTYPE",
+        "FEATURE_NAME",
+        "FEATURE_DESCRIPTION",
+        "STATUS"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "copyright": "© Commonwealth of Australia (Geoscience Australia) 2026"
+    },
+    {
+      "category": "Electricity",
+      "name": "Sub-transmission lines and cables (BYDA Look Up and Live)",
+      "layer": "https://services-ap1.arcgis.com/ug6sGLFkytbXYo4f/arcgis/rest/services/LUAL_QLD/FeatureServer/29",
+      "label_field": "ASSET_TYPE",
+      "always": true,
+      "show_fields": [
+        "UTILITY",
+        "NETWORK_TYPE",
+        "ASSET_TYPE",
+        "OPERATING_VOLTAGE",
+        "FEEDER_NAME",
+        "REFRESH_DT"
+      ],
+      "geometry": "line",
+      "distance_m": 5,
+      "copyright": "Before You Dig Australia (Look Up and Live); network data from Energex / Ergon Energy (Energy Queensland)",
+      "notes": "Current Energex / Ergon network published by BYDA for Look Up and Live (refreshed Jan 2026, republished Apr 2026). Replaces the Energex Network_Energex extract of 12 Sep 2022, which Energex marked deprecated. ASSET_TYPE: OH = overhead, UG = underground. Searched within 5 m of the lot: overhead-line exclusion zones are 3 m or more, and street lines along the frontage are positioned to about 1–2 m (lines 1–2 m outside the lot were missed with a 1 m search)."
+    },
+    {
+      "category": "Electricity",
+      "name": "High voltage lines and cables (BYDA Look Up and Live)",
+      "layer": "https://services-ap1.arcgis.com/ug6sGLFkytbXYo4f/arcgis/rest/services/LUAL_QLD/FeatureServer/28",
+      "label_field": "ASSET_TYPE",
+      "always": true,
+      "show_fields": [
+        "OWNER",
+        "NETWORK_TYPE",
+        "ASSET_TYPE",
+        "OPERATING_VOLTAGE",
+        "FEEDER_NAME",
+        "REFRESH_DT"
+      ],
+      "geometry": "line",
+      "distance_m": 5,
+      "copyright": "Before You Dig Australia (Look Up and Live); network data from Energex / Ergon Energy (Energy Queensland)",
+      "notes": "Current Energex / Ergon network published by BYDA for Look Up and Live (refreshed Jan 2026, republished Apr 2026). Replaces the Energex Network_Energex extract of 12 Sep 2022, which Energex marked deprecated. ASSET_TYPE: OH = overhead, UG = underground. Searched within 5 m of the lot: overhead-line exclusion zones are 3 m or more, and street lines along the frontage are positioned to about 1–2 m (lines 1–2 m outside the lot were missed with a 1 m search)."
+    },
+    {
+      "category": "Electricity",
+      "name": "Low voltage lines and cables (BYDA Look Up and Live)",
+      "layer": "https://services-ap1.arcgis.com/ug6sGLFkytbXYo4f/arcgis/rest/services/LUAL_QLD/FeatureServer/30",
+      "label_field": "ASSET_TYPE",
+      "always": true,
+      "show_fields": [
+        "OWNER",
+        "NETWORK_TYPE",
+        "ASSET_TYPE",
+        "OPERATING_VOLTAGE",
+        "FEEDER_NAME",
+        "REFRESH_DT"
+      ],
+      "geometry": "line",
+      "distance_m": 5,
+      "copyright": "Before You Dig Australia (Look Up and Live); network data from Energex / Ergon Energy (Energy Queensland)",
+      "notes": "Current Energex / Ergon network published by BYDA for Look Up and Live (refreshed Jan 2026, republished Apr 2026). Replaces the Energex Network_Energex extract of 12 Sep 2022, which Energex marked deprecated. ASSET_TYPE: OH = overhead, UG = underground. Searched within 5 m of the lot: overhead-line exclusion zones are 3 m or more, and street lines along the frontage are positioned to about 1–2 m (lines 1–2 m outside the lot were missed with a 1 m search)."
+    },
+    {
+      "category": "Electricity",
+      "name": "Substations (BYDA Look Up and Live)",
+      "layer": "https://services-ap1.arcgis.com/ug6sGLFkytbXYo4f/arcgis/rest/services/LUAL_QLD/FeatureServer/27",
+      "label_field": "ASSET_TYPE",
+      "where": "ASSET_TYPE = 'Substation'",
+      "always": true,
+      "show_fields": [
+        "OWNER",
+        "SITE_LABEL",
+        "ASSET_TYPE",
+        "REFRESH_DT"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "copyright": "Before You Dig Australia (Look Up and Live); network data from Energex / Ergon Energy (Energy Queensland)",
+      "notes": "Current Energex / Ergon network published by BYDA for Look Up and Live (refreshed Jan 2026, republished Apr 2026). Replaces the Energex Network_Energex extract of 12 Sep 2022, which Energex marked deprecated. ASSET_TYPE: OH = overhead, UG = underground."
+    },
+    {
+      "category": "Infrastructure",
+      "name": "Petroleum pipeline licence (line)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/CurrentQldResourceAuthorities/MapServer/180",
+      "label_field": "displayname",
+      "always": true,
+      "show_fields": [
+        "displayname",
+        "permittype",
+        "permitsubtype",
+        "permitstatus",
+        "authorisedholdername",
+        "nativetitlecategory"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "copyright": "© State of Queensland (Department of Resources) 2021"
+    },
+    {
+      "category": "Roads",
+      "name": "State controlled road",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Transportation/StateRoadInformation/MapServer/6",
+      "label_field": "road_name",
+      "always": true,
+      "show_fields": [
+        "label",
+        "road_name"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "copyright": "© State of Queensland (Transport and Main Roads), 2021"
+    },
+    {
+      "category": "Heritage",
+      "name": "Queensland heritage register boundary",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/AdminBoundariesFramework/MapServer/78",
+      "label_field": "status",
+      "show_fields": [
+        "placename",
+        "status"
+      ],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Environment and Science) 2023"
+    },
+    {
+      "category": "Coastal",
+      "name": "Coastal management district",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/CoastalManagement/MapServer/5",
+      "label_field": "objectid",
+      "show_fields": [
+        "type"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Queensland Government (Department of Environment and Science), 2018"
+    },
+    {
+      "category": "Coastal",
+      "name": "Erosion prone area all components",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/AdminBoundariesFramework/MapServer/61",
+      "label_field": "objectid",
+      "show_fields": [],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Environment and Science) 2023"
+    },
+    {
+      "category": "Coastal",
+      "name": "Storm tide high hazard area",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/CoastalManagement/MapServer/11",
+      "label_field": "objectid",
+      "show_fields": [],
+      "geometry": "polygon",
+      "copyright": "© Queensland Government (Department of Environment and Science), 2018"
+    },
+    {
+      "category": "Coastal",
+      "name": "Storm tide medium hazard area",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/CoastalManagement/MapServer/12",
+      "label_field": "objectid",
+      "show_fields": [],
+      "geometry": "polygon",
+      "copyright": "© Queensland Government (Department of Environment and Science), 2018"
+    },
+    {
+      "category": "Soils",
+      "name": "SPP acid sulphate soils trigger area",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/AdminBoundariesFramework/MapServer/82",
+      "label_field": "name",
+      "show_fields": [
+        "admintypen",
+        "name"
+      ],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Environment and Science) 2023"
+    },
+    {
+      "category": "Airport",
+      "name": "Airport areas",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Transportation/OtherTransport/MapServer/175",
+      "label_field": "name",
+      "show_fields": [
+        "feature_type",
+        "name",
+        "additional_names",
+        "add_names_source",
+        "operational_status"
+      ],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Natural Resources and Mines, Manufacturing, and Regional and Rural Development)"
+    },
+    {
+      "category": "Waterway",
+      "name": "Watercourse (Water Act 2000)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/InlandWaters/WatercourseIdentificationMap/MapServer/300",
+      "label_field": "name",
+      "show_fields": [
+        "name"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "copyright": "© State of Queensland (Department of Natural Resources, Mines and Energy) 2019"
+    },
+    {
+      "category": "Waterway",
+      "name": "Wetland protection area trigger area",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/WetlandProtection/MapServer/2",
+      "label_field": "ruleid",
+      "show_fields": [],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Environment and Heritage Protection), 2017"
+    }
+  ],
+  "BRISBANE": [
+    {
+      "category": "Airport",
+      "name": "City Plan - Airport environs overlay - Height restriction zones",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/City_Plan_2014_Airport_environs_overlay_Height_restriction_zones/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "ELEVATION",
+        "AIRPORT"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2017 © State of Queensland (Department of Transport and Main Roads) 2017"
+    },
+    {
+      "category": "Airport",
+      "name": "City Plan - Airport environs overlay - Obstacle limitation surfaces (OLS) boundary",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/City_Plan_2014_Airport_environs_overlay_Obstacle_Limitation_Surfaces_OLS_boundary/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "ELEVATION",
+        "AIRPORT"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2019 © Brisbane Airport Corporation Pty Limited (BAC) 2012 (Note: additional use limitations in "
+    },
+    {
+      "category": "Airport",
+      "name": "City Plan - Airport environs overlay - ANEF noise contours",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/City_Plan_2014_Airport_environs_overlay_Australian_Noise_Exposure_Forecast_ANEF/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2022 © Brisbane Airport Corporation Pty Limited (BAC) 2022 © Archerfield Airport Corporation 202"
+    },
+    {
+      "category": "Bushfire",
+      "name": "City Plan - Bushfire overlay",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Bushfire_overlay/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2018 © State of Queensland (Queensland Fire and Emergency Services) 2018"
+    },
+    {
+      "category": "Coastal",
+      "name": "City Plan - Coastal hazard overlay - Coastal erosion",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Coastal_hazard_overlay_coastal_erosion/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2022 © State of Queensland (Department of Environment and Heritage Protection) 2022"
+    },
+    {
+      "category": "Coastal",
+      "name": "City Plan - Coastal hazard overlay - Coastal management district",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Coastal_hazard_overlay_Coastal_management_district/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2016 © State of Queensland (Department of Environment and Heritage Protection) 2016. Updated dat"
+    },
+    {
+      "category": "Easements",
+      "name": "BCC property parcels - easement parcels",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/property_boundaries_parcel/FeatureServer/0",
+      "label_field": "LOTPLAN",
+      "show_fields": [
+        "LOTPLAN",
+        "PARCEL_TYP_DESC",
+        "TENURE_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2025\n© State of Queensland (Department of Resources) 2025.",
+      "where": "PARCEL_TYP_DESC = 'Easement'"
+    },
+    {
+      "category": "Easements",
+      "name": "City Plan - Regional infrastructure overlay - High voltage easements",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Regional_infrastructure_corridors_and_substations_overlay_High_voltage_easements/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2022 © Energex 2022 © Department of Natural Resources and Mines, Queensland Government 2022"
+    },
+    {
+      "category": "Electricity",
+      "name": "City Plan - Regional infrastructure overlay - High voltage powerline (line)",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Regional_infrastructure_corridors_and_substations_overlay_High_voltage_powerline/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "copyright": "© Brisbane City Council 2022 © Energex 2022 © Department of Natural Resources and Mines, Queensland Government 2022"
+    },
+    {
+      "category": "Electricity",
+      "name": "City Plan - Regional infrastructure overlay - High voltage substations",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/CP2014_Regional_infrastructure_overlay_High_voltage_substations/FeatureServer/1",
+      "label_field": "CAT_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2025 © Energex 2023 © Powerlink Queensland 2025 © Department of Natural Resources and Mines, Man"
+    },
+    {
+      "category": "Flood",
+      "name": "City Plan - Flood overlay - Brisbane River flood planning area",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Flood_overlay_Brisbane_River_flood_planning_area/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2021"
+    },
+    {
+      "category": "Flood",
+      "name": "City Plan - Flood overlay - Creek/waterway flood planning area",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Flood_overlay_Creek_waterway_flood_planning_area/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2023"
+    },
+    {
+      "category": "Flood",
+      "name": "City Plan - Flood overlay - Overland flow",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Flood_overlay_Overland_flow/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2014"
+    },
+    {
+      "category": "Flood",
+      "name": "City Plan - Coastal hazard overlay - Storm tide inundation",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Coastal_hazard_overlay_Storm_tide/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2022© State of Queensland (Department of Environment and Heritage Protection) 2022. Updated data"
+    },
+    {
+      "category": "Flood",
+      "name": "Flood Awareness Map - Overall flood risk (all sources)",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Flood_Awareness_Flood_Risk_Overall/FeatureServer/0",
+      "label_field": "FLOOD_RISK",
+      "show_fields": [
+        "FLOOD_RISK",
+        "FLOOD_TYPE"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2021"
+    },
+    {
+      "category": "Heritage",
+      "name": "City Plan - Heritage overlay - Local heritage area/place",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Hertiage_overlay_Local_heritage_area/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2026"
+    },
+    {
+      "category": "Heritage",
+      "name": "City Plan - Heritage overlay - State heritage area/place",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Heritage_overlay_State_heritage_area/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2023 © State of Queensland (Department of Environment and Heritage Protection) 2023. Updated dat"
+    },
+    {
+      "category": "Heritage",
+      "name": "City Plan - Heritage overlay - Area adjoining heritage",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Heritage_overlay_Area_adjoining/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2026 © State of Queensland (Department of Natural Resources and Mines) 2023. Updated data availa"
+    },
+    {
+      "category": "Infrastructure",
+      "name": "City Plan - Regional infrastructure overlay - Petroleum (gas/oil) pipelines",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Regional_infrastructure_corridors_and_substations_overlay_Petroleum_pipelines/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2017 © State of Queensland (Department of Natural Resources and Mines) 2017. Updated data availa"
+    },
+    {
+      "category": "Noise",
+      "name": "City Plan - Transport noise corridor overlay",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Transport_noise_corridor_overlay/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2022 © State of Queensland (Department of Transport and Main Roads) 2022"
+    },
+    {
+      "category": "Sewer",
+      "name": "Urban Utilities - Sewer gravity main",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Sewer_OpenData/FeatureServer/18",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "MATERIAL",
+        "DIAMETER",
+        "USIL",
+        "DSIL",
+        "OWNER"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Sewer",
+      "name": "Urban Utilities - Sewer manholes",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Sewer_OpenData/FeatureServer/20",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "MANHOLEUSE",
+        "SL",
+        "IL",
+        "DEPTH",
+        "OWNER"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Sewer",
+      "name": "Urban Utilities - Sewer pressure main",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Sewer_OpenData/FeatureServer/25",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "MATERIAL",
+        "DIAMETER",
+        "OWNER"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Slope",
+      "name": "City Plan - Landslide overlay",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Landslide_overlay/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2014"
+    },
+    {
+      "category": "Soils",
+      "name": "City Plan - Potential and actual acid sulfate soils overlay (L0)",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/City_Plan_2014_PotentialAndActual_acid_sulfate_soils_overlay/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2014"
+    },
+    {
+      "category": "Stormwater",
+      "name": "Stormwater pipe (existing)",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Stormwater_Pipe_Existing/FeatureServer/0",
+      "label_field": "PIPETYPE",
+      "show_fields": [
+        "ASSETID",
+        "PIPETYPE",
+        "DIAMETER",
+        "WIDTH",
+        "STATUS",
+        "OWNER"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "copyright": "© Brisbane City Council 2026"
+    },
+    {
+      "category": "Stormwater",
+      "name": "Stormwater manhole (existing)",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Stormwater_Manhole_Existing/FeatureServer/0",
+      "label_field": "MANHOLETYPE",
+      "show_fields": [
+        "ASSETID",
+        "MANHOLETYPE",
+        "DIAMETER",
+        "SL",
+        "IL",
+        "OWNER"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "copyright": "© Brisbane City Council 2026"
+    },
+    {
+      "category": "Stormwater",
+      "name": "Stormwater gully / inlet pit (existing)",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Stormwater_Gully_Existing/FeatureServer/0",
+      "label_field": "INLETTYPE",
+      "show_fields": [
+        "ASSETID",
+        "INLETTYPE",
+        "OWNER"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "copyright": "© Brisbane City Council 2026"
+    },
+    {
+      "category": "Stormwater",
+      "name": "Stormwater surface drain (existing)",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Stormwater_Surface_Drain_Existing/FeatureServer/0",
+      "label_field": "SURFACEDRAINTYPE",
+      "show_fields": [
+        "ASSETID",
+        "SURFACEDRAINTYPE",
+        "OWNER"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "copyright": "© Brisbane City Council 2026"
+    },
+    {
+      "category": "Vegetation",
+      "name": "City Plan - Biodiversity areas overlay - Biodiversity areas",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Biodiversity_areas_overlay_Biodiversity_areas/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2019 © State of Queensland (Department of Environment and Science) 2016"
+    },
+    {
+      "category": "Vegetation",
+      "name": "City Plan - Biodiversity areas overlay - Koala habitat areas",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Biodiversity_areas_overlay_Koala_habitat_areas/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2019 © State of Queensland (Department of Environment and Science) 2016. Updated data available "
+    },
+    {
+      "category": "Vegetation",
+      "name": "City Plan - Significant landscape tree overlay",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Significant_landscape_tree_overlay/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2023"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Protected vegetation (Natural Assets Local Law 2003) - Council vegetation",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Protected_Vegetation_Natural_Assets_Local_Law_2003_Council_Vegetation/FeatureServer/0",
+      "label_field": "CATEGORY",
+      "show_fields": [
+        "CATEGORY"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2026"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Protected vegetation (NALL 2003) - Significant native vegetation",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Protected_Vegetation_Natural_Assets_Local_Law_2003_Significant_Native_Vegetation/FeatureServer/0",
+      "label_field": "CATEGORY",
+      "show_fields": [
+        "CATEGORY"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2026"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Protected vegetation (NALL 2003) - Significant urban vegetation",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Protected_Vegetation_Natural_Assets_Local_Law_2003_Significant_Urban_Vegetation/FeatureServer/0",
+      "label_field": "CATEGORY",
+      "show_fields": [
+        "CATEGORY"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2026"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Environmental Management - Highly Significant Tree (points)",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Environmental_Management/FeatureServer/10",
+      "label_field": "BOTANICAL_NAME",
+      "show_fields": [
+        "BOTANICAL_NAME",
+        "COMMON_NAME",
+        "TREE_CLASSIFICATION",
+        "LOCATION",
+        "SUBURB"
+      ],
+      "geometry": "point",
+      "distance_m": 1
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Water pressure main",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Water_OpenData/FeatureServer/21",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "WATERTYPE",
+        "MATERIAL",
+        "DIAMETER",
+        "OWNER"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Recycled water pressure main",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Recycled_Water_OpenData/FeatureServer/21",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "MATERIAL",
+        "DIAMETER"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Waterway",
+      "name": "City Plan - Waterway corridors overlay - Waterway corridors",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Waterway_corridors_overlay_Waterway_corridors/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2023"
+    },
+    {
+      "category": "Waterway",
+      "name": "City Plan - Wetlands overlay",
+      "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Wetlands_overlay/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "DESCRIPTION",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Brisbane City Council 2017"
+    }
+  ],
+  "GOLD_COAST": [
+    {
+      "category": "Soils",
+      "name": "Land at or below 5m AHD",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/12",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Bushfire",
+      "name": "Bushfire hazard area",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/35",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Substantial remnants",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/50",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Koala habitat areas",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/55",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Regulated vegetation",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/60",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Vegetation protection order",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/62",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "point",
+      "distance_m": 1
+    },
+    {
+      "category": "Vegetation",
+      "name": "Vegetation management",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/63",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Waterway",
+      "name": "Waterways",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/69",
+      "label_field": "OVL_DESC2",
+      "show_fields": [
+        "OVL_DESC2",
+        "WATERWAY_NAME",
+        "STREAM_ORDER",
+        "MAJOR_MINOR",
+        "TYPE"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Waterway",
+      "name": "Canal",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/71",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Waterway",
+      "name": "Lake",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/72",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Waterway",
+      "name": "Buffer area",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/73",
+      "label_field": "OBJECTID",
+      "show_fields": [
+        "OBJECTID"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Heritage place",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/83",
+      "label_field": "PLACE_NAME",
+      "show_fields": [
+        "PLACE_NAME",
+        "OVL2_DESC",
+        "QLD_HERITAGE_REGISTER",
+        "LHR_ID",
+        "HERITAGE_PROTECTION_BOUNDARY"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Place in proximity to a local heritage place",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/84",
+      "label_field": "PLACE_NAME",
+      "show_fields": [
+        "PLACE_NAME",
+        "OVL2_DESC",
+        "LOT_PLAN"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Slope",
+      "name": "Landslide hazard",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/95",
+      "label_field": "SMEC_2010",
+      "show_fields": [
+        "SMEC_2010",
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Electricity",
+      "name": "Ferry Road high voltage corridor (Energex)",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/112",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Electricity",
+      "name": "Major electricity infrastructure (Powerlink)",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/113",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Electricity",
+      "name": "Major electricity infrastructure (Energex)",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/114",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Noise",
+      "name": "Transport noise corridor - State-controlled road",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/120",
+      "label_field": "CATEGORY",
+      "show_fields": [
+        "CATEGORY",
+        "SUMMARY"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Flood Risk Overlay 2026",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Flood_Risk_Overlay_2026/FeatureServer/0",
+      "label_field": "RISK",
+      "show_fields": [
+        "RISK",
+        "GRIDCODE"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Defined Flood Level 2026 Extent",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Defined_Flood_Level_2026_Extent/FeatureServer/0",
+      "label_field": "OBJECTID",
+      "show_fields": [
+        "OBJECTID"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Designated Flood Level for Residential Buildings",
+      "layer": "https://services.arcgis.com/3vStCH7NDoBOZ5zn/arcgis/rest/services/Designated_Flood_Level_for_Residential_Buildings/FeatureServer/0",
+      "label_field": "FLOODLVLDES",
+      "show_fields": [
+        "LOTPLAN",
+        "FLOODLVLDES",
+        "GROUNDCENTRE",
+        "SURVEYFLOOR",
+        "SURVEYDATE"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Coastal",
+      "name": "Seawall",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Seawall_view/FeatureServer/0",
+      "label_field": "SEAWALL_MATERIAL",
+      "show_fields": [
+        "SEAWALL_MATERIAL",
+        "HEIGHT_M",
+        "TOP_REDUCED_LEVEL",
+        "CERTIFIED"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Easements",
+      "name": "Easement",
+      "layer": "https://services.arcgis.com/3vStCH7NDoBOZ5zn/arcgis/rest/services/Easement/FeatureServer/0",
+      "label_field": "LOT_PLAN",
+      "show_fields": [
+        "LOT_PLAN",
+        "TENURE",
+        "AREA_METRES",
+        "PARCEL_COUNT"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Easements",
+      "name": "Environmental covenants",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Environmental_Covenants/FeatureServer/1",
+      "label_field": "COVENANT_TYPE",
+      "show_fields": [
+        "COVENANT_TYPE"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Easements",
+      "name": "Other covenants",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Other_Covenants/FeatureServer/0",
+      "label_field": "COVENANT_TYPE",
+      "show_fields": [
+        "COVENANT_TYPE"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Sewer",
+      "name": "Sewer Pipe Non Pressure",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Sewer_Pipe_Non_Pressure_view/FeatureServer/0",
+      "label_field": "PIPE_NON_PRESSURE_USE",
+      "show_fields": [
+        "PIPE_NON_PRESSURE_USE",
+        "DIAMETER_MM",
+        "PIPE_NON_PRESSURE_MATERIAL",
+        "AVERAGE_DEPTH_M",
+        "GIS_USER_STATUS"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Sewer",
+      "name": "Sewer Pipe Pressure",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Sewer_Pipe_Pressure_view/FeatureServer/0",
+      "label_field": "PIPE_PRESSURE_USE",
+      "show_fields": [
+        "PIPE_PRESSURE_USE",
+        "DIAMETER_MM",
+        "PIPE_PRESSURE_MATERIAL",
+        "AVERAGE_DEPTH_M"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Sewer",
+      "name": "Sewer Maintenance Hole",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Sewer_Maintenance_Hole_view/FeatureServer/0",
+      "label_field": "MAINT_HOLE_USE",
+      "show_fields": [
+        "MAINT_HOLE_USE",
+        "DIAMETER_MM",
+        "SURFACE_LEVEL_M"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Water Pipe Potable",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Water_Pipe_Potable_view/FeatureServer/0",
+      "label_field": "WATER_PIPE_USE",
+      "show_fields": [
+        "WATER_PIPE_USE",
+        "DIAMETER_MM",
+        "WATER_PIPE_MATERIAL",
+        "DEPTH_M"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Water Pipe Recycled",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Water_Pipe_Recycled_view/FeatureServer/0",
+      "label_field": "WATER_PIPE_USE",
+      "show_fields": [
+        "WATER_PIPE_USE",
+        "DIAMETER_MM",
+        "WATER_PIPE_MATERIAL",
+        "DEPTH_M"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Stormwater",
+      "name": "Drainage Pipe",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Drainage_Pipe_view/FeatureServer/0",
+      "label_field": "CIRCULAR_PIPE_MATERIAL",
+      "show_fields": [
+        "DIAMETER_MM",
+        "WIDTH_MM",
+        "HEIGHT_MM",
+        "CIRCULAR_PIPE_MATERIAL",
+        "BOX_MATERIAL",
+        "AVERAGE_DEPTH_M"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Stormwater",
+      "name": "Drainage Pit",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Drainage_Pit_view/FeatureServer/0",
+      "label_field": "DRAINAGE_PIT_USE",
+      "show_fields": [
+        "DRAINAGE_PIT_USE",
+        "INLET_TYPE",
+        "DEPTH_M"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Stormwater",
+      "name": "Surface Drain",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Surface_Drain_view/FeatureServer/0",
+      "label_field": "SURFACE_DRAIN_TYPE",
+      "show_fields": [
+        "SURFACE_DRAIN_TYPE",
+        "DRAIN_SHAPE",
+        "FLOOD_CHANNEL"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Koala Area Local Law12 2023",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/Koala_Area_Local_Law12_2023/FeatureServer/0",
+      "label_field": "OBJECTID",
+      "show_fields": [
+        "OBJECTID"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Airport",
+      "name": "Airport noise exposure area",
+      "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/94",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "SENSITIVE_USE_TYPE"
+      ],
+      "geometry": "polygon",
+      "notes": "City Plan Version 13 open data (replaces the 2015 'City Plan V8 Overlays' service)."
+    },
+    {
+      "category": "Airport",
+      "name": "Obstacle Limitation Surface (OLS)",
+      "layer": "https://maps1.goldcoast.qld.gov.au/arcgis/rest/services/V8_Overlays/MapServer/13",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "notes": "No Version 13 equivalent is published; the obstacle limitation surface is set by the airport, not by the scheme version (checked 2026-10-21)."
+    }
+  ],
+  "MORETON_BAY": [
+    {
+      "category": "Easements",
+      "name": "ADAC Assets - Easement",
+      "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/ADAC_Assets/FeatureServer/35",
+      "label_field": "LotNo",
+      "show_fields": [],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Sewer",
+      "name": "Unitywater Sewer Gravity Main",
+      "layer": "https://services2.arcgis.com/tQg86iShPXJPWQWw/arcgis/rest/services/UWPublicAccessSewerInfrastructureLayers/FeatureServer/11",
+      "label_field": "MXASSETNUM",
+      "show_fields": [
+        "ASSETTYPE",
+        "Material",
+        "NominalDiameter",
+        "SubtypeCD"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Sewer",
+      "name": "Unitywater Sewer Pressure Main",
+      "layer": "https://services2.arcgis.com/tQg86iShPXJPWQWw/arcgis/rest/services/UWPublicAccessSewerInfrastructureLayers/FeatureServer/12",
+      "label_field": "MXASSETNUM",
+      "show_fields": [
+        "ASSETTYPE",
+        "InternalDiameter_mm",
+        "Material",
+        "SubtypeCD"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Sewer",
+      "name": "Unitywater Sewer Maintenance Hole",
+      "layer": "https://services2.arcgis.com/tQg86iShPXJPWQWw/arcgis/rest/services/UWPublicAccessSewerInfrastructureLayers/FeatureServer/5",
+      "label_field": "MXASSETNUM",
+      "show_fields": [
+        "ASSETTYPE",
+        "BaseMaterial",
+        "Diameter",
+        "LidType",
+        "MaintenanceShaftType",
+        "RiserDiameter_mm"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Unitywater Water Main",
+      "layer": "https://services2.arcgis.com/tQg86iShPXJPWQWw/arcgis/rest/services/UWPublicAccessWaterInfrastructureLayers/FeatureServer/10",
+      "label_field": "ASSETGROUP",
+      "show_fields": [
+        "ASSETTYPE",
+        "Material",
+        "NominalDiameter",
+        "SubtypeCD"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Unitywater Recycled Water Main",
+      "layer": "https://services2.arcgis.com/tQg86iShPXJPWQWw/arcgis/rest/services/UWPublicAccessRecycledWaterInfrastructureLayers/FeatureServer/9",
+      "label_field": "Material",
+      "show_fields": [
+        "ASSETTYPE",
+        "Material",
+        "SubtypeCD"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Stormwater",
+      "name": "CMB Stormwater Line",
+      "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/CMB_Council_Assets/FeatureServer/25",
+      "label_field": "ASSETNUMBER",
+      "show_fields": [
+        "DESCR",
+        "SHORT_DESCR",
+        "LONG_DESCR",
+        "ASSET_STATUS",
+        "MANUFACTURERNAME",
+        "MAINT_RESPONSIBILITYTYPE"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Stormwater",
+      "name": "CMB Stormwater Point",
+      "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/CMB_Council_Assets/FeatureServer/24",
+      "label_field": "ASSETNUMBER",
+      "show_fields": [
+        "DESCR",
+        "SHORT_DESCR",
+        "LONG_DESCR",
+        "ASSET_STATUS",
+        "MANUFACTURERNAME",
+        "MAINT_RESPONSIBILITYTYPE"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Flood",
+      "name": "Flood Hazard overlay",
+      "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/OM_Flood_Hazard_WebMercator_OpenData/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "CAT_DESC",
+        "OVL2_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Overland Flow Path overlay",
+      "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/OM_Overland_Flow_Path_WebMercator_OpenData/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "CAT_DESC",
+        "OVL2_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon",
+      "copyright": "Moreton Bay Regional Council, 2014"
+    },
+    {
+      "category": "Flood",
+      "name": "Coastal Hazard - Storm Tide overlay",
+      "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/OM_Coastal_Hazard_Storm_Tide_WebMercator_OpenData/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "CAT_DESC",
+        "OVL2_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Environmental Areas overlay",
+      "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/OM_Environmental_Areas_WebMercator_OpenData/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "CAT_DESC",
+        "OVL2_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon",
+      "copyright": "Moreton Bay Regional Council 2015. For information and updates, planning scheme amendments or other planning related enq"
+    },
+    {
+      "category": "Slope",
+      "name": "Landslide Hazard overlay",
+      "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/MBRC_PlanningScheme_LandslideHazardOverlay/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Soils",
+      "name": "Acid Sulfate Soils overlay",
+      "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/MBRC_PlanningScheme_OM_AcidSulfateSoils/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Noise",
+      "name": "Transport Noise Corridor overlay",
+      "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/MBRC_PlanningScheme_TransportNoiseOverlay/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Infrastructure",
+      "name": "Extractive Resources overlay",
+      "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/MBRC_PlanningScheme_ExtractiveResources_Overlay/FeatureServer/0",
+      "label_field": "DISPLAYNAME",
+      "show_fields": [
+        "OVL2_DESC",
+        "OVL2_CAT",
+        "DISPLAYNAME"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Bushfire",
+      "name": "Bushfire hazard overlay (MBRC Planning Scheme)",
+      "layer": "https://services-ap1.arcgis.com/152ojN3Ts9H3cdtl/arcgis/rest/services/MBRC_PlanningScheme_OM_BushfireHazard/FeatureServer/0",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon",
+      "notes": "Moreton Bay's planning-scheme bushfire hazard overlay (replaces the State Bushfire Prone Area proxy, private since Oct 2026)."
+    }
+  ],
+  "SUNSHINE_COAST": [
+    {
+      "category": "Soils",
+      "name": "Acid sulfate soils overlay",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/0",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Airport",
+      "name": "Australian noise exposure forecast (ANEF)",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/12",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Waterway",
+      "name": "Waterways",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/24",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Waterway",
+      "name": "Riparian protection area",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/26",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Waterway",
+      "name": "Wetlands",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/28",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Vegetation",
+      "name": "Native vegetation area",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/30",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Bushfire",
+      "name": "High bushfire hazard area",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/32",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Bushfire",
+      "name": "High bushfire hazard area buffer",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/33",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Bushfire",
+      "name": "Medium bushfire hazard area",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/34",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Bushfire",
+      "name": "Medium bushfire hazard area buffer",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/35",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Flood",
+      "name": "Drainage deficient areas",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/47",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Local heritage place",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/54",
+      "label_field": "LABEL",
+      "show_fields": [
+        "FormerName",
+        "LABEL",
+        "PLACENAME",
+        "STATUS",
+        "OwnerType",
+        "PS_Policy_Name"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Land in proximity to a local heritage place",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/55",
+      "label_field": "LABEL",
+      "show_fields": [
+        "Owner_Type",
+        "CAT_DESC",
+        "OVL2_DESC",
+        "OVL2_CAT",
+        "LABEL",
+        "DESCRIPT"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Slope",
+      "name": "Landslide hazard area",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/58",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Slope",
+      "name": "Steep land (slope)",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/59",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Infrastructure",
+      "name": "Gas pipeline corridor and buffer",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/61",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Electricity",
+      "name": "High voltage electricity line and buffer (distribution)",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/62",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Electricity",
+      "name": "High voltage electricity line and buffer (transmission)",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/63",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Infrastructure",
+      "name": "Water supply pipeline and buffer",
+      "layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Overlays_SCC/MapServer/64",
+      "label_field": "LABEL",
+      "show_fields": [
+        "DESCRIPT",
+        "LABEL"
+      ],
+      "geometry": "polygon",
+      "copyright": "© Sunshine Coast Regional Council, usage in accordance with SCRC Terms & Conditions."
+    },
+    {
+      "category": "Sewer",
+      "name": "Unitywater Sewer Gravity Main",
+      "layer": "https://services2.arcgis.com/tQg86iShPXJPWQWw/arcgis/rest/services/UWPublicAccessSewerInfrastructureLayers/FeatureServer/11",
+      "label_field": "MXASSETNUM",
+      "show_fields": [
+        "ASSETTYPE",
+        "Material",
+        "NominalDiameter",
+        "SubtypeCD"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Sewer",
+      "name": "Unitywater Sewer Pressure Main",
+      "layer": "https://services2.arcgis.com/tQg86iShPXJPWQWw/arcgis/rest/services/UWPublicAccessSewerInfrastructureLayers/FeatureServer/12",
+      "label_field": "MXASSETNUM",
+      "show_fields": [
+        "ASSETTYPE",
+        "InternalDiameter_mm",
+        "Material",
+        "SubtypeCD"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Sewer",
+      "name": "Unitywater Sewer Maintenance Hole",
+      "layer": "https://services2.arcgis.com/tQg86iShPXJPWQWw/arcgis/rest/services/UWPublicAccessSewerInfrastructureLayers/FeatureServer/5",
+      "label_field": "MXASSETNUM",
+      "show_fields": [
+        "ASSETTYPE",
+        "BaseMaterial",
+        "Diameter",
+        "LidType",
+        "MaintenanceShaftType",
+        "RiserDiameter_mm"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Unitywater Water Main",
+      "layer": "https://services2.arcgis.com/tQg86iShPXJPWQWw/arcgis/rest/services/UWPublicAccessWaterInfrastructureLayers/FeatureServer/10",
+      "label_field": "ASSETGROUP",
+      "show_fields": [
+        "ASSETTYPE",
+        "Material",
+        "NominalDiameter",
+        "SubtypeCD"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Unitywater Recycled Water Main",
+      "layer": "https://services2.arcgis.com/tQg86iShPXJPWQWw/arcgis/rest/services/UWPublicAccessRecycledWaterInfrastructureLayers/FeatureServer/9",
+      "label_field": "Material",
+      "show_fields": [
+        "ASSETTYPE",
+        "Material",
+        "SubtypeCD"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    }
+  ],
+  "LOGAN": [
+    {
+      "category": "Easements",
+      "name": "Easements",
+      "layer": "https://services5.arcgis.com/ZUCWDRj8F77Xo351/arcgis/rest/services/AGOL_Easements/FeatureServer/0",
+      "label_field": "Lot_num",
+      "show_fields": [
+        "Parcel_type",
+        "Coverage_type"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Sewer",
+      "name": "Sewer gravity pipes (Logan Water)",
+      "layer": "https://services5.arcgis.com/ZUCWDRj8F77Xo351/arcgis/rest/services/Sewerage%20Information/FeatureServer/1",
+      "label_field": "USE_",
+      "where": "STATUS = 'Existing'",
+      "show_fields": [
+        "Asset_ID",
+        "USE_",
+        "DIAMETER_mm",
+        "MATERIAL",
+        "STATUS"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "notes": "Logan Water's current asset services (edited daily). Replaces Logan_Water_Asset_Location_Data (2019) and AGOL_Water (2018). Removed / retired assets are filtered out."
+    },
+    {
+      "category": "Sewer",
+      "name": "Sewer pressure mains (Logan Water)",
+      "layer": "https://services5.arcgis.com/ZUCWDRj8F77Xo351/arcgis/rest/services/Sewerage%20Information/FeatureServer/4",
+      "label_field": "USE_",
+      "where": "STATUS = 'Existing'",
+      "show_fields": [
+        "Asset_ID",
+        "USE_",
+        "DIAMETER_mm",
+        "MATERIAL",
+        "STATUS"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "notes": "Logan Water's current asset services (edited daily). Replaces Logan_Water_Asset_Location_Data (2019) and AGOL_Water (2018). Removed / retired assets are filtered out."
+    },
+    {
+      "category": "Sewer",
+      "name": "Sewer maintenance holes and structures (Logan Water)",
+      "layer": "https://services5.arcgis.com/ZUCWDRj8F77Xo351/arcgis/rest/services/Sewerage%20Information/FeatureServer/2",
+      "label_field": "USE_",
+      "where": "STATUS = 'Existing'",
+      "show_fields": [
+        "Asset_ID",
+        "USE_",
+        "DIAMETER_mm",
+        "INVERTLEVEL_m"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "notes": "Logan Water's current asset services (edited daily). Replaces Logan_Water_Asset_Location_Data (2019) and AGOL_Water (2018). Removed / retired assets are filtered out."
+    },
+    {
+      "category": "Water",
+      "name": "Water supply pipes (Logan Water)",
+      "layer": "https://services5.arcgis.com/ZUCWDRj8F77Xo351/arcgis/rest/services/Water%20Information/FeatureServer/8",
+      "label_field": "USE_",
+      "where": "STATUS = 'Existing'",
+      "show_fields": [
+        "Asset_ID",
+        "USE_",
+        "DIAMETER_mm",
+        "MATERIAL",
+        "CLASS",
+        "STATUS"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "notes": "Logan Water's current asset services (edited daily). Replaces Logan_Water_Asset_Location_Data (2019) and AGOL_Water (2018). Removed / retired assets are filtered out."
+    },
+    {
+      "category": "Water",
+      "name": "Recycled water pipes",
+      "layer": "https://services5.arcgis.com/ZUCWDRj8F77Xo351/arcgis/rest/services/AGOL_Water/FeatureServer/14",
+      "label_field": "Asset_ID",
+      "show_fields": [
+        "Asset_Type",
+        "Diameter",
+        "Material",
+        "GroundType",
+        "SoilType"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Stormwater",
+      "name": "Stormwater drains",
+      "layer": "https://services5.arcgis.com/ZUCWDRj8F77Xo351/arcgis/rest/services/LCC_Stormwater_Infrastructure/FeatureServer/15",
+      "label_field": "Asset_ID",
+      "show_fields": [
+        "Diameter_mm",
+        "Material",
+        "Joint_Type"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Stormwater",
+      "name": "Stormwater pits",
+      "layer": "https://services5.arcgis.com/ZUCWDRj8F77Xo351/arcgis/rest/services/LCC_Stormwater_Infrastructure/FeatureServer/12",
+      "label_field": "Asset_ID",
+      "show_fields": [
+        "Chamber_Size",
+        "Lid_Type",
+        "Inlet_Type",
+        "Inlet_Size",
+        "Diameter_mm",
+        "Outlet_Type"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Stormwater",
+      "name": "Surface drains",
+      "layer": "https://services5.arcgis.com/ZUCWDRj8F77Xo351/arcgis/rest/services/LCC_Stormwater_Infrastructure/FeatureServer/14",
+      "label_field": "Asset_ID",
+      "show_fields": [
+        "Batter_Material",
+        "Type",
+        "Lining_Material"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Flood",
+      "name": "Flood assessment area (TLPI 1/2024)",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/31",
+      "label_field": "SHAPE_Length",
+      "show_fields": [
+        "Description"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Flood investigation area (TLPI 1/2024)",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/40",
+      "label_field": "Description",
+      "show_fields": [
+        "Description"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Biodiversity areas trigger (OM-02.00)",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/5",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon",
+      "copyright": "Environment and Sustainability Branch - Strategy and Sustainability - Logan City Council"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Vegetation management areas (OM-02.01)",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/6",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon",
+      "copyright": "Environment and Sustainability Branch - Strategy and Sustainability - Logan City Council"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Koala corridor",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/9",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon",
+      "copyright": "Environment and Sustainability Branch - Strategy and Sustainability - Logan City Council"
+    },
+    {
+      "category": "Vegetation",
+      "name": "Locally significant vegetation",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/12",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "OVL2_DESC",
+        "CAT_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon",
+      "copyright": "Environment and Sustainability Branch - Strategy and Sustainability - Logan City Council"
+    },
+    {
+      "category": "Bushfire",
+      "name": "Bushfire hazard risk area (OM-03.01)",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/21",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "CAT_DESC",
+        "OVL2_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon",
+      "copyright": "State of Queensland - Public Safety Business Agency - 2015"
+    },
+    {
+      "category": "Slope",
+      "name": "Slope 12 % or more hazard area",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/50",
+      "label_field": "Ovl2_Desc",
+      "show_fields": [
+        "Ovl2_Desc",
+        "Cat_Desc",
+        "Ovl2_Cat"
+      ],
+      "geometry": "polygon",
+      "copyright": "AAM Pty Ltd, Economic Development and Strategy Branch - Strategy and Sustainability - Logan City Council"
+    },
+    {
+      "category": "Slope",
+      "name": "Slope 15 % or more hazard area",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/51",
+      "label_field": "Ovl2_Desc",
+      "show_fields": [
+        "Ovl2_Desc",
+        "Cat_Desc",
+        "Ovl2_Cat"
+      ],
+      "geometry": "polygon",
+      "copyright": "AAM Pty Ltd, Economic Development and Strategy Branch - Strategy and Sustainability - Logan City Council"
+    },
+    {
+      "category": "Electricity",
+      "name": "Powerline corridor and buffer",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/60",
+      "label_field": "Ovl2_Desc",
+      "show_fields": [
+        "Cat_Desc",
+        "Ovl2_Desc",
+        "Ovl2_Cat"
+      ],
+      "geometry": "polygon",
+      "copyright": "Economic Development and Strategy Branch - Strategy and Sustainability - Logan City Council"
+    },
+    {
+      "category": "Infrastructure",
+      "name": "Petroleum pipeline corridor",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/61",
+      "label_field": "Ovl2_Desc",
+      "show_fields": [
+        "Ovl2_Desc",
+        "Ovl2_Cat",
+        "Description"
+      ],
+      "geometry": "polygon",
+      "copyright": "Economic Development and Strategy Branch - Strategy and Sustainability - Logan City Council"
+    },
+    {
+      "category": "Infrastructure",
+      "name": "Water pipeline corridor",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/62",
+      "label_field": "Description",
+      "show_fields": [
+        "Description",
+        "OVL2_Desc",
+        "OVL2_CAT",
+        "Cat_Desc"
+      ],
+      "geometry": "polygon",
+      "copyright": "Economic Development and Strategy Branch - Strategy and Sustainability - Logan City Council"
+    },
+    {
+      "category": "Soils",
+      "name": "Acid sulfate soils (OM-01.01)",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/3",
+      "label_field": "OVL2_DESC",
+      "show_fields": [
+        "CAT_DESC",
+        "OVL2_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon",
+      "copyright": "Environment and Sustainability Branch and Economic Development and Strategy Branch - Strategy and Sustainability - Logan"
+    },
+    {
+      "category": "Airport",
+      "name": "Strategic airport and environs trigger (OM-11.00)",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/67",
+      "label_field": "OM_Desc",
+      "show_fields": [
+        "OM_Desc",
+        "CAT_DESC",
+        "OVL2_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon",
+      "copyright": "Economic Development and Strategy Branch - Strategy and Sustainability - Logan City Council"
+    },
+    {
+      "category": "Noise",
+      "name": "Transport noise corridor - State-controlled road",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/74",
+      "label_field": "Noise_Category",
+      "show_fields": [
+        "Noise_Category",
+        "CAT_DESC",
+        "OVL2_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon",
+      "copyright": "Economic Development and Strategy Branch - Strategy and Sustainability - Logan City Council"
+    },
+    {
+      "category": "Noise",
+      "name": "Transport noise corridor - railway",
+      "layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/75",
+      "label_field": "Noise_Category",
+      "show_fields": [
+        "Noise_Category",
+        "CAT_DESC",
+        "OVL2_DESC",
+        "OVL2_CAT"
+      ],
+      "geometry": "polygon",
+      "copyright": "Economic Development and Strategy Branch - Strategy and Sustainability - Logan City Council"
+    }
+  ],
+  "REDLAND": [
+    {
+      "category": "Water",
+      "name": "Water pressure pipes",
+      "layer": "https://gis.redland.qld.gov.au/arcgis/rest/services/assets/a_asset_mapping/MapServer/7",
+      "label_field": "ASSET_NAME",
+      "show_fields": [
+        "ASSET_NAME",
+        "ASSET_CATEGORY",
+        "ASSET_CLASS",
+        "ASSET_SUBCLASS",
+        "ASSET_TYPE",
+        "ASSET_SUBTYPE"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "copyright": "RCC Spatial Data Management Team"
+    },
+    {
+      "category": "Sewer",
+      "name": "Sewer mains",
+      "layer": "https://gis.redland.qld.gov.au/arcgis/rest/services/assets/a_asset_mapping/MapServer/16",
+      "label_field": "ASSET_NAME",
+      "show_fields": [
+        "ASSET_NAME",
+        "ASSET_CATEGORY",
+        "ASSET_CLASS",
+        "ASSET_SUBCLASS",
+        "ASSET_TYPE",
+        "ASSET_SUBTYPE"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "copyright": "RCC Spatial Data Management Team"
+    },
+    {
+      "category": "Sewer",
+      "name": "Sewer pressure pipes",
+      "layer": "https://gis.redland.qld.gov.au/arcgis/rest/services/assets/a_asset_mapping/MapServer/17",
+      "label_field": "ASSET_NAME",
+      "show_fields": [
+        "ASSET_NAME",
+        "ASSET_CATEGORY",
+        "ASSET_CLASS",
+        "ASSET_SUBCLASS",
+        "ASSET_TYPE",
+        "ASSET_SUBTYPE"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "copyright": "RCC Spatial Data Management Team"
+    },
+    {
+      "category": "Sewer",
+      "name": "Sewer pits and wells",
+      "layer": "https://gis.redland.qld.gov.au/arcgis/rest/services/assets/a_asset_mapping/MapServer/13",
+      "label_field": "ASSET_NAME",
+      "show_fields": [
+        "ASSET_NAME",
+        "ASSET_CATEGORY",
+        "ASSET_CLASS",
+        "ASSET_SUBCLASS",
+        "ASSET_TYPE",
+        "ASSET_SUBTYPE"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "copyright": "RCC Spatial Data Management Team"
+    },
+    {
+      "category": "Stormwater",
+      "name": "Stormwater drains",
+      "layer": "https://gis.redland.qld.gov.au/arcgis/rest/services/assets/a_asset_mapping/MapServer/27",
+      "label_field": "ASSET_NAME",
+      "show_fields": [
+        "ASSET_NAME",
+        "ASSET_CATEGORY",
+        "ASSET_CLASS",
+        "ASSET_SUBCLASS",
+        "ASSET_TYPE",
+        "ASSET_SUBTYPE"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "copyright": "RCC Spatial Data Management Team"
+    },
+    {
+      "category": "Stormwater",
+      "name": "Stormwater pits",
+      "layer": "https://gis.redland.qld.gov.au/arcgis/rest/services/assets/a_asset_mapping/MapServer/25",
+      "label_field": "ASSET_NAME",
+      "show_fields": [
+        "ASSET_NAME",
+        "ASSET_CATEGORY",
+        "ASSET_CLASS",
+        "ASSET_SUBCLASS",
+        "ASSET_TYPE",
+        "ASSET_SUBTYPE"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot",
+      "copyright": "RCC Spatial Data Management Team"
+    },
+    {
+      "category": "Slope",
+      "name": "Landslide hazard overlay",
+      "layer": "https://services7.arcgis.com/VGRM775aS3HJEeB7/arcgis/rest/services/Current_Version_14_City_Plan_Zones_and_Overlays/FeatureServer/15",
+      "label_field": "RISK",
+      "show_fields": [],
+      "geometry": "polygon",
+      "copyright": "RCC City Planning & Assessment Group"
+    },
+    {
+      "category": "Coastal",
+      "name": "Coastal management district",
+      "layer": "https://services7.arcgis.com/VGRM775aS3HJEeB7/arcgis/rest/services/Current_Version_14_City_Plan_Zones_and_Overlays/FeatureServer/6",
+      "label_field": "OBJECTID",
+      "show_fields": [],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Airport",
+      "name": "Airport environs - obstacle limitation surface",
+      "layer": "https://services7.arcgis.com/VGRM775aS3HJEeB7/arcgis/rest/services/Current_Version_14_City_Plan_Zones_and_Overlays/FeatureServer/1",
+      "label_field": "LOCATION",
+      "show_fields": [
+        "TYPE"
+      ],
+      "geometry": "line",
+      "distance_m": 1
+    },
+    {
+      "category": "Electricity",
+      "name": "Electricity infrastructure easement",
+      "layer": "https://gis.redland.qld.gov.au/arcgis/rest/services/planning/city_plan/MapServer/32",
+      "label_field": "SHAPE_Area",
+      "show_fields": [],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Infrastructure",
+      "name": "Water supply pipeline",
+      "layer": "https://gis.redland.qld.gov.au/arcgis/rest/services/planning/city_plan/MapServer/28",
+      "label_field": "CLASS",
+      "show_fields": [
+        "CLASS"
+      ],
+      "geometry": "line",
+      "distance_m": 1
+    },
+    {
+      "category": "Infrastructure",
+      "name": "Existing trunk wastewater pipeline",
+      "layer": "https://gis.redland.qld.gov.au/arcgis/rest/services/planning/city_plan/MapServer/19",
+      "label_field": "SHAPE_Length",
+      "show_fields": [
+        "CLASS"
+      ],
+      "geometry": "line",
+      "distance_m": 1
+    },
+    {
+      "category": "Noise",
+      "name": "Noise corridor - State road",
+      "layer": "https://gis.redland.qld.gov.au/arcgis/rest/services/planning/city_plan/MapServer/36",
+      "label_field": "CLASS",
+      "show_fields": [
+        "CLASS",
+        "Category"
+      ],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Waterway",
+      "name": "Marine walls (revetments, seawalls)",
+      "layer": "https://gis.redland.qld.gov.au/arcgis/rest/services/assets/a_parks_transport/MapServer/18",
+      "distance_m": 15,
+      "label_field": "ASSET_NAME",
+      "show_fields": [
+        "ASSET_NAME",
+        "ASSET_CATEGORY",
+        "ASSET_CLASS",
+        "ASSET_SUBCLASS",
+        "ASSET_TYPE",
+        "ASSET_SUBTYPE"
+      ],
+      "geometry": "line",
+      "copyright": "RCC Spatial Data Management Team"
+    },
+    {
+      "category": "Bushfire",
+      "name": "City Plan - Bushfire Hazard Overlay",
+      "layer": "https://services7.arcgis.com/VGRM775aS3HJEeB7/arcgis/rest/services/Current_Version_14_City_Plan_Zones_and_Overlays/FeatureServer/3",
+      "label_field": "CLASS",
+      "show_fields": [
+        "CLASS",
+        "Version",
+        "Region"
+      ],
+      "geometry": "polygon",
+      "notes": "Redland City Plan bushfire hazard overlay (replaces the State Bushfire Prone Area proxy, private since Oct 2026)."
+    }
+  ],
+  "IPSWICH": [
+    {
+      "category": "Sewer",
+      "name": "Urban Utilities - Sewer gravity main",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Sewer_OpenData/FeatureServer/18",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "MATERIAL",
+        "DIAMETER",
+        "USIL",
+        "DSIL",
+        "OWNER"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Sewer",
+      "name": "Urban Utilities - Sewer manholes",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Sewer_OpenData/FeatureServer/20",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "MANHOLEUSE",
+        "SL",
+        "IL",
+        "DEPTH",
+        "OWNER"
+      ],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Sewer",
+      "name": "Urban Utilities - Sewer pressure main",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Sewer_OpenData/FeatureServer/25",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "MATERIAL",
+        "DIAMETER",
+        "OWNER"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Water pressure main",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Water_OpenData/FeatureServer/21",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "WATERTYPE",
+        "MATERIAL",
+        "DIAMETER",
+        "OWNER"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Recycled water pressure main",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Recycled_Water_OpenData/FeatureServer/21",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "MATERIAL",
+        "DIAMETER"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    }
+  ]
+}

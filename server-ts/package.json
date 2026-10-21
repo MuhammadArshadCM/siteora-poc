@@ -1,0 +1,53 @@
+{
+  "name": "siteora-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Siteora siting-rules API (TypeScript / Ts.ED port of poc/ and tools/evaluate.py)",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/src/supervise.js",
+    "start:once": "node dist/src/index.js",
+    "dev": "nodemon",
+    "parity": "npm run build && node dist/parity/parity.js",
+    "parity:offline": "npm run build && node dist/parity/parity.js --offline",
+    "cli": "node dist/src/tools/cli.js",
+    "evaluate": "node dist/src/tools/evaluate.js",
+    "check": "node dist/src/tools/check.js",
+    "verify-load": "node dist/src/tools/verify-load.js",
+    "check-services": "node dist/src/tools/check-services.js",
+    "schema-doc": "node dist/src/tools/schema-doc.js",
+    "import-research": "node dist/src/tools/import-council-research.js",
+    "data-register": "node dist/src/tools/data-register.js"
+  },
+  "dependencies": {
+    "@tsed/core": "8.44.0",
+    "@tsed/di": "8.44.0",
+    "@tsed/exceptions": "8.44.0",
+    "@tsed/json-mapper": "8.44.0",
+    "@tsed/logger": "^8.0.0",
+    "@tsed/openspec": "8.44.0",
+    "@tsed/platform-express": "8.44.0",
+    "@tsed/platform-http": "8.44.0",
+    "@tsed/platform-params": "8.44.0",
+    "@tsed/platform-views": "8.44.0",
+    "@tsed/schema": "8.44.0",
+    "body-parser": "^2.2.0",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "multer": "^2.0.0",
+    "pg": "^8.16.0",
+    "siteora": "file:..",
+    "tslib": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.17.0",
+    "@types/pg": "^8.15.0",
+    "nodemon": "^3.1.9",
+    "typescript": "5.9.3"
+  }
+}

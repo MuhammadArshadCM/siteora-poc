@@ -1,0 +1,1669 @@
+{
+  "council": "City of Gold Coast",
+  "planning_scheme": {
+    "name": "Gold Coast City Plan (City Plan 2016)",
+    "version": "Version 14 (incorporates Minor and administrative amendment 13 and Interim LGIP amendment)",
+    "version_commenced": "2026-09-29",
+    "official_urls": [
+      "https://cityplan.goldcoast.qld.gov.au/eplan",
+      "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/vpr",
+      "https://cityplan.goldcoast.qld.gov.au/eplan/api/y/cfg"
+    ],
+    "notes": "ePlan (IsoPlan) is a JS SPA; WebFetch gets HTTP 403 but curl with a browser User-Agent works. Text was pulled from the ePlan JSON API https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/{sectionId}/0/false/08-Sep-2026/false (revisionId 240, revisionDate 08-Sep-2026, 'v14', planOperative 29 Sep 2026, revStatus 'Current'). Citation: 'This planning scheme may be cited as Gold Coast City Plan.' 'The commencement date for the City Plan was 2 February, 2016.' Appendix 2 Table AP2-1: 'Effective – 29 September 2026 | Version 14 | Minor and Administrative Amendment 13'. News item: 'City Plan Version 14 commenced on 29 September 2026 and incorporates two amendments: Minor and administrative amendment 13; Interim Local Government Infrastructure Plan (LGIP) amendment'. Gold Coast has NO separate Dwelling house code: dwelling house siting is in the zone codes (Part 6), the Small lot housing (infill focus) code (9.4.10) and the Secondary dwelling code (9.3.18). verbatim_text for table provisions is reconstructed from HTML table cells joined with ' | ' (cell text verbatim; layout not)."
+  },
+  "qdc_qhc_relationship": {
+    "summary": "Section 1.5 'Building work regulated under the City Plan', Table 1.5-1, expressly lists QDC alternative provisions: boundary clearance alternatives for BUILDINGS = relevant zone code + Coastal erosion hazard, Mudgeeraba Village character, Road widening (AO1/PO1) and Water resource catchment overlay codes (overlay prevails); for STRUCTURES = only Coastal erosion hazard and Road widening overlay codes; site cover alternatives = relevant zone code + Ridges and significant hills protection overlay code; building height (QDC P4) = relevant zone code; car parking (QDC P8) = Transport code. QDC setbacks apply wherever no alternative setback is provided, and QDC P5, P7 and P9 apply unless an alternative applies. The scheme refers only to QDC MP1.1/MP1.2 (and cites Building Regulation 2006); Version 14 (29 Sep 2026) contains NO reference to the Queensland Housing Code - no 2026 QHC alignment amendment found. Consequence: zone-code setback/site cover/height tables operate as building assessment provisions (alternative provisions) for Class 1 and Class 10a buildings even where the dwelling house MCU is 'accepted' (lot >= 400m2) and the zone code is not a planning requirement. Swimming pools and other 'structures' outside the coastal/road-widening overlays fall back to QDC/QHC setbacks.",
+    "quotes": [
+      {
+        "text": "specify alternative boundary clearances and site cover provisions for Class 1 and 10 structures under section 33 of the Building Act 1975.",
+        "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/63/0/false/08-Sep-2026/false",
+        "clause": "1.5 Editor's note (ruleId 2189)"
+      },
+      {
+        "text": "Alternatives to QDC boundary clearance provisions | Buildings: Relevant zone code, and the following overlay codes: - Coastal erosion hazard overlay code, if in a 'Waterfront development control area' or 'Foreshore seawall' on the Coastal erosion hazard overlay map - Mudgeeraba Village character overlay code, if within the 'Mudgeeraba Village character' area on the Mudgeeraba Village character overlay map - AO1 and PO1 of the Road widening overlay code, if on a lot affected by a 'Road widening requirement area' as identified on the Road widening overlay map - Water resource catchment overlay code, if in the 'Water supply buffer area' on the Water catchments and dual supply system area overlay map Note: In the event of an inconsistency between the zone code and an overlay code, the overlay code prevails. Structures: - Coastal erosion hazard overlay code, if in a 'Waterfront development control area' or 'Foreshore seawall' area on the Coastal erosion hazard overlay map. - AO1 and PO1 of the Road widening overlay code, if on a lot affected by a 'Road widening requirement area' as identified on the Road widening overlay map Note: QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes. | Section 33(2) BA",
+        "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/63/0/false/08-Sep-2026/false",
+        "clause": "1.5 Table 1.5-1 (ruleId 2203)"
+      },
+      {
+        "text": "Alternatives to QDC site cover provisions | Relevant zone code or the following overlay code: - Ridges and significant hills protection overlay code, if in the 'Ridges and significant hills' area on the Ridges and significant hills protection overlay map Note: In the event of an inconsistency between the zone code and an overlay code, the overlay code prevails. | Section 33(2) BA",
+        "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/63/0/false/08-Sep-2026/false",
+        "clause": "1.5 Table 1.5-1 (ruleId 2204)"
+      },
+      {
+        "text": "Alternative to QDC building height provisions (performance criterion 4) | Relevant zone code | Section 32(b) BA and section 10(2)(b) BR",
+        "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/63/0/false/08-Sep-2026/false",
+        "clause": "1.5 Table 1.5-1 (ruleId 2205)"
+      },
+      {
+        "text": "Alternative to QDC car parking provisions (performance criterion 8) | Transport code | Section 32(b) BA and section 10(2)(b) BR",
+        "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/63/0/false/08-Sep-2026/false",
+        "clause": "1.5 Table 1.5-1 (ruleId 2206)"
+      },
+      {
+        "text": "For performance criteria 5, 7 and 9 under QDC part 1.1 or part 1.2, unless an alternative City Plan provision applies pursuant to section 1.6(4), the QDC provisions will apply (pursuant to section 10(2)(a) of the Building Act 1975).",
+        "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/63/0/false/08-Sep-2026/false",
+        "clause": "1.5 (ruleId 2230)"
+      },
+      {
+        "text": "Note: a material change of use that remains accepted or accepted subject to requirements and results in building work for Class 1 and/or Class 10 buildings is not subject to RO1 or RO11 (these are to be addressed at the building works stage, see Section 1.5)",
+        "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/289/0/false/08-Sep-2026/false",
+        "clause": "Table 5.10.4 Coastal erosion hazard overlay"
+      }
+    ]
+  },
+  "levels_of_assessment": [
+    {
+      "use_or_work": "Dwelling house (MCU)",
+      "zone": "Low density residential zone (not Large lot precinct)",
+      "level": "Accepted",
+      "conditions": "lot area >= 400m2 and not involving a secondary dwelling; benchmarks: any overlay code triggered by an overlay map",
+      "quote": "Residential activities | Accepted | Dwelling house if: - on a lot with an area equal to or greater than 400m2; and - not involving a secondary dwelling Home based business if home based child care | Any overlay code triggered by an overlay map",
+      "clause": "Table 5.5.1",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/307/0/false/08-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Dwelling house (MCU)",
+      "zone": "Low density residential zone (not Large lot precinct)",
+      "level": "Accepted subject to requirements",
+      "conditions": "lot area < 400m2, or involving a secondary dwelling with GFA <= 80m2; requirements include Low density residential zone code, Small lot housing (infill focus) code, Secondary dwelling code etc.",
+      "quote": "Accepted subject to requirements | ... Dwelling house if: - on a lot with an area less than 400m2; or - involving a secondary dwelling with a GFA not exceeding 80m2 ... | Any overlay code triggered by an overlay map Low density residential zone code Driveways and vehicle crossings code Dual occupancy code Fire services in developments accessed by common private title code General development provisions code Healthy waters code Home based business code Multiple accommodation code Secondary dwelling code Small lot housing (infill focus) code Transport code Vegetation management code",
+      "clause": "Table 5.5.1",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/307/0/false/08-Sep-2026/false"
+    },
+    {
+      "use_or_work": "All activities (height trigger, not applicable to Dwelling houses)",
+      "zone": "Low density residential zone",
+      "level": "Code / Impact assessment",
+      "conditions": "Height triggers expressly do not apply to dwelling houses - see Table 5.10.5",
+      "quote": "Note: This height trigger does not apply to Dwelling houses, refer to Table 5.10.5 Dwelling house overlay.",
+      "clause": "Table 5.5.1",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/307/0/false/08-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Dwelling house (MCU)",
+      "zone": "Low density residential zone (Large lot precinct)",
+      "level": "Accepted",
+      "conditions": "as quoted (note the 'or' differs from the 'and' in Table 5.5.1 - possible drafting error)",
+      "quote": "Residential activities | Accepted | Dwelling house if: - on a lot with an area equal to or greater than 400m2; or - not involving a secondary dwelling",
+      "clause": "Table 5.5.1 (1)",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/308/0/false/08-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Dwelling house (MCU)",
+      "zone": "Medium density residential zone",
+      "level": "Accepted / Accepted subject to requirements",
+      "conditions": "Accepted if lot >= 400m2 and no secondary dwelling; accepted subject to requirements if lot < 400m2 or secondary dwelling <= 80m2 GFA",
+      "quote": "Residential activities | Accepted | Dwelling house if: - on a lot with an area equal to or greater than 400m²; and - not involving a secondary dwelling ... Accepted subject to requirements ... Dwelling house if: - on a lot with an area less than 400m2; or - involving a secondary dwelling with a GFA not exceeding 80m2",
+      "clause": "Table 5.5.2",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/309/0/false/08-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Dwelling house (MCU)",
+      "zone": "Rural residential zone (not in a precinct)",
+      "level": "Accepted / Accepted subject to requirements",
+      "conditions": "Accepted: Dwelling house n.e.i; accepted subject to requirements if secondary dwelling GFA <= 80m2",
+      "quote": "Residential activities | Accepted | Dwelling house n.e.i Home based business if home based child care | Any overlay code triggered by an overlay map | Accepted subject to requirements | ... Dwelling house if involving a secondary dwelling with a GFA not exceeding 80m2",
+      "clause": "Table 5.5.21",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/336/0/false/08-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Dwelling house (MCU) - Dwelling house overlay",
+      "zone": "where on Dwelling house overlay map",
+      "level": "Code assessment",
+      "conditions": "involves building work, not on land with >9m on Building height overlay map, includes Partial third storey and height <= 9m",
+      "quote": "Material change of use for Dwelling house where identified on the Dwelling house overlay map, if involving building work and: - is not on land identified with a height greater than 9 metres on the Building height overlay map; and - includes a Partial third storey; and - height is no more than 9 metres | Code assessment if provisionally made accepted or accepted subject to requirements by another table of assessment | Applicable zone code",
+      "clause": "Table 5.10.5",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/290/0/false/08-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Dwelling house (MCU) - Dwelling house overlay",
+      "zone": "where on Dwelling house overlay map",
+      "level": "Impact assessment",
+      "conditions": "exceeds Building height overlay height, or where not identified, a partial third storey or 9m",
+      "quote": "Material change of use for Dwelling house where identified on the Dwelling house overlay map, if involving building work and exceeds: - the height identified on the Building height overlay map; or - where not identified on the Building height overlay map, either: - a Partial third storey; or - 9 metres in height | Impact assessment",
+      "clause": "Table 5.10.5",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/290/0/false/08-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Building work (general, incl. Class 10a)",
+      "zone": "all zones",
+      "level": "Accepted unless tables state otherwise",
+      "conditions": "Only building work table is 5.7.1 (permanent external lighting structures); overlays in 5.10 may apply",
+      "quote": "Building work and operational work are accepted development, unless the tables of assessment state otherwise or unless otherwise prescribed within the Act or the Regulation.",
+      "clause": "5.3.2",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/105/0/false/08-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Building work - structures for permanent external lighting",
+      "zone": "All zones",
+      "level": "Accepted subject to requirements",
+      "conditions": "structure to accommodate permanently installed external lighting",
+      "quote": "All zones | Accepted subject to requirements | If involving a structure to accommodate permanently installed external lighting (e.g. tennis court lighting) | RO3 of the General development provisions code",
+      "clause": "Table 5.7.1",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/101/0/false/08-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Building work (not related to MCU)",
+      "zone": "all zones in Coastal erosion hazard / Mudgeeraba Village character / Ridges / Road widening overlays",
+      "level": "No change (overlay code is benchmark/requirement)",
+      "conditions": "site on overlay map",
+      "quote": "Any building work (not related to a material change of use) on a site identified on the Coastal erosion hazard overlay map | No change to the categories of development and assessment | Coastal erosion hazard overlay code",
+      "clause": "Tables 5.10.4, 5.10.16, 5.10.19, 5.10.20",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/289/0/false/08-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Building work",
+      "zone": "all zones - Local heritage place",
+      "level": "Code assessment",
+      "conditions": "building work not involving demolition/relocation/removal of a Local heritage place (impact if demolition)",
+      "quote": "Building work that does not involve complete or partial demolition, relocation or removal of a 'Local heritage place' as identified on the Heritage overlay map | Code assessment | Heritage overlay code",
+      "clause": "Table 5.10.12",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/297/0/false/08-Sep-2026/false"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Setback",
+      "text": "For a building or structure, the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Outermost projection",
+      "text": "The outermost part of the building or structure, other than a part that is: - a retractable blind; or - a fixed screen; or - a rainwater fitting; or - an ornamental attachment.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Boundary clearance",
+      "text": "The distance between a building or structure on premises and the boundary of the premises, measured from the part of the building or structure that is closest to the boundary, other than a part that is: - an architectural or ornamental attachment; or - a rainwater fitting. Examples: - If the fascia of a building is the part of the building that is closest to the boundary, the boundary clearance is the distance between the outside of the fascia and the boundary. - If a point on the roof of a building is the part of the building that is closest to the boundary, the boundary clearance is the distance between that point on the roof and the boundary.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Site cover",
+      "text": "Of a development, the portion of the site, expressed as a percentage, that will be covered by a building or structure, measured to its outermost projection, after the development is carried out, other than a building or structure, or part of a building or structure, that is: - in a landscaped or open space area, including, for example, a gazebo or shade structure; or - a basement that is completely below ground level and used for car parking; or - the eaves of a building; or - a sun shade.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Building height",
+      "text": "If specified: - The vertical distance, measured in metres, between the ground level of the building and the highest point on the roof of the building, other than a point that is part of an aerial, chimney, flagpole or load-bearing antenna; or - the number of storeys in the building above ground level.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Storey",
+      "text": "A space within a building between two floor levels, or a floor level and a ceiling or roof: - other than: - a space containing only a lift shaft, stairway or meter room; or - a space containing only a bathroom, shower room, laundry, toilet or other sanitary compartment; or - a space containing only a combination of the things stated in (i) or (ii); or - a basement with a ceiling that is not more than one metre above ground level; and - includes: - a mezzanine; and - a roofed structured that is on, or part of, a rooftop, if the structure does not only accommodate building plant and equipment.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Partial third storey",
+      "text": "A Partial third storey has a Gross Floor Area no greater than 50% of the storey immediately below.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Ground level",
+      "text": "The level of the natural ground, or, if the level of the natural ground has changed, the level as lawfully changed.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Frontage",
+      "text": "The boundary between a site and a road.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Corner lot",
+      "text": "An allotment located where two or more streets meet, which can be safely accessed from at least two streets in accordance with the Driveways and vehicle crossings code.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Dual frontage",
+      "text": "An allotment with dual frontage, can be safely accessed from at least two roads in accordance with the Driveways and vehicle crossings code.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Small lot",
+      "text": "A lot that has an area less than 400m2.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Rear lot",
+      "text": "A lot which has access to a road by means only of an access strip which forms part of the lot, or by means only of an easement over adjoining land.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Domestic outbuilding",
+      "text": "A non-habitable class 10a building that is: - a shed, garage or carport; and - ancillary to a residential use carried out on the premises where the building is.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Structure",
+      "text": "As defined in the Building Act 1975.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Basement",
+      "text": "A space: - between a floor level in a building and the floor level that is immediately below it; and - no part of which is more than one metre above ground level.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Deep planting",
+      "text": "Landscaping in a soil profile that has no structures or basements below the surface of the ground.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Private open space",
+      "text": "An outdoor space for the exclusive use of occupants of a dwelling. This area does not include utility or non-recreational structures (including but not limited to driveways, air-conditioning units, water tanks, storage structures and refuse storage areas).",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Minor building work",
+      "text": "Building work that increases the gross floor area of a building by no more than the lesser of the following: - 50 square metres; - an area equal to five per cent of the gross floor area of the building.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Habitable room",
+      "text": "As defined in the Building Code of Australia.",
+      "clause": "Schedule 1, SC1.2 Administrative definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Dwelling house",
+      "text": "A residential use of premises involving: - one dwelling for a single household and any domestic outbuildings associated with the dwelling; or - one dwelling for a single household, a secondary dwelling and any domestic outbuildings associated with either dwelling.",
+      "clause": "Schedule 1, SC1.1 Use definitions",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/152/0/false/08-Sep-2026/false"
+    },
+    {
+      "term": "Secondary frontage / Wall height",
+      "text": "NOT DEFINED in Schedule 1 (searched SC1.1 and SC1.2 text; no 'Secondary frontage' or 'Wall height' definition found). Zone codes use 'Secondary frontage of corner lot'.",
+      "clause": "n/a",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/153/0/false/08-Sep-2026/false"
+    }
+  ],
+  "rules": [
+    {
+      "rule_key": "gc_ldr_front_setback",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO1; Table 6.2.1-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "Standard (non-small-lot) table; small lot = lot area < 400m2 uses alternative table",
+      "structure_scope": "all buildings (zone code setback table; no Class 10 distinction in standard table)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Setbacks are as follows: | Setback | Minimum distances measured in metres (m) | Front | 6m | Side and rear | Height | Setback | up to 4.5m | 1.5m | between 4.5m – 7.5m | 2m | exceeding 7.5m | an extra 0.5m is added for every 3m in height or part thereof over 7.5m | Between on-site habitable buildings (where not attached) | Double the applicable side setback. | OR",
+      "structured": {
+        "parameter": "front_setback_min",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "applies where the small-lot or rear-lot alternatives are not used"
+        ],
+        "exceptions": [
+          "Dwelling houses on small lots: 4.5m to wall and balcony",
+          "rear lots: 3m from all boundaries"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.1-1 (Part A, ruleId 347) and Table 6.2.1-2 (Part B, ruleId 372)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Identical text in RO1 (accepted subject to requirements) and AO1 (assessable). Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_ldr_side_rear_setback_height_tiered",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO1; Table 6.2.1-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "Standard table (lot area >= 400m2 or small-lot table not used)",
+      "structure_scope": "all buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Setbacks are as follows: | Setback | Minimum distances measured in metres (m) | Front | 6m | Side and rear | Height | Setback | up to 4.5m | 1.5m | between 4.5m – 7.5m | 2m | exceeding 7.5m | an extra 0.5m is added for every 3m in height or part thereof over 7.5m | Between on-site habitable buildings (where not attached) | Double the applicable side setback. | OR",
+      "structured": {
+        "parameter": "side_and_rear_setback_min",
+        "operator": "formula",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "height up to 4.5m: 1.5m",
+          "height between 4.5m – 7.5m: 2m",
+          "height exceeding 7.5m: 2m plus 0.5m for every 3m or part over 7.5m"
+        ],
+        "exceptions": [],
+        "formula_text": "h<=4.5 -> 1.5; 4.5<h<=7.5 -> 2.0; h>7.5 -> 2.0 + 0.5*ceil((h-7.5)/3)  ['an extra 0.5m is added for every 3m in height or part thereof over 7.5m']"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.1-1 (Part A, ruleId 347) and Table 6.2.1-2 (Part B, ruleId 372)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Applies to both side and rear. 'Height' column not defined as wall height vs building height; in RO1 wording ('between 4.5m – 7.5m' / 'exceeding 7.5m') appears to be whole-building height bands, whereas MDR/Township use 'for that part between' (part-based). Base for >7.5m formula assumed to be 2m - confirm. No exemption for Class 10a buildings in the standard table (unlike QDC). Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_ldr_rear_setback_height_tiered",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO1; Table 6.2.1-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "all buildings",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "Setbacks are as follows: | Setback | Minimum distances measured in metres (m) | Front | 6m | Side and rear | Height | Setback | up to 4.5m | 1.5m | between 4.5m – 7.5m | 2m | exceeding 7.5m | an extra 0.5m is added for every 3m in height or part thereof over 7.5m | Between on-site habitable buildings (where not attached) | Double the applicable side setback. | OR",
+      "structured": {
+        "parameter": "rear_setback_min",
+        "operator": "formula",
+        "value": null,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": "same as side: 1.5m (<=4.5m), 2m (4.5-7.5m), +0.5m per 3m or part over 7.5m"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.1-1 (Part A, ruleId 347) and Table 6.2.1-2 (Part B, ruleId 372)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Duplicate of side rule keyed for REAR_SETBACK topic. Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_ldr_separation_habitable_buildings",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO1; Table 6.2.1-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "on-site habitable buildings (where not attached)",
+      "topic": "SEPARATION",
+      "verbatim_text": "Setbacks are as follows: | Setback | Minimum distances measured in metres (m) | Front | 6m | Side and rear | Height | Setback | up to 4.5m | 1.5m | between 4.5m – 7.5m | 2m | exceeding 7.5m | an extra 0.5m is added for every 3m in height or part thereof over 7.5m | Between on-site habitable buildings (where not attached) | Double the applicable side setback. | OR",
+      "structured": {
+        "parameter": "separation_between_habitable_buildings",
+        "operator": "formula",
+        "value": null,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": "2 x applicable side setback"
+      },
+      "alternative_provision_to_qdc_qhc": "UNKNOWN",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.1-1 (Part A, ruleId 347) and Table 6.2.1-2 (Part B, ruleId 372)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Applies to habitable buildings only - not Class 10a. Whether a separation requirement is a 'boundary clearance' alternative is unclear."
+    },
+    {
+      "rule_key": "gc_ldr_small_lot_front_setback",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO1 (small lots); Table 6.2.1-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "small lot: lot area < 400m2 (Sch 1 'Small lot')",
+      "structure_scope": "Dwelling house on small lot (wall and balcony)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Setbacks for Dwelling houses on small lots: | Setbacks | Minimum distances measured in metres (m) | Front | 4.5m to wall and balcony | Secondary frontage of corner lot | 4m (not including projections up to 2m) | Covered car parking (not applicable to the rear lane access) | 1m behind front wall or balcony; and 6m from the frontage where vehicles access the lot. | Side and rear (not applicable to the secondary frontage of corner lots) | Height | Setback | up to 4.5m | 1m to wall and balcony | 0.5m to outermost projection | 0m to class 10 buildings and/or non-habitable room where: - located along either a southern or western boundary; - a maximum length of 12m where no single part exceeds 6m in length - at least 1m separation from a habitable window of a neighbouring dwelling. | for the part between 4.5m - 7.5m | 1.5m to wall and balcony 1m to outermost projection | for that part exceeding 7.5m | 2m to wall and balcony 1.5m to outermost projection | Rear lane | 0.5m minimum 1m maximum for covered car parking | OR For development on rear lots the setback is 3m from all boundaries.",
+      "structured": {
+        "parameter": "front_setback_min_wall_balcony",
+        "operator": ">=",
+        "value": 4.5,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.1-1 (Part A, ruleId 347) and Table 6.2.1-2 (Part B, ruleId 372)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Dwelling house on lot < 400m2 is 'accepted subject to requirements' in LDR (Table 5.5.1). Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_ldr_small_lot_secondary_frontage",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO1 (small lots); Table 6.2.1-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "small lot (< 400m2), corner lot",
+      "structure_scope": "Dwelling house on small lot",
+      "topic": "SECONDARY_FRONTAGE_SETBACK",
+      "verbatim_text": "Setbacks for Dwelling houses on small lots: | Setbacks | Minimum distances measured in metres (m) | Front | 4.5m to wall and balcony | Secondary frontage of corner lot | 4m (not including projections up to 2m) | Covered car parking (not applicable to the rear lane access) | 1m behind front wall or balcony; and 6m from the frontage where vehicles access the lot. | Side and rear (not applicable to the secondary frontage of corner lots) | Height | Setback | up to 4.5m | 1m to wall and balcony | 0.5m to outermost projection | 0m to class 10 buildings and/or non-habitable room where: - located along either a southern or western boundary; - a maximum length of 12m where no single part exceeds 6m in length - at least 1m separation from a habitable window of a neighbouring dwelling. | for the part between 4.5m - 7.5m | 1.5m to wall and balcony 1m to outermost projection | for that part exceeding 7.5m | 2m to wall and balcony 1.5m to outermost projection | Rear lane | 0.5m minimum 1m maximum for covered car parking | OR For development on rear lots the setback is 3m from all boundaries.",
+      "structured": {
+        "parameter": "secondary_frontage_setback_min",
+        "operator": ">=",
+        "value": 4,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [
+          "not including projections up to 2m"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.1-1 (Part A, ruleId 347) and Table 6.2.1-2 (Part B, ruleId 372)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "'not including projections up to 2m' - ambiguous whether projections may extend 2m into the 4m setback. No secondary frontage rule in the standard (>=400m2) table. Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_ldr_small_lot_covered_parking_setback",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO1 (small lots); Table 6.2.1-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "small lot (< 400m2); not rear lane access",
+      "structure_scope": "covered car parking (garage/carport)",
+      "topic": "GARAGE_CARPORT_FRONTAGE",
+      "verbatim_text": "Setbacks for Dwelling houses on small lots: | Setbacks | Minimum distances measured in metres (m) | Front | 4.5m to wall and balcony | Secondary frontage of corner lot | 4m (not including projections up to 2m) | Covered car parking (not applicable to the rear lane access) | 1m behind front wall or balcony; and 6m from the frontage where vehicles access the lot. | Side and rear (not applicable to the secondary frontage of corner lots) | Height | Setback | up to 4.5m | 1m to wall and balcony | 0.5m to outermost projection | 0m to class 10 buildings and/or non-habitable room where: - located along either a southern or western boundary; - a maximum length of 12m where no single part exceeds 6m in length - at least 1m separation from a habitable window of a neighbouring dwelling. | for the part between 4.5m - 7.5m | 1.5m to wall and balcony 1m to outermost projection | for that part exceeding 7.5m | 2m to wall and balcony 1.5m to outermost projection | Rear lane | 0.5m minimum 1m maximum for covered car parking | OR For development on rear lots the setback is 3m from all boundaries.",
+      "structured": {
+        "parameter": "covered_parking_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "1m behind front wall or balcony",
+          "and 6m from the frontage where vehicles access the lot"
+        ],
+        "exceptions": [
+          "not applicable to the rear lane access"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.1-1 (Part A, ruleId 347) and Table 6.2.1-2 (Part B, ruleId 372)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_ldr_small_lot_side_rear_setback",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO1 (small lots); Table 6.2.1-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "small lot (< 400m2)",
+      "structure_scope": "Dwelling house on small lot (wall/balcony vs outermost projection)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Setbacks for Dwelling houses on small lots: | Setbacks | Minimum distances measured in metres (m) | Front | 4.5m to wall and balcony | Secondary frontage of corner lot | 4m (not including projections up to 2m) | Covered car parking (not applicable to the rear lane access) | 1m behind front wall or balcony; and 6m from the frontage where vehicles access the lot. | Side and rear (not applicable to the secondary frontage of corner lots) | Height | Setback | up to 4.5m | 1m to wall and balcony | 0.5m to outermost projection | 0m to class 10 buildings and/or non-habitable room where: - located along either a southern or western boundary; - a maximum length of 12m where no single part exceeds 6m in length - at least 1m separation from a habitable window of a neighbouring dwelling. | for the part between 4.5m - 7.5m | 1.5m to wall and balcony 1m to outermost projection | for that part exceeding 7.5m | 2m to wall and balcony 1.5m to outermost projection | Rear lane | 0.5m minimum 1m maximum for covered car parking | OR For development on rear lots the setback is 3m from all boundaries.",
+      "structured": {
+        "parameter": "side_rear_setback_min_small_lot",
+        "operator": "formula",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "up to 4.5m: 1m to wall and balcony; 0.5m to outermost projection",
+          "part between 4.5m - 7.5m: 1.5m to wall and balcony; 1m to outermost projection",
+          "part exceeding 7.5m: 2m to wall and balcony; 1.5m to outermost projection"
+        ],
+        "exceptions": [
+          "not applicable to the secondary frontage of corner lots",
+          "0m to class 10 buildings and/or non-habitable room in stated circumstances"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.1-1 (Part A, ruleId 347) and Table 6.2.1-2 (Part B, ruleId 372)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Applies to side and rear. Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_ldr_small_lot_class10_built_to_boundary",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO1 (small lots); Table 6.2.1-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "small lot (< 400m2)",
+      "structure_scope": "class 10 buildings and/or non-habitable room (height up to 4.5m band)",
+      "topic": "BUILT_TO_BOUNDARY",
+      "verbatim_text": "up to 4.5m | 1m to wall and balcony | 0.5m to outermost projection | 0m to class 10 buildings and/or non-habitable room where: - located along either a southern or western boundary; - a maximum length of 12m where no single part exceeds 6m in length - at least 1m separation from a habitable window of a neighbouring dwelling.",
+      "structured": {
+        "parameter": "side_rear_setback_class10",
+        "operator": "conditional",
+        "value": 0,
+        "unit": "m",
+        "conditions": [
+          "located along either a southern or western boundary",
+          "maximum length 12m where no single part exceeds 6m in length",
+          "at least 1m separation from a habitable window of a neighbouring dwelling",
+          "within the 'up to 4.5m' height band"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.1-1 (Part A, ruleId 347) and Table 6.2.1-2 (Part B, ruleId 372)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Only in the small-lot table. No equivalent built-to-boundary allowance in the standard (>=400m2) table - so on >=400m2 lots in LDR a Class 10a shed/garage must meet 1.5m side/rear unless QDC/QHC applies (it does not, since an alternative is provided) - confirm with council/certifier practice. Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_ldr_small_lot_rear_lane",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO1 (small lots); Table 6.2.1-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "small lot with rear lane",
+      "structure_scope": "dwelling house / covered car parking to rear lane",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "Rear lane | 0.5m minimum 1m maximum for covered car parking",
+      "structured": {
+        "parameter": "rear_lane_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "0.5m minimum",
+          "1m maximum for covered car parking"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.1-1 (Part A, ruleId 347) and Table 6.2.1-2 (Part B, ruleId 372)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_ldr_rear_lot_setback",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO1; Table 6.2.1-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "rear lot (Sch 1: access only via access strip or easement)",
+      "structure_scope": "all buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "OR For development on rear lots the setback is 3m from all boundaries.",
+      "structured": {
+        "parameter": "setback_all_boundaries_rear_lot",
+        "operator": ">=",
+        "value": 3,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.1-1 (Part A, ruleId 347) and Table 6.2.1-2 (Part B, ruleId 372)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_ldr_site_cover",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO2; Table 6.2.1-2 AO2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "all buildings and structures (per Site cover definition)",
+      "topic": "SITE_COVER",
+      "verbatim_text": "RO2 Site cover does not exceed 50%. | AO2 Site cover does not exceed 50%.",
+      "structured": {
+        "parameter": "site_cover_max",
+        "operator": "<=",
+        "value": 50,
+        "unit": "%",
+        "conditions": [
+          "no variation by lot size in LDR"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Sch 1 'Site cover' measured to outermost projection; excludes gazebo/shade structure in landscaped/open space area, basement car parking completely below ground, eaves, sun shade.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 363 / 390",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1: 'Alternatives to QDC site cover provisions | Relevant zone code or the following overlay code: Ridges and significant hills protection overlay code ...' (Section 33(2) BA)."
+    },
+    {
+      "rule_key": "gc_ldr_building_height",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO3; Table 6.2.1-2 AO3.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "buildings",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "RO3 Building height does not exceed 2 storeys with a maximum height of 9m. AND Structures do not exceed a height of 9m. | AO3.1 Building height does not exceed: - 2 storeys with a maximum height of 9m; or - a partial third storey if within 9m.",
+      "structured": {
+        "parameter": "building_height_max",
+        "operator": "<=",
+        "value": 9,
+        "unit": "m",
+        "conditions": [
+          "2 storeys max (RO3)",
+          "AO3.1 also allows a partial third storey if within 9m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Sch 1 'Building height': vertical distance from ground level to highest point of roof (excl. aerial, chimney, flagpole, load-bearing antenna) or number of storeys above ground level.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 364 / 392",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 1.5-1: 'Alternative to QDC building height provisions (performance criterion 4) | Relevant zone code | Section 32(b) BA and section 10(2)(b) BR'. Dwelling house overlay (Table 5.10.5) makes dwelling house exceeding Building height overlay height / partial third storey / 9m impact assessable."
+    },
+    {
+      "rule_key": "gc_ldr_structure_height",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO3; Table 6.2.1-2 AO3.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "structures",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "Structures do not exceed a height of 9m.",
+      "structured": {
+        "parameter": "structure_height_max",
+        "operator": "<=",
+        "value": 9,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "UNKNOWN",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 364 / 392",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1 lists zone code as alternative to QDC building height (P4); unclear whether it covers structures."
+    },
+    {
+      "rule_key": "gc_ldr_garage_carport_height",
+      "code": "Low density residential zone code (6.2.1)",
+      "clause": "6.2.1.3 Table 6.2.1-1 RO4; Table 6.2.1-2 PO4/AO4",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "freestanding garages and carports",
+      "topic": "OUTBUILDING_SIZE",
+      "verbatim_text": "RO4 Freestanding garages and carports do not exceed a height of 3.5m. | PO4 Free standing garages and car ports present to the street as very low rise. | AO4 Freestanding garages and carports do not exceed a height of 3.5m.",
+      "structured": {
+        "parameter": "freestanding_garage_carport_height_max",
+        "operator": "<=",
+        "value": 3.5,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "UNKNOWN",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/37/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 364 / 393",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Only Class 10a height limit in the zone. Applies only where the zone code is an assessment benchmark/requirement (MCU accepted subject to requirements or assessable) or, arguably, via Table 1.5-1 height alternative. No floor-area limit for sheds/outbuildings found in the zone code."
+    },
+    {
+      "rule_key": "gc_mdr_front_setback",
+      "code": "Medium density residential zone code (6.2.2)",
+      "clause": "6.2.2.3 Table 6.2.2-1 RO1; Table 6.2.2-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "standard table (non-small-lot)",
+      "structure_scope": "buildings excluding covered car parking",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Setbacks are as follows: | Setback | Minimum distances measured in metres (m) | Height | Setback | Front for covered car parking (excluding a basement) | all | 6m | Front (excluding covered car parking) | up to 23m | 4m | for that part exceeding 23m | 6m | Side and rear | up to 4.5m | 1.5m | for that part between 4.5m – 7.5m | 2m | for that part exceeding 7.5m | an extra 0.5m is added for every 3m in height or part thereof over 7.5m. | Between on site habitable buildings (where not attached) | Double the applicable side setback. | OR",
+      "structured": {
+        "parameter": "front_setback_min",
+        "operator": "formula",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "height up to 23m: 4m",
+          "part exceeding 23m: 6m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/36/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.2-1 RO1 (ruleId 16554); Table 6.2.2-2 AO1 (ruleId 16559)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_mdr_front_setback_covered_parking",
+      "code": "Medium density residential zone code (6.2.2)",
+      "clause": "6.2.2.3 Table 6.2.2-1 RO1; Table 6.2.2-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "covered car parking (garage/carport), excluding a basement",
+      "topic": "GARAGE_CARPORT_FRONTAGE",
+      "verbatim_text": "Setbacks are as follows: | Setback | Minimum distances measured in metres (m) | Height | Setback | Front for covered car parking (excluding a basement) | all | 6m | Front (excluding covered car parking) | up to 23m | 4m | for that part exceeding 23m | 6m | Side and rear | up to 4.5m | 1.5m | for that part between 4.5m – 7.5m | 2m | for that part exceeding 7.5m | an extra 0.5m is added for every 3m in height or part thereof over 7.5m. | Between on site habitable buildings (where not attached) | Double the applicable side setback. | OR",
+      "structured": {
+        "parameter": "front_setback_covered_parking_min",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/36/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.2-1 RO1 (ruleId 16554); Table 6.2.2-2 AO1 (ruleId 16559)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_mdr_side_rear_setback_height_tiered",
+      "code": "Medium density residential zone code (6.2.2)",
+      "clause": "6.2.2.3 Table 6.2.2-1 RO1; Table 6.2.2-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "all buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Setbacks are as follows: | Setback | Minimum distances measured in metres (m) | Height | Setback | Front for covered car parking (excluding a basement) | all | 6m | Front (excluding covered car parking) | up to 23m | 4m | for that part exceeding 23m | 6m | Side and rear | up to 4.5m | 1.5m | for that part between 4.5m – 7.5m | 2m | for that part exceeding 7.5m | an extra 0.5m is added for every 3m in height or part thereof over 7.5m. | Between on site habitable buildings (where not attached) | Double the applicable side setback. | OR",
+      "structured": {
+        "parameter": "side_and_rear_setback_min",
+        "operator": "formula",
+        "value": null,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": "part up to 4.5m -> 1.5; part 4.5-7.5m -> 2.0; part >7.5m -> +0.5m per 3m or part over 7.5m"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/36/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.2-1 RO1 (ruleId 16554); Table 6.2.2-2 AO1 (ruleId 16559)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Part-based wording ('for that part'). Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_mdr_small_lot_setbacks",
+      "code": "Medium density residential zone code (6.2.2)",
+      "clause": "6.2.2.3 Table 6.2.2-1 RO1 (small lots); Table 6.2.2-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "small lot (< 400m2)",
+      "structure_scope": "Dwelling house on small lot",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Setbacks for Dwelling houses on small lots: | Setback | Minimum distances measured in metres (m) | Front | 4.5m to wall and balcony | Secondary frontage of corner lot | 4m (not including projections up to 2m) | Covered car parking (not applicable to the rear lane access) | 1m behind front wall or balcony; and 6m from the frontage where vehicles access the lot. | Side and rear (not applicable to the secondary frontage of corner lots) | Height | Setback | up to 4.5m | 1m to wall and balcony 0.5m to outermost projection 0m to class 10 building and/or non-habitable room where: - located along a southern or western boundary; - a maximum length of 12m where no single part exceeds 6m in length; and - at least 1m separation from a habitable window of a neighbouring dwelling. | for that part between 4.5m – 7.5m | 1.5m to wall and balcony 1m to outermost projection | for that part exceeding 7.5m | 2m to wall and balcony 1.5m to outermost projection | Rear lane | 0.5m maximum 1.0m maximum for covered car parking | OR For development on rear lots the setback is 3m from all boundaries.",
+      "structured": {
+        "parameter": "small_lot_setbacks",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "front 4.5m to wall and balcony",
+          "secondary frontage 4m",
+          "covered parking 1m behind front wall and 6m from vehicle-access frontage",
+          "side/rear 1m/1.5m/2m to wall by height band; 0.5/1/1.5m to outermost projection",
+          "rear lots 3m all boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/36/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.2-1 RO1 (ruleId 16554); Table 6.2.2-2 AO1 (ruleId 16559)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Same as LDR small-lot table, except RO1 (Part A) reads 'Rear lane | 0.5m maximum 1.0m maximum for covered car parking' while AO1 (Part B) reads '0.5m minimum 1m maximum' - apparent drafting inconsistency. Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_mdr_small_lot_class10_built_to_boundary",
+      "code": "Medium density residential zone code (6.2.2)",
+      "clause": "6.2.2.3 Table 6.2.2-1 RO1 (small lots); Table 6.2.2-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "small lot (< 400m2)",
+      "structure_scope": "class 10 building and/or non-habitable room",
+      "topic": "BUILT_TO_BOUNDARY",
+      "verbatim_text": "0m to class 10 building and/or non-habitable room where: - located along a southern or western boundary; - a maximum length of 12m where no single part exceeds 6m in length; and - at least 1m separation from a habitable window of a neighbouring dwelling.",
+      "structured": {
+        "parameter": "side_rear_setback_class10",
+        "operator": "conditional",
+        "value": 0,
+        "unit": "m",
+        "conditions": [
+          "southern or western boundary",
+          "max length 12m, no single part > 6m",
+          ">= 1m from neighbouring habitable window"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/36/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 6.2.2-1 RO1 (ruleId 16554); Table 6.2.2-2 AO1 (ruleId 16559)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_mdr_site_cover",
+      "code": "Medium density residential zone code (6.2.2)",
+      "clause": "6.2.2.3 Table 6.2.2-1 RO2; Table 6.2.2-2 AO2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "varies by lot area (400m2 threshold)",
+      "structure_scope": "Dwelling houses",
+      "topic": "SITE_COVER",
+      "verbatim_text": "Site cover does not exceed 50% for Dwelling houses on lots with areas equal to or greater than 400m2 and Dual occupancies. OR Site cover does not exceed 60% for Dwelling houses on lots less than 400m2.",
+      "structured": {
+        "parameter": "site_cover_max",
+        "operator": "conditional",
+        "value": null,
+        "unit": "%",
+        "conditions": [
+          "lot >= 400m2: 50%",
+          "lot < 400m2: 60%"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/36/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 16555 / 16582",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1: 'Alternatives to QDC site cover provisions | Relevant zone code or the following overlay code: Ridges and significant hills protection overlay code ...' (Section 33(2) BA)."
+    },
+    {
+      "rule_key": "gc_mdr_building_height",
+      "code": "Medium density residential zone code (6.2.2)",
+      "clause": "6.2.2.3 Table 6.2.2-1 RO3; Table 6.2.2-2 PO3 (AO3 none)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "buildings and structures",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "RO3 Building height does not exceed 2 storeys and a maximum of 9m or that shown on the Building height overlay map. AND Structures do not exceed a height of 9m or that shown on the Building height overlay map. | PO3 ... Where not identified on the overlay map building height and structure height does not exceed: - 2 storeys with a maximum of 9m; or - a partial third storey if within 9m. | AO3 No acceptable outcome provided.",
+      "structured": {
+        "parameter": "building_height_max",
+        "operator": "conditional",
+        "value": 9,
+        "unit": "m",
+        "conditions": [
+          "or height shown on Building height overlay map"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/36/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 16556 / 16584",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 1.5-1: 'Alternative to QDC building height provisions (performance criterion 4) | Relevant zone code | Section 32(b) BA and section 10(2)(b) BR'. Building height overlay map values are spatial - need GIS lookup."
+    },
+    {
+      "rule_key": "gc_mdr_garage_carport_height",
+      "code": "Medium density residential zone code (6.2.2)",
+      "clause": "6.2.2.3 Table 6.2.2-1 RO4; Table 6.2.2-2 AO4",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "freestanding garages and carports",
+      "topic": "OUTBUILDING_SIZE",
+      "verbatim_text": "RO4 Freestanding garages and carports do not exceed a height of 3.5m. | PO4 Free standing garages and carports present to the street as single storey. | AO4 Freestanding garages and carports do not exceed a height of 3.5m.",
+      "structured": {
+        "parameter": "freestanding_garage_carport_height_max",
+        "operator": "<=",
+        "value": 3.5,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "UNKNOWN",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/36/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 16556 / 16585",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": ""
+    },
+    {
+      "rule_key": "gc_rr_front_setback",
+      "code": "Rural residential zone code (6.2.21)",
+      "clause": "6.2.21.3 Table 6.2.21-1 RO1; Table 6.2.21-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "all buildings (roadside stall 0m)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Setbacks are as follows: | Setback | Minimum distances measured in metres (m) | Front | - if roadside stall: 0m - otherwise: 6m | Side and rear | 3m",
+      "structured": {
+        "parameter": "front_setback_min",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [
+          "roadside stall: 0m"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/17/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 2038 / 2048",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_rr_side_rear_setback",
+      "code": "Rural residential zone code (6.2.21)",
+      "clause": "6.2.21.3 Table 6.2.21-1 RO1; Table 6.2.21-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "all buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Setbacks are as follows: | Setback | Minimum distances measured in metres (m) | Front | - if roadside stall: 0m - otherwise: 6m | Side and rear | 3m",
+      "structured": {
+        "parameter": "side_and_rear_setback_min",
+        "operator": ">=",
+        "value": 3,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/17/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 2038 / 2048",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "No height-tiering and no Class 10 exception. Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_rr_site_cover",
+      "code": "Rural residential zone code (6.2.21)",
+      "clause": "6.2.21.3 Table 6.2.21-1 RO2; Table 6.2.21-2 AO2, AO3",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "all buildings and structures",
+      "topic": "SITE_COVER",
+      "verbatim_text": "Site cover does not exceed 25%. OR Within the Rural residential landscape and environment precinct development is confined only to previously cleared areas and site cover does not exceed 15%.",
+      "structured": {
+        "parameter": "site_cover_max",
+        "operator": "conditional",
+        "value": null,
+        "unit": "%",
+        "conditions": [
+          "25% generally",
+          "15% in Rural residential landscape and environment precinct (and only previously cleared areas)"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/17/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 2039 / 2051 / 2052",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1: 'Alternatives to QDC site cover provisions | Relevant zone code or the following overlay code: Ridges and significant hills protection overlay code ...' (Section 33(2) BA)."
+    },
+    {
+      "rule_key": "gc_rr_height",
+      "code": "Rural residential zone code (6.2.21)",
+      "clause": "6.2.21.3 Table 6.2.21-1 RO3; Table 6.2.21-2 AO4.1, AO4.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "buildings and structures",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "Building height does not exceed 2 storeys with a maximum height of 9m. AND Structures do not exceed a height of 9m.",
+      "structured": {
+        "parameter": "building_height_max",
+        "operator": "<=",
+        "value": 9,
+        "unit": "m",
+        "conditions": [
+          "2 storeys",
+          "AO4.1 allows partial third storey if within 9m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/17/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 2040 / 2055",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1: 'Alternative to QDC building height provisions (performance criterion 4) | Relevant zone code | Section 32(b) BA and section 10(2)(b) BR'. Also RO5: 'Buildings and structures do not protrude above ridgelines when viewed from any street.' No freestanding garage/carport 3.5m limit in this zone."
+    },
+    {
+      "rule_key": "gc_township_setbacks",
+      "code": "Township zone code (6.2.23)",
+      "clause": "6.2.23.3 Table 6.2.23-1 RO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Township zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "all buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Setbacks are as follows: | Setback | Minimum distances measured in metres (m) | Front | - if roadside stall: 0m - otherwise: 6m | Side and rear | Height | Setback | up to 4.5m | 1.5m | for that part between 4.5m – 7.5m | 2m | for that part exceeding 7.5m | an extra 0.5m is added for every 3m in height or part thereof over 7.5m | Between on site habitable buildings (where not attached) | Double the applicable side setback.",
+      "structured": {
+        "parameter": "setbacks",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "front 6m (roadside stall 0m)",
+          "side/rear 1.5m up to 4.5m; 2m 4.5-7.5m; +0.5m per 3m over 7.5m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/15/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 2105",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Part B (assessable) not separately extracted. Table 1.5-1 (s1.5 Building work regulated under the City Plan) lists 'Alternatives to QDC boundary clearance provisions' -> 'Buildings: Relevant zone code ...' (Section 33(2) BA). Applies to buildings (incl. Class 1 and Class 10a buildings). For 'Structures' only the Coastal erosion hazard and Road widening overlay codes are alternatives; 'QDC setbacks will apply to any building or structure where an alternative setback is not provided in the above codes.' Scheme refers to QDC MP1.1/MP1.2, not the QHC."
+    },
+    {
+      "rule_key": "gc_township_site_cover_height",
+      "code": "Township zone code (6.2.23)",
+      "clause": "6.2.23.3 Table 6.2.23-1 RO2, RO3, RO4",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Township zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "buildings, structures, freestanding garages/carports",
+      "topic": "SITE_COVER",
+      "verbatim_text": "RO2 Site cover does not exceed 50%. | RO3 Building height does not exceed 2 storeys with a maximum height of 9m. AND Structures do not exceed a height of 9m. | RO4 Freestanding garages and carports do not exceed a height of 3.5m.",
+      "structured": {
+        "parameter": "site_cover_max",
+        "operator": "<=",
+        "value": 50,
+        "unit": "%",
+        "conditions": [
+          "height 2 storeys/9m",
+          "freestanding garage/carport 3.5m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/15/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 2110 / 2111",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1: 'Alternatives to QDC site cover provisions | Relevant zone code or the following overlay code: Ridges and significant hills protection overlay code ...' (Section 33(2) BA)."
+    },
+    {
+      "rule_key": "gc_small_lot_garage_opening_width",
+      "code": "Small lot housing (infill focus) code (9.4.10)",
+      "clause": "9.4.10.3 Table 9.4.10-1 RO1; Table 9.4.10-2 AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "small lot (< 400m2) with street frontage 10m or less",
+      "structure_scope": "garage/carport opening (car parking)",
+      "topic": "GARAGE_CARPORT_FRONTAGE",
+      "verbatim_text": "Where the street frontage is 10m or less: - a single storey dwelling is limited to a single car width opening (3m maximum); or - a two storey dwelling can have a double car width opening (6m maximum).",
+      "structured": {
+        "parameter": "garage_opening_width_max",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "frontage <= 10m",
+          "single storey: 3m",
+          "two storey: 6m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/115/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 6073 / 6086",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Planning requirement for MCU of Dwelling house on small lot (accepted subject to requirements in LDR/MDR). Not listed in Table 1.5-1 as a QDC alternative (car parking alternative is the Transport code). Code applies to 'material change of use for development for a Dwelling house on a small lot'."
+    },
+    {
+      "rule_key": "gc_small_lot_landscaping_front",
+      "code": "Small lot housing (infill focus) code (9.4.10)",
+      "clause": "9.4.10.3 Table 9.4.10-1 RO14; Table 9.4.10-2 AO10",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "small lot (< 400m2)",
+      "structure_scope": "front landscaping",
+      "topic": "LANDSCAPE_OR_IMPERVIOUS",
+      "verbatim_text": "Within the front 3m of the primary frontage, development provides garden beds, planted with native species, along any side and front boundary, excluding driveway area, with a minimum width of 1m. OR The development has an existing operational works approval for landscape works. Note: This RO excludes frontages to rear lanes.",
+      "structured": {
+        "parameter": "front_garden_bed_width_min",
+        "operator": ">=",
+        "value": 1,
+        "unit": "m",
+        "conditions": [
+          "within front 3m of primary frontage",
+          "along side and front boundary excluding driveway"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/115/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 6079 / 6105",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Also RO3 private open space min 5m x 5m."
+    },
+    {
+      "rule_key": "gc_mudgeeraba_residential_setbacks",
+      "code": "Mudgeeraba Village character overlay code (8.2.13)",
+      "clause": "Table 8.2.13 RO1 / AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "all zones"
+      ],
+      "overlay": "Mudgeeraba Village character overlay ('Mudgeeraba Village character' area)",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Residential buildings and structures",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Setbacks comply with the following: | Building type | Setback | Minimum distances measured in metres (m) | Mixed use and commercial buildings | Front | Equal to that used by more than 50% of the other buildings in the village and on the street OR 6m | Side and rear | 2m | Residential buildings and structures | Front | 3m | Side and rear | 1.5m",
+      "structured": {
+        "parameter": "residential_setbacks",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "front 3m",
+          "side and rear 1.5m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/42/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 16470 / 16492",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1 lists this overlay code as alternative to QDC boundary clearance for Buildings within the Mudgeeraba Village character area; overlay prevails over zone code. Table 5.10.16 note: MCU accepted resulting in Class 1/10 building work is not subject to RO1 at MCU stage ('addressed at the building works stage, see Section 1.5')."
+    },
+    {
+      "rule_key": "gc_ridges_site_cover",
+      "code": "Ridges and significant hills protection overlay code (8.2.15)",
+      "clause": "RO1 / AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "all zones"
+      ],
+      "overlay": "Ridges and significant hills protection overlay ('Ridges and significant hills' area)",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "buildings and structures",
+      "topic": "SITE_COVER",
+      "verbatim_text": "Site cover does not exceed 40% or that identified in the relevant zone, whichever is the lesser. OR If located in the Neighbourhood centre zone, site cover does not exceed 60%.",
+      "structured": {
+        "parameter": "site_cover_max",
+        "operator": "<=",
+        "value": 40,
+        "unit": "%",
+        "conditions": [
+          "or zone value if lesser"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/40/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Part A RO1 table; Part B ruleId 4211",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1: 'Alternatives to QDC site cover provisions | Relevant zone code or the following overlay code: Ridges and significant hills protection overlay code ...' (Section 33(2) BA)."
+    },
+    {
+      "rule_key": "gc_coastal_canal_waterway_setback",
+      "code": "Coastal erosion hazard overlay code (8.2.4)",
+      "clause": "Table 8.2.4-2 RO10, RO11; Table 8.2.4-4 PO/AO (canals and waterways)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "all zones"
+      ],
+      "overlay": "Coastal erosion hazard overlay ('Waterfront development control area')",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "buildings and structures incl. pools, pergolas, decks",
+      "topic": "POOL_SETBACK",
+      "verbatim_text": "Buildings and structures are not located beyond the waterway regulation line nominated by the Council. ... RO11 Buildings and structures are setback from the waterway in accordance with the nominated waterway building setback line. ... OR Where there is no waterway setback line shown, a Registered Professional Engineer Queensland (RPEQ) certified waterway report must be prepared to identify the suitable waterway setback line. OR The following buildings and structures may intrude into the setback area as follows: | Structure | Maximum acceptable intrusion into setback area | Eaves overhang | 1m | Cantilevered balcony | 2m | Attached pergola comprising open sides and a roof without impervious sheeting | 2.5m | Cantilevered not more than 1.2m in height above the natural ground surface | Unlimited | Swimming pool not more than 1m above the natural ground surface | Unlimited where it demonstrated there exists structural independence between the revetment wall and swimming pool and sufficient access is provided for maintenance.",
+      "structured": {
+        "parameter": "waterway_building_setback_line",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "setback distance is property-specific (nominated line; contact Council)",
+          "eaves 1m, cantilevered balcony 2m, attached open pergola 2.5m intrusion",
+          "pool <= 1m above natural ground: unlimited intrusion subject to structural independence and maintenance access",
+          "cantilevered (deck) <= 1.2m above natural ground: unlimited"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/51/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 3468",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 1.5-1 lists this overlay code as a QDC boundary clearance alternative for both Buildings and Structures. Setback line is per-property (not numeric in scheme)."
+    },
+    {
+      "rule_key": "gc_coastal_ocean_front_seawall_setback",
+      "code": "Coastal erosion hazard overlay code (8.2.4)",
+      "clause": "Table 8.2.4-1 RO1; Table 8.2.4-3 AO",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "all zones"
+      ],
+      "overlay": "Coastal erosion hazard overlay ('Foreshore seawall')",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "development / buildings and structures",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "Development is setback at least 8.1m from the foreshore seawall line shown on the Coastal erosion hazard overlay map. | Buildings and structures are setback at least 8.1m from the foreshore seawall line shown on the Coastal erosion hazard overlay map.",
+      "structured": {
+        "parameter": "seawall_line_setback_min",
+        "operator": ">=",
+        "value": 8.1,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/51/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Table 8.2.4-1 / 8.2.4-3",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Measured from foreshore seawall line (mapped), not lot boundary. Intrusion table for ocean front land not extracted."
+    },
+    {
+      "rule_key": "gc_road_widening_setback",
+      "code": "Road widening overlay code (8.2.16)",
+      "clause": "RO1; PO1/AO1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "all zones"
+      ],
+      "overlay": "Road widening overlay ('Road widening requirement area')",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "buildings and structures",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Buildings and structures are not located in Road widening requirement areas and are separated from future road boundaries in accordance with the relevant zone or overlay required outcomes for setbacks where the development is proposed on a lot affected by a Road widening requirement area as identified on the Road widening overlay map. Notes: - The location of the future road boundary is to be obtained from Council. - Where there are no required outcomes for setbacks in the relevant codes there are no setback requirements from the future road boundary. - Any area-based calculations under City Plan (e.g. site cover and density) can utilise the Road widening requirement area.",
+      "structured": {
+        "parameter": "front_setback_reference_line",
+        "operator": "formula",
+        "value": null,
+        "unit": null,
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": "apply zone front setback from the future road boundary rather than the existing frontage"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Measured from future road boundary (obtain from Council).",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/400/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 38775 / 38685",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Table 1.5-1: 'AO1 and PO1 of the Road widening overlay code' are QDC boundary clearance alternatives for buildings and structures."
+    },
+    {
+      "rule_key": "gc_water_catchment_separation",
+      "code": "Water resource catchment overlay code (8.2.19)",
+      "clause": "RO1; AO1; Table 8.2.19-2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "all zones"
+      ],
+      "overlay": "Water catchments and dual supply system area overlay ('Water supply buffer area')",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "development",
+      "topic": "OTHER",
+      "verbatim_text": "Development complies with the horizontal separation distances (setbacks) within Table 8.2.19-2: Minimum horizontal separation distances required in water resource catchment area.",
+      "structured": {
+        "parameter": "water_feature_separation",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "table values not extracted"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/39/0/false/08-Sep-2026/false",
+      "page_or_anchor": "Part A RO1 and Part B AO1 (ruleId near 4246)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 1.5-1 lists this code as a QDC boundary clearance alternative for Buildings in the Water supply buffer area. Separation distances are to watercourses/bores/effluent points - values in Table 8.2.19-2 were not extracted (UNVERIFIED values)."
+    },
+    {
+      "rule_key": "gc_flood_floor_levels",
+      "code": "Flood overlay code (8.2.8)",
+      "clause": "Table 8.2.8-1 RO2, RO3; Table 8.2.8-2 AO2.1, AO3.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "all zones"
+      ],
+      "overlay": "Flood overlay ('Flood assessment required' area)",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "habitable rooms; attached garages and non-habitable rooms",
+      "topic": "OTHER",
+      "verbatim_text": "Building floor levels of habitable rooms must be at or above the height of the combined designated flood level and minimum freeboard derived from Table 8.2.8-6 – table to acceptable outcome AO2.1. | RO3 Building floor levels of garages and non-habitable rooms, constructed at approximately the same level as, and attached to, the main dwelling, must be at a height above the Designated Flood Level.",
+      "structured": {
+        "parameter": "floor_level",
+        "operator": ">=",
+        "value": null,
+        "unit": null,
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": "habitable: DFL + freeboard (Table 8.2.8-6); attached garage/non-habitable: > DFL"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "Scheme definition 'Setback': shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary. 'Outermost projection' excludes retractable blinds, fixed screens, rainwater fittings, ornamental attachments. Note: when acting as a QDC alternative provision, the building certifier may apply QDC/QHC measurement conventions (boundary clearance, also defined in Sch 1) - manual review.",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/1403/0/false/08-Sep-2026/false",
+      "page_or_anchor": "ruleId 39346 ff",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Not a setback/height/site cover alternative. Table 1.5-1 lists Flood overlay code under s32(a) BA / s13(1)(b) BR (natural hazard management area - flood design requirements). Detached Class 10a not addressed in RO3."
+    }
+  ],
+  "overlays_affecting_siting": [
+    {
+      "overlay": "Mudgeeraba Village character overlay",
+      "code": "8.2.13",
+      "effect": "Residential buildings and structures: front 3m, side and rear 1.5m (QDC alternative for buildings)",
+      "quote": "Residential buildings and structures | Front | 3m | Side and rear | 1.5m",
+      "clause": "RO1/AO1",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/42/0/false/08-Sep-2026/false"
+    },
+    {
+      "overlay": "Coastal erosion hazard overlay",
+      "code": "8.2.4",
+      "effect": "Ocean front: 8.1m from foreshore seawall line; canals/waterways: property-specific waterway building setback line with intrusion allowances (pergola 2.5m, pool <=1m above ground unlimited)",
+      "quote": "Development is setback at least 8.1m from the foreshore seawall line shown on the Coastal erosion hazard overlay map.",
+      "clause": "Table 8.2.4-1 RO1; Table 8.2.4-2 RO10-RO11",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/51/0/false/08-Sep-2026/false"
+    },
+    {
+      "overlay": "Ridges and significant hills protection overlay",
+      "code": "8.2.15",
+      "effect": "Site cover max 40% or zone value if lesser (QDC site cover alternative)",
+      "quote": "Site cover does not exceed 40% or that identified in the relevant zone, whichever is the lesser.",
+      "clause": "RO1/AO1",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/40/0/false/08-Sep-2026/false"
+    },
+    {
+      "overlay": "Road widening overlay",
+      "code": "8.2.16",
+      "effect": "Zone setbacks measured from future road boundary; no building in road widening requirement area",
+      "quote": "Buildings and structures are not located in Road widening requirement areas and are separated from future road boundaries in accordance with the relevant zone or overlay required outcomes for setbacks",
+      "clause": "RO1; PO1/AO1",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/400/0/false/08-Sep-2026/false"
+    },
+    {
+      "overlay": "Water catchments and dual supply system area overlay",
+      "code": "8.2.19 Water resource catchment overlay code",
+      "effect": "Horizontal separation distances to water features (Table 8.2.19-2) - values not extracted",
+      "quote": "Development complies with the horizontal separation distances (setbacks) within Table 8.2.19-2: Minimum horizontal separation distances required in water resource catchment area.",
+      "clause": "RO1/AO1",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/39/0/false/08-Sep-2026/false"
+    },
+    {
+      "overlay": "Dwelling house overlay + Building height overlay map",
+      "code": "Table 5.10.5 (no separate code); zone codes",
+      "effect": "Sets assessment level for dwelling houses exceeding mapped height / partial third storey / 9m; MDR height may follow Building height overlay map",
+      "quote": "Material change of use for Dwelling house where identified on the Dwelling house overlay map, if involving building work and exceeds: - the height identified on the Building height overlay map; ... | Impact assessment",
+      "clause": "Table 5.10.5",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/290/0/false/08-Sep-2026/false"
+    },
+    {
+      "overlay": "Flood overlay",
+      "code": "8.2.8",
+      "effect": "Floor levels (habitable: DFL + freeboard; attached garages: above DFL); no setback change",
+      "quote": "Building floor levels of garages and non-habitable rooms, constructed at approximately the same level as, and attached to, the main dwelling, must be at a height above the Designated Flood Level.",
+      "clause": "Table 8.2.8-1 RO3",
+      "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/1403/0/false/08-Sep-2026/false"
+    }
+  ],
+  "local_plan_mechanism": {
+    "summary": "The City Plan contains no local plans (neighbourhood plans). Local variation is instead achieved by zone precincts (e.g. LDR Large lot precinct, Calypso Bay precinct; Rural residential landscape and environment precinct), overlays, and Part 10 'Other plans' (e.g. Integrated Resort Development Act 1987 sites such as Hope Island and Royal Pines, which modify the City Plan to the extent of inconsistency but do not regulate building work).",
+    "examples": [
+      {
+        "plan": "Part 7 Local plans",
+        "quote": "There are no local plans in the City Plan.",
+        "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/8/0/false/08-Sep-2026/false"
+      },
+      {
+        "plan": "Rural residential landscape and environment precinct (zone precinct)",
+        "quote": "Within the Rural residential landscape and environment precinct development is confined only to previously cleared areas and site cover does not exceed 15%.",
+        "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/17/0/false/08-Sep-2026/false"
+      },
+      {
+        "plan": "Part 10 Integrated Resort Development Act 1987",
+        "quote": "The Integrated Resort Development Act 1987 does not regulate building work, operational work or plumbing and drainage work.",
+        "source_url": "https://cityplan.goldcoast.qld.gov.au/eplan/api/l/r/75/0/false/08-Sep-2026/false"
+      }
+    ]
+  },
+  "open_questions": [
+    "QHC: Version 14 has no reference to the Queensland Housing Code. Under Building Regulation 2021 s106 transition (secondary source: thegoodbuilder.com.au), QDC MP1.1/1.2 'continue to apply' for a council until it amends its scheme or 1 Sept 2029 - confirm how Gold Coast's existing QDC alternative provisions interact with the QHC during transition.",
+    "LDR/MDR standard (non-small-lot) setback table gives no built-to-boundary or reduced setback for Class 10a buildings - confirm whether certifiers apply zone 1.5m side/rear to sheds/garages/carports on >=400m2 lots (Table 1.5-1 says zone code is the alternative for 'Buildings').",
+    "Whether patios/pergolas/decks/pools are 'buildings' (zone code alternative applies) or 'structures' (QDC/QHC applies except coastal/road widening overlays) - classification needed per Table 1.5-1.",
+    "LDR 'Height' column in side/rear setback (whole building height vs part height) and base for the >7.5m increment.",
+    "MDR Part A RO1 rear lane '0.5m maximum' vs Part B AO1 '0.5m minimum' inconsistency.",
+    "Table 5.5.1(1) Large lot precinct: dwelling house accepted if lot >=400m2 'or' not involving secondary dwelling (vs 'and' elsewhere).",
+    "Section 1.5 cross-references 'section 1.6(4)' and 'Building Regulation 2006' - stale references.",
+    "Building height overlay map, Dwelling house overlay map, Residential density and overlay extents are spatial - need GIS (ePlan api/l/rev/gis endpoints) to apply per lot.",
+    "High density residential zone, Emerging community, Mixed use zone dwelling house provisions not extracted.",
+    "Water resource catchment Table 8.2.19-2 separation distance values not extracted.",
+    "Bushfire hazard overlay code: no setback/separation numbers found by text search for 'setback'/'separation' - not reviewed in depth."
+  ],
+  "fetch_log": [
+    "WebFetch https://cityplan.goldcoast.qld.gov.au/ -> HTTP 403",
+    "curl (browser UA) https://cityplan.goldcoast.qld.gov.au/eplan -> 200 IsoPlan SPA shell only",
+    "curl /eplan/__config__.js and static JS bundle -> discovered API endpoints api/l/vpr, api/l/rev, api/l/r",
+    "curl /eplan/api/y/cfg -> news item 'City Plan Version 14 commenced on 29 September 2026'",
+    "curl /eplan/api/l/vpr -> revision list: revisionId 240 v14 Current, planOperative 09/29/2026; v13 Superseded 12/09/2025",
+    "curl /eplan/api/l/rev/240/08-Sep-2026/1 -> planChanges, definitions, primaryChapters",
+    "curl /eplan/api/l/r/{1..1600}/0/false/08-Sep-2026/false -> section JSON for ~200 sections (e.g. 37 LDR zone code 6.2.1, 36 MDR 6.2.2, 17 Rural residential 6.2.21, 15 Township 6.2.23, 63 Part 1 incl. s1.5, 101 s5.7, 105 s5.3, 290 Table 5.10.5, 307/308/309/336 MCU tables, 115 Small lot housing code, 42/40/51/39/400/1403 overlay codes, 152/153 Schedule 1, 8 Part 7, 181 Appendix 2)",
+    "WebSearch for QHC/Gold Coast -> no Gold Coast QHC amendment found; insidelocalgovernment.com.au reports 20 City Plan amendments approved Jan 2026 (not reviewed)",
+    "WebFetch thegoodbuilder.com.au QHC transition article -> s106 Building Regulation 2021 transition until scheme amended or 1 Sept 2029 (SECONDARY)"
+  ]
+}

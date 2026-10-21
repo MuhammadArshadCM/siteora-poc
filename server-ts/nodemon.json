@@ -1,0 +1,7 @@
+{
+  "watch": ["src", "parity/*.ts", "tsconfig.json"],
+  "ext": "ts,json",
+  "exec": "tsc -p tsconfig.json && node dist/src/index.js",
+  "delay": 500,
+  "signal": "SIGTERM"
+}

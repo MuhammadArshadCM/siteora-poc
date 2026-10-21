@@ -1,0 +1,1230 @@
+{
+  "council": "Ipswich City Council",
+  "planning_scheme": {
+    "name": "Ipswich City Plan 2025",
+    "version": "Ipswich City Plan 2025 version 2 (Amendment Package 1 - Major Amendment, s18 Tailored Process)",
+    "version_commenced": "2026-07-01",
+    "official_urls": [
+      "https://ipswich.isoplan.com.au/eplan",
+      "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203",
+      "https://ipswich.isoplan.com.au/eplan/api/l/vpr",
+      "https://www.ipswich.qld.gov.au/Services/Planning-and-Building/Planning/Housing-in-Ipswich",
+      "https://www.ipswich.qld.gov.au/Services/Planning-and-Building/Supporting-Resources/Superseded-Planning-Scheme"
+    ],
+    "notes": "The scheme is called 'Ipswich City Plan 2025', not 'Ipswich Plan 2025'. Citation and commencement: 'This planning scheme may be cited as the Ipswich City Plan 2025.' 'The commencement date for the planning scheme was 1 July 2025.' It replaced the Ipswich Planning Scheme 2006. Appendix 2 Table AP2.1: 'Amendment Package 1 – Adopted 22 June 2026 and took effect on and from 1 July 2026.' -> 'Ipswich City Plan 2025 version 2'. The ePlan revision API (api/l/vpr) lists revisionId 203 'Version 2' (planOperative 07/01/2026, revStatus 'Current') and revisionId 199 'Version 1' (operative 07/01/2025, 'Superseded'). The revision data lists no pending plan changes (planChanges = []). Version 2 is in force as at 8 Oct 2026. The ePlan is a JavaScript-only IsoPlan app; the text was taken from the public JSON API it renders from (api/l/r/{sectionId}/0/false/30-Jun-2026/false). Human-readable ePlan links use the pattern https://ipswich.isoplan.com.au/eplan/rules/0/{sectionId}/0/0/0/203."
+  },
+  "qdc_qhc_relationship": {
+    "summary": "Part 1 s1.5 Table 1.5.1 names the Dwelling House and Dual Occupancy Code (9.3.7) as the 'Alternatives to QDC boundary clearance provisions' and the 'Alternatives to QDC site cover provisions'. It names the Building Height and Density Overlay (OV6, map only, no code) as the alternative to QDC building height provisions, and the Transport and Parking Code as the alternative for car parking. s1.5(5) says all parts of QDC MP1.1 and MP1.2 apply 'unless a relevant alternative provision applies'. The code's alternative content is narrow. Front and side setbacks default back to 'Queensland Development Code MP1.1, MP1.2 or MP1.3 (as relevant)', except in (a) the New Suburban precinct (front 3m, garage door 5.5m, one-side garage built to boundary up to 9m long) and (b) the Rural zone (front 10m, side 20m). It adds a separation rule for built-to-boundary walls (900mm / 1500mm) and site cover of 60% (75% for terrace style). There is no rear setback provision, no outbuilding-specific setback/size/height rule and no pool setback rule. No reference to the Queensland Housing Code was found anywhere in the Version 2 text (keyword search of all retrieved sections). Version 2 commenced 1 July 2026, before the QHC commenced on 1 Sept 2026. Building work for a dwelling house is ADSR against this code (Table 5.7.1), so non-compliance makes the work code assessable under the planning scheme (a planning permit is needed before building approval). This is in addition to any Building Act referral.",
+    "quotes": [
+      {
+        "text": "This planning scheme, through Part 5 Tables of Assessment, regulates building work in accordance with sections 32 and 33 of the Building Act 1975.\nEditor's Note: The Building Act 1975 permits planning schemes to:\nregulate, for the Building Code of Australia (BCA) or the Queensland Development Code (QDC), matters prescribed under a regulation under section 32 of the Building Act 1975. These include variations to provisions contained in parts MP1.1, MP1.2 and MP1.3 of the QDC such as heights of buildings related to obstruction and overshadowing, siting and design of buildings to provide visual privacy and adequate sight lines, on-site parking and outdoor living spaces etc. It may also regulate other matters, such as designating land liable to flooding, designating land as bushfire prone areas and transport noise corridors.\ndeal with an aspect of, or matter related or incidental to building work prescribed under a regulation under section 32 of the Building Act 1975.\nspecify alternative boundary clearances and site cover provisions for Class 1 and 10 structures under section 33 of the Building Act 1975.\nEditor's Note: Refer to Schedule 9 of the Regulation to determine assessable development, the type of assessment and any referrals applying to the building work.",
+        "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/205/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/205/0/false/30-Jun-2026/false)",
+        "clause": "Part 1, s1.5(3) incl. Editor's Note"
+      },
+      {
+        "text": "QDC Alternative Provisions\nAlternatives to QDC boundary clearance provisions\nDwelling House and Dual Occupancy Code\nAlternatives to QDC site cover provisions\nDwelling House and Dual Occupancy Code\nAlternatives to QDC building height provisions\nBuilding Height and Density Overlay\nAlternative to QDC car parking provisions\nTransport and Parking Code",
+        "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/205/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/205/0/false/30-Jun-2026/false)",
+        "clause": "Part 1, s1.5(4) Table 1.5.1 - Building Assessment Provisions (rows \"QDC Alternative Provisions\"; table cells separated by line breaks)"
+      },
+      {
+        "text": "All parts of the QDC MP1.1 and MP1.2 including performance criteria 4, 5, 7, 8 and 9 and the corresponding acceptable solutions apply to relevant development pursuant to Section 10(2)(a) of the Building Act 1975 (unless a relevant alternative provision applies).",
+        "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/205/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/205/0/false/30-Jun-2026/false)",
+        "clause": "Part 1, s1.5(5)"
+      },
+      {
+        "text": "Note: For assessable building work under this planning scheme, a development permit is required.  A private certifier cannot decide a building development application under the Building Act 1975 until the planning scheme development permit is in effect.  See section 83 of the Building Act 1975 (General restrictions on granting building development approval).",
+        "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/190/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/190/0/false/30-Jun-2026/false)",
+        "clause": "5.7.1 note to Table 5.7.1"
+      }
+    ]
+  },
+  "levels_of_assessment": [
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "Columns: [Low-medium / Medium / High Density Residential], Low Density Residential, Character Residential, Township, Emerging Community",
+      "level": "Accepted development subject to requirements (ADSR) in all five columns",
+      "conditions": "Impact assessable if an accommodation use exceeds the OV6 height. ADSR not complying with Required Outcomes becomes code assessable (5.3.3(4)). Overlays per Part 5.9 may raise the category. 5.3.2(7)/(10): Planning Regulation sch 6 pt 2 s2(2)(c) prevails (dwelling house cannot be made assessable where no relevant overlay applies).",
+      "quote": "Where accommodation uses in residential, township and emerging community zones exceed the designated height requirements in Overlay OV6 Building height and density, the level of assessment becomes Impact assessable.\nCaretaker's accommodation\nADSR\nADSR\nADSR\nADSR\nADSR\nDual occupancy\nADSR\nADSR\nADSR\nADSR\nADSR\nDwelling house\nADSR\nADSR\nADSR\nADSR\nADSR",
+      "clause": "5.5.2 Table 5.5.2 (header cells: Low-medium/Medium/High Density Residential Zone | Low Density Residential Zone | Character Residential Zone | Township Zone | Emerging Community Zone)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/194/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/194/0/false/30-Jun-2026/false)"
+    },
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "Columns: Rural, Recreation and Open Space, Environmental Management, Conservation",
+      "level": "ADSR in Rural zone; Code assessable in the other three",
+      "conditions": "",
+      "quote": "Dwelling house\nADSR\nCode\nCode\nCode",
+      "clause": "5.5.4 Table 5.5.4",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/194/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/194/0/false/30-Jun-2026/false)"
+    },
+    {
+      "use_or_work": "Building work for a dwelling house or dual occupancy (incl. associated domestic outbuildings)",
+      "zone": "All zones",
+      "level": "ADSR against the Dwelling House and Dual Occupancy Code; within an overlay see Part 5.9",
+      "conditions": "Preamble applies to building work that \"does not meet the definition for minor building works\". Non-compliance with Required Outcomes -> code assessable (5.3.3(4)); a planning development permit is then needed before building approval (note to Table 5.7.1).",
+      "quote": "Where development that includes any of the following Building Works development types and does not meet the definition for minor building works, it is assessable against the listed applicable Codes (Table 5.7.1).\nDevelopment Type - Building Work\nLevel of Assessment\nCategory of Development and Assessment Benchmarks and Required Outcomes\nWhere for a Dual occupancy or a Dwelling house\nADSR\nDwelling House and Dual Occupancy Code\nWhere within an overlay\nSee Part 5.9\nSee Part 5.9\nAll other building works (other than associated with a Material Change of Use)\nADSR\nThe relevant Use Code",
+      "clause": "5.7.1 Table 5.7.1",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/190/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/190/0/false/30-Jun-2026/false)"
+    },
+    {
+      "use_or_work": "Building work (default rule)",
+      "zone": "All",
+      "level": "Accepted development unless a table states otherwise",
+      "conditions": "",
+      "quote": "Building Work is Accepted Development, unless:\na Category of Development and Assessment Table states otherwise;\nthe work includes the construction of work identified in the Local Government Infrastructure Plan;\nthe work includes the undertaking of work on land owned or controlled by the Local Government (including by way of trust or easement);\nthe work includes the undertaking of work otherwise dedicated and / or intended to be maintained by the Local Government; or\nthe works are otherwise prescribed in the Act or the Regulation.",
+      "clause": "5.3.2(4)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/195/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/195/0/false/30-Jun-2026/false)"
+    },
+    {
+      "use_or_work": "ADSR development not meeting Required Outcomes",
+      "zone": "All",
+      "level": "Code assessable",
+      "conditions": "",
+      "quote": "Development that is Accepted Development Subject to Requirements which does not comply with the nominated Required Outcomes becomes Code Assessable development.",
+      "clause": "5.3.3(4)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/195/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/195/0/false/30-Jun-2026/false)"
+    },
+    {
+      "use_or_work": "Building works only (incl. class 10) - Local Character Areas",
+      "zone": "Any (OV3)",
+      "level": "Accepted: demolition of a post-1946 class 10 building; ADSR: all other building works (Character Places and Areas Overlay Code); Code: secondary dwelling, demolition of pre-1946 class 10",
+      "conditions": "",
+      "quote": "Building Works only\nAccepted Development\nThe demolition of a class 10 building other than a building constructed during or before 1946\nNot applicable\nAccepted Development Subject to Requirements\nAll other building works\nCharacter Places and Areas Overlay Code\nCode Assessable\nIf:\nDwelling house (for a secondary dwelling);\nbuilding work for the demolition of a class 10 building constructed during or before 1946; or\nbuilding work for the demolition of a building constructed during or before 1946 that has been destroyed or damaged beyond repair.\nCharacter Places and Areas Overlay Code\nImpact Assessable\nDemolition of a building constructed during or before 1946 (other than a class 10 building)\nWhole of the Scheme",
+      "clause": "5.9.3 Table 5.9.3",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/408/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/408/0/false/30-Jun-2026/false)"
+    },
+    {
+      "use_or_work": "Building works only - Flood Risk and Overland Flow Overlay, Extreme/High/Medium risk areas",
+      "zone": "Any (OV12)",
+      "level": "ADSR (Flood Risk and Overland Flow Overlay Code) for a class 10 building, minor building work or ground-floor enclosure; otherwise code",
+      "conditions": "Low risk areas: building works accepted (Table 5.9.10)",
+      "quote": "Building Works only\nAccepted Development\nIf fully contained in an approved development envelope area\nNot applicable\nAccepted Development Subject to Requirements\nIf:\ninvolving the enclosure of a ground floor storey of an existing Dwelling or Dual occupancy;\nMinor building work; or\na Class 10 building.\nFlood Risk and Overland Flow Overlay Code\nCode Assessable\nAll other development\nFlood Risk and Overland Flow Overlay Code",
+      "clause": "5.9.10 Table 5.9.10",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/269/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/269/0/false/30-Jun-2026/false)"
+    },
+    {
+      "use_or_work": "Building works only - Flood Risk and Overland Flow Overlay, Overland Flow Area",
+      "zone": "Any (OV12)",
+      "level": "ADSR for a class 10 building or structure or minor building work; otherwise code",
+      "conditions": "",
+      "quote": "Building Works only\nAccepted Development\nIf:\nfully contained in an approved development envelope area.\nNot applicable\nAccepted Development Subject to Requirements\nIf:\na Class 10 building or structure; or\nMinor building work.\nFlood Risk and Overland Flow Overlay Code\nCode Assessable\nAll other development\nFlood Risk and Overland Flow Overlay Code",
+      "clause": "5.9.10 Table 5.9.10",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/269/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/269/0/false/30-Jun-2026/false)"
+    },
+    {
+      "use_or_work": "Building works only - Bushfire Prone Areas Overlay",
+      "zone": "Any (OV10)",
+      "level": "Accepted for dwelling house or dual occupancy; code for all other",
+      "conditions": "",
+      "quote": "Building Works only\nAccepted Development\nIf fully contained in an approved development envelope area; or\nFor:\nDwelling house; or\nDual occupancy.\nNot applicable\nCode Assessable\nAll other development\nBushfire Prone Areas Overlay Code",
+      "clause": "5.9.8 Table 5.9.8",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/318/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/318/0/false/30-Jun-2026/false)"
+    },
+    {
+      "use_or_work": "Building works only - Difficult Topography and Landslide Overlay",
+      "zone": "Any (OV11)",
+      "level": "ADSR where slope >15%; code for all other building works not in an approved envelope",
+      "conditions": "",
+      "quote": "Building Works only\nAccepted Development\nIf fully contained in an approved development envelope area\nNot applicable\nAccepted Development Subject to Requirements\nIf in an area identified as having a slope of greater than 15 percent on the Difficult Topography and Landslide Overlay\nDifficult Topography and Landslide Overlay Code\nCode Assessable\nAll other building works\nDifficult Topography and Landslide Overlay Code",
+      "clause": "5.9.9 Table 5.9.9",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/320/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/320/0/false/30-Jun-2026/false)"
+    },
+    {
+      "use_or_work": "Building works only - Growth Management Overlay (class 10 carports, garages, pools, outbuildings)",
+      "zone": "Any (OV5)",
+      "level": "Accepted",
+      "conditions": "",
+      "quote": "Building Works only\nAccepted Development\nIf:\nMinor building works;\nfor a Dwelling house or Dual occupancy; or\ndevelopment is for any Class 10 structure – carports, garages, pools and outbuildings.\nNot applicable\nCode Assessable\nAll other development\nGrowth Management Overlay Code",
+      "clause": "5.9.5 Table 5.9.5",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/430/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/430/0/false/30-Jun-2026/false)"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "setback",
+      "text": "Setback, for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "setback (lower-case glossary entry - resolves to boundary clearance text)",
+      "text": "Boundary clearance means the distance between a building or structure on premises and the boundary of the premises, measured from the part of the building or structure that is closest to the boundary, other than a part that is:\nan architectural or ornamental attachment; or\na rainwater fitting.\nExamples:\nIf the fascia of a building is the part of the building that is closest to the boundary, the boundary clearance is the distance between the outside of the fascia and the boundary.\nIf a point on the roof of a building is the part of the building that is closest to the boundary, the boundary clearance is the distance between that point on the roof and the boundary.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "boundary clearance",
+      "text": "Boundary clearance means the distance between a building or structure on premises and the boundary of the premises, measured from the part of the building or structure that is closest to the boundary, other than a part that is:\nan architectural or ornamental attachment; or\na rainwater fitting.\nExamples:\nIf the fascia of a building is the part of the building that is closest to the boundary, the boundary clearance is the distance between the outside of the fascia and the boundary.\nIf a point on the roof of a building is the part of the building that is closest to the boundary, the boundary clearance is the distance between that point on the roof and the boundary.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "site cover",
+      "text": "Site cover, of development, means the portion of the site, expressed as a percentage, that will be covered by a building or structure, measured to its outermost projection, after the development is carried out, other than a building or structure, or part of a building or structure, that is:\nin a landscaped or open space area, including, for example, a gazebo or shade structure;\na basement that is completely below ground level and used for car parking;\nthe eaves of a building; or\na sun shade.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "building height",
+      "text": "Building height, of a building, means:\nthe vertical distance, measured in metres, between the ground level of the building and the highest point on the roof of the building, other than a point that is part of an aerial, chimney, flagpole or load-bearing antenna; or\nthe number of storeys in the building above ground level.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "ground level",
+      "text": "Ground level means:\nthe level of the natural ground; or\nif the level of the natural ground has changed, the level as lawfully changed.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "storey",
+      "text": "Storey:\nmeans a space within a building between 2 floor levels, or a floor level and a ceiling or roof, other than:a space containing only a lift shaft, stairway or meter room; or\na space containing only a bathroom, shower room, laundry, toilet or other sanitary compartment; or\na space containing only a combination of the things stated in subparagraph (i) or (ii); or\na basement with a ceiling that is not more than 1m above ground level; and\nincludes—a mezzanine; and\na roofed structured that is on, or part of, a rooftop, if the structure does not only accommodate building plant and equipment.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "basement",
+      "text": "Basement means a space:\nbetween a floor level in a building and the floor level that is immediately below it; and\nno part of which is more than 1m above ground level.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "domestic outbuilding",
+      "text": "Domestic outbuilding means a non-habitable class 10a building that is:\na shed, garage or carport; and\nancillary to a residential use carried out on the premises where the building is.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "dwelling house",
+      "text": "Dwelling house means a residential use of premises involving:\n1 dwelling and any domestic outbuildings associated with the dwelling; or\n2 dwellings, 1 of which is a secondary dwelling, and any domestic outbuildings associated with either dwelling.\n[Examples include: Auxiliary unit]\n[Examples exclude: Caretaker’s accommodation, dual occupancy, rooming accommodation, short-term accommodation, student accommodation, multiple dwelling]",
+      "clause": "SC1.1 Use Definitions (Use Definition)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "secondary dwelling",
+      "text": "Secondary dwelling means a dwelling on a lot that is used in conjunction with, but subordinate to, another dwelling on the lot, whether or not the dwelling is -\n(a) attached to the other dwelling; or\n(b) occupied by individuals who are related to, or associated with, the household of the other dwelling.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "domestic housing activity",
+      "text": "Domestic housing activity means the construction or use of a dwelling house and any associated buildings or structures on a lot.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "primary street frontage",
+      "text": "Primary street frontage means, the street frontage that is most commonly addressed by other buildings in the block or as otherwise determined by the local government.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "minor building work",
+      "text": "Minor building work means building work that increases the gross floor area of a building by no more than the lesser of the following:\n50m2; and\nan area equal to 5% of the gross floor area of the building.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "gross floor area",
+      "text": "Gross floor area (GFA), for a building, means the total floor area of all storeys of the building, measured from the outside of the external walls and the centre of any common walls of the building, other than areas used for:\nbuilding services, plant or equipment;\naccess between levels;\na ground floor public lobby;\na mall;\nparking, loading or manoeuvring vehicles; or\nunenclosed private balconies, whether roofed or not.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "lot size",
+      "text": "Lot size is the area of a lot, excluding the are of the access handle.",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    },
+    {
+      "term": "building works only",
+      "text": "Building works only means building works carried out in when the use of the building remains unchanged (so that the building works being undertaken are not associated with a material change of use).",
+      "clause": "SC1.2 Administrative Definitions (Administrative definitions)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 (definitions array, rendered in ePlan Schedule 1)"
+    }
+  ],
+  "rules": [
+    {
+      "rule_key": "dh_ro2_1_front_setback_default_qdc",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO2.1 (Table 9.3.7.3.2 AO2.1 identical)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low Density Residential",
+        "Low-Medium Density Residential",
+        "Medium Density Residential",
+        "High Density Residential",
+        "Character Residential",
+        "Township",
+        "Emerging Community",
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling house (incl. secondary dwelling) and dual occupancy. Under SC1.1 a dwelling house includes 'any domestic outbuildings associated with the dwelling', so these outcomes are read as covering associated class 10a sheds/garages/carports (not expressly stated in the RO).",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "RO2.1\nFront boundary setbacks meet the requirements of Queensland Development Code MP1.1, MP1.2 or MP1.3 (as relevant) unless:\nin the New Suburban precinct, where front boundary setbacks are a minimum of 3m and 5.5m to the garage door, or\nin the Rural zone, where front boundary setbacks are a minimum of 10m.",
+      "structured": {
+        "parameter": "front boundary setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "Default: comply with QDC MP1.1, MP1.2 or MP1.3 (as relevant)"
+        ],
+        "exceptions": [
+          "New Suburban precinct: min 3m, and 5.5m to garage door",
+          "Rural zone: min 10m"
+        ],
+        "formula_text": "if precinct==New Suburban: dwelling>=3m, garage door>=5.5m; elif zone==Rural: >=10m; else QDC MP1.1/MP1.2 (now QHC) value"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "SC1.2 'Setback': 'the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot'. Where the outcome defers to QDC MP1.1/MP1.2/MP1.3 the QDC measurement rules apply.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 19072 (ADSR) / 18689 (assessable)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions. The default limb cross-refers to QDC MP1.1/MP1.2/MP1.3 by their pre-QHC names; Version 2 (effective 1 July 2026) does not mention the Queensland Housing Code. How 'QDC MP1.1, MP1.2' is read after the QHC replaced them on 1 Sept 2026 needs confirmation."
+    },
+    {
+      "rule_key": "dh_ro2_1_front_setback_new_suburban",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO2.1(a) / AO2.1(a)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low Density Residential (New Suburban precinct)"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling house / dual occupancy (garage door separately: see dh_ro2_1_garage_door_setback_new_suburban)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "RO2.1\nFront boundary setbacks meet the requirements of Queensland Development Code MP1.1, MP1.2 or MP1.3 (as relevant) unless:\nin the New Suburban precinct, where front boundary setbacks are a minimum of 3m and 5.5m to the garage door, or\nin the Rural zone, where front boundary setbacks are a minimum of 10m.",
+      "structured": {
+        "parameter": "front boundary setback",
+        "operator": ">=",
+        "value": 3,
+        "unit": "m",
+        "conditions": [
+          "Lot in New Suburban precinct"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "SC1.2 'Setback': 'the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot'. Where the outcome defers to QDC MP1.1/MP1.2/MP1.3 the QDC measurement rules apply.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 19072 / 18689",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions. Text says 'in the New Suburban precinct' without naming a zone; New Suburban is a precinct of the Low Density Residential zone (7.3.1.2(2))."
+    },
+    {
+      "rule_key": "dh_ro2_1_garage_door_setback_new_suburban",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO2.1(a) / AO2.1(a)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low Density Residential (New Suburban precinct)"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "garage (garage door)",
+      "topic": "GARAGE_CARPORT_FRONTAGE",
+      "verbatim_text": "RO2.1\nFront boundary setbacks meet the requirements of Queensland Development Code MP1.1, MP1.2 or MP1.3 (as relevant) unless:\nin the New Suburban precinct, where front boundary setbacks are a minimum of 3m and 5.5m to the garage door, or\nin the Rural zone, where front boundary setbacks are a minimum of 10m.",
+      "structured": {
+        "parameter": "front boundary setback to garage door",
+        "operator": ">=",
+        "value": 5.5,
+        "unit": "m",
+        "conditions": [
+          "Lot in New Suburban precinct"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "SC1.2 'Setback': 'the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot'. Where the outcome defers to QDC MP1.1/MP1.2/MP1.3 the QDC measurement rules apply. Measured to the garage door per the text.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 19072 / 18689",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions. Refers to a \"garage door\"; whether it applies to open carports is not stated."
+    },
+    {
+      "rule_key": "dh_ro2_1_front_setback_rural",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO2.1(b) / AO2.1(b)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling house (incl. secondary dwelling) and dual occupancy. Under SC1.1 a dwelling house includes 'any domestic outbuildings associated with the dwelling', so these outcomes are read as covering associated class 10a sheds/garages/carports (not expressly stated in the RO).",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "RO2.1\nFront boundary setbacks meet the requirements of Queensland Development Code MP1.1, MP1.2 or MP1.3 (as relevant) unless:\nin the New Suburban precinct, where front boundary setbacks are a minimum of 3m and 5.5m to the garage door, or\nin the Rural zone, where front boundary setbacks are a minimum of 10m.",
+      "structured": {
+        "parameter": "front boundary setback",
+        "operator": ">=",
+        "value": 10,
+        "unit": "m",
+        "conditions": [
+          "Rural zone"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "SC1.2 'Setback': 'the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot'. Where the outcome defers to QDC MP1.1/MP1.2/MP1.3 the QDC measurement rules apply.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 19072 / 18689",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions."
+    },
+    {
+      "rule_key": "dh_ro2_2_side_setback_default_qdc",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO2.2 (Table 9.3.7.3.2 AO2.2.1 identical)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low Density Residential",
+        "Low-Medium Density Residential",
+        "Medium Density Residential",
+        "High Density Residential",
+        "Character Residential",
+        "Township",
+        "Emerging Community",
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling house (incl. secondary dwelling) and dual occupancy. Under SC1.1 a dwelling house includes 'any domestic outbuildings associated with the dwelling', so these outcomes are read as covering associated class 10a sheds/garages/carports (not expressly stated in the RO).",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "RO2.2\nSide boundary setbacks meet the requirements of Queensland Development Code MP1.1, MP1.2 or MP1.3 (as relevant) unless:\nin the New Suburban precinct, where side boundaries are as per MP1.1, MP1.2 and MP1.3 with a built to boundary setback for a garage on one side, up to a length of 9m, or\nin the Rural zone, where side boundary setbacks are a minimum of 20m.",
+      "structured": {
+        "parameter": "side boundary setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "Default: comply with QDC MP1.1, MP1.2 or MP1.3 (as relevant)"
+        ],
+        "exceptions": [
+          "New Suburban precinct: per MP1.1/1.2/1.3 plus a built-to-boundary garage on one side up to 9m long",
+          "Rural zone: min 20m"
+        ],
+        "formula_text": "if zone==Rural: >=20m; elif precinct==New Suburban: QDC values + one-side garage built to boundary <=9m long; else QDC MP1.1/MP1.2 (now QHC) value"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "SC1.2 'Setback': 'the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot'. Where the outcome defers to QDC MP1.1/MP1.2/MP1.3 the QDC measurement rules apply.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 19072 / 35432",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions. The code has no rear-boundary setback outcome; rear setbacks therefore appear to default to QDC/QHC."
+    },
+    {
+      "rule_key": "dh_ro2_2_side_setback_rural",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO2.2(b) / AO2.2.1(b)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling house (incl. secondary dwelling) and dual occupancy. Under SC1.1 a dwelling house includes 'any domestic outbuildings associated with the dwelling', so these outcomes are read as covering associated class 10a sheds/garages/carports (not expressly stated in the RO).",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "RO2.2\nSide boundary setbacks meet the requirements of Queensland Development Code MP1.1, MP1.2 or MP1.3 (as relevant) unless:\nin the New Suburban precinct, where side boundaries are as per MP1.1, MP1.2 and MP1.3 with a built to boundary setback for a garage on one side, up to a length of 9m, or\nin the Rural zone, where side boundary setbacks are a minimum of 20m.",
+      "structured": {
+        "parameter": "side boundary setback",
+        "operator": ">=",
+        "value": 20,
+        "unit": "m",
+        "conditions": [
+          "Rural zone"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "SC1.2 'Setback': 'the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot'. Where the outcome defers to QDC MP1.1/MP1.2/MP1.3 the QDC measurement rules apply.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 19072 / 35432",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions. On its face applies to all buildings of a dwelling house in the Rural zone including outbuildings (no exemption stated); no rear setback stated (falls to QDC/QHC)."
+    },
+    {
+      "rule_key": "dh_ro2_2_garage_built_to_boundary_new_suburban",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO2.2(a) / AO2.2.1(a)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low Density Residential (New Suburban precinct)"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "garage",
+      "topic": "BUILT_TO_BOUNDARY",
+      "verbatim_text": "RO2.2\nSide boundary setbacks meet the requirements of Queensland Development Code MP1.1, MP1.2 or MP1.3 (as relevant) unless:\nin the New Suburban precinct, where side boundaries are as per MP1.1, MP1.2 and MP1.3 with a built to boundary setback for a garage on one side, up to a length of 9m, or\nin the Rural zone, where side boundary setbacks are a minimum of 20m.",
+      "structured": {
+        "parameter": "length of garage built to side boundary",
+        "operator": "<=",
+        "value": 9,
+        "unit": "m",
+        "conditions": [
+          "New Suburban precinct",
+          "one side only",
+          "other side setbacks per MP1.1/MP1.2/MP1.3"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Length along the boundary; no height limit stated for the built-to-boundary garage wall.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 19072 / 35432",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions."
+    },
+    {
+      "rule_key": "dh_ro2_3_built_to_boundary_wall_separation",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO2.3 (Table 9.3.7.3.2 AO2.2.2 identical)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low Density Residential",
+        "Low-Medium Density Residential",
+        "Medium Density Residential",
+        "High Density Residential",
+        "Character Residential",
+        "Township",
+        "Emerging Community",
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "built to boundary wall or dividing wall (any building of a dwelling house/dual occupancy, incl. garage)",
+      "topic": "BUILT_TO_BOUNDARY",
+      "verbatim_text": "RO2.3\nA built to boundary or dividing wall is not:\nwithin 900mm of a window or wall, or\nwithin 1500mm of a window to a habitable room*.\n* Windows or walls that are already constructed, or that are part of an existing approval.",
+      "structured": {
+        "parameter": "distance from built-to-boundary/dividing wall to a window or wall",
+        "operator": ">=",
+        "value": 0.9,
+        "unit": "m",
+        "conditions": [
+          ">= 900mm from a window or wall",
+          ">= 1500mm from a window to a habitable room",
+          "only windows/walls already constructed or part of an existing approval"
+        ],
+        "exceptions": [],
+        "formula_text": "window or wall: >=0.9m; habitable room window: >=1.5m"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "Text does not state whether the windows/walls are on the same lot or the adjoining lot.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 19072 / 35432",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions."
+    },
+    {
+      "rule_key": "dh_po2_1_front_setback_assessable",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.2 (Benchmarks for Assessable Development), PO2.1 / AO2.1",
+      "provision_type": "PERFORMANCE_OUTCOME",
+      "zones": [
+        "Low Density Residential",
+        "Low-Medium Density Residential",
+        "Medium Density Residential",
+        "High Density Residential",
+        "Character Residential",
+        "Township",
+        "Emerging Community",
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling house (incl. secondary dwelling) and dual occupancy. Under SC1.1 a dwelling house includes 'any domestic outbuildings associated with the dwelling', so these outcomes are read as covering associated class 10a sheds/garages/carports (not expressly stated in the RO).",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "PO2.1\nDwelling houses and Dual occupancies are set back from any road frontage to:\nachieve a visible connection with the street;\ncontribute to a positive streetscape outcome; and\nmake efficient use of the site, providing opportunity for the maximisation of the area for a backyard.\nAO2.1\nFront boundary setbacks meet the requirements of Queensland Development Code MP1.1, MP1.2 or MP1.3 (as relevant) unless:\nin the New Suburban precinct, where front boundary setbacks are a minimum of 3m and 5.5m to the garage door, or\nin the Rural zone, where front boundary setbacks are a minimum of 10m.",
+      "structured": {
+        "parameter": "front setback (performance outcome)",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "Applies when development is code assessable (e.g. ADSR not met)"
+        ],
+        "exceptions": [],
+        "formula_text": "AO2.1 = RO2.1"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "SC1.2 'Setback': 'the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot'. Where the outcome defers to QDC MP1.1/MP1.2/MP1.3 the QDC measurement rules apply.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 18689",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Qualitative fallback where AO2.1 is not met. Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions."
+    },
+    {
+      "rule_key": "dh_po2_2_side_rear_separation_assessable",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.2 (Benchmarks for Assessable Development), PO2.2 / AO2.2.1 / AO2.2.2",
+      "provision_type": "PERFORMANCE_OUTCOME",
+      "zones": [
+        "Low Density Residential",
+        "Low-Medium Density Residential",
+        "Medium Density Residential",
+        "High Density Residential",
+        "Character Residential",
+        "Township",
+        "Emerging Community",
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling house (incl. secondary dwelling) and dual occupancy. Under SC1.1 a dwelling house includes 'any domestic outbuildings associated with the dwelling', so these outcomes are read as covering associated class 10a sheds/garages/carports (not expressly stated in the RO).",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "PO2.2\nDwelling houses and Dual occupancies reflect the established or desired built character of the locality and maintain:\naccess to views, prevailing breezes and natural light; and\namenity on adjoining lots, by providing separation from adjoining Dwellings to the side and rear of the development.\nAO2.2.1\nSide boundary setbacks meet the requirements of Queensland Development Code MP1.1, MP1.2 or MP1.3 (as relevant) unless:\nin the New Suburban precinct, where side boundaries are as per MP1.1, MP1.2 and MP1.3 with a built to boundary setback for a garage on one side, up to a length of 9m, or\nin the Rural zone, where side boundary setbacks are a minimum of 20m.\nAO2.2.2\nA built to boundary or dividing wall is not:\nwithin 900mm of a window or wall, or\nwithin 1500mm of a window to a habitable room*.\n* Windows or walls that are already constructed, or that are part of an existing approval.",
+      "structured": {
+        "parameter": "side/rear separation (performance outcome)",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "Code assessable development"
+        ],
+        "exceptions": [],
+        "formula_text": "AO2.2.1 = RO2.2; AO2.2.2 = RO2.3"
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "SC1.2 'Setback': 'the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot'. Where the outcome defers to QDC MP1.1/MP1.2/MP1.3 the QDC measurement rules apply.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 35432",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "PO2.2 refers to separation \"to the side and rear\". Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions."
+    },
+    {
+      "rule_key": "dh_ro3_1_1_site_cover_60",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO3.1.1 (AO3.1.1 identical)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low Density Residential",
+        "Low-Medium Density Residential",
+        "Medium Density Residential",
+        "High Density Residential",
+        "Character Residential",
+        "Township",
+        "Emerging Community",
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling houses and dual occupancies (SC1.2 site cover counts all buildings/structures except listed exclusions, so class 10a buildings count)",
+      "topic": "SITE_COVER",
+      "verbatim_text": "RO3.1.1\nDwelling houses and Dual occupancies have a maximum site cover of 60%;\nOR\nRO3.1.2\nWhere a ‘terrace style’ building (built to both boundaries) is located in the New Suburban precinct of the Low Density Residential zone, the Low-Medium Density zones or a Centres zone, development has a maximum site cover of 75%.",
+      "structured": {
+        "parameter": "maximum site cover",
+        "operator": "<=",
+        "value": 60,
+        "unit": "%",
+        "conditions": [
+          "Does not vary with lot size"
+        ],
+        "exceptions": [
+          "RO3.1.2: 'terrace style' building built to both boundaries in New Suburban precinct of LDR zone, Low-Medium Density zones or a Centres zone: 75%"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "SC1.2 'Site cover': portion of the site covered by a building or structure measured to its outermost projection, excluding a building/structure in a landscaped or open space area (e.g. gazebo or shade structure), a basement completely below ground level used for car parking, eaves, and a sun shade.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 35418 / 18691",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions. Single figure regardless of lot size (QDC/QHC varies by lot size)."
+    },
+    {
+      "rule_key": "dh_ro3_1_2_site_cover_terrace_75",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO3.1.2 (AO3.1.2 identical)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low Density Residential (New Suburban precinct)",
+        "Low-Medium Density Residential",
+        "Centres zones"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "'terrace style' building (built to both boundaries)",
+      "topic": "SITE_COVER",
+      "verbatim_text": "RO3.1.1\nDwelling houses and Dual occupancies have a maximum site cover of 60%;\nOR\nRO3.1.2\nWhere a ‘terrace style’ building (built to both boundaries) is located in the New Suburban precinct of the Low Density Residential zone, the Low-Medium Density zones or a Centres zone, development has a maximum site cover of 75%.",
+      "structured": {
+        "parameter": "maximum site cover",
+        "operator": "<=",
+        "value": 75,
+        "unit": "%",
+        "conditions": [
+          "'terrace style' building built to both side boundaries",
+          "New Suburban precinct of LDR zone, Low-Medium Density zones or a Centres zone"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "SC1.2 site cover definition.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 35418 / 18691",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions."
+    },
+    {
+      "rule_key": "dh_po3_1_site_cover_assessable",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.2 (Benchmarks for Assessable Development), PO3.1 / AO3.1.1 / AO3.1.2",
+      "provision_type": "PERFORMANCE_OUTCOME",
+      "zones": [
+        "Low Density Residential",
+        "Low-Medium Density Residential",
+        "Medium Density Residential",
+        "High Density Residential",
+        "Character Residential",
+        "Township",
+        "Emerging Community",
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling house / dual occupancy",
+      "topic": "SITE_COVER",
+      "verbatim_text": "PO3.1\nDwelling house and dual occupancy developments provide open space that is sufficient to ensure adequate privacy, and ventilation and sunlight for the development and for adjoining residences.\nAO3.1.1\nDwelling houses and Dual occupancies have a maximum site cover of 60%;\nOR\nAO3.1.2\nWhere a ‘terrace style’ building (built to both boundaries) is located in the New Suburban precinct of the Low Density Residential zone, the Low-Medium Density zones or a Centres zone, development has a maximum site cover of 75%.",
+      "structured": {
+        "parameter": "site cover (performance outcome)",
+        "operator": "conditional",
+        "value": 60,
+        "unit": "%",
+        "conditions": [
+          "Code assessable development"
+        ],
+        "exceptions": [
+          "75% terrace style per AO3.1.2"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES",
+      "measurement_notes": "SC1.2 site cover.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 18691",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Part 1, s1.5 Table 1.5.1 'QDC Alternative Provisions' lists 'Alternatives to QDC boundary clearance provisions' and 'Alternatives to QDC site cover provisions' -> 'Dwelling House and Dual Occupancy Code' (and 'Alternatives to QDC building height provisions' -> 'Building Height and Density Overlay'). The table does not pin-point individual ROs/AOs; the setback/site-cover outcomes of the code are treated as the alternative provisions."
+    },
+    {
+      "rule_key": "dh_ro3_2_1_building_height_9_5",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO3.2.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low Density Residential",
+        "Low-Medium Density Residential",
+        "Medium Density Residential",
+        "High Density Residential",
+        "Character Residential",
+        "Township",
+        "Emerging Community",
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling house / dual occupancy buildings (incl. associated domestic outbuildings by definition)",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "RO3.2.1\nMaximum building height is 9.5m to the peak of the roof.",
+      "structured": {
+        "parameter": "maximum building height",
+        "operator": "<=",
+        "value": 9.5,
+        "unit": "m",
+        "conditions": [
+          "measured to the peak of the roof"
+        ],
+        "exceptions": [
+          "Assessable development only: AO3.2.2 allows the OV6 Building Height and Density Overlay height where OV6 specifies more than 2 storeys (removed from the ADSR table in Version 2)"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "UNKNOWN",
+      "measurement_notes": "SC1.2 'Building height': vertical distance between ground level and the highest point on the roof (excluding aerial, chimney, flagpole or load-bearing antenna), or number of storeys above ground level. RO says 'to the peak of the roof'.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 35418",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 1.5.1 names the Building Height and Density Overlay (not this code) as the alternative to QDC building height provisions. No separate height limit for outbuildings/class 10a. Version 1 RO3.2.2 (OV6) was deleted from the ADSR table in Version 2."
+    },
+    {
+      "rule_key": "dh_po3_2_building_height_assessable",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.2 (Benchmarks for Assessable Development), PO3.2 / AO3.2.1 / AO3.2.2",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low Density Residential",
+        "Low-Medium Density Residential",
+        "Medium Density Residential",
+        "High Density Residential",
+        "Character Residential",
+        "Township",
+        "Emerging Community",
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling house / dual occupancy",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "PO3.2\nDwelling houses and Dual occupancies have a height that:\ndoes not dominate the streetscape;\nis responsive to the topography of the area;\nis responsive to site constraints; and\ndoes not unduly overshadow adjoining dwelling houses and their private open space.\nAO3.2.1\nMaximum building height is 9.5m to the peak of the roof;\nOR\nAO3.2.2\nThe building does not exceed the maximum building height of the Building Height and Density Overlay (OV6), if the Overlay specifies a height greater than 2 storeys.",
+      "structured": {
+        "parameter": "maximum building height",
+        "operator": "conditional",
+        "value": 9.5,
+        "unit": "m",
+        "conditions": [
+          "AO3.2.1: <= 9.5m to roof peak",
+          "OR AO3.2.2: not exceeding the OV6 height where OV6 specifies > 2 storeys"
+        ],
+        "exceptions": [],
+        "formula_text": "limit = 9.5m, or the OV6 mapped height where OV6 > 2 storeys"
+      },
+      "alternative_provision_to_qdc_qhc": "UNKNOWN",
+      "measurement_notes": "SC1.2 building height.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 18692",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "OV6 heights are map-only (Part 8.1(7): 'OV6 Building Height and Density Overlay | No Overlay code'); mapped values not extracted."
+    },
+    {
+      "rule_key": "dh_ao7_1_fencing_heights",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.2 (Benchmarks for Assessable Development), PO7.1 / AO7.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low Density Residential",
+        "Low-Medium Density Residential",
+        "Medium Density Residential",
+        "High Density Residential",
+        "Character Residential",
+        "Township",
+        "Emerging Community",
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "fencing (road frontage, secondary road frontage, perimeter)",
+      "topic": "OTHER",
+      "verbatim_text": "PO7.1\nFences are designed and constructed to:\nprovide visual interest within the streetscape;\nbe comprised of materials and colours that are compatible with adjacent buildings and landscaping;\nallow for casual surveillance and engagement with public spaces; and\nassist in highlighting entrances and paths.\nAO7.1\nFor residential areas where fencing is provided:\nroad frontage fencing is a maximum of 1.2m high, or 1.8m high if greater than 30% transparent;\nwhere adjoining a secondary road frontage that does not provide access, drainage reserve, recreation or open space, fencing is a maximum of 1.8m high, solid up to 1.5m, with 80% transparency from 1.5m to 1.8m (as shown in Diagram A); and\notherwise, perimeter fencing may be solid and a maximum of 1.8m high.\nDIAGRAM A",
+      "structured": {
+        "parameter": "maximum fence height",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "road frontage: <=1.2m, or <=1.8m if >30% transparent",
+          "secondary road frontage not providing access, or adjoining drainage reserve / recreation / open space: <=1.8m, solid to 1.5m, 80% transparent 1.5-1.8m",
+          "otherwise perimeter fencing may be solid, <=1.8m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "Relevant to pool barrier fences on frontages. Diagram A not extracted.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 18741",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Version 1 also had this as ADSR RO7.1; Version 2 removed RO7.1 from Table 9.3.7.3.1, so it now applies only to code-assessable development."
+    },
+    {
+      "rule_key": "dh_ro1_1_1_secondary_dwelling_gfa",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO1.1.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low Density Residential",
+        "Low-Medium Density Residential",
+        "Medium Density Residential",
+        "High Density Residential",
+        "Character Residential",
+        "Township",
+        "Emerging Community",
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "secondary dwelling",
+      "topic": "OTHER",
+      "verbatim_text": "RO1.1.1\nA Secondary dwelling meets the following lot size and maximum Gross Floor Area (GFA) requirements:\nLot size (m2)\nMaximum GFA (m2) of the secondary dwelling\n> 450 - 600\n60\n> 600 - 800\n90\n> 800\n120",
+      "structured": {
+        "parameter": "maximum GFA of secondary dwelling",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m2",
+        "conditions": [
+          "lot >450-600m2: 60m2",
+          ">600-800m2: 90m2",
+          ">800m2: 120m2"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "Table cells are separated by line breaks.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 19071",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Context only (secondary dwelling is class 1, not 10a)."
+    },
+    {
+      "rule_key": "dh_ro6_5_bin_storage_outside_road_setback",
+      "code": "Dwelling House and Dual Occupancy Code",
+      "clause": "9.3.7.3 Table 9.3.7.3.1 (Benchmarks for Accepted Development Subject to Requirements), RO6.5",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low Density Residential",
+        "Low-Medium Density Residential",
+        "Medium Density Residential",
+        "High Density Residential",
+        "Character Residential",
+        "Township",
+        "Emerging Community",
+        "Rural"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "waste/bin storage area",
+      "topic": "OTHER",
+      "verbatim_text": "RO6.5\nA waste storage area is provided for each Dwelling* to accommodate the permanent storage of 3 x 240-litre refuse bins in an area outside of the road boundary setback (in an area other than within the building frontage).\n*Note: A separate waste storage area is required for the Primary and Secondary dwelling forming a Dwelling house, or for each dwelling in a Dual occupancy.",
+      "structured": {
+        "parameter": "bin storage location",
+        "operator": "=",
+        "value": null,
+        "unit": null,
+        "conditions": [
+          "outside the road boundary setback",
+          "3 x 240L bins per dwelling"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 35422",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Minor; affects use of the front setback."
+    },
+    {
+      "rule_key": "char_ro1_1_class10_rear_area_a",
+      "code": "Character Places and Areas Overlay Code",
+      "clause": "8.2.3.3 Table 8.2.3.3.1 (Benchmarks for ADSR), RO1.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "any zone within an OV3 Local Character Area"
+      ],
+      "overlay": "OV3 Character Places and Areas Overlay",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10 buildings and structures (excluding fencing, gates and retaining walls) incl. car accommodation, sheds, pools",
+      "topic": "OUTBUILDING_SIZE",
+      "verbatim_text": "Class 10 buildings and structures (excluding fencing, gates and retaining walls)\nRO1.1\nWhen building in Area A to the rear of the main building (refer to Figure 8.2.3.3.20.1) the following applies:\nmay include open and enclosed Class 10 buildings and structures, including car accommodation, sheds, pools and other buildings and structures;\nis detached from the main building; and\nhas a gross floor area no greater than 50% of the existing main building.",
+      "structured": {
+        "parameter": "GFA of class 10 building in Area A (rear of main building)",
+        "operator": "<=",
+        "value": 50,
+        "unit": "% of existing main building GFA",
+        "conditions": [
+          "Area A to the rear of the main building (Figure 8.2.3.3.20.1)",
+          "detached from main building"
+        ],
+        "exceptions": [],
+        "formula_text": "class10_GFA <= 0.5 * main_building_GFA"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "Areas A-D are shown on Figure 8.2.3.3.20.1 (image not extracted).",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/332/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/332/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 14489",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Building works in a Local Character Area are ADSR against this code (Table 5.9.3); non-compliance makes them code assessable."
+    },
+    {
+      "rule_key": "char_ro1_2_class10_side_area_b",
+      "code": "Character Places and Areas Overlay Code",
+      "clause": "8.2.3.3 Table 8.2.3.3.1 (Benchmarks for ADSR), RO1.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "any zone within an OV3 Local Character Area"
+      ],
+      "overlay": "OV3 Character Places and Areas Overlay",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Open class 10 buildings/structures incl. car accommodation beside the main building (Area B)",
+      "topic": "GARAGE_CARPORT_FRONTAGE",
+      "verbatim_text": "RO1.2\nOpen Class 10 buildings and structures, including car accommodation may also be located to the side of the main building in Area B (refer to Figure 8.2.3.3.20.1) where taking a form that:\nis detached from the main building;\nis open or battened where facing the street or public realm;\nis in alignment with or set back behind the line of the internal frontage verandah wall;\nis a maximum of 6 metres wide;\nwhere including a roof:\nhas a roof pitch which is a minimum of 15 degrees;\nhas a gable or hip roof form;\nhas roof overhangs that are a minimum of 300mm on all sides;\ncontains corrugated metal roofing material or matches the roofing material used on the main building; and\nhas a quad gutter profile or matches the gutter profile used on the main building;\nhas 100mm x 100mm support posts (timber or steel); and\nwhere enclosed:\nwith timber battens, maintaining a minimum 30% transparency by providing spacing between each batten;\ndoors facing the street (swing, panel lift or tilt) maintain a minimum 30% transparency by providing spacing between each batten; and\nenclosed spaces are located at the rear of the building or structure (refer to Figure 8.2.3.3.20.2, Figure K) and use horizontal cladding to match existing buildings on site.",
+      "structured": {
+        "parameter": "width of open class 10 structure in Area B",
+        "operator": "<=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "detached",
+          "open or battened facing street",
+          "in alignment with or set back behind the internal frontage verandah wall line",
+          "roof pitch >=15 deg, gable/hip, overhangs >=300mm",
+          "100x100mm posts",
+          "battens >=30% transparency if enclosed"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "Siting is relative to the main building verandah wall line, not a numeric boundary setback.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/332/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/332/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 14489",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": ""
+    },
+    {
+      "rule_key": "char_ro1_3_carport_front_area_c",
+      "code": "Character Places and Areas Overlay Code",
+      "clause": "8.2.3.3 Table 8.2.3.3.1 (Benchmarks for ADSR), RO1.3",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "any zone within an OV3 Local Character Area"
+      ],
+      "overlay": "OV3 Character Places and Areas Overlay",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "single carport between dwelling and primary street alignment (Area C)",
+      "topic": "GARAGE_CARPORT_FRONTAGE",
+      "verbatim_text": "RO1.3\nWhere the side setbacks are less than 3 metres and access to the side or rear of an existing dwelling is not possible due to existing dwelling placement, a single carport can be erected between the dwelling and the primary street alignment in Area C in a location that minimises obscuring the view of the character dwelling (refer to Figure 8.2.3.3.20.1) where taking a form that:\nis detached from the main building;\nis a maximum of 3.6 metres wide and 6 metres long;\nhas a roof pitch which matches the main building’s predominant roof pitch;\nhas roof overhangs on all sides that are a minimum of 300mm;\nhas a gable or hip roof form;\nhas 100mm x 100mm support posts (timber or steel);\ncorrugated metal roofing material or matches the roofing material used on the main building;\nhas a quad gutter profile or matches the gutter profile used on the main building; and\nthe carport may be enclosed using:\ntimber battens, maintaining a minimum 30% transparency by providing spacing between each batten; and\ndoors facing the street (swing, panel lift or tilt) maintain a minimum 30% transparency by providing spacing between each timber batten.",
+      "structured": {
+        "parameter": "carport dimensions forward of dwelling",
+        "operator": "<=",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "only where side setbacks < 3m and side/rear access not possible",
+          "single detached carport",
+          "max 3.6m wide and 6m long",
+          "roof pitch matches main building",
+          "overhangs >=300mm"
+        ],
+        "exceptions": [],
+        "formula_text": "width<=3.6m AND length<=6m"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "No numeric front setback stated for the carport.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/332/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/332/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 14489",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": ""
+    },
+    {
+      "rule_key": "char_ro1_4_carport_secondary_frontage_area_d",
+      "code": "Character Places and Areas Overlay Code",
+      "clause": "8.2.3.3 Table 8.2.3.3.1 (Benchmarks for ADSR), RO1.4",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "any zone within an OV3 Local Character Area"
+      ],
+      "overlay": "OV3 Character Places and Areas Overlay",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "open car accommodation on the secondary frontage of a corner site (Area D)",
+      "topic": "SECONDARY_FRONTAGE_SETBACK",
+      "verbatim_text": "RO1.4\nOn a secondary frontage of a corner site (refer to Area D on Figure 8.2.3.3.20.1) open car accommodation may also be located where taking a form that:\nis detached from the main building;\nis a single or double width carport detached from the main building;\nis a single gable for single carports;\nfor double carports, provide a pair of gabled or hipped roofs of equal width facing the secondary frontage (refer Figure 8.2.3.3.20.2, Figures B, F & G);\nis a maximum of 6 metres wide and 6 metres long;\nhas a roof pitch which matches the main building’s predominant roof pitch;\nprovides roof overhangs on all sides that are a minimum of 300mm;\nhas 100mm x 100mm support posts (timber or steel);\nprovides corrugated metal roofing material or matches the roofing material used on the main building; and\nhas a quad gutter profile or matches the gutter profile used on the main building.",
+      "structured": {
+        "parameter": "carport dimensions on secondary frontage",
+        "operator": "<=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "corner site, Area D",
+          "detached single or double carport",
+          "max 6m wide and 6m long"
+        ],
+        "exceptions": [],
+        "formula_text": "width<=6m AND length<=6m"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "No numeric secondary-frontage setback stated.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/332/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/332/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 14489",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": ""
+    },
+    {
+      "rule_key": "char_ao7_2_setback_match_character",
+      "code": "Character Places and Areas Overlay Code",
+      "clause": "8.2.3.3 Table 8.2.3.3.2 (Benchmarks for Assessable Development), PO7.2 / AO7.2",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "any zone within OV3"
+      ],
+      "overlay": "OV3 Character Places and Areas Overlay",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "new buildings and extensions",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "PO7.2\nNew buildings or extensions to existing buildings contribute to the rhythm of the siting and spacing of buildings in the street, particularly where the siting and spacing pattern is highly regular.\nAO7.2\nNew buildings are setback from the street an equal or greater distance than adjacent character buildings;\nNew buildings maintain a consistent spacing and harmonious rhythm (refer to Figure 8.2.3.3.3.3);\nWhere there is no character building or character place for setback reference, or a discordant rhythm exists new buildings are setback to comply with the specific outcomes for each zone;\nNew buildings or extensions to existing buildings are not constructed in front of the building alignment of existing character buildings;\nNew buildings, or extensions to existing buildings, ensure the distance between the boundary and the side external wall reflect the ratio of built form to open space which is similar to other character buildings in the street; and\nNew buildings are built to the property boundary where:\nadjoining character buildings are constructed to the property boundary; and\nthe new building complies with the performance outcomes for the relevant zones.",
+      "structured": {
+        "parameter": "street setback",
+        "operator": ">=",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          ">= setback of adjacent character buildings",
+          "not in front of the building alignment of existing character buildings",
+          "built to boundary only where adjoining character buildings are"
+        ],
+        "exceptions": [
+          "where no character building for reference, comply with zone outcomes"
+        ],
+        "formula_text": "setback >= adjacent character building setback"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "Relative setback; needs neighbouring building data.",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/332/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/332/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 14500",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Code-assessable development only."
+    },
+    {
+      "rule_key": "char_po5_1_height_storeys",
+      "code": "Character Places and Areas Overlay Code",
+      "clause": "8.2.3.3 Table 8.2.3.3.2, PO5.1 / AO5.1",
+      "provision_type": "PERFORMANCE_OUTCOME",
+      "zones": [
+        "any zone within OV3"
+      ],
+      "overlay": "OV3 Character Places and Areas Overlay",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "buildings in a character area",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "PO5.1\nWhere the site is situated within a character area or residential setting, buildings are in the range of one to two storeys in height (including single storey high set) with an emphasis placed on elevated buildings on stumps, consistent with the height of adjoining character buildings or the predominant height or rhythm of character buildings within the streetscape or hillscape;\nWhere the site is situated within a centre or industrial zone or a commercial or industrial setting, buildings are in the range of one to two storeys in height, consistent with the height of adjacent character buildings or the predominant height or rhythm of character buildings within the streetscape or hillscape;\nAn additional storey is not provided unless appropriate with regard to:\nthe character and amenity of the area and the overall townscape including hillscapes;\nthe scale of adjoining development and the predominant height of buildings within the street or hillscape;\nthe retention of important view corridors; and\nthe retention of the significance of landmark sites and structures;\nWhere the site is situated within a commercial or industrial zone, or a commercial or industrial setting, the height of buildings at the street alignment are designed to:\nmaintain a human scale, particularly at the street level; and\nmaintain the visual prominence of significant landscape features (including landmark sites) and conserve desirable view corridors; and\nNew buildings which are situated adjacent to character buildings or character places are designed to ensure that the building is not of a height or bulk to:\nvisually dominate the character building or character place; or\nobstruct views of the character building or character place where visible from a road or the public realm.\nAO5.1\nNo accepted outcome provided.",
+      "structured": {
+        "parameter": "building height (storeys)",
+        "operator": "conditional",
+        "value": 2,
+        "unit": "storeys",
+        "conditions": [
+          "one to two storeys in a character area or residential setting"
+        ],
+        "exceptions": [
+          "additional storey where appropriate having regard to listed matters"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/332/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/332/0/false/30-Jun-2026/false)",
+      "page_or_anchor": "ruleId 14394",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Performance outcome only; no AO."
+    }
+  ],
+  "overlays_affecting_siting": [
+    {
+      "overlay": "OV3 Character Places and Areas Overlay",
+      "code": "8.2.3 Character Places and Areas Overlay Code",
+      "effect": "Controls the location, form and size of class 10 buildings by Areas A-D. Carport limits: 3.6x6m forward of the dwelling, 6x6m on a secondary frontage, 6m wide beside the dwelling. Rear class 10 GFA must be <=50% of the main building. Street setback is contextual (AO7.2) and height is 1-2 storeys (PO5.1).",
+      "quote": "RO1.1\nWhen building in Area A to the rear of the main building (refer to Figure 8.2.3.3.20.1) the following applies:\nmay include open and enclosed Class 10 buildings and structures, including car accommodation, sheds, pools and other buildings and structures;\nis detached from the main building; and\nhas a gross floor area no greater than 50% of the existing main building.",
+      "clause": "Table 8.2.3.3.1 RO1.1-RO1.4; Table 8.2.3.3.2 AO7.2, PO5.1",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/332/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/332/0/false/30-Jun-2026/false)"
+    },
+    {
+      "overlay": "OV6 Building Height and Density Overlay",
+      "code": "No overlay code (map only)",
+      "effect": "Alternative to QDC building height provisions per Table 1.5.1. DH code AO3.2.2 allows the OV6 height where it exceeds 2 storeys. Mapped values not extracted.",
+      "quote": "AO3.2.2\nThe building does not exceed the maximum building height of the Building Height and Density Overlay (OV6), if the Overlay specifies a height greater than 2 storeys.",
+      "clause": "9.3.7 Table 9.3.7.3.2 AO3.2.2; Part 1 Table 1.5.1; Part 8.1(7)",
+      "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/404/0/false/30-Jun-2026/false)"
+    }
+  ],
+  "local_plan_mechanism": {
+    "summary": "Ipswich uses 30 'Local Framework' areas (Part 4) instead of neighbourhood plans. Local Frameworks are assessment benchmarks for code and impact assessable development and rank above zone and use codes (Table 5.2.1). They are not part of the ADSR Required Outcomes for dwelling houses, so they do not change ADSR setbacks for houses or outbuildings. The DH code itself varies setbacks by precinct (New Suburban precinct of the LDR zone) and by zone (Rural). Local Frameworks mostly cross-refer to OV6 for height and to the Active Frontage Overlay for setbacks in centres. 5.3.2(9) says the Springfield Structure Plan may override the categorisation rules. Ripley Valley is a Priority Development Area with a separate development scheme (Part 10.2).",
+    "examples": [
+      {
+        "plan": "4.2.22 Local Framework - Area 24 Walloon and Thagoona, AO3.1",
+        "quote": "AO3.1\nDevelopment is in accordance with, and does not exceed, the height and density shown on the Building Height and Density Overlay Map.",
+        "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/236/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/236/0/false/30-Jun-2026/false)"
+      },
+      {
+        "plan": "4.2.13 Local Framework - Area 14 Booval and Surrounds, AO2.2.1 (Major Centre Core)",
+        "quote": "AO2.2.1\nDevelopment:\nrespects the layout, scale (including height and setback) and character of development on adjoining sites;\nprovides historical style street awnings for pedestrians; and\npreserves character houses including those that are adaptively reused for other centre activities.",
+        "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/434/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/434/0/false/30-Jun-2026/false)"
+      },
+      {
+        "plan": "Part 5.3.2(9)",
+        "quote": "The Springfield Structure Plan may override any of the above.",
+        "source_url": "https://ipswich.isoplan.com.au/eplan/rules/0/195/0/0/0/203 (JSON: https://ipswich.isoplan.com.au/eplan/api/l/r/195/0/false/30-Jun-2026/false)"
+      }
+    ]
+  },
+  "open_questions": [
+    "The DH code defers front/side setbacks to 'Queensland Development Code MP1.1, MP1.2 or MP1.3', which the Queensland Housing Code replaced on 1 Sept 2026. Confirm with Council or certifiers whether these references are read as the QHC (under the Acts Interpretation Act or transitional provisions), and whether Council plans an amendment to reference the QHC.",
+    "Table 1.5.1 names the whole DH code as the alternative to QDC boundary clearance. Is that designation effective for limbs that simply say 'meet QDC MP1.1/1.2'? In substance only the New Suburban and Rural variations and RO2.3 differ from QDC.",
+    "The DH code has no rear setback provision, so rear setbacks presumably follow QDC/QHC. For the Rural zone 'side boundary setbacks ... minimum of 20m', confirm whether Council also applies it to rear boundaries and to class 10a outbuildings (no exemption is stated).",
+    "Site cover is 60% for 'Dwelling houses and Dual occupancies' regardless of lot size. QHC site cover varies by lot size; the scheme value would prevail as an alternative provision.",
+    "Building height 9.5m (RO3.2.1): Table 1.5.1 names OV6, not the DH code, as the height alternative, so it is unclear whether 9.5m operates as a QDC alternative.",
+    "No outbuilding-specific size, height or setback rule was found in the DH code or the residential zone codes. The same applies to pool setbacks, garage width relative to frontage, impervious area and landscaping (the zone codes contain only purpose and overall outcomes).",
+    "Precincts (e.g. New Suburban) are shown on the Zone and Precinct map, so a lot's precinct must be found from mapping (not extracted). OV6 heights and the Character overlay Areas A-D (Figure 8.2.3.3.20.1) are maps or images and were not extracted.",
+    "Ipswich has no 'Rural Residential' zone. The equivalents are the Large Lot and Suburban Large Lot precincts of the Low Density Residential zone (no separate DH code setbacks) and the Rural zone (10m front / 20m side).",
+    "The Table 5.7.1 preamble applies to building work that 'does not meet the definition for minor building works'. How this applies to small class 10a structures needs confirmation.",
+    "The glossary has an upper-case 'SETBACK' entry with its own definition and a lower-case 'setback' entry that resolves to the 'Boundary clearance' text. Both are quoted; which one governs is ambiguous."
+  ],
+  "fetch_log": [
+    "WebSearch 'Ipswich Plan 2025 commencement dwelling house code' -> council news: City Plan 2025 took effect 1 July 2025, replacing the 2006 scheme.",
+    "https://www.ipswich.qld.gov.au/residents/planning-and-development -> 404",
+    "https://www.ipswich.qld.gov.au/Services/Planning-and-Building/Planning/Housing-in-Ipswich -> links to ePlan https://ipswich.isoplan.com.au/eplan and DH code rules/0/404/0/0/0/199",
+    "WebFetch https://ipswich.isoplan.com.au/eplan/rules/0/404/0/0/0/199 -> 403; curl -> JavaScript app shell only",
+    "curl https://ipswich.isoplan.com.au/eplan/__config__.js and the static JS bundle -> found public API endpoints api/l/vpr, api/l/rev, api/l/r",
+    "curl https://ipswich.isoplan.com.au/eplan/api/l/vpr -> revisions: 203 Version 2 Current (operative 2026-07-01); 199 Version 1 Superseded",
+    "curl https://ipswich.isoplan.com.au/eplan/api/l/rev/203/30-Jun-2026/1 -> 706 definitions, 27 zone chapter links, 0 plan changes",
+    "curl api/l/r/{1..540}/0/false/30-Jun-2026/false -> ~150 non-empty sections. Used: 404 (DH code); 172/171/170/164/163/152 (zone codes); 189/190/194/195/196/269/318/320/408/430 (assessment tables); 205 (Part 1); 224 (Appendix 2); 462 (citation); 332 (Character overlay code); 127 (Part 8); 198/236/434 (local frameworks)",
+    "curl api/l/r/404 and /205 with date 30-Jun-2025 (Version 1), then diffed against V2. V2 removed RO3.2.2 (OV6) and RO7.1 (fencing) from the ADSR table and added 'if the Overlay specifies a height greater than 2 storeys' to AO3.2.2. Part 1 Table 1.5.1 is unchanged in substance.",
+    "Keyword search of all retrieved sections for 'Housing Code', 'alternative provision', 'QDC', 'MP1.' -> hits only in Part 1 s1.5 and the DH code; no QHC reference",
+    "WebSearch for Ipswich 2026 amendment / Queensland Housing Code -> only Amendment Package 1 (version 2); no QHC amendment found"
+  ]
+}

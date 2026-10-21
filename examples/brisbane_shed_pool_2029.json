@@ -1,0 +1,117 @@
+{
+ "title": "Same property assessed on 1 Sept 2029 (QHC long-stop)",
+ "assessment_date": "2029-09-01",
+ "site": {
+  "lg": "BRISBANE",
+  "zone": "BCC:LOW_DENSITY_RESIDENTIAL",
+  "precincts": [],
+  "local_plans": [],
+  "local_plan_precincts": [],
+  "overlays": []
+ },
+ "facts": {
+  "lot_area_m2": 607,
+  "lot_width_m": 16.1,
+  "road_frontage_m": 16.1,
+  "average_lot_depth_m": 37.7,
+  "lot_is_rectangular_or_near": true,
+  "lot_slope_pct": 4,
+  "is_corner_lot": false,
+  "is_battle_axe_lot": false,
+  "in_priority_development_area": false,
+  "in_wind_region_c": false,
+  "infrastructure_on_lot": false,
+  "adjoining_dwellings_both_sides": false,
+  "primary_frontage_is_lane_or_parkway": false,
+  "adjoining_premises_setback_less_than_table": false,
+  "planning_assessment_required": false,
+  "development_footprint_exists": false,
+  "adjoins_canal_or_lake": false,
+  "land_is_regulated_land": true
+ },
+ "structures": [
+  {
+   "label": "Shed 6.0 m x 4.0 m, 3.0 m high (rear corner)",
+   "structure_type": "SHED",
+   "facts": {
+    "structure_height_m": 3.0,
+    "building_height_m": 3.0,
+    "part_height_m": 3.0,
+    "mean_height_m": 2.7,
+    "wall_height_m": 2.4,
+    "structure_height_above_ground_m": 3.0,
+    "plan_area_m2": 24,
+    "longest_side_m": 6,
+    "is_attached_to_dwelling": false,
+    "is_roofed": true,
+    "is_enclosed": true,
+    "wall_is_maintenance_free": true,
+    "btb_length_on_boundary_m": 6.0,
+    "distance_to_adjoining_habitable_window_m": 4.0,
+    "total_outbuilding_floor_area_m2": 24,
+    "total_outbuilding_roofed_area_m2": 24,
+    "is_garage_under_main_roof": false,
+    "weather_control_attached_to_btb_part": true
+   },
+   "boundaries": [
+    {
+     "boundary_type": "PRIMARY_FRONTAGE"
+    },
+    {
+     "boundary_type": "SIDE"
+    },
+    {
+     "boundary_type": "REAR"
+    }
+   ]
+  },
+  {
+   "label": "In-ground pool, coping 0.3 m above ground",
+   "structure_type": "POOL_INGROUND",
+   "facts": {
+    "structure_height_m": 0.3,
+    "part_height_m": 0.3,
+    "pool_coping_height_m": 0.3,
+    "structure_height_above_ground_m": 0.3,
+    "pool_capable_depth_m": 1.6,
+    "pool_is_indoor": false,
+    "solid_wall_between_pool_and_boundary_height_m": 0,
+    "solid_wall_top_above_coping_m": 0,
+    "solid_fence_above_pool_deck_m": 0
+   },
+   "boundaries": [
+    {
+     "boundary_type": "PRIMARY_FRONTAGE"
+    },
+    {
+     "boundary_type": "SIDE"
+    },
+    {
+     "boundary_type": "REAR"
+    }
+   ]
+  },
+  {
+   "label": "Pool fence 1.2 m (NCZ outside) with gate",
+   "structure_type": "POOL_FENCE",
+   "facts": {
+    "structure_height_m": 1.2,
+    "barrier_height_mm": 1200,
+    "ncz_side": "OUTSIDE",
+    "ncz_required": true,
+    "barrier_has_cranked_top": false,
+    "barrier_is_boundary_fence": false,
+    "pool_is_indoor": false,
+    "structure_height_above_ground_m": 1.2
+   },
+   "boundaries": [
+    {
+     "boundary_type": "SIDE"
+    },
+    {
+     "boundary_type": "REAR"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "siteora",
+  "private": true,
+  "description": "Repository root: forwards to the TypeScript server in server-ts/",
+  "scripts": {
+    "install:server": "npm --prefix server-ts install",
+    "build": "npm --prefix server-ts run build",
+    "start": "npm --prefix server-ts start",
+    "parity": "npm --prefix server-ts run parity",
+    "parity:offline": "npm --prefix server-ts run parity:offline",
+    "cli": "npm --prefix server-ts run cli --",
+    "evaluate": "npm --prefix server-ts run evaluate --",
+    "check": "npm --prefix server-ts run check --",
+    "verify-load": "npm --prefix server-ts run verify-load",
+    "check-services": "npm --prefix server-ts run check-services --",
+    "schema-doc": "npm --prefix server-ts run schema-doc",
+    "import-research": "npm --prefix server-ts run import-research --",
+    "data-register": "npm --prefix server-ts run data-register --",
+    "dev": "npm --prefix server-ts run dev"
+  }
+}

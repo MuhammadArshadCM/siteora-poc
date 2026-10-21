@@ -1,0 +1,9 @@
+# local database credentials
+.env
+poc/.env
+__pycache__/
+
+# TypeScript server build output
+server-ts/node_modules/
+server-ts/dist/
+server-ts/logs/
