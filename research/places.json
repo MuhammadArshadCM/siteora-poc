@@ -12,7 +12,8 @@
     {"code": "EMERGING_COMMUNITY", "name": "Emerging community zone", "regulated": "EMERGING_COMMUNITY", "dwelling_house_permitted": null, "basis": null},
     {"code": "ENVIRONMENTAL_MANAGEMENT", "name": "Environmental management zone", "regulated": "ENVIRONMENTAL_MANAGEMENT", "dwelling_house_permitted": null, "basis": null},
     {"code": "RURAL", "name": "Rural zone", "regulated": "RURAL", "dwelling_house_permitted": null, "basis": null},
-    {"code": "TOWNSHIP", "name": "Township zone", "regulated": "TOWNSHIP", "dwelling_house_permitted": null, "basis": null}
+    {"code": "TOWNSHIP", "name": "Township zone", "regulated": "TOWNSHIP", "dwelling_house_permitted": null, "basis": null},
+    {"code": "HIGH_DENSITY_RESIDENTIAL", "name": "High density residential zone", "regulated": "HIGH_DENSITY_RESIDENTIAL", "dwelling_house_permitted": false, "basis": "Table 5.5.4 / Table 5.10.9: a new dwelling house is impact assessable"}
    ],
    "precincts": [
     {"zone": "CHARACTER_RESIDENTIAL", "code": "CHARACTER", "name": "Character zone precinct"},
@@ -30,6 +31,7 @@
     "Character residential zone": [{"level": "ZONE", "zone": "CHARACTER_RESIDENTIAL"}],
     "Character residential zone (Character zone precinct)": [{"level": "PRECINCT", "precinct": "CHARACTER_RESIDENTIAL/CHARACTER"}],
     "Emerging community zone": [{"level": "ZONE", "zone": "EMERGING_COMMUNITY"}],
+    "High density residential zone": [{"level": "ZONE", "zone": "HIGH_DENSITY_RESIDENTIAL"}],
     "Environmental management zone": [{"level": "ZONE", "zone": "ENVIRONMENTAL_MANAGEMENT"}],
     "Low density residential zone": [{"level": "ZONE", "zone": "LOW_DENSITY_RESIDENTIAL"}],
     "Low-medium density residential zone": [{"level": "ZONE", "zone": "LOW_MEDIUM_DENSITY_RESIDENTIAL"}],
@@ -60,14 +62,24 @@
     {"code": "LOW_DENSITY_RESIDENTIAL", "name": "Low density residential zone", "regulated": "LOW_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.1"},
     {"code": "MEDIUM_DENSITY_RESIDENTIAL", "name": "Medium density residential zone", "regulated": "MEDIUM_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.2"},
     {"code": "RURAL_RESIDENTIAL", "name": "Rural residential zone", "regulated": "RURAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.21"},
-    {"code": "TOWNSHIP", "name": "Township zone", "regulated": "TOWNSHIP", "dwelling_house_permitted": null, "basis": null}
+    {"code": "TOWNSHIP", "name": "Township zone", "regulated": "TOWNSHIP", "dwelling_house_permitted": null, "basis": null},
+    {"code": "RURAL", "name": "Rural zone", "regulated": "RURAL", "dwelling_house_permitted": true, "basis": "Table 5.5.20 / 5.5.20(1)"},
+    {"code": "EMERGING_COMMUNITY", "name": "Emerging community zone", "regulated": "EMERGING_COMMUNITY", "dwelling_house_permitted": true, "basis": "Table 5.5.15"},
+    {"code": "HIGH_DENSITY_RESIDENTIAL", "name": "High density residential zone", "regulated": "HIGH_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.3"},
+    {"code": "LIMITED_DEVELOPMENT_CONSTRAINED_LAND", "name": "Limited development (constrained land) zone", "regulated": "LIMITED_DEVELOPMENT", "dwelling_house_permitted": true, "basis": "Table 5.5.18"}
    ],
    "precincts": [
     {"zone": "LOW_DENSITY_RESIDENTIAL", "code": "LARGE_LOT", "name": "Large lot precinct"},
-    {"zone": "RURAL_RESIDENTIAL", "code": "LANDSCAPE_ENVIRONMENT", "name": "Rural residential landscape and environment precinct"}
+    {"zone": "RURAL_RESIDENTIAL", "code": "LANDSCAPE_ENVIRONMENT", "name": "Rural residential landscape and environment precinct"},
+    {"zone": "RURAL", "code": "LANDSCAPE_ENVIRONMENT", "name": "Rural landscape and environment precinct"},
+    {"zone": "EMERGING_COMMUNITY", "code": "UPPER_COOMERA", "name": "Upper Coomera precinct"}
    ],
    "local_plans": [],
    "raw_scopes": {
+    "Emerging community zone": [{"level": "ZONE", "zone": "EMERGING_COMMUNITY"}],
+    "High density residential zone": [{"level": "ZONE", "zone": "HIGH_DENSITY_RESIDENTIAL"}],
+    "Limited development (constrained land) zone": [{"level": "ZONE", "zone": "LIMITED_DEVELOPMENT_CONSTRAINED_LAND"}],
+    "Rural zone": [{"level": "ZONE", "zone": "RURAL"}],
     "Low density residential zone": [{"level": "ZONE", "zone": "LOW_DENSITY_RESIDENTIAL"}],
     "Medium density residential zone": [{"level": "ZONE", "zone": "MEDIUM_DENSITY_RESIDENTIAL"}],
     "Rural residential zone": [{"level": "ZONE", "zone": "RURAL_RESIDENTIAL"}],
@@ -80,7 +92,10 @@
    "zones": [
     {"code": "GENERAL_RESIDENTIAL", "name": "General residential zone", "regulated": "GENERAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "5.5.6.2 (Suburban neighbourhood; same form in other precincts)"},
     {"code": "EMERGING_COMMUNITY", "name": "Emerging community zone", "regulated": "EMERGING_COMMUNITY", "dwelling_house_permitted": null, "basis": null},
-    {"code": "RURAL_RESIDENTIAL", "name": "Rural residential zone", "regulated": "RURAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "5.5.11"}
+    {"code": "RURAL_RESIDENTIAL", "name": "Rural residential zone", "regulated": "RURAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "5.5.11"},
+    {"code": "RURAL", "name": "Rural zone", "regulated": "RURAL", "dwelling_house_permitted": true, "basis": "Table 5.5.10.1"},
+    {"code": "TOWNSHIP", "name": "Township zone", "regulated": "TOWNSHIP", "dwelling_house_permitted": true, "basis": "Table 5.5.12.3.1 (Township residential precinct only)"},
+    {"code": "LIMITED_DEVELOPMENT", "name": "Limited development zone", "regulated": "LIMITED_DEVELOPMENT", "dwelling_house_permitted": false, "basis": "Table 5.5.8.1 and Table 5.7.1: impact assessment (flood / storm tide constrained land)"}
    ],
    "precincts": [
     {"zone": "GENERAL_RESIDENTIAL", "code": "COASTAL_COMMUNITIES", "name": "Coastal communities precinct"},
@@ -88,7 +103,16 @@
     {"zone": "GENERAL_RESIDENTIAL", "code": "NEXT_GENERATION_NEIGHBOURHOOD", "name": "Next generation neighbourhood precinct"},
     {"zone": "GENERAL_RESIDENTIAL", "code": "URBAN_NEIGHBOURHOOD", "name": "Urban neighbourhood precinct"},
     {"zone": "EMERGING_COMMUNITY", "code": "TRANSITION_DEVELOPED_LOT", "name": "Transition precinct (developed lot), other than Morayfield South urban area"},
-    {"zone": "EMERGING_COMMUNITY", "code": "TRANSITION_DEVELOPED_LOT_MORAYFIELD_SOUTH", "name": "Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"}
+    {"zone": "EMERGING_COMMUNITY", "code": "TRANSITION_DEVELOPED_LOT_MORAYFIELD_SOUTH", "name": "Transition precinct (developed lot) in Morayfield South urban area (Figure 9.3.1.1)"},
+    {"zone": "RURAL", "code": "AGRICULTURE", "name": "Agriculture precinct"},
+    {"zone": "RURAL", "code": "CEDARTON_MT_NEBO", "name": "Cedarton Foresters Cooperative and Mt Nebo plant nursery precinct"},
+    {"zone": "RURAL", "code": "HAMLET", "name": "Hamlet precinct"},
+    {"zone": "RURAL", "code": "RURAL_LIVING_INVESTIGATION", "name": "Rural living investigation precinct"},
+    {"zone": "RURAL", "code": "WOODFORDIA_ABBEY", "name": "Woodfordia and abbey surrounds precinct"},
+    {"zone": "TOWNSHIP", "code": "TOWNSHIP_CENTRE", "name": "Township centre precinct"},
+    {"zone": "TOWNSHIP", "code": "TOWNSHIP_CONVENIENCE", "name": "Township convenience precinct"},
+    {"zone": "TOWNSHIP", "code": "TOWNSHIP_INDUSTRY", "name": "Township industry precinct"},
+    {"zone": "TOWNSHIP", "code": "TOWNSHIP_RESIDENTIAL", "name": "Township residential precinct"}
    ],
    "local_plans": [
     {"code": "CABOOLTURE_WEST", "name": "Caboolture West local plan", "type": "LOCAL_PLAN",
@@ -105,7 +129,15 @@
     "General residential zone - Suburban neighbourhood precinct": [{"level": "PRECINCT", "precinct": "GENERAL_RESIDENTIAL/SUBURBAN_NEIGHBOURHOOD"}],
     "General residential zone - Urban neighbourhood precinct": [{"level": "PRECINCT", "precinct": "GENERAL_RESIDENTIAL/URBAN_NEIGHBOURHOOD"}],
     "Redcliffe Kippa-Ring local plan - Interim residential precinct": [{"level": "LOCAL_PLAN_PRECINCT", "local_plan_precinct": "REDCLIFFE_KIPPA_RING/INTERIM_RESIDENTIAL"}],
-    "Rural residential zone": [{"level": "ZONE", "zone": "RURAL_RESIDENTIAL"}]
+    "Rural residential zone": [{"level": "ZONE", "zone": "RURAL_RESIDENTIAL"}],
+    "Limited development zone": [{"level": "ZONE", "zone": "LIMITED_DEVELOPMENT"}],
+    "Rural zone": [{"level": "ZONE", "zone": "RURAL"}],
+    "Rural zone - Agriculture precinct": [{"level": "PRECINCT", "precinct": "RURAL/AGRICULTURE"}],
+    "Rural zone - Cedarton Foresters Cooperative and Mt Nebo plant nursery precinct": [{"level": "PRECINCT", "precinct": "RURAL/CEDARTON_MT_NEBO"}],
+    "Rural zone - Hamlet precinct": [{"level": "PRECINCT", "precinct": "RURAL/HAMLET"}],
+    "Rural zone - Rural living investigation precinct": [{"level": "PRECINCT", "precinct": "RURAL/RURAL_LIVING_INVESTIGATION"}],
+    "Rural zone - Woodfordia and abbey surrounds precinct": [{"level": "PRECINCT", "precinct": "RURAL/WOODFORDIA_ABBEY"}],
+    "Township zone - Township residential precinct": [{"level": "PRECINCT", "precinct": "TOWNSHIP/TOWNSHIP_RESIDENTIAL"}]
    }
   },
   "sunshine_coast": {
@@ -117,13 +149,15 @@
     {"code": "TOURIST_ACCOMMODATION", "name": "Tourist accommodation zone", "regulated": "TOURIST_ACCOMMODATION", "dwelling_house_permitted": null, "basis": null},
     {"code": "LIMITED_DEVELOPMENT_LANDSCAPE_RESIDENTIAL", "name": "Limited development (landscape residential) zone", "regulated": "LIMITED_DEVELOPMENT", "dwelling_house_permitted": true, "basis": "Table 5.5.18"},
     {"code": "RURAL_RESIDENTIAL", "name": "Rural residential zone", "regulated": "RURAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.20"},
-    {"code": "RURAL", "name": "Rural zone", "regulated": "RURAL", "dwelling_house_permitted": null, "basis": null}
+    {"code": "RURAL", "name": "Rural zone", "regulated": "RURAL", "dwelling_house_permitted": null, "basis": null},
+    {"code": "EMERGING_COMMUNITY", "name": "Emerging community zone", "regulated": "EMERGING_COMMUNITY", "dwelling_house_permitted": true, "basis": "Table 5.5.17 (outside the Palmview declared master planned area)"}
    ],
    "precincts": [],
    "local_plans": [
     {"code": "BLACKALL_RANGE", "name": "Blackall Range local plan", "type": "LOCAL_PLAN", "precincts": []}
    ],
    "raw_scopes": {
+    "Emerging community zone": [{"level": "ZONE", "zone": "EMERGING_COMMUNITY"}],
     "High density residential zone": [{"level": "ZONE", "zone": "HIGH_DENSITY_RESIDENTIAL"}],
     "Limited development (landscape residential) zone": [{"level": "ZONE", "zone": "LIMITED_DEVELOPMENT_LANDSCAPE_RESIDENTIAL"}],
     "Low density residential zone": [{"level": "ZONE", "zone": "LOW_DENSITY_RESIDENTIAL"}],

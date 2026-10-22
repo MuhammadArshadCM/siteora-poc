@@ -10,7 +10,7 @@ The dataset is plain SQL. Load order is in [`db/load_all.sql`](../db/load_all.sq
 | `020_state_provisions.sql` | Verbatim clauses from the Building Act, Building Regulation, Planning Regulation, QHC, MP 1.1, MP 1.2, MP 1.4, MP 3.4, NMP 1.9 |
 | `021_state_rules.sql` | 106 state rule versions, relationships, state-wide and per-LG instrument applicability, open issues |
 | `030_council_*.sql` | **Generated** from `research/councils/*.json`: scheme + version, zones, overlays, every quoted provision, draft rules |
-| `031_council_curated.sql`, `032_council_curated_batch2.sql`, `033_council_curated_brisbane.sql` | Hand-encoded council rules (85) that the engine uses |
+| `031_council_curated.sql` to `036_council_curated_remaining_zones.sql` | Hand-encoded council rules that the engine uses (035–036 add the zones that had none: Gold Coast Rural, Emerging community, High density, Limited development; Moreton Bay Rural, Township, Limited development; Brisbane High density) |
 
 ## Excerpt — a verified provision
 

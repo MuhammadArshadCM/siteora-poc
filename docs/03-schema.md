@@ -139,7 +139,7 @@ one, and `v_untraceable_rules` must return zero rows (it does). The engine can t
 * `db/030_council_*.sql` is **generated** from the research files (`research/councils/*.json`) by
   `server-ts/src/tools/import-council-research.ts` (`npm run import-research`). Every quoted provision is loaded verbatim, and every extracted rule is loaded
   as a `DRAFT`, `automatable = false` rule with the extracted value and the conditions kept as text.
-* `db/031_council_curated.sql`, `db/032_council_curated_batch2.sql` and `db/033_council_curated_brisbane.sql` are hand-encoded: proper scopes (zones/precincts/local plans), subjects,
+* `db/031_council_curated.sql` to `db/036_council_curated_remaining_zones.sql` are hand-encoded: proper scopes (zones/precincts/local plans), subjects,
   conditions and expressions. Each curated rule `REPLACES` its draft, which becomes `SUPERSEDED`.
   Only curated (ACTIVE) rules are used by the engine.
 

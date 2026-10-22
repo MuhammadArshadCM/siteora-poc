@@ -166,6 +166,69 @@
       "quote": "|  | Building work if in the Dwelling house character overlay and on a small lot: - outside the building envelope contained in the acceptable outcomes in section A or section B of the Dwelling house (small lot) code; or - outside the building envelope contained in a development approval to the extent it differs from (a) above. | If for a dwelling house involving one or more of the following: - aerials or sewer vents on the roof; - enclosing under an existing house (except where located in an overlay that makes such development assessable e.g. Flood overlay and Heritage overlay); - 1 unenclosed patio or gazebo (maximum roofed area 16m2 and maximum height 3m); - a swimming pool and/or spa (of any size) and unenclosed ancillary shade structures. Any shade structures are to have a maximum roofed area 10m2 and maximum height 3m; - unenclosed roofed ground-level walkway (maximum 1.3m wide and  ...",
       "clause": "Table 5.3.4.1",
       "source_url": "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/222/0/false/28-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Dwelling house (MCU) - zone table",
+      "zone": "High density residential zone (Up to 8 storeys and Up to 15 storeys zone precincts - no precinct distinction)",
+      "level": "Accepted development only if identified in schedule 6, part 2 of the Regulation; otherwise Impact assessment",
+      "conditions": "Table 5.5.4 has no accepted-subject-to-requirements or code-assessable row for Dwelling house. Planning Regulation 2017 sch 6 pt 2 s2(2)(a) excludes the high density residential zone, so the accepted limb never applies in HDR; the use then falls into 'Any use listed in this table and not meeting the description ...' -> Impact assessment (benchmark: the planning scheme). Any lot size.",
+      "quote": "|  | Dwelling house | Accepted development | If identified in schedule 6, part 2 of the Regulation | Not applicable | Note—Where an overlay applies, a dwelling house may become assessable development. Refer to section 5.10.\nNote—All dwelling houses in the High density residential zone may become assessable development as the Dwelling house character overlay applies to all land within this zone. The relevant assessment benchmarks identified in section 5.10 are the Dwelling house code or the Dwelling house (small lot) code. | ... |  | | |\nImpact assessment | | |  | Any other use not listed in this table.\nAny use listed in this table and not meeting the description listed in the \"Categories of development and assessment\" column.\nAny other undefined use. | The planning scheme |",
+      "clause": "Table 5.5.4",
+      "source_url": "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/295/0/false/28-Sep-2026/false"
+    },
+    {
+      "use_or_work": "MCU for a new dwelling house (Dwelling house character overlay)",
+      "zone": "High density residential zone",
+      "level": "Impact assessment",
+      "conditions": "Dwelling house character overlay covers all HDR land. Benchmarks: the planning scheme including the Dwelling house code (not small lot) or Dwelling house (small lot) code (small lot) and the HDR zone code (which says a new dwelling house is not accommodated). Any lot size.",
+      "quote": "|  | MCU for a new dwelling house if in the High density residential zone or Tourist accommodation zone | Assessable development—Impact assessment | - | The planning scheme including:\nDwelling house code if not on a small lot\nDwelling house (small lot) code if on a small lot\nThe applicable zone code |",
+      "clause": "Table 5.10.9",
+      "source_url": "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/483/0/false/28-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Building work for an extension to a dwelling house (Dwelling house character overlay)",
+      "zone": "High density residential zone",
+      "level": "Accepted subject to requirements / Code assessment",
+      "conditions": "Accepted subject to requirements if complying with all AOs of the Dwelling house code (not a small lot: >= 450 m2 and not a rear lot < 600 m2 excl. access way) or of the Dwelling house (small lot) code (small lot); otherwise code assessment against that code + the HDR zone code. On small lots, prescribed accepted development in Table 5.3.4.1 (rows 4587 renovation within envelope, 4588 raising, 4589 minor structures incl. shed/carport/pool) applies first where met.",
+      "quote": "|  | Building work for an extension to a dwelling house if in the Low density residential zone, Low-medium density residential zone, Medium density residential zone , High density residential zone, Character residential zone or Tourist accommodation zone | Accepted development, subject to compliance with identified requirements | If complying with all acceptable outcomes in the:\n- Dwelling house code if not on a small lot;\n- Dwelling house (small lot) code if on a small lot | Not applicable | Assessable development—Code assessment | If not complying with all acceptable outcomes in the:\n- Dwelling house code if not on a small lot;\n- Dwelling house (small lot) code if on a small lot | Dwelling house code if not on a small lot\nDwelling house (small lot) code if on a small lot\nThe applicable zone code | Note—The Dwelling house character overlay applies to land identified within the Low density residential zone, Low-medium density residential zone, Medium density residential zone, High density residential zone, Character residential zone or Tourist accommodation zone. The category of assessment for a dwelling house outside of the Dwelling house character overlay is specified in section 5.5 and section 5.7.",
+      "clause": "Table 5.10.9",
+      "source_url": "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/483/0/false/28-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Building work for a dwelling house (zone building-work table)",
+      "zone": "High density residential zone",
+      "level": "Accepted development (default), overridden by the overlay table",
+      "conditions": "Table 5.7.1 has no dwelling-house row for HDR (only demolition of rooming accommodation registered as a boarding house). s5.3.2: building work is accepted unless the tables state otherwise; Table 5.10.9 (Dwelling house character overlay) then overrides for extensions.",
+      "quote": "|  | High density residential zone | Assessable development—Code assessment | If involving demolition, partial demolition or removal of a building that is rooming accommodation registered as a boarding house, where not described in section 5.3.4 as accepted development\nEditor’s note—Boarding houses are registered as residential services with the Office of Fair Trading. | Demolition of rooming accommodation code\nHigh density residential zone code | ... |  | | |\nAccepted development | | |  | | |\nAny other building work not listed in this table. | | Editor’s note—Unless listed above, the default category of assessment is accepted, unless otherwise prescribed in the Regulation. || s5.3.2: - Building work and operational work are accepted development, unless the tables of assessment state otherwise or unless otherwise prescribed in the Act or the Regulation.",
+      "clause": "Table 5.7.1; s5.3.2",
+      "source_url": "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/226/0/false/28-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Prescribed accepted development - Dwelling house character overlay, small lot, raising only (rows 4587/4589 already in brisbane.json)",
+      "zone": "High density residential zone",
+      "level": "Prescribed accepted development (not assessable under the scheme)",
+      "conditions": "Small lot only (< 450 m2, or rear lot < 600 m2 excl. access way). There is no equivalent prescribed row for non-small lots in the Dwelling house character overlay. Siting provisions of the Building Regulation 2021 still apply.",
+      "quote": "|  | Building work if in the Dwelling house character overlay and on a small lot where:\n- outside the building envelope contained in the acceptable outcomes in section A or section B of the Dwelling house (small lot) code; or\n- outside the building envelope contained in a development approval to the extent it differs from (a) above. | If for a dwelling house involving only raising a building where:\n- the side boundary setbacks comply with the setbacks under the Building Regulation 2021;\n- the maximum height does not exceed 9.5m above ground level; or\n- the maximum height does not exceed 11.5m above ground level where within the 3 or 4 storey mix zone precinct of the Low-medium density residential zone;\n- any windows that are within 2m at ground level or 9m above ground level of a neighbouring dwelling house (refer to Figure g in the Dwelling house (small lot) code):\n- are offset from the window of a habitable room in the adjacent dwelling house to limit direct outlook as shown in Figure h in the Dwelling house (small lot) code; or\n- have sill heights of 1.5m above floor level; or\n- are covered by fixed obscure glazing in any part of the window below 1.5m above floor level; or\n- have fixed external screens; or\n- in the case of screening for a ground floor level, fencing to a height of 1.5m above ground floor level;\n- any screening devices required above, are:\n- solid translucent screens, perforated or slatted panels or fixed louvres that have a maximum of 25% openings, with a maximum opening dimension of 50mm, that are permanently fixed and durable (refer to Figure j and Figure i in the Dwelling house (small lot) code);\n- offset a minimum of 0.3m from the face of any window;\n- may be hinged to facilitate emergency egress only.\nNote—For the purpose of this provision the setbacks of the Building Regulation 2021 are to be read as taken to the wall, not the outermost projection.\nNote—Unless specified, the above building works are still subject to the siting provisions of the Building Regulation 2021. |",
+      "clause": "Table 5.3.4.1",
+      "source_url": "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/222/0/false/28-Sep-2026/false"
+    },
+    {
+      "use_or_work": "Amenity and aesthetics referral (Planning Regulation sch 9) for class 1 / class 10 building work",
+      "zone": "High density residential zone",
+      "level": "No Council amenity/aesthetics referral declared for HDR (zone not listed)",
+      "conditions": "Table 1.6.2 item 1 and Table 1.7.4 list the zones where the Dwelling house / small lot codes are the referral benchmarks; HDR is not listed. Concurrence referral for alternative-provision non-compliance (Table 1.6.2 items 2-3) is not zone-limited.",
+      "quote": "|  | 1 | Schedule 9, Part 3, Division 2, Table 1 of the Regulation | Whether a single detached class 1(a)(i) building, class 1(a)(ii) building made up of not more than 2 attached dwellings or a class 10 building or structure will impact on the amenity or the aesthetics of the locality | Traditional building character (design) overlay code where the building work is in the traditional building character overlay | Dwelling house code or Dwelling house (small lot) code where the building work is in the following zones:\n- Rural zone\n- Rural residential zone\n- Environmental Management zone\n- Low density residential zone\n- Character residential zone and zone precincts\n- Low–medium density residential zone and zone precincts\n- Medium density residential zone\n- Emerging community zone\n- Township zone | The neighbourhood plan code relevant to the building work | || Table 1.7.4: |  | Land in the following zones:\n- Rural zone\n- Rural residential zone\n- Environmental management zone\n- Low density residential zone\n- Character residential zone and zone precincts\n- Low–medium density residential zone and zone precincts\n- Medium density residential zone\n- Emerging community zone | Dwelling house code\nDwelling house (small lot) code |",
+      "clause": "Table 1.6.2 item 1; s1.7.4 Table 1.7.4",
+      "source_url": "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/278/0/false/28-Sep-2026/false"
+    },
+    {
+      "use_or_work": "State accepted MCU for a dwelling house (Planning Regulation 2017 sch 6 pt 2 s2(2))",
+      "zone": "High density residential zone",
+      "level": "Not available in HDR",
+      "conditions": "State-level accepted MCU for a dwelling house excludes the medium density residential zone and the high density residential zone.",
+      "quote": "(2) A material change of use of premises for a dwelling house, if— (a) the material change of use is for a residential purpose in a residential zone other than a medium density residential zone or high density residential zone; and (b) the material change of use does not involve a basement or an underground parking area; and (c) 1 of the following applies— (i) no relevant overlay applies to the premises; (ii) only an overlay about bush fire hazards applies to the premises and the premises are less than 2,000m2; (iii) a relevant overlay applies to the premises and the application of the overlay does not result in the material change of use being categorised as assessable development.",
+      "clause": "Planning Regulation 2017 sch 6 pt 2 s2(2)",
+      "source_url": "https://www.legislation.qld.gov.au/view/whole/xml/inforce/current/sl-2017-0078"
     }
   ],
   "definitions": [
@@ -386,7 +449,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -428,7 +492,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -469,7 +534,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -546,7 +612,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -663,7 +730,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -709,7 +777,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -750,7 +819,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -793,7 +863,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -839,7 +910,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -883,7 +955,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -928,7 +1001,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -972,7 +1046,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1050,7 +1125,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1093,7 +1169,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1136,7 +1213,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1177,7 +1255,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1219,7 +1298,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1261,7 +1341,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1306,7 +1387,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1347,7 +1429,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1389,7 +1472,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1432,7 +1516,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1474,7 +1559,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1515,7 +1601,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1557,7 +1644,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1598,7 +1686,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1639,7 +1728,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1681,7 +1771,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1722,7 +1813,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1763,7 +1855,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1808,7 +1901,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1849,7 +1943,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1893,7 +1988,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1935,7 +2031,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -1978,7 +2075,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -2026,7 +2124,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -2073,7 +2172,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -2121,7 +2221,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -2169,7 +2270,8 @@
         "Emerging community zone",
         "Environmental management zone",
         "Rural zone",
-        "Township zone"
+        "Township zone",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -2207,7 +2309,8 @@
       "clause": "1.7.6",
       "provision_type": "OTHER",
       "zones": [
-        "all"
+        "all",
+        "High density residential zone"
       ],
       "overlay": null,
       "local_plan": null,
@@ -2243,7 +2346,8 @@
       "clause": "5.3.4 Table 5.3.4.1 (Building work, Dwelling house character overlay, small lot)",
       "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
       "zones": [
-        "zones covered by Dwelling house character overlay (LDR, LMR, MDR, HDR, CR, Tourist accommodation)"
+        "zones covered by Dwelling house character overlay (LDR, LMR, MDR, HDR, CR, Tourist accommodation)",
+        "High density residential zone"
       ],
       "overlay": "Dwelling house character overlay",
       "local_plan": null,
@@ -2285,7 +2389,8 @@
       "clause": "5.3.4 Table 5.3.4.1 (Building work, Dwelling house character overlay, small lot, within envelope)",
       "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
       "zones": [
-        "zones covered by Dwelling house character overlay"
+        "zones covered by Dwelling house character overlay",
+        "High density residential zone"
       ],
       "overlay": "Dwelling house character overlay",
       "local_plan": null,
@@ -2836,6 +2941,112 @@
       "verification_status": "VERIFIED_VERBATIM",
       "needs_manual_review": true,
       "notes": "Not listed in Table 1.6.1 (only PO3/AO3.3-AO3.5 of this NP are). Heading: 'For accepted development subject to compliance with identified requirements (acceptable outcomes only) or assessable development' / 'If for a dwelling house:'. 'Building footprint' rather than 'site cover'."
+    },
+    {
+      "rule_key": "bcc_hdr_zone_new_dwelling_house_not_accommodated",
+      "code": "High density residential zone code",
+      "clause": "6.2.1.4 (4)(d) (Development location and uses overall outcomes)",
+      "provision_type": "OTHER",
+      "zones": [
+        "High density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "any lot size (no lot-size condition)",
+      "structure_scope": "new dwelling house (material change of use); does not address extensions or domestic outbuildings",
+      "topic": "OTHER",
+      "verbatim_text": "Development for a new dwelling house or dual occupancy is not accommodated.",
+      "structured": {
+        "parameter": "new_dwelling_house_supported_in_zone",
+        "operator": "=",
+        "value": null,
+        "unit": null,
+        "conditions": [
+          "overall outcome: a new dwelling house is not accommodated in the zone (both Up to 8 storeys and Up to 15 storeys zone precincts)",
+          "new dwelling house MCU is impact assessable (Table 5.5.4 'Any use listed in this table and not meeting the description'; Table 5.10.9 Dwelling house character overlay row 13134); this overall outcome is an assessment benchmark (the applicable zone code)"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": null,
+      "source_url": "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/24/0/false/28-Sep-2026/false",
+      "page_or_anchor": "rule 22134 (section 6.2.1.4, heading rule 703)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "The HDR zone code (6.2.1.4) contains only purpose and overall outcomes - no performance/acceptable outcome table and no numeric siting standard for a dwelling house, domestic outbuilding or pool. Building height in the zone is set for multiple dwellings (Table 5.5.4 / Multiple dwelling code: 8 storeys in the Up to 8 storeys zone precinct, 15 storeys in the Up to 15 storeys zone precinct), not for dwelling houses. Related overall outcome 6.2.1.4(4)(e): 'Development is not required to be responsive to or to provide a sensitive transition to a lower density building, including a dwelling house on an adjoining site within the High density residential zone ...'. Siting-relevant only as a flag: a new dwelling house in HDR needs an impact assessable DA and conflicts with the zone intent."
+    },
+    {
+      "rule_key": "bcc_hdr_pad_dhc_small_lot_raising_height",
+      "code": "Part 5 Table 5.3.4.1 Prescribed accepted development",
+      "clause": "5.3.4 Table 5.3.4.1 (Building work, Dwelling house character overlay, small lot, outside building envelope - raising only)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "High density residential zone"
+      ],
+      "overlay": "Dwelling house character overlay",
+      "local_plan": null,
+      "lot_conditions": "small lot (lot < 450 m2, or rear lot < 600 m2 excl. access way); building work outside the building envelope in the acceptable outcomes of section A or B of the Dwelling house (small lot) code (or outside an approved envelope)",
+      "structure_scope": "existing dwelling house - raising a building only",
+      "topic": "BUILDING_HEIGHT",
+      "verbatim_text": "|  | Building work if in the Dwelling house character overlay and on a small lot where:\n- outside the building envelope contained in the acceptable outcomes in section A or section B of the Dwelling house (small lot) code; or\n- outside the building envelope contained in a development approval to the extent it differs from (a) above. | If for a dwelling house involving only raising a building where:\n- the side boundary setbacks comply with the setbacks under the Building Regulation 2021;\n- the maximum height does not exceed 9.5m above ground level; or\n- the maximum height does not exceed 11.5m above ground level where within the 3 or 4 storey mix zone precinct of the Low-medium density residential zone;\n- any windows that are within 2m at ground level or 9m above ground level of a neighbouring dwelling house (refer to Figure g in the Dwelling house (small lot) code):\n- are offset from the window of a habitable room in the adjacent dwelling house to limit direct outlook as shown in Figure h in the Dwelling house (small lot) code; or\n- have sill heights of 1.5m above floor level; or\n- are covered by fixed obscure glazing in any part of the window below 1.5m above floor level; or\n- have fixed external screens; or\n- in the case of screening for a ground floor level, fencing to a height of 1.5m above ground floor level;\n- any screening devices required above, are:\n- solid translucent screens, perforated or slatted panels or fixed louvres that have a maximum of 25% openings, with a maximum opening dimension of 50mm, that are permanently fixed and durable (refer to Figure j and Figure i in the Dwelling house (small lot) code);\n- offset a minimum of 0.3m from the face of any window;\n- may be hinged to facilitate emergency egress only.\nNote—For the purpose of this provision the setbacks of the Building Regulation 2021 are to be read as taken to the wall, not the outermost projection.\nNote—Unless specified, the above building works are still subject to the siting provisions of the Building Regulation 2021. |",
+      "structured": {
+        "parameter": "max_building_height",
+        "operator": "<=",
+        "value": 9.5,
+        "unit": "m",
+        "conditions": [
+          "only for raising an existing dwelling house on a small lot in the Dwelling house character overlay (all HDR land)",
+          "side boundary setbacks comply with the setbacks under the Building Regulation 2021 (QDC/QHC), read as taken to the wall, not the outermost projection",
+          "windows within 2m at ground level or 9m above ground level of a neighbouring dwelling house: offset, 1.5m sill height, obscure glazing below 1.5m, fixed external screens, or 1.5m fencing for ground floor",
+          "screens max 25% openings, max opening dimension 50mm, offset min 0.3m from window"
+        ],
+        "exceptions": [
+          "11.5m limit applies only in the 3 or 4 storey mix zone precinct of the Low-medium density residential zone - not in HDR"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "Height measured above ground level (SC1.2 building height). Setbacks under the Building Regulation 2021 are 'to be read as taken to the wall, not the outermost projection' for this provision.",
+      "source_url": "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/222/0/false/28-Sep-2026/false",
+      "page_or_anchor": "rule 4588",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Prescribed accepted development (not assessable under the scheme) - not an alternative provision. Row is not zone-limited; it applies in every zone covered by the Dwelling house character overlay (LDR, LMR, MDR, HDR, CR, Tourist accommodation). Not previously captured in brisbane.json (only rows 4587 and 4589 were). Table 5.5.4 note: 'the Dwelling house character overlay applies to all land within this zone'. If raising does not meet these requirements it falls back to Table 5.10.9 (building work for an extension -> Dwelling house (small lot) code)."
+    },
+    {
+      "rule_key": "bcc_hdr_pad_dhc_small_lot_raising_side_setback",
+      "code": "Part 5 Table 5.3.4.1 Prescribed accepted development",
+      "clause": "5.3.4 Table 5.3.4.1 (Building work, Dwelling house character overlay, small lot, outside building envelope - raising only)",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "High density residential zone"
+      ],
+      "overlay": "Dwelling house character overlay",
+      "local_plan": null,
+      "lot_conditions": "small lot (lot < 450 m2, or rear lot < 600 m2 excl. access way); building work outside the building envelope in the acceptable outcomes of section A or B of the Dwelling house (small lot) code (or outside an approved envelope)",
+      "structure_scope": "existing dwelling house - raising a building only",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "|  | Building work if in the Dwelling house character overlay and on a small lot where:\n- outside the building envelope contained in the acceptable outcomes in section A or section B of the Dwelling house (small lot) code; or\n- outside the building envelope contained in a development approval to the extent it differs from (a) above. | If for a dwelling house involving only raising a building where:\n- the side boundary setbacks comply with the setbacks under the Building Regulation 2021;\n- the maximum height does not exceed 9.5m above ground level; or\n- the maximum height does not exceed 11.5m above ground level where within the 3 or 4 storey mix zone precinct of the Low-medium density residential zone;\n- any windows that are within 2m at ground level or 9m above ground level of a neighbouring dwelling house (refer to Figure g in the Dwelling house (small lot) code):\n- are offset from the window of a habitable room in the adjacent dwelling house to limit direct outlook as shown in Figure h in the Dwelling house (small lot) code; or\n- have sill heights of 1.5m above floor level; or\n- are covered by fixed obscure glazing in any part of the window below 1.5m above floor level; or\n- have fixed external screens; or\n- in the case of screening for a ground floor level, fencing to a height of 1.5m above ground floor level;\n- any screening devices required above, are:\n- solid translucent screens, perforated or slatted panels or fixed louvres that have a maximum of 25% openings, with a maximum opening dimension of 50mm, that are permanently fixed and durable (refer to Figure j and Figure i in the Dwelling house (small lot) code);\n- offset a minimum of 0.3m from the face of any window;\n- may be hinged to facilitate emergency egress only.\nNote—For the purpose of this provision the setbacks of the Building Regulation 2021 are to be read as taken to the wall, not the outermost projection.\nNote—Unless specified, the above building works are still subject to the siting provisions of the Building Regulation 2021. |",
+      "structured": {
+        "parameter": "min_side_boundary_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "side boundary setbacks comply with the setbacks under the Building Regulation 2021 (QDC MP1.1/MP1.2, now QHC)",
+          "measured to the wall, not the outermost projection (scheme note)"
+        ],
+        "exceptions": [],
+        "formula_text": "setback = Building Regulation 2021 (QDC/QHC) side setback for the raised building height, measured to the wall"
+      },
+      "alternative_provision_to_qdc_qhc": "NO",
+      "measurement_notes": "'For the purpose of this provision the setbacks of the Building Regulation 2021 are to be read as taken to the wall, not the outermost projection.'",
+      "source_url": "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/222/0/false/28-Sep-2026/false",
+      "page_or_anchor": "rule 4588",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Same row as bcc_hdr_pad_dhc_small_lot_raising_height (split by topic, as brisbane.json does for multi-topic clauses). Row applies in all Dwelling house character overlay zones, not only HDR."
     }
   ],
   "overlays_affecting_siting": [
@@ -2893,7 +3104,15 @@
     "Small lot setbacks apply to 'development' with no Class 10a concessions (e.g. AO7 rear 3m/6m); confirm Council practice for sheds/carports in rear setback of small lots (likely concurrence referral under Table 1.6.2).",
     "Swimming pools: City Plan contains no pool boundary setback provision; pools appear only in prescribed accepted development (Table 5.3.4.1) and as impervious area (small lot Section B AO20). Pool siting falls to QDC/QHC and pool safety laws.",
     "Package W schedule (v37) text for Table 5.5.2 includes a note that 'All dwelling houses in the Low-medium density residential zone may become assessable development as the Dwelling house character overlay applies to all land within this zone' - this note was not present in the live ePlan Table 5.5.2 text retrieved; reconcile.",
-    "Dwelling house character overlay mapping extent per lot needs the overlay map (GIS) - not extracted."
+    "Dwelling house character overlay mapping extent per lot needs the overlay map (GIS) - not extracted.",
+    "HEIGHT GAP: neither the Dwelling house code (AO2 / AO3) nor Section A of the Dwelling house (small lot) code (AO3 / AO4) names the High density residential zone, so there is NO acceptable-outcome height for a dwelling house in HDR on a lot of 180 m2 or more. The '9.5 m' assumption for standard lots does not hold in HDR. For accepted-subject-to-requirements extensions there is no scheme height AO to meet (QDC/QHC height-dependent setbacks still apply); for assessable development only the performance outcomes (DH code PO2/PO3; small lot code PO3/PO4) could be used, and their zone scope is not stated. Section A AO2 (building envelope) refers to 'the acceptable outcome for maximum building height', which does not exist for HDR. Exceptions: lots < 180 m2 (Section B AO18: 11.5 m and 3 storeys, not zone-limited) and raising on a small lot under Table 5.3.4.1 row 4588 (9.5 m). Needs manual review / Council confirmation.",
+    "Existing brisbane.json records whose text applies in HDR (dh_parking_spaces, dh_secondary_dwelling_size, dh_building_envelope_plan, all sl_* except sl_max_height_low_density, sl_max_height_lmr_3_4_storey_mdr and sl_built_to_boundary_character_precinct, and all slb_*) have zones arrays that omit 'High density residential zone'. Recommend adding HDR to those arrays rather than duplicating records. NOT applicable in HDR: dh_max_height_low_density, dh_max_height_lmr_3_4_storey_mdr, dh_ridgeline_height, sl_max_height_low_density, sl_max_height_lmr_3_4_storey_mdr, sl_built_to_boundary_character_precinct, the AO6(c)(iv) limb of sl_side_zero_setback, tbc_* (TBC overlay not applied to dwelling houses in HDR; Pre-1911 overlay aside), np_* (the New Farm / Sherwood precincts named are not HDR).",
+    "Standard lots (>= 450 m2 and not a rear lot < 600 m2) in HDR: the Dwelling house code has no setback or site-cover AO, so Class 10a siting (setbacks, site cover) and pool siting fall to QDC MP1.1/MP1.2 (now QHC) through the Building Regulation 2021. The only scheme numbers are AO1.2 (secondary dwelling max 80 m2 GFA, within 20 m), AO4 (1 parking space) and AO7 (approved envelope).",
+    "Is a detached Class 10a outbuilding (shed/garage/carport) or a swimming pool on a non-small HDR lot 'Building work for an extension to a dwelling house' under Table 5.10.9? If not, it is not listed in Table 5.10.9 or Table 5.7.1 and is accepted development by default (s5.3.2 rule 21880), subject only to Building Regulation siting. On small lots, Table 5.3.4.1 row 4589 makes 1 shed (10 m2, 3 m), carports and pools prescribed accepted; other work outside the envelope falls back to Table 5.10.9 (small lot code). Needs Council/certifier confirmation.",
+    "Does the Dwelling house character overlay really cover every HDR lot? The Table 5.5.4 note says it 'applies to all land within this zone'; the overlay map (Schedule 2) was not checked lot by lot. If a lot were outside the overlay, Table 5.5.4 alone applies (MCU impact; building work accepted by default).",
+    "QHC transition: Table 1.6.1 still cites QDC MP1.1/MP1.2 (same issue as in brisbane.json). Dwelling house (small lot) code PO6/AO6 (incl. the HDR 15 m non-habitable length) is listed in Table 1.6.1 item 11 as an alternative provision; Dwelling house code PO7/AO7 in items 6, 10 and 11; PO4/AO4 in item 8.",
+    "Neighbourhood plans that include HDR land (e.g. inner-city NPs) may set dwelling-house siting numbers or change the category of assessment (section 5.9); none were extracted here. Table 1.6.1 item 6 lists NP codes (e.g. Spring Hill PO1/AO1 and PO7/AO7.2; West End-Woolloongabba PO1/AO1 and PO6/AO6.1-AO6.2; Fortitude Valley PO1/AO1.2) that may cover HDR land.",
+    "Heritage, Pre-1911 building, flood and other overlays can still raise the level of assessment in HDR (section 5.10); not extracted here."
   ],
   "fetch_log": [
     "https://cityplan.brisbane.qld.gov.au/eplan/ (WebFetch) -> HTTP 403",
@@ -2906,6 +3125,20 @@
     "https://www.brisbane.qld.gov.au/content/dam/.../schedule-of-amendments-minor-and-administrative-package-w-v37-2026.pdf -> PDF downloaded, text extracted with pdftotext (tables of assessment amendments, dwelling house notes)",
     "https://brisbane.qld.gov.au/planning-building/do-i-need-approval/types-approval/building-near-boundary/rules-boundary-setback (WebFetch summary) -> council page still refers to QDC MP1.1/MP1.2; no QHC mention; 'City Plan's small lot code prevails over the QDC' (COUNCIL_FACTSHEET, via summariser - not raw text)",
     "https://thegoodbuilder.com.au/the-queensland-housing-code-has-commenced-and-the-old-siting-rules-expire-on-1-september-2029/ -> secondary source on QHC transition (SECONDARY_SOURCE_ONLY)",
-    "WebSearch 'Brisbane City Plan 2014 current version 2026 amendment' and 'Brisbane City Council Queensland Housing Code ...' -> located amendment pages"
+    "WebSearch 'Brisbane City Plan 2014 current version 2026 amendment' and 'Brisbane City Council Queensland Housing Code ...' -> located amendment pages",
+    "https://cityplan.brisbane.qld.gov.au/eplan/api/l/vpr (curl, browser UA) -> 200 JSON; current revision revisionNotes 'v37', planOperative 09/18/2026, revisionDate 09/28/2026, revStatus 'Current', revisionId 280 (confirms brisbane.json: Brisbane City Plan 2014 v37.00/2026)",
+    "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/24/0/false/28-Sep-2026/false -> 200; 6.2.1.4 High density residential zone code (purpose and overall outcomes only; no PO/AO table)",
+    "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/23/0/false/28-Sep-2026/false -> 200; Medium density residential zone code (comparison only)",
+    "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/295/0/false/28-Sep-2026/false -> 200; Table 5.5.4 High density residential zone (rule 17580 Dwelling house; 17589-17590 impact catch-all)",
+    "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/294/0/false/28-Sep-2026/false -> 200; Table 5.5.3 Medium density residential zone (comparison only)",
+    "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/226/0/false/28-Sep-2026/false -> 200; Table 5.7.1 Building work (HDR row 3652: demolition of boarding house only)",
+    "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/222/0/false/28-Sep-2026/false -> 200; s5.3 incl. s5.3.2 rules and Table 5.3.4.1 rows 4587/4588/4589",
+    "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/483/0/false/28-Sep-2026/false -> 200; Table 5.10.9 Dwelling house character overlay (rows 13132-13137)",
+    "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/162/0/false/28-Sep-2026/false -> 200; 9.3.7 Dwelling house code",
+    "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/163/0/false/28-Sep-2026/false -> 200; 9.3.8 Dwelling house (small lot) code",
+    "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/278/0/false/28-Sep-2026/false -> 200; Part 1 (Tables 1.6.1, 1.6.2; s1.7.4 Table 1.7.4)",
+    "https://cityplan.brisbane.qld.gov.au/eplan/api/l/r/236/0/false/28-Sep-2026/false -> 200; SC1.2 definitions (small lot, domestic outbuilding, building height, site cover)",
+    "https://www.legislation.qld.gov.au/view/whole/xml/inforce/current/sl-2017-0078 -> 200 XML (Planning Regulation 2017, reprint first valid 2026-09-11); sch 6 pt 2 s2(2) extracted",
+    "https://www.legislation.qld.gov.au/view/whole/{html,pdf,xml}/inforce/current/sl-2017-0172 -> 200 but wrong instrument (Housing (Freeholding of Land) Regulation 2017) - discarded"
   ]
 }

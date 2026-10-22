@@ -281,6 +281,10 @@ export function buildFacts(loc: any, structure: string, inputs: Record<string, a
     v = yes(k);
     put(k, Boolean(v), v !== null ? "User input" : `ASSUMED: not ${what} (not checked)`);
   }
+  // Gold Coast Emerging community zone: setbacks and site cover differ for a lot created through a residential
+  // subdivision approval. Not in public data, so no default: unanswered, those rules go to manual review.
+  v = yes("lot_from_residential_subdivision");
+  if (v !== null) put("lot_from_residential_subdivision", v, "User input");
   if (num("lot_slope_pct") !== null) put("lot_slope_pct", num("lot_slope_pct"), "User input");
   else put("lot_slope_pct", 0, "ASSUMED: flat lot (height limits rise on slopes over 15 %; enter the slope if steep)");
   put("distance_to_adjoining_habitable_window_m", num("window_distance_m"), "User input");
@@ -423,6 +427,11 @@ export async function run(db: Db, structure: string, inputs: Record<string, any>
   const results = evaluate.resolveWith(loaded, scenario);
   const live = results.filter((r) => r.state !== "DISPLACED")
     .sort((a, b) => cmpTuple([a.regime, String(a.boundary || ""), a.topic], [b.regime, String(b.boundary || ""), b.topic]));
+  // Planning triggers (e.g. a zone where any building work needs an impact-assessable application) carry no siting
+  // value, so the resolver does not return them: say so up front instead.
+  const triggers = loaded.rules.filter((r) => r.role === "TRIGGER" && r.regime === "PLANNING" && loaded.activeIvs.has(r.instrument_version_id)
+    && evaluate.scopeMatches(r, siteDef) && evaluate.subjectMatches(r, structure, loaded.parents))
+    .map((r) => `Planning approval: ${r.title} (${r.rule_version_id}). ${r.interpretation_notes ?? ""}`.trim());
   const keep = ["geocode", "lon", "lat", "council", "parcel", "parcel_geometry", "pda", "zoning", "overlays", "sources", "site_constraints",
     "lookup_failures", "overlay_failures", "not_checked"];
   return {
@@ -430,7 +439,7 @@ export async function run(db: Db, structure: string, inputs: Record<string, any>
     structure: { type: structure, label: STRUCTURES[structure] },
     location: Object.fromEntries(keep.filter((k) => k in loc).map((k) => [k, loc[k]])),
     scheme_viewer: zoning.loadConfig()[loc.council.lg_id]?.scheme_viewer ?? null,
-    warnings: [...loc.warnings,
+    warnings: [...triggers, ...loc.warnings,
       ...(loc.pda ? [`Inside Priority Development Area '${loc.pda.pda_name}': the PDA land use plan applies; QDC/QHC siting parts do not.`] : []),
       ...(loc.zoning.zone_id ? [] : ["Zone unknown: only council-wide and State rules are shown."])],
     applicable_instruments: await applicableInstruments(db, loc.council.lg_id, date),

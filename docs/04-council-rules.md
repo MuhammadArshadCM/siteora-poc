@@ -133,6 +133,34 @@ rules are in the **small lot code** (180–450 m²), the **character overlays** 
 Not encoded yet: small-lot built-to-boundary walls (AO9), building envelope, section B (< 180 m²) Table C setbacks,
 Pre-1911 building overlay, and every other neighbourhood plan (e.g. Ashgrove–Grange).
 
+## Curation batch 5 (21 Oct 2026) — `db/035_council_curated_new_zones.sql` (zones that had no council rules)
+
+Text fetched from the councils' ePlan JSON on 21 Oct 2026 (rule keys `gc_rural_*`, `gc_ec_*`, `mb_rural_*`, `mb_tw_*`).
+
+| Zone | Added rules |
+|---|---|
+| Gold Coast Rural (6.2.20) | Front 10 m, side and rear 6 m, height 9 m — buildings only, QDC alternatives (Table 1.5-1). No site cover rule: QDC applies |
+| Gold Coast Emerging community (6.2.15) | Lot **not** from a residential subdivision: front 10 m, side/rear 6 m, site cover 5 %. Lot **from** a residential subdivision ("unless the earlier approval specifies otherwise"): front 6 m, side/rear 1.5 / 2 / +0.5 per 3 m, site cover 50 %. Height 9 m or the Building height overlay. The user answers `lot_from_residential_subdivision` (form / `--subdivision-lot`); unanswered, both sets go to manual review |
+| Moreton Bay Rural (6.2.10) | Height as mapped (RAD2, alternative provision); Hamlet precinct: outbuildings 3.5 m, road 6 m, side 1.5 m (≤ 1000 m²) / 3 m, rear 4 m (RAD4, not a concurrence matter). No setback, site cover or roofed-area limit for a dwelling house outside the Hamlet precinct: QDC applies |
+| Moreton Bay Township residential precinct (6.2.12.3) | Primary frontage 6.0 m, secondary 3 m; car parking and outbuildings 5.4 m from either frontage; side 1.5 m / 2 m (wall ≥ 4.5 m); rear "refer to QDC"; site cover 50 %; outbuildings 50 / 70 / 80 / 150 m² roofed area by lot size and 4 m (carport forward 3.3 m); house height as mapped |
+| Sunshine Coast Emerging community | Zone code has no numbers and the Dwelling house code's "residential zone" AOs exclude it, so only the all-zone AOs apply: mapped height (AO1, scope widened in 034) and canal setback (AO6, council-wide). Palmview structure-plan heights left as research notes |
+
+Left as drafts (shown to the user as clauses to read): Moreton Bay Rural RAD3 (6 / 4.5 / 4.5 m "other than a dwelling
+house" — unclear whether domestic outbuildings are covered, since the scheme's dwelling house definition includes them),
+Township rear setback (RAD3 says "refer to QDC", the assessable E4 says 6.0 m), lake, waterway and bushfire separations,
+Gold Coast structure heights and pool notes.
+
+## Curation batch 6 (21 Oct 2026) — `db/036_council_curated_remaining_zones.sql`
+
+| Zone | Added rules |
+|---|---|
+| Gold Coast High density residential (6.2.3) | Lots ≥ 400 m²: front 4 m, covered parking 6 m, side/rear 1.5 / 2 / +0.5 per 3 m, site cover 50 %. Lots < 400 m²: the small-lot table (front 4.5 m, parking 6 m, corner 4 m, side/rear 1 / 1.5 / 2 m, Class 10 at 0 m on a south/west boundary), site cover 70 %. Height 9 m or the overlay map |
+| Gold Coast Limited development (constrained land) (6.2.18) | Front 10 m, side/rear 3 m, site cover 10 % (50 % on a lot from a residential reconfiguration approval — same `lot_from_residential_subdivision` question), height 9 m or the overlay map |
+| Moreton Bay Limited development (6.2.8) | Flood / storm-tide land: **any** building work is impact assessable (Table 5.7.1), no accepted siting envelope and no QDC alternative provisions. Encoded as a planning TRIGGER rule; the engine now lists council planning triggers first in `warnings` |
+| Brisbane High density residential | A new dwelling house is impact assessable. Building work for an extension (incl. Class 10a) is accepted subject to the Dwelling house (small lot) code on a small lot, because the Dwelling house character overlay covers all HDR land: the 033 small-lot rules are widened to the zone. Lots of 450 m² or more: no scheme siting numbers (QDC/QHC only); the 9.5 m dwelling height outcome does not name HDR |
+
+Every residential-type zone on the six open council maps now has council rules (or a recorded reason it has none).
+
 ---
 
 ## Common gaps that block full automation

@@ -44,7 +44,7 @@ SELECT define_rule($r${
             {"level": "ZONE", "zone": "SCC:LOW_DENSITY_RESIDENTIAL"}, {"level": "ZONE", "zone": "SCC:MEDIUM_DENSITY_RESIDENTIAL"},
             {"level": "ZONE", "zone": "SCC:HIGH_DENSITY_RESIDENTIAL"}, {"level": "ZONE", "zone": "SCC:TOURIST_ACCOMMODATION"},
             {"level": "ZONE", "zone": "SCC:RURAL"}, {"level": "ZONE", "zone": "SCC:RURAL_RESIDENTIAL"},
-            {"level": "ZONE", "zone": "SCC:LIMITED_DEVELOPMENT_LANDSCAPE_RESIDENTIAL"},
+            {"level": "ZONE", "zone": "SCC:LIMITED_DEVELOPMENT_LANDSCAPE_RESIDENTIAL"}, {"level": "ZONE", "zone": "SCC:EMERGING_COMMUNITY"},
             {"level": "OVERLAY", "overlay": "SCC:OV:HEIGHT_OF_BUILDINGS_AND_STRUCTURES_OVERLAY"}],
  "subjects": ["CLASS_1", "CLASS_10A"],
  "sources": [{"key": "dh_building_height_overlay", "role": "PRIMARY",

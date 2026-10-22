@@ -160,6 +160,33 @@
       "quote": "Building work if:- (a) within a coastal protection area as identified on a Coastal Protection Overlay Map; and (b) involving the following:- (i) a dwelling house; ... | No change | Coastal protection overlay code",
       "clause": "Table 5.10.1",
       "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407314/File/document"
+    },
+    {
+      "use_or_work": "Dwelling house (MCU)",
+      "zone": "Emerging community zone (land outside the Palmview declared master planned area)",
+      "level": "Accepted development (subject to requirements)",
+      "conditions": "Requirements = Dwelling house code acceptable outcomes. Overlays may change the category (Table 5.10.1). An approved plan of development may vary the levels (table note).",
+      "quote": "Note--development in the Emerging community zone is intended to be subject to a master plan. An approved plan of development may provide variations to the levels of assessment specified in this table. ... All other land included in Emerging community zone / Residential activities / Dwelling house | Accepted development | Dwelling house code",
+      "clause": "Table 5.5.17 Emerging community zone (Page 5-58, 'Amended 11 June 2018')",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407291/File/document"
+    },
+    {
+      "use_or_work": "All development incl. dwelling house",
+      "zone": "Emerging community zone (Palmview declared master planned area)",
+      "level": "As specified in the Palmview Structure Plan tables",
+      "conditions": "Mixed Density Residential (Table 10.2.3.3B) and Medium Density Residential (Table 10.2.3.3C) precincts: dwelling house is Accepted development against the Palmview structure plan area code + Dwelling house code; becomes impact assessable if it exceeds the structure plan height limits.",
+      "quote": "Palmview declared master planned area | As specified in the table of assessment for the Structure Plan as varied by a variation approval. | As specified in the Structure Plan as varied by a variation approval. See Section 10.2 (Palmview Structure Plan) // Dwelling house (Consistent use) | Accepted development | • Palmview structure plan area code • Dwelling house code // 1. Development identified in a table of assessment as accepted development subject to requirements or assessable development requiring code assessment that exceeds the height limits specified in the Palmview structure plan area code as applicable to the site is assessable development requiring impact assessment except where the Planning Regulation 2017 specifies a different category of development and assessment.",
+      "clause": "Table 5.5.17; Tables 10.2.3.3B (Page 10-17) and 10.2.3.3C (Page 10-19)",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407421/File/document"
+    },
+    {
+      "use_or_work": "Building work not associated with MCU (incl. Class 10a outbuildings, pools)",
+      "zone": "Emerging community zone (Palmview declared master planned area)",
+      "level": "Accepted (no requirements) for minor building work or work associated with an approved MCU; impact if exceeding height limits; otherwise accepted against Palmview code + use code, or code assessment",
+      "conditions": "",
+      "quote": "Minor Building Work where not otherwise specified. | Accepted development | No requirements applicable / Building Work where associated with an approved Material Change of Use of Premises. | Accepted development | No requirements applicable / Building Work where exceeding the height limits specified in the Palmview structure plan area code. | Impact assessment / Building Work not otherwise specified. | Accepted development or Code assessment where the applicable Use Code does not identify acceptable outcomes. | Palmview structure plan area code; The Use Code applicable to the use for which the Building Work is to be undertaken; Transport and parking code",
+      "clause": "Table 10.2.3.3K Building Work Table of Assessment (Pages 10-37 to 10-38)",
+      "source_url": "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407421/File/document"
     }
   ],
   "definitions": [
@@ -567,7 +594,8 @@
         "Tourist accommodation zone",
         "Rural zone",
         "Rural residential zone",
-        "Limited development (landscape residential) zone"
+        "Limited development (landscape residential) zone",
+        "Emerging community zone"
       ],
       "structure_scope": "dwelling house (includes outbuildings by definition)",
       "topic": "BUILDING_HEIGHT",
@@ -641,7 +669,8 @@
         "Tourist accommodation zone",
         "Rural zone",
         "Rural residential zone",
-        "Limited development (landscape residential) zone"
+        "Limited development (landscape residential) zone",
+        "Emerging community zone"
       ],
       "structure_scope": "buildings and structures more than 1 m above ground level, including pools and decks; excludes pool fencing that is at least 75% transparent",
       "topic": "POOL_SETBACK",
@@ -997,7 +1026,8 @@
         "Tourist accommodation zone",
         "Rural zone",
         "Rural residential zone",
-        "Limited development (landscape residential) zone"
+        "Limited development (landscape residential) zone",
+        "Emerging community zone"
       ],
       "structure_scope": "filling or excavation associated with a dwelling house (including outbuildings and pools)",
       "topic": "OTHER",
@@ -1183,7 +1213,13 @@
     "The scheme has not yet been amended to reference the Queensland Housing Code. The State transitional provisions (SL 2026 No. 115) need to be confirmed verbatim, specifically how the 'alternative provision to QDC' notes map to QHC Part 1.1/1.2 until 1 Sept 2029.",
     "Pool setbacks: the scheme has no pool provision for residential lots apart from the AO6 canal setback (structures over 1 m) and coastal overlay AO1. Pool siting otherwise follows the QHC / Building Regulation.",
     "Plans of development and structure plans (Palmview, Kawana DCP 1, State PDAs such as Caloundra South) may set different siting rules; these are not covered.",
-    "The Low and Medium density residential zone codes contain only purpose and overall outcomes, with no numeric siting AOs. The High density and Tourist accommodation zones were not checked in depth."
+    "The Low and Medium density residential zone codes contain only purpose and overall outcomes, with no numeric siting AOs. The High density and Tourist accommodation zones were not checked in depth.",
+    "Mapped Height of Buildings and Structures Overlay value for EC land is not verified (maps are JavaScript only). It is commonly 8.5 m, but this needs a map/ePlan check per site.",
+    "Lots in EC created under a variation approval or approved plan of development (including Palmview) may have POD-specific setbacks and site cover (Dwelling house code footnote 4). These are not in the scheme text and are not alternative provisions under Table 1.6.1. The tool should flag 'check approved plan of development' for EC lots.",
+    "Palmview: only the Mixed Density and Medium Density Residential precinct tables list a dwelling house. Other precincts were not checked for dwelling houses beyond a text search. AO24 (20 m from the SEQwater bulk pipeline, OPM P4) has no 's' suffix, so it is not an accepted-development requirement, but it may matter for code assessment.",
+    "Whether any EC land lies in the Blackall Range local plan area (AO16.1/AO16.2) or a canal/waterbody area was not checked.",
+    "QDC vs QHC: the scheme is unamended since No. 27, so it still refers to QDC MP1.1/1.2. The State transitional position (SL 2026 No. 115) is unverified verbatim (see sunshine_coast.json qdc_qhc_relationship).",
+    "State PDAs within or adjoining EC (e.g. Caloundra South / Aura, Beerwah East) are outside the planning scheme and were not covered."
   ],
   "fetch_log": [
     "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014/amendments-to-the-sunshine-coast-planning-scheme-2014/adopted-amendments -> latest is No. 27, effective 23 Jan 2024; no 2025/2026 amendments",
@@ -1207,6 +1243,16 @@
     "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014/view-the-sunshine-coast-planning-scheme-2014-maps (and local-plan-map-tiles) -> JavaScript only; no map PDFs retrievable",
     "https://www.sunshinecoast.qld.gov.au/development-advice/building/sheds -> 404; https://sunshinecoast.qld.gov.au/development/building/sheds -> council sheds page (updated 29 Sep 2026)",
     "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/temporary-local-planning-instruments -> TLPI 01/2025, TLPI 04/2025",
-    "https://www.legislation.qld.gov.au/view/whole/html/asmade/sl-2026-0115 -> transitional provisions available only as a summary, not verbatim"
+    "https://www.legislation.qld.gov.au/view/whole/html/asmade/sl-2026-0115 -> transitional provisions available only as a summary, not verbatim",
+    "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014/amendments-to-the-sunshine-coast-planning-scheme-2014/adopted-amendments -> latest listed is No. 27 Site Specific and Editorial Matters (23 January 2024); page 'Last updated 29 Sep 2026'; nothing later",
+    "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014/view-the-sunshine-coast-planning-scheme-2014-text/part-5-tables-of-assessment -> record id for Table 5.5.17 (22407291)",
+    "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014/view-the-sunshine-coast-planning-scheme-2014-text/part-6-zones -> record id for 6.2.17 EC zone code (22407333)",
+    "https://www.sunshinecoast.qld.gov.au/development-advice/planning-documents/sunshine-coast-planning-scheme-2014/view-the-sunshine-coast-planning-scheme-2014-text/part-10-other-plans -> Palmview Structure Plan record 22407421",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407291/File/document -> Table 5.5.17 EC zone: dwelling house Accepted development / Dwelling house code; Palmview defers to Structure Plan (Amended 11 June 2018)",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407333/File/document -> 6.2.17 EC zone code: applies to assessable development only; purpose/overall outcomes only, no PO/AO table, no numbers",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407391/File/document -> 9.3.6 Dwelling house code (Amended 23 January 2024): AO2/AO3 residential-zone only, AO4/AO5 Rural/RR/LDLR only; AO1, AO6, AO15 unqualified",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22007624/File/document -> Schedule 1: 'Residential zone' = LDR, MDR, HDR, Tourist accommodation (excludes EC); 'Urban zone' includes (n) Emerging community zone",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407378/File/document -> 8.2.8 Height overlay code: assessable only, AO1/AO2 'No acceptable outcome provided'",
+    "https://publicdocs.scc.qld.gov.au/hpecmwebdrawer/Record/22407421/File/document -> Palmview Structure Plan: Tables 10.2.3.3B/C (dwelling house accepted), 10.2.3.3K building work, 10.2.4.5 AO2.1s 8.5 m, 10.2.4.7 AO2s 13.5 m; no 's' setback/site-cover AOs for dwellings found"
   ]
 }

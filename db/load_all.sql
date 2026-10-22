@@ -16,6 +16,8 @@
 \i db/032_council_curated_batch2.sql
 \i db/033_council_curated_brisbane.sql
 \i db/034_council_mapped_heights.sql
+\i db/035_council_curated_new_zones.sql
+\i db/036_council_curated_remaining_zones.sql
 -- Review item 5.3: make regs visible without the schema prefix (takes effect on new connections)
 DO $$ BEGIN EXECUTE format('ALTER DATABASE %I SET search_path = regs, public', current_database()); END $$;
 SELECT count(*) AS untraceable_rules FROM regs.v_untraceable_rules;

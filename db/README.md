@@ -66,7 +66,7 @@ Every arrow is a foreign key in the database, so a row cannot point at something
 | `open_questions[]` | `open_issues` |
 | `fetch_log[]` | not loaded (kept in the JSON as research provenance) |
 
-Curated rules (`db/031` to `db/034`) are hand-encoded from the same provisions. Each one `REPLACES` its draft,
+Curated rules (`db/031` to `db/036`) are hand-encoded from the same provisions. Each one `REPLACES` its draft,
 which then shows status SUPERSEDED.
 
 ## Tables
@@ -143,7 +143,7 @@ One published version / reprint of a document, with dates, URL, archived file an
 | `verified_by` | text | yes |  |
 | `notes` | text | yes |  |
 
-#### `provisions` — 663 rows
+#### `provisions` — 790 rows
 
 One clause, table row or figure with its exact words (verbatim_text). Council provisions carry research_key = the record in research/councils/*.json they came from.
 
@@ -204,7 +204,7 @@ The 41 zones a planning scheme may use (Planning Regulation 2017 s6, sch 2).
 | `category` | text | no |  |
 | `source_provision_id` | bigint | yes | → `provisions.provision_id` |
 
-#### `zones` — 47 rows
+#### `zones` — 56 rows
 
 Each council scheme's zones, linked to the regulated zone, with whether a dwelling house is a permitted use.
 
@@ -224,7 +224,7 @@ Each council scheme's zones, linked to the regulated zone, with whether a dwelli
 | `valid_to_version` | text | yes | → `instrument_versions.instrument_version_id` |
 | `notes` | text | yes |  |
 
-#### `precincts` — 29 rows
+#### `precincts` — 40 rows
 
 Precincts inside a zone.
 
@@ -326,7 +326,7 @@ A document's own words mapped to the structure tree (not yet populated).
 | `definition_provision_id` | bigint | yes | → `provisions.provision_id` |
 | `notes` | text | yes |  |
 
-#### `facts` — 91 rows
+#### `facts` — 92 rows
 
 The only inputs a rule may use (lot area, wall height, boundary type…), with type, unit and how to derive them.
 
@@ -364,7 +364,7 @@ What a numeric requirement is measured on: from where, to where, how.
 
 ### Rules — the regulatory content
 
-#### `rules` — 458 rows
+#### `rules` — 587 rows
 
 Stable identity of a rule across versions (id, document, topic, title).
 
@@ -378,7 +378,7 @@ Stable identity of a rule across versions (id, document, topic, title).
 | `title` | text | no |  |
 | `notes` | text | yes |  |
 
-#### `rule_versions` — 458 rows
+#### `rule_versions` — 587 rows
 
 The rule content for one period: role, regime, enforceability, measurement, operator, value/formula (value_expr), unit, consequence of failure, dates, status (DRAFT/ACTIVE/SUPERSEDED), verification, automatable.
 
@@ -407,7 +407,7 @@ The rule content for one period: role, regime, enforceability, measurement, oper
 | `interpretation_notes` | text | yes |  |
 | `created_at` | timestamp with time zone | no |  |
 
-#### `rule_scopes` — 1,555 rows
+#### `rule_scopes` — 1,894 rows
 
 Where a rule applies: council, zone, precinct, local plan, overlay (include or exclude).
 
@@ -425,7 +425,7 @@ Where a rule applies: council, zone, precinct, local plan, overlay (include or e
 | `local_plan_precinct_id` | text | yes | → `local_plan_precincts.local_plan_precinct_id` |
 | `exclude` | boolean | no |  |
 
-#### `rule_subjects` — 732 rows
+#### `rule_subjects` — 928 rows
 
 Which structure types a rule applies to (include or exclude).
 
@@ -437,7 +437,7 @@ Which structure types a rule applies to (include or exclude).
 | `structure_type_id` | text | no | **PK** → `structure_types.structure_type_id` |
 | `exclude` | boolean | no |  |
 
-#### `rule_conditions` — 439 rows
+#### `rule_conditions` — 490 rows
 
 When a rule applies, e.g. lot_area_m2 >= 450. Rows with the same group_no are AND-ed; groups are OR-ed.
 
@@ -455,7 +455,7 @@ When a rule applies, e.g. lot_area_m2 >= 450. Rows with the same group_no are AN
 | `source_provision_id` | bigint | yes | → `provisions.provision_id` |
 | `notes` | text | yes |  |
 
-#### `rule_sources` — 495 rows
+#### `rule_sources` — 625 rows
 
 Why: the provision(s) a rule relies on, with the exact quote. Every active rule has a PRIMARY source.
 
@@ -468,7 +468,7 @@ Why: the provision(s) a rule relies on, with the exact quote. Every active rule 
 | `role` | text | no | **PK** |
 | `quote` | text | yes |  |
 
-#### `rule_relationships` — 525 rows
+#### `rule_relationships` — 726 rows
 
 Precedence between rules: OVERRIDES, REPLACES, EXEMPTS, RELAXES, SUPPLEMENTS, ALTERNATIVE_TO, CONDITIONAL_ON, FALLS_BACK_TO, UNRESOLVED, each with its legal basis.
 
@@ -506,7 +506,7 @@ Who checked which rule/provision, when, how (not yet populated).
 | `result` | verification_status | no |  |
 | `notes` | text | yes |  |
 
-#### `open_issues` — 70 rows
+#### `open_issues` — 123 rows
 
 Known gaps and questions that block automation (incl. each research file's open_questions).
 

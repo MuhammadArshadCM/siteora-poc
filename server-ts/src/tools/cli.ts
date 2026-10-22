@@ -14,12 +14,13 @@ import { exit, left } from "./fmt.js";
 
 const USAGE = `
 usage: npm run cli -- [address] [--lon LON --lat LAT] [--structure ${Object.keys(engine.STRUCTURES).sort().join("|")}]
-                      [--height M] [--length M] [--width M] [--mean-height M] [--slope PCT] [--window-distance M]
+                      [--height M] [--length M] [--width M] [--mean-height M] [--slope PCT] [--window-distance M] [--subdivision-lot yes|no]
                       [--corner] [--canal] [--attached yes|no] [--roofed yes|no] [--enclosed yes|no]
                       [--zone ZONE_ID] [--precinct ID ...] [--date YYYY-MM-DD] [--json]
 
   --slope            lot slope %
   --window-distance  distance to neighbour's habitable window (m)
+  --subdivision-lot  lot created through a residential subdivision approval (Gold Coast Emerging community zone)
   --corner           lot is on a road corner
   --canal            lot adjoins a canal or lake
   --zone             zone id override, e.g. BCC:LOW_DENSITY_RESIDENTIAL
@@ -29,7 +30,7 @@ usage: npm run cli -- [address] [--lon LON --lat LAT] [--structure ${Object.keys
 // CLI flag -> engine input name (the same names the web form and /api/rules use)
 const INPUTS: Record<string, string> = {
   height: "height_m", length: "length_m", width: "width_m", "mean-height": "mean_height_m", slope: "lot_slope_pct",
-  "window-distance": "window_distance_m", attached: "is_attached_to_dwelling", roofed: "is_roofed", enclosed: "is_enclosed",
+  "window-distance": "window_distance_m", "subdivision-lot": "lot_from_residential_subdivision", attached: "is_attached_to_dwelling", roofed: "is_roofed", enclosed: "is_enclosed",
 };
 
 async function main(): Promise<number> {

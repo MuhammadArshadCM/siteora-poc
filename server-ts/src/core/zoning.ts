@@ -11,6 +11,7 @@ export function norm(s: string | null | undefined): string {
   let t = (s ?? "").toLowerCase().replace(/–/g, "-").replace(/-/g, " ");
   t = t.replace(/[^a-z0-9 ]+/g, " ");
   t = t.replace(WORDS, " ");
+  t = t.replace(/\b([a-z]+)ies\b/g, "$1y");   // plural map text, e.g. Redland's 'Emerging Communities' = 'Emerging community zone'
   return t.replace(/\s+/g, " ").trim();
 }
 
