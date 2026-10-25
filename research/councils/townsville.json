@@ -1,0 +1,463 @@
+{
+  "council": "Townsville City Council",
+  "planning_scheme": {
+    "name": "Townsville City Plan",
+    "version": "Version 2025/01",
+    "version_commenced": "2025-12-08",
+    "official_urls": [
+      "https://planningscheme.townsville.qld.gov.au/planningscheme/current",
+      "https://tccplanningscheme.z8.web.core.windows.net/current/Part%201%20About%20the%20planning%20scheme.pdf",
+      "https://tccplanningscheme.z8.web.core.windows.net/current/Part%205%20Tables%20of%20assessment.pdf",
+      "https://tccplanningscheme.z8.web.core.windows.net/current/Part%206%20Zones.pdf",
+      "https://tccplanningscheme.z8.web.core.windows.net/current/Part%209%20Development%20codes.pdf",
+      "https://tccplanningscheme.z8.web.core.windows.net/current/Schedule%201%20Definitions.pdf",
+      "https://tccplanningscheme.z8.web.core.windows.net/current/Citation%20and%20commencement.pdf"
+    ],
+    "notes": "ePlan landing page states \"Version 2025/01,  adopted 15 October 2025 and effective 8 December 2025.\" and \"Effective from: 8 December 2025\"; PDF footers read \"Version 2025/01\". Citation: commencement date of the planning scheme 27 October, 2014. QHC: Part 1 (sections 1.4-1.7, pages P1/7-P1/9 read) does not mention the Queensland Housing Code; the scheme refers only to the QDC (MP 1.1, MP 1.2, MP 1.3). No QHC adoption found."
+  },
+  "qdc_qhc_relationship": {
+    "summary": "Only the Character residential zone code is identified as building assessment provisions / QDC alternative provisions under ss32-33 of the Building Act 1975 (Table 1.6.1 and the editor’s note in Table 6.2.5.3). There is no dwelling house code; elsewhere dwelling houses are accepted development and Class 10 siting defaults to the QDC. Section 1.7.2 also declares the Character residential zone (and flood, coastal and cultural heritage overlays) for amenity and aesthetics referral of class 1/class 10 work not complying with the QDC or the listed codes.",
+    "quotes": [
+      {
+        "clause": "1.6(3)",
+        "text": "This planning scheme, through Part 5, regulates building work in accordance with sections 32 and 33 of the Building Act 1975.",
+        "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%201%20About%20the%20planning%20scheme.pdf"
+      },
+      {
+        "clause": "1.6 editor’s note",
+        "text": "specify alternative boundary clearances and site cover provisions for Class 1 and 10 structures under section 33 of the Building Act 1975.",
+        "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%201%20About%20the%20planning%20scheme.pdf"
+      },
+      {
+        "clause": "Table 1.6.1",
+        "text": "Character Residential Zone || Building assessment provisions – regulated building work in accordance with sections 32 and 33 of the Building Act 1975 | Character Residential Zone Editor’s note—This code contains alternative provisions for dwelling houses and dual occupancies to those set out in the Queensland Development Code (MP 1.1, MP 1.2 and MP1.3) , for the purposes of section 33 of the Building Act 1975 . | Sections 32 and 33 BA",
+        "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%201%20About%20the%20planning%20scheme.pdf"
+      },
+      {
+        "clause": "Table 6.2.5.3 editor’s note",
+        "text": "Editor’s note—This code contains alternative provisions for dwelling houses and dual occupancies to those set out in the Queensland Development Code (MP 1.1, MP 1.2 and MP1.3), for the purposes of section 33 of the Building Act 1975.",
+        "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%206%20Zones.pdf"
+      },
+      {
+        "clause": "1.7.2",
+        "text": "For the purpose of Schedule 9, of the Planning Regulation, building work for a building or structure which is a single detached class 1(a)(i) building, class 1(a)(ii) building comprising not more than 2 attached dwellings or a class 10 building or structure in a locality identified in Table 1.7.2 that does not comply with the relevant QDC acceptable solutions or the acceptable outcomes in the codes identified in Table 1.7.2, is declared to: (a) have an extremely adverse effect on the amenity or likely amenity of the locality; or (b) be in extreme conflict with the character of the locality",
+        "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%201%20About%20the%20planning%20scheme.pdf"
+      }
+    ]
+  },
+  "levels_of_assessment": [
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Low density residential zone",
+      "level": "Accepted development; accepted development subject to requirements if a secondary dwelling",
+      "conditions": "Secondary dwelling: Low density residential zone code",
+      "quote": "Dwelling house | Accepted development | If not a Secondary dwelling || Accepted development subject to requirements | If a Secondary dwelling | Low density residential zone code",
+      "clause": "Table 5.5.1",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%205%20Tables%20of%20assessment.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Medium density residential zone",
+      "level": "Accepted development",
+      "conditions": "none",
+      "quote": "Dwelling house Dwelling unit ... Landing ... Park | Accepted development | No assessment benchmarks apply",
+      "clause": "Table 5.5.2",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%205%20Tables%20of%20assessment.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "High density residential zone",
+      "level": "Accepted development",
+      "conditions": "none",
+      "quote": "Dwelling house Dwelling unit ... Landing ... Park | Accepted development | No assessment benchmarks apply",
+      "clause": "Table 5.5.4",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%205%20Tables%20of%20assessment.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Rural residential zone",
+      "level": "Accepted development; accepted development subject to requirements if a secondary dwelling",
+      "conditions": "Secondary dwelling: Rural residential zone code",
+      "quote": "Dwelling house | Accepted development | If not a Secondary dwelling || Accepted development subject to requirements | If a Secondary dwelling | Rural residential zone code",
+      "clause": "Table 5.5.5",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%205%20Tables%20of%20assessment.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Character residential zone",
+      "level": "Accepted development",
+      "conditions": "Building work may be made assessable under Table 5.7.1",
+      "quote": "Editor’s note–Building in the Character residential zone may be made assessable under the table of assessment for building work. Refer to Table 5.7.1. Dwelling house ... | Accepted development | No assessment benchmarks apply",
+      "clause": "Table 5.5.6",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%205%20Tables%20of%20assessment.pdf"
+    },
+    {
+      "use_or_work": "Class 10 building work",
+      "zone": "Character residential zone",
+      "level": "Code assessment (Character residential zone code) in listed cases; otherwise accepted",
+      "conditions": "class 10a near street facade",
+      "quote": "Assessable development - Code assessment | If: (a) involving partial demolition, external alteration, extension (including minor building work and the construction of a class 10a building (as defined by the Building Code of Australia)), to a contributing character building where all or part of the work is in front of or within a depth of 3m from the facade facing any street; or ... (d) involving construction of a class 10a building (as defined by the Building Code of Australia) on the site of a non-contributing property, where all or part of the work is in front of, or within a depth of 3m from the main building façade facing any street; or ... | Character residential zone code || Accepted development | ... Any other building work not listed in this table.",
+      "clause": "Table 5.7.1",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%205%20Tables%20of%20assessment.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Sport and recreation zone - Balgal Beach golf course precinct",
+      "level": "Accepted development",
+      "conditions": "If in the Balgal Beach golf course precinct (otherwise impact assessment)",
+      "quote": "Dwelling house | Accepted development | If in the Balgal Beach golf course precinct | No assessment benchmarks apply",
+      "clause": "Table 5.5.14",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%205%20Tables%20of%20assessment.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Environmental management and conservation zone",
+      "level": "Code assessment",
+      "conditions": "none",
+      "quote": "Dwelling house | Assessable development - Code assessment | Environmental management and conservation zone code Works code",
+      "clause": "Table 5.5.17",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%205%20Tables%20of%20assessment.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Rural zone",
+      "level": "Accepted development subject to requirements",
+      "conditions": "not more than two dwellings of any kind on a lot",
+      "quote": "Caretaker’s accommodation Community residence Dwelling house | Accepted development subject to requirements | If it will not result in more than two dwellings of any kind on a lot | Rural zone code",
+      "clause": "Table 5.5.21",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%205%20Tables%20of%20assessment.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Emerging community zone",
+      "level": "Accepted development",
+      "conditions": "not more than two dwellings of any kind on a lot",
+      "quote": "Community residence Dwelling house | Accepted development | If it will not result in more than two dwellings of any kind on a lot | No assessment benchmarks apply",
+      "clause": "Table 5.5.22",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%205%20Tables%20of%20assessment.pdf"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "setback",
+      "text": "Setback, for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.",
+      "clause": "SC1.2 Table SC1.2.2",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Schedule%201%20Definitions.pdf"
+    },
+    {
+      "term": "boundary clearance",
+      "text": "Boundary clearance means the distance between a building or structure on premises and the boundary of the premises, measured from the part of the building or structure that is closest to the boundary, other than a part that is— (a) an architectural or ornamental attachment; or (b) a rainwater fitting. Examples— 1. If the fascia of a building is the part of the building that is closest to the boundary, the boundary clearance is the distance between the outside of the fascia and the boundary. 2. If a point on the roof of a building is the part of the building that is closest to the boundary, the boundary clearance is the distance between that point on the roof and the boundary.",
+      "clause": "SC1.2 Table SC1.2.2",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Schedule%201%20Definitions.pdf"
+    },
+    {
+      "term": "domestic outbuilding",
+      "text": "Domestic outbuilding means a non-habitable class 10a building that is— (a) a shed, garage or carport; and (b) ancillary to a residential use carried out on the premises where the building is.",
+      "clause": "SC1.2 Table SC1.2.2",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Schedule%201%20Definitions.pdf"
+    }
+  ],
+  "rules": [
+    {
+      "rule_key": "tcc_cr_class10a_carport_garage_front",
+      "code": "Character residential zone code",
+      "clause": "Table 6.2.5.3 PO9 / AO9(a)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Character residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10a structures such as carports, garages",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "For assessable development | Carports and garages || AO9 | Class 10a structures such as carports, garages: (a) are set back an equal or greater distance from the street as the main building;",
+      "structured": {
+        "parameter": "min_street_setback_class10a_relative_to_main_building",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to assessable development only (building work made code assessable by Table 5.7.1, e.g. a class 10a building in front of or within 3m of the facade facing any street)",
+          "setback from the street >= the main building’s street setback"
+        ],
+        "exceptions": [],
+        "formula_text": "class10a_street_setback >= main_building_street_setback"
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Table 6.2.5.3 editor’s note: \"This code contains alternative provisions for dwelling houses and dual occupancies to those set out in the Queensland Development Code (MP 1.1, MP 1.2 and MP 1.3), for the purposes of section 33 of the Building Act 1975.\"; Part 1 Table 1.6.1 lists the Character Residential Zone as \"Building assessment provisions – regulated building work in accordance with sections 32 and 33 of the Building Act 1975\"",
+      "measurement_notes": "Schedule 1 SC1.2 \"Setback\": shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot.",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%206%20Zones.pdf",
+      "page_or_anchor": "P6/107 (PDF page 107)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Text-extractable PDF (pdftotext). AO9 items (b)-(g) (width, door, detached form, roof pitch, height, materials) omitted as out of scope. Only reached when the building work is code assessable under Table 5.7.1 (Character residential zone); class 10a work behind the 3m-from-facade line is accepted development with no benchmarks, so the QDC applies there."
+    },
+    {
+      "rule_key": "tcc_cr_buildings_front_setback_average",
+      "code": "Character residential zone code",
+      "clause": "Table 6.2.5.3 PO14 / AO14.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Character residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Buildings and extensions (new building, relocation of a contributing character building within the site or extension or alteration to an existing contributing character building)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "For assessable development — where a new building, relocation of a contributing character building within the site or extension or alteration to an existing contributing character building || AO14.1 | Buildings and extensions are setback from street frontages within 10% of the average front setback of adjoining contributing character buildings.",
+      "structured": {
+        "parameter": "street_setback_relative_to_adjoining_average",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "assessable development only",
+          "within 10% of the average front setback of adjoining contributing character buildings"
+        ],
+        "exceptions": [],
+        "formula_text": "0.9 * avg_adjoining_contributing_front_setback <= setback <= 1.1 * avg_adjoining_contributing_front_setback"
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Table 6.2.5.3 editor’s note: \"This code contains alternative provisions for dwelling houses and dual occupancies to those set out in the Queensland Development Code (MP 1.1, MP 1.2 and MP 1.3), for the purposes of section 33 of the Building Act 1975.\"; Part 1 Table 1.6.1 lists the Character Residential Zone as \"Building assessment provisions – regulated building work in accordance with sections 32 and 33 of the Building Act 1975\"",
+      "measurement_notes": "Figure 6.55 - Appropriate front setbacks illustrates.",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%206%20Zones.pdf",
+      "page_or_anchor": "P6/111 (PDF page 111)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Scope ambiguity: \"Buildings\" is not limited to the dwelling, so a new class 10a building made assessable by Table 5.7.1 may be caught; but the more specific AO9(a) governs carports/garages. Curator to decide whether to apply to Class 10."
+    },
+    {
+      "rule_key": "tcc_cr_side_rear_absent",
+      "code": "Character residential zone code",
+      "clause": "Table 6.2.5.3 (absence)",
+      "provision_type": "OTHER",
+      "zones": [
+        "Character residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10a structures such as carports, garages",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear boundary setback is stated in the Character residential zone code for dwelling houses or Class 10 buildings; the QDC applies.)",
+      "structured": {
+        "parameter": "min_side_rear_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": "Fall back to QDC MP1.1/MP1.2 boundary clearances"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council value stated",
+      "measurement_notes": null,
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%206%20Zones.pdf",
+      "page_or_anchor": "P6/102-P6/131 (section 6.2.5)",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Whole of Table 6.2.5.3 searched (text PDF). Precinct AOs (\"set back the full depth of all open or enclosed verandahs\", \"set back 1m from the upper level of an exterior wall\") concern extensions to contributing character buildings, not boundary setbacks."
+    },
+    {
+      "rule_key": "tcc_rural_cungulla_front",
+      "code": "Rural zone code",
+      "clause": "Table 6.6.1.3 PO3 / AO3.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural zone - Cungulla precinct"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "dwellings and ancillary structures",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "For accepted development subject to requirements and assessable development | Caretaker’s accommodation, community residence or dwelling house || AO3.2 | Dwellings are set back from all site boundaries by 20m, other than in the Cungulla precinct where dwellings and ancillary structures are set back a minimum of 6m from front boundaries, 3m from side boundaries where adjoining a road or 1.5m otherwise for side and rear boundaries.",
+      "structured": {
+        "parameter": "min_front_boundary_setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "Cungulla precinct only"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - Part 1 Table 1.6.1 identifies only the Character residential zone code as s33 building assessment provisions; AO3.2 is a requirement for accepted development (material change of use) under Table 5.5.21",
+      "measurement_notes": "Schedule 1 SC1.2 \"Setback\" definition applies (outermost projection to the vertical projection of the lot boundary).",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%206%20Zones.pdf",
+      "page_or_anchor": "P6/341 (PDF page 341)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Requirement for a dwelling house that is accepted development subject to requirements in the Rural zone (Table 5.5.21). Whether it binds a later stand-alone Class 10a outbuilding (building work only, no MCU) is unclear; \"ancillary structures\" clearly includes sheds/carports."
+    },
+    {
+      "rule_key": "tcc_rural_cungulla_side_rear",
+      "code": "Rural zone code",
+      "clause": "Table 6.6.1.3 PO3 / AO3.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural zone - Cungulla precinct"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "dwellings and ancillary structures",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "For accepted development subject to requirements and assessable development | Caretaker’s accommodation, community residence or dwelling house || AO3.2 | Dwellings are set back from all site boundaries by 20m, other than in the Cungulla precinct where dwellings and ancillary structures are set back a minimum of 6m from front boundaries, 3m from side boundaries where adjoining a road or 1.5m otherwise for side and rear boundaries.",
+      "structured": {
+        "parameter": "min_side_rear_boundary_setback",
+        "operator": "conditional",
+        "value": 1.5,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "Cungulla precinct only",
+          "side boundary adjoining a road: 3 m",
+          "otherwise (side and rear): 1.5 m"
+        ],
+        "exceptions": [],
+        "formula_text": "side adjoining road >= 3 m; other side and rear >= 1.5 m"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - Part 1 Table 1.6.1 identifies only the Character residential zone code as s33 building assessment provisions; AO3.2 is a requirement for accepted development (material change of use) under Table 5.5.21",
+      "measurement_notes": "Schedule 1 SC1.2 \"Setback\" definition applies.",
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%206%20Zones.pdf",
+      "page_or_anchor": "P6/341 (PDF page 341)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Same clause as tcc_rural_cungulla_front. The 3 m road-side value is a secondary-street style setback; recorded here as a condition only."
+    },
+    {
+      "rule_key": "tcc_rural_class10_absent",
+      "code": "Rural zone code",
+      "clause": "Table 6.6.1.3 AO3.2 (absence)",
+      "provision_type": "OTHER",
+      "zones": [
+        "Rural zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "other than in the Cungulla precinct",
+      "structure_scope": "Class 10 buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(Outside the Cungulla precinct, Rural zone code AO3.2 sets a 20m setback from all site boundaries for dwellings only; no front, side or rear setback is stated for Class 10 buildings; the QDC applies.)",
+      "structured": {
+        "parameter": "min_boundary_setback_class10",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to front, side AND rear boundaries",
+          "zone areas other than Cungulla precinct"
+        ],
+        "exceptions": [],
+        "formula_text": "Fall back to QDC MP1.2"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council value stated for Class 10",
+      "measurement_notes": null,
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%206%20Zones.pdf",
+      "page_or_anchor": "P6/341 (PDF page 341)",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": true,
+      "notes": "AO3.2 text: \"Dwellings are set back from all site boundaries by 20m, other than in the Cungulla precinct where dwellings and ancillary structures ...\". The 20m rule names dwellings only (Class 10 not mentioned), so treated as out of scope; curator may wish to confirm council intent."
+    },
+    {
+      "rule_key": "tcc_zones_front_absent",
+      "code": "Part 6 zone codes",
+      "clause": "(absence)",
+      "provision_type": "OTHER",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Rural residential zone",
+        "Sport and recreation zone - Balgal Beach golf course precinct",
+        "Environmental management and conservation zone",
+        "Emerging community zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling houses and Class 10 buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "(No front setback is stated for dwelling houses or Class 10 buildings in these zone codes, and there is no dwelling house code in Part 9; the QDC applies.)",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": "Fall back to QDC MP1.1/MP1.2"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council value stated",
+      "measurement_notes": null,
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%206%20Zones.pdf",
+      "page_or_anchor": "Sections 6.2.1, 6.2.2, 6.2.3, 6.2.4, 6.4.1, 6.4.4, 6.7.1",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Dwelling houses are accepted development (no benchmarks) in MDR, HDR, EC and S&R Balgal Beach golf course precinct; accepted (or accepted subject to requirements only for a secondary dwelling: GFA/20m from house) in LDR and RR; code assessable in EMC (code has no setbacks). Setback AOs in LDR (AO23), MDR (AO14, AO21/Table 6.2.2.3(b)), HDR (Table 6.2.3.3(b)) apply only to multiple dwelling/residential care/retirement/short-term accommodation; S&R AO2/AO4.1 setbacks apply to accepted-with-requirements and assessable development, not to the accepted dwelling house."
+    },
+    {
+      "rule_key": "tcc_zones_side_rear_absent",
+      "code": "Part 6 zone codes",
+      "clause": "(absence)",
+      "provision_type": "OTHER",
+      "zones": [
+        "Low density residential zone",
+        "Medium density residential zone",
+        "High density residential zone",
+        "Rural residential zone",
+        "Sport and recreation zone - Balgal Beach golf course precinct",
+        "Environmental management and conservation zone",
+        "Emerging community zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Dwelling houses and Class 10 buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear setback is stated for dwelling houses or Class 10 buildings in these zone codes, and there is no dwelling house code in Part 9; the QDC applies.)",
+      "structured": {
+        "parameter": "min_side_rear_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": "Fall back to QDC MP1.1/MP1.2"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council value stated",
+      "measurement_notes": null,
+      "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Part%206%20Zones.pdf",
+      "page_or_anchor": "Sections 6.2.1, 6.2.2, 6.2.3, 6.2.4, 6.4.1, 6.4.4, 6.7.1",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "See tcc_zones_front_absent. LDR AO23.3/AO23.4 and MDR AO14.2/AO14.3 side/rear values are for multiple dwellings etc. only."
+    }
+  ],
+  "overlays_affecting_siting": [],
+  "local_plan_mechanism": {
+    "summary": "Section 5.3.1 editor’s note: \"Local plans are not used in this planning scheme.\" (Part 7 PDF is a single page.) Place-based variation is by zone precincts (e.g. Rural zone Cungulla precinct; Character residential precincts)."
+  },
+  "open_questions": [
+    "Rural zone AO3.2: confirm whether the Cungulla precinct 6m/3m/1.5m setbacks for \"ancillary structures\" bind stand-alone Class 10a building work (no MCU trigger) - Part 5 makes building work accepted outside the Character residential zone.",
+    "Rural zone (outside Cungulla): 20m from all boundaries names \"Dwellings\" only; confirm Class 10 is not intended to be caught.",
+    "Character residential AO14.1 (\"Buildings and extensions\") - confirm whether it applies to new Class 10a buildings in addition to AO9(a).",
+    "QHC: no reference to the Queensland Housing Code was found in Part 1 (pages P1/7-P1/9 rendered) or Part 6; Part 1 pages P1/1-P1/6 were not rendered.",
+    "Overlay tables (5.9) may change the category of building work (e.g. flood, coastal, heritage); not reviewed as they do not set Class 10 boundary setbacks."
+  ],
+  "fetch_log": [
+    "https://planningscheme.townsville.qld.gov.au/planningscheme/current -> OK (HTML index of PDFs; version 2025/01 effective 8 December 2025)",
+    "https://tccplanningscheme.z8.web.core.windows.net/current/Citation%20and%20commencement.pdf -> OK (text PDF, 1 page)",
+    "https://tccplanningscheme.z8.web.core.windows.net/current/Part%201%20About%20the%20planning%20scheme.pdf -> OK (image-only, 9 pages; P1/7-P1/9 rendered and read)",
+    "https://tccplanningscheme.z8.web.core.windows.net/current/Part%205%20Tables%20of%20assessment.pdf -> OK (image-only, 121 pages; rendered at 60-130 dpi, zone tables and Table 5.7.1 read)",
+    "https://tccplanningscheme.z8.web.core.windows.net/current/Part%206%20Zones.pdf -> OK (text PDF, 359 pages; pdftotext)",
+    "https://tccplanningscheme.z8.web.core.windows.net/current/Part%207%20Local%20plans.pdf -> OK (1 page; local plans not used)",
+    "https://tccplanningscheme.z8.web.core.windows.net/current/Part%209%20Development%20codes.pdf -> previously downloaded (image-only, 75 pages); P9/1 read: only use code is Telecommunications facilities and utilities code; no dwelling house code",
+    "https://tccplanningscheme.z8.web.core.windows.net/current/Schedule%201%20Definitions.pdf -> OK (image-only, 38 pages; SC1/28-SC1/38 rendered)"
+  ]
+}

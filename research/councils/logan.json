@@ -742,6 +742,77 @@
       "notes": "DERIVED INFERENCE (not a quoted provision): drawn from the verified full text of 9.3.2 AO4/AO5, which simply do not list these zones/precincts. Derived reading. For urban residential lots, the QDC/QHC side/rear and built-to-boundary provisions govern houses and Class 10a, except large outbuildings (>150m2) which must meet AO7.1(b) - but Table 9.3.2.3.2 lists no clearance for urban LDR precincts, LMDR or MDR (see open questions)."
     },
     {
+      "rule_key": "mdr_ao4_road_boundary_clearance",
+      "code": "6.2.8 Medium density residential zone code",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "development in the Medium density residential zone other than a Dwelling house or a Class 10 structure for a Dwelling house",
+      "alternative_provision_to_qdc_qhc": "NO - not nominated for a Dwelling house or its Class 10 structures; see notes.",
+      "source_url": "https://lcc-docs-planning.s3-ap-southeast-2.amazonaws.com/root/Logan%20Planning%20Scheme%202015/LPS%202015%20V9.2%20(July%202025)/Documents%20(LPS%20V9.2)/Part%206-2-8%20Zone%20code%20-%20Medium%20density%20residential%20(LPS%20v9_2).pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "topic": "FRONT_SETBACK",
+      "clause": "6.2.8.3 Table (Design), Boundary clearance, PO4/AO4",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "verbatim_text": "AO4 Development, other than an existing lawful building, provides a road boundary clearance: a. a minimum of six metres; or b. where the building or structure aligns with the building setback of one or more adjoining buildings.",
+      "structured": {
+        "parameter": "road_boundary_clearance",
+        "operator": "conditional",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "minimum 6 m, or aligns with an adjoining building's setback"
+        ],
+        "exceptions": [
+          "existing lawful building"
+        ],
+        "formula_text": null
+      },
+      "measurement_notes": null,
+      "page_or_anchor": "Part 6-2-8 Zone code - Medium density residential (LPS v9_2).pdf, p.3 (section 6.2.8.3 Design)",
+      "notes": "Found while checking a user-supplied screenshot of this exact table (23 Oct 2026). Confirmed verbatim against the live PDF (Part 6-2-8, pdftotext extraction). Table 5.10.10.1 (verified verbatim, in levels_of_assessment) lists the Medium density residential zone as a 'Residential area' on the Residential overlay map OM-10.00, and nominates ONLY the 9.3.2 Dual occupancy and Dwelling house code for 'a Dwelling house' or 'a class 10 building or structure for a Dwelling house'; the zone code (6.2.8, this provision) is nominated only for 'a class 10 building or structure for a residential activity other than for a Dwelling house' (s5.3.2(8): overlay category overrides zone). So this PO4/AO4/PO5/AO5 table applies to the zone's own multiple-dwelling/apartment development, not to a dwelling house or its Class 10 outbuildings. For a dwelling house / its Class 10 in the MDR zone, 9.3.2 AO4 and AO5 both give no numeric value for MDR (see dh_ao4_no_value_ldr_suburban_smalllot_village, dh_ao5_no_value_urban_zones), so the QDC/QHC governs. This confirms, rather than changes, that existing conclusion."
+    },
+    {
+      "rule_key": "mdr_ao5_side_rear_boundary_clearance",
+      "code": "6.2.8 Medium density residential zone code",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "development in the Medium density residential zone other than a Dwelling house or a Class 10 structure for a Dwelling house",
+      "alternative_provision_to_qdc_qhc": "NO - not nominated for a Dwelling house or its Class 10 structures; see notes.",
+      "source_url": "https://lcc-docs-planning.s3-ap-southeast-2.amazonaws.com/root/Logan%20Planning%20Scheme%202015/LPS%202015%20V9.2%20(July%202025)/Documents%20(LPS%20V9.2)/Part%206-2-8%20Zone%20code%20-%20Medium%20density%20residential%20(LPS%20v9_2).pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "topic": "SIDE_SETBACK",
+      "clause": "6.2.8.3 Table (Design), Boundary clearance, PO5/AO5",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "verbatim_text": "AO5 Development, other than an existing lawful building provides a minimum side and rear boundary clearance of: a. three metres in the Medium rise precinct; b. six metres in the High rise precinct.",
+      "structured": {
+        "parameter": "side_rear_boundary_clearance",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "3 m in the Medium rise precinct",
+          "6 m in the High rise precinct"
+        ],
+        "exceptions": [
+          "existing lawful building"
+        ],
+        "formula_text": "3 m (Medium rise precinct) / 6 m (High rise precinct)"
+      },
+      "measurement_notes": "Applies to side AND rear boundaries.",
+      "page_or_anchor": "Part 6-2-8 Zone code - Medium density residential (LPS v9_2).pdf, p.3 (section 6.2.8.3 Design)",
+      "notes": "Found while checking a user-supplied screenshot of this exact table (23 Oct 2026). Confirmed verbatim against the live PDF (Part 6-2-8, pdftotext extraction). Table 5.10.10.1 (verified verbatim, in levels_of_assessment) lists the Medium density residential zone as a 'Residential area' on the Residential overlay map OM-10.00, and nominates ONLY the 9.3.2 Dual occupancy and Dwelling house code for 'a Dwelling house' or 'a class 10 building or structure for a Dwelling house'; the zone code (6.2.8, this provision) is nominated only for 'a class 10 building or structure for a residential activity other than for a Dwelling house' (s5.3.2(8): overlay category overrides zone). So this PO4/AO4/PO5/AO5 table applies to the zone's own multiple-dwelling/apartment development, not to a dwelling house or its Class 10 outbuildings. For a dwelling house / its Class 10 in the MDR zone, 9.3.2 AO4 and AO5 both give no numeric value for MDR (see dh_ao4_no_value_ldr_suburban_smalllot_village, dh_ao5_no_value_urban_zones), so the QDC/QHC governs. This confirms, rather than changes, that existing conclusion."
+    },
+    {
       "rule_key": "dh_ao6_rear_lot_garage_accessway_4_9m",
       "code": "9.3.2 Dual occupancy and Dwelling house code",
       "clause": "Table 9.3.2.3.1 PO6/AO6",

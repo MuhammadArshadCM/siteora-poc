@@ -16,6 +16,7 @@
     "schema-doc": "npm --prefix server-ts run schema-doc",
     "import-research": "npm --prefix server-ts run import-research --",
     "data-register": "npm --prefix server-ts run data-register --",
+    "validate-setbacks": "npm --prefix server-ts run validate-setbacks --",
     "dev": "npm --prefix server-ts run dev"
   }
 }

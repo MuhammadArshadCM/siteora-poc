@@ -1,0 +1,1312 @@
+{
+  "council": "Toowoomba Regional Council",
+  "planning_scheme": {
+    "name": "Toowoomba Regional Planning Scheme",
+    "version": "v29.0 (Part 5 printed with TLPI 01/2026)",
+    "version_commenced": "2026-07-21",
+    "official_urls": [
+      "https://www.tr.qld.gov.au/Plan-and-build/Toowoomba-Regional-Planning-Scheme/View-the-Toowoomba-Regional-Planning-Scheme",
+      "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-01-about-the-ps-v29.pdf",
+      "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf",
+      "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-07-local-plans-v29.pdf",
+      "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-08-overlays-v29.pdf",
+      "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-09-development-codes-v29.pdf",
+      "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/sched-1-definitions-v29.pdf",
+      "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/citation_and_commencement_v29.pdf",
+      "https://www.tr.qld.gov.au/Plan-and-build/Toowoomba-Regional-Planning-Scheme/Temporary-Local-Planning-Instruments",
+      "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2025-documents/planning-scheme-amendments/temporary-local-planning-instrument-tlpi-01-2026-table-of-assessment-for-building-works.pdf"
+    ],
+    "notes": "Council page: \"The current Toowoomba Regional Planning Scheme version 29 took effect on 21 July 2026.\" PDF footers: \"21 July 2026 – v29.0 – Toowoomba Regional Planning Scheme\". The scheme commenced 1 July 2012 (Citation and commencement). TLPI 01/2026 (Table of Assessment for Building Work) commenced 16 February 2026 and replaces the accepted-development-subject-to-requirements part of Table 5.7:1. QHC: no reference to the Queensland Housing Code was found in Parts 1, 5, 6, 7, 8, 9 or Schedule 1 of v29; the scheme refers only to QDC MP1.1/MP1.2. Treated as NOT adopted (the Building Regulation 2021 s106 transition keeps MP1.1/MP1.2 for this scheme)."
+  },
+  "qdc_qhc_relationship": {
+    "summary": "Part 1 s1.6 Table 1.6.1 lists the only s33 Building Act alternative provisions: the Small Lot Housing Design Code (9.3.10) AO3.1 (front setback, alternative to QDC MP1.1 P1) and AO4.1 (side/rear, alternative to MP1.1 P2). It also lists s32(b) qualitative/quantifiable standards: AO12.1 (privacy, P5), AO7.1/7.2 and AO8.1/8.2 (car parking, P8) and AO9.1 (open space, P9). All apply to dwelling houses on lots < 450 m2. No zone code, local plan or overlay setback is an alternative provision. Elsewhere QDC MP1.1/MP1.2 apply to Class 1 and Class 10 siting, and some zone AOs (LDR AO9.2, LMDR AO9.2, Township AO6.2) expressly defer to the QDC. The Neighbourhood Character Overlay Code is the referral-agency amenity/aesthetics provision (Table 1.6.2). No QHC adoption found.",
+    "quotes": [
+      {
+        "clause": "1.6(3)",
+        "text": "This planning scheme, through Part 5, regulates building work in accordance with sections 32 and 33 of the Building Act 1975.",
+        "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-01-about-the-ps-v29.pdf"
+      },
+      {
+        "clause": "1.6 Editor’s note",
+        "text": "specify alternative boundary clearances and site cover provisions for Class 1 and 10 structures under section 33 of the Building Act 1975.",
+        "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-01-about-the-ps-v29.pdf"
+      },
+      {
+        "clause": "Table 1.6.1 item 6",
+        "text": "6 | Sections 32(c) and 33 BA | Alternative provisions to performance criteria 1 under QDC parts MP1.1 of the QDC boundary clearance and site cover provisions for particular buildings | 9.3.10:1 Small Lot Housing Design Code AO3.1 (site cover/setbacks)",
+        "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-01-about-the-ps-v29.pdf"
+      },
+      {
+        "clause": "Table 1.6.1 item 7",
+        "text": "7 | Sections 32(c) and 33 BA | Alternative provisions to performance criteria 2 under QDC parts MP1.1 of the QDC boundary clearance and site cover provisions for particular buildings | 9.3.10:1 Small Lot Housing Design Code AO4.1 (Daylight and amenity to adjoining lots)",
+        "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-01-about-the-ps-v29.pdf"
+      },
+      {
+        "clause": "9.3.10 AO3.1 note",
+        "text": "Note: AO 3.1 is an alternative provision for P1 within QDC Part MP1.1 Design and Siting Standard for Single Detached Houses – On lots under 450m².",
+        "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-09-development-codes-v29.pdf"
+      },
+      {
+        "clause": "9.3.10 AO4.1 note",
+        "text": "Note: AO 4.1 is an alternative provision for P2 within QDC Part MP1.1 Design and Siting Standard for Single Detached Houses – On lots under 450m².",
+        "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-09-development-codes-v29.pdf"
+      }
+    ]
+  },
+  "levels_of_assessment": [
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Low Density Residential Zone",
+      "level": "Accepted development / Accepted development subject to requirements / Code assessment",
+      "conditions": "Accepted if site >= 450 m2, not a hatchet lot and not in a Schedule 7 plan. Otherwise accepted subject to requirements (Small Lot Housing Design Code if < 450 m2; Medium Density Residential Code if hatchet lot > 450 m2). Code assessment if not complying (adds the LDR Zone Code).",
+      "quote": "Dwelling House | Accepted development | If (i) the area of the site is 450m² or more; and (ii) the site is not a hatchet lot; and (iii) the site is not within an Approved Plans of Development listed in Schedule 7 || Accepted development subject to requirements | If not meeting the description listed in the categories of development and assessment column for accepted development. | Small Lot Housing Design Code If: (a) the site is not within an Approved Plans of Development listed in Schedule 7; and (b) the site has an area less than 450m².",
+      "clause": "Table 5.5:1",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Low-medium Density Residential Zone",
+      "level": "Accepted development / Accepted development subject to requirements / Code assessment",
+      "conditions": "As for LDR; accepted subject to requirements also lists the Low-medium Density Residential Zone Code",
+      "quote": "Dwelling House | Accepted development | If (i) the area of the site is 450m² or more; and (ii) the site is not a hatchet lot; and (iii) the site is not within a current Plan of Development listed in Schedule 7. || Accepted development subject to requirements | If not meeting the description listed in the categories of development and assessment column for accepted development. | Low-medium Density Residential Zone Code | Small Lot Housing Design Code",
+      "clause": "Table 5.5:2",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Specialised Centre Zone",
+      "level": "Accepted development (Defence Facilities Precinct only)",
+      "conditions": "Not listed elsewhere in the zone (impact assessment)",
+      "quote": "Dwelling House | Accepted development | If in the Defence Facilities Precinct.",
+      "clause": "Table 5.5:7",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Community Facilities Zone",
+      "level": "Accepted development subject to requirements / Code assessment",
+      "conditions": "Community Facilities Zone Code",
+      "quote": "Dwelling House | Accepted development subject to requirements | Community Facilities Zone Code || Code assessment | If not complying with one or more required acceptable outcomes in the assessment benchmarks identified for accepted development subject to requirements.",
+      "clause": "Table 5.5:14",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Emerging Community Zone",
+      "level": "Accepted development",
+      "conditions": "No requirements",
+      "quote": "Dwelling House | Accepted development",
+      "clause": "Table 5.5:15",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Township Zone",
+      "level": "Accepted development / Code assessment",
+      "conditions": "Code assessment if in the Flood Management Precinct (Township Zone Code)",
+      "quote": "Accepted development | Dwelling House | If not in the Flood Management Precinct. || Code assessment | If in the Flood Management Precinct. | Township Zone Code",
+      "clause": "Table 5.5:17",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Rural Residential Zone",
+      "level": "Accepted development subject to requirements / Code assessment",
+      "conditions": "Rural Residential Zone Code",
+      "quote": "Dwelling House | Accepted development subject to requirements | Rural Residential Zone Code || Code assessment | If not complying with one or more required acceptable outcomes in the assessment benchmarks identified for accepted development subject to requirements.",
+      "clause": "Table 5.5:18",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Rural Zone",
+      "level": "Accepted development subject to requirements / Code assessment",
+      "conditions": "Rural Zone Code",
+      "quote": "Dwelling House | Accepted development subject to requirements | Rural Zone Code || Code assessment | If not complying with one or more required acceptable outcomes in the assessment benchmarks identified for accepted development subject to requirements.",
+      "clause": "Table 5.5:19",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Major Centre Zone (Medium Density Residential Precinct, Highfields local plan)",
+      "level": "Impact assessment",
+      "conditions": "Highfields, Meringandan and Meringandan West local plan table",
+      "quote": "Major Centre Zone (Medium Density Residential Precinct) ... Dwelling House | Impact assessment | The planning scheme",
+      "clause": "Table 5.9:1",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf"
+    },
+    {
+      "use_or_work": "Class 10 building work",
+      "zone": "All Zones",
+      "level": "Accepted development subject to requirements (TLPI 01/2026) / Code assessment / otherwise Accepted development",
+      "conditions": "Class 10a on the same site as a Heritage place or Neighbourhood character place, or in the RR zone where total Class 10a GFA > 10% of site area; other building work not associated with an MCU permit is assessed against \"the applicable zone code\"",
+      "quote": "Construction of a Class 10a building (as defined by the Building Code of Australia) If: (i) on the same site as a Heritage place identified in SC6.6.2 of Planning Scheme Policy No. 6; or (ii) on the same site as a Neighbourhood character place identified in SC6.7.2 of Planning Scheme Policy No. 7; or (iii) in the Rural Residential Zone and the gross floor area of all Class 10a buildings (both existing and proposed) on the site would be greater than 10% of the site area. || Building Work that is: a) not listed elsewhere in this table; and b) not associated with a development permit for a Material Change of Use. | The applicable zone code.",
+      "clause": "TLPI 01/2026 s7 (replacing part of Table 5.7:1)",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2025-documents/planning-scheme-amendments/temporary-local-planning-instrument-tlpi-01-2026-table-of-assessment-for-building-works.pdf"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "setback",
+      "text": "setback, for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.",
+      "clause": "SC1.2",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/sched-1-definitions-v29.pdf"
+    },
+    {
+      "term": "domestic outbuilding",
+      "text": "domestic outbuilding means a non-habitable class 10a building that is— (a) a shed, garage or carport; and (b) ancillary to a residential use carried out on the premises where the building is.",
+      "clause": "SC1.2",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/sched-1-definitions-v29.pdf"
+    },
+    {
+      "term": "dwelling house",
+      "text": "dwelling house means a residential use of premises involving— (a) 1 dwelling for a single household and any domestic outbuildings associated with the dwelling; or (b) 1 dwelling for a single household, a secondary dwelling, and any domestic outbuildings associated with either dwelling.",
+      "clause": "SC1.1",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/sched-1-definitions-v29.pdf"
+    },
+    {
+      "term": "main face (Small Lot Housing Design Code)",
+      "text": "The ‘main face’ of the dwelling is the closest non-garage/carport dwelling element to the front boundary (such as the main building façade, or a first-floor balcony that faces the street (if provided).",
+      "clause": "9.3.10 footnote 40",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-09-development-codes-v29.pdf"
+    }
+  ],
+  "rules": [
+    {
+      "rule_key": "trc_slh_ao3_1_front_prevailing",
+      "code": "Small Lot Housing Design Code (9.3.10)",
+      "clause": "Table 9.3.10:1 PO3/AO3.1(a)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low Density Residential Zone",
+        "Low-medium Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots < 450 m2",
+      "structure_scope": "Buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO3.1 Buildings are setback from the road frontage: (a) within 10% of the average front setback of existing residential buildings within 100m of the site; or (b) where there is no adjoining buildings the front setback is provided in accordance with Table 4.",
+      "structured": {
+        "parameter": "front_setback_relative_to_prevailing",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "existing residential buildings within 100 m of the site"
+        ],
+        "exceptions": [],
+        "formula_text": "front setback within +/-10% of the average front setback of existing residential buildings within 100 m; otherwise Table 4"
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 Table 1.6.1 item 6 (ss32(c) and 33 BA, alternative to QDC MP1.1 P1) and code note \"AO 3.1 is an alternative provision for P1 within QDC Part MP1.1\"",
+      "measurement_notes": "Schedule 1 SC1.2: \"setback, for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.\"",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-09-development-codes-v29.pdf",
+      "page_or_anchor": "printed p104 / PDF p104",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Small Lot Housing Design Code applies to dwelling houses on lots < 450 m2 in the Low Density Residential and Low-medium Density Residential zones (accepted development subject to requirements under Tables 5.5:1 and 5.5:2 where not in a Schedule 7 plan of development). \"Buildings\" reaches Class 10a garages/carports."
+    },
+    {
+      "rule_key": "trc_slh_ao3_1_table4_front",
+      "code": "Small Lot Housing Design Code (9.3.10)",
+      "clause": "Table 9.3.10:1 AO3.1(b) Table 4",
+      "provision_type": "TABLE",
+      "zones": [
+        "Low Density Residential Zone",
+        "Low-medium Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots < 450 m2; no adjoining buildings",
+      "structure_scope": "Building element: solid building wall (where for a garage); permeable or non-enclosed elements (e.g. porch, verandah, balcony or carport)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Table 4 | Building element | Minimum setback || Solid building wall (other than a garage) | 4.0m || Solid building wall (where for a garage) | 5.5m || Permeable or non-enclosed elements (e.g. porch, verandah, balcony or carport) | 3.5m (or 3m where secondary road frontage) || Note: Eaves and window hoods (or a portion thereof) may encroach into the above setbacks by a maximum of 600mm.",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": "conditional",
+        "value": 5.5,
+        "unit": "m",
+        "conditions": [
+          "solid building wall (where for a garage): 5.5 m",
+          "permeable or non-enclosed elements (e.g. carport): 3.5 m (3 m where secondary road frontage)",
+          "solid building wall (other than a garage): 4.0 m",
+          "applies where there are no adjoining buildings (AO3.1(b))"
+        ],
+        "exceptions": [
+          "eaves and window hoods may encroach up to 600 mm"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 Table 1.6.1 item 6; code note \"AO 3.1 is an alternative provision for P1 within QDC Part MP1.1 Design and Siting Standard for Single Detached Houses – On lots under 450m².\"",
+      "measurement_notes": "Schedule 1 SC1.2: \"setback, for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.\"",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-09-development-codes-v29.pdf",
+      "page_or_anchor": "printed p104 / PDF p104",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Small Lot Housing Design Code applies to dwelling houses on lots < 450 m2 in the Low Density Residential and Low-medium Density Residential zones (accepted development subject to requirements under Tables 5.5:1 and 5.5:2 where not in a Schedule 7 plan of development). value field holds the garage figure (5.5 m); carport 3.5 m is in conditions."
+    },
+    {
+      "rule_key": "trc_slh_ao7_1d_garage_behind_main_face",
+      "code": "Small Lot Housing Design Code (9.3.10)",
+      "clause": "Table 9.3.10:1 AO7.1(d)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low Density Residential Zone",
+        "Low-medium Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots < 450 m2 without rear lane access",
+      "structure_scope": "the garage or carport",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO7.1 For lots without rear lane access: ... (d) the garage or carport is setback a minimum of one (1) metre behind the main face40 of the dwelling. || 40 The ‘main face’ of the dwelling is the closest non-garage/carport dwelling element to the front boundary (such as the main building façade, or a first-floor balcony that faces the street (if provided).",
+      "structured": {
+        "parameter": "garage_carport_setback_behind_main_face",
+        "operator": ">=",
+        "value": 1,
+        "unit": "m",
+        "conditions": [
+          "lots without rear lane access",
+          "measured relative to the main face of the dwelling, not the boundary"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES (as to QDC MP1.1 P8 car parking, not boundary clearance) - Part 1 Table 1.6.1 item 9; code note \"AO 7.1 and 7.2 are alternative provision for P8 within QDC Part MP1.1\"",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-09-development-codes-v29.pdf",
+      "page_or_anchor": "printed p107 / PDF p107",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Small Lot Housing Design Code applies to dwelling houses on lots < 450 m2 in the Low Density Residential and Low-medium Density Residential zones (accepted development subject to requirements under Tables 5.5:1 and 5.5:2 where not in a Schedule 7 plan of development). Relative setback (behind the dwelling main face), not a distance from the front boundary; curator to decide whether to encode."
+    },
+    {
+      "rule_key": "trc_slh_t2_side",
+      "code": "Small Lot Housing Design Code (9.3.10)",
+      "clause": "Table 9.3.10:1 AO4.1; Table 9.3.10:2 (Side)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Low Density Residential Zone",
+        "Low-medium Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots < 450 m2",
+      "structure_scope": "Development / buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Table 9.3.10:2 Minimum Front, Side and Rear Boundary Setbacks | Boundary | Qualification | Lot Width | Minimum Setback || Side | Where the building height is greater than 8.5 metres. | Any | 2 metres plus 0.5 metres for every 3 metres or part thereof exceeding 8.5 metres. || Where the building height is 8.5 metres or less. | ≤ 12.5 metres | 1.2m unless external walls built to boundary (zero lot alignment with no gap to boundary) || > 12 metres | 1.2 metre",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": "conditional",
+        "value": 1.2,
+        "unit": "m",
+        "conditions": [
+          "building height <= 8.5 m: 1.2 m (lot width <= 12.5 m: 1.2 m unless external walls built to boundary)",
+          "building height > 8.5 m: 2 m plus 0.5 m for every 3 m or part thereof exceeding 8.5 m"
+        ],
+        "exceptions": [
+          "lot width <= 12.5 m: external walls may be built to boundary (zero lot alignment)"
+        ],
+        "formula_text": "height<=8.5: 1.2; height>8.5: 2 + 0.5*ceil((h-8.5)/3)"
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 Table 1.6.1 item 7 (alternative to QDC MP1.1 P2) and code note \"AO 4.1 is an alternative provision for P2 within QDC Part MP1.1\"",
+      "measurement_notes": "Schedule 1 SC1.2: \"setback, for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.\"",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-09-development-codes-v29.pdf",
+      "page_or_anchor": "Table at printed p117 / PDF p117 (AO4.1 at p104-105)",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Small Lot Housing Design Code applies to dwelling houses on lots < 450 m2 in the Low Density Residential and Low-medium Density Residential zones (accepted development subject to requirements under Tables 5.5:1 and 5.5:2 where not in a Schedule 7 plan of development). Scheme drafting error: AO4.1 says \"Table 9.3.10:3\" (which is the built-to-boundary wall length table); the setback table is 9.3.10:2. Lot-width bands overlap (\"≤ 12.5 metres\" vs \"> 12 metres\") as printed."
+    },
+    {
+      "rule_key": "trc_slh_t2_rear",
+      "code": "Small Lot Housing Design Code (9.3.10)",
+      "clause": "Table 9.3.10:1 AO4.1; Table 9.3.10:2 (Rear)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Low Density Residential Zone",
+        "Low-medium Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots < 450 m2",
+      "structure_scope": "Development / buildings",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "Rear | Where the building height is greater than 8.5 metres and not associated with a rear lane. | Any | 0 metres (built to boundary) up to 8.5 metres in height; 3 metres for any building element exceeding 8.5 metres in height. || Where: (a) The building height is 8.5 metres or less and (b) The site has rear laneway access. | Any | 0 metres || Where: (a) The building height is 8.5 metres or less and (b) The side does not have rear laneway access. | ≤ 12.5 metres | 1.2 metres || > 12 metres | 1.2 metre",
+      "structured": {
+        "parameter": "min_rear_setback",
+        "operator": "conditional",
+        "value": 1.2,
+        "unit": "m",
+        "conditions": [
+          "building height <= 8.5 m, no rear laneway access: 1.2 m",
+          "building height <= 8.5 m, rear laneway access: 0 m",
+          "building height > 8.5 m, not associated with rear lane: 0 m up to 8.5 m height; 3 m for any building element exceeding 8.5 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 Table 1.6.1 item 7 (alternative to QDC MP1.1 P2); code note to AO4.1",
+      "measurement_notes": "Schedule 1 SC1.2: \"setback, for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.\"",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-09-development-codes-v29.pdf",
+      "page_or_anchor": "printed p117 / PDF p117",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Small Lot Housing Design Code applies to dwelling houses on lots < 450 m2 in the Low Density Residential and Low-medium Density Residential zones (accepted development subject to requirements under Tables 5.5:1 and 5.5:2 where not in a Schedule 7 plan of development). Same AO4.1 table-number error as the side rule. \"The side does not have rear laneway access\" is printed as such (probably \"site\")."
+    },
+    {
+      "rule_key": "trc_ldr_ao9_1_front",
+      "code": "Low Density Residential Zone Code (6.2.1)",
+      "clause": "Table 6.2.1:3 PO9/AO9.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable dwelling house only (lots < 450 m2 or hatchet lots not complying with the Small Lot Housing Design Code / Medium Density Residential Code AOs)",
+      "structure_scope": "buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO9.1 Where the site has frontage to a collector or local road, buildings are set back from that frontage: (a) within 20% of the average front setback of adjoining buildings; or (b) where there are no adjoining buildings, 4m.",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": "conditional",
+        "value": 4,
+        "unit": "m",
+        "conditions": [
+          "frontage to a collector or local road",
+          "where adjoining buildings: within 20% of the average front setback of adjoining buildings",
+          "no adjoining buildings: 4 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": "Schedule 1 SC1.2: \"setback, for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.\"",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p17 / PDF p17",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 6.2.1:3 is \"assessment benchmarks for assessable development\" only. A dwelling house on a lot >= 450 m2 (not hatchet, not in a Schedule 7 plan) is accepted development with no benchmarks (Table 5.5:1), so this applies only when a dwelling house becomes code assessable. Class 10 building work not associated with an MCU is accepted subject to requirements against \"the applicable zone code\" (TLPI 01/2026), but Table 6.2.1:1 has no setback AO."
+    },
+    {
+      "rule_key": "trc_ldr_ao9_2_front_qdc",
+      "code": "Low Density Residential Zone Code (6.2.1)",
+      "clause": "Table 6.2.1:3 AO9.2(a)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable dwelling house only; frontage to a road other than a collector or local road",
+      "structure_scope": "residential buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO9.2 Where the site has frontage to a road other than a collector or local road: (a) residential buildings are set back from that frontage in accordance with the requirements of the Queensland Development Code.",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "frontage to a road other than a collector or local road"
+        ],
+        "exceptions": [],
+        "formula_text": "QDC road setback applies"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - defers to the QDC",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p17 / PDF p17",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Defers to QDC. Same applicability limits as trc_ldr_ao9_1_front."
+    },
+    {
+      "rule_key": "trc_ldr_ao10_1_side",
+      "code": "Low Density Residential Zone Code (6.2.1)",
+      "clause": "Table 6.2.1:3 PO10/AO10.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable dwelling house only",
+      "structure_scope": "Buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO10.1 Buildings are set back from a side boundary: (a) Ground Floor (up to 3.5m high) – 1.5m; and (b) First floor (up to 7.5m high) – 2m; (c) Above 7.5m – 3m; or (d) the distance of the height of the retaining wall on the side boundary or combination of the height of the retaining wall and a fence, whichever is greater (Figure 1). Where the retaining wall extends into the site, the setback is measured from the base or top of the retaining wall.",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": "conditional",
+        "value": 1.5,
+        "unit": "m",
+        "conditions": [
+          "height <= 3.5 m (ground floor): 1.5 m",
+          "height <= 7.5 m (first floor): 2 m",
+          "height > 7.5 m: 3 m",
+          "or the height of the retaining wall (or retaining wall + fence) on the side boundary, whichever is greater"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": "Where the retaining wall extends into the site, the setback is measured from the base or top of the retaining wall. Schedule 1 SC1.2: \"setback, for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.\"",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p18 / PDF p18",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Assessable-only table; see trc_ldr_ao9_1_front notes. AO10.3/AO10.4 (non-residential development) not recorded."
+    },
+    {
+      "rule_key": "trc_ldr_ao10_2_rear",
+      "code": "Low Density Residential Zone Code (6.2.1)",
+      "clause": "Table 6.2.1:3 PO10/AO10.2",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable dwelling house only",
+      "structure_scope": "Buildings",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "AO10.2 Buildings are set back: (a) a minimum of 3m from a rear boundary; or (b) the distance equivalent to of the cumulative height of the retaining wall and fence on the rear boundary (Figure 1). Where the retaining wall extends into the site, the setback is measured from the base or top of the retaining wall.",
+      "structured": {
+        "parameter": "min_rear_setback",
+        "operator": ">=",
+        "value": 3,
+        "unit": "m",
+        "conditions": [
+          "or the cumulative height of the retaining wall and fence on the rear boundary"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": "Where the retaining wall extends into the site, the setback is measured from the base or top of the retaining wall.",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p18 / PDF p18",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Assessable-only table; see trc_ldr_ao9_1_front notes."
+    },
+    {
+      "rule_key": "trc_lmdr_ao9_1_front",
+      "code": "Low-medium Density Residential Zone Code (6.2.2)",
+      "clause": "Table 6.2.2:3 PO9/AO9.1 and Table 1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low-medium Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable dwelling house only",
+      "structure_scope": "Buildings; building elements incl. garage and carport",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO9.1 Buildings are set back from the road frontage: (a) within 10% of the average front setback of existing residential buildings within 100m of the site; or (b) where there are no adjoining buildings the front setback is provided in accordance with Table 1. || Table 1 | Building element | Minimum setback || Solid building wall (other than a garage) | 4.0m || Solid building wall (where for a garage) | 5.5m || Permeable or non-enclosed elements (e.g. porch, verandah, balcony or carport) | 3.5m (or 3m where secondary road frontage)",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": "conditional",
+        "value": 5.5,
+        "unit": "m",
+        "conditions": [
+          "within 10% of the average front setback of existing residential buildings within 100 m",
+          "no adjoining buildings: garage 5.5 m; carport/non-enclosed 3.5 m (3 m secondary road frontage); other solid wall 4.0 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": "Note to PO9: \"The prevailing setback of the street is determined by the setbacks of the buildings on any lot along the road within 100m of the site.\" Schedule 1 SC1.2: \"setback, for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.\"",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p35 / PDF p35",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 6.2.2:3 is assessable-only. Dwelling house on lot >= 450 m2 (not hatchet, not in a Schedule 7 plan) is accepted development (Table 5.5:2); otherwise accepted subject to requirements against the LMDR Zone Code (Table 6.2.2:1 has no setback AO) and the Small Lot Housing Design Code / Medium Density Residential Code."
+    },
+    {
+      "rule_key": "trc_lmdr_ao9_2_front_qdc",
+      "code": "Low-medium Density Residential Zone Code (6.2.2)",
+      "clause": "Table 6.2.2:3 AO9.2(a)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low-medium Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable dwelling house only; frontage to road other than collector or local road; not in Hospital Support Precinct",
+      "structure_scope": "residential buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO9.2 Where the site has frontage to road other than a collector or local road, and buildings are not located in the Hospital Support Precinct: (a) residential buildings are set back from that frontage in accordance with the requirements of the Queensland Development Code.",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "frontage to a road other than a collector or local road"
+        ],
+        "exceptions": [],
+        "formula_text": "QDC road setback applies"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - defers to the QDC",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p35 / PDF p35",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Defers to QDC."
+    },
+    {
+      "rule_key": "trc_lmdr_ao16_2_side",
+      "code": "Low-medium Density Residential Zone Code (6.2.2)",
+      "clause": "Table 6.2.2:3 PO16/AO16.1-AO16.2; Table 6.2.2:4",
+      "provision_type": "TABLE",
+      "zones": [
+        "Low-medium Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable dwelling house only",
+      "structure_scope": "Buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO16.1 Buildings built to side boundaries have: (a) a maximum height of 3m; and (b) a maximum length of 9m. Note: Built to boundary walls require a 0.00m lot alignment. OR AO16.2 Buildings are set back from a side boundary in accordance with table 6.2.2:4 or the distance of the height of the retaining wall on the side boundary or combination of the height of the retaining wall and a fence, whichever is greater (Figure 1). Where the retaining wall extends into the site, the setback is measured from the base or top of the retaining wall. || Table 6.2.2:4 – Side Boundary Setbacks | Width of lot frontage || 10.0m - 12.4m | Ground floor (up to 3.5m high) 0.9m | First floor (up to 7.5m high) 0.9m || 12.5m – 14.9m | Ground floor (up to 3.5m high) 1m | First floor (up to 7.5m high) 1m || 15.0m -19.9m | Ground floor (up to 3.5m high) 1m | First floor (up to 7.5m high) 1.5m || 20m + | Ground floor (up to 3.5m high) 1.2m | First floor (up to 7.5m high) 2m || All lots | Second floor (above 7.5m) 2m",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": "conditional",
+        "value": 1,
+        "unit": "m",
+        "conditions": [
+          "frontage 10.0-12.4 m: <=3.5 m high 0.9 m; <=7.5 m high 0.9 m",
+          "frontage 12.5-14.9 m: 1 m; 1 m",
+          "frontage 15.0-19.9 m: 1 m; 1.5 m",
+          "frontage 20 m+: 1.2 m; 2 m",
+          "all lots, above 7.5 m: 2 m",
+          "or retaining wall (+ fence) height on side boundary if greater"
+        ],
+        "exceptions": [
+          "built to side boundary permitted where max height 3 m and max length 9 m (AO16.1)"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": "Where the retaining wall extends into the site, the setback is measured from the base or top of the retaining wall.",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "AO16 printed p38 / PDF p38; Table 6.2.2:4 printed p44 / PDF p44",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Assessable-only table. Table 6.2.2:4 column headers flattened from the PDF layout; no figure for frontages < 10 m. value field = 1.0 (typical); see conditions."
+    },
+    {
+      "rule_key": "trc_lmdr_ao16_3_rear",
+      "code": "Low-medium Density Residential Zone Code (6.2.2)",
+      "clause": "Table 6.2.2:3 PO16/AO16.3",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low-medium Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable dwelling house only",
+      "structure_scope": "Buildings",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "AO16.3 Buildings are set back a minimum of 1m from a rear boundary or the distance of the cumulative height of the retaining wall and fence on the rear boundary (Figure 1). Where the retaining wall extends into the site, the setback is measured from the base or top of the retaining wall.",
+      "structured": {
+        "parameter": "min_rear_setback",
+        "operator": ">=",
+        "value": 1,
+        "unit": "m",
+        "conditions": [
+          "or cumulative height of the retaining wall and fence on the rear boundary"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": "Where the retaining wall extends into the site, the setback is measured from the base or top of the retaining wall.",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p38 / PDF p38",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Assessable-only table."
+    },
+    {
+      "rule_key": "trc_lmdr_hs_ao33_1_front",
+      "code": "Low-medium Density Residential Zone Code (6.2.2)",
+      "clause": "Table 6.2.2:3 PO33/AO33.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low-medium Density Residential Zone - Hospital Support Precinct"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable development only",
+      "structure_scope": "Buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Development in the Hospital Support Precinct || AO33.1 Buildings are setback at least 6m from the front boundary.",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p43 / PDF p43",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Precinct-specific; assessable-only table."
+    },
+    {
+      "rule_key": "trc_lmdr_hs_ao33_2_side",
+      "code": "Low-medium Density Residential Zone Code (6.2.2)",
+      "clause": "Table 6.2.2:3 PO33/AO33.2",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low-medium Density Residential Zone - Hospital Support Precinct"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable development only",
+      "structure_scope": "Buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO33.2 Buildings are setback a minimum of 4m from side boundaries for the extent of the building(s) within 10m of the front boundary.",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": "conditional",
+        "value": 4,
+        "unit": "m",
+        "conditions": [
+          "only for the part of the building within 10 m of the front boundary"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p43 / PDF p43",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Precinct-specific; assessable-only table."
+    },
+    {
+      "rule_key": "trc_lmdr_hs_ao33_3_rear",
+      "code": "Low-medium Density Residential Zone Code (6.2.2)",
+      "clause": "Table 6.2.2:3 PO33/AO33.3",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low-medium Density Residential Zone - Hospital Support Precinct"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable development only",
+      "structure_scope": "Buildings",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "AO33.3 Buildings are setback at least 6m from the rear boundary.",
+      "structured": {
+        "parameter": "min_rear_setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p43 / PDF p43",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Precinct-specific; assessable-only table."
+    },
+    {
+      "rule_key": "trc_twn_ao6_1_front",
+      "code": "Township Zone Code (6.6.9)",
+      "clause": "Table 6.6.9:2 PO6/AO6.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Township Zone - Flood Management Precinct"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable dwelling house (Flood Management Precinct)",
+      "structure_scope": "buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO6.1 Where the site has frontage to a collector or local road, buildings are set back from that frontage: (a) within 20% of the average front setback of adjoining buildings; or (b) where there are no adjoining buildings, 4m.",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": "conditional",
+        "value": 4,
+        "unit": "m",
+        "conditions": [
+          "frontage to a collector or local road",
+          "within 20% of average front setback of adjoining buildings; else 4 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": "Schedule 1 SC1.2: \"setback, for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.\"",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p230 / PDF p230",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 6.6.9:2 is assessable-only. A dwelling house in the Township zone is accepted development (no benchmarks) unless in the Flood Management Precinct, where it is code assessable against the Township Zone Code (Table 5.5:17)."
+    },
+    {
+      "rule_key": "trc_twn_ao6_2_front_qdc",
+      "code": "Township Zone Code (6.6.9)",
+      "clause": "Table 6.6.9:2 AO6.2(a)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Township Zone - Flood Management Precinct"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable dwelling house (Flood Management Precinct); frontage to road other than collector or local road",
+      "structure_scope": "residential buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO6.2 Where the site has frontage to a road other than a collector or local road: (a) residential buildings are set back from that frontage in accordance with the Queensland Development Code.",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": "QDC road setback applies"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - defers to the QDC",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p230 / PDF p230",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": false,
+      "notes": "Defers to QDC."
+    },
+    {
+      "rule_key": "trc_twn_side_rear_absent",
+      "code": "Township Zone Code (6.6.9)",
+      "clause": "Table 6.6.9:2 PO7 (absence)",
+      "provision_type": "OTHER",
+      "zones": [
+        "Township Zone",
+        "Township Zone - Flood Management Precinct"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "dwelling house and Class 10 buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear setback is stated in the Township Zone Code for a dwelling house or its Class 10 buildings: PO7 AO7.1-AO7.3 apply only \"For accommodation activities (other than dwelling house and dual occupancy)\" and \"For other development: No acceptable outcome is nominated.\"; the QDC applies.)",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": "QDC MP1.2 applies"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council provision",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p230 / PDF p230",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Absence rule derived from reading PO7 in full. Outside the Flood Management Precinct the dwelling house is accepted development with no requirements, so there is no front setback either."
+    },
+    {
+      "rule_key": "trc_cf_ao2_1_side_rear_res",
+      "code": "Community Facilities Zone Code (6.6.1)",
+      "clause": "Table 6.6.1:1 PO2/AO2.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Community Facilities Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "boundary adjoining a residential premises",
+      "structure_scope": "Buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO2.1 Buildings are set back from any boundary adjoining a residential premises a minimum of 3m or half the height of the building, whichever is the greater.",
+      "structured": {
+        "parameter": "min_boundary_setback",
+        "operator": ">=",
+        "value": 3,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "only boundaries adjoining a residential premises",
+          "greater of 3 m or half the building height"
+        ],
+        "exceptions": [],
+        "formula_text": "max(3, height/2)"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p155 / PDF p155",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 6.6.1:1 is a requirement for accepted development: a dwelling house in the CF zone is accepted development subject to requirements against the Community Facilities Zone Code (Table 5.5:14), and Class 10 building work is accepted subject to requirements against the applicable zone code (TLPI 01/2026). \"Any boundary\" could include a front boundary adjoining a residential premises; recorded as side/rear."
+    },
+    {
+      "rule_key": "trc_cf_ao6_1_side_rear_reszone",
+      "code": "Community Facilities Zone Code (6.6.1)",
+      "clause": "Table 6.6.1:2 PO6/AO6.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Community Facilities Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable; boundary adjoining land in a residential or rural residential zone",
+      "structure_scope": "Buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO6.1 Buildings are set back from any boundary adjoining land in a residential or rural residential zone a minimum of 3m or half the height of the building, whichever is the greater.",
+      "structured": {
+        "parameter": "min_boundary_setback",
+        "operator": ">=",
+        "value": 3,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "only boundaries adjoining land in a residential or rural residential zone",
+          "greater of 3 m or half the building height"
+        ],
+        "exceptions": [],
+        "formula_text": "max(3, height/2)"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p159 / PDF p159",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Assessable-only table (code assessment when not complying with Table 6.6.1:1)."
+    },
+    {
+      "rule_key": "trc_cf_ao7_1_front",
+      "code": "Community Facilities Zone Code (6.6.1)",
+      "clause": "Table 6.6.1:2 PO7/AO7.1 (both AOs numbered 7.1)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Community Facilities Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "code assessable",
+      "structure_scope": "buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO7.1 Where the site has frontage to a collector or local road, buildings are set back from that frontage: (a) within 20% of the average front setback of adjoining buildings; or (b) where there are no adjoining buildings, 4m. AO7.1 Where the site has frontage to a road other than a collector or local road, buildings are set back from that frontage by 6m.",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": "conditional",
+        "value": 4,
+        "unit": "m",
+        "conditions": [
+          "collector or local road: within 20% of average of adjoining buildings, else 4 m",
+          "other roads: 6 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p159 / PDF p159",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Assessable-only table. Duplicate AO number as printed."
+    },
+    {
+      "rule_key": "trc_rur_ao1_1_nonres_buildings",
+      "code": "Rural Zone Code (6.6.6)",
+      "clause": "Table 6.6.6:1 PO1/AO1.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Rural Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Non-residential buildings, animal enclosures, storage facilities and waste disposal areas",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO1.1 Non-residential buildings, animal enclosures, storage facilities and waste disposal areas are setback the following distances from any: (a) dwelling on adjoining land in the Rural Zone - 50m; (b) land included in the low Density Residential, Low-medium Density Residential, Township, Emerging Community or the Rural Residential Zones - 100m.",
+      "structured": {
+        "parameter": "separation_from_sensitive_land",
+        "operator": "conditional",
+        "value": 100,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "(a) from any dwelling on adjoining Rural zone land: 50 m (separation to a dwelling, not a boundary)",
+          "(b) from land in LDR, LMDR, Township, Emerging Community or Rural Residential zones: 100 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p200 / PDF p200",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 6.6.6:1 applies to accepted development subject to requirements. Unclear whether a domestic shed (domestic outbuilding ancillary to a dwelling house) is a \"non-residential building\"; farm sheds clearly are. Rural dwelling AO7.3 (\"The dwelling is setback from site boundaries by 50m.\") applies to the dwelling only and is not recorded as a Class 10 rule."
+    },
+    {
+      "rule_key": "trc_rur_domestic_absent",
+      "code": "Rural Zone Code (6.6.6)",
+      "clause": "Tables 6.6.6:1 and 6.6.6:2 (absence)",
+      "provision_type": "OTHER",
+      "zones": [
+        "Rural Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "domestic outbuildings / Class 10",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No front, side or rear setback is stated in the Rural Zone Code for domestic outbuildings or other Class 10 buildings ancillary to a dwelling house; AO7.3 applies to \"the dwelling\" only; the QDC applies.)",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "also no front setback"
+        ],
+        "exceptions": [],
+        "formula_text": "QDC MP1.2 applies"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council provision",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p200-205 / PDF p200-205",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": true,
+      "notes": "Absence rule; see trc_rur_ao1_1_nonres_buildings for the non-residential building separation."
+    },
+    {
+      "rule_key": "trc_rr_absent",
+      "code": "Rural Residential Zone Code (6.6.7)",
+      "clause": "Tables 6.6.7:1 and 6.6.7:2 (absence)",
+      "provision_type": "OTHER",
+      "zones": [
+        "Rural Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "dwelling house and Class 10 buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No front, side or rear boundary setback is stated in the Rural Residential Zone Code for a dwelling house or Class 10 buildings; AO1.1 is a 50m separation of non-residential buildings and animal enclosures from dwellings on surrounding land, not a boundary setback; the QDC applies.)",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "also no front setback"
+        ],
+        "exceptions": [],
+        "formula_text": "QDC MP1.2 applies"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council provision",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p206-212 / PDF p206-212",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Class 10a building work in the RR zone where total Class 10a GFA > 10% of site area is accepted subject to requirements against the RR Zone Code (TLPI 01/2026 Table 5.7:1), but the code states no Class 10a boundary setback."
+    },
+    {
+      "rule_key": "trc_ec_absent",
+      "code": "Emerging Community Zone Code (6.6.2)",
+      "clause": "Table 5.5:15; Table 6.6.2:1 (absence)",
+      "provision_type": "OTHER",
+      "zones": [
+        "Emerging Community Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "dwelling house and Class 10 buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No front, side or rear setback applies to a dwelling house or its Class 10 buildings in the Emerging Community Zone: the dwelling house is accepted development with no requirements, and AO1.1 applies to \"new non-residential development\"; the QDC applies.)",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "also no front setback"
+        ],
+        "exceptions": [],
+        "formula_text": "QDC MP1.2 applies"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council provision",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf",
+      "page_or_anchor": "printed p162 / PDF p162",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Absence rule."
+    },
+    {
+      "rule_key": "trc_ldr_lmdr_accepted_absent",
+      "code": "Tables 5.5:1 / 5.5:2",
+      "clause": "Table 5.5:1, Table 5.5:2 (absence)",
+      "provision_type": "OTHER",
+      "zones": [
+        "Low Density Residential Zone",
+        "Low-medium Density Residential Zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots >= 450 m2, not a hatchet lot, not within a Schedule 7 plan of development",
+      "structure_scope": "dwelling house and Class 10 buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No council front, side or rear setback applies to a dwelling house or its Class 10 buildings on a lot of 450m² or more that is not a hatchet lot and not in a Schedule 7 plan of development: the dwelling house is accepted development with no requirements, and zone code Tables 6.2.1:1 / 6.2.2:1 contain no setback AO; the QDC applies.)",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "also no front setback"
+        ],
+        "exceptions": [],
+        "formula_text": "QDC MP1.2 applies"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council provision",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf",
+      "page_or_anchor": "printed p13 and p29 / PDF p13, p29",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Hatchet lots >= 450 m2 use the Medium Density Residential Code Table 9.3.7:1 PO23/AO23.2 (\"The dwelling is setback a minimum of 2m from all boundaries.\"), which applies to the dwelling only (p63). Schedule 7 plans of development may set their own setbacks (not reviewed)."
+    },
+    {
+      "rule_key": "trc_sc_defence_absent",
+      "code": "Table 5.5:7",
+      "clause": "Table 5.5:7 (absence)",
+      "provision_type": "OTHER",
+      "zones": [
+        "Specialised Centre Zone - Defence Facilities Precinct"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "dwelling house and Class 10 buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No council front, side or rear setback applies to a dwelling house in the Defence Facilities Precinct of the Specialised Centre Zone: it is accepted development with no requirements; the QDC applies.)",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "also no front setback"
+        ],
+        "exceptions": [],
+        "formula_text": "QDC applies"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council provision",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf",
+      "page_or_anchor": "printed p175 / PDF p175",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Absence rule."
+    },
+    {
+      "rule_key": "trc_nc_overlay_ao1_1_garage_front",
+      "code": "Neighbourhood Character Overlay Code (8.3.2)",
+      "clause": "Table 8.3.2:1 PO1/AO1.1(a)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "All zones"
+      ],
+      "overlay": "Neighbourhood Character Overlay",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "New garages, carports or outbuildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO1.1 New garages, carports or outbuildings are: (a) set back equal to or behind the front building line30 of the primary building on the site;",
+      "structured": {
+        "parameter": "front_setback_relative_to_primary_building",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "equal to or behind the front building line of the primary building on the site"
+        ],
+        "exceptions": [],
+        "formula_text": "garage/carport/outbuilding front setback >= front setback of primary building"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - Neighbourhood Character Overlay Code is the referral-agency amenity/aesthetics provision (Table 1.6.2 item 1), not an s33 alternative provision",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-08-overlays-v29.pdf",
+      "page_or_anchor": "printed p38 / PDF p38",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Construction of a Class 10a building on the same site as a Neighbourhood character place (SC6.7.2 PSP No. 7) is accepted subject to requirements against this code (TLPI 01/2026). Footnote 30 is an amendment note only."
+    },
+    {
+      "rule_key": "trc_heritage_overlay_ao1_1_garage_front",
+      "code": "Heritage Overlay Code (8.3.1)",
+      "clause": "Table 8.3.1:1 PO1/AO1.1(a)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "All zones"
+      ],
+      "overlay": "Heritage Overlay",
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "New garages, carports or outbuildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO1.1 New garages, carports or outbuildings are: (a) set back equal to or behind the alignment of the primary building on the site;",
+      "structured": {
+        "parameter": "front_setback_relative_to_primary_building",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "equal to or behind the alignment of the primary building on the site"
+        ],
+        "exceptions": [],
+        "formula_text": "garage/carport/outbuilding setback >= primary building alignment"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Table 1.6.1",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-08-overlays-v29.pdf",
+      "page_or_anchor": "printed p34 / PDF p34",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Construction of a Class 10a building on the same site as a Heritage place (SC6.6.2 PSP No. 6) is accepted subject to requirements against this code (TLPI 01/2026)."
+    },
+    {
+      "rule_key": "trc_cwea_ao13_1_front",
+      "code": "Charlton Wellcamp Enterprise Area Local Plan Code (7.2.3)",
+      "clause": "Table 7.2.3:1 PO13/AO13.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "All zones"
+      ],
+      "overlay": null,
+      "local_plan": "Charlton Wellcamp Enterprise Area Local Plan",
+      "lot_conditions": "code assessable development only",
+      "structure_scope": "All buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO13.1 All buildings are setback from the primary road frontage not less than: (a) 40m from the Toowoomba Bypass corridor; (b) 20m from the Warrego Highway (other than in the Commercial/Centre Precinct) or the Toowoomba Cecil Plains Road; or (c) 10m otherwise.",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": "conditional",
+        "value": 10,
+        "unit": "m",
+        "conditions": [
+          "Toowoomba Bypass corridor: 40 m",
+          "Warrego Highway (other than Commercial/Centre Precinct) or Toowoomba Cecil Plains Road: 20 m",
+          "otherwise: 10 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-07-local-plans-v29.pdf",
+      "page_or_anchor": "printed p37 / PDF p37",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Industrial enterprise-area local plan; Table 7.2.3:1 is assessable-only. Listed as a benchmark for code-assessable dwelling houses \"where in the Charlton Wellcamp Enterprise Area local plan area\". Rarely relevant to dwelling houses."
+    },
+    {
+      "rule_key": "trc_cwea_ao14_1_side_rear",
+      "code": "Charlton Wellcamp Enterprise Area Local Plan Code (7.2.3)",
+      "clause": "Table 7.2.3:1 PO14/AO14.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "All zones"
+      ],
+      "overlay": null,
+      "local_plan": "Charlton Wellcamp Enterprise Area Local Plan",
+      "lot_conditions": "code assessable development only",
+      "structure_scope": "Buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO14.1 Buildings are setback: (a) not less than 40m from any boundary adjoining land outside the Charlton Wellcamp Enterprise Area Local Plan area used for rural purposes; and (b) not less than 70m from Dry Creek, Westbrook Creek or Spring Creek; or otherwise, where not for (a) or (b): (c) a minimum of 5m from any side or rear boundary.",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": "conditional",
+        "value": 5,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "boundary adjoining rural land outside the local plan area: 40 m",
+          "otherwise: 5 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not listed in Part 1 Table 1.6.1 (only Small Lot Housing Design Code AO3.1, AO4.1, AO7.1/7.2, AO8.1/8.2, AO9.1, AO12.1 are listed); ordinary planning benchmark",
+      "measurement_notes": null,
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-07-local-plans-v29.pdf",
+      "page_or_anchor": "printed p37 / PDF p37",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "(b) is a creek buffer (out of scope), kept only because it is part of the same sentence."
+    }
+  ],
+  "overlays_affecting_siting": [
+    {
+      "overlay": "Neighbourhood Character Overlay",
+      "effect": "Class 10a on the same site as a neighbourhood character place: accepted subject to requirements against Table 8.3.2:1 (AO1.1 garages/carports/outbuildings set back equal to or behind the front building line of the primary building). Council is referral agency for amenity/aesthetics (Table 1.6.2).",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-08-overlays-v29.pdf"
+    },
+    {
+      "overlay": "Heritage Overlay",
+      "effect": "Class 10a on the same site as a heritage place: accepted subject to requirements against Table 8.3.1:1 (AO1.1 set back equal to or behind the alignment of the primary building).",
+      "source_url": "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-08-overlays-v29.pdf"
+    }
+  ],
+  "local_plan_mechanism": {
+    "summary": "Part 7 local plans: Highfields, Meringandan and Meringandan West; Glenvale; Charlton Wellcamp Enterprise Area. Local plan codes are listed as benchmarks only for code-assessable development (local plan codes prevail over zone codes, s1.5). Only the Charlton Wellcamp Enterprise Area code has numeric building setbacks (AO13.1/AO14.1, industrial area). The Highfields and Glenvale codes state no numeric front/side/rear setbacks reaching Class 10. Schedule 7 Approved Plans of Development (not reviewed) can apply instead of the Small Lot code."
+  },
+  "open_questions": [
+    "Small Lot Housing Design Code AO4.1 refers to \"Table 9.3.10:3\", but the setback table is 9.3.10:2 (9.3.10:3 is built-to-boundary wall length). Confirm the intended reference with council.",
+    "Table 9.3.10:2 lot-width bands overlap (\"≤ 12.5 metres\" and \"> 12 metres\"); both give 1.2 m, so the result is the same.",
+    "Rural Zone AO1.1 \"Non-residential buildings\": does it reach a domestic shed ancillary to a dwelling house (Class 10a), or only farm/non-residential buildings?",
+    "Under TLPI 01/2026, building work not associated with an MCU is accepted subject to requirements against \"the applicable zone code\". It is unclear whether council applies assessable-only zone code tables (e.g. LDR Table 6.2.1:3 setbacks) to such Class 10 building work. The accepted-development parts (Tables 6.2.1:1 / 6.2.2:1) contain no setbacks.",
+    "Schedule 7 Approved Plans of Development were not reviewed; they may contain estate-specific setbacks.",
+    "QHC adoption: none found in the v29 text; re-check at the next scheme amendment."
+  ],
+  "fetch_log": [
+    "https://www.tr.qld.gov.au/Plan-and-build/Toowoomba-Regional-Planning-Scheme/View-the-Toowoomba-Regional-Planning-Scheme -> 403 with browser UA (Akamai); 200 with curl default UA (curl/8.0); 292 KB HTML listing v29 PDFs",
+    "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-01-about-the-ps-v29.pdf -> 200 (curl UA), 404 KB, text extracted",
+    "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-05-tables-of-assessment-v29-with-tlpis-01_2026.pdf -> 200, 3.4 MB, text extracted",
+    "https://www.tr.qld.gov.au/files/assets/public/v/2/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-06-zone-codes-v29.pdf -> 200, 4.6 MB, text extracted",
+    "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-07-local-plans-v29.pdf -> 200, 3.8 MB, text extracted",
+    "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-08-overlays-v29.pdf -> 200, 1.7 MB, text extracted",
+    "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/part-09-development-codes-v29.pdf -> already downloaded (p9.txt); 403 with browser UA, 200 with curl UA",
+    "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/sched-1-definitions-v29.pdf -> 200, text extracted",
+    "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2026-documents/citation_and_commencement_v29.pdf -> 200, text extracted",
+    "https://www.tr.qld.gov.au/Plan-and-build/Toowoomba-Regional-Planning-Scheme/Temporary-Local-Planning-Instruments -> 200 (curl UA)",
+    "https://www.tr.qld.gov.au/files/assets/public/v/1/plan-and-build/planning-for-our-region/planning-scheme/2025-documents/planning-scheme-amendments/temporary-local-planning-instrument-tlpi-01-2026-table-of-assessment-for-building-works.pdf -> 200, 486 KB, text extracted",
+    "Guessed names (e.g. part-06-zones-v29.pdf) under /v/1/ with browser UA -> 403; real names taken from the council page"
+  ]
+}

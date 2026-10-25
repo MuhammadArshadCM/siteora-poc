@@ -1,0 +1,522 @@
+[
+ {
+  "rule_id": "BCC.bcc_hdr_pad_dhc_small_lot_raising_side_setback",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Applies to raising an existing dwelling house (Table 5.3.4.1), not to Class 10."
+ },
+ {
+  "rule_id": "BCC.np_sherwood_westside_side_setback",
+  "decision": "MANUAL_REVIEW",
+  "reason": "AO3.5 is an either/or: within 20% of the average of pre-1947 houses, or the QDC minimum (not on a small lot); needs neighbour data and a decision on how the QDC limb interacts."
+ },
+ {
+  "rule_id": "BCC.sl_built_to_boundary_character_precinct",
+  "decision": "MANUAL_REVIEW",
+  "reason": "AO9.2 applies in the Character zone precinct of the Character residential zone, which is not mapped in the dataset."
+ },
+ {
+  "rule_id": "BCC.sl_built_to_boundary_general",
+  "decision": "MANUAL_REVIEW",
+  "reason": "AO9.1 adds conditions (adjoining lot > 300 m2, 1 m from a habitable window, not within front/rear setbacks) to the 0 m limbs already encoded in BCC.C.SL_SIDE_ZERO; reconcile before encoding."
+ },
+ {
+  "rule_id": "BCC.sl_car_accommodation_width_vs_frontage",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Car accommodation width, not a boundary setback distance."
+ },
+ {
+  "rule_id": "BCC.sl_crossover_width",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Crossover width, not a boundary setback distance."
+ },
+ {
+  "rule_id": "BCC.sl_double_garage_door_width_recess",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Garage door width and recess relative to the house, not a boundary setback distance."
+ },
+ {
+  "rule_id": "BCC.sl_parking_forward_of_garage",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Number of parking spaces, not a boundary setback distance."
+ },
+ {
+  "rule_id": "BCC.sl_roof_deck_side_setback",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "AO14.2 regulates roof decks / viewing platforms of the dwelling, not Class 10 structures."
+ },
+ {
+  "rule_id": "BCC.sl_steep_site_carport_garage",
+  "decision": "MANUAL_REVIEW",
+  "reason": "AO13.4 lets a carport/garage on a steep site (1 in 4) be closer to the road than the house without stating a distance, superseding AO5; needs a slope input and a rule for the reduced setback."
+ },
+ {
+  "rule_id": "BCC.slb_parking_tandem",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Number and arrangement of parking spaces, not a boundary setback distance."
+ },
+ {
+  "rule_id": "BCC.slb_shared_walls",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "AO26 regulates shared walls of attached dwellings (high-density development easement), not Class 10."
+ },
+ {
+  "rule_id": "BCC.tbc_carport_width_forward_of_house",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Carport width and recess relative to the house facade, not a boundary setback distance."
+ },
+ {
+  "rule_id": "BCC.tbc_latrobe_pre1911_extension_location",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "AO11.1 locates alterations or extensions of a pre-1911 building, not Class 10 structures."
+ },
+ {
+  "rule_id": "BSC.bsc_gdc_t7214_rural_front",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 7.2.1.4 row: General development code AO5 applies Table 7.2.1.4 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings (Table 7.2.1.1), so it does not reach a dwelling house or its domestic outbuildings (Class 10); for a code-assessable dwelling house the zone code AO1 governs (curated as BSC.C.RURAL_*)."
+ },
+ {
+  "rule_id": "BSC.bsc_gdc_t7214_rural_residential_front",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 7.2.1.4 row: General development code AO5 applies Table 7.2.1.4 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings (Table 7.2.1.1), so it does not reach a dwelling house or its domestic outbuildings (Class 10); for a code-assessable dwelling house the zone code AO1 governs (curated as BSC.C.RR_*)."
+ },
+ {
+  "rule_id": "BSC.bsc_gdc_t7214_rural_residential_side_rear",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 7.2.1.4 row: General development code AO5 applies Table 7.2.1.4 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings (Table 7.2.1.1), so it does not reach a dwelling house or its domestic outbuildings (Class 10); for a code-assessable dwelling house the zone code AO1 governs (curated as BSC.C.RR_*)."
+ },
+ {
+  "rule_id": "BSC.bsc_gdc_t7214_rural_side_rear",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 7.2.1.4 row: General development code AO5 applies Table 7.2.1.4 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings (Table 7.2.1.1), so it does not reach a dwelling house or its domestic outbuildings (Class 10); for a code-assessable dwelling house the zone code AO1 governs (curated as BSC.C.RURAL_*)."
+ },
+ {
+  "rule_id": "BSC.bsc_gdc_t7214_township_commercial_front",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 7.2.1.4 row: General development code AO5 applies Table 7.2.1.4 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings (Table 7.2.1.1), so it does not reach a dwelling house or its domestic outbuildings (Class 10)."
+ },
+ {
+  "rule_id": "BSC.bsc_gdc_t7214_township_commercial_side_rear",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 7.2.1.4 row: General development code AO5 applies Table 7.2.1.4 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings (Table 7.2.1.1), so it does not reach a dwelling house or its domestic outbuildings (Class 10)."
+ },
+ {
+  "rule_id": "BSC.bsc_gdc_t7214_township_industrial_front",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 7.2.1.4 row: General development code AO5 applies Table 7.2.1.4 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings (Table 7.2.1.1), so it does not reach a dwelling house or its domestic outbuildings (Class 10)."
+ },
+ {
+  "rule_id": "BSC.bsc_gdc_t7214_township_industrial_side_rear",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 7.2.1.4 row: General development code AO5 applies Table 7.2.1.4 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings (Table 7.2.1.1), so it does not reach a dwelling house or its domestic outbuildings (Class 10)."
+ },
+ {
+  "rule_id": "BSC.bsc_gdc_t7214_township_no_precinct_front",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 7.2.1.4 row: General development code AO5 applies Table 7.2.1.4 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings (Table 7.2.1.1), so it does not reach a dwelling house or its domestic outbuildings (Class 10)."
+ },
+ {
+  "rule_id": "BSC.bsc_gdc_t7214_township_no_precinct_side_rear",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 7.2.1.4 row: General development code AO5 applies Table 7.2.1.4 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings (Table 7.2.1.1), so it does not reach a dwelling house or its domestic outbuildings (Class 10)."
+ },
+ {
+  "rule_id": "BSC.bsc_gdc_t7214_township_residential_front",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 7.2.1.4 row: General development code AO5 applies Table 7.2.1.4 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings (Table 7.2.1.1), so it does not reach a dwelling house or its domestic outbuildings (Class 10)."
+ },
+ {
+  "rule_id": "BSC.bsc_gdc_t7214_township_residential_side_rear",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 7.2.1.4 row: General development code AO5 applies Table 7.2.1.4 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings (Table 7.2.1.1), so it does not reach a dwelling house or its domestic outbuildings (Class 10)."
+ },
+ {
+  "rule_id": "CGC.gc_coastal_canal_waterway_setback",
+  "decision": "EXCLUDED_CATEGORY",
+  "reason": "Waterway regulation / building setback lines (canals), not a front/side/rear boundary setback."
+ },
+ {
+  "rule_id": "CGC.gc_coastal_ocean_front_seawall_setback",
+  "decision": "EXCLUDED_CATEGORY",
+  "reason": "Setback from the foreshore seawall line (coastal hazard), not a front/side/rear boundary setback."
+ },
+ {
+  "rule_id": "CGC.gc_ec_pool_setback",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "Table 1.5-1: zone codes are QDC alternatives for buildings only; QDC setbacks apply to any building or structure without an alternative, so pools keep the QDC."
+ },
+ {
+  "rule_id": "CGC.gc_hdr_pool_setback",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "Table 1.5-1: zone codes are QDC alternatives for buildings only; pools keep the QDC."
+ },
+ {
+  "rule_id": "CGC.gc_hdr_small_lot_garage_opening_width",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Garage opening width, not a boundary setback distance."
+ },
+ {
+  "rule_id": "CGC.gc_hdr_small_lot_rear_lane",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Rear-lane access is a lane frontage (secondary frontage to a lane), not the rear boundary."
+ },
+ {
+  "rule_id": "CGC.gc_ld_pool_setback",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "Table 1.5-1: zone codes are QDC alternatives for buildings only; pools keep the QDC."
+ },
+ {
+  "rule_id": "CGC.gc_ldr_small_lot_rear_lane",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Rear-lane access is a lane frontage (secondary frontage to a lane), not the rear boundary."
+ },
+ {
+  "rule_id": "CGC.gc_road_widening_setback",
+  "decision": "EXCLUDED_CATEGORY",
+  "reason": "Road widening requirement area (future road boundary), not the current front boundary setback."
+ },
+ {
+  "rule_id": "CGC.gc_rural_pool_setback",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "Table 1.5-1: zone codes are QDC alternatives for buildings only; pools keep the QDC."
+ },
+ {
+  "rule_id": "CGC.gc_small_lot_garage_opening_width",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Garage opening width, not a boundary setback distance."
+ },
+ {
+  "rule_id": "CMB.mb_dh_rad26_outbuilding_location",
+  "decision": "MANUAL_REVIEW",
+  "reason": "RAD26(c) places domestic outbuildings behind the main building line: a front siting rule relative to the house with no distance."
+ },
+ {
+  "rule_id": "CMB.mb_dh_rad4_btb_general",
+  "decision": "MANUAL_REVIEW",
+  "reason": "RAD4 / Table 9.3.1.7 built-to-boundary walls (mandatory/optional by lot frontage, length and height limits); the full table is needed to encode the Class 10 side allowance."
+ },
+ {
+  "rule_id": "CMB.mb_dh_rad7_garage_openings",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Garage/carport opening width, not a boundary setback distance."
+ },
+ {
+  "rule_id": "CMB.mb_dh_rad8_driveway_width",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Driveway width, not a boundary setback distance."
+ },
+ {
+  "rule_id": "CMB.mb_dh_t93117_btb_nextgen",
+  "decision": "MANUAL_REVIEW",
+  "reason": "Table 9.3.1.7 built-to-boundary walls for Next generation lots; the full table is needed."
+ },
+ {
+  "rule_id": "CMB.mb_dh_t93117_btb_urban",
+  "decision": "MANUAL_REVIEW",
+  "reason": "Table 9.3.1.7 built-to-boundary walls for Urban neighbourhood lots; the full table is needed."
+ },
+ {
+  "rule_id": "CMB.mb_rkr_interim_setbacks_table_72163",
+  "decision": "MANUAL_REVIEW",
+  "reason": "Redcliffe Interim residential: 9.3.1 RAD3 sends the precinct to Table 9.3.1.3 (side/rear refer to QDC) while the local plan Part K sends it to Table 7.2.1.6.3 (1.5 / 2 m); open issue."
+ },
+ {
+  "rule_id": "CMB.mb_rr_rad3_pool_note",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "RAD3 note: the provision does not apply to swimming pools; for swimming pools refer to the Queensland Development Code."
+ },
+ {
+  "rule_id": "CMB.mb_rr_rad3_setbacks_general",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "RAD3 applies unless otherwise specified; RAD48 specifies setbacks for dwelling houses including domestic outbuildings (encoded CMB.C.RR_*), so RAD3 governs other buildings only."
+ },
+ {
+  "rule_id": "CMB.mb_rural_rad3_rear_setback_non_dwelling",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Applies to buildings and structures other than a dwelling house; under the Planning Regulation a dwelling house includes its domestic outbuildings."
+ },
+ {
+  "rule_id": "CMB.mb_rural_rad3_road_setback_non_dwelling",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Applies to buildings and structures other than a dwelling house; under the Planning Regulation a dwelling house includes its domestic outbuildings."
+ },
+ {
+  "rule_id": "CMB.mb_rural_rad3_side_setback_non_dwelling",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Applies to buildings and structures other than a dwelling house; under the Planning Regulation a dwelling house includes its domestic outbuildings."
+ },
+ {
+  "rule_id": "CMB.mb_tw_e4_rear_assessable",
+  "decision": "MANUAL_REVIEW",
+  "reason": "E4 is an assessable-development benchmark; the accepted path (RAD3) leaves the rear to the QDC. Encode only if council confirms E4 applies to Class 10."
+ },
+ {
+  "rule_id": "CMB.mb_tw_rad46_garage_openings",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Garage/carport opening width, not a boundary setback distance."
+ },
+ {
+  "rule_id": "CMB.mb_tw_rad59_outbuilding_location",
+  "decision": "MANUAL_REVIEW",
+  "reason": "RAD59(c) places domestic outbuildings behind the main building line: a non-numeric front siting rule."
+ },
+ {
+  "rule_id": "LCC.dh_ao6_rear_lot_garage_accessway_4_9m",
+  "decision": "MANUAL_REVIEW",
+  "reason": "The 4.9 m garage setback is measured to a shared accessway on rear lots, which is not a lot-boundary type in the dataset."
+ },
+ {
+  "rule_id": "LCC.heritage_ao3_1_class10_pool_siting",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Qualitative heritage siting (PSP4 part 4); no setback distance."
+ },
+ {
+  "rule_id": "LCC.ldr_t62533_rear_and_acreage_side_3m",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 5.10.10.1 nominates only the 9.3.2 Dual occupancy and Dwelling house code for a dwelling house and its Class 10; the LDR zone table applies to other uses."
+ },
+ {
+  "rule_id": "LCC.ldr_t62533_road_boundary_clearance",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Zone table not nominated for a dwelling house or its Class 10 (Table 5.10.10.1)."
+ },
+ {
+  "rule_id": "LCC.ldr_t62533_side_clearance_height_based",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Zone table not nominated for a dwelling house or its Class 10 (Table 5.10.10.1)."
+ },
+ {
+  "rule_id": "LCC.lmdr_ao4_road_clearance",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Zone code not nominated for a dwelling house or its Class 10; 9.3.2 AO4(b) sets the LMDR 4 m (encoded LCC.C.ROAD_CLEARANCE_4M_LMDR)."
+ },
+ {
+  "rule_id": "LCC.lmdr_ao5_apartment_side_rear_3m",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "LMDR zone code (Apartment precinct) not nominated for a dwelling house or its Class 10."
+ },
+ {
+  "rule_id": "LCC.lmdr_ao6_townhouse_side_rear",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "LMDR zone code (Townhouse precinct) not nominated for a dwelling house or its Class 10."
+ },
+ {
+  "rule_id": "LCC.loganholme_t72643_boundary_clearance",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Dwelling houses in Loganholme are accepted (Table 5.9.6.1) with only 9.3.2 via the Residential overlay; the local plan table applies to other development."
+ },
+ {
+  "rule_id": "LCC.mdr_ao4_road_boundary_clearance",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 5.10.10.1 nominates only the 9.3.2 Dual occupancy and Dwelling house code for a dwelling house (and its Class 10) in the MDR residential area; the 6.2.8 zone code (this PO4/AO4) applies only to other development (e.g. multiple-dwelling/apartment buildings)."
+ },
+ {
+  "rule_id": "LCC.mdr_ao5_side_rear_boundary_clearance",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Table 5.10.10.1 nominates only the 9.3.2 Dual occupancy and Dwelling house code for a dwelling house (and its Class 10) in the MDR residential area; the 6.2.8 zone code (this PO5/AO5) applies only to other development (e.g. multiple-dwelling/apartment buildings)."
+ },
+ {
+  "rule_id": "LCC.rr_ao4_boundary_clearance",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "Rural residential zone code not nominated for a dwelling house or its Class 10; 9.3.2 AO4/AO5 apply (encoded)."
+ },
+ {
+  "rule_id": "MICC.micc_ra_ao23_1_garage_behind_front_building_line",
+  "decision": "MANUAL_REVIEW",
+  "reason": "AO 23.1 is an either/or siting test (garage behind the front building line, or opening not exceeding 6 m / 60% of the road frontage) with no setback distance; same treatment as Moreton Bay RAD26/RAD59."
+ },
+ {
+  "rule_id": "MICC.micc_ra_ao4_1_front_local_centre",
+  "decision": "MANUAL_REVIEW",
+  "reason": "AO 4.1(d)/Table 9.3.1.3 road setback reaches Class 10 only through a residential-use assessment, the dwelling house categorisation condition in Table 5.5.3 is ambiguous, and the Table 9.3.6.3 QDC note likely displaces it for dwelling houses."
+ },
+ {
+  "rule_id": "MICC.micc_ra_ao4_1_front_other_zones_6m",
+  "decision": "MANUAL_REVIEW",
+  "reason": "AO 4.1(f) 'buildings and other structures' 6 m road setback reaches Class 10 only through a residential-use assessment (Table 5.7.1 limits stand-alone Class 10a work to PO 22/PO 23), and the Table 9.3.6.3 note that 'the Queensland Development Code setbacks apply for dwelling houses and dual occupancies' likely also displaces it for dwelling houses and their outbuildings, so the value is not curated for Class 10 of a dwelling house."
+ },
+ {
+  "rule_id": "MICC.micc_ra_ao4_1_front_principal_centre",
+  "decision": "MANUAL_REVIEW",
+  "reason": "AO 4.1(e)/Table 9.3.1.4 road setback reaches Class 10 only through a residential-use assessment, the dwelling house categorisation condition in Table 5.5.4 is ambiguous, and the Table 9.3.6.3 QDC note likely displaces it for dwelling houses."
+ },
+ {
+  "rule_id": "MICC.micc_ra_ao4_1_front_rural_200m",
+  "decision": "MANUAL_REVIEW",
+  "reason": "AO 4.1(b) 200 m road setback applies only via the dwelling house use assessment (Class 10a building work in the Rural zone is accepted development under Table 5.7.1) and the Table 9.3.6.3 QDC note likely sends dwelling houses and their outbuildings to the QDC."
+ },
+ {
+  "rule_id": "MICC.micc_ra_ao4_1_front_rural_residential_30m",
+  "decision": "MANUAL_REVIEW",
+  "reason": "AO 4.1(a) 30 m road setback applies only via the dwelling house use assessment (Class 10a building work in the Rural residential zone is accepted development under Table 5.7.1) and the Table 9.3.6.3 QDC note likely sends dwelling houses and their outbuildings to the QDC."
+ },
+ {
+  "rule_id": "MICC.micc_ra_t9363_rear_ldr_mdr_township",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "Table 9.3.6.3 states 'Note - the Queensland Development Code setbacks apply for dwelling houses and dual occupancies', and Table 5.7.1 assesses stand-alone Class 10a building work in these zones against PO 22/PO 23 only, so QDC rear clearances govern Class 10 of a dwelling house."
+ },
+ {
+  "rule_id": "MICC.micc_ra_t9363_side_ldr_mdr_township",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "Table 9.3.6.3 states 'Note - the Queensland Development Code setbacks apply for dwelling houses and dual occupancies', and Table 5.7.1 assesses stand-alone Class 10a building work in these zones against PO 22/PO 23 only, so QDC side clearances govern Class 10 of a dwelling house."
+ },
+ {
+  "rule_id": "MICC.micc_ra_t9363_side_rear_all_other_zones_6m",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "The 'All other zones' row of Table 9.3.6.3 is subject to the table note 'the Queensland Development Code setbacks apply for dwelling houses and dual occupancies', and Class 10a building work in the Community facilities zone is accepted development (Table 5.7.1)."
+ },
+ {
+  "rule_id": "MICC.micc_ra_t9363_side_rear_local_centre",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "The Local centre row of Table 9.3.6.3 (referring to Table 9.3.1.3) is subject to the table note 'the Queensland Development Code setbacks apply for dwelling houses and dual occupancies', and Class 10a building work in this zone is accepted development (Table 5.7.1)."
+ },
+ {
+  "rule_id": "MICC.micc_ra_t9363_side_rear_mixed_use",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "The Mixed use row of Table 9.3.6.3 is subject to the table note 'the Queensland Development Code setbacks apply for dwelling houses and dual occupancies', and Class 10a building work in this zone is accepted development (Table 5.7.1)."
+ },
+ {
+  "rule_id": "MICC.micc_ra_t9363_side_rear_principal_centre",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "The Principal centre row of Table 9.3.6.3 (referring to Table 9.3.1.4) is subject to the table note 'the Queensland Development Code setbacks apply for dwelling houses and dual occupancies', and Class 10a building work in this zone is accepted development (Table 5.7.1)."
+ },
+ {
+  "rule_id": "MICC.micc_ra_t9363_side_rear_rural",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "The Rural row (100 m) of Table 9.3.6.3 is subject to the table note 'the Queensland Development Code setbacks apply for dwelling houses and dual occupancies', and Class 10a building work in this zone is accepted development (Table 5.7.1)."
+ },
+ {
+  "rule_id": "MICC.micc_ra_t9363_side_rear_rural_residential",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "The Rural residential row (20 m) of Table 9.3.6.3 is subject to the table note 'the Queensland Development Code setbacks apply for dwelling houses and dual occupancies', and Class 10a building work in this zone is accepted development (Table 5.7.1)."
+ },
+ {
+  "rule_id": "RCC.ldr5_revetment_maintenance_setback_2m",
+  "decision": "EXCLUDED_CATEGORY",
+  "reason": "Maintenance access to revetment walls, not a front/side/rear boundary setback."
+ },
+ {
+  "rule_id": "RCC.ldr5_side_access_1m",
+  "decision": "MANUAL_REVIEW",
+  "reason": "A 1 m clear path along one side for revetment maintenance: a side clearance by wording but an access requirement by purpose."
+ },
+ {
+  "rule_id": "RRC.rrc_character_outbuilding_front",
+  "decision": "MANUAL_REVIEW",
+  "reason": "Character overlay code AO8.1.1 (a Table 1.6.1 QDC alternative) reaches carports, garages and enclosed outbuildings but sets a location test ('behind the main face of the dwelling house', or an equal setback with no garage door or solid face to the street) with the AO8.1.2 open-carport design alternative, not a distance; in_front_of_main_building_line alone cannot express the alternatives."
+ },
+ {
+  "rule_id": "RRC.rrc_hdr_assessable_front",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "HDR Table 6.2.3.3.2 AO7.1 is for assessable development only; a dwelling house is Accepted with benchmarks 'Not applicable' (Table 5.4.1.3)."
+ },
+ {
+  "rule_id": "RRC.rrc_hdr_assessable_rear",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "HDR Table 6.2.3.3.2 AO7.1 is for assessable development only; a dwelling house is Accepted with benchmarks 'Not applicable' (Table 5.4.1.3)."
+ },
+ {
+  "rule_id": "RRC.rrc_hdr_assessable_side",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "HDR Table 6.2.3.3.2 AO7.1 is for assessable development only; a dwelling house is Accepted with benchmarks 'Not applicable' (Table 5.4.1.3)."
+ },
+ {
+  "rule_id": "RRC.rrc_hdr_dualocc_front_garage_behind_building",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "HDR zone code Table 6.2.3.3.1 AO3.2 applies to a dual occupancy; a dwelling house is Accepted with benchmarks 'Not applicable' (Table 5.4.1.3)."
+ },
+ {
+  "rule_id": "RRC.rrc_hdr_dualocc_rear_4m",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "HDR AO3.2 rear 4 m is a dual occupancy requirement; a dwelling house is Accepted with benchmarks 'Not applicable' (Table 5.4.1.3)."
+ },
+ {
+  "rule_id": "RRC.rrc_ldr_assessable_front_carport",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "LDR Table 6.2.1.3.2 AO13.1 is for assessable development only; a dwelling house is Accepted with benchmarks 'Not applicable' (Table 5.4.1.1) and s5.6 building work is 'Not applicable'."
+ },
+ {
+  "rule_id": "RRC.rrc_ldr_assessable_rear",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "LDR Table 6.2.1.3.2 AO13.1 is for assessable development only; a dwelling house and its outbuildings never become assessable against it (Table 5.4.1.1, s5.6)."
+ },
+ {
+  "rule_id": "RRC.rrc_ldr_assessable_side",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "LDR Table 6.2.1.3.2 AO13.1 is for assessable development only; a dwelling house and its outbuildings never become assessable against it (Table 5.4.1.1, s5.6)."
+ },
+ {
+  "rule_id": "RRC.rrc_ldr_dualocc_front_carport_6m",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "LDR zone code Table 6.2.1.3.1 AO3.3 applies to a dual occupancy; a dwelling house is Accepted with benchmarks 'Not applicable' (Table 5.4.1.1) and s5.6 building work is 'Not applicable', so it does not reach a house lot's Class 10."
+ },
+ {
+  "rule_id": "RRC.rrc_ldr_dualocc_rear_4m",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "LDR AO3.3 rear 4 m is a dual occupancy requirement; a dwelling house and its outbuildings are Accepted with no benchmarks (Table 5.4.1.1; s5.6 building work 'Not applicable')."
+ },
+ {
+  "rule_id": "RRC.rrc_lmdr_assessable_front_carport",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "LMDR Table 6.2.2.3.2 AO10.1 is for assessable development only; a dwelling house is Accepted with benchmarks 'Not applicable' (Table 5.4.1.2)."
+ },
+ {
+  "rule_id": "RRC.rrc_lmdr_assessable_rear",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "LMDR Table 6.2.2.3.2 AO10.1 is for assessable development only; a dwelling house is Accepted with benchmarks 'Not applicable' (Table 5.4.1.2)."
+ },
+ {
+  "rule_id": "RRC.rrc_lmdr_assessable_side",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "LMDR Table 6.2.2.3.2 AO10.1 is for assessable development only; a dwelling house is Accepted with benchmarks 'Not applicable' (Table 5.4.1.2)."
+ },
+ {
+  "rule_id": "RRC.rrc_lmdr_dualocc_front_carport_4_5m",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "LMDR zone code Table 6.2.2.3.1 AO3.2 applies to a dual occupancy; a dwelling house is Accepted with benchmarks 'Not applicable' (Table 5.4.1.2)."
+ },
+ {
+  "rule_id": "RRC.rrc_lmdr_dualocc_rear_4m",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "LMDR AO3.2 rear 4 m is a dual occupancy requirement; a dwelling house is Accepted with benchmarks 'Not applicable' (Table 5.4.1.2)."
+ },
+ {
+  "rule_id": "SCC.coastal_dh_seaward_setback",
+  "decision": "EXCLUDED_CATEGORY",
+  "reason": "Coastal building line / seaward alignment (coastal hazard), not a front/side/rear boundary setback."
+ },
+ {
+  "rule_id": "SCC.dh_front_setback_res",
+  "decision": "OUT_OF_SCOPE",
+  "reason": "AO3 applies to the dwelling house other than a garage, carport or shed; Class 10a is covered by AO2.1 (SCC.C.CLASS10A_ROAD_SETBACK_6M)."
+ },
+ {
+  "rule_id": "TCC.tcc_cr_class10a_carport_garage_front",
+  "decision": "MANUAL_REVIEW",
+  "reason": "Character residential zone code Table 6.2.5.3 AO9(a) requires Class 10a carports and garages to be set back from the street an equal or greater distance than the main building, a relative rule with no numeric value that the boolean in_front_of_main_building_line cannot express as a setback distance, and it applies only to building work made assessable by Table 5.7.1."
+ },
+ {
+  "rule_id": "TRC.trc_cwea_ao13_1_front",
+  "decision": "MANUAL_REVIEW",
+  "reason": "Charlton Wellcamp Enterprise Area local plan Table 7.2.3:1 AO13.1 sets 40 m / 20 m / 10 m by named road (Toowoomba Bypass corridor, Warrego Highway other than in the Commercial/Centre Precinct, Toowoomba Cecil Plains Road); the road identities and the Commercial/Centre Precinct are not in the places dataset, so it cannot be encoded reliably."
+ },
+ {
+  "rule_id": "TRC.trc_ldr_ao9_2_front_qdc",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "Low Density Residential Zone Code Table 6.2.1:3 AO9.2(a) sets residential buildings back from a non-collector / non-local road 'in accordance with the requirements of the Queensland Development Code'."
+ },
+ {
+  "rule_id": "TRC.trc_lmdr_ao9_2_front_qdc",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "Low-medium Density Residential Zone Code Table 6.2.2:3 AO9.2(a) sets residential buildings back from a non-collector / non-local road 'in accordance with the requirements of the Queensland Development Code'."
+ },
+ {
+  "rule_id": "TRC.trc_rur_ao1_1_nonres_buildings",
+  "decision": "MANUAL_REVIEW",
+  "reason": "Rural Zone Code Table 6.6.6:1 AO1.1 applies to 'Non-residential buildings, animal enclosures, storage facilities and waste disposal areas'; whether a domestic shed ancillary to a dwelling house is a non-residential building is unclear, and limb (a) is a 50 m separation to a dwelling, not a boundary."
+ },
+ {
+  "rule_id": "TRC.trc_twn_ao6_2_front_qdc",
+  "decision": "DOCUMENTED_ABSENCE",
+  "reason": "Township Zone Code Table 6.6.9:2 AO6.2(a) sets residential buildings back from a non-collector / non-local road 'in accordance with the Queensland Development Code'."
+ }
+]

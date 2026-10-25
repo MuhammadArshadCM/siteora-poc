@@ -40,6 +40,8 @@
   ul { margin:6px 0; padding-left:18px; }
   #map { height:460px; border-radius:6px; border:1px solid var(--line); }
   .map-home { font-size:18px; line-height:30px !important; text-align:center; text-decoration:none; color:#333; }
+  .compass { background:var(--card); border:1px solid var(--line); border-radius:50%; box-shadow:0 1px 4px rgba(0,0,0,.25);
+             width:36px; height:36px; display:flex; align-items:center; justify-content:center; }
   .src td a { margin-right:10px; white-space:nowrap; }
   .hit { font-weight:600; }
   .popup table td { padding:2px 6px; border-bottom:1px solid var(--line); font-size:12px; }
@@ -68,6 +70,10 @@
       <label>Lot slope (%)<input name="lot_slope_pct" type="number" step="0.5" placeholder="unknown"></label>
       <label>Neighbour window (m)<input name="window_distance_m" type="number" step="0.1" placeholder="unknown"></label>
       <label>Existing outbuildings (m²)<input name="existing_outbuildings_m2" type="number" step="1" placeholder="0"></label>
+      <label title="An existing detached dwelling's road setback on the adjoining lot — lets the road setback align with it instead of the default 6 m (QDC MP 1.1/1.2 A1(a)(ii)/(iii)), where a council rule allows it">
+        Neighbour 1 road setback (m)<input name="adjoining_setback_1_m" type="number" step="0.1" placeholder="unknown"></label>
+      <label title="The adjoining lot on the other side, if it also has an existing detached dwelling">
+        Neighbour 2 road setback (m)<input name="adjoining_setback_2_m" type="number" step="0.1" placeholder="unknown"></label>
       <label title="Gold Coast Emerging community zone: the setbacks and site cover depend on it">Lot from a residential subdivision<select name="lot_from_residential_subdivision">
         <option value="">unknown</option><option value="yes">yes</option><option value="no">no</option></select></label>
       <label>Assessment date<input name="date" type="date"></label>
@@ -78,6 +84,13 @@
         <label><input type="checkbox" name="is_attached_to_dwelling"> Attached to house</label>
         <label><input type="checkbox" name="is_corner_lot"> Corner lot</label>
         <label><input type="checkbox" name="adjoins_canal_or_lake"> Next to canal/lake</label>
+      </div>
+      <div class="checks full" id="scopeChecks">
+        <label title="Show only setback rules (front / side / rear / side-and-rear) — no height, site cover, pool or garage-width rules. The location is still looked up, since rules need the zone.">
+          <input type="checkbox" id="scopeSetbacks"> Setbacks only</label>
+        <label title="Show only the location and map data (zone, overlays, constraints, parcel, sources) — no rule evaluation at all, so this is faster.">
+          <input type="checkbox" id="scopeMaps"> Maps only</label>
+        <span class="mute" id="scopeNote" style="font-size:12px"></span>
       </div>
       <div><button id="go">Find rules</button></div>
     </form>
@@ -92,6 +105,16 @@ const req = r => ['IS_TRUE','IS_FALSE'].includes(r.operator) ? (r.operator === '
                : `${r.operator} ${r.required ?? '?'} ${r.unit ?? ''}`;
 const ORDER = {'':0, 'PRIMARY_FRONTAGE':1, 'SECONDARY_FRONTAGE_ROAD':2, 'SIDE':3, 'REAR':4};
 let lastLg = null;
+
+// "Setbacks only" / "Maps only": checking one unchecks the other, so the scope sent to the server is never
+// ambiguous. Leaving both unchecked shows everything, as before.
+const scopeSetbacks = $('#scopeSetbacks'), scopeMaps = $('#scopeMaps'), scopeNote = $('#scopeNote');
+function updateScopeNote() {
+  scopeNote.textContent = scopeSetbacks.checked ? '— only setback rules will be shown; maps and site data are skipped'
+    : scopeMaps.checked ? '— only the location and map data will be shown; no rules are evaluated' : '';
+}
+scopeSetbacks.addEventListener('change', () => { if (scopeSetbacks.checked) scopeMaps.checked = false; updateScopeNote(); });
+scopeMaps.addEventListener('change', () => { if (scopeMaps.checked) scopeSetbacks.checked = false; updateScopeNote(); });
 
 // Calls to our own server, with errors in plain words: server not running, too slow, not JSON, or the server's own
 // message (400 bad input, 503 database / map service unavailable, 500 code fault with a log reference).
@@ -131,6 +154,8 @@ $('#f').addEventListener('submit', async ev => {
   const fd = new FormData(ev.target), qs = new URLSearchParams();
   for (const [k, v] of fd) if (v !== '') qs.append(k, v === 'on' ? 'yes' : v);
   for (const k of ['is_roofed','is_enclosed','is_attached_to_dwelling','is_corner_lot','adjoins_canal_or_lake']) if (!fd.has(k)) qs.set(k, 'no');
+  if (scopeSetbacks.checked) qs.set('scope', 'setbacks');
+  else if (scopeMaps.checked) qs.set('scope', 'maps');
   $('#go').disabled = true; $('#out').innerHTML = '<div class="card mute">Looking up the property and resolving rules…</div>';
   try {
     const d = await api('/api/rules?' + qs);
@@ -143,6 +168,7 @@ $('#f').addEventListener('submit', async ev => {
 
 function render(d) {
   const L = d.location, p = L.parcel || {}, z = L.zoning;
+  const showSetbacks = d.scope !== 'maps', showMaps = d.scope !== 'setbacks';
   const zoneName = (d.available_zones.find(x => x.zone_id === z.zone_id) || {}).name;
   const precincts = z.precincts.map(id => (d.available_precincts.find(x => x.precinct_id === id) || {}).name || id).join(', ');
   let h = `<div class="card"><div class="kv">
@@ -162,49 +188,53 @@ function render(d) {
     ${z.from_map ? `<p class="mute">Council map says: ${esc(z.from_map.zone_text)}${z.from_map.precinct_text ? ' / ' + esc(z.from_map.precinct_text) : ''}</p>` : ''}
     ${d.warnings.length ? `<ul class="warn">${d.warnings.map(w => `<li>${esc(w)}</li>`).join('')}</ul>` : ''}</div>`;
 
-  const rules = [...d.rules].sort((a, b) => (ORDER[a.boundary || ''] - ORDER[b.boundary || '']) || a.regime.localeCompare(b.regime));
-  h += `<div class="card"><h3 style="margin-top:0">Applicable rules — ${esc(d.structure.label)}</h3><table>
-    <tr><th>Boundary</th><th>Requirement</th><th>Rule</th><th>Source</th><th>Status</th></tr>` +
-    rules.map(r => {
-      const src = (r.source_detail || [])[0] || {};
-      const where = r.boundary || (r.topic === 'SETBACK.WATERWAY' ? 'canal/lake boundary' : 'whole lot');
-      return `<tr><td>${esc(where.replaceAll('_', ' ').toLowerCase())}</td>
-        <td class="req">${esc(req(r))}<div class="mute" style="font-weight:400">${esc(r.topic)}</div></td>
-        <td>${esc(r.title)}<div><span class="tag ${r.regime}">${esc(r.regime)}</span>
-            ${r.on_noncompliance ? `<span class="mute"> if not met: ${esc(r.on_noncompliance.replaceAll('_', ' ').toLowerCase())}</span>` : ''}</div>
-            ${r.via ? `<div class="warn">${esc(r.via)}</div>` : ''}</td>
-        <td>${esc(r.instrument)}<div><b>${esc(r.sources.join('; '))}</b></div>
-            <details><summary>clause text</summary><div class="quote">${esc(src.quote || src.text || '')}</div>
-            ${r.interpretation_notes ? `<div class="mute">${esc(r.interpretation_notes)}</div>` : ''}</details></td>
-        <td><span class="tag ${r.state}">${esc(r.state.replace('_', ' '))}</span></td></tr>`;
-    }).join('') + '</table></div>';
+  if (showSetbacks) {
+    const rules = [...d.rules].sort((a, b) => (ORDER[a.boundary || ''] - ORDER[b.boundary || '']) || a.regime.localeCompare(b.regime));
+    h += `<div class="card"><h3 style="margin-top:0">Applicable rules — ${esc(d.structure.label)}</h3><table>
+      <tr><th>Boundary</th><th>Requirement</th><th>Rule</th><th>Source</th><th>Status</th></tr>` +
+      rules.map(r => {
+        const src = (r.source_detail || [])[0] || {};
+        const where = r.boundary || (r.topic === 'SETBACK.WATERWAY' ? 'canal/lake boundary' : 'whole lot');
+        return `<tr><td>${esc(where.replaceAll('_', ' ').toLowerCase())}</td>
+          <td class="req">${esc(req(r))}<div class="mute" style="font-weight:400">${esc(r.topic)}</div></td>
+          <td>${esc(r.title)}<div><span class="tag ${r.regime}">${esc(r.regime)}</span>
+              ${r.on_noncompliance ? `<span class="mute"> if not met: ${esc(r.on_noncompliance.replaceAll('_', ' ').toLowerCase())}</span>` : ''}</div>
+              ${r.via ? `<div class="warn">${esc(r.via)}</div>` : ''}</td>
+          <td>${esc(r.instrument)}<div><b>${esc(r.sources.join('; '))}</b></div>
+              <details><summary>clause text</summary><div class="quote">${esc(src.quote || src.text || '')}</div>
+              ${r.interpretation_notes ? `<div class="mute">${esc(r.interpretation_notes)}</div>` : ''}</details></td>
+          <td><span class="tag ${r.state}">${esc(r.state.replace('_', ' '))}</span></td></tr>`;
+      }).join('') + '</table></div>';
 
-  if (d.missing_inputs.length) h += `<div class="card"><h3 style="margin-top:0">Inputs that would resolve the manual-review items</h3><ul>` +
-    d.missing_inputs.map(m => `<li><b>${esc(m.fact)}</b> — ${esc(m.description)}</li>`).join('') + '</ul></div>';
-  const c = d.council_rules;
-  if (c) {
-    h += `<div class="card"><h3 style="margin-top:0">Council rules checked for this property</h3>
-      <p class="mute">Council rules that apply are in the table above. ${c.other_places_count} more council rules apply only to other zones, precincts, overlays or neighbourhood plans.</p>` +
-      (c.in_scope_not_applicable.length ? `<p><b>In scope here but not applicable to this structure / lot:</b></p><table><tr><th>Rule</th><th>Why not</th><th>Source</th></tr>` +
-        c.in_scope_not_applicable.map(x => `<tr><td>${esc(x.title)}</td><td>${esc(x.why)}</td><td class="mute">${esc(x.sources.join('; '))}</td></tr>`).join('') + '</table>' : '') +
-      (c.not_yet_encoded.length ? `<details><summary><b>Council clauses for this place not yet encoded as rules</b> (${c.not_yet_encoded.reduce((n, g) => n + g.count, 0)}) — read these yourself</summary><ul>` +
-        c.not_yet_encoded.map(g => `<li>${esc(g.code)} (${g.count}): <span class="mute">${g.clauses.map(x => esc(x.source)).join('; ')}</span></li>`).join('') + '</ul></details>' : '') +
-      '</div>';
+    if (d.missing_inputs.length) h += `<div class="card"><h3 style="margin-top:0">Inputs that would resolve the manual-review items</h3><ul>` +
+      d.missing_inputs.map(m => `<li><b>${esc(m.fact)}</b> — ${esc(m.description)}</li>`).join('') + '</ul></div>';
+    const c = d.council_rules;
+    if (c) {
+      h += `<div class="card"><h3 style="margin-top:0">Council rules checked for this property</h3>
+        <p class="mute">Council rules that apply are in the table above. ${c.other_places_count} more council rules apply only to other zones, precincts, overlays or neighbourhood plans.</p>` +
+        (c.in_scope_not_applicable.length ? `<p><b>In scope here but not applicable to this structure / lot:</b></p><table><tr><th>Rule</th><th>Why not</th><th>Source</th></tr>` +
+          c.in_scope_not_applicable.map(x => `<tr><td>${esc(x.title)}</td><td>${esc(x.why)}</td><td class="mute">${esc(x.sources.join('; '))}</td></tr>`).join('') + '</table>' : '') +
+        (c.not_yet_encoded.length ? `<details><summary><b>Council clauses for this place not yet encoded as rules</b> (${c.not_yet_encoded.reduce((n, g) => n + g.count, 0)}) — read these yourself</summary><ul>` +
+          c.not_yet_encoded.map(g => `<li>${esc(g.code)} (${g.count}): <span class="mute">${g.clauses.map(x => esc(x.source)).join('; ')}</span></li>`).join('') + '</ul></details>' : '') +
+        '</div>';
+    }
+    h += `<div class="card"><details><summary>Instruments in force and facts used</summary>
+      <ul>${d.applicable_instruments.map(i => `<li><span class="tag ${i.regime}">${esc(i.regime)}</span> ${esc(i.instrument)} — ${esc(i.version)}</li>`).join('')}</ul>
+      <table><tr><th>Fact</th><th>Value</th><th>Source</th></tr>${Object.entries(d.facts).map(([k, v]) =>
+        `<tr><td>${esc(k)}</td><td>${esc(JSON.stringify(v.value))}</td><td class="${v.source.startsWith('ASSUMED') || v.source.startsWith('ESTIMATED') ? 'warn' : 'mute'}">${esc(v.source)}</td></tr>`).join('')}</table>
+      ${d.displaced.length ? `<p class="mute">Displaced by precedence: ${d.displaced.map(x => esc(`${x.rule} (${x.why})`)).join('; ')}</p>` : ''}
+      </details></div>`;
   }
-  h += `<div class="card"><details><summary>Instruments in force and facts used</summary>
-    <ul>${d.applicable_instruments.map(i => `<li><span class="tag ${i.regime}">${esc(i.regime)}</span> ${esc(i.instrument)} — ${esc(i.version)}</li>`).join('')}</ul>
-    <table><tr><th>Fact</th><th>Value</th><th>Source</th></tr>${Object.entries(d.facts).map(([k, v]) =>
-      `<tr><td>${esc(k)}</td><td>${esc(JSON.stringify(v.value))}</td><td class="${v.source.startsWith('ASSUMED') || v.source.startsWith('ESTIMATED') ? 'warn' : 'mute'}">${esc(v.source)}</td></tr>`).join('')}</table>
-    ${d.displaced.length ? `<p class="mute">Displaced by precedence: ${d.displaced.map(x => esc(`${x.rule} (${x.why})`)).join('; ')}</p>` : ''}
-    </details></div>`;
-  h += `<div class="card"><h3 style="margin-top:0">Map</h3>
-    <p class="mute">Parcel (red) and the council map layers used for this result, drawn live from the source services.
-    Toggle layers top-right; click a shape to see its attributes. The map stays within ${MAP_LIMIT_KM} km of the property;
-    &#8962; (under + / −) brings it back to the property.</p><div id="map"></div></div>`;
-  h += constraintsCard(d);
-  h += sourcesCard(d);
+  if (showMaps) {
+    h += `<div class="card"><h3 style="margin-top:0">Map</h3>
+      <p class="mute">Parcel (red) and the council map layers used for this result, drawn live from the source services.
+      Toggle layers top-right; click a shape to see its attributes. The map stays within ${MAP_LIMIT_KM} km of the property;
+      &#8962; (under + / −) brings it back to the property.</p><div id="map"></div></div>`;
+    h += constraintsCard(d);
+    h += sourcesCard(d);
+  }
   $('#out').innerHTML = h;
-  drawMap(d);
+  if (showMaps) drawMap(d);
 }
 
 // One colour per constraint category, used in the table and on the map, so a row can be found on the map
@@ -469,6 +499,20 @@ function drawMap(d) {
   a.href = '#'; a.title = 'Back to the property'; a.setAttribute('role', 'button'); a.setAttribute('aria-label', 'Back to the property');
   a.innerHTML = '&#8962;';
   L.DomEvent.on(a, 'click', e => { L.DomEvent.stop(e); home(); });
+  // North arrow: the map tiles are plain Web Mercator (never rotated), so "up" is always north; this is a fixed
+  // reference, not a live compass. Several rules depend on which boundary faces south/west (e.g. a built-to-boundary
+  // concession), so it matters that north is easy to check at a glance.
+  const compass = L.control({position: 'bottomleft'});
+  compass.onAdd = () => {
+    const div = L.DomUtil.create('div', 'compass');
+    div.title = 'North is up — the map is never rotated';
+    div.innerHTML = '<svg width="22" height="26" viewBox="0 0 22 26" aria-hidden="true">'
+      + '<text x="11" y="8" text-anchor="middle" font-size="9" font-weight="700" fill="#1d2330">N</text>'
+      + '<path d="M11 10 L14 19 L11 17 L8 19 Z" fill="#b42318"/>'   /* red: points north, up */
+      + '<path d="M11 26 L14 19 L11 21 L8 19 Z" fill="#9aa4b2"/></svg>';   /* grey: south half of the needle */
+    return div;
+  };
+  compass.addTo(MAP);
   // Queensland Fire Department's Bushfire Prone Area (SEQ, July 2017): published only as a picture map, so it cannot be
   // tested against the lot. Shown for reference; switched on where bushfire is not checked automatically (Ipswich).
   const qfd = L.esri.tiledMapLayer({url: 'https://tiles.arcgis.com/tiles/vkTwD8kHw2woKBqV/arcgis/rest/services/Bushfire_Prone_Areas/MapServer',

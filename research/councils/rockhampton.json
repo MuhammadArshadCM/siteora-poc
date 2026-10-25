@@ -1,0 +1,1158 @@
+{
+  "council": "Rockhampton Regional Council",
+  "planning_scheme": {
+    "name": "Rockhampton Region Planning Scheme 2015",
+    "version": "Version 5 (Major Amendment, Packages A-C; ePlan revisionId 49 'Version 5', revStatus Current)",
+    "version_commenced": "2025-03-28",
+    "official_urls": [
+      "https://rockeplan.rockhamptonregion.qld.gov.au/eplan",
+      "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/134/0/0/0/49",
+      "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/103/0/0/0/49",
+      "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/api/l/vpr",
+      "https://www.rockhamptonregion.qld.gov.au/"
+    ],
+    "notes": "Citation (rule 180-182): 'This planning scheme may be cited as Rockhampton Region Planning Scheme.' 'The commencement date for the planning scheme was 24 August 2015.' Appendix 2 Table of amendments: '28 March 2025 | Version 5 | Major Amendment' (Package A flood hazard overlay; Package B rezoning/Yaamba Road tables; Package C lot sizes and dual occupancy/multiple dwelling density in LDR/LMDR). ePlan revision API (api/l/vpr) lists a single revision: revisionId 49, revisionNotes 'Version 5', planOperative 03/28/2025, revisionDate 08/04/2025, revStatus 'Current'; rev TOC (api/l/rev/49/22-Oct-2026/1) shows planChanges = [] (no pending amendments). A web search found a 2026 LGIP/major amendment consultation (Jan-Feb 2026) but no evidence it has commenced; the ePlan still shows Version 5 as current at 22 Oct 2026. QHC: no reference to the 'Queensland Housing Code' anywhere in the retrieved scheme text (219 sections keyword-searched); Version 5 predates the QHC, and Part 1 still refers to QDC MP1.1/MP1.2. QHC adoption status: not adopted in the scheme text."
+  },
+  "qdc_qhc_relationship": {
+    "summary": "Part 1 s1.6 (Building work regulated under the planning scheme) Table 1.6.1 names the Low density residential zone code, Low-medium density residential zone code and Character overlay code as 'Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure' (Sections 32(b), 32(c) and 33 BA and section 10 BR). However, s5.6 states building work categories are 'Not applicable' and a dwelling house is 'Accepted' with assessment benchmarks 'Not applicable' in the LDR, LMDR, HDR, Township and Rural residential zones, so in practice the LDR/LMDR setbacks reach only dual occupancies (accepted subject to requirements) and assessable development; a dwelling house and its outbuildings in those zones default to the QDC. The Character overlay code AO8.1.1 is the only alternative provision that reaches dwelling-house outbuildings (garages, carports, enclosed outbuildings) directly, in the Residential character design control area. Rural (20 m all boundaries; Alton Downs precinct 6 m front) and Emerging community (6 m side/rear) zone setbacks apply to dwelling houses as accepted development requirements but those codes are not listed in Table 1.6.1. No Queensland Housing Code reference was found.",
+    "quotes": [
+      {
+        "clause": "1.6(3) and Editor's note",
+        "text": "- This planning scheme, through Part 5 (Tables of assessment), regulates building work in accordance with sections 32 and 33 of the Building Act 1975.\nEditor’s note—The Building Act 1975 permits planning schemes to:\n-\nregulate, for the Building Code of Australia (BCA) or the Queensland Development Code (QDC), matters prescribed under a regulation under the Building Act 1975 (section 32). These include variations to provisions contained in parts MP1.1, MP1.2 and MP1.3 of the QDC such as heights of buildings related to obstruction and overshadowing, siting and design of buildings to provide visual privacy and adequate sight lines, on-site parking and outdoor living spaces. It may also regulate other matters, such as designating land liable to flooding, designating land as bushfire prone areas and transport noise corridors\n-\ndeal with an aspect of, or matter related or incidental to building work prescribed under a regulation under section 32 of the Building Act 1975\n-\nspecify alternative boundary clearances and site cover provisions for Class 1 and 10 structures under section 33 of the Building Act 1975.\nRefer to Schedule 9 of the Regulation to determine assessable development, the type of assessment and any referrals applying to the building work.",
+        "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/134/0/0/0/49"
+      },
+      {
+        "clause": "1.6 Table 1.6.1 - QDC alternative provisions",
+        "text": "QDC alternative provisions || Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure | Low density residential zone code Low-medium density residential zone code Character overlay code | Sections 32(b), 32(c) and 33 BA and section 10 BR",
+        "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/134/0/0/0/49"
+      },
+      {
+        "clause": "5.6",
+        "text": "Categories of development and assessment — Building work || Not applicable. || Note—The planning scheme also regulates building work associated with an overlay through the tables of assessment under section 5.9.",
+        "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/109/0/0/0/49"
+      }
+    ]
+  },
+  "levels_of_assessment": [
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Low density residential zone",
+      "level": "Accepted",
+      "conditions": "Assessment benchmarks: Not applicable (also in Fitzroy River accommodation and Residential stables precincts, Tables 5.4.1.1.1/5.4.1.1.2). May be altered by an overlay (s5.9).",
+      "quote": "- Dwelling house - Dwelling unit Note—For dwellings, this category of development and assessment may be altered by an overlay. Refer to section 5.9. - Landing Editor’s note—Work associated with a landing is regulated separately under the Prescribed Tidal Work Code. - Park | Accepted | Not applicable",
+      "clause": "Table 5.4.1.1",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/197/0/0/0/49"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Low-medium density residential zone",
+      "level": "Accepted",
+      "conditions": "Assessment benchmarks: Not applicable.",
+      "quote": "- Dwelling house - Dwelling unit Note—For dwellings, this category of development and assessment may be altered by an overlay. Refer to section 5.9. | Accepted | Not applicable",
+      "clause": "Table 5.4.1.2",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/196/0/0/0/49"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "High density residential zone",
+      "level": "Accepted",
+      "conditions": "Assessment benchmarks: Not applicable.",
+      "quote": "- Dwelling house - Dwelling unit Note—For dwellings, this category of development and assessment may be altered by an overlay. Refer to section 5.9. | Accepted | Not applicable",
+      "clause": "Table 5.4.1.3",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/195/0/0/0/49"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Township zone",
+      "level": "Accepted",
+      "conditions": "Assessment benchmarks: Not applicable (also Kabra and Stanwell precinct, Table 5.4.6.7.1).",
+      "quote": "- Dwelling house Note—For dwellings, this category of development and assessment may be altered by an overlay. Refer to section 5.9. | Accepted | Not applicable",
+      "clause": "Table 5.4.6.7",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/157/0/0/0/49"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Rural residential zone",
+      "level": "Accepted",
+      "conditions": "Assessment benchmarks: Not applicable.",
+      "quote": "- Dwelling house - Dwelling unit Note—The category of development and assessment for a dwelling house may be altered by an overlay. Refer to section 5.9. | Accepted | Not applicable",
+      "clause": "Table 5.4.6.5",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/162/0/0/0/49"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Rural residential zone - Baree and Walterhall precinct",
+      "level": "Code assessment",
+      "conditions": "Rural residential zone code; Access, parking and transport code; Landscape code; Stormwater management code; Waste management code; Water and sewer code.",
+      "quote": "- Caretaker’s accommodation - Dwelling house - Dwelling unit - Sales office | Code assessment | Zone code: Rural residential zone code Other development codes: Access, parking and transport code Landscape code Stormwater management code Waste management code Water and sewer code",
+      "clause": "Table 5.4.6.5.1",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/163/0/0/0/49"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Rural zone",
+      "level": "Accepted subject to requirements",
+      "conditions": "Rural zone code (incl. Alton Downs precinct; same in Cropping and intensive horticultural precinct, Table 5.4.6.4.1).",
+      "quote": "- Caretaker’s accommodation - Dwelling house - Dwelling unit - Roadside stall | Accepted subject to requirements | Zone code: Rural zone code",
+      "clause": "Table 5.4.6.4",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/164/0/0/0/49"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Emerging community zone",
+      "level": "Accepted subject to requirements",
+      "conditions": "Emerging community zone code; Works code.",
+      "quote": "- Caretaker’s accommodation - Dwelling house - Dwelling unit | Accepted subject to requirements | Zone code: Emerging community zone code Other development code: Works code",
+      "clause": "Table 5.4.6.2",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/167/0/0/0/49"
+    },
+    {
+      "use_or_work": "Class 10 building work",
+      "zone": "All zones",
+      "level": "Not applicable (no zone-based building work tables)",
+      "conditions": "Building work is regulated only through overlay tables in s5.9 (e.g. Character overlay Table 5.9.5, Flood hazard overlay Table 5.9.8).",
+      "quote": "Not applicable. || Note—The planning scheme also regulates building work associated with an overlay through the tables of assessment under section 5.9.",
+      "clause": "5.6",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/109/0/0/0/49"
+    },
+    {
+      "use_or_work": "Dwelling house / building work (Character overlay)",
+      "zone": "All zones",
+      "level": "Accepted subject to requirements",
+      "conditions": "Residential character design control area: MCU if accepted development in any zone for a dwelling house; building work involving extensions, external alterations or minor building work.",
+      "quote": "Material change of use if accepted development in any zone for a dwelling house | Accepted subject to requirements | Character overlay code",
+      "clause": "Table 5.9.5",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/143/0/0/0/49"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "setback",
+      "text": "For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.",
+      "clause": "SC1.2",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/202/0/0/0/49"
+    },
+    {
+      "term": "domestic outbuilding",
+      "text": "A non-habitable class 10a building that is— - a shed, garage or carport; and - ancillary to a residential use carried out on the premises where the building is.",
+      "clause": "SC1.2",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/202/0/0/0/49"
+    },
+    {
+      "term": "dwelling house",
+      "text": "Dwelling house means a residential use of premises involving— - 1 dwelling for a single household and any domestic outbuildings associated with the dwelling; or - 1 dwelling for a single household, a secondary dwelling, and any domestic outbuildings associated with either dwelling.",
+      "clause": "SC1.1 Table SC1.1.2",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/203/0/0/0/49"
+    },
+    {
+      "term": "boundary clearance",
+      "text": "The distance between a building or structure on premises and the boundary of the premises, measured from the part of the building or structure that is closest to the boundary, other than a part that is— - an architectural or ornamental attachment; or - a rainwater fitting.",
+      "clause": "SC1.2",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/202/0/0/0/49"
+    },
+    {
+      "term": "frontage",
+      "text": "Means a boundary of a lot which abuts a road.",
+      "clause": "SC1.2",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/202/0/0/0/49"
+    }
+  ],
+  "rules": [
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Absence rule. Verified by reading every zone code (sections 75-103) and tables of assessment (157-199): no front setback for dwelling houses/Class 10 in these zones. Dual occupancy and assessable-development setbacks in the residential zone codes are recorded separately and do not apply to an accepted dwelling house. The Emerging community zone code AO12.2 (20 m from roads) applies only to assessable development (Table 6.7.2.3.2), recorded separately. Character overlay AO8.1.1 can apply via overlay. Section 5.6 states building work is 'Not applicable' (no zone-based building work tables).",
+      "rule_key": "rrc_dwelling_house_no_front_setback",
+      "code": "Tables of assessment (Part 5) / zone codes",
+      "clause": "Tables 5.4.1.1, 5.4.1.1.1, 5.4.1.1.2, 5.4.1.2, 5.4.1.3, 5.4.6.7, 5.4.6.7.1, 5.4.6.5, 5.4.6.5.1, 5.4.6.2",
+      "provision_type": "OTHER",
+      "zones": [
+        "Low density residential zone",
+        "Low-medium density residential zone",
+        "High density residential zone",
+        "Township zone",
+        "Rural residential zone",
+        "Emerging community zone"
+      ],
+      "structure_scope": "dwelling house (including domestic outbuildings) and Class 10 building work",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "(No front (road frontage) setback is stated for a dwelling house or its domestic outbuildings in the Low density residential, Low-medium density residential, High density residential, Township, Rural residential or Emerging community zones; a dwelling house is 'Accepted' with assessment benchmarks 'Not applicable' in the residential, township and rural residential zone tables, Part 5.6 building work is 'Not applicable', and the Emerging community zone code AO2.1 sets only side and rear setbacks. The QDC (MP1.1/MP1.2) applies.)",
+      "structured": {
+        "parameter": "front setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "dwelling house is accepted development ('Not applicable' benchmarks) in LDR (incl. Fitzroy River accommodation and Residential stables precincts), LMDR, HDR, Township (incl. Kabra and Stanwell precinct) and Rural residential zones",
+          "Emerging community zone: accepted subject to requirements, but the zone code requirement (AO2.1) has no front setback",
+          "Rural residential zone - Baree and Walterhall precinct: dwelling house is code assessable but the Rural residential zone code has no front setback for dwelling houses or outbuildings"
+        ],
+        "exceptions": [],
+        "formula_text": "QDC MP1.1 / MP1.2 road boundary clearance applies"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council provision; QDC applies",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/197/0/0/0/49",
+      "page_or_anchor": "Table 5.4.1.1 rule 676; Table 5.4.1.2 rule 723; Table 5.4.1.3 rule 739; Table 5.4.6.7 rule 1976; Table 5.4.6.7.1 rule 1991; Table 5.4.6.5 rule 1906; Table 5.4.6.5.1 rule 1928; Table 5.4.6.2 rule 1856; s5.6 rule 2019"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Absence rule. Rural zone (AO3.1 20 m all boundaries) and Emerging community zone (AO2.1 6 m side and rear) do have side/rear setbacks and are recorded separately.",
+      "rule_key": "rrc_dwelling_house_no_side_rear_setback",
+      "code": "Tables of assessment (Part 5) / zone codes",
+      "clause": "Tables 5.4.1.1, 5.4.1.1.1, 5.4.1.1.2, 5.4.1.2, 5.4.1.3, 5.4.6.7, 5.4.6.7.1, 5.4.6.5, 5.4.6.5.1",
+      "provision_type": "OTHER",
+      "zones": [
+        "Low density residential zone",
+        "Low-medium density residential zone",
+        "High density residential zone",
+        "Township zone",
+        "Rural residential zone"
+      ],
+      "structure_scope": "dwelling house (including domestic outbuildings) and Class 10 building work",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear setback is stated for a dwelling house or its domestic outbuildings (Class 10a) in the Low density residential, Low-medium density residential, High density residential, Township or Rural residential zones; the dwelling house is 'Accepted' with assessment benchmarks 'Not applicable' (code assessable only in the Rural residential zone Baree and Walterhall precinct, whose code has no side/rear setback for it). The QDC (MP1.1/MP1.2) applies.)",
+      "structured": {
+        "parameter": "side and rear setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": "QDC MP1.1 / MP1.2 side and rear boundary clearances apply"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council provision; QDC applies",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/197/0/0/0/49",
+      "page_or_anchor": "Table 5.4.1.1 rule 676; Table 5.4.1.2 rule 723; Table 5.4.1.3 rule 739; Table 5.4.6.7 rule 1976; Table 5.4.6.5 rule 1906; Table 5.4.6.5.1 rule 1928"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Excerpt of AO3.1 (the remainder sets separation distances from intensive animal industry and extractive industry). The AO says 'Development' under the heading 'Dwelling house or dwelling unit'; whether it reaches a stand-alone shed/garage depends on reading the SC1.1 dwelling house definition ('1 dwelling for a single household and any domestic outbuildings associated with the dwelling'). PO3 purpose is protecting neighbouring rural operations. In the Alton Downs precinct, AO13.1 (6 m front) takes precedence where it varies - see rrc_rural_alton_downs_dh_front_6m.",
+      "rule_key": "rrc_rural_dh_front_20m",
+      "code": "Rural zone code",
+      "clause": "Table 6.7.4.3.1 AO3.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural zone"
+      ],
+      "structure_scope": "development for a dwelling house or dwelling unit (a dwelling house includes any domestic outbuildings associated with the dwelling - SC1.1)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO3.1\nDevelopment:\n- is set back a minimum of twenty (20) metres from all site boundaries; and",
+      "structured": {
+        "parameter": "setback from all site boundaries",
+        "operator": ">=",
+        "value": 20,
+        "unit": "m",
+        "conditions": [
+          "applies to all site boundaries including road frontages",
+          "under heading 'Dwelling house or dwelling unit'",
+          "dwelling house is accepted subject to requirements against the Rural zone code (Table 5.4.6.4 / 5.4.6.4.1)"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - the Rural zone code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/78/0/0/0/49",
+      "page_or_anchor": "Section 78 (6.7.4 Rural zone code), rule 2548, Table 6.7.4.3.1 PO3/AO3.1"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Same provision as rrc_rural_dh_front_20m. Alton Downs precinct AO13.1 note says 'There is no specific setback to any other boundary' and the precinct section states precinct acceptable outcomes take precedence where they vary from the code - so in Alton Downs the 20 m side/rear may be displaced. Curator to decide.",
+      "rule_key": "rrc_rural_dh_side_rear_20m",
+      "code": "Rural zone code",
+      "clause": "Table 6.7.4.3.1 AO3.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural zone"
+      ],
+      "structure_scope": "development for a dwelling house or dwelling unit (a dwelling house includes any domestic outbuildings associated with the dwelling - SC1.1)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO3.1\nDevelopment:\n- is set back a minimum of twenty (20) metres from all site boundaries; and",
+      "structured": {
+        "parameter": "setback from all site boundaries",
+        "operator": ">=",
+        "value": 20,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "applies to all site boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - the Rural zone code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/78/0/0/0/49",
+      "page_or_anchor": "Section 78 (6.7.4 Rural zone code), rule 2548, Table 6.7.4.3.1 PO3/AO3.1"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Precinct provision; takes precedence over AO3.1 (20 m) where it varies. Applies to 'A dwelling house'; reach to detached outbuildings depends on the dwelling house definition.",
+      "rule_key": "rrc_rural_alton_downs_dh_front_6m",
+      "code": "Rural zone code",
+      "clause": "Table 6.7.4.3.1 AO13.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural zone - Alton Downs precinct"
+      ],
+      "structure_scope": "a dwelling house (includes any domestic outbuildings associated with the dwelling - SC1.1)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Where in the Alton Downs precinct\nNote—Where acceptable outcomes in this section vary from this code, the precinct based acceptable outcomes take precedence. || AO13.1\nA dwelling house is setback a minimum of six (6) metres from front boundaries.\nNote—There is no specific setback to any other boundary.",
+      "structured": {
+        "parameter": "front boundary setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "Alton Downs precinct of the Rural zone only"
+        ],
+        "exceptions": [
+          "'There is no specific setback to any other boundary.'"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - the Rural zone code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/78/0/0/0/49",
+      "page_or_anchor": "Section 78, rules 2564-2565, Table 6.7.4.3.1 PO13/AO13.1"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Excerpt of AO2.1 (remainder is separation from intensive animal and extractive industries). Reach to stand-alone outbuildings depends on the dwelling house definition. No front setback in this table.",
+      "rule_key": "rrc_ec_dh_side_rear_6m",
+      "code": "Emerging community zone code",
+      "clause": "Table 6.7.2.3.1 AO2.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Emerging community zone"
+      ],
+      "structure_scope": "development for a dwelling house or dwelling unit (a dwelling house includes any domestic outbuildings associated with the dwelling - SC1.1)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO2.1\nDevelopment:\n- is set back a minimum of six (6) metres from side and rear lot boundaries; and",
+      "structured": {
+        "parameter": "side and rear lot boundary setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "under heading 'Dwelling house or dwelling unit'",
+          "dwelling house is accepted subject to requirements (Table 5.4.6.2)"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - the Emerging community zone code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/80/0/0/0/49",
+      "page_or_anchor": "Section 80 (6.7.2 Emerging community zone code), rule 2474, Table 6.7.2.3.1 PO2/AO2.1"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 6.7.2.3.2 applies to assessable development; an EC dwelling house is accepted subject to requirements, so this reaches a dwelling house only if it fails the accepted requirements and becomes code assessable. PO12 is aimed at nuisance/odour/streetscape.",
+      "rule_key": "rrc_ec_assessable_front_20m",
+      "code": "Emerging community zone code",
+      "clause": "Table 6.7.2.3.2 AO12.2",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Emerging community zone"
+      ],
+      "structure_scope": "Development (assessable development only)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO12.2\nDevelopment is set back:\n- fifty (50) metres from state controlled roads;\n- twenty (20) metres from all other roads; and\n- six (6) metres from any other boundary.",
+      "structured": {
+        "parameter": "road setback",
+        "operator": ">=",
+        "value": 20,
+        "unit": "m",
+        "conditions": [
+          "assessable development only (Table 6.7.2.3.2)",
+          "state-controlled road: 50 m",
+          "all other roads: 20 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - the Emerging community zone code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/80/0/0/0/49",
+      "page_or_anchor": "Section 80, rule 2493, Table 6.7.2.3.2 PO12/AO12.2"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "See rrc_ec_assessable_front_20m.",
+      "rule_key": "rrc_ec_assessable_side_rear_6m",
+      "code": "Emerging community zone code",
+      "clause": "Table 6.7.2.3.2 AO12.2",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Emerging community zone"
+      ],
+      "structure_scope": "Development (assessable development only)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO12.2\nDevelopment is set back:\n- fifty (50) metres from state controlled roads;\n- twenty (20) metres from all other roads; and\n- six (6) metres from any other boundary.",
+      "structured": {
+        "parameter": "setback from any other boundary",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "assessable development only (Table 6.7.2.3.2)"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - the Emerging community zone code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/80/0/0/0/49",
+      "page_or_anchor": "Section 80, rule 2493, Table 6.7.2.3.2 PO12/AO12.2"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Applies to dual occupancy, not a dwelling house (dwelling house is accepted with no benchmarks). Editor's note defers dual occupancy side setbacks to QDC MP1.3. Also limits garages/open carports built along the side boundary to 9 m length (out of scope).",
+      "rule_key": "rrc_ldr_dualocc_front_carport_6m",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1 AO3.3",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "structure_scope": "carports and garages (dual occupancy)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO3.3\nMinimum setbacks are in accordance with the following:\n- carports and garages are set back a minimum of six (6) metres from all road frontages;\n- building walls are set back a minimum of three (3) metres from all road frontages;\n- verandahs are set back a minimum of one (1) metre from all road frontages;\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level;\n- garages and open car ports built along the side boundary do not exceed a length of nine (9) metres.\nEditor’s note—Side setbacks for a dual occupancy is regulated by the Queensland Development Code MP1.3 unless adjoining an industrial zone or a lawfully operating industrial use – refer to AO4.2.",
+      "structured": {
+        "parameter": "carport/garage road frontage setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "dual occupancy only (accepted subject to requirements, Table 5.4.1.1)",
+          "all road frontages",
+          "building walls: 3 m",
+          "verandahs: 1 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 s1.6 Table 1.6.1: 'Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure' -> 'Low density residential zone code' (Sections 32(b), 32(c) and 33 BA and section 10 BR)",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/103/0/0/0/49",
+      "page_or_anchor": "Section 103 (6.2.1 Low density residential zone code), rule 784, Table 6.2.1.3.1 PO3/AO3.3"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "The rear setback bullet does not say which buildings it covers; whether Class 10 outbuildings of a dual occupancy are caught is unclear.",
+      "rule_key": "rrc_ldr_dualocc_rear_4m",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.1 AO3.3",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "structure_scope": "dual occupancy (rear boundary setback, not limited to dwellings)",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "AO3.3\nMinimum setbacks are in accordance with the following:\n- carports and garages are set back a minimum of six (6) metres from all road frontages;\n- building walls are set back a minimum of three (3) metres from all road frontages;\n- verandahs are set back a minimum of one (1) metre from all road frontages;\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level;\n- garages and open car ports built along the side boundary do not exceed a length of nine (9) metres.\nEditor’s note—Side setbacks for a dual occupancy is regulated by the Queensland Development Code MP1.3 unless adjoining an industrial zone or a lawfully operating industrial use – refer to AO4.2.",
+      "structured": {
+        "parameter": "rear boundary setback",
+        "operator": ">=",
+        "value": 4,
+        "unit": "m",
+        "conditions": [
+          "dual occupancy only"
+        ],
+        "exceptions": [
+          "to a laneway: 1 m at ground storey and 0.5 m above ground level"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 s1.6 Table 1.6.1: 'Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure' -> 'Low density residential zone code' (Sections 32(b), 32(c) and 33 BA and section 10 BR)",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/103/0/0/0/49",
+      "page_or_anchor": "Section 103, rule 784, Table 6.2.1.3.1 AO3.3"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Dual occupancy only. Editor's note defers dual occupancy side setbacks to QDC MP1.3.",
+      "rule_key": "rrc_lmdr_dualocc_front_carport_4_5m",
+      "code": "Low-medium density residential zone code",
+      "clause": "Table 6.2.2.3.1 AO3.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low-medium density residential zone"
+      ],
+      "structure_scope": "carports and garages (dual occupancy)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO3.2\nMinimum setbacks are in accordance with the following:\n- carports and garages are set back a minimum of 4.5 metres from all road frontages;\n- building walls are set back a minimum of three (3) metres from all road frontages;\n- verandahs are set back a minimum of one (1) metre from all road frontages;\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level; and\n- garages and open car ports built along the side boundary do not exceed a length of nine (9) metres.\nEditor’s note—Side setbacks for a dual occupancy is regulated by the Queensland Development Code MP1.3 unless adjoining an industrial zone or a lawfully operating industrial use – refer to AO4.2.",
+      "structured": {
+        "parameter": "carport/garage road frontage setback",
+        "operator": ">=",
+        "value": 4.5,
+        "unit": "m",
+        "conditions": [
+          "dual occupancy only (accepted subject to requirements, Table 5.4.1.2)",
+          "all road frontages",
+          "building walls: 3 m",
+          "verandahs: 1 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 s1.6 Table 1.6.1: 'Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure' -> 'Low-medium density residential zone code' (Sections 32(b), 32(c) and 33 BA and section 10 BR)",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/102/0/0/0/49",
+      "page_or_anchor": "Section 102 (6.2.2 Low-medium density residential zone code), rule 1014, Table 6.2.2.3.1 PO3/AO3.2"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "See rrc_ldr_dualocc_rear_4m.",
+      "rule_key": "rrc_lmdr_dualocc_rear_4m",
+      "code": "Low-medium density residential zone code",
+      "clause": "Table 6.2.2.3.1 AO3.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Low-medium density residential zone"
+      ],
+      "structure_scope": "dual occupancy (rear boundary setback, not limited to dwellings)",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "AO3.2\nMinimum setbacks are in accordance with the following:\n- carports and garages are set back a minimum of 4.5 metres from all road frontages;\n- building walls are set back a minimum of three (3) metres from all road frontages;\n- verandahs are set back a minimum of one (1) metre from all road frontages;\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level; and\n- garages and open car ports built along the side boundary do not exceed a length of nine (9) metres.\nEditor’s note—Side setbacks for a dual occupancy is regulated by the Queensland Development Code MP1.3 unless adjoining an industrial zone or a lawfully operating industrial use – refer to AO4.2.",
+      "structured": {
+        "parameter": "rear boundary setback",
+        "operator": ">=",
+        "value": 4,
+        "unit": "m",
+        "conditions": [
+          "dual occupancy only"
+        ],
+        "exceptions": [
+          "to a laneway: 1 m at ground storey and 0.5 m above ground level"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 s1.6 Table 1.6.1: 'Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure' -> 'Low-medium density residential zone code' (Sections 32(b), 32(c) and 33 BA and section 10 BR)",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/102/0/0/0/49",
+      "page_or_anchor": "Section 102, rule 1014, Table 6.2.2.3.1 AO3.2"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Dual occupancy only. Table 6.2.3.3.3 flattened by hand from ePlan HTML (editor's note 'Figure 6.2.3.3.3a provides guidance' omitted). HDR code is not in Part 1 Table 1.6.1, so may not legally vary QDC boundary clearances.",
+      "rule_key": "rrc_hdr_dualocc_front_garage_behind_building",
+      "code": "High density residential zone code",
+      "clause": "Table 6.2.3.3.1 AO3.2; Table 6.2.3.3.3",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "High density residential zone"
+      ],
+      "structure_scope": "buildings; vehicle parking structures (garages and car ports) (dual occupancy)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO3.2\nMinimum setbacks are in accordance with the following:\n- buildings are set back from the street frontage in accordance with Table 6.2.3.3.3;\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level; and\n- vehicle parking structures (garages and car ports) are located:\n- behind the front building setback; or\n- below the front building.\nEditor’s note—Side setbacks for a dual occupancy is regulated by the Queensland Development Code MP1.3 unless adjoining an industrial zone or a lawfully operating industrial use – refer to AO4.2. || Table 6.2.3.3.3 — Minimum building setback from street frontage || Building height | Front setback – building | Front setback – balconies || Basement | 0 metres | N/A || Storeys 1 – 3. | Within twenty (20) per cent of the average front setback of adjoining buildings; OR Where there are no adjoining buildings — three (3) metres. | 1.5 metres || Four (4) storeys and above. | Five (5) metres. | 3 metres",
+      "structured": {
+        "parameter": "front setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "dual occupancy only (accepted subject to requirements, Table 5.4.1.3)",
+          "garages and car ports: behind the front building setback or below the front building",
+          "buildings 1-3 storeys: within 20% of the average front setback of adjoining buildings, or 3 m where no adjoining buildings"
+        ],
+        "exceptions": [],
+        "formula_text": "garage/carport setback >= front building setback; front building setback = avg(adjoining) +/-20% or 3 m"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - the High density residential zone code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/101/0/0/0/49",
+      "page_or_anchor": "Section 101 (6.2.3 High density residential zone code), rule for PO3/AO3.2 and rules 1109-1113 (Table 6.2.3.3.3)"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "See rrc_ldr_dualocc_rear_4m.",
+      "rule_key": "rrc_hdr_dualocc_rear_4m",
+      "code": "High density residential zone code",
+      "clause": "Table 6.2.3.3.1 AO3.2",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "High density residential zone"
+      ],
+      "structure_scope": "dual occupancy (rear boundary setback, not limited to dwellings)",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "AO3.2\nMinimum setbacks are in accordance with the following:\n- buildings are set back from the street frontage in accordance with Table 6.2.3.3.3;\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level; and\n- vehicle parking structures (garages and car ports) are located:\n- behind the front building setback; or\n- below the front building.\nEditor’s note—Side setbacks for a dual occupancy is regulated by the Queensland Development Code MP1.3 unless adjoining an industrial zone or a lawfully operating industrial use – refer to AO4.2.",
+      "structured": {
+        "parameter": "rear boundary setback",
+        "operator": ">=",
+        "value": 4,
+        "unit": "m",
+        "conditions": [
+          "dual occupancy only"
+        ],
+        "exceptions": [
+          "to a laneway: 1 m at ground storey and 0.5 m above ground level"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - the High density residential zone code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/101/0/0/0/49",
+      "page_or_anchor": "Section 101, Table 6.2.3.3.1 PO3/AO3.2"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table x.3.2 applies to assessable development only (e.g. code-assessable multiple dwellings and other assessable uses). A dwelling house is accepted with no benchmarks in this zone, so this does not apply to a dwelling house or its outbuildings.",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.2 AO13.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/103/0/0/0/49",
+      "page_or_anchor": "Section 103, rule 802, Table 6.2.1.3.2 PO13/AO13.1",
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 s1.6 Table 1.6.1: 'Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure' -> 'Low density residential zone code' (Sections 32(b), 32(c) and 33 BA and section 10 BR)",
+      "rule_key": "rrc_ldr_assessable_front_carport",
+      "structure_scope": "carports and garages (assessable development)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO13.1\nMinimum setbacks are in accordance with the following:\n- carports and garages are set back a minimum of six (6) metres from all road frontages;\n- building walls are set back a minimum of three (3) metres from all road frontages;\n- verandahs are set back a minimum of one (1) metre from all road frontages;\n- the side boundary setback is a minimum of:\n- 1.5 metres for a wall up to 4.5 metres high; or\n- two (2) metres for a wall up to 7.5 metres high; or\n- 2.5 metres for any part of a wall over 7.5 metres;\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level; and\n- garages and open car ports built along the side boundary do not exceed a length of nine (9) metres.",
+      "structured": {
+        "parameter": "carport/garage road frontage setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "assessable development only",
+          "all road frontages",
+          "building walls: 3 m",
+          "verandahs: 1 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      }
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table x.3.2 applies to assessable development only (e.g. code-assessable multiple dwellings and other assessable uses). A dwelling house is accepted with no benchmarks in this zone, so this does not apply to a dwelling house or its outbuildings.",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.2 AO13.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/103/0/0/0/49",
+      "page_or_anchor": "Section 103, rule 802, Table 6.2.1.3.2 PO13/AO13.1",
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 s1.6 Table 1.6.1: 'Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure' -> 'Low density residential zone code' (Sections 32(b), 32(c) and 33 BA and section 10 BR)",
+      "rule_key": "rrc_ldr_assessable_side",
+      "structure_scope": "building walls (assessable development)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO13.1\nMinimum setbacks are in accordance with the following:\n- carports and garages are set back a minimum of six (6) metres from all road frontages;\n- building walls are set back a minimum of three (3) metres from all road frontages;\n- verandahs are set back a minimum of one (1) metre from all road frontages;\n- the side boundary setback is a minimum of:\n- 1.5 metres for a wall up to 4.5 metres high; or\n- two (2) metres for a wall up to 7.5 metres high; or\n- 2.5 metres for any part of a wall over 7.5 metres;\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level; and\n- garages and open car ports built along the side boundary do not exceed a length of nine (9) metres.",
+      "structured": {
+        "parameter": "side boundary setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "assessable development only",
+          "wall up to 4.5 m high: 1.5 m",
+          "wall up to 7.5 m high: 2 m",
+          "any part of a wall over 7.5 m: 2.5 m"
+        ],
+        "exceptions": [],
+        "formula_text": "setback by wall height band"
+      }
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table x.3.2 applies to assessable development only (e.g. code-assessable multiple dwellings and other assessable uses). A dwelling house is accepted with no benchmarks in this zone, so this does not apply to a dwelling house or its outbuildings. Where adjoining industrial land, AO24.3 / equivalent (6 m landscaped buffer) prevails over side and rear setbacks.",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1.3.2 AO13.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/103/0/0/0/49",
+      "page_or_anchor": "Section 103, rule 802, Table 6.2.1.3.2 PO13/AO13.1",
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 s1.6 Table 1.6.1: 'Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure' -> 'Low density residential zone code' (Sections 32(b), 32(c) and 33 BA and section 10 BR)",
+      "rule_key": "rrc_ldr_assessable_rear",
+      "structure_scope": "development (assessable development); not limited to dwellings",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "AO13.1\nMinimum setbacks are in accordance with the following:\n- carports and garages are set back a minimum of six (6) metres from all road frontages;\n- building walls are set back a minimum of three (3) metres from all road frontages;\n- verandahs are set back a minimum of one (1) metre from all road frontages;\n- the side boundary setback is a minimum of:\n- 1.5 metres for a wall up to 4.5 metres high; or\n- two (2) metres for a wall up to 7.5 metres high; or\n- 2.5 metres for any part of a wall over 7.5 metres;\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level; and\n- garages and open car ports built along the side boundary do not exceed a length of nine (9) metres.",
+      "structured": {
+        "parameter": "rear boundary setback",
+        "operator": ">=",
+        "value": 4,
+        "unit": "m",
+        "conditions": [
+          "assessable development only"
+        ],
+        "exceptions": [
+          "to a laneway: 1 m at ground storey and 0.5 m above ground level"
+        ],
+        "formula_text": null
+      }
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table x.3.2 applies to assessable development only (e.g. code-assessable multiple dwellings and other assessable uses). A dwelling house is accepted with no benchmarks in this zone, so this does not apply to a dwelling house or its outbuildings.",
+      "code": "Low-medium density residential zone code",
+      "clause": "Table 6.2.2.3.2 AO10.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low-medium density residential zone"
+      ],
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/102/0/0/0/49",
+      "page_or_anchor": "Section 102, rule 1028, Table 6.2.2.3.2 PO10/AO10.1",
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 s1.6 Table 1.6.1: 'Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure' -> 'Low-medium density residential zone code' (Sections 32(b), 32(c) and 33 BA and section 10 BR)",
+      "rule_key": "rrc_lmdr_assessable_front_carport",
+      "structure_scope": "carports and garages (assessable development)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO10.1\nMinimum setbacks are in accordance with the following:\n- carports and garages are set back a minimum of 4.5 metres from all road frontages;\n- building walls are set back a minimum of three (3) metres from all road frontages;\n- verandahs are set back a minimum of one (1) metre from all road frontages;\n- the side boundary setback is a minimum of:\n- 1.5 metres for a wall up to 4.5 metres high;\n- two (2) metres for a wall up to 7.5 metres high; and\n- 2.5 metres for any part of a wall over 7.5 metres;\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level; and\n- garages and open car ports built along the side boundary do not exceed a length of nine (9) metres.\nAND",
+      "structured": {
+        "parameter": "carport/garage road frontage setback",
+        "operator": ">=",
+        "value": 4.5,
+        "unit": "m",
+        "conditions": [
+          "assessable development only",
+          "all road frontages",
+          "building walls: 3 m",
+          "verandahs: 1 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      }
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table x.3.2 applies to assessable development only (e.g. code-assessable multiple dwellings and other assessable uses). A dwelling house is accepted with no benchmarks in this zone, so this does not apply to a dwelling house or its outbuildings.",
+      "code": "Low-medium density residential zone code",
+      "clause": "Table 6.2.2.3.2 AO10.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low-medium density residential zone"
+      ],
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/102/0/0/0/49",
+      "page_or_anchor": "Section 102, rule 1028, Table 6.2.2.3.2 PO10/AO10.1",
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 s1.6 Table 1.6.1: 'Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure' -> 'Low-medium density residential zone code' (Sections 32(b), 32(c) and 33 BA and section 10 BR)",
+      "rule_key": "rrc_lmdr_assessable_side",
+      "structure_scope": "building walls (assessable development)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO10.1\nMinimum setbacks are in accordance with the following:\n- carports and garages are set back a minimum of 4.5 metres from all road frontages;\n- building walls are set back a minimum of three (3) metres from all road frontages;\n- verandahs are set back a minimum of one (1) metre from all road frontages;\n- the side boundary setback is a minimum of:\n- 1.5 metres for a wall up to 4.5 metres high;\n- two (2) metres for a wall up to 7.5 metres high; and\n- 2.5 metres for any part of a wall over 7.5 metres;\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level; and\n- garages and open car ports built along the side boundary do not exceed a length of nine (9) metres.\nAND",
+      "structured": {
+        "parameter": "side boundary setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "assessable development only",
+          "wall up to 4.5 m high: 1.5 m",
+          "wall up to 7.5 m high: 2 m",
+          "any part of a wall over 7.5 m: 2.5 m"
+        ],
+        "exceptions": [],
+        "formula_text": "setback by wall height band"
+      }
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table x.3.2 applies to assessable development only (e.g. code-assessable multiple dwellings and other assessable uses). A dwelling house is accepted with no benchmarks in this zone, so this does not apply to a dwelling house or its outbuildings. Where adjoining industrial land, AO24.3 / equivalent (6 m landscaped buffer) prevails over side and rear setbacks.",
+      "code": "Low-medium density residential zone code",
+      "clause": "Table 6.2.2.3.2 AO10.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low-medium density residential zone"
+      ],
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/102/0/0/0/49",
+      "page_or_anchor": "Section 102, rule 1028, Table 6.2.2.3.2 PO10/AO10.1",
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 s1.6 Table 1.6.1: 'Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure' -> 'Low-medium density residential zone code' (Sections 32(b), 32(c) and 33 BA and section 10 BR)",
+      "rule_key": "rrc_lmdr_assessable_rear",
+      "structure_scope": "development (assessable development); not limited to dwellings",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "AO10.1\nMinimum setbacks are in accordance with the following:\n- carports and garages are set back a minimum of 4.5 metres from all road frontages;\n- building walls are set back a minimum of three (3) metres from all road frontages;\n- verandahs are set back a minimum of one (1) metre from all road frontages;\n- the side boundary setback is a minimum of:\n- 1.5 metres for a wall up to 4.5 metres high;\n- two (2) metres for a wall up to 7.5 metres high; and\n- 2.5 metres for any part of a wall over 7.5 metres;\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level; and\n- garages and open car ports built along the side boundary do not exceed a length of nine (9) metres.\nAND",
+      "structured": {
+        "parameter": "rear boundary setback",
+        "operator": ">=",
+        "value": 4,
+        "unit": "m",
+        "conditions": [
+          "assessable development only"
+        ],
+        "exceptions": [
+          "to a laneway: 1 m at ground storey and 0.5 m above ground level"
+        ],
+        "formula_text": null
+      }
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table x.3.2 applies to assessable development only (e.g. code-assessable multiple dwellings and other assessable uses). A dwelling house is accepted with no benchmarks in this zone, so this does not apply to a dwelling house or its outbuildings. PO8/AO8.1 also requires vehicle parking structures behind the front building setback or below the front building.",
+      "code": "High density residential zone code",
+      "clause": "Table 6.2.3.3.2 AO7.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "High density residential zone"
+      ],
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/101/0/0/0/49",
+      "page_or_anchor": "Section 101, Table 6.2.3.3.2 PO7/AO7.1; Table 6.2.3.3.3",
+      "alternative_provision_to_qdc_qhc": "NO - the High density residential zone code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "rule_key": "rrc_hdr_assessable_front",
+      "structure_scope": "buildings (assessable development)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO7.1\nMinimum setbacks are in accordance with the following:\n- buildings are set back from the street frontage in accordance with Table 6.2.3.3.3;\n- the side boundary setback is a minimum of:\n- 1.5 metres for a wall up to 8.5 metres high;\n- 2.5 metres for a wall up to twelve (12) metres high; and\n- 3.5 metres for any part of a wall over twenty (20) metres high; and\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level. || Table 6.2.3.3.3 — Minimum building setback from street frontage || Building height | Front setback – building | Front setback – balconies || Basement | 0 metres | N/A || Storeys 1 – 3. | Within twenty (20) per cent of the average front setback of adjoining buildings; OR Where there are no adjoining buildings — three (3) metres. | 1.5 metres || Four (4) storeys and above. | Five (5) metres. | 3 metres",
+      "structured": {
+        "parameter": "front setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "assessable development only",
+          "storeys 1-3: within 20% of the average front setback of adjoining buildings, or 3 m where none",
+          "4+ storeys: 5 m",
+          "balconies: 1.5 m (1-3 storeys) / 3 m (4+ storeys)"
+        ],
+        "exceptions": [],
+        "formula_text": "avg(adjoining front setbacks) +/- 20%; else 3 m"
+      }
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table x.3.2 applies to assessable development only (e.g. code-assessable multiple dwellings and other assessable uses). A dwelling house is accepted with no benchmarks in this zone, so this does not apply to a dwelling house or its outbuildings. Note the HDR bands skip 12-20 m wall heights as written.",
+      "code": "High density residential zone code",
+      "clause": "Table 6.2.3.3.2 AO7.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "High density residential zone"
+      ],
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/101/0/0/0/49",
+      "page_or_anchor": "Section 101, Table 6.2.3.3.2 PO7/AO7.1; Table 6.2.3.3.3",
+      "alternative_provision_to_qdc_qhc": "NO - the High density residential zone code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "rule_key": "rrc_hdr_assessable_side",
+      "structure_scope": "building walls (assessable development)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO7.1\nMinimum setbacks are in accordance with the following:\n- buildings are set back from the street frontage in accordance with Table 6.2.3.3.3;\n- the side boundary setback is a minimum of:\n- 1.5 metres for a wall up to 8.5 metres high;\n- 2.5 metres for a wall up to twelve (12) metres high; and\n- 3.5 metres for any part of a wall over twenty (20) metres high; and\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level.",
+      "structured": {
+        "parameter": "side boundary setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "assessable development only",
+          "wall up to 8.5 m high: 1.5 m",
+          "wall up to 12 m high: 2.5 m",
+          "any part of a wall over 20 m high: 3.5 m"
+        ],
+        "exceptions": [],
+        "formula_text": "setback by wall height band"
+      }
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table x.3.2 applies to assessable development only (e.g. code-assessable multiple dwellings and other assessable uses). A dwelling house is accepted with no benchmarks in this zone, so this does not apply to a dwelling house or its outbuildings. Where adjoining industrial land, AO24.3 / equivalent (6 m landscaped buffer) prevails over side and rear setbacks.",
+      "code": "High density residential zone code",
+      "clause": "Table 6.2.3.3.2 AO7.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "High density residential zone"
+      ],
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/101/0/0/0/49",
+      "page_or_anchor": "Section 101, Table 6.2.3.3.2 PO7/AO7.1; Table 6.2.3.3.3",
+      "alternative_provision_to_qdc_qhc": "NO - the High density residential zone code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "rule_key": "rrc_hdr_assessable_rear",
+      "structure_scope": "development (assessable development); not limited to dwellings",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "AO7.1\nMinimum setbacks are in accordance with the following:\n- buildings are set back from the street frontage in accordance with Table 6.2.3.3.3;\n- the side boundary setback is a minimum of:\n- 1.5 metres for a wall up to 8.5 metres high;\n- 2.5 metres for a wall up to twelve (12) metres high; and\n- 3.5 metres for any part of a wall over twenty (20) metres high; and\n- the rear boundary setback is four (4) metres unless to a laneway being one (1) metre at ground storey and 0.5 metres above ground level.",
+      "structured": {
+        "parameter": "rear boundary setback",
+        "operator": ">=",
+        "value": 4,
+        "unit": "m",
+        "conditions": [
+          "assessable development only"
+        ],
+        "exceptions": [
+          "to a laneway: 1 m at ground storey and 0.5 m above ground level"
+        ],
+        "formula_text": null
+      }
+    },
+    {
+      "overlay": "Character overlay - Residential character design control area (OM-5)",
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 5.9.5: in the Residential character design control area a dwelling house MCU (accepted in any zone) and building work for extensions, external alterations or minor building work are 'Accepted subject to requirements' against this code. AO1.1 (front setback within 20% of adjoining average) expressly excludes car ports, garages and other enclosed outbuildings, so is not recorded.",
+      "rule_key": "rrc_character_outbuilding_front",
+      "code": "Character overlay code",
+      "clause": "Table 8.2.5.3.1 AO8.1.1",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "All zones"
+      ],
+      "structure_scope": "Car ports, garages and other enclosed outbuildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO8.1.1\nCar ports, garages and other enclosed outbuildings are:\n- located behind the main face of the dwelling house; or\n- set back an equal or greater distance from the street as the main building and do not have a garage door or solid face presented to the street.\nOR || AO8.1.2\nWhere an open car port is located in the front of the main building, the car port:\n- is detached from the main building;\n- has a maximum width of 3.6 metres;\n- has a maximum height of four (4) metres above ground level;\n- has a pitched roof (pyramidal, hip or gable or any combination of pyramidal, hip or gable) with a minimum of fifteen (15) degrees roof pitch or a pitch equal to that of the main dwelling house or building;\n- has a minimum roof overhang of thirty (30) centimetres;\n- has roofing material consistent with the roofing material used on the main dwelling house or building; and\n- has a gutter profile consistent with the gutter profile used on the main dwelling house or building.",
+      "structured": {
+        "parameter": "front setback of car ports, garages and enclosed outbuildings",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "land in the Residential character design control area only",
+          "located behind the main face of the dwelling house; or",
+          "set back an equal or greater distance from the street as the main building and no garage door or solid face presented to the street"
+        ],
+        "exceptions": [
+          "AO8.1.2: an open car port may be located in front of the main building if detached, max 3.6 m wide, max 4 m high, pitched roof etc."
+        ],
+        "formula_text": "outbuilding street setback >= main building street setback"
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Part 1 s1.6 Table 1.6.1: 'Alternative provisions to the QDC MP1.1 and QDC MP1.2 for a class 1 and 10 building or structure' -> 'Character overlay code' (Sections 32(b), 32(c) and 33 BA and section 10 BR)",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/67/0/0/0/49",
+      "page_or_anchor": "Section 67 (8.2.5 Character overlay code), rule 3027, Table 8.2.5.3.1 PO8/AO8.1"
+    },
+    {
+      "overlay": "Flood hazard overlay - Fitzroy River flood area H3-H4 (high) or H5-H6 (extreme) or Local catchment flood planning area 1 (OM-8A / OM-8C)",
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "AO4.1.4 sits under 'Development in Fitzroy River flood areas – H3-H4 (high hazard areas) or H5-H6 (extreme hazard areas) or Local catchment flood – planning area 1' and is joined by AND to AO4.1.1-AO4.1.3. Table 5.9.8 makes dwelling house MCU and building work accepted subject to requirements against this code in these areas. Also caps class 10a total floor area at 50 m2 (out of scope).",
+      "rule_key": "rrc_flood_rural_class10a_front_20m",
+      "code": "Flood hazard overlay code",
+      "clause": "Table 8.2.8.3.1 AO4.1.4",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural zone"
+      ],
+      "structure_scope": "class 10a buildings and structures",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO4.1.4\nWhere located in the rural zone, the total floor area of class 10a buildings and structures on the site do not exceed a total of fifty (50) square metres, and are set back a minimum of twenty (20) metres from all site boundaries.",
+      "structured": {
+        "parameter": "setback from all site boundaries",
+        "operator": ">=",
+        "value": 20,
+        "unit": "m",
+        "conditions": [
+          "rural zone only",
+          "within the high/extreme flood hazard areas of the flood hazard overlay",
+          "applies to all site boundaries including road frontages"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - the Flood hazard overlay code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/64/0/0/0/49",
+      "page_or_anchor": "Section 64 (8.2.8 Flood hazard overlay code), rule 3128, Table 8.2.8.3.1 PO4/AO4.1.4"
+    },
+    {
+      "overlay": "Flood hazard overlay - Fitzroy River flood area H3-H4 (high) or H5-H6 (extreme) or Local catchment flood planning area 1 (OM-8A / OM-8C)",
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "See rrc_flood_rural_class10a_front_20m.",
+      "rule_key": "rrc_flood_rural_class10a_side_rear_20m",
+      "code": "Flood hazard overlay code",
+      "clause": "Table 8.2.8.3.1 AO4.1.4",
+      "provision_type": "ACCEPTED_DEVELOPMENT_REQUIREMENT",
+      "zones": [
+        "Rural zone"
+      ],
+      "structure_scope": "class 10a buildings and structures",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO4.1.4\nWhere located in the rural zone, the total floor area of class 10a buildings and structures on the site do not exceed a total of fifty (50) square metres, and are set back a minimum of twenty (20) metres from all site boundaries.",
+      "structured": {
+        "parameter": "setback from all site boundaries",
+        "operator": ">=",
+        "value": 20,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "rural zone only",
+          "within the high/extreme flood hazard areas of the flood hazard overlay"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - the Flood hazard overlay code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/64/0/0/0/49",
+      "page_or_anchor": "Section 64, rule 3128, Table 8.2.8.3.1 AO4.1.4"
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "SC1.2 'Setback': 'For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.'",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "Table 9.3.3.3.1 is for assessable development; under Table 5.7.1 the code applies when filling/excavation is code assessable (e.g. within 10 m of a lot boundary and 300 mm or greater). Not a QDC alternative provision.",
+      "rule_key": "rrc_retaining_wall_half_height",
+      "code": "Filling and excavation code",
+      "clause": "Table 9.3.3.3.1 AO1.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "All zones"
+      ],
+      "structure_scope": "Retaining walls",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO1.1\nRetaining walls are set back at least half the height of the wall from any boundary of the site.",
+      "structured": {
+        "parameter": "retaining wall setback from any boundary",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "applies to any boundary of the site, including road frontages",
+          "only where filling or excavation is code assessable operational work (Table 5.7.1)"
+        ],
+        "exceptions": [],
+        "formula_text": "setback >= 0.5 x wall height"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - the Filling and excavation code is not listed in Part 1 Table 1.6.1 (which names only the Low density residential zone code, Low-medium density residential zone code and Character overlay code as QDC MP1.1/MP1.2 alternative provisions); it operates as a planning (material change of use / operational work) benchmark, not a Building Act s33 boundary clearance",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/15/0/0/0/49",
+      "page_or_anchor": "Section 15 (9.3.3 Filling and excavation code), rule 3449, Table 9.3.3.3.1 PO1/AO1.1"
+    }
+  ],
+  "overlays_affecting_siting": [
+    {
+      "overlay": "Character overlay (OM-5) - Residential character design control area",
+      "provision": "Table 8.2.5.3.1 AO8.1.1 - car ports, garages and other enclosed outbuildings behind the main face of the dwelling house or set back at least as far as the main building (recorded as rrc_character_outbuilding_front)",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/67/0/0/0/49"
+    },
+    {
+      "overlay": "Flood hazard overlay (OM-8A / OM-8C) - high/extreme hazard areas",
+      "provision": "Table 8.2.8.3.1 AO4.1.4 - in the rural zone class 10a buildings and structures set back 20 m from all site boundaries (recorded)",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/64/0/0/0/49"
+    },
+    {
+      "overlay": "Coastal protection overlay",
+      "provision": "Table 8.2.6.3.2 AO4.1 (assessable development): 'For development within the urban area, development (including all buildings and other permanent structures such as swimming pools and retaining walls) are set back not less than six (6) metres from the seaward boundary of the lot.' Seaward-boundary setback, not recorded as a front/side/rear rule.",
+      "source_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/66/0/0/0/49"
+    }
+  ],
+  "local_plan_mechanism": {
+    "summary": "Part 7 Local plans (section 72) contains no local plan codes in the retrieved ePlan text (no setback provisions found); s5.8 tables of assessment for local plans were checked via keyword search. Zone precincts (e.g. LDR Fitzroy River accommodation and Residential stables; Rural Alton Downs and Cropping and intensive horticultural; Rural residential Baree and Walterhall; Township Kabra and Stanwell) are handled inside the zone codes, with precinct outcomes taking precedence where they vary."
+  },
+  "open_questions": [
+    "Rural zone AO3.1 and Emerging community AO2.1 say 'Development' under the heading 'Dwelling house or dwelling unit'. Does this reach a detached shed/garage added later (Class 10 building work alone is not a material change of use and s5.6 building work is 'Not applicable')?",
+    "Alton Downs precinct AO13.1 (6 m front; 'There is no specific setback to any other boundary') vs Rural zone AO3.1 (20 m all boundaries). Does the precinct note displace the 20 m side/rear setback?",
+    "Part 1 Table 1.6.1 names the LDR and LMDR zone codes as QDC alternative provisions, but dwelling houses are accepted with no benchmarks in those zones. Confirm with council that no LDR/LMDR setback applies to Class 10 buildings on dwelling-house lots.",
+    "Rear setback bullets in the residential dual occupancy and assessable AOs do not say whether they cover Class 10 outbuildings.",
+    "A 2026 LGIP/major amendment was consulted on (Jan-Feb 2026); check whether a Version 6 has commenced since the ePlan was last updated (revisionDate 04 Aug 2025).",
+    "The ePlan rules API returned null for any date other than the revision date (04-Aug-2025); all text was retrieved with that date."
+  ],
+  "fetch_log": [
+    "curl (browser UA) https://rockeplan.rockhamptonregion.qld.gov.au/eplan/api/l/vpr -> OK, one revision: revisionId 49 'Version 5', planOperative 03/28/2025, revisionDate 08/04/2025, revStatus Current",
+    "curl https://rockeplan.rockhamptonregion.qld.gov.au/eplan/api/l/rev/49/22-Oct-2026/1 -> OK: planChanges [], definitions [], 24 primaryChapters (zone -> section ids, e.g. 103 LDR, 102 LMDR, 101 HDR, 75 township, 77 rural residential, 78 rural, 80 emerging community)",
+    "curl https://rockeplan.rockhamptonregion.qld.gov.au/eplan/api/l/r/103/0/false/22-Oct-2026/false (and 28-Mar-2025) -> {\"rules\":null} (empty)",
+    "curl https://rockeplan.rockhamptonregion.qld.gov.au/eplan/api/l/r/{1..400}/0/false/04-Aug-2025/false -> 219 non-empty sections; used 134 (Part 1 incl. s1.6 Table 1.6.1), 135 (citation/commencement), 20 (Appendix 2), 109 (s5.6), 157-199 (MCU tables of assessment), 143 (Table 5.9.5), 140 (Table 5.9.8), 101/102/103 (residential zone codes), 75/77/78/80 (township, rural residential, rural, emerging community codes), 64 (flood hazard overlay code), 66 (coastal protection overlay code), 67 (character overlay code), 15 (filling and excavation code), 149 (Table 5.7.1), 202/203 (SC1.2/SC1.1 definitions)",
+    "Keyword search of all 219 sections for setback / set back / outbuilding / Class 10 / Queensland Development Code / Housing Code -> results reviewed; no dwelling house code exists in Part 9",
+    "WebSearch \"Rockhampton Regional Council planning scheme amendment 2026 Queensland Housing Code\" -> news on 2026 LGIP/major amendment consultation; nothing on QHC adoption"
+  ]
+}

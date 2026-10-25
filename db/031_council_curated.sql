@@ -130,9 +130,10 @@ SELECT define_rule($r${
  "scopes": [{"level": "LOCAL_GOVERNMENT", "lg": "LOGAN"}],
  "subjects": ["CARPORT"],
  "conditions": [[{"fact": "dwelling_house_code_applies", "op": "IS_TRUE"}, {"fact": "longest_side_m", "op": "<=", "value": 6},
-                 {"fact": "structure_height_m", "op": "<=", "value": 3.5}, {"fact": "carport_is_unenclosed", "op": "IS_TRUE"}]],
+                 {"fact": "structure_height_m", "op": "<=", "value": 3.5}, {"fact": "carport_is_unenclosed", "op": "IS_TRUE"},
+                 {"fact": "boundary_type", "op": "=", "value": "PRIMARY_FRONTAGE"}]],
  "sources": [{"key": "dh_ao4a_carport_to_front_boundary", "role": "PRIMARY"}],
- "interpretation_notes": "'6 metres by 6 metres' encoded as longest side <= 6 m.",
+ "interpretation_notes": "'6 metres by 6 metres' encoded as longest side <= 6 m. Fixed 23 Oct 2026 (user report): the rule had no boundary_type condition, so it was a candidate on every boundary pass (side, rear, secondary), not only the front boundary AO4(a) actually names. 'Front boundary' is PRIMARY_FRONTAGE only — AO4(a) is narrower than the 'road boundary clearance' wording in AO4(b)-(d), which does cover PRIMARY_FRONTAGE + SECONDARY_FRONTAGE_ROAD (see LCC.C.ROAD_CLEARANCE_4M_LMDR etc.).",
  "effective_from": "2025-07-01"}$r$);
 SELECT supersede_draft('LCC.C.CARPORT_TO_FRONT_BOUNDARY@2025-07-01', 'LCC.dh_ao4a_carport_to_front_boundary');
 SELECT alt_overrides('LCC.C.CARPORT_TO_FRONT_BOUNDARY@2025-07-01', ARRAY['QDC12.A1a.ROAD_SETBACK','QDC11.A1a.FRONTAGE_SETBACK'], 'Table 1.6.1: PO4/AO4 alternative boundary clearance.');

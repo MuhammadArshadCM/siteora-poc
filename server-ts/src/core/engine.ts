@@ -288,6 +288,24 @@ export function buildFacts(loc: any, structure: string, inputs: Record<string, a
   if (num("lot_slope_pct") !== null) put("lot_slope_pct", num("lot_slope_pct"), "User input");
   else put("lot_slope_pct", 0, "ASSUMED: flat lot (height limits rise on slopes over 15 %; enter the slope if steep)");
   put("distance_to_adjoining_habitable_window_m", num("window_distance_m"), "User input");
+  // Not available from public data in this POC (which lot has an existing detached dwelling, and its road setback):
+  // optional "neighbour road setback" inputs. Not in public data, so no default when left blank (as for
+  // lot_from_residential_subdivision above) — unanswered, the rules that need it stay manual review, same as today.
+  // Entered, they resolve QDC MP 1.1/1.2 A1(a)(ii)/(iii) (road setback aligned with an adjoining dwelling) and every
+  // council rule keyed on has_adjoining_dwelling / adjoining_road_setbacks_m. "False" is never assumed here: a smaller
+  // neighbour-aligned setback must never be shown as DETERMINED just because the field was left blank.
+  {
+    const adj = [num("adjoining_setback_1_m"), num("adjoining_setback_2_m")].filter((n): n is number => n !== null);
+    if (adj.length) {
+      put("has_adjoining_dwelling", true, "User input (adjoining road setback entered)");
+      put("adjoining_road_setbacks_m", adj, "User input (adjoining road setback(s))");
+      put("adjoining_dwellings_both_sides", adj.length === 2,
+        adj.length === 2 ? "User input (both adjoining setbacks entered)"
+          : "ASSUMED: only one adjoining setback entered — not treated as an existing detached dwelling on both adjoining lots");
+      put("any_adjoining_setback_3_to_6m", adj.some((n) => n >= 3 && n <= 6), "DERIVED: from the adjoining road setback(s) entered");
+      put("both_adjoining_setbacks_le_3m", adj.length === 2 && adj.every((n) => n <= 3), "DERIVED: from the adjoining road setbacks entered");
+    }
+  }
   put("pool_coping_height_m", structure.startsWith("POOL_") && structure !== "POOL_FENCE" ? h : null, "User input (height)");
   if (structure.startsWith("POOL")) {
     put("pool_capable_depth_m", 1.5, "ASSUMED: pool holds 300 mm or more");
@@ -357,16 +375,25 @@ function whyNot(rule: evaluate.Rule, facts: Record<string, any>): string {
   return unique(reasons).join(" — or — ") || "conditions not met";
 }
 
-/** Council rules for this place that did NOT produce a result, and council clauses not yet encoded. */
-export async function councilExplanation(db: Db, scenario: evaluate.Scenario, results: evaluate.Result[], loaded: evaluate.Loaded) {
+/** Setback-category topics, matching the project's own `regs.v_setback_rules` view (docs/03-schema.md):
+ *  everything under SETBACK.* (front/side/rear/secondary/waterway/BTB/…) or SEPARATION.*. Used to filter the response
+ *  to "setbacks only" — garage/pool/height/site-cover rules etc. are left out, matching the established definition
+ *  rather than a new one invented for this filter. */
+export const isSetbackTopic = (topic: string): boolean => topic.startsWith("SETBACK.") || topic.startsWith("SEPARATION.");
+
+/** Council rules for this place that did NOT produce a result, and council clauses not yet encoded.
+ *  scope === "setbacks" narrows both to setback-category topics (see isSetbackTopic). */
+export async function councilExplanation(db: Db, scenario: evaluate.Scenario, results: evaluate.Result[], loaded: evaluate.Loaded,
+  scope: "all" | "setbacks" | "maps" = "all") {
   const s = scenario.site, facts = scenario.facts ?? {}, st = scenario.structures[0].structure_type;
   const { rules, parents } = loaded;
   const seen = new Set(results.map((r) => r.rule));
   const isCouncil = (r: evaluate.Rule) => (r.scopes ?? []).some((x) => x.level === "LOCAL_GOVERNMENT" && x.lg === s.lg);
+  const inScope = (topic: string) => scope !== "setbacks" || isSetbackTopic(topic);
   const notApplied: any[] = [];
   let elsewhere = 0;
   for (const r of rules) {
-    if (!isCouncil(r) || seen.has(r.rule_version_id) || !["REQUIREMENT", "RELAXATION"].includes(r.role)) continue;
+    if (!isCouncil(r) || seen.has(r.rule_version_id) || !["REQUIREMENT", "RELAXATION"].includes(r.role) || !inScope(r.topic)) continue;
     if (!evaluate.scopeMatches(r, s)) {
       elsewhere += 1;
       continue;
@@ -386,7 +413,7 @@ export async function councilExplanation(db: Db, scenario: evaluate.Scenario, re
         FROM regs.rule_versions rv JOIN regs.rules ru USING (rule_id)
         WHERE rv.status = 'DRAFT' AND EXISTS (SELECT 1 FROM regs.rule_scopes s WHERE s.rule_version_id = rv.rule_version_id
                                                AND s.lg_id = ${lit(s.lg)})) d`);
-  const pending = drafts.filter((d) => evaluate.scopeMatches(d, s))
+  const pending = drafts.filter((d) => evaluate.scopeMatches(d, s) && inScope(d.topic))
     .map((d) => ({ rule: d.rule_version_id, topic: d.topic, regime: d.regime, source: d.ref, code: d.code, title: d.title }));
   const byCode = new Map<string, any[]>();
   for (const d of pending) {
@@ -400,11 +427,19 @@ export async function councilExplanation(db: Db, scenario: evaluate.Scenario, re
 
 export interface RunOptions {
   address?: string | null; lon?: number | null; lat?: number | null; zoneId?: string | null; precincts?: string[] | null; assessmentDate?: string | null;
+  /** "all" (default): everything, unchanged. "setbacks": location is still resolved (rules need the zone/overlay
+   *  facts), but only setback-category rules (see isSetbackTopic) are returned — no rule evaluation is skipped, only
+   *  what comes back is narrowed. "maps": the rule engine is not run at all — cheaper, not just a narrower reply. */
+  scope?: "all" | "setbacks" | "maps";
 }
+
+const LOCATION_FIELDS = ["geocode", "lon", "lat", "council", "parcel", "parcel_geometry", "pda", "zoning", "overlays", "sources",
+  "site_constraints", "lookup_failures", "overlay_failures", "not_checked"];
 
 export async function run(db: Db, structure: string, inputs: Record<string, any>, o: RunOptions = {}) {
   if (!(structure in STRUCTURES)) throw new ValueError(`structure must be one of ${pyStr(Object.keys(STRUCTURES).sort())}`);
   const date = o.assessmentDate || today();
+  const scope = o.scope ?? "all";
   const loc = await locate(db, o.address, o.lon, o.lat);
   if (o.zoneId) {   // manual override / no map service
     if (!loc.available_zones.some((z: any) => z.zone_id === o.zoneId))
@@ -416,6 +451,18 @@ export async function run(db: Db, structure: string, inputs: Record<string, any>
     loc.zoning.manual = true;
     loc.zoning.precincts = o.precincts ?? [];
   }
+  if (scope === "maps") {
+    // Maps-only: the rule engine (facts, DB rule load, resolve, council explanation) is not run at all.
+    return {
+      scope, assessment_date: date,
+      structure: { type: structure, label: STRUCTURES[structure] },
+      location: Object.fromEntries(LOCATION_FIELDS.filter((k) => k in loc).map((k) => [k, loc[k]])),
+      scheme_viewer: zoning.loadConfig()[loc.council.lg_id]?.scheme_viewer ?? null,
+      warnings: [...loc.warnings, ...(loc.zoning.zone_id ? [] : ["Zone unknown: only council-wide and State rules are shown."])],
+      applicable_instruments: [], facts: {}, rules: [], displaced: [], missing_inputs: [], council_rules: null,
+      available_zones: loc.available_zones, available_precincts: loc.available_precincts,
+    };
+  }
   const facts = buildFacts(loc, structure, inputs);
   const siteDef: evaluate.Site = { lg: loc.council.lg_id, zone: loc.zoning.zone_id, precincts: loc.zoning.precincts,
     local_plans: loc.zoning.local_plans, local_plan_precincts: loc.zoning.local_plan_precincts,
@@ -425,19 +472,20 @@ export async function run(db: Db, structure: string, inputs: Record<string, any>
     structures: [{ label: STRUCTURES[structure], structure_type: structure, facts: {}, boundaries: boundaries(facts) }] };
   const loaded = await evaluate.load(db, siteDef.lg, date);
   const results = evaluate.resolveWith(loaded, scenario);
-  const live = results.filter((r) => r.state !== "DISPLACED")
+  const liveAll = results.filter((r) => r.state !== "DISPLACED")
     .sort((a, b) => cmpTuple([a.regime, String(a.boundary || ""), a.topic], [b.regime, String(b.boundary || ""), b.topic]));
+  const live = scope === "setbacks" ? liveAll.filter((r) => isSetbackTopic(r.topic)) : liveAll;
   // Planning triggers (e.g. a zone where any building work needs an impact-assessable application) carry no siting
-  // value, so the resolver does not return them: say so up front instead.
+  // value, so the resolver does not return them: say so up front instead. Shown for both "all" and "setbacks" (they
+  // bear on whether siting rules apply at all); "maps" never reaches here.
   const triggers = loaded.rules.filter((r) => r.role === "TRIGGER" && r.regime === "PLANNING" && loaded.activeIvs.has(r.instrument_version_id)
     && evaluate.scopeMatches(r, siteDef) && evaluate.subjectMatches(r, structure, loaded.parents))
     .map((r) => `Planning approval: ${r.title} (${r.rule_version_id}). ${r.interpretation_notes ?? ""}`.trim());
-  const keep = ["geocode", "lon", "lat", "council", "parcel", "parcel_geometry", "pda", "zoning", "overlays", "sources", "site_constraints",
-    "lookup_failures", "overlay_failures", "not_checked"];
   return {
+    scope,
     assessment_date: date,
     structure: { type: structure, label: STRUCTURES[structure] },
-    location: Object.fromEntries(keep.filter((k) => k in loc).map((k) => [k, loc[k]])),
+    location: Object.fromEntries(LOCATION_FIELDS.filter((k) => k in loc).map((k) => [k, loc[k]])),
     scheme_viewer: zoning.loadConfig()[loc.council.lg_id]?.scheme_viewer ?? null,
     warnings: [...triggers, ...loc.warnings,
       ...(loc.pda ? [`Inside Priority Development Area '${loc.pda.pda_name}': the PDA land use plan applies; QDC/QHC siting parts do not.`] : []),
@@ -445,9 +493,9 @@ export async function run(db: Db, structure: string, inputs: Record<string, any>
     applicable_instruments: await applicableInstruments(db, loc.council.lg_id, date),
     facts,
     rules: live,
-    displaced: results.filter((r) => r.state === "DISPLACED"),
+    displaced: results.filter((r) => r.state === "DISPLACED" && (scope !== "setbacks" || isSetbackTopic(r.topic))),
     missing_inputs: await missingInputs(db, live, scenario.facts!),
-    council_rules: await councilExplanation(db, scenario, results, loaded),
+    council_rules: await councilExplanation(db, scenario, results, loaded, scope),
     available_zones: loc.available_zones,
     available_precincts: loc.available_precincts,
   };

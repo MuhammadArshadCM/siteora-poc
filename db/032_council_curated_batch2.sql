@@ -91,7 +91,8 @@ SELECT define_rule($r${
  "scopes": [{"level": "LOCAL_GOVERNMENT", "lg": "LOGAN"}, {"level": "ZONE", "zone": "LCC:ENVIRONMENTAL_MANAGEMENT_AND_CONSERVATION"}, {"level": "ZONE", "zone": "LCC:RURAL"}],
  "subjects": ["CLASS_1", "CLASS_10A"],
  "conditions": [[{"fact": "dwelling_house_code_applies", "op": "IS_TRUE"}, {"fact": "boundary_type", "op": "IN", "value": ["SIDE", "REAR"]}]],
- "sources": [{"key": "dh_ao5b_side_rear_10m", "role": "PRIMARY", "quote": "b. 10 metres in the: i. Environmental management and conservation zone ii. Rural zone. Note - AO5 does not apply to a domestic outbuilding, being a shed or detached garage, that complies with Link AO7.1(b)."}],
+ "sources": [{"key": "dh_ao5b_side_rear_10m", "role": "PRIMARY", "quote": "b. 10 metres in the: i. Environmental management and conservation zone ii. Rural zone. Note - AO5 does not apply to a domestic outbuilding, being a shed or detached garage, that complies with Link AO7.1(b)."},
+             {"key": "dh_ao5a_side_rear_3m", "role": "SUPPLEMENTARY", "quote": "AO5 A Dual occupancy or Dwelling house has the following minimum side and rear boundary clearances:"}],
  "effective_from": "2025-07-01"}$r$);
 SELECT supersede_draft('LCC.C.SIDE_REAR_10M_RURAL@2025-07-01', 'LCC.dh_ao5b_side_rear_10m');
 SELECT alt_overrides('LCC.C.SIDE_REAR_10M_RURAL@2025-07-01', ARRAY['QDC12.A2a.SIDE_REAR_CLEARANCE','QDC12.A2d.CLASS10A_WITHIN_CLEARANCE','QDC11.A2a.SIDE_REAR_CLEARANCE','QDC11.A2d.CLASS10A_WITHIN_CLEARANCE'], 'Table 1.6.1: PO5/AO5 alternative boundary clearance.');
@@ -160,7 +161,8 @@ SELECT define_rule($r${
  "subjects": ["SHED", "GARAGE"],
  "conditions": [[{"fact": "dwelling_house_code_applies", "op": "IS_TRUE"}, {"fact": "is_attached_to_dwelling", "op": "IS_FALSE"},
                  {"fact": "total_outbuilding_floor_area_m2", "op": ">", "value": 150}, {"fact": "boundary_type", "op": "IN", "value": ["SIDE", "REAR"]}]],
- "sources": [{"key": "dh_t93232_large_outbuilding_clearance_20m", "role": "PRIMARY"}],
+ "sources": [{"key": "dh_t93232_large_outbuilding_clearance_20m", "role": "PRIMARY"},
+             {"key": "dh_t93232_large_outbuilding_clearance_6m", "role": "SUPPLEMENTARY", "quote": "Table 9.3.2.3.2 - Minimum side and rear boundary clearances for large domestic outbuildings"}],
  "effective_from": "2025-07-01"}$r$);
 SELECT supersede_draft('LCC.C.LARGE_OUTBUILDING_CLEARANCE_20M@2025-07-01', 'LCC.dh_t93232_large_outbuilding_clearance_20m');
 SELECT relate('LCC.C.LARGE_OUTBUILDING_CLEARANCE_20M@2025-07-01', 'LCC.C.SIDE_REAR_10M_RURAL@2025-07-01', 'OVERRIDES', NULL, NULL, 'VERIFIED_VERBATIM', 'AO5 note: AO5 does not apply to a domestic outbuilding complying with AO7.1(b).');

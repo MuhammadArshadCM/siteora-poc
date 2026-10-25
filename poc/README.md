@@ -53,10 +53,17 @@ JSON API (same as the page uses):
 GET /api/rules?address=...&structure=SHED&height_m=3&length_m=6&width_m=4
               [&mean_height_m=&lot_slope_pct=&window_distance_m=&existing_outbuildings_m2=
                &is_corner_lot=yes&adjoins_canal_or_lake=yes&is_attached_to_dwelling=yes
-               &zone_id=BCC:LOW_DENSITY_RESIDENTIAL&precinct=...&date=2026-10-09]
+               &zone_id=BCC:LOW_DENSITY_RESIDENTIAL&precinct=...&date=2026-10-09
+               &scope=setbacks|maps]   # the page's "Setbacks only" / "Maps only" checkboxes; omitted = everything
 GET /api/zones?lg_id=BRISBANE
 GET /api/features?layer=<configured layer URL>&bbox=xmin,ymin,xmax,ymax   (map: a layer clipped to the view)
 ```
+
+`scope=setbacks` still resolves the property's zone/overlays (rules need them) but returns only setback-category
+rules (`SETBACK.*` / `SEPARATION.*`, the same topics `regs.v_setback_rules` uses) — `location` is still present in
+the reply for context, the page just doesn't show the map/constraints/sources cards for it. `scope=maps` skips the
+rule engine entirely (no DB rule load or evaluation) and returns only the location/zoning/overlay/site-constraint
+data, with `rules: []` and `council_rules: null`.
 
 Database connection comes from `poc/.env` (`PG_PASSWORD`, optional `PG_HOST` / `PG_PORT` / `PG_DATABASE` /
 `PG_USER`) or the standard `PGHOST` / `PGPORT` / `PGDATABASE` / `PGUSER` / `PGPASSWORD` environment variables, which

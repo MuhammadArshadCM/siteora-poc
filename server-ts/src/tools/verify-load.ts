@@ -11,6 +11,7 @@
  *
  *   npm run verify-load
  */
+import fs from "node:fs";
 import path from "node:path";
 import { Db, lit } from "../core/db.js";
 import { loadEnv, ROOT } from "../core/env.js";
@@ -25,7 +26,12 @@ async function main(): Promise<number> {
   try {
     console.log(`${left("council", 15)} ${right("rules", 6)} ${right("text ok", 8)} ${right("rule rows", 9)} ${right("defs", 5)} ${right("LOA", 4)} ${right("QDC q", 6)} ${right("ovl q", 6)} ${right("issues", 7)}  result`);
     for (const [slugName, [, authority, inst]] of Object.entries(COUNCILS)) {
-      const d = readResearch(path.join(ROOT, "research", "councils", `${slugName}.json`));
+      const file = path.join(ROOT, "research", "councils", `${slugName}.json`);
+      if (!fs.existsSync(file)) {
+        console.log(`${left(slugName, 15)} no research file`);
+        continue;
+      }
+      const d = readResearch(file);
       const ivs: string[] = await q(`SELECT coalesce(json_agg(instrument_version_id), '[]') FROM regs.instrument_versions WHERE instrument_id = ${lit(inst)}`);
       if (ivs.length !== 1) {
         console.log(`${left(slugName, 15)} planning scheme version missing or duplicated: ${JSON.stringify(ivs)}`);

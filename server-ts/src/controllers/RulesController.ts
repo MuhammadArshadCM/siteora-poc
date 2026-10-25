@@ -19,7 +19,7 @@ const PAGE = path.join(POC_DIR, "static", "index.html");
 /**
  * Same HTTP contract as poc/server.py, so poc/static/index.html works unchanged:
  *   GET /                          the web page
- *   GET /api/rules?address=...&structure=SHED&height_m=3&length_m=6&width_m=4[&zone_id=&precinct=&date=&lon=&lat=]
+ *   GET /api/rules?address=...&structure=SHED&height_m=3&length_m=6&width_m=4[&zone_id=&precinct=&date=&lon=&lat=&scope=setbacks|maps]
  *   GET /api/zones?lg_id=BRISBANE
  *   GET /api/features?layer=<configured layer URL>&bbox=xmin,ymin,xmax,ymax   (map drawing: features clipped to the view)
  *   GET /api/health                 database, rules dataset and State map services reachable?
@@ -55,6 +55,7 @@ export class RulesController {
         zoneId: one(qs.zone_id) || null,
         precincts: precinct === undefined || precinct === "" ? null : Array.isArray(precinct) ? precinct : [String(precinct)],
         assessmentDate: one(qs.date) || null,
+        scope: ["setbacks", "maps"].includes(String(one(qs.scope))) ? (one(qs.scope) as "setbacks" | "maps") : "all",
       });
     });
   }

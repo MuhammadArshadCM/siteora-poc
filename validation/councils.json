@@ -1,0 +1,262 @@
+{
+  "_comment": "Councils in scope for the setback validation run (npm run validate-setbacks). lg_id/slug = the council in the regs database and research/councils/<slug>.json (null = not in the dataset). spreadsheet_* = docs/Queensland councils.xlsx. source_check = result of checking the scheme version against the council's own site on checked_at; null until checked.",
+  "run_date": "2026-10-22",
+  "regression_councils": [
+    "BRISBANE",
+    "GOLD_COAST",
+    "IPSWICH",
+    "LOGAN",
+    "MORETON_BAY",
+    "REDLAND",
+    "SUNSHINE_COAST"
+  ],
+  "councils": [
+    {
+      "name": "Brisbane City Council",
+      "lg_id": "BRISBANE",
+      "slug": "brisbane",
+      "spreadsheet_scheme": "Brisbane City Plan 2014",
+      "spreadsheet_url": "https://cityplan.brisbane.qld.gov.au/eplan/rules/0/277/0/0/0/280",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "CURRENT",
+        "current": "Brisbane City Plan 2014 v37 (commenced 18 Sep 2026)",
+        "evidence_url": "https://www.brisbane.qld.gov.au/content/dam/brisbanecitycouncil/corpwebsite/building-and-planning/documents/public-notice-of-adoption-industry-mapping-lmr-design-queensland-government-gazette-v37-2026.pdf",
+        "evidence": "Major amendment package - Industry mapping. The amendment applies citywide and will commence 18 September 2026.",
+        "notes": "ePlan API returned HTTP 403; version number v37 taken from gazette PDF filename. No later adopted amendment found."
+      }
+    },
+    {
+      "name": "Burke Shire Council",
+      "lg_id": "BURKE",
+      "slug": "burke",
+      "spreadsheet_scheme": "Burke Shire Planning Scheme 2020",
+      "spreadsheet_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "UNCONFIRMED",
+        "current": "Burke Shire Planning Scheme 2020 (commenced 7 Feb 2020; no version/amendment number published)",
+        "link_status": "200 PDF, but on a pre-production host (burkeshire.prelive.opencities.com); council page links the same host at a slightly different path",
+        "format": "Single PDF incl. maps",
+        "setback_location": "7.2.1 General development code (setbacks unless a zone code prescribes otherwise); 6.2.1 Township zone code. No dwelling house code.",
+        "evidence_url": "https://www.burke.qld.gov.au/Our-council/Planning-and-development/Planning",
+        "evidence": "adopted by Council at the January 2020 and has a commencement date of 7 February 2020",
+        "notes": "Production site returns 403 to scripts. PDF downloaded to the session scratchpad only (not archived in repo)."
+      }
+    },
+    {
+      "name": "Central Highlands Regional Council",
+      "lg_id": "CENTRAL_HIGHLANDS",
+      "slug": "central_highlands",
+      "spreadsheet_scheme": "Central Highlands Regional Council Planning Scheme 2016",
+      "spreadsheet_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/268/0/0/0/82",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "CURRENT",
+        "current": "CHRC Planning Scheme 2016, Amendment No. 7 (revision 82, revisionDate 25-Jun-2025)",
+        "link_status": "200 with browser user agent (403 without); IsoPlan ePlan, link opens the cover page (section 268)",
+        "format": "IsoPlan ePlan + public JSON API",
+        "setback_location": "8.3.5 Dwelling house code, Table 8.3.5.3.1 (alternative provisions to QDC MP1.2 road boundary setbacks) https://eplan.chrc.qld.gov.au/planningscheme/rules/0/215/0/0/0/82",
+        "evidence_url": "https://eplan.chrc.qld.gov.au/planningscheme/api/l/vpr",
+        "evidence": "\"revisionNotes\":\"Amendment No. 7\", \"revStatus\":\"Current\"",
+        "notes": "Blackwater PDA revocation amendment pending."
+      }
+    },
+    {
+      "name": "City of Gold Coast",
+      "lg_id": "GOLD_COAST",
+      "slug": "gold_coast",
+      "spreadsheet_scheme": "Gold Coast City Plan",
+      "spreadsheet_url": "https://cityplan.goldcoast.qld.gov.au/eplan/",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "CURRENT",
+        "current": "Gold Coast City Plan Version 14 (29 Sep 2026)",
+        "evidence_url": "https://www.goldcoast.qld.gov.au/Planning-building/Planning-our-city/City-Plan-amendments",
+        "evidence": "This amendment commenced as part of City Plan Version 14 on 29 September 2026.",
+        "notes": ""
+      }
+    },
+    {
+      "name": "City of Moreton Bay",
+      "lg_id": "MORETON_BAY",
+      "slug": "moreton_bay",
+      "spreadsheet_scheme": "MBRC Planning Scheme (Moreton Bay)",
+      "spreadsheet_url": "https://eplan.moretonbay.qld.gov.au/planningscheme/rules/0/16/0/0/0/96",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "CURRENT",
+        "current": "MBRC Planning Scheme Version 8 (11 Sep 2026)",
+        "evidence_url": "https://www.moretonbay.qld.gov.au/Services/Building-Development/Planning-Schemes/MBRC/Superseded-MBRC-Planning-Scheme",
+        "evidence": "the scheme currently in place is version 8 (v7.1 superseded 11 September 2026)",
+        "notes": "Stored label says v8 was created by LGIP Amendment No. 2; council pages do not confirm which amendment created v8. Council resolved Jan 2026 to prepare a replacement scheme."
+      }
+    },
+    {
+      "name": "Livingstone Shire Council",
+      "lg_id": "LIVINGSTONE",
+      "slug": "livingstone",
+      "spreadsheet_scheme": "Livingstone Planning Scheme 2018 (v4)",
+      "spreadsheet_url": "https://www.livingstone.qld.gov.au/doing-business/building-and-development/town-planning/planning-scheme-information/the-livingstone-planning-scheme",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "CURRENT",
+        "current": "Livingstone Planning Scheme 2018 Version 4 (adopted 18 Feb 2025, gazetted 2 May 2025)",
+        "link_status": "403 to scripts; page readable in a browser",
+        "format": "Multi-part PDFs (one per section)",
+        "setback_location": "6.7.1 Low Density Residential zone code (v4) and possibly Schedule 10 'Boundary set backs for zones' (not verified in v4). No dwelling house code.",
+        "evidence_url": "https://www.livingstone.qld.gov.au/doing-business/building-and-development/town-planning/planning-scheme-information/the-livingstone-planning-scheme",
+        "evidence": "Livingstone Planning Scheme 2018 (Version 4); files stamped Adopted_2025_02_18",
+        "notes": "Exact v4 commencement date not stated by council."
+      }
+    },
+    {
+      "name": "Logan City Council",
+      "lg_id": "LOGAN",
+      "slug": "logan",
+      "spreadsheet_scheme": "Logan Planning Scheme 2015",
+      "spreadsheet_url": "https://logan.isoplan.com.au/eplan/rules/0/5/0/0/0/203",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "CURRENT",
+        "current": "Logan Planning Scheme 2015 V9.2 (1 Jul 2025)",
+        "evidence_url": "https://www.logan.qld.gov.au/planning-and-building/planning-and-development/logan-planning-scheme",
+        "evidence": "The current version commenced on 1 July 2025.",
+        "notes": "TLPI No. 1/2024 (flood) part of the stored label not confirmed on this page. Spreadsheet lists only \"Logan Planning Scheme 2015\" (no version)."
+      }
+    },
+    {
+      "name": "Mount Isa City Council",
+      "lg_id": "MOUNT_ISA",
+      "slug": "mount_isa",
+      "spreadsheet_scheme": "City of Mount Isa Planning Scheme 2020",
+      "spreadsheet_url": "https://www.mountisa.qld.gov.au/files/assets/public/v/1/development/documents/micc_planning_scheme_2020__complete_.pdf",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "UNCONFIRMED",
+        "current": "City of Mount Isa Planning Scheme 2020 (commenced 9 Mar 2020; no version number published)",
+        "link_status": "403 to all scripted access; council page links this exact URL",
+        "format": "Single PDF (also no-maps PDF and map PDFs)",
+        "setback_location": "Probably 9.3.6 Residential activities code, Table 9.3.6.1 (from search; not verified)",
+        "evidence_url": "https://www.mountisa.qld.gov.au/Development-and-Land-Use/Development/Planning-Schemes-and-Infrastructure-Charges",
+        "evidence": "adopted…on 12 February 2020 and subsequently the scheme commenced on Monday, 9 March 2020",
+        "notes": "PDF could not be downloaded (needs manual browser download). Major amendment planned 2026-27."
+      }
+    },
+    {
+      "name": "Redland City Council",
+      "lg_id": "REDLAND",
+      "slug": "redland",
+      "spreadsheet_scheme": "Redland City Plan",
+      "spreadsheet_url": "https://www.redland.qld.gov.au/files/assets/public/v/7/planning-and-development/documents/redland-city-plan-documents/redland-city-plan-version-14/redland-city-plan-version-14-updated-23-september-2026-with-changes-to-sc-5.pdf",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "CURRENT",
+        "current": "Redland City Plan Version 14 (10 Nov 2025)",
+        "evidence_url": "https://www.redland.qld.gov.au/Planning-building-and-development/Redland-City-Plan/Redland-City-Plan-documents",
+        "evidence": "The current version 14 of City Plan was adopted by Council on 17 September 2025 and came into effect on 10 November 2025.",
+        "notes": "Council page confirms QDC MP1.1/MP1.2 apply until City Plan is amended for the QHC (deadline 1 Sep 2029)."
+      }
+    },
+    {
+      "name": "Rockhampton Regional Council",
+      "lg_id": "ROCKHAMPTON",
+      "slug": "rockhampton",
+      "spreadsheet_scheme": "Rockhampton Region Planning Scheme 2015",
+      "spreadsheet_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/238/0/0/0/49",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "CURRENT",
+        "current": "Rockhampton Region Planning Scheme 2015 Version 5 (revision 49, operative 28-Mar-2025)",
+        "link_status": "200 with browser user agent; IsoPlan ePlan, link opens the Contents page (section 238)",
+        "format": "IsoPlan ePlan + public JSON API",
+        "setback_location": "6.2.1 Low density residential zone code Table 6.2.1.3.1 AO3.3 (also 6.2.2, 6.2.3) https://rockeplan.rockhamptonregion.qld.gov.au/eplan/rules/0/103/0/0/0/49",
+        "evidence_url": "https://rockeplan.rockhamptonregion.qld.gov.au/eplan/api/l/vpr",
+        "evidence": "\"revisionNotes\":\"Version 5\", \"revStatus\":\"Current\"",
+        "notes": "No dwelling house code."
+      }
+    },
+    {
+      "name": "South Burnett Regional Council",
+      "lg_id": "SOUTH_BURNETT",
+      "slug": "south_burnett",
+      "spreadsheet_scheme": "South Burnett Regional Council Planning Scheme 2017 (v2.0)",
+      "spreadsheet_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "CURRENT",
+        "current": "South Burnett Regional Council Planning Scheme 2017 Version 2.0 (effective 28 Oct 2024)",
+        "link_status": "403 to curl; PDF retrievable via browser-like fetch (320 pages)",
+        "format": "Single PDF; maps separate",
+        "setback_location": "6.2.1 Low density residential zone code Table 6.2.1; 6.2.2 Medium density",
+        "evidence_url": "https://www.southburnett.qld.gov.au/Business/Building-and-development/Planning-and-development/Planning-Scheme-2017",
+        "evidence": "Effective from 28 October 2024 (Version 2.0)",
+        "notes": "PDF downloaded to session scratchpad only."
+      }
+    },
+    {
+      "name": "Sunshine Coast Regional Council",
+      "lg_id": "SUNSHINE_COAST",
+      "slug": "sunshine_coast",
+      "spreadsheet_scheme": "Sunshine Coast Planning Scheme 2014",
+      "spreadsheet_url": "https://www.sunshinecoast.qld.gov.au/development/planning-documents/sunshine-coast-planning-scheme-2014/view-the-sunshine-coast-planning-scheme-2014-text",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "CURRENT",
+        "current": "Sunshine Coast Planning Scheme 2014, Update no. 27 (23 Jan 2024)",
+        "evidence_url": "https://www.sunshinecoast.qld.gov.au/development/planning-documents/sunshine-coast-planning-scheme-2014/amendments-to-the-sunshine-coast-planning-scheme-2014/adopted-amendments/update-your-copy-of-the-sunshine-coast-planning-scheme-2014",
+        "evidence": "Update no. 27 (23 January 2024)",
+        "notes": "Replacement scheme consulted Jul-Sep 2025, not adopted."
+      }
+    },
+    {
+      "name": "Toowoomba Regional Council",
+      "lg_id": "TOOWOOMBA",
+      "slug": "toowoomba",
+      "spreadsheet_scheme": "Toowoomba Regional Planning Scheme (v29)",
+      "spreadsheet_url": "https://www.tr.qld.gov.au/Plan-and-build/Toowoomba-Regional-Planning-Scheme/View-the-Toowoomba-Regional-Planning-Scheme",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "CURRENT",
+        "current": "Toowoomba Regional Planning Scheme v29 (effective 21 Jul 2026)",
+        "link_status": "403 to curl; page readable in a browser",
+        "format": "Multi-part PDFs and Word files",
+        "setback_location": "9.3.10 Small Lot Housing Design Code Table 9.3.10:2 (small lots only); standard lots not checked (Part 6 zone codes or QDC)",
+        "evidence_url": "https://www.tr.qld.gov.au/Plan-and-build/Toowoomba-Regional-Planning-Scheme/View-the-Toowoomba-Regional-Planning-Scheme",
+        "evidence": "version 29 took effect on 21 July 2026",
+        "notes": "Part 5 printed with TLPI 01/2026. Part 9 PDF downloaded to session scratchpad only."
+      }
+    },
+    {
+      "name": "Townsville City Council",
+      "lg_id": "TOWNSVILLE",
+      "slug": "townsville",
+      "spreadsheet_scheme": "Townsville City Plan",
+      "spreadsheet_url": "https://planningscheme.townsville.qld.gov.au/planningscheme/current",
+      "source_check": {
+        "checked_at": "2026-10-22",
+        "status": "CURRENT",
+        "current": "Townsville City Plan Version 2025/01 (effective 8 Dec 2025)",
+        "link_status": "200 text/html",
+        "format": "Multi-part PDFs, IMAGE-ONLY (need OCR)",
+        "setback_location": "No dwelling house code; Part 6 zone codes (e.g. Low density residential) not checked",
+        "evidence_url": "https://planningscheme.townsville.qld.gov.au/planningscheme/current",
+        "evidence": "Effective from: 8 December 2025 … Version 2025/01",
+        "notes": "Image-only PDFs: verbatim extraction needs OCR and manual proofreading."
+      }
+    }
+  ],
+  "proposed_changes": [
+    {
+      "rule_version_id": "LCC.C.SIDE_REAR_10M_RURAL@2025-07-01",
+      "issue_type": "CLASSIFICATION_TEXT_SUSPECT",
+      "change_set": "db/032 (change set 001; live DB reloaded 2026-10-22)"
+    },
+    {
+      "rule_version_id": "LCC.C.LARGE_OUTBUILDING_CLEARANCE_20M@2025-07-01",
+      "issue_type": "CLASSIFICATION_TEXT_SUSPECT",
+      "change_set": "db/032 (change set 001; live DB reloaded 2026-10-22)"
+    }
+  ],
+  "scope": "Class 10 structures (Class 10a buildings and Class 10b structures): front, side and rear setbacks only (user instruction, 22 Oct 2026)."
+}

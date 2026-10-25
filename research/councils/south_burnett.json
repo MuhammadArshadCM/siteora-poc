@@ -1,0 +1,762 @@
+{
+  "council": "South Burnett Regional Council",
+  "planning_scheme": {
+    "name": "South Burnett Regional Council Planning Scheme 2017",
+    "version": "Version 2.0",
+    "version_commenced": "2024-10-28",
+    "official_urls": [
+      "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "https://www.southburnett.qld.gov.au/Business/Building-and-development/Planning-and-development/Planning-Scheme-2017"
+    ],
+    "notes": "Every page footer reads \"South Burnett Regional Council Planning Scheme | Effective from 28 October 2024 (Version 2.0)\". Appendix 2 Table AP2.1 lists v2.0 as a Major Amendment adopted 16 October 2024 and effective 28 October 2024. The scheme commenced on 2 October 2017 (Government Gazette No. 31, 29 September 2017). The council site returned 403 on 2026-10-22, so we could not re-check online that v2.0 is still current; the PDF was downloaded earlier. QHC: the scheme does not mention the Queensland Housing Code (no match for \"Housing Code\"/\"QHC\" across all 320 pages), so there is no adoption statement."
+  },
+  "qdc_qhc_relationship": {
+    "summary": "Under s1.6 the scheme regulates building work under ss32 and 33 of the Building Act 1975 \"through Part 5\". The building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation. No zone-code setback is identified as a QDC/s33 alternative boundary clearance provision. Table 5.7.1 (Building work) regulates only building work on local heritage places. Class 10 siting therefore defaults to QDC MP1.1/MP1.2, except where a zone-code AO applies through a material change of use for a dwelling house that is ADSR or code assessable. The QHC is not mentioned.",
+    "quotes": [
+      {
+        "clause": "1.6(3)",
+        "text": "(3) This planning scheme, through Part 5, regulates building work in accordance with sections 32 and 33 of the Building Act 1975.",
+        "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+      },
+      {
+        "clause": "1.6(3) Editor’s note",
+        "text": "Editor’s note—the Building Act 1975 permits planning schemes to: ... specify alternative boundary clearance and site cover provisions for Class 1 and 10 structures under section 33 of the Building Act 1975.",
+        "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+      },
+      {
+        "clause": "1.6(4) and Table 1.6.1",
+        "text": "(4) The building assessment provisions in this planning scheme are identified in Table 1.6.1. || Table 1.6.1–Building Assessment Provisions | Building Assessment Provision | Planning Scheme Part || Bushfire prone areas || Designation of bushfire prone areas | In accordance with section 32(a) of the Building Act 1975 and section 7 of the Building Regulation 2021, this planning scheme designates the following layers of the Overlay Map OM2.1 to Overlay Map OM2.7 to constitute the bushfire prone area for the Building Code of Australia and Queensland Development Code: (a) Very high potential bushfire intensity; (b) High potential bushfire intensity; (c) Medium potential bushfire intensity; and (d) Potential impact buffer.",
+        "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+      }
+    ]
+  },
+  "levels_of_assessment": [
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "Low density residential zone",
+      "level": "Accepted (outside Bunya Mountains Precinct); ADSR (Bunya Mountains Precinct, Section 4); Code",
+      "conditions": "Bunya Mountains Precinct is treated as a mapped overlay for Sch 6 item 2 of the Regulation. Section 5.9 overlays may change the category.",
+      "quote": "Dwelling house | Accepted development | If not in the Bunya Mountains Precinct | Note—Where an overlay applies, a dwelling house may become assessable development. Refer to section 5.9 || Accepted development subject to requirements | If: (a) not accepted development; and (b) complying with the assessment benchmarks | Low density residential zone code: Section 4, acceptable outcomes || Code assessment | If not accepted development; or accepted development subject to requirements | Low density residential zone code",
+      "clause": "Table 5.5.1 (printed p.47 / PDF p.47)",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "Medium density residential zone",
+      "level": "Accepted (lot >= 400 m2, no secondary dwelling); ADSR (Sections 5 & 6); Code",
+      "conditions": "Lot < 400 m2 triggers Section 5 small-lot setbacks.",
+      "quote": "Dwelling house | Accepted development | If not including a secondary dwelling, and If not on a lot less than 400m2. || Accepted development subject to requirements | If: (a) not accepted development; and (b) complying with the assessment benchmarks | Medium density residential zone code: Sections 5 & 6, acceptable outcomes || Code assessment | If not accepted development or accepted development subject to requirements | Medium density residential zone code",
+      "clause": "Table 5.5.2 (printed p.49 / PDF p.49)",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "Emerging community zone",
+      "level": "Accepted; ADSR with secondary dwelling (Section 2); Code",
+      "conditions": "",
+      "quote": "Dwelling house | Accepted development | If not including a secondary dwelling || Accepted development subject to requirements | If complying with the stated requirements | Emerging community zone code: Section 2, acceptable outcomes || Code assessment | If not accepted development subject to requirements | Emerging community zone code",
+      "clause": "Table 5.5.11 (printed p.71 / PDF p.71)",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "Rural zone",
+      "level": "Accepted; ADSR with secondary dwelling (Section 1); Code",
+      "conditions": "Section 1 includes the AO1.1 road setback. The remaining code-assessment conditions continue on p.75 and were not quoted.",
+      "quote": "Dwelling house | Accepted development | If: (a) not involving a secondary dwelling; and (b) not impact assessable || Accepted development subject to requirements | If: (a) including a secondary dwelling and complying with the assessment benchmarks; and (b) not impact assessable | Rural zone code: Section 1, acceptable outcomes || Code assessment | If not: (a) accepted development; or accepted development subject to requirements;",
+      "clause": "Table 5.5.13 (printed p.74 / PDF p.74)",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "Rural residential zone",
+      "level": "Accepted; ADSR with secondary dwelling (Section 4); Code",
+      "conditions": "Section 4 (secondary dwelling) contains no setbacks; AO1.3 is in Section 1.",
+      "quote": "Dwelling house | Accepted development | If not accepted development subject to requirements or assessable development - Code assessment || Accepted development subject to requirements | If including a secondary dwelling | Rural residential zone code: Section 4, acceptable outcomes || Code assessment | If not accepted development subject to requirements | Rural residential zone code",
+      "clause": "Table 5.5.14 (printed p.78 / PDF p.78)",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "Township zone",
+      "level": "Accepted; ADSR with secondary dwelling (Sections 1, 2, 3 & 7); Code",
+      "conditions": "Section 1 includes the AO2.2/AO2.3 road setback.",
+      "quote": "Dwelling house | Accepted development | If not involving a secondary dwelling || Accepted development subject to requirements | If including a secondary dwelling and complying with the assessment benchmarks | Township zone code: Sections 1, 2, 3 & 7, acceptable outcomes || Code assessment | If including a secondary dwelling that is not accepted development subject to requirements | Township zone code",
+      "clause": "Table 5.5.16 (printed p.81 / PDF p.81)",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+    },
+    {
+      "use_or_work": "Building work (incl. Class 10)",
+      "zone": "All zones",
+      "level": "ADSR / Code assessment only for building work on a local heritage place; otherwise not regulated by the scheme",
+      "conditions": "No other building work is made assessable.",
+      "quote": "All zones | Accepted development subject to requirements | Minor building work on a local heritage place | Local heritage places code: Section 1, acceptable outcomes || All zones | Code assessment | Building work on a local heritage place | Local heritage places code",
+      "clause": "Table 5.7.1 (printed p.86 / PDF p.86)",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "dwelling house",
+      "text": "Dwelling house | A residential use of premises involving: (a) 1 dwelling for a single household and any domestic outbuildings associated with the dwelling; or (b) 1 dwelling for a single household, a secondary dwelling and any domestic outbuildings associated with either dwelling.",
+      "clause": "SC1.1 Table SC1.1.2 (printed p.251-252)",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+    },
+    {
+      "term": "domestic outbuilding",
+      "text": "Domestic outbuilding | Non-habitable Class 10a building that is— (a) a shed, garage and carport; and (b) Ancillary to a residential use carried out on the premises where the building is.",
+      "clause": "SC1.2 Table SC1.2.2 (printed p.271)",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+    },
+    {
+      "term": "setback",
+      "text": "Setback | For a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.",
+      "clause": "SC1.2 Table SC1.2.2 (printed p.272-273)",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+    },
+    {
+      "term": "secondary dwelling",
+      "text": "Secondary dwelling | A dwelling, whether attached or detached, that is used in conjunction with, and subordinate to, a dwelling house on the same lot.",
+      "clause": "SC1.2 Table SC1.2.2 (printed p.272)",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf"
+    }
+  ],
+  "rules": [
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_ldr_buildings_front",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1 AO2.5(a)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "structure_scope": "buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO2.5 Buildings are set back at least: (a) 6m from the primary street frontage; (b) 4.5m from any secondary street frontage; (c) 1.5m from side boundaries; and (d) 6m from rear boundaries.",
+      "structured": {
+        "parameter": "min_front_setback_primary_street",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.91 / PDF p.91",
+      "notes": "Table 5.5.1: a dwelling house is accepted development (no requirements) unless it is in the Bunya Mountains Precinct. There it is ADSR against Section 4 only, which has no setbacks. Code assessment arises only when the ADSR is not met, and s5.3.3(4)(b) then limits assessment to the subject matter of the failed Section 4 AOs. So this AO rarely, if ever, reaches a dwelling house or its domestic outbuildings. It applies directly to other code-assessable development, e.g. dual occupancy."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_ldr_buildings_side",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1 AO2.5(c)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "structure_scope": "buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO2.5 Buildings are set back at least: (a) 6m from the primary street frontage; (b) 4.5m from any secondary street frontage; (c) 1.5m from side boundaries; and (d) 6m from rear boundaries.",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": ">=",
+        "value": 1.5,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.91 / PDF p.91",
+      "notes": "Table 5.5.1: a dwelling house is accepted development (no requirements) unless it is in the Bunya Mountains Precinct. There it is ADSR against Section 4 only, which has no setbacks. Code assessment arises only when the ADSR is not met, and s5.3.3(4)(b) then limits assessment to the subject matter of the failed Section 4 AOs. So this AO rarely, if ever, reaches a dwelling house or its domestic outbuildings. It applies directly to other code-assessable development, e.g. dual occupancy."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_ldr_buildings_rear",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1 AO2.5(d)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "structure_scope": "buildings",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "AO2.5 Buildings are set back at least: (a) 6m from the primary street frontage; (b) 4.5m from any secondary street frontage; (c) 1.5m from side boundaries; and (d) 6m from rear boundaries.",
+      "structured": {
+        "parameter": "min_rear_setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.91 / PDF p.91",
+      "notes": "Table 5.5.1: a dwelling house is accepted development (no requirements) unless it is in the Bunya Mountains Precinct. There it is ADSR against Section 4 only, which has no setbacks. Code assessment arises only when the ADSR is not met, and s5.3.3(4)(b) then limits assessment to the subject matter of the failed Section 4 AOs. So this AO rarely, if ever, reaches a dwelling house or its domestic outbuildings. It applies directly to other code-assessable development, e.g. dual occupancy."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots < 400 m2",
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_ldr_small_lot_front",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1 AO12.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "structure_scope": "houses on lots less than 400m2 (dwelling houses on small lots)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "For houses on lots less than 400m2 – AO12.1 The minimum front setback is 6m or, if any adjoining dwelling house is set back less than 6m, that setback.",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": "conditional",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "lot area < 400 m2"
+        ],
+        "exceptions": [
+          "if any adjoining dwelling house is set back less than 6 m: that (lesser) setback"
+        ],
+        "formula_text": "min(6, setback of any adjoining dwelling house set back less than 6 m)"
+      },
+      "page_or_anchor": "printed p.95 / PDF p.95",
+      "notes": "Section 5 \"Small lot dwelling houses\" (lots < 400 m2). The scheme says \"houses\", and the Dwelling house definition includes domestic outbuildings, so it may reach Class 10a; this needs curator confirmation. In LDR a dwelling house outside the Bunya Mountains Precinct is accepted development with no requirements (Table 5.5.1), so Section 5 is not nominated as an ADSR requirement for dwelling houses in this zone."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots < 400 m2",
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_ldr_small_lot_side",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1 AO12.2",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "structure_scope": "houses on lots less than 400m2 (dwelling houses on small lots)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "For houses on lots less than 400m2 – AO12.2 The minimum setback from side boundaries is 1m.",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": ">=",
+        "value": 1,
+        "unit": "m",
+        "conditions": [
+          "lot area < 400 m2"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.95 / PDF p.95",
+      "notes": "Section 5 \"Small lot dwelling houses\" (lots < 400 m2). The scheme says \"houses\", and the Dwelling house definition includes domestic outbuildings, so it may reach Class 10a; this needs curator confirmation. In LDR a dwelling house outside the Bunya Mountains Precinct is accepted development with no requirements (Table 5.5.1), so Section 5 is not nominated as an ADSR requirement for dwelling houses in this zone."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots < 400 m2",
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_ldr_small_lot_rear",
+      "code": "Low density residential zone code",
+      "clause": "Table 6.2.1 AO12.3",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Low density residential zone"
+      ],
+      "structure_scope": "houses on lots less than 400m2 (dwelling houses on small lots)",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "For houses on lots less than 400m2 – AO12.3 The minimum setback from the rear boundary is 6m",
+      "structured": {
+        "parameter": "min_rear_setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "lot area < 400 m2"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.95 / PDF p.95",
+      "notes": "Section 5 \"Small lot dwelling houses\" (lots < 400 m2). The scheme says \"houses\", and the Dwelling house definition includes domestic outbuildings, so it may reach Class 10a; this needs curator confirmation. In LDR a dwelling house outside the Bunya Mountains Precinct is accepted development with no requirements (Table 5.5.1), so Section 5 is not nominated as an ADSR requirement for dwelling houses in this zone."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots < 400 m2",
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_mdr_small_lot_front",
+      "code": "Medium density residential zone code",
+      "clause": "Table 6.2.2 AO20.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "structure_scope": "houses on lots less than 400m2 (dwelling houses on small lots)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "For houses on lots less than 400m2 – AO20.1 The minimum front setback is 6m or, if any adjoining dwelling house is set back less than 6m, that setback.",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": "conditional",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "lot area < 400 m2"
+        ],
+        "exceptions": [
+          "if any adjoining dwelling house is set back less than 6 m: that (lesser) setback"
+        ],
+        "formula_text": "min(6, setback of any adjoining dwelling house set back less than 6 m)"
+      },
+      "page_or_anchor": "printed p.106 / PDF p.106",
+      "notes": "Section 5 \"Small lot dwelling houses\". Table 5.5.2: a dwelling house on a lot less than 400 m2 (or with a secondary dwelling) is ADSR against \"Sections 5 & 6, acceptable outcomes\", so this AO is a live requirement for dwelling houses on lots < 400 m2. The scheme says \"houses\"; the Dwelling house definition (SC1.1) includes \"any domestic outbuildings associated with the dwelling\". Whether the setback reaches detached Class 10a outbuildings needs curator confirmation."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots < 400 m2",
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_mdr_small_lot_side",
+      "code": "Medium density residential zone code",
+      "clause": "Table 6.2.2 AO20.2",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "structure_scope": "houses on lots less than 400m2 (dwelling houses on small lots)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "For houses on lots less than 400m2 – AO20.2 The minimum setback from side boundaries is 1m.",
+      "structured": {
+        "parameter": "min_side_setback",
+        "operator": ">=",
+        "value": 1,
+        "unit": "m",
+        "conditions": [
+          "lot area < 400 m2"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.106 / PDF p.106",
+      "notes": "Section 5 \"Small lot dwelling houses\". Table 5.5.2: a dwelling house on a lot less than 400 m2 (or with a secondary dwelling) is ADSR against \"Sections 5 & 6, acceptable outcomes\", so this AO is a live requirement for dwelling houses on lots < 400 m2. The scheme says \"houses\"; the Dwelling house definition (SC1.1) includes \"any domestic outbuildings associated with the dwelling\". Whether the setback reaches detached Class 10a outbuildings needs curator confirmation."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots < 400 m2",
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_mdr_small_lot_rear",
+      "code": "Medium density residential zone code",
+      "clause": "Table 6.2.2 AO20.3",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "structure_scope": "houses on lots less than 400m2 (dwelling houses on small lots)",
+      "topic": "REAR_SETBACK",
+      "verbatim_text": "For houses on lots less than 400m2 – AO20.3 The minimum setback from the rear boundary is 6m",
+      "structured": {
+        "parameter": "min_rear_setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "lot area < 400 m2"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.106 / PDF p.106",
+      "notes": "Section 5 \"Small lot dwelling houses\". Table 5.5.2: a dwelling house on a lot less than 400 m2 (or with a secondary dwelling) is ADSR against \"Sections 5 & 6, acceptable outcomes\", so this AO is a live requirement for dwelling houses on lots < 400 m2. The scheme says \"houses\"; the Dwelling house definition (SC1.1) includes \"any domestic outbuildings associated with the dwelling\". Whether the setback reaches detached Class 10a outbuildings needs curator confirmation."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots >= 400 m2",
+      "alternative_provision_to_qdc_qhc": "NO - no council provision exists; QDC MP1.1/MP1.2 boundary clearances apply",
+      "measurement_notes": "",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "provision_type": "OTHER",
+      "rule_key": "sbrc_mdr_std_lot_front_absent",
+      "code": "Medium density residential zone code",
+      "clause": "Table 6.2.2 (Sections 1, 5, 6)",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "structure_scope": "dwelling houses (including domestic outbuildings)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "(No front setback is stated in the Medium density residential zone code for a dwelling house or its domestic outbuildings on a lot of 400m2 or more; AO14.1 applies only to dual occupancies, multiple dwellings and retirement facilities (Section 4); the QDC applies.)",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": ">=",
+        "value": null,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.101 / PDF p.101-107",
+      "notes": "Table 5.5.2: a dwelling house without a secondary dwelling on a lot of 400 m2 or more is accepted development with no requirements."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lots >= 400 m2",
+      "alternative_provision_to_qdc_qhc": "NO - no council provision exists; QDC MP1.1/MP1.2 boundary clearances apply",
+      "measurement_notes": "",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "provision_type": "OTHER",
+      "rule_key": "sbrc_mdr_std_lot_side_rear_absent",
+      "code": "Medium density residential zone code",
+      "clause": "Table 6.2.2 (Sections 1, 5, 6)",
+      "zones": [
+        "Medium density residential zone"
+      ],
+      "structure_scope": "dwelling houses (including domestic outbuildings)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear setback is stated in the Medium density residential zone code for a dwelling house or its domestic outbuildings on a lot of 400m2 or more; AO14.3 applies only to dual occupancies, multiple dwellings and retirement facilities (Section 4); the QDC applies.)",
+      "structured": {
+        "parameter": "min_side_rear_setback",
+        "operator": ">=",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.101 / PDF p.101-107",
+      "notes": "Table 5.5.2: a dwelling house without a secondary dwelling on a lot of 400 m2 or more is accepted development with no requirements."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "alternative_provision_to_qdc_qhc": "NO - no council provision exists; QDC MP1.1/MP1.2 boundary clearances apply",
+      "measurement_notes": "",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "provision_type": "OTHER",
+      "rule_key": "sbrc_ec_front_absent",
+      "code": "Emerging community zone code",
+      "clause": "Table 6.2.11",
+      "zones": [
+        "Emerging community zone"
+      ],
+      "structure_scope": "dwelling houses (including domestic outbuildings); buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "(No front setback is stated in the Emerging community zone code for any building, including Class 10 buildings; the QDC applies.)",
+      "structured": {
+        "parameter": "min_front_setback",
+        "operator": ">=",
+        "value": null,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.166 / PDF p.166-168",
+      "notes": "Table 5.5.11: a dwelling house is accepted development if it does not include a secondary dwelling; otherwise ADSR against Section 2 (secondary dwelling size and parking only)."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "alternative_provision_to_qdc_qhc": "NO - no council provision exists; QDC MP1.1/MP1.2 boundary clearances apply",
+      "measurement_notes": "",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "provision_type": "OTHER",
+      "rule_key": "sbrc_ec_side_rear_absent",
+      "code": "Emerging community zone code",
+      "clause": "Table 6.2.11",
+      "zones": [
+        "Emerging community zone"
+      ],
+      "structure_scope": "dwelling houses (including domestic outbuildings); buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear setback is stated in the Emerging community zone code for any building, including Class 10 buildings; the QDC applies.)",
+      "structured": {
+        "parameter": "min_side_rear_setback",
+        "operator": ">=",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.166 / PDF p.166-168",
+      "notes": "Section 3 overlay AOs contain only environmental buffers (100 m from protected areas, which is out of scope)."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_rural_buildings_road",
+      "code": "Rural zone code",
+      "clause": "Table 6.2.13 AO1.1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Rural zone"
+      ],
+      "structure_scope": "buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO1.1 Buildings are set back 20m from any collector or higher order road and 10m from any other road frontage.",
+      "structured": {
+        "parameter": "min_road_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "collector or higher order road: 20 m",
+          "any other road frontage: 10 m"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.181 / PDF p.181",
+      "notes": "This applies to every road frontage, not only the primary frontage. Table 5.5.13: a dwelling house is accepted development (no requirements) if it does not involve a secondary dwelling and is not impact assessable. A dwelling house with a secondary dwelling is ADSR against \"Section 1, acceptable outcomes\", which includes AO1.1. The scheme does not define \"collector or higher order road\"; road hierarchy mapping is needed."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "alternative_provision_to_qdc_qhc": "NO - no council provision exists; QDC MP1.1/MP1.2 boundary clearances apply",
+      "measurement_notes": "",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "provision_type": "OTHER",
+      "rule_key": "sbrc_rural_side_rear_absent",
+      "code": "Rural zone code",
+      "clause": "Table 6.2.13",
+      "zones": [
+        "Rural zone"
+      ],
+      "structure_scope": "buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear setback is stated in the Rural zone code for a dwelling house or Class 10 buildings; the QDC applies.)",
+      "structured": {
+        "parameter": "min_side_rear_setback",
+        "operator": ">=",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.181 / PDF p.181-193",
+      "notes": "The side/rear setbacks in the Rural zone code apply only to intensive animal industry (AO, Section 3), caretaker's accommodation (Section 5), home-based business (Section 6) and short-term accommodation (Section 8). All are out of scope."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_rr_buildings_road",
+      "code": "Rural residential zone code",
+      "clause": "Table 6.2.14 AO1.3(a)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Rural residential zone"
+      ],
+      "structure_scope": "buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO1.3 Buildings have a minimum set back of: (a) 10m to the road frontage; (b) 6m to a side or rear boundary.",
+      "structured": {
+        "parameter": "min_road_setback",
+        "operator": ">=",
+        "value": 10,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.195 / PDF p.195",
+      "notes": "PO1 refers to \"Buildings and structures\". Table 5.5.14: a dwelling house is accepted development unless it includes a secondary dwelling, which makes it ADSR against Section 4 only (no setbacks). Code assessment applies \"If not accepted development subject to requirements\", and s5.3.3(4)(b) may limit that to the failed Section 4 matters. So whether AO1.3 reaches a dwelling house or its outbuildings needs curator review."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_rr_buildings_side_rear",
+      "code": "Rural residential zone code",
+      "clause": "Table 6.2.14 AO1.3(b)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Rural residential zone"
+      ],
+      "structure_scope": "buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "AO1.3 Buildings have a minimum set back of: (a) 10m to the road frontage; (b) 6m to a side or rear boundary.",
+      "structured": {
+        "parameter": "min_side_rear_setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.195 / PDF p.195",
+      "notes": "This AO is reached in the same limited way as sbrc_rr_buildings_road: dwelling houses are normally accepted development (Table 5.5.14)."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "alternative_provision_to_qdc_qhc": "NO - s1.6(4) says the building assessment provisions in the scheme are those in Table 1.6.1, which lists only the bushfire prone area designation; zone-code setbacks are not declared as QDC alternative provisions (s33 Building Act)",
+      "measurement_notes": "SC1.2 \"Setback\": shortest horizontal distance from the outermost projection of the building or structure to the vertical projection of the lot boundary.",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "sbrc_township_buildings_road",
+      "code": "Township zone code",
+      "clause": "Table 6.2.16 AO2.2 and AO2.3",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Township zone"
+      ],
+      "structure_scope": "buildings",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "AO2.2 Buildings are built the same distance from the road alignment as the average of the 2 adjoining buildings. || AO2.3 If no adjoining buildings, or if the average setback of adjoining buildings from road alignments exceeds 6m, buildings are at least 3m from road alignments.",
+      "structured": {
+        "parameter": "road_alignment_setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "adjoining buildings on both sides with average setback <= 6 m: equal to the average setback of the 2 adjoining buildings",
+          "no adjoining buildings, or average adjoining setback > 6 m: >= 3 m"
+        ],
+        "exceptions": [],
+        "formula_text": "if adjoining buildings exist and avg(adjoining setbacks) <= 6 then setback = avg(2 adjoining) else setback >= 3"
+      },
+      "page_or_anchor": "printed p.206 / PDF p.206",
+      "notes": "Table 5.5.16: a dwelling house is accepted development if it does not involve a secondary dwelling. With a secondary dwelling it is ADSR against \"Sections 1, 2, 3 & 7\", so AO2.2/AO2.3 apply. AO2.2 sets an equal (averaging) setback rather than a minimum. It applies to every road alignment."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "alternative_provision_to_qdc_qhc": "NO - no council provision exists; QDC MP1.1/MP1.2 boundary clearances apply",
+      "measurement_notes": "",
+      "source_url": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "provision_type": "OTHER",
+      "rule_key": "sbrc_township_side_rear_absent",
+      "code": "Township zone code",
+      "clause": "Table 6.2.16",
+      "zones": [
+        "Township zone"
+      ],
+      "structure_scope": "buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear setback is stated in the Township zone code for a dwelling house or Class 10 buildings; the QDC applies.)",
+      "structured": {
+        "parameter": "min_side_rear_setback",
+        "operator": ">=",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "page_or_anchor": "printed p.206 / PDF p.206-217",
+      "notes": "The side/rear setbacks in the Township zone code apply only to caretaker's accommodation (Section 4), home-based business (Section 6), business activities (Section 8 AO, 5 m) and industrial activities (Section 9). All are out of scope."
+    }
+  ],
+  "overlays_affecting_siting": [],
+  "local_plan_mechanism": {
+    "summary": "The scheme has no local plans (Part 7 contains overlays only). Two zone precincts exist: the Bunya Mountains Precinct (Low density residential), which has no setback AOs in Section 4, and the RU1 Winery Precinct (Rural, Moffatdale), which has a reconfiguring-a-lot PO only. The scheme also has the PC2 Private Hospital Precinct (Principal centre zone), where dwelling houses are not listed."
+  },
+  "open_questions": [
+    "Do the \"Small lot dwelling houses\" setbacks (LDR AO12.1-12.3, MDR AO20.1-20.3: \"For houses on lots less than 400m2\") reach detached Class 10a domestic outbuildings or only the house? The Dwelling house definition includes domestic outbuildings.",
+    "LDR AO2.5 and RR AO1.3 (\"Buildings\") reach a dwelling house only through code assessment, which s5.3.3(4)(b) appears to limit to the failed ADSR matters. Should they be treated as applying to Class 10 in practice?",
+    "Planning Regulation 2017 Sch 6 Pt 2 s2 limits when a planning scheme can make a dwelling house assessable. Check whether the Table 5.5.2 trigger (lot < 400 m2) and the secondary-dwelling triggers are effective.",
+    "Rural AO1.1 depends on road hierarchy (\"collector or higher order road\"), which is not defined in SC1. A road hierarchy source is needed.",
+    "The council website returned 403, so we could not confirm online that Version 2.0 (effective 28 Oct 2024) is still the current version as at 2026-10-22."
+  ],
+  "fetch_log": [
+    "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/planning-scheme/south_burnett_regional_council_planning_scheme_v20__1_.pdf -> previously downloaded (320 pages, v2.0); HEAD on 2026-10-22 -> 403 with browser UA. Text re-extracted per page with pdftotext -layout and verified.",
+    "https://www.southburnett.qld.gov.au/Business/Building-and-development/Planning-and-development/Planning-Scheme-2017 -> 403 with browser UA (2026-10-22)"
+  ]
+}

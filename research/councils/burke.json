@@ -1,0 +1,820 @@
+{
+  "council": "Burke Shire Council",
+  "planning_scheme": {
+    "name": "Burke Shire Planning Scheme 2020",
+    "version": "2020 (no version number published)",
+    "version_commenced": "2020-02-07",
+    "official_urls": [
+      "https://www.burke.qld.gov.au/Our-council/Planning-and-development/Planning",
+      "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+    ],
+    "notes": "Citation and commencement (PDF p.2): \"This planning scheme may be cited as Burke Shire Planning Scheme 2020. A notice was published in the Government Gazette No.20 on 31 January 2020 for the planning scheme for the Shire of Burke. The commencement date for the planning scheme was 7 February 2020.\" Council planning page (per earlier check; www host returns 403 to scripts) states the scheme was \"adopted by Council at the January 2020 and has a commencement date of 7 February 2020\"; no version/amendment number is published. The official PDF is served from a pre-production (OpenCities \"prelive\") host, burkeshire.prelive.opencities.com, which the council planning page itself links; www.burke.qld.gov.au returns 403 to scripts. QHC: the scheme (2020) does not mention the Queensland Housing Code; no QHC adoption found (text search for \"Housing Code\" returns nothing). Printed page numbers equal PDF page numbers."
+  },
+  "qdc_qhc_relationship": {
+    "summary": "Section 1.6 states the scheme regulates building work through Part 5 under ss32-33 of the Building Act 1975, and an editor's note says the Act permits alternative boundary clearance provisions for Class 1 and 10 structures (s33). However the scheme does not designate any specific provision as a QDC alternative provision, and Table 5.8 (building work) only captures building work at local heritage places and in airport operational airspace. There is no dwelling house code. Class 10 boundary clearances on dwelling house lots therefore default to the QDC (MP1.1/MP1.2), except where a dwelling house MCU is code assessable and zone code AO1 (Rural, Rural residential) applies. No QHC adoption.",
+    "quotes": [
+      {
+        "clause": "1.6(1)",
+        "text": "Section 17(b) of the Regulation identifies the assessment benchmarks for building work that a local planning instrument must not change the effect to the extent the building work is regulated under the building assessment provisions, unless permitted under the Building Act 1975.",
+        "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+      },
+      {
+        "clause": "1.6(3)",
+        "text": "This planning scheme, through Part 5, regulates building work in accordance with Sections 32 and 33 of the Building Act 1975.",
+        "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+      },
+      {
+        "clause": "1.6 Editor’s note",
+        "text": "Editor’s note—the Building Act 1975 permits planning schemes to: • regulate, for the Building Code of Australia (BCA) or the Queensland Development Code (QDC), matters prescribed under a regulation under the Building Act 1975 (section 32). For example, building height and space for on-site parking. It may also regulate other matters such as designating floor levels of habitable rooms in flood areas, designating areas as being subject to bushfire hazard, noise corridors and end-of-trip facilities; • deal with an aspect of, or matter related or incidental to building work prescribed under a regulation under Section 32 of the Building Act 1975; • specify alternative design solutions for boundary clearance and site cover provisions for Class 1 and 10 structures under Section 33 of the Building Act 1975.",
+        "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+      },
+      {
+        "clause": "5.8",
+        "text": "The following table identifies the categories of development and assessment for building work regulated under the planning scheme. || Zone | Categories of development and assessment | Assessment benchmarks for assessable development and requirements for accepted development || All | Code Assessment If development is on or located within 50m of a place or item identified in Schedule 5 – Local heritage register. | Table 7.2.1.3 of the General development code || | If development involves permanent or temporary physical obstructions or emissions intruding into the airport’s operational airspace areas identified on maps BTN AF1 and BTN AF2 within Schedule 2. | Table 7.2.1.3 of the General development code || Accepted development | Any building work listed in this table and not meeting the description listed in the “Categories of development and assessment” column.",
+        "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+      }
+    ]
+  },
+  "levels_of_assessment": [
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Township zone",
+      "level": "Accepted development subject to requirements (Residential precinct); Code assessment otherwise",
+      "conditions": "Residential precinct: AD subject to requirements against General development code; Commercial/Industrial precincts: code assessable against Township zone code and General development code",
+      "quote": "Dwelling house | Accepted development subject to requirements | If located in the Residential precinct | General development code || Code assessment | Otherwise | Township zone code General development code",
+      "clause": "Table 5.5.1",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Rural residential zone",
+      "level": "Accepted development subject to requirements; Code assessment otherwise",
+      "conditions": "AD subject to requirements against General development code; otherwise code assessable",
+      "quote": "Dwelling house | Accepted development subject to requirements | General development code || Code assessment | Otherwise | Rural residential zone code General development code",
+      "clause": "Table 5.5.3",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Rural zone",
+      "level": "Accepted development subject to requirements; Code assessment otherwise",
+      "conditions": "no more than two dwellings for long term accommodation; not bushfire prone; not in an identified abandoned mine area",
+      "quote": "Caretaker’s accommodation Dwelling house | Accepted development subject to requirements | If: a) no more than two (2) dwellings for long term accommodation on a lot; b) not located in a bushfire prone area on SPP mapping – Natural hazards risk and resilience; and c) not located in an area where there is an identified abandoned mine. | General development code || Code assessment | Otherwise | Rural zone code General development code",
+      "clause": "Table 5.5.4",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+    },
+    {
+      "use_or_work": "Dwelling house",
+      "zone": "Recreation and open space zone",
+      "level": "Impact assessment (not listed)",
+      "conditions": "Dwelling house is not listed in Table 5.5.2",
+      "quote": "Impact assessment | Any other use not listed in this table | The planning scheme",
+      "clause": "Table 5.5.2",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+    },
+    {
+      "use_or_work": "Class 10 building work",
+      "zone": "All zones",
+      "level": "Accepted development (Code assessment only for local heritage / airport operational airspace)",
+      "conditions": "Code assessable only if on or within 50m of a Schedule 5 local heritage place, or intruding into airport operational airspace (maps BTN AF1/AF2)",
+      "quote": "Accepted development | Any building work listed in this table and not meeting the description listed in the “Categories of development and assessment” column.",
+      "clause": "Table 5.8",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Dwelling house",
+      "text": "A residential use of premises for one household that contains a single dwelling. The use includes domestic outbuildings and works normally associated with a dwelling and may include a secondary dwelling.",
+      "clause": "SC1.1",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+    },
+    {
+      "term": "Domestic outbuilding",
+      "text": "A Class 10a building, as defined in the Building Code of Australia, that is ancillary to a residential use on the same premises and is limited to non-habitable buildings for the purpose of a shed, garage and carport.",
+      "clause": "SC1.3",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+    },
+    {
+      "term": "Dwelling",
+      "text": "A building or part of a building used or capable of being used as a self-contained residence that must include the following: (a) food preparation facilities (b) a bath or shower (c) a toilet and wash basin (d) clothes washing facilities. This term includes outbuildings, structures and works normally associated with a dwelling.",
+      "clause": "SC1.3",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+    },
+    {
+      "term": "Setback",
+      "text": "For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.",
+      "clause": "SC1.3",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf"
+    }
+  ],
+  "rules": [
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": true,
+      "rule_key": "bsc_dwelling_house_no_front_setback",
+      "code": "General development code / Township, Rural residential and Rural zone codes",
+      "clause": "Table 7.2.1.1 (AO5 excludes Dwelling houses); Tables 5.5.1, 5.5.3, 5.5.4; Table 5.8",
+      "provision_type": "OTHER",
+      "zones": [
+        "Township zone – Residential precinct",
+        "Township zone – Commercial precinct",
+        "Township zone – Industrial precinct",
+        "Rural residential zone",
+        "Rural zone"
+      ],
+      "structure_scope": "Dwelling house (use \"includes domestic outbuildings and works normally associated with a dwelling\")",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "(No front setback is stated for a Dwelling house or its domestic outbuildings where the dwelling house is accepted development subject to requirements (Township zone – Residential precinct, Rural residential zone, Rural zone) or where Class 10 building work is carried out without a material change of use; the only General development code setback provision (AO5 / Table 7.2.1.4) excludes Dwelling houses, and the Township zone code has no front setback for a dwelling house; the QDC applies.)",
+      "structured": {
+        "parameter": "front setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "dwelling house accepted development subject to requirements, or Class 10 building work on an existing dwelling house lot"
+        ],
+        "exceptions": [
+          "Rural residential and Rural zones: where the dwelling house is code assessable, zone code AO1 applies (see bsc_rr_ao1_front_setback, bsc_rural_ao1_front_setback)"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council provision; QDC MP1.1/MP1.2 boundary clearances apply",
+      "page_or_anchor": "Table 5.5.1 printed p.25 / PDF p.25; Table 5.5.3 p.31; Table 5.5.4 p.36; Table 5.8 p.38; Table 7.2.1.1 AO5 p.56 (printed page = PDF page)",
+      "notes": "Dwelling house is accepted development subject to requirements against the General development code only (Township Residential precinct; Rural residential; Rural if <=2 dwellings, not bushfire prone, no abandoned mine). The only GDC part for accepted development subject to requirements is PO1/AO1 (flood). Township Commercial and Industrial precincts: dwelling house is code assessable against Township zone code + GDC, neither of which states a front setback for a dwelling house. Table 5.8: building work (e.g. a shed added later) is accepted development except for local heritage places and airport operational airspace, so no council setback applies to Class 10 building work."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": true,
+      "rule_key": "bsc_dwelling_house_no_side_rear_setback",
+      "code": "General development code / Township, Rural residential and Rural zone codes",
+      "clause": "Table 7.2.1.1 (AO5 excludes Dwelling houses); Tables 5.5.1, 5.5.3, 5.5.4; Table 5.8",
+      "provision_type": "OTHER",
+      "zones": [
+        "Township zone – Residential precinct",
+        "Township zone – Commercial precinct",
+        "Township zone – Industrial precinct",
+        "Rural residential zone",
+        "Rural zone"
+      ],
+      "structure_scope": "Dwelling house (use \"includes domestic outbuildings and works normally associated with a dwelling\")",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear setback is stated for a Dwelling house or its domestic outbuildings where the dwelling house is accepted development subject to requirements (Township zone – Residential precinct, Rural residential zone, Rural zone) or where Class 10 building work is carried out without a material change of use; the only General development code setback provision (AO5 / Table 7.2.1.4) excludes Dwelling houses, and the Township zone code has no side or rear setback for a dwelling house (other than Commercial precinct AO12.1); the QDC applies.)",
+      "structured": {
+        "parameter": "side and rear setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "dwelling house accepted development subject to requirements, or Class 10 building work on an existing dwelling house lot"
+        ],
+        "exceptions": [
+          "Rural residential and Rural zones: where the dwelling house is code assessable, zone code AO1 applies",
+          "Township Commercial precinct (code assessable): AO12.1 2m from a boundary shared with a residential precinct"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council provision; QDC MP1.1/MP1.2 boundary clearances apply",
+      "page_or_anchor": "Table 5.5.1 p.25; Table 5.5.3 p.31; Table 5.5.4 p.36; Table 5.8 p.38; Table 7.2.1.1 AO5 p.56 (printed page = PDF page)",
+      "notes": "See bsc_dwelling_house_no_front_setback. Township zone code AO17.1 (6m front / 2m from residential precinct boundary) applies only to a non-residential use in the residential precinct or adjoining a residential use, so it is not recorded for dwelling houses."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_rr_ao1_front_setback",
+      "code": "Rural residential zone code",
+      "clause": "Table 6.2.3.2 PO1/AO1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Rural residential zone"
+      ],
+      "structure_scope": "Buildings and structures",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "PO1 New development is located to contribute to the rural residential amenity and character of the area. | AO1 Buildings and structures are setback 20m from a State-controlled road otherwise 6m from all boundaries.",
+      "structured": {
+        "parameter": "front setback",
+        "operator": "conditional",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "20m from a State-controlled road",
+          "otherwise 6m"
+        ],
+        "exceptions": [],
+        "formula_text": "setback >= 20 if boundary is to a State-controlled road else >= 6"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision. Section 1.6(3) states only that \"This planning scheme, through Part 5, regulates building work in accordance with Sections 32 and 33 of the Building Act 1975\"; Table 5.8 (building work) makes building work code assessable only for local heritage places and airport operational airspace (benchmark Table 7.2.1.3). This AO applies to code assessable material change of use, not to building work.",
+      "page_or_anchor": "s6.2.3.2 printed p.48 / PDF p.48",
+      "notes": "Zone code applies only to assessable development: a Dwelling house in this zone is accepted development subject to requirements (General development code only); it becomes code assessable (\"Otherwise\") and then this code applies. \"Buildings and structures\" reaches Class 10 (domestic outbuildings form part of the Dwelling house use). Single provision covers front, side and rear. Zone codes prevail over use codes (s1.5(c))."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_rr_ao1_side_rear_setback",
+      "code": "Rural residential zone code",
+      "clause": "Table 6.2.3.2 PO1/AO1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Rural residential zone"
+      ],
+      "structure_scope": "Buildings and structures",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "PO1 New development is located to contribute to the rural residential amenity and character of the area. | AO1 Buildings and structures are setback 20m from a State-controlled road otherwise 6m from all boundaries.",
+      "structured": {
+        "parameter": "side and rear setback",
+        "operator": "conditional",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "20m from a State-controlled road",
+          "otherwise 6m from all boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": "setback >= 20 if boundary is to a State-controlled road else >= 6"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision. Section 1.6(3) states only that \"This planning scheme, through Part 5, regulates building work in accordance with Sections 32 and 33 of the Building Act 1975\"; Table 5.8 (building work) makes building work code assessable only for local heritage places and airport operational airspace (benchmark Table 7.2.1.3). This AO applies to code assessable material change of use, not to building work.",
+      "page_or_anchor": "s6.2.3.2 printed p.48 / PDF p.48",
+      "notes": "Zone code applies only to assessable development: a Dwelling house in this zone is accepted development subject to requirements (General development code only); it becomes code assessable (\"Otherwise\") and then this code applies. \"Buildings and structures\" reaches Class 10 (domestic outbuildings form part of the Dwelling house use). Single provision covers front, side and rear. Zone codes prevail over use codes (s1.5(c))."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_rural_ao1_front_setback",
+      "code": "Rural zone code",
+      "clause": "Table 6.2.4.2 PO1/AO1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Rural zone"
+      ],
+      "structure_scope": "Buildings and structures",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "PO1 Buildings and structures are setback from the front, side and rear boundaries generally consistent with character and amenity of the zone. | AO1 Buildings and structures are setback 20m from a State-controlled road otherwise 6m from all boundaries.",
+      "structured": {
+        "parameter": "front setback",
+        "operator": "conditional",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "20m from a State-controlled road",
+          "otherwise 6m"
+        ],
+        "exceptions": [],
+        "formula_text": "setback >= 20 if boundary is to a State-controlled road else >= 6"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision. Section 1.6(3) states only that \"This planning scheme, through Part 5, regulates building work in accordance with Sections 32 and 33 of the Building Act 1975\"; Table 5.8 (building work) makes building work code assessable only for local heritage places and airport operational airspace (benchmark Table 7.2.1.3). This AO applies to code assessable material change of use, not to building work.",
+      "page_or_anchor": "s6.2.4.2 printed p.51 / PDF p.51",
+      "notes": "Zone code applies only to assessable development: a Dwelling house in this zone is accepted development subject to requirements (General development code only) if no more than two dwellings, not bushfire prone and not in an identified abandoned mine area; otherwise code assessable against this code. \"Buildings and structures\" reaches Class 10. Note the Rural zone code AO1 (6m front) conflicts with Table 7.2.1.4 (10m front) for other uses; AO5 defers to the zone code (\"Unless otherwise prescribed in a zone code\")."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_rural_ao1_side_rear_setback",
+      "code": "Rural zone code",
+      "clause": "Table 6.2.4.2 PO1/AO1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Rural zone"
+      ],
+      "structure_scope": "Buildings and structures",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "PO1 Buildings and structures are setback from the front, side and rear boundaries generally consistent with character and amenity of the zone. | AO1 Buildings and structures are setback 20m from a State-controlled road otherwise 6m from all boundaries.",
+      "structured": {
+        "parameter": "side and rear setback",
+        "operator": "conditional",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "20m from a State-controlled road",
+          "otherwise 6m from all boundaries"
+        ],
+        "exceptions": [],
+        "formula_text": "setback >= 20 if boundary is to a State-controlled road else >= 6"
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision. Section 1.6(3) states only that \"This planning scheme, through Part 5, regulates building work in accordance with Sections 32 and 33 of the Building Act 1975\"; Table 5.8 (building work) makes building work code assessable only for local heritage places and airport operational airspace (benchmark Table 7.2.1.3). This AO applies to code assessable material change of use, not to building work.",
+      "page_or_anchor": "s6.2.4.2 printed p.51 / PDF p.51",
+      "notes": "Zone code applies only to assessable development: a Dwelling house in this zone is accepted development subject to requirements (General development code only) if no more than two dwellings, not bushfire prone and not in an identified abandoned mine area; otherwise code assessable against this code. \"Buildings and structures\" reaches Class 10. Note the Rural zone code AO1 (6m front) conflicts with Table 7.2.1.4 (10m front) for other uses; AO5 defers to the zone code (\"Unless otherwise prescribed in a zone code\")."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "boundary shared with a residential precinct",
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_township_commercial_ao12_1_side_rear_setback",
+      "code": "Township zone code",
+      "clause": "Table 6.2.1.2 PO12/AO12.1 (Commercial precinct)",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Township zone – Commercial precinct"
+      ],
+      "structure_scope": "Buildings",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "PO12 Development is designed and located so that adverse impacts on privacy and amenity on nearby land in a residential zone are minimised. | AO12.1 Buildings are set back 2m from any boundary shared with a residential precinct.",
+      "structured": {
+        "parameter": "setback from boundary shared with a residential precinct",
+        "operator": ">=",
+        "value": 2,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "only boundaries shared with a residential precinct"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision. Section 1.6(3) states only that \"This planning scheme, through Part 5, regulates building work in accordance with Sections 32 and 33 of the Building Act 1975\"; Table 5.8 (building work) makes building work code assessable only for local heritage places and airport operational airspace (benchmark Table 7.2.1.3). This AO applies to code assessable material change of use, not to building work.",
+      "page_or_anchor": "s6.2.1.2 printed p.44 / PDF p.44",
+      "notes": "Sits under the \"Commercial precinct\" heading of the assessment benchmarks for assessable development. A Dwelling house in the Commercial precinct is code assessable (Table 5.5.1 \"Otherwise\"), so this AO technically reaches its buildings, including Class 10 outbuildings (\"Buildings\"); the PO is aimed at commercial development. Curator to confirm whether it should be applied to dwelling house outbuildings."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_gdc_t7214_township_no_precinct_front",
+      "code": "General development code",
+      "clause": "Table 7.2.1.4 (via Table 7.2.1.1 PO5/AO5)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Township zone (no precinct)"
+      ],
+      "structure_scope": "Buildings and structures (all uses excluding Dwelling houses, Dual occupancies and Multiple dwellings)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Table 7.2.1.4 Building heights, setbacks and site coverage || Zone/Precinct | Front setback | Side and Rear setback || Township zone (no precinct) | 6m Where a corner lot: • 6m from the primary street frontage; and • 3m from secondary street frontage. Editor’s note—the primary street frontage is that nominated by Council. | 6m",
+      "structured": {
+        "parameter": "front setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "corner lot: 6m from the primary street frontage",
+          "primary street frontage is that nominated by Council"
+        ],
+        "exceptions": [
+          "does not apply to Dwelling houses (incl. their domestic outbuildings), Dual occupancies or Multiple dwellings",
+          "assessable development only"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision (s1.6(3) / Table 5.8 regulate building work only for heritage and airport airspace). AO5 applies only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings.",
+      "page_or_anchor": "Table 7.2.1.4 printed p.68 / PDF p.68",
+      "notes": "Applies via General development code AO5 (Table 7.2.1.1, under the headings \"For assessable development\" and \"All uses excluding Dwelling houses, Dual occupancies and Multiple dwellings\"). It therefore does NOT reach domestic outbuildings (sheds, garages, carports) of a Dwelling house; it reaches Class 10 buildings/structures only when part of another assessable use (e.g. caretaker's accommodation, home based business, non-residential uses). AO5 yields to a zone code prescription (\"Unless otherwise prescribed in a zone code\"). Site coverage and height columns omitted from verbatim_text (out of scope). Corresponding AO5 text: PO5 Buildings and structures are setback from the front, side and rear boundaries generally consistent with: • the intended form, function and character of development in the respective zone or zone precinct; and • prevailing setbacks of existing development in the same zone or zone precinct in the locality; and • amenity outcomes for adjoining development, streetscapes and public spaces. | AO5 Unless otherwise prescribed in a zone code, or other Acceptable outcome within the General development code, development provides setbacks in accordance with Table 7.2.1.4 – Building heights, setbacks and site coverage."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_gdc_t7214_township_no_precinct_side_rear",
+      "code": "General development code",
+      "clause": "Table 7.2.1.4 (via Table 7.2.1.1 PO5/AO5)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Township zone (no precinct)"
+      ],
+      "structure_scope": "Buildings and structures (all uses excluding Dwelling houses, Dual occupancies and Multiple dwellings)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Table 7.2.1.4 Building heights, setbacks and site coverage || Zone/Precinct | Front setback | Side and Rear setback || Township zone (no precinct) | 6m Where a corner lot: • 6m from the primary street frontage; and • 3m from secondary street frontage. Editor’s note—the primary street frontage is that nominated by Council. | 6m",
+      "structured": {
+        "parameter": "side and rear setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [
+          "does not apply to Dwelling houses (incl. their domestic outbuildings), Dual occupancies or Multiple dwellings",
+          "assessable development only"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision (s1.6(3) / Table 5.8 regulate building work only for heritage and airport airspace). AO5 applies only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings.",
+      "page_or_anchor": "Table 7.2.1.4 printed p.68 / PDF p.68",
+      "notes": "Applies via General development code AO5 (Table 7.2.1.1, under the headings \"For assessable development\" and \"All uses excluding Dwelling houses, Dual occupancies and Multiple dwellings\"). It therefore does NOT reach domestic outbuildings (sheds, garages, carports) of a Dwelling house; it reaches Class 10 buildings/structures only when part of another assessable use (e.g. caretaker's accommodation, home based business, non-residential uses). AO5 yields to a zone code prescription (\"Unless otherwise prescribed in a zone code\"). Site coverage and height columns omitted from verbatim_text (out of scope). Corresponding AO5 text: PO5 Buildings and structures are setback from the front, side and rear boundaries generally consistent with: • the intended form, function and character of development in the respective zone or zone precinct; and • prevailing setbacks of existing development in the same zone or zone precinct in the locality; and • amenity outcomes for adjoining development, streetscapes and public spaces. | AO5 Unless otherwise prescribed in a zone code, or other Acceptable outcome within the General development code, development provides setbacks in accordance with Table 7.2.1.4 – Building heights, setbacks and site coverage."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_gdc_t7214_township_residential_front",
+      "code": "General development code",
+      "clause": "Table 7.2.1.4 (via Table 7.2.1.1 PO5/AO5)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Township zone – Residential precinct"
+      ],
+      "structure_scope": "Buildings and structures (all uses excluding Dwelling houses, Dual occupancies and Multiple dwellings)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Table 7.2.1.4 Building heights, setbacks and site coverage || Zone/Precinct | Front setback | Side and Rear setback || Township zone – Residential precinct | 6m Where a corner lot: • 6m from the primary street frontage; and • 3m from secondary street frontage. | • 1.5m for a wall up to 4.5m high; • 2m for a wall up to 7.5m high; and • 2.5m for any part of a wall over 7.5m high",
+      "structured": {
+        "parameter": "front setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "corner lot: 6m from the primary street frontage"
+        ],
+        "exceptions": [
+          "does not apply to Dwelling houses (incl. their domestic outbuildings), Dual occupancies or Multiple dwellings",
+          "assessable development only"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision (s1.6(3) / Table 5.8 regulate building work only for heritage and airport airspace). AO5 applies only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings.",
+      "page_or_anchor": "Table 7.2.1.4 printed p.68 / PDF p.68",
+      "notes": "Applies via General development code AO5 (Table 7.2.1.1, under the headings \"For assessable development\" and \"All uses excluding Dwelling houses, Dual occupancies and Multiple dwellings\"). It therefore does NOT reach domestic outbuildings (sheds, garages, carports) of a Dwelling house; it reaches Class 10 buildings/structures only when part of another assessable use (e.g. caretaker's accommodation, home based business, non-residential uses). AO5 yields to a zone code prescription (\"Unless otherwise prescribed in a zone code\"). Site coverage and height columns omitted from verbatim_text (out of scope). Corresponding AO5 text: PO5 Buildings and structures are setback from the front, side and rear boundaries generally consistent with: • the intended form, function and character of development in the respective zone or zone precinct; and • prevailing setbacks of existing development in the same zone or zone precinct in the locality; and • amenity outcomes for adjoining development, streetscapes and public spaces. | AO5 Unless otherwise prescribed in a zone code, or other Acceptable outcome within the General development code, development provides setbacks in accordance with Table 7.2.1.4 – Building heights, setbacks and site coverage. Note the corner-lot editor’s note on primary street frontage appears only in the no-precinct and Industrial rows."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_gdc_t7214_township_residential_side_rear",
+      "code": "General development code",
+      "clause": "Table 7.2.1.4 (via Table 7.2.1.1 PO5/AO5)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Township zone – Residential precinct"
+      ],
+      "structure_scope": "Buildings and structures (all uses excluding Dwelling houses, Dual occupancies and Multiple dwellings)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Table 7.2.1.4 Building heights, setbacks and site coverage || Zone/Precinct | Front setback | Side and Rear setback || Township zone – Residential precinct | 6m Where a corner lot: • 6m from the primary street frontage; and • 3m from secondary street frontage. | • 1.5m for a wall up to 4.5m high; • 2m for a wall up to 7.5m high; and • 2.5m for any part of a wall over 7.5m high",
+      "structured": {
+        "parameter": "side and rear setback",
+        "operator": "conditional",
+        "value": 1.5,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "wall height <= 4.5 m: 1.5 m",
+          "wall height <= 7.5 m: 2 m",
+          "any part of wall > 7.5 m: 2.5 m"
+        ],
+        "exceptions": [
+          "does not apply to Dwelling houses (incl. their domestic outbuildings), Dual occupancies or Multiple dwellings",
+          "assessable development only"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision (s1.6(3) / Table 5.8 regulate building work only for heritage and airport airspace). AO5 applies only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings.",
+      "page_or_anchor": "Table 7.2.1.4 printed p.68 / PDF p.68",
+      "notes": "Applies via General development code AO5 (Table 7.2.1.1, under the headings \"For assessable development\" and \"All uses excluding Dwelling houses, Dual occupancies and Multiple dwellings\"). It therefore does NOT reach domestic outbuildings (sheds, garages, carports) of a Dwelling house; it reaches Class 10 buildings/structures only when part of another assessable use (e.g. caretaker's accommodation, home based business, non-residential uses). AO5 yields to a zone code prescription (\"Unless otherwise prescribed in a zone code\"). Site coverage and height columns omitted from verbatim_text (out of scope). Corresponding AO5 text: PO5 Buildings and structures are setback from the front, side and rear boundaries generally consistent with: • the intended form, function and character of development in the respective zone or zone precinct; and • prevailing setbacks of existing development in the same zone or zone precinct in the locality; and • amenity outcomes for adjoining development, streetscapes and public spaces. | AO5 Unless otherwise prescribed in a zone code, or other Acceptable outcome within the General development code, development provides setbacks in accordance with Table 7.2.1.4 – Building heights, setbacks and site coverage. Note the corner-lot editor’s note on primary street frontage appears only in the no-precinct and Industrial rows."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_gdc_t7214_township_commercial_front",
+      "code": "General development code",
+      "clause": "Table 7.2.1.4 (via Table 7.2.1.1 PO5/AO5)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Township zone – Commercial precinct"
+      ],
+      "structure_scope": "Buildings and structures (all uses excluding Dwelling houses, Dual occupancies and Multiple dwellings)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Table 7.2.1.4 Building heights, setbacks and site coverage || Zone/Precinct | Front setback | Side and Rear setback || Township zone – Commercial precinct | 0m | • 0m where adjoining land in commercial zone; or • 2m otherwise.",
+      "structured": {
+        "parameter": "front setback",
+        "operator": ">=",
+        "value": 0,
+        "unit": "m",
+        "conditions": [],
+        "exceptions": [
+          "does not apply to Dwelling houses (incl. their domestic outbuildings), Dual occupancies or Multiple dwellings",
+          "assessable development only"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision (s1.6(3) / Table 5.8 regulate building work only for heritage and airport airspace). AO5 applies only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings.",
+      "page_or_anchor": "Table 7.2.1.4 printed p.68 / PDF p.68",
+      "notes": "Applies via General development code AO5 (Table 7.2.1.1, under the headings \"For assessable development\" and \"All uses excluding Dwelling houses, Dual occupancies and Multiple dwellings\"). It therefore does NOT reach domestic outbuildings (sheds, garages, carports) of a Dwelling house; it reaches Class 10 buildings/structures only when part of another assessable use (e.g. caretaker's accommodation, home based business, non-residential uses). AO5 yields to a zone code prescription (\"Unless otherwise prescribed in a zone code\"). Site coverage and height columns omitted from verbatim_text (out of scope). Corresponding AO5 text: PO5 Buildings and structures are setback from the front, side and rear boundaries generally consistent with: • the intended form, function and character of development in the respective zone or zone precinct; and • prevailing setbacks of existing development in the same zone or zone precinct in the locality; and • amenity outcomes for adjoining development, streetscapes and public spaces. | AO5 Unless otherwise prescribed in a zone code, or other Acceptable outcome within the General development code, development provides setbacks in accordance with Table 7.2.1.4 – Building heights, setbacks and site coverage."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_gdc_t7214_township_commercial_side_rear",
+      "code": "General development code",
+      "clause": "Table 7.2.1.4 (via Table 7.2.1.1 PO5/AO5)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Township zone – Commercial precinct"
+      ],
+      "structure_scope": "Buildings and structures (all uses excluding Dwelling houses, Dual occupancies and Multiple dwellings)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Table 7.2.1.4 Building heights, setbacks and site coverage || Zone/Precinct | Front setback | Side and Rear setback || Township zone – Commercial precinct | 0m | • 0m where adjoining land in commercial zone; or • 2m otherwise.",
+      "structured": {
+        "parameter": "side and rear setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "adjoining land in commercial zone: 0 m",
+          "otherwise: 2 m"
+        ],
+        "exceptions": [
+          "does not apply to Dwelling houses (incl. their domestic outbuildings), Dual occupancies or Multiple dwellings",
+          "assessable development only"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision (s1.6(3) / Table 5.8 regulate building work only for heritage and airport airspace). AO5 applies only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings.",
+      "page_or_anchor": "Table 7.2.1.4 printed p.68 / PDF p.68",
+      "notes": "Applies via General development code AO5 (Table 7.2.1.1, under the headings \"For assessable development\" and \"All uses excluding Dwelling houses, Dual occupancies and Multiple dwellings\"). It therefore does NOT reach domestic outbuildings (sheds, garages, carports) of a Dwelling house; it reaches Class 10 buildings/structures only when part of another assessable use (e.g. caretaker's accommodation, home based business, non-residential uses). AO5 yields to a zone code prescription (\"Unless otherwise prescribed in a zone code\"). Site coverage and height columns omitted from verbatim_text (out of scope). Corresponding AO5 text: PO5 Buildings and structures are setback from the front, side and rear boundaries generally consistent with: • the intended form, function and character of development in the respective zone or zone precinct; and • prevailing setbacks of existing development in the same zone or zone precinct in the locality; and • amenity outcomes for adjoining development, streetscapes and public spaces. | AO5 Unless otherwise prescribed in a zone code, or other Acceptable outcome within the General development code, development provides setbacks in accordance with Table 7.2.1.4 – Building heights, setbacks and site coverage."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_gdc_t7214_township_industrial_front",
+      "code": "General development code",
+      "clause": "Table 7.2.1.4 (via Table 7.2.1.1 PO5/AO5)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Township zone – Industrial precinct"
+      ],
+      "structure_scope": "Buildings and structures (all uses excluding Dwelling houses, Dual occupancies and Multiple dwellings)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Table 7.2.1.4 Building heights, setbacks and site coverage || Zone/Precinct | Front setback | Side and Rear setback || Township zone – Industrial precinct | Where a corner lot: • 6m from the primary street frontage; and • 3m from secondary street frontage. Editor’s note—the primary street frontage is that nominated by Council. | 2m",
+      "structured": {
+        "parameter": "front setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "corner lot only: 6m from the primary street frontage",
+          "no front setback stated for a non-corner lot"
+        ],
+        "exceptions": [
+          "does not apply to Dwelling houses (incl. their domestic outbuildings), Dual occupancies or Multiple dwellings",
+          "assessable development only"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision (s1.6(3) / Table 5.8 regulate building work only for heritage and airport airspace). AO5 applies only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings.",
+      "page_or_anchor": "Table 7.2.1.4 printed p.68 / PDF p.68",
+      "notes": "Applies via General development code AO5 (Table 7.2.1.1, under the headings \"For assessable development\" and \"All uses excluding Dwelling houses, Dual occupancies and Multiple dwellings\"). It therefore does NOT reach domestic outbuildings (sheds, garages, carports) of a Dwelling house; it reaches Class 10 buildings/structures only when part of another assessable use (e.g. caretaker's accommodation, home based business, non-residential uses). AO5 yields to a zone code prescription (\"Unless otherwise prescribed in a zone code\"). Site coverage and height columns omitted from verbatim_text (out of scope). Corresponding AO5 text: PO5 Buildings and structures are setback from the front, side and rear boundaries generally consistent with: • the intended form, function and character of development in the respective zone or zone precinct; and • prevailing setbacks of existing development in the same zone or zone precinct in the locality; and • amenity outcomes for adjoining development, streetscapes and public spaces. | AO5 Unless otherwise prescribed in a zone code, or other Acceptable outcome within the General development code, development provides setbacks in accordance with Table 7.2.1.4 – Building heights, setbacks and site coverage."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_gdc_t7214_township_industrial_side_rear",
+      "code": "General development code",
+      "clause": "Table 7.2.1.4 (via Table 7.2.1.1 PO5/AO5)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Township zone – Industrial precinct"
+      ],
+      "structure_scope": "Buildings and structures (all uses excluding Dwelling houses, Dual occupancies and Multiple dwellings)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Table 7.2.1.4 Building heights, setbacks and site coverage || Zone/Precinct | Front setback | Side and Rear setback || Township zone – Industrial precinct | Where a corner lot: • 6m from the primary street frontage; and • 3m from secondary street frontage. Editor’s note—the primary street frontage is that nominated by Council. | 2m",
+      "structured": {
+        "parameter": "side and rear setback",
+        "operator": ">=",
+        "value": 2,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [
+          "does not apply to Dwelling houses (incl. their domestic outbuildings), Dual occupancies or Multiple dwellings",
+          "assessable development only"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision (s1.6(3) / Table 5.8 regulate building work only for heritage and airport airspace). AO5 applies only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings.",
+      "page_or_anchor": "Table 7.2.1.4 printed p.68 / PDF p.68",
+      "notes": "Applies via General development code AO5 (Table 7.2.1.1, under the headings \"For assessable development\" and \"All uses excluding Dwelling houses, Dual occupancies and Multiple dwellings\"). It therefore does NOT reach domestic outbuildings (sheds, garages, carports) of a Dwelling house; it reaches Class 10 buildings/structures only when part of another assessable use (e.g. caretaker's accommodation, home based business, non-residential uses). AO5 yields to a zone code prescription (\"Unless otherwise prescribed in a zone code\"). Site coverage and height columns omitted from verbatim_text (out of scope). Corresponding AO5 text: PO5 Buildings and structures are setback from the front, side and rear boundaries generally consistent with: • the intended form, function and character of development in the respective zone or zone precinct; and • prevailing setbacks of existing development in the same zone or zone precinct in the locality; and • amenity outcomes for adjoining development, streetscapes and public spaces. | AO5 Unless otherwise prescribed in a zone code, or other Acceptable outcome within the General development code, development provides setbacks in accordance with Table 7.2.1.4 – Building heights, setbacks and site coverage."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_gdc_t7214_rural_residential_front",
+      "code": "General development code",
+      "clause": "Table 7.2.1.4 (via Table 7.2.1.1 PO5/AO5)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Rural residential zone"
+      ],
+      "structure_scope": "Buildings and structures (all uses excluding Dwelling houses, Dual occupancies and Multiple dwellings)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Table 7.2.1.4 Building heights, setbacks and site coverage || Zone/Precinct | Front setback | Side and Rear setback || Rural residential zone | 6m or 20m from a state-controlled road | 6m",
+      "structured": {
+        "parameter": "front setback",
+        "operator": "conditional",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "20m from a state-controlled road",
+          "otherwise 6m"
+        ],
+        "exceptions": [
+          "does not apply to Dwelling houses (incl. their domestic outbuildings), Dual occupancies or Multiple dwellings",
+          "assessable development only"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision (s1.6(3) / Table 5.8 regulate building work only for heritage and airport airspace). AO5 applies only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings.",
+      "page_or_anchor": "Table 7.2.1.4 printed pp.68-69 / PDF pp.68-69",
+      "notes": "Applies via General development code AO5 (Table 7.2.1.1, under the headings \"For assessable development\" and \"All uses excluding Dwelling houses, Dual occupancies and Multiple dwellings\"). It therefore does NOT reach domestic outbuildings (sheds, garages, carports) of a Dwelling house; it reaches Class 10 buildings/structures only when part of another assessable use (e.g. caretaker's accommodation, home based business, non-residential uses). AO5 yields to a zone code prescription (\"Unless otherwise prescribed in a zone code\"). Site coverage and height columns omitted from verbatim_text (out of scope). Corresponding AO5 text: PO5 Buildings and structures are setback from the front, side and rear boundaries generally consistent with: • the intended form, function and character of development in the respective zone or zone precinct; and • prevailing setbacks of existing development in the same zone or zone precinct in the locality; and • amenity outcomes for adjoining development, streetscapes and public spaces. | AO5 Unless otherwise prescribed in a zone code, or other Acceptable outcome within the General development code, development provides setbacks in accordance with Table 7.2.1.4 – Building heights, setbacks and site coverage. Where the zone code AO1 prescribes a setback (20m State-controlled road / 6m all boundaries), it prevails (AO5 \"Unless otherwise prescribed in a zone code\"; s1.5(c))."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_gdc_t7214_rural_residential_side_rear",
+      "code": "General development code",
+      "clause": "Table 7.2.1.4 (via Table 7.2.1.1 PO5/AO5)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Rural residential zone"
+      ],
+      "structure_scope": "Buildings and structures (all uses excluding Dwelling houses, Dual occupancies and Multiple dwellings)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Table 7.2.1.4 Building heights, setbacks and site coverage || Zone/Precinct | Front setback | Side and Rear setback || Rural residential zone | 6m or 20m from a state-controlled road | 6m",
+      "structured": {
+        "parameter": "side and rear setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [
+          "does not apply to Dwelling houses (incl. their domestic outbuildings), Dual occupancies or Multiple dwellings",
+          "assessable development only"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision (s1.6(3) / Table 5.8 regulate building work only for heritage and airport airspace). AO5 applies only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings.",
+      "page_or_anchor": "Table 7.2.1.4 printed pp.68-69 / PDF pp.68-69",
+      "notes": "Applies via General development code AO5 (Table 7.2.1.1, under the headings \"For assessable development\" and \"All uses excluding Dwelling houses, Dual occupancies and Multiple dwellings\"). It therefore does NOT reach domestic outbuildings (sheds, garages, carports) of a Dwelling house; it reaches Class 10 buildings/structures only when part of another assessable use (e.g. caretaker's accommodation, home based business, non-residential uses). AO5 yields to a zone code prescription (\"Unless otherwise prescribed in a zone code\"). Site coverage and height columns omitted from verbatim_text (out of scope). Corresponding AO5 text: PO5 Buildings and structures are setback from the front, side and rear boundaries generally consistent with: • the intended form, function and character of development in the respective zone or zone precinct; and • prevailing setbacks of existing development in the same zone or zone precinct in the locality; and • amenity outcomes for adjoining development, streetscapes and public spaces. | AO5 Unless otherwise prescribed in a zone code, or other Acceptable outcome within the General development code, development provides setbacks in accordance with Table 7.2.1.4 – Building heights, setbacks and site coverage. Where the zone code AO1 prescribes a setback (20m State-controlled road / 6m all boundaries), it prevails (AO5 \"Unless otherwise prescribed in a zone code\"; s1.5(c))."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_gdc_t7214_rural_front",
+      "code": "General development code",
+      "clause": "Table 7.2.1.4 (via Table 7.2.1.1 PO5/AO5)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Rural zone"
+      ],
+      "structure_scope": "Buildings and structures (all uses excluding Dwelling houses, Dual occupancies and Multiple dwellings)",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Table 7.2.1.4 Building heights, setbacks and site coverage || Zone/Precinct | Front setback | Side and Rear setback || Rural zone | 10m or 20m from a state-controlled road | 6m",
+      "structured": {
+        "parameter": "front setback",
+        "operator": "conditional",
+        "value": 10,
+        "unit": "m",
+        "conditions": [
+          "20m from a state-controlled road",
+          "otherwise 10m"
+        ],
+        "exceptions": [
+          "does not apply to Dwelling houses (incl. their domestic outbuildings), Dual occupancies or Multiple dwellings",
+          "assessable development only"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision (s1.6(3) / Table 5.8 regulate building work only for heritage and airport airspace). AO5 applies only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings.",
+      "page_or_anchor": "Table 7.2.1.4 printed p.69 / PDF p.69",
+      "notes": "Applies via General development code AO5 (Table 7.2.1.1, under the headings \"For assessable development\" and \"All uses excluding Dwelling houses, Dual occupancies and Multiple dwellings\"). It therefore does NOT reach domestic outbuildings (sheds, garages, carports) of a Dwelling house; it reaches Class 10 buildings/structures only when part of another assessable use (e.g. caretaker's accommodation, home based business, non-residential uses). AO5 yields to a zone code prescription (\"Unless otherwise prescribed in a zone code\"). Site coverage and height columns omitted from verbatim_text (out of scope). Corresponding AO5 text: PO5 Buildings and structures are setback from the front, side and rear boundaries generally consistent with: • the intended form, function and character of development in the respective zone or zone precinct; and • prevailing setbacks of existing development in the same zone or zone precinct in the locality; and • amenity outcomes for adjoining development, streetscapes and public spaces. | AO5 Unless otherwise prescribed in a zone code, or other Acceptable outcome within the General development code, development provides setbacks in accordance with Table 7.2.1.4 – Building heights, setbacks and site coverage. Where the zone code AO1 prescribes a setback (20m State-controlled road / 6m all boundaries), it prevails (AO5 \"Unless otherwise prescribed in a zone code\"; s1.5(c))."
+    },
+    {
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "measurement_notes": "Setback (SC1.3): \"For a building or structure, the shortest distance measured horizontally from the outer most projection of a building or structure to the vertical projection of the boundary of the lot.\"",
+      "source_url": "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "rule_key": "bsc_gdc_t7214_rural_side_rear",
+      "code": "General development code",
+      "clause": "Table 7.2.1.4 (via Table 7.2.1.1 PO5/AO5)",
+      "provision_type": "TABLE",
+      "zones": [
+        "Rural zone"
+      ],
+      "structure_scope": "Buildings and structures (all uses excluding Dwelling houses, Dual occupancies and Multiple dwellings)",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Table 7.2.1.4 Building heights, setbacks and site coverage || Zone/Precinct | Front setback | Side and Rear setback || Rural zone | 10m or 20m from a state-controlled road | 6m",
+      "structured": {
+        "parameter": "side and rear setback",
+        "operator": ">=",
+        "value": 6,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries"
+        ],
+        "exceptions": [
+          "does not apply to Dwelling houses (incl. their domestic outbuildings), Dual occupancies or Multiple dwellings",
+          "assessable development only"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - not designated as a QDC alternative provision (s1.6(3) / Table 5.8 regulate building work only for heritage and airport airspace). AO5 applies only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings.",
+      "page_or_anchor": "Table 7.2.1.4 printed p.69 / PDF p.69",
+      "notes": "Applies via General development code AO5 (Table 7.2.1.1, under the headings \"For assessable development\" and \"All uses excluding Dwelling houses, Dual occupancies and Multiple dwellings\"). It therefore does NOT reach domestic outbuildings (sheds, garages, carports) of a Dwelling house; it reaches Class 10 buildings/structures only when part of another assessable use (e.g. caretaker's accommodation, home based business, non-residential uses). AO5 yields to a zone code prescription (\"Unless otherwise prescribed in a zone code\"). Site coverage and height columns omitted from verbatim_text (out of scope). Corresponding AO5 text: PO5 Buildings and structures are setback from the front, side and rear boundaries generally consistent with: • the intended form, function and character of development in the respective zone or zone precinct; and • prevailing setbacks of existing development in the same zone or zone precinct in the locality; and • amenity outcomes for adjoining development, streetscapes and public spaces. | AO5 Unless otherwise prescribed in a zone code, or other Acceptable outcome within the General development code, development provides setbacks in accordance with Table 7.2.1.4 – Building heights, setbacks and site coverage. Where the zone code AO1 prescribes a setback (20m State-controlled road / 6m all boundaries), it prevails (AO5 \"Unless otherwise prescribed in a zone code\"; s1.5(c))."
+    }
+  ],
+  "overlays_affecting_siting": [],
+  "local_plan_mechanism": {
+    "summary": "The scheme has no local plans and no overlay codes (natural hazards are handled inside the General development code and Schedule 2 mapping). Township zone has three precincts (Commercial, Residential, Industrial) set in the Township zone code and Table 7.2.1.4."
+  },
+  "open_questions": [
+    "The official PDF is hosted on a pre-production OpenCities host (burkeshire.prelive.opencities.com) linked from the council planning page; confirm with council that this is the current authoritative copy and whether a production-host URL exists (www.burke.qld.gov.au returns 403 to scripts).",
+    "No version/amendment number is published; confirm no amendments since commencement on 7 February 2020.",
+    "Table 7.2.1.4 setbacks apply via AO5 only to assessable development for uses other than Dwelling houses, Dual occupancies and Multiple dwellings; confirm curators should not apply them to dwelling house outbuildings.",
+    "Township Commercial precinct AO12.1 (2m from a residential precinct boundary) technically reaches a code-assessable dwelling house in that precinct; confirm whether to apply to Class 10.",
+    "Rural zone: zone code AO1 front setback (6m) conflicts with Table 7.2.1.4 (10m); AO5 defers to the zone code.",
+    "No provision is expressly designated a QDC alternative provision under s33 despite the s1.6 editor's note; confirm council's position."
+  ],
+  "fetch_log": [
+    "https://www.burke.qld.gov.au/Our-council/Planning-and-development/Planning -> 403 (with browser User-Agent, script access blocked)",
+    "https://burkeshire.prelive.opencities.com/files/assets/public/v/1/our-council/documents/planning-and-development/burke_shire_planning_scheme_2020.pdf -> 200 application/pdf (pre-production OpenCities host; previously downloaded to scratchpad/sources/burke/burke_shire_planning_scheme_2020.pdf, text extracted to burke.txt)"
+  ]
+}

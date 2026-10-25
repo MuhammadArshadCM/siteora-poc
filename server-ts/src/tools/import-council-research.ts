@@ -27,6 +27,15 @@ export const COUNCILS: Record<string, [string, string, string]> = {
   logan: ["LOGAN", "LCC", "LCC_PLANNING_SCHEME_2015"],
   ipswich: ["IPSWICH", "ICC", "ICC_CITY_PLAN_2025"],
   redland: ["REDLAND", "RCC", "RCC_CITY_PLAN_2018"],
+  // added 22 Oct 2026 — Class 10 front / side / rear setbacks only
+  burke: ["BURKE", "BSC", "BSC_PLANNING_SCHEME_2020"],
+  central_highlands: ["CENTRAL_HIGHLANDS", "CHRC", "CHRC_PLANNING_SCHEME_2016"],
+  livingstone: ["LIVINGSTONE", "LSC", "LSC_PLANNING_SCHEME_2018"],
+  mount_isa: ["MOUNT_ISA", "MICC", "MICC_PLANNING_SCHEME_2020"],
+  rockhampton: ["ROCKHAMPTON", "RRC", "RRC_PLANNING_SCHEME_2015"],
+  south_burnett: ["SOUTH_BURNETT", "SBRC", "SBRC_PLANNING_SCHEME_2017"],
+  toowoomba: ["TOOWOOMBA", "TRC", "TRC_PLANNING_SCHEME_2012"],
+  townsville: ["TOWNSVILLE", "TCC", "TCC_CITY_PLAN_2014"],
 };
 
 // topic -> [measurement, operator used when the extracted operator is not a plain comparison, taxonomy topic]

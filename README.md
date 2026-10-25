@@ -36,9 +36,10 @@ Status as at **9 Oct 2026**.
 | [`research/councils/`](research/councils/) | Raw council research (verbatim quotes, URLs, fetch logs, open questions) |
 | [`server-ts/`](server-ts/README.md) | **The application** (TypeScript / Ts.ED): web page + API on :8766, rules engine, command-line tools, parity test |
 | [`server-ts/src/core/evaluate.ts`](server-ts/src/core/evaluate.ts) | Rule resolver (which rule applies, what value, why) |
-| [`server-ts/src/tools/`](server-ts/src/tools/) | `check` (integrity invariants + recorded examples), `verify-load`, `import-research` (regenerates `db/030_council_*.sql`), `schema-doc`, `check-services`, `cli`, `evaluate` |
+| [`server-ts/src/tools/`](server-ts/src/tools/) | `check` (integrity invariants + recorded examples), `verify-load`, `import-research` (regenerates `db/030_council_*.sql`), `validate-setbacks` (read-only setback audit → `validation/`), `schema-doc`, `check-services`, `cli`, `evaluate` |
 | [`docs/data-sources-register.xlsx`](docs/data-sources-register.xlsx) | Data source register: every API and map layer used, who publishes it, when it was last updated, licence, issues (`npm run data-register` refreshes it) |
 | [`examples/`](examples/) | Scenarios and their outputs |
+| [`validation/`](validation/validation_report.md) | Setback dataset validation (14 councils, 22 Oct 2026): report, CSVs, proposed change sets. `npm run validate-setbacks` re-runs it (read-only) |
 | [`poc/`](poc/README.md) | Web page, map-service configuration (`zoning_layers.json`, `site_layers.json`) and `.env` used by the server; the original Python code, retired and commented out |
 | [`tools/`](tools/) | The original Python tools, retired and commented out (replaced by `server-ts/src/tools/`) |
 

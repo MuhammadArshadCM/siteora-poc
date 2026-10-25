@@ -19,7 +19,15 @@ INSERT INTO authorities VALUES
  ('SCC', 'Sunshine Coast Council', 'LOCAL_GOVERNMENT', 'https://www.sunshinecoast.qld.gov.au'),
  ('LCC', 'Logan City Council', 'LOCAL_GOVERNMENT', 'https://www.logan.qld.gov.au'),
  ('ICC', 'Ipswich City Council', 'LOCAL_GOVERNMENT', 'https://www.ipswich.qld.gov.au'),
- ('RCC', 'Redland City Council', 'LOCAL_GOVERNMENT', 'https://www.redland.qld.gov.au');
+ ('RCC', 'Redland City Council', 'LOCAL_GOVERNMENT', 'https://www.redland.qld.gov.au'),
+ ('BSC', 'Burke Shire Council', 'LOCAL_GOVERNMENT', 'https://www.burke.qld.gov.au'),
+ ('CHRC', 'Central Highlands Regional Council', 'LOCAL_GOVERNMENT', 'https://www.chrc.qld.gov.au'),
+ ('LSC', 'Livingstone Shire Council', 'LOCAL_GOVERNMENT', 'https://www.livingstone.qld.gov.au'),
+ ('MICC', 'Mount Isa City Council', 'LOCAL_GOVERNMENT', 'https://www.mountisa.qld.gov.au'),
+ ('RRC', 'Rockhampton Regional Council', 'LOCAL_GOVERNMENT', 'https://www.rockhamptonregion.qld.gov.au'),
+ ('SBRC', 'South Burnett Regional Council', 'LOCAL_GOVERNMENT', 'https://www.southburnett.qld.gov.au'),
+ ('TRC', 'Toowoomba Regional Council', 'LOCAL_GOVERNMENT', 'https://www.tr.qld.gov.au'),
+ ('TCC', 'Townsville City Council', 'LOCAL_GOVERNMENT', 'https://www.townsville.qld.gov.au');
 
 INSERT INTO local_governments (lg_id, authority_id, official_name, former_names, notes) VALUES
  ('BRISBANE',       'BCC', 'Brisbane City Council', '{}', NULL),
@@ -28,7 +36,15 @@ INSERT INTO local_governments (lg_id, authority_id, official_name, former_names,
  ('SUNSHINE_COAST', 'SCC', 'Sunshine Coast Regional Council', '{}', NULL),
  ('LOGAN',          'LCC', 'Logan City Council', '{}', NULL),
  ('IPSWICH',        'ICC', 'Ipswich City Council', '{}', NULL),
- ('REDLAND',        'RCC', 'Redland City Council', '{}', NULL);
+ ('REDLAND',        'RCC', 'Redland City Council', '{}', NULL),
+ ('BURKE',             'BSC',  'Burke Shire Council', '{}', 'Added 22 Oct 2026 (Class 10 front/side/rear setback scope only).'),
+ ('CENTRAL_HIGHLANDS', 'CHRC', 'Central Highlands Regional Council', '{}', 'Added 22 Oct 2026 (Class 10 front/side/rear setback scope only).'),
+ ('LIVINGSTONE',       'LSC',  'Livingstone Shire Council', '{}', 'Added 22 Oct 2026 (Class 10 front/side/rear setback scope only). Re-established 1 Jan 2014 (de-amalgamated from Rockhampton Regional Council).'),
+ ('MOUNT_ISA',         'MICC', 'Mount Isa City Council', '{}', 'Added 22 Oct 2026 (Class 10 front/side/rear setback scope only).'),
+ ('ROCKHAMPTON',       'RRC',  'Rockhampton Regional Council', '{}', 'Added 22 Oct 2026 (Class 10 front/side/rear setback scope only).'),
+ ('SOUTH_BURNETT',     'SBRC', 'South Burnett Regional Council', '{}', 'Added 22 Oct 2026 (Class 10 front/side/rear setback scope only).'),
+ ('TOOWOOMBA',         'TRC',  'Toowoomba Regional Council', '{}', 'Added 22 Oct 2026 (Class 10 front/side/rear setback scope only).'),
+ ('TOWNSVILLE',        'TCC',  'Townsville City Council', '{}', 'Added 22 Oct 2026 (Class 10 front/side/rear setback scope only).');
 
 -- -----------------------------------------------------------------------------
 -- State instruments
@@ -170,6 +186,8 @@ INSERT INTO facts (fact_id, type, unit, allowed_values, source, description, der
  ('distance_to_adjoining_habitable_window_m','NUMBER','m',NULL,'PROPERTY_DATA','Distance from the Class 10a part to a required habitable-room window of an adjoining dwelling', 'Usually unknown → manual review'),
  ('adjoining_dwellings_both_sides','BOOLEAN',NULL,NULL,'PROPERTY_DATA','Existing detached dwellings on both adjoining lots (MP 1.x A1(a)(ii))', NULL),
  ('adjoining_road_setbacks_m','NUMBER','m', NULL,  'PROPERTY_DATA', 'Array [left,right] of road setbacks of adjoining dwellings', NULL),
+ ('any_adjoining_setback_3_to_6m','BOOLEAN',NULL,NULL,'ENGINE_DERIVED','At least one of the entered adjoining road setbacks is between 3 m and 6 m (MP 1.x A1(a)(ii))', 'min/max of adjoining_road_setbacks_m against the 3-6 m band'),
+ ('both_adjoining_setbacks_le_3m','BOOLEAN',NULL,NULL,'ENGINE_DERIVED','Both entered adjoining road setbacks are 3 m or less (MP 1.1 A1(a)(iii) only — MP 1.2 has no such limb)', 'max of adjoining_road_setbacks_m <= 3, only when both sides were entered'),
  ('adjoining_premises_setback_less_than_table','BOOLEAN',NULL,NULL,'PROPERTY_DATA','QHC Table 1 supp. prov. 2', NULL),
  ('carport_obstruction_pct','NUMBER',  '%',  NULL, 'DESIGN_INPUT', 'Aggregate perimeter of walls/screens/supports within the setback as % of carport perimeter within the setback (MP 1.2 A1(c))', NULL),
  ('alternative_carport_site_available','BOOLEAN',NULL,NULL,'USER_DECLARATION','Compliant alternative on-site garage/carport location with 2.5m access and <= 1 in 5 gradient exists', 'Judgement'),

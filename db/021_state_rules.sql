@@ -254,11 +254,12 @@ SELECT define_rule($r${
  "value": {"op": "case", "when": [{"if": {"op": "<=", "args": [{"op": "-", "args": [{"op": "max_of", "args": [{"var": "adjoining_road_setbacks_m"}]}, {"op": "min_of", "args": [{"var": "adjoining_road_setbacks_m"}]}]}, 2]},
                                    "then": {"op": "min_of", "args": [{"var": "adjoining_road_setbacks_m"}]}}],
            "else": {"op": "avg_of", "args": [{"var": "adjoining_road_setbacks_m"}]}},
- "verification": "VERIFIED_VERBATIM", "automatable": false,
+ "verification": "VERIFIED_VERBATIM", "automatable": true,
  "subjects": ["CLASS_1", "GARAGE", "CARPORT"],
- "conditions": [[{"fact": "lot_area_m2", "op": ">=", "value": 450}, {"fact": "adjoining_dwellings_both_sides", "op": "IS_TRUE"}]],
+ "conditions": [[{"fact": "lot_area_m2", "op": ">=", "value": 450}, {"fact": "adjoining_dwellings_both_sides", "op": "IS_TRUE"},
+                 {"fact": "any_adjoining_setback_3_to_6m", "op": "IS_TRUE"}]],
  "sources": [{"ref": "A1(a)", "role": "PRIMARY"}],
- "interpretation_notes": "Also requires at least one adjoining dwelling setback between 3 m and 6 m (not expressible without per-neighbour facts; checked manually). '(A) a distance between the two buildings' read as: any setback not less than the smaller neighbour setback.",
+ "interpretation_notes": "'(A) a distance between the two buildings' read as: any setback not less than the smaller neighbour setback. Automatable once the page's optional adjoining-setback inputs are supplied (adjoining_road_setbacks_m, adjoining_dwellings_both_sides, any_adjoining_setback_3_to_6m); otherwise the conditions are unknown and the engine still routes to manual review. Added 23 Oct 2026 (user asked for this rule to be resolvable from optional neighbour-frontage inputs); previously always automatable=false with this precondition only noted in prose.",
  "effective_from": "2010-03-26", "effective_to": "2029-08-31"}$r$);
 
 SELECT define_rule($r${
@@ -346,11 +347,14 @@ SELECT define_rule($r${
      {"if": {"op": "<=", "args": [{"op": "-", "args": [{"op": "max_of", "args": [{"var": "adjoining_road_setbacks_m"}]}, {"op": "min_of", "args": [{"var": "adjoining_road_setbacks_m"}]}]}, 2]},
       "then": {"op": "min_of", "args": [{"var": "adjoining_road_setbacks_m"}]}}],
    "else": {"op": "avg_of", "args": [{"var": "adjoining_road_setbacks_m"}]}},
- "verification": "VERIFIED_VERBATIM", "automatable": false,
+ "verification": "VERIFIED_VERBATIM", "automatable": true,
  "subjects": ["CLASS_1", "GARAGE", "CARPORT"],
- "conditions": [[{"fact": "lot_area_m2", "op": "<", "value": 450}, {"fact": "adjoining_dwellings_both_sides", "op": "IS_TRUE"}]],
+ "conditions": [[{"fact": "lot_area_m2", "op": "<", "value": 450}, {"fact": "adjoining_dwellings_both_sides", "op": "IS_TRUE"},
+                 {"fact": "any_adjoining_setback_3_to_6m", "op": "IS_TRUE"}],
+                [{"fact": "lot_area_m2", "op": "<", "value": 450}, {"fact": "adjoining_dwellings_both_sides", "op": "IS_TRUE"},
+                 {"fact": "both_adjoining_setbacks_le_3m", "op": "IS_TRUE"}]],
  "sources": [{"ref": "A1(a) Table A1", "role": "PRIMARY"}],
- "interpretation_notes": "(iii) 'where adjacent buildings have road setbacks of 3m or less – any distance between the setbacks': encoded as minimum 0 when both neighbours <= 3 m; strictly the text allows any distance between the two setbacks (a range), which the engine should report rather than reduce to 0.",
+ "interpretation_notes": "(iii) 'where adjacent buildings have road setbacks of 3m or less – any distance between the setbacks': encoded as minimum 0 when both neighbours <= 3 m; strictly the text allows any distance between the two setbacks (a range), which the engine should report rather than reduce to 0. Two OR-ed condition groups separate limb (ii) (at least one neighbour in 3-6 m) from limb (iii) (both neighbours <= 3 m) so a pair like (2 m, 7 m) — neither limb's precondition — correctly does NOT become a candidate (previously the value formula's 'else: avg_of' branch could fire for such a pair with no gating condition at all). Automatable once the page's optional adjoining-setback inputs are supplied; otherwise still manual review. Added 23 Oct 2026 (user asked for this rule to be resolvable from optional neighbour-frontage inputs).",
  "effective_from": "2010-03-26", "effective_to": "2029-08-31"}$r$);
 
 SELECT define_rule($r${

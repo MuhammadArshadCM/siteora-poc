@@ -154,7 +154,9 @@
    ],
    "precincts": [],
    "local_plans": [
-    {"code": "BLACKALL_RANGE", "name": "Blackall Range local plan", "type": "LOCAL_PLAN", "precincts": []}
+    {"code": "BLACKALL_RANGE", "name": "Blackall Range local plan", "type": "LOCAL_PLAN", "precincts": []},
+    {"code": "BUDERIM", "name": "Buderim local plan", "type": "LOCAL_PLAN", "precincts": [{"code": "BUD_LPP_1", "name": "Precinct BUD LPP-1 (Gloucester Road South), Local Plan Map LPM32"}]},
+    {"code": "CALOUNDRA", "name": "Caloundra local plan", "type": "LOCAL_PLAN", "precincts": [{"code": "CAL_LPP_2", "name": "Precinct CAL LPP-2 (Moffat Beach/Shelly Beach/Dicky Beach), Local Plan Map LPM45"}]}
    ],
    "raw_scopes": {
     "Emerging community zone": [{"level": "ZONE", "zone": "EMERGING_COMMUNITY"}],
@@ -291,6 +293,260 @@
     "^ldr4_": [{"level": "PRECINCT", "precinct": "LOW_DENSITY_RESIDENTIAL/LDR4"}],
     "^ldr5_": [{"level": "PRECINCT", "precinct": "LOW_DENSITY_RESIDENTIAL/LDR5"}]
    }
+  },
+  "burke": {
+   "authority": "BSC",
+   "zones": [
+    {"code": "TOWNSHIP", "name": "Township zone", "regulated": "TOWNSHIP", "dwelling_house_permitted": true, "basis": "Table 5.5.1 (AD subject to requirements in Residential precinct; code assessment otherwise)"},
+    {"code": "RURAL_RESIDENTIAL", "name": "Rural residential zone", "regulated": "RURAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.3 (AD subject to requirements; code assessment otherwise)"},
+    {"code": "RURAL", "name": "Rural zone", "regulated": "RURAL", "dwelling_house_permitted": true, "basis": "Table 5.5.4 (AD subject to requirements if conditions met; code assessment otherwise)"}
+   ],
+   "precincts": [
+    {"zone": "TOWNSHIP", "code": "COMMERCIAL", "name": "Commercial precinct"},
+    {"zone": "TOWNSHIP", "code": "RESIDENTIAL", "name": "Residential precinct"},
+    {"zone": "TOWNSHIP", "code": "INDUSTRIAL", "name": "Industrial precinct"}
+   ],
+   "local_plans": [],
+   "raw_scopes": {
+    "Township zone – Residential precinct": [{"level": "PRECINCT", "precinct": "TOWNSHIP/RESIDENTIAL"}],
+    "Township zone – Commercial precinct": [{"level": "PRECINCT", "precinct": "TOWNSHIP/COMMERCIAL"}],
+    "Township zone – Industrial precinct": [{"level": "PRECINCT", "precinct": "TOWNSHIP/INDUSTRIAL"}],
+    "Township zone (no precinct)": [{"level": "ZONE", "zone": "TOWNSHIP"}],
+    "Rural residential zone": [{"level": "ZONE", "zone": "RURAL_RESIDENTIAL"}],
+    "Rural zone": [{"level": "ZONE", "zone": "RURAL"}]
+   },
+   "rule_key_scopes": {}
+  },
+  "central_highlands": {
+   "authority": "CHRC",
+   "zones": [
+    {"code": "RURAL_RESIDENTIAL", "name": "Rural residential zone", "regulated": "RURAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.4.1 - Dwelling house: Accepted development"},
+    {"code": "GENERAL_RESIDENTIAL", "name": "General residential zone", "regulated": "GENERAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.4.2 - Dwelling house: Accepted development"},
+    {"code": "HIGH_DENSITY_RESIDENTIAL", "name": "High density residential zone", "regulated": "HIGH_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.4.3 - Dwelling house: Accepted development"},
+    {"code": "EMERGING_COMMUNITY", "name": "Emerging community zone", "regulated": "EMERGING_COMMUNITY", "dwelling_house_permitted": true, "basis": "Emerging community zone table (numbered 5.5.4 in ePlan) - Dwelling house: Accepted development"},
+    {"code": "RURAL", "name": "Rural zone", "regulated": "RURAL", "dwelling_house_permitted": true, "basis": "Table 5.4.16 - Dwelling house: Accepted development"},
+    {"code": "TOWNSHIP", "name": "Township zone", "regulated": "TOWNSHIP", "dwelling_house_permitted": true, "basis": "Table 5.4.17 - Dwelling house: Accepted development"}
+   ],
+   "precincts": [
+    {"zone": "GENERAL_RESIDENTIAL", "code": "MEDIUM_DENSITY_RESIDENTIAL", "name": "Medium density residential precinct"},
+    {"zone": "RURAL", "code": "GEMFIELDS_CORE", "name": "Gemfields Core precinct"},
+    {"zone": "RURAL", "code": "GEMFIELDS_FRAME", "name": "Gemfields Frame precinct"},
+    {"zone": "RURAL", "code": "GEMFIELDS_BALANCE", "name": "Gemfields Balance precinct"}
+   ],
+   "local_plans": [],
+   "raw_scopes": {
+    "Rural residential zone": [{"level": "ZONE", "zone": "RURAL_RESIDENTIAL"}],
+    "General residential zone (including the Medium density residential precinct)": [{"level": "ZONE", "zone": "GENERAL_RESIDENTIAL"}],
+    "High density residential zone": [{"level": "ZONE", "zone": "HIGH_DENSITY_RESIDENTIAL"}],
+    "Emerging community zone": [{"level": "ZONE", "zone": "EMERGING_COMMUNITY"}],
+    "Township zone": [{"level": "ZONE", "zone": "TOWNSHIP"}],
+    "Rural zone (excluding the Gemfields precincts)": [{"level": "ZONE", "zone": "RURAL"}],
+    "Rural zone - Gemfields precincts (Gemfields Core, Gemfields Frame, Gemfields Balance)": [{"level": "PRECINCT", "precinct": "RURAL/GEMFIELDS_CORE"}, {"level": "PRECINCT", "precinct": "RURAL/GEMFIELDS_FRAME"}, {"level": "PRECINCT", "precinct": "RURAL/GEMFIELDS_BALANCE"}]
+   },
+   "rule_key_scopes": {}
+  },
+  "livingstone": {
+   "authority": "LSC",
+   "zones": [
+    {"code": "LOW_DENSITY_RESIDENTIAL", "name": "Low density residential zone", "regulated": "LOW_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.4.6.1 (Accepted)"},
+    {"code": "LOW_MEDIUM_DENSITY_RESIDENTIAL", "name": "Low-medium density residential zone", "regulated": "LOW_MEDIUM_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.4.6.2 (Accepted)"},
+    {"code": "MEDIUM_DENSITY_RESIDENTIAL", "name": "Medium density residential zone", "regulated": "MEDIUM_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.4.6.3 (Accepted)"},
+    {"code": "EMERGING_COMMUNITY", "name": "Emerging community zone", "regulated": "EMERGING_COMMUNITY", "dwelling_house_permitted": true, "basis": "Table 5.4.4.2 (Accepted subject to requirements outside an approved structure plan)"},
+    {"code": "RURAL", "name": "Rural zone", "regulated": "RURAL", "dwelling_house_permitted": true, "basis": "Table 5.4.4.4 (Accepted subject to requirements; Code in Yaamba Historic Township Precinct)"},
+    {"code": "RURAL_RESIDENTIAL", "name": "Rural residential zone", "regulated": "RURAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.4.4.5 (Accepted subject to requirements)"},
+    {"code": "TOWNSHIP", "name": "Township zone", "regulated": "TOWNSHIP", "dwelling_house_permitted": true, "basis": "Table 5.4.4.8 (Accepted subject to requirements)"},
+    {"code": "MAJOR_TOURISM", "name": "Major tourism zone", "regulated": "MAJOR_TOURISM", "dwelling_house_permitted": true, "basis": "Table 5.4.7.1 (Accepted subject to requirements in GKI Precinct Accommodation Sub-precinct; otherwise Code assessment)"}
+   ],
+   "precincts": [
+    {"zone": "RURAL", "code": "CAPRICORN_COAST_RURAL", "name": "Capricorn Coast Rural Precinct (ZP-01)"},
+    {"zone": "RURAL", "code": "YAAMBA_HISTORIC_TOWNSHIP", "name": "Yaamba Historic Township Precinct (ZP-13)"},
+    {"zone": "RURAL_RESIDENTIAL", "code": "PARK_RESIDENTIAL", "name": "Park Residential Precinct (ZP-02)"},
+    {"zone": "LOW_DENSITY_RESIDENTIAL", "code": "TANBY_ROAD_COMMERCIAL_TRANSITION", "name": "Tanby Road Commercial Transition Precinct (ZP-05)"},
+    {"zone": "LOW_DENSITY_RESIDENTIAL", "code": "KINKA_LOCAL_BUSINESS", "name": "Kinka Local Business Precinct (ZP-12)"},
+    {"zone": "LOW_MEDIUM_DENSITY_RESIDENTIAL", "code": "COOEE_BAY_ACCOMMODATION", "name": "Cooee Bay Accommodation Precinct (ZP-06)"},
+    {"zone": "MEDIUM_DENSITY_RESIDENTIAL", "code": "ROSSLYN_BAY_ACCOMMODATION", "name": "Rosslyn Bay Accommodation Precinct (ZP-07)"},
+    {"zone": "MEDIUM_DENSITY_RESIDENTIAL", "code": "MAJOR_CENTRE_COMMERCIAL_TRANSITION", "name": "Major Centre Commercial Transition Precinct (ZP-08)"},
+    {"zone": "MAJOR_TOURISM", "code": "CAPRICORN_INTERNATIONAL_RESORT", "name": "Capricorn International Resort Precinct (ZP-09)"},
+    {"zone": "MAJOR_TOURISM", "code": "GREAT_KEPPEL_ISLAND", "name": "Great Keppel Island Precinct (ZP-10)"}
+   ],
+   "local_plans": [
+    {"code": "SEASPRAY", "name": "Seaspray Local Plan", "type": "LOCAL_PLAN", "precincts": [{"code": "SEASPRAY_RESIDENTIAL_LOW_DENSITY", "name": "LPP-01 Seaspray Residential Low Density Precinct"}, {"code": "SEASPRAY_RESIDENTIAL_MEDIUM_DENSITY", "name": "LPP-02 Seaspray Residential Medium Density Precinct"}, {"code": "SEASPRAY_COMMUNITY_AND_RECREATION", "name": "LPP-03 Seaspray Community and Recreation Precinct"}]}
+   ],
+   "raw_scopes": {
+    "Low Density Residential Zone": [{"level": "ZONE", "zone": "LOW_DENSITY_RESIDENTIAL"}],
+    "Low-Medium Density Residential Zone": [{"level": "ZONE", "zone": "LOW_MEDIUM_DENSITY_RESIDENTIAL"}],
+    "Township Zone": [{"level": "ZONE", "zone": "TOWNSHIP"}],
+    "Medium Density Residential Zone": [{"level": "ZONE", "zone": "MEDIUM_DENSITY_RESIDENTIAL"}],
+    "Major Tourism Zone (Capricorn International Resort Precinct)": [{"level": "PRECINCT", "precinct": "MAJOR_TOURISM/CAPRICORN_INTERNATIONAL_RESORT"}],
+    "Major Tourism Zone (Great Keppel Island Precinct)": [{"level": "PRECINCT", "precinct": "MAJOR_TOURISM/GREAT_KEPPEL_ISLAND"}],
+    "Rural Zone": [{"level": "ZONE", "zone": "RURAL"}],
+    "Rural Zone (Yaamba Historic Township Precinct)": [{"level": "PRECINCT", "precinct": "RURAL/YAAMBA_HISTORIC_TOWNSHIP"}],
+    "Emerging Community Zone": [{"level": "ZONE", "zone": "EMERGING_COMMUNITY"}],
+    "Rural Residential Zone": [{"level": "ZONE", "zone": "RURAL_RESIDENTIAL"}],
+    "Rural Residential Zone (Park Residential Precinct)": [{"level": "PRECINCT", "precinct": "RURAL_RESIDENTIAL/PARK_RESIDENTIAL"}],
+    "Seaspray Local Plan (Seaspray Residential Low Density Precinct)": [],
+    "Seaspray Local Plan (Seaspray Residential Medium Density Precinct)": [],
+    "Seaspray Local Plan (Seaspray Community and Recreation Precinct)": []
+   },
+   "rule_key_scopes": {}
+  },
+  "mount_isa": {
+   "authority": "MICC",
+   "zones": [
+    {"code": "LOW_DENSITY_RESIDENTIAL", "name": "Low density residential zone", "regulated": "LOW_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.1 - Dwelling house accepted subject to requirements if no secondary dwelling is proposed"},
+    {"code": "MEDIUM_DENSITY_RESIDENTIAL", "name": "Medium density residential zone", "regulated": "MEDIUM_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.2 - Dwelling house accepted subject to requirements"},
+    {"code": "LOCAL_CENTRE", "name": "Local centre zone", "regulated": "LOCAL_CENTRE", "dwelling_house_permitted": true, "basis": "Table 5.5.3 - Dwelling house accepted subject to requirements (condition grouping ambiguous)"},
+    {"code": "PRINCIPAL_CENTRE", "name": "Principal centre zone", "regulated": "PRINCIPAL_CENTRE", "dwelling_house_permitted": true, "basis": "Table 5.5.4 - Dwelling house accepted subject to requirements (condition grouping ambiguous)"},
+    {"code": "COMMUNITY_FACILITIES", "name": "Community facilities zone", "regulated": "COMMUNITY_FACILITIES", "dwelling_house_permitted": true, "basis": "Table 5.5.11 - Dwelling house accepted subject to requirements if associated with a hospital or education establishment, for students or staff only"},
+    {"code": "MIXED_USE", "name": "Mixed use zone", "regulated": "MIXED_USE", "dwelling_house_permitted": true, "basis": "Table 5.5.12 - Dwelling house accepted subject to requirements"},
+    {"code": "RURAL", "name": "Rural zone", "regulated": "RURAL", "dwelling_house_permitted": true, "basis": "Table 5.5.13 - Dwelling house accepted subject to requirements"},
+    {"code": "RURAL_RESIDENTIAL", "name": "Rural residential zone", "regulated": "RURAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.14 - Dwelling house accepted subject to requirements"},
+    {"code": "TOWNSHIP", "name": "Township zone", "regulated": "TOWNSHIP", "dwelling_house_permitted": true, "basis": "Table 5.5.16 - Dwelling house accepted subject to requirements"}
+   ],
+   "precincts": [],
+   "local_plans": [
+    {"code": "MOUNT_ISA_AIRPORT", "name": "Mount Isa airport local plan", "type": "LOCAL_PLAN", "precincts": [{"code": "AIRPORT_OPERATIONS", "name": "Airport operations precinct"}, {"code": "COMMERCIAL_AND_LOW_IMPACT_INDUSTRY", "name": "Commercial and low impact industry precinct"}, {"code": "TOURIST_AND_RECREATIONAL", "name": "Tourist and recreational precinct"}, {"code": "AIRCRAFT_MANOEUVRING", "name": "Aircraft manoeuvring precinct"}, {"code": "WESTERN_AIRPORT", "name": "Western airport precinct"}]}
+   ],
+   "raw_scopes": {
+    "Low density residential": [{"level": "ZONE", "zone": "LOW_DENSITY_RESIDENTIAL"}],
+    "Medium density residential": [{"level": "ZONE", "zone": "MEDIUM_DENSITY_RESIDENTIAL"}],
+    "Township": [{"level": "ZONE", "zone": "TOWNSHIP"}],
+    "Mixed use": [{"level": "ZONE", "zone": "MIXED_USE"}],
+    "Community facilities": [{"level": "ZONE", "zone": "COMMUNITY_FACILITIES"}],
+    "Rural": [{"level": "ZONE", "zone": "RURAL"}],
+    "Rural residential": [{"level": "ZONE", "zone": "RURAL_RESIDENTIAL"}],
+    "Local centre": [{"level": "ZONE", "zone": "LOCAL_CENTRE"}],
+    "Principal centre": [{"level": "ZONE", "zone": "PRINCIPAL_CENTRE"}]
+   },
+   "rule_key_scopes": {}
+  },
+  "rockhampton": {
+   "authority": "RRC",
+   "zones": [
+    {"code": "LOW_DENSITY_RESIDENTIAL", "name": "Low density residential zone", "regulated": "LOW_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.4.1.1 (Accepted)"},
+    {"code": "LOW_MEDIUM_DENSITY_RESIDENTIAL", "name": "Low-medium density residential zone", "regulated": "LOW_MEDIUM_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.4.1.2 (Accepted)"},
+    {"code": "HIGH_DENSITY_RESIDENTIAL", "name": "High density residential zone", "regulated": "HIGH_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.4.1.3 (Accepted)"},
+    {"code": "TOWNSHIP", "name": "Township zone", "regulated": "TOWNSHIP", "dwelling_house_permitted": true, "basis": "Table 5.4.6.7 (Accepted)"},
+    {"code": "RURAL_RESIDENTIAL", "name": "Rural residential zone", "regulated": "RURAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.4.6.5 (Accepted); Table 5.4.6.5.1 Baree and Walterhall precinct (Code assessment)"},
+    {"code": "RURAL", "name": "Rural zone", "regulated": "RURAL", "dwelling_house_permitted": true, "basis": "Table 5.4.6.4 / 5.4.6.4.1 (Accepted subject to requirements)"},
+    {"code": "EMERGING_COMMUNITY", "name": "Emerging community zone", "regulated": "EMERGING_COMMUNITY", "dwelling_house_permitted": true, "basis": "Table 5.4.6.2 (Accepted subject to requirements)"}
+   ],
+   "precincts": [
+    {"zone": "LOW_DENSITY_RESIDENTIAL", "code": "FITZROY_RIVER_ACCOMMODATION", "name": "Fitzroy River accommodation precinct"},
+    {"zone": "LOW_DENSITY_RESIDENTIAL", "code": "RESIDENTIAL_STABLES", "name": "Residential stables precinct"},
+    {"zone": "TOWNSHIP", "code": "KABRA_AND_STANWELL", "name": "Kabra and Stanwell precinct"},
+    {"zone": "RURAL_RESIDENTIAL", "code": "BAREE_AND_WALTERHALL", "name": "Baree and Walterhall precinct"},
+    {"zone": "RURAL", "code": "ALTON_DOWNS", "name": "Alton Downs precinct"},
+    {"zone": "RURAL", "code": "CROPPING_AND_INTENSIVE_HORTICULTURE", "name": "Cropping and intensive horticulture precinct"}
+   ],
+   "local_plans": [],
+   "raw_scopes": {
+    "Low density residential zone": [{"level": "ZONE", "zone": "LOW_DENSITY_RESIDENTIAL"}],
+    "Low-medium density residential zone": [{"level": "ZONE", "zone": "LOW_MEDIUM_DENSITY_RESIDENTIAL"}],
+    "High density residential zone": [{"level": "ZONE", "zone": "HIGH_DENSITY_RESIDENTIAL"}],
+    "Township zone": [{"level": "ZONE", "zone": "TOWNSHIP"}],
+    "Rural residential zone": [{"level": "ZONE", "zone": "RURAL_RESIDENTIAL"}],
+    "Rural residential zone - Baree and Walterhall precinct": [{"level": "PRECINCT", "precinct": "RURAL_RESIDENTIAL/BAREE_AND_WALTERHALL"}],
+    "Rural zone": [{"level": "ZONE", "zone": "RURAL"}],
+    "Rural zone - Alton Downs precinct": [{"level": "PRECINCT", "precinct": "RURAL/ALTON_DOWNS"}],
+    "Emerging community zone": [{"level": "ZONE", "zone": "EMERGING_COMMUNITY"}],
+    "All zones": []
+   },
+   "rule_key_scopes": {}
+  },
+  "south_burnett": {
+   "authority": "SBRC",
+   "zones": [
+    {"code": "LOW_DENSITY_RESIDENTIAL", "name": "Low density residential zone", "regulated": "LOW_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.1"},
+    {"code": "MEDIUM_DENSITY_RESIDENTIAL", "name": "Medium density residential zone", "regulated": "MEDIUM_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.2"},
+    {"code": "EMERGING_COMMUNITY", "name": "Emerging community zone", "regulated": "EMERGING_COMMUNITY", "dwelling_house_permitted": true, "basis": "Table 5.5.11"},
+    {"code": "RURAL", "name": "Rural zone", "regulated": "RURAL", "dwelling_house_permitted": true, "basis": "Table 5.5.13"},
+    {"code": "RURAL_RESIDENTIAL", "name": "Rural residential zone", "regulated": "RURAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.14"},
+    {"code": "TOWNSHIP", "name": "Township zone", "regulated": "TOWNSHIP", "dwelling_house_permitted": true, "basis": "Table 5.5.16"}
+   ],
+   "precincts": [
+    {"zone": "LOW_DENSITY_RESIDENTIAL", "code": "BUNYA_MOUNTAINS", "name": "Bunya Mountains Precinct"},
+    {"zone": "RURAL", "code": "RU1_WINERY", "name": "RU1 – Winery Precinct"}
+   ],
+   "local_plans": [],
+   "raw_scopes": {
+    "Low density residential zone": [{"level": "ZONE", "zone": "LOW_DENSITY_RESIDENTIAL"}],
+    "Medium density residential zone": [{"level": "ZONE", "zone": "MEDIUM_DENSITY_RESIDENTIAL"}],
+    "Emerging community zone": [{"level": "ZONE", "zone": "EMERGING_COMMUNITY"}],
+    "Rural zone": [{"level": "ZONE", "zone": "RURAL"}],
+    "Rural residential zone": [{"level": "ZONE", "zone": "RURAL_RESIDENTIAL"}],
+    "Township zone": [{"level": "ZONE", "zone": "TOWNSHIP"}]
+   },
+   "rule_key_scopes": {}
+  },
+  "townsville": {
+   "authority": "TCC",
+   "zones": [
+    {"code": "LOW_DENSITY_RESIDENTIAL", "name": "Low density residential zone", "regulated": "LOW_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.1"},
+    {"code": "MEDIUM_DENSITY_RESIDENTIAL", "name": "Medium density residential zone", "regulated": "MEDIUM_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.2"},
+    {"code": "HIGH_DENSITY_RESIDENTIAL", "name": "High density residential zone", "regulated": "HIGH_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.4"},
+    {"code": "RURAL_RESIDENTIAL", "name": "Rural residential zone", "regulated": "RURAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.5"},
+    {"code": "CHARACTER_RESIDENTIAL", "name": "Character residential zone", "regulated": "CHARACTER_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5.6; Table 5.7.1"},
+    {"code": "SPORT_AND_RECREATION", "name": "Sport and recreation zone", "regulated": "SPORT_AND_RECREATION", "dwelling_house_permitted": true, "basis": "Table 5.5.14 (accepted only in the Balgal Beach golf course precinct; otherwise impact assessment)"},
+    {"code": "ENVIRONMENTAL_MANAGEMENT_AND_CONSERVATION", "name": "Environmental management and conservation zone", "regulated": "ENVIRONMENTAL_MANAGEMENT_AND_CONSERVATION", "dwelling_house_permitted": true, "basis": "Table 5.5.17 (code assessment)"},
+    {"code": "RURAL", "name": "Rural zone", "regulated": "RURAL", "dwelling_house_permitted": true, "basis": "Table 5.5.21"},
+    {"code": "EMERGING_COMMUNITY", "name": "Emerging community zone", "regulated": "EMERGING_COMMUNITY", "dwelling_house_permitted": true, "basis": "Table 5.5.22"}
+   ],
+   "precincts": [
+    {"zone": "RURAL", "code": "CUNGULLA", "name": "Cungulla precinct"},
+    {"zone": "SPORT_AND_RECREATION", "code": "BALGAL_BEACH_GOLF_COURSE", "name": "Balgal Beach golf course precinct"}
+   ],
+   "local_plans": [],
+   "raw_scopes": {
+    "Low density residential zone": [{"level": "ZONE", "zone": "LOW_DENSITY_RESIDENTIAL"}],
+    "Medium density residential zone": [{"level": "ZONE", "zone": "MEDIUM_DENSITY_RESIDENTIAL"}],
+    "High density residential zone": [{"level": "ZONE", "zone": "HIGH_DENSITY_RESIDENTIAL"}],
+    "Rural residential zone": [{"level": "ZONE", "zone": "RURAL_RESIDENTIAL"}],
+    "Character residential zone": [{"level": "ZONE", "zone": "CHARACTER_RESIDENTIAL"}],
+    "Sport and recreation zone - Balgal Beach golf course precinct": [{"level": "PRECINCT", "precinct": "SPORT_AND_RECREATION/BALGAL_BEACH_GOLF_COURSE"}],
+    "Environmental management and conservation zone": [{"level": "ZONE", "zone": "ENVIRONMENTAL_MANAGEMENT_AND_CONSERVATION"}],
+    "Rural zone": [{"level": "ZONE", "zone": "RURAL"}],
+    "Rural zone - Cungulla precinct": [{"level": "PRECINCT", "precinct": "RURAL/CUNGULLA"}],
+    "Emerging community zone": [{"level": "ZONE", "zone": "EMERGING_COMMUNITY"}]
+   },
+   "rule_key_scopes": {}
+  },
+  "toowoomba": {
+   "authority": "TRC",
+   "zones": [
+    {"code": "LOW_DENSITY_RESIDENTIAL", "name": "Low Density Residential Zone", "regulated": "LOW_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5:1"},
+    {"code": "LOW_MEDIUM_DENSITY_RESIDENTIAL", "name": "Low-medium Density Residential Zone", "regulated": "LOW_MEDIUM_DENSITY_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5:2"},
+    {"code": "SPECIALISED_CENTRE", "name": "Specialised Centre Zone", "regulated": "SPECIALISED_CENTRE", "dwelling_house_permitted": true, "basis": "Table 5.5:7 (Defence Facilities Precinct only)"},
+    {"code": "COMMUNITY_FACILITIES", "name": "Community Facilities Zone", "regulated": "COMMUNITY_FACILITIES", "dwelling_house_permitted": true, "basis": "Table 5.5:14"},
+    {"code": "EMERGING_COMMUNITY", "name": "Emerging Community Zone", "regulated": "EMERGING_COMMUNITY", "dwelling_house_permitted": true, "basis": "Table 5.5:15"},
+    {"code": "TOWNSHIP", "name": "Township Zone", "regulated": "TOWNSHIP", "dwelling_house_permitted": true, "basis": "Table 5.5:17"},
+    {"code": "RURAL_RESIDENTIAL", "name": "Rural Residential Zone", "regulated": "RURAL_RESIDENTIAL", "dwelling_house_permitted": true, "basis": "Table 5.5:18"},
+    {"code": "RURAL", "name": "Rural Zone", "regulated": "RURAL", "dwelling_house_permitted": true, "basis": "Table 5.5:19"}
+   ],
+   "precincts": [
+    {"zone": "LOW_MEDIUM_DENSITY_RESIDENTIAL", "code": "HOSPITAL_SUPPORT", "name": "Hospital Support Precinct"},
+    {"zone": "TOWNSHIP", "code": "FLOOD_MANAGEMENT", "name": "Flood Management Precinct"},
+    {"zone": "SPECIALISED_CENTRE", "code": "DEFENCE_FACILITIES", "name": "Defence Facilities Precinct"}
+   ],
+   "local_plans": [
+    {"code": "HIGHFIELDS_MERINGANDAN", "name": "Highfields, Meringandan and Meringandan West Local Plan", "type": "LOCAL_PLAN", "precincts": []},
+    {"code": "GLENVALE", "name": "Glenvale Local Plan", "type": "LOCAL_PLAN", "precincts": []},
+    {"code": "CHARLTON_WELLCAMP", "name": "Charlton Wellcamp Enterprise Area Local Plan", "type": "LOCAL_PLAN", "precincts": []}
+   ],
+   "raw_scopes": {
+    "Low Density Residential Zone": [{"level": "ZONE", "zone": "LOW_DENSITY_RESIDENTIAL"}],
+    "Low-medium Density Residential Zone": [{"level": "ZONE", "zone": "LOW_MEDIUM_DENSITY_RESIDENTIAL"}],
+    "Low-medium Density Residential Zone - Hospital Support Precinct": [{"level": "PRECINCT", "precinct": "LOW_MEDIUM_DENSITY_RESIDENTIAL/HOSPITAL_SUPPORT"}],
+    "Township Zone": [{"level": "ZONE", "zone": "TOWNSHIP"}],
+    "Township Zone - Flood Management Precinct": [{"level": "PRECINCT", "precinct": "TOWNSHIP/FLOOD_MANAGEMENT"}],
+    "Rural Residential Zone": [{"level": "ZONE", "zone": "RURAL_RESIDENTIAL"}],
+    "Rural Zone": [{"level": "ZONE", "zone": "RURAL"}],
+    "Community Facilities Zone": [{"level": "ZONE", "zone": "COMMUNITY_FACILITIES"}],
+    "Emerging Community Zone": [{"level": "ZONE", "zone": "EMERGING_COMMUNITY"}],
+    "Specialised Centre Zone - Defence Facilities Precinct": [{"level": "PRECINCT", "precinct": "SPECIALISED_CENTRE/DEFENCE_FACILITIES"}],
+    "All zones": []
+   },
+   "rule_key_scopes": {}
   }
  }
 }

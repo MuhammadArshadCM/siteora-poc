@@ -57,11 +57,18 @@ At start-up the server checks the database, the rules dataset and the State and 
 what is wrong, if anything. `GET /api/health` repeats the check at any time.
 
 ```
-GET /api/rules?address=...&structure=SHED&height_m=3&length_m=6&width_m=4[&zone_id=&precinct=&date=&lon=&lat=]
+GET /api/rules?address=...&structure=SHED&height_m=3&length_m=6&width_m=4[&zone_id=&precinct=&date=&lon=&lat=&scope=setbacks|maps]
 GET /api/zones?lg_id=BRISBANE
 GET /api/features?layer=<configured layer URL>&bbox=xmin,ymin,xmax,ymax   (map: a layer clipped to the view)
 GET /api/health                (200 all well / 503 with what is not working, and how long each service took)
 ```
+
+`scope` narrows the response (and the work done): omitted or `all` is the full result, unchanged; `scope=setbacks`
+still resolves the location (rules need the zone) but returns only setback-category rules — everything under
+`SETBACK.*` or `SEPARATION.*`, the same definition `regs.v_setback_rules` uses — and the `location`/map-only fields
+are left for the client to ignore; `scope=maps` does not run the rule engine at all (no DB rule load, no facts beyond
+what `locate()` already produces) and returns the location/zoning/overlay/site-constraint data with `rules: []` and
+`council_rules: null`. The web page's "Setbacks only" / "Maps only" checkboxes set this.
 
 Errors are `{"error": "..."}`, and the message says what to do:
 

@@ -1,0 +1,676 @@
+{
+  "council": "Central Highlands Regional Council",
+  "planning_scheme": {
+    "name": "Central Highlands Regional Council Planning Scheme 2016 (cited as \"Central Highlands Planning Scheme 2016 (Amendment No. 7)\")",
+    "version": "Amendment No. 7 (IsoPlan revision 82, revisionDate 25-Jun-2025, revStatus Current)",
+    "version_commenced": "2024-06-07",
+    "official_urls": [
+      "https://eplan.chrc.qld.gov.au/planningscheme",
+      "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/249/0/0/0/82",
+      "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/215/0/0/0/82",
+      "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/4/0/0/0/82"
+    ],
+    "notes": "api/l/vpr: revisionId 82 \"Amendment No. 7\", revStatus \"Current\", planOperative 06/07/2024, revisionDate 06/25/2025. Citation and commencement: \"This planning scheme may be cited as the Central Highlands Planning Scheme 2016 (Amendment No. 7).\" / \"The commencement date for the planning scheme was 7 June 2024.\" Appendix 2: Amendment No. 7 \"Adoption: 29 May 2024 Effective: 7 June 2024\". QHC: no reference to the Queensland Housing Code found anywhere in the scheme text (all 122 ePlan sections with content searched for \"Housing Code\"); the scheme refers only to QDC MP1.1/MP1.2. The section text API returned data only when queried with the revision date 25-Jun-2025 (22-Oct-2026 returned null rules)."
+  },
+  "qdc_qhc_relationship": {
+    "summary": "Part 1.6 / Table 1.6.1 nominates Dwelling house code PO1/AO1 and PO2/AO2 as alternative provisions to QDC MP1.2 road boundary setbacks and PO3/AO3 as alternative provisions to QDC MP1.2 side and rear boundary clearances (Building Act s32(c) and s33). All three are limited to the Rural zone (AO1 and AO3 exclude the Gemfields precincts; AO2 applies to the Gemfields precincts only). No zone code contains setbacks. Everywhere else the QDC applies. The scheme does not mention the Queensland Housing Code.",
+    "quotes": [
+      {
+        "clause": "1.6",
+        "text": "This planning scheme, through Part 5 (Tables of assessment) and this subsection, regulates building work in accordance with sections 32 and 33 of the Building Act 1975.",
+        "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/4/0/0/0/82"
+      },
+      {
+        "clause": "1.6 (editor's note)",
+        "text": "specifying alternative boundary clearances and site cover provisions for particular Class 1 and Class 10 structures under section 33 of the Building Act 1975 (alternative provisions).",
+        "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/4/0/0/0/82"
+      },
+      {
+        "clause": "Table 1.6.1",
+        "text": "Section 32(c) and section 33 of the Building Act 1975 | Alternative provisions to QDC part MP1.2 road boundary setbacks | Section 8.3.5 Dwelling house code PO1 and AO1; PO2 and AO2 || Alternative provisions to QDC part MP1.2 side and rear boundary clearances | Section 8.3.5 Dwelling house code PO3 and AO3",
+        "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/4/0/0/0/82"
+      },
+      {
+        "clause": "Table 8.3.5.3.1 (note)",
+        "text": "Note—the performance outcomes of this code and the corresponding acceptable outcomes are in addition to the mandatory Queensland Development Code (QDC) provisions and nominate the application of certain provisions, any alternative qualitative statements or quantitative standards for the purposes of section 6 of the Building Regulation 2021, and any alternative provisions made under section 33 of the Building Act 1975.",
+        "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/215/0/0/0/82"
+      },
+      {
+        "clause": "Table 8.3.5.3.1 (note)",
+        "text": "Note—The provisions of this code apply to single detached dwellings (Class 1), other Class 1 dwellings involving dwelling houses that have a self-contained secondary dwelling and associated Class 10 domestic outbuildings and structures.",
+        "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/215/0/0/0/82"
+      }
+    ]
+  },
+  "levels_of_assessment": [
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "Rural residential zone",
+      "level": "Accepted development",
+      "conditions": "Assessment benchmarks: \"Not applicable\" with footnote referring building work to Table 5.6.1",
+      "quote": "Dwelling house | Accepted development | Not applicable || 1The building work still requires a development approval. Refer to Table 5.6.1 for the assessment benchmarks for the building work.",
+      "clause": "Table 5.4.1",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/247/0/0/0/82"
+    },
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "General residential zone",
+      "level": "Accepted development",
+      "conditions": "Assessment benchmarks: \"Not applicable\" with footnote referring building work to Table 5.6.1",
+      "quote": "Dwelling house | Accepted development | Not applicable || 2The building work still requires a development application. Refer to Table 5.6.1 for assessment benchmarks for the building work.",
+      "clause": "Table 5.4.2",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/246/0/0/0/82"
+    },
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "High density residential zone",
+      "level": "Accepted development",
+      "conditions": "Assessment benchmarks: \"Not applicable\" with footnote referring building work to Table 5.6.1",
+      "quote": "Dwelling house | Accepted development | Not applicable || 3The building work still requires a development application. Refer to Table 5.6.1 for assessment benchmarks for the building work.",
+      "clause": "Table 5.4.3",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/245/0/0/0/82"
+    },
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "Emerging community zone",
+      "level": "Accepted development",
+      "conditions": "Assessment benchmarks: \"Not applicable\" with footnote referring building work to Table 5.6.1",
+      "quote": "Dwelling house | Accepted development | Not applicable || 4The building work still requires a development application. Refer to Table 5.6.1 for assessment benchmarks for the building work.",
+      "clause": "Table 5.5.4 (as numbered in ePlan; Emerging community zone table)",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/244/0/0/0/82"
+    },
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "Rural zone",
+      "level": "Accepted development",
+      "conditions": "Assessment benchmarks: \"Not applicable\" with footnote referring building work to Table 5.6.1",
+      "quote": "Dwelling house | Accepted development | Not applicable || 11The building work still requires a development approval. Refer to Table 5.6.1 for assessment benchmarks for the building work.",
+      "clause": "Table 5.4.16",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/232/0/0/0/82"
+    },
+    {
+      "use_or_work": "Dwelling house (material change of use)",
+      "zone": "Township zone",
+      "level": "Accepted development",
+      "conditions": "Assessment benchmarks: \"Not applicable\" with footnote referring building work to Table 5.6.1",
+      "quote": "Dwelling house | Accepted development | Not applicable || 14The building work still requires a development approval. Refer to Table 5.6.1 for assessment benchmarks for the building work.",
+      "clause": "Table 5.4.17",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/231/0/0/0/82"
+    },
+    {
+      "use_or_work": "Class 10 building work (dwelling house and associated outbuildings)",
+      "zone": "All zones",
+      "level": "Accepted development",
+      "conditions": "minor building work, no secondary dwelling",
+      "quote": "Building work for dwelling house and associated outbuildings || All zones | Accepted development if:- minor building work18; and not involving a secondary dwelling19. | Not applicable",
+      "clause": "Table 5.6.1",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/85/0/0/0/82"
+    },
+    {
+      "use_or_work": "Class 10 building work (dwelling house and associated outbuildings)",
+      "zone": "Rural zone (excluding Gemfields Core, Frame and Balance precincts)",
+      "level": "Accepted development",
+      "conditions": "Class 10a building",
+      "quote": "Rural zone (excluding Gemfields Core precinct, Gemfields Frame precinct and Gemfields Balance precinct) | Accepted development if for a Class 10a building (as per the BCA) | Not applicable",
+      "clause": "Table 5.6.1",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/85/0/0/0/82"
+    },
+    {
+      "use_or_work": "Class 10 building work (dwelling house and associated outbuildings)",
+      "zone": "All zones other than the Rural zone (excluding Gemfields precincts)",
+      "level": "Accepted development subject to requirements",
+      "conditions": "Class 10a building; requirements are GFA / wall height / Gemfields character (no setback AOs)",
+      "quote": "All zones other than the Rural zone (excluding Gemfields Core precinct, Gemfields Frame precinct and Gemfields Balance precinct) | Accepted development subject to requirements if for a Class 10a building (as per the BCA). | AO11.1 and AO11.2 of the Dwelling house code; and AO12.1 and AO12.2 where within Gemfields Core precinct, Gemfields Frame precinct or Gemfields Balance precinct",
+      "clause": "Table 5.6.1",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/85/0/0/0/82"
+    },
+    {
+      "use_or_work": "Class 10 building work (dwelling house and associated outbuildings)",
+      "zone": "All zones",
+      "level": "Code assessment",
+      "conditions": "not accepted development or accepted development subject to requirements; no current approval",
+      "quote": "All zones | Code assessment if:- not accepted development or accepted development subject to requirements elsewhere in this table; and there is no current development approval listing relevant applicable conditions. | Dwelling house code",
+      "clause": "Table 5.6.1",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/85/0/0/0/82"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "domestic outbuilding",
+      "text": "Domestic outbuilding | means a non-habitable class 10a building that is— a shed, garage or carport; and ancillary to a residential use carried out on the premises where the building is.",
+      "clause": "SC1.2.2",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/73/0/0/0/82"
+    },
+    {
+      "term": "Class 10a building",
+      "text": "Class 10a building | non-habitable buildings including sheds, carports, and private garages.",
+      "clause": "SC1.2.2",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/73/0/0/0/82"
+    },
+    {
+      "term": "setback",
+      "text": "Setback | for a building or structure, means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.",
+      "clause": "SC1.2.2",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/73/0/0/0/82"
+    },
+    {
+      "term": "boundary clearance",
+      "text": "Boundary clearance | means the distance between a building or structure on premises and the boundary of the premises, measured from the part of the building or structure that is closest to the boundary, other than a part that is— an architectural or ornamental attachment; or a rainwater fitting.",
+      "clause": "SC1.2.2",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/73/0/0/0/82"
+    },
+    {
+      "term": "dwelling house",
+      "text": "Dwelling house | means a residential use of premises involving— one dwelling and any domestic outbuildings associated with the dwelling; or two dwellings, one of which is a secondary dwelling, and any domestic outbuildings associated with either dwelling.",
+      "clause": "SC1.1.2",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/74/0/0/0/82"
+    },
+    {
+      "term": "minor building work",
+      "text": "Minor building work | means building work that increases the gross floor area of a building by no more than the lesser of the following— 50m2; an area equal to 5% of the gross floor area of the building.",
+      "clause": "SC1.2.2",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/73/0/0/0/82"
+    }
+  ],
+  "rules": [
+    {
+      "rule_key": "chrc_dh_ao1_rural_front",
+      "code": "Dwelling house code",
+      "clause": "Table 8.3.5.3.1 PO1 / AO1",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Rural zone (excluding the Gemfields precincts)"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "dwelling house (use definition includes \"any domestic outbuildings associated with the dwelling\"); table heading: \"buildings and structures\"",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Frontage setbacks for buildings and structures || PO1 Where located in the Rural zone (excluding the Gemfields precincts), a dwelling house is set back from any road frontage to:- maintain an open or mostly open rural landscape; protect the natural rural landscape character and amenity; protect the safe and efficient functioning of the State and local road networks. | AO1 In the Rural zone (excluding the Gemfields precincts) the dwelling house is set back at least:- 100m from a State controlled road frontage; and 20m from any other road frontage.",
+      "structured": {
+        "parameter": "road frontage setback",
+        "operator": "conditional",
+        "value": 20,
+        "unit": "m",
+        "conditions": [
+          "State controlled road frontage: >= 100 m",
+          "any other road frontage: >= 20 m"
+        ],
+        "exceptions": [
+          "Gemfields Core, Gemfields Frame and Gemfields Balance precincts (see AO2)"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Table 1.6.1: \"Alternative provisions to QDC part MP1.2 road boundary setbacks | Section 8.3.5 Dwelling house code PO1 and AO1; PO2 and AO2\"; code editor's note: \"AO1 and AO2 are alternative provisions to A1 of QDC part 1.2.\"",
+      "measurement_notes": "Schedule 1 SC1.2.2 \"Setback ... means the shortest distance, measured horizontally, between the outermost projection of the building or structure to the vertical projection of the boundary of the lot where the building or structure is.\"",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/215/0/0/0/82",
+      "page_or_anchor": "ePlan section 215 (8.3.5), rules 10556/10557, revision 82",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "AO text says \"the dwelling house\"; the table row heading is \"Frontage setbacks for buildings and structures\", the scheme definition of Dwelling house includes associated domestic outbuildings, and the code note says it applies to \"associated Class 10 domestic outbuildings and structures\". Treated as reaching Class 10a; curator to confirm. Table 5.6.1 makes a Class 10a building in the Rural zone (excl. Gemfields) accepted development with no requirements, but AO1 is still a building assessment provision (Table 1.6.1) applied by the building certifier. Precinct exclusion cannot be expressed in raw_scopes (scoped to whole RURAL zone; Gemfields precincts covered by chrc_dh_ao2_gemfields_front)."
+    },
+    {
+      "rule_key": "chrc_dh_ao2_gemfields_front",
+      "code": "Dwelling house code",
+      "clause": "Table 8.3.5.3.1 PO2 / AO2",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Rural zone - Gemfields precincts (Gemfields Core, Gemfields Frame, Gemfields Balance)"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lot > 1,000 m2: 10 m; lot <= 1,000 m2: 6 m",
+      "structure_scope": "dwelling house (use definition includes \"any domestic outbuildings associated with the dwelling\"); table heading: \"buildings and structures\"",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "Frontage setbacks for buildings and structures || PO2 Where located in the Rural zone in a Gemfields precinct, a dwelling house is sufficiently set back from any road frontage to complement the individuality and unconventional form and style of the area. Editor’s note—PO1 and PO2 are alternative provisions to P1 of QDC part 1.2. | AO2 In the Rural zone in a Gemfields precinct the dwelling house is set back:- 10m from the frontage where on a lot greater than 1,000m2; or 6m from the frontage where on a lot 1,000m2 or less. Editor’s note—AO1 and AO2 are alternative provisions to A1 of QDC part 1.2.",
+      "structured": {
+        "parameter": "road frontage setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "lot area > 1,000 m2: 10 m from the frontage",
+          "lot area <= 1,000 m2: 6 m from the frontage"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Table 1.6.1 lists \"Section 8.3.5 Dwelling house code PO1 and AO1; PO2 and AO2\" as \"Alternative provisions to QDC part MP1.2 road boundary setbacks\"; editor's note: \"AO1 and AO2 are alternative provisions to A1 of QDC part 1.2.\"",
+      "measurement_notes": "Schedule 1 SC1.2.2 \"Setback\" definition (measured horizontally to outermost projection).",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/215/0/0/0/82",
+      "page_or_anchor": "ePlan section 215 (8.3.5), rule 10559, revision 82",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "AO wording is \"set back\" (not \"at least\"); read as a minimum per the QDC A1 it replaces, but a curator should confirm. Same dwelling-house-includes-outbuildings scope question as AO1. Gemfields Class 10a buildings are accepted development subject to requirements (AO11.1, AO11.2, AO12.1, AO12.2) under Table 5.6.1."
+    },
+    {
+      "rule_key": "chrc_dh_ao3_rural_side_rear",
+      "code": "Dwelling house code",
+      "clause": "Table 8.3.5.3.1 PO3 / AO3",
+      "provision_type": "ACCEPTABLE_OUTCOME",
+      "zones": [
+        "Rural zone (excluding the Gemfields precincts)"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": "lot > 1 ha: 10 m; lot <= 1 ha: 3 m",
+      "structure_scope": "dwelling house (use definition includes \"any domestic outbuildings associated with the dwelling\"); table heading: \"buildings and structures\"",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "Side and rear boundary clearances for buildings and structures || PO3 Where located in the Rural zone (excluding the Gemfields precincts), the dwelling house is set back from side and rear boundaries to:- preserve the low intensity character and amenity of the Rural zone; and maintain separation and privacy between neighbouring rural premises. Editor’s note—PO3 is an alternative provision to P2 of QDC part 1.2. | AO3 In the Rural zone (excluding the Gemfields precincts) the dwelling house is set back from any side or rear boundary a minimum of:- 10m on a lot of more than 1 hectare; or 3m on a lot of 1 hectare or less. Editor’s note—AO3 is an alternative provision to A2 of QDC part 1.2.",
+      "structured": {
+        "parameter": "side and rear boundary setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "lot area > 1 ha: >= 10 m",
+          "lot area <= 1 ha: >= 3 m"
+        ],
+        "exceptions": [
+          "Gemfields Core, Gemfields Frame and Gemfields Balance precincts"
+        ],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "YES - Table 1.6.1: \"Alternative provisions to QDC part MP1.2 side and rear boundary clearances | Section 8.3.5 Dwelling house code PO3 and AO3\"; editor's note: \"AO3 is an alternative provision to A2 of QDC part 1.2.\"",
+      "measurement_notes": "Schedule 1 SC1.2.2 \"Boundary clearance\" and \"Setback\" definitions (closest part of building, excluding architectural/ornamental attachments and rainwater fittings).",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/215/0/0/0/82",
+      "page_or_anchor": "ePlan section 215 (8.3.5), rules 10558/10560, revision 82",
+      "verification_status": "VERIFIED_VERBATIM",
+      "needs_manual_review": true,
+      "notes": "No height banding. Same scope question as AO1 (AO says \"the dwelling house\"; heading says \"buildings and structures\"; Dwelling house definition includes domestic outbuildings)."
+    },
+    {
+      "rule_key": "chrc_rural_residential_front_absent",
+      "code": "Dwelling house code; 6.2.1 Rural residential zone code",
+      "clause": "Table 8.3.5.3.1 AO1-AO3 (Rural zone only); 6.2.1.3",
+      "provision_type": "OTHER",
+      "zones": [
+        "Rural residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10 buildings and structures",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "(No road frontage setback for Class 10 buildings is stated in the 6.2.1 Rural residential zone code or the Dwelling house code for the Rural residential zone; Dwelling house code AO1/AO2 apply only in the Rural zone; the QDC applies.)",
+      "structured": {
+        "parameter": "road frontage setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "defers to QDC"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council alternative provision for this zone; Table 1.6.1 alternative provisions (Dwelling house code PO1-PO3/AO1-AO3) are limited to the Rural zone",
+      "measurement_notes": "",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/190/0/0/0/82",
+      "page_or_anchor": "ePlan section 190 (6.2.1) and section 215 (8.3.5), revision 82",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Zone code text (full section fetched) contains no \"setback\", \"set back\", \"boundary\" or \"frontage\" provisions. Dwelling house is accepted development in this zone; Class 10a building work is accepted development subject to requirements (Dwelling house code AO11.1, AO11.2 - GFA and wall height only)."
+    },
+    {
+      "rule_key": "chrc_rural_residential_side_rear_absent",
+      "code": "Dwelling house code; 6.2.1 Rural residential zone code",
+      "clause": "Table 8.3.5.3.1 AO1-AO3 (Rural zone only); 6.2.1.3",
+      "provision_type": "OTHER",
+      "zones": [
+        "Rural residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10 buildings and structures",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear boundary setback for Class 10 buildings is stated in the 6.2.1 Rural residential zone code or the Dwelling house code for the Rural residential zone; Dwelling house code AO3 applies only in the Rural zone; the QDC applies.)",
+      "structured": {
+        "parameter": "side and rear boundary setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "defers to QDC"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council alternative provision for this zone; Table 1.6.1 alternative provisions (Dwelling house code PO1-PO3/AO1-AO3) are limited to the Rural zone",
+      "measurement_notes": "",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/190/0/0/0/82",
+      "page_or_anchor": "ePlan section 190 (6.2.1) and section 215 (8.3.5), revision 82",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Zone code text (full section fetched) contains no \"setback\", \"set back\", \"boundary\" or \"frontage\" provisions. Dwelling house is accepted development in this zone; Class 10a building work is accepted development subject to requirements (Dwelling house code AO11.1, AO11.2 - GFA and wall height only)."
+    },
+    {
+      "rule_key": "chrc_general_residential_front_absent",
+      "code": "Dwelling house code; 6.2.2 General residential zone code",
+      "clause": "Table 8.3.5.3.1 AO1-AO3 (Rural zone only); 6.2.2.3",
+      "provision_type": "OTHER",
+      "zones": [
+        "General residential zone (including the Medium density residential precinct)"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10 buildings and structures",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "(No road frontage setback for Class 10 buildings is stated in the 6.2.2 General residential zone code or the Dwelling house code for the General residential zone (including the Medium density residential precinct); Dwelling house code AO1/AO2 apply only in the Rural zone; the QDC applies.)",
+      "structured": {
+        "parameter": "road frontage setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "defers to QDC"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council alternative provision for this zone; Table 1.6.1 alternative provisions (Dwelling house code PO1-PO3/AO1-AO3) are limited to the Rural zone",
+      "measurement_notes": "",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/189/0/0/0/82",
+      "page_or_anchor": "ePlan section 189 (6.2.2) and section 215 (8.3.5), revision 82",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Zone code text (full section fetched) contains no \"setback\", \"set back\", \"boundary\" or \"frontage\" provisions. Dwelling house is accepted development in this zone; Class 10a building work is accepted development subject to requirements (Dwelling house code AO11.1, AO11.2 - GFA and wall height only)."
+    },
+    {
+      "rule_key": "chrc_general_residential_side_rear_absent",
+      "code": "Dwelling house code; 6.2.2 General residential zone code",
+      "clause": "Table 8.3.5.3.1 AO1-AO3 (Rural zone only); 6.2.2.3",
+      "provision_type": "OTHER",
+      "zones": [
+        "General residential zone (including the Medium density residential precinct)"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10 buildings and structures",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear boundary setback for Class 10 buildings is stated in the 6.2.2 General residential zone code or the Dwelling house code for the General residential zone (including the Medium density residential precinct); Dwelling house code AO3 applies only in the Rural zone; the QDC applies.)",
+      "structured": {
+        "parameter": "side and rear boundary setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "defers to QDC"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council alternative provision for this zone; Table 1.6.1 alternative provisions (Dwelling house code PO1-PO3/AO1-AO3) are limited to the Rural zone",
+      "measurement_notes": "",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/189/0/0/0/82",
+      "page_or_anchor": "ePlan section 189 (6.2.2) and section 215 (8.3.5), revision 82",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Zone code text (full section fetched) contains no \"setback\", \"set back\", \"boundary\" or \"frontage\" provisions. Dwelling house is accepted development in this zone; Class 10a building work is accepted development subject to requirements (Dwelling house code AO11.1, AO11.2 - GFA and wall height only)."
+    },
+    {
+      "rule_key": "chrc_high_density_residential_front_absent",
+      "code": "Dwelling house code; 6.2.3 High density residential zone code",
+      "clause": "Table 8.3.5.3.1 AO1-AO3 (Rural zone only); 6.2.3.3",
+      "provision_type": "OTHER",
+      "zones": [
+        "High density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10 buildings and structures",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "(No road frontage setback for Class 10 buildings is stated in the 6.2.3 High density residential zone code or the Dwelling house code for the High density residential zone; Dwelling house code AO1/AO2 apply only in the Rural zone; the QDC applies.)",
+      "structured": {
+        "parameter": "road frontage setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "defers to QDC"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council alternative provision for this zone; Table 1.6.1 alternative provisions (Dwelling house code PO1-PO3/AO1-AO3) are limited to the Rural zone",
+      "measurement_notes": "",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/188/0/0/0/82",
+      "page_or_anchor": "ePlan section 188 (6.2.3) and section 215 (8.3.5), revision 82",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Zone code text (full section fetched) contains no \"setback\", \"set back\", \"boundary\" or \"frontage\" provisions. Dwelling house is accepted development in this zone; Class 10a building work is accepted development subject to requirements (Dwelling house code AO11.1, AO11.2 - GFA and wall height only)."
+    },
+    {
+      "rule_key": "chrc_high_density_residential_side_rear_absent",
+      "code": "Dwelling house code; 6.2.3 High density residential zone code",
+      "clause": "Table 8.3.5.3.1 AO1-AO3 (Rural zone only); 6.2.3.3",
+      "provision_type": "OTHER",
+      "zones": [
+        "High density residential zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10 buildings and structures",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear boundary setback for Class 10 buildings is stated in the 6.2.3 High density residential zone code or the Dwelling house code for the High density residential zone; Dwelling house code AO3 applies only in the Rural zone; the QDC applies.)",
+      "structured": {
+        "parameter": "side and rear boundary setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "defers to QDC"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council alternative provision for this zone; Table 1.6.1 alternative provisions (Dwelling house code PO1-PO3/AO1-AO3) are limited to the Rural zone",
+      "measurement_notes": "",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/188/0/0/0/82",
+      "page_or_anchor": "ePlan section 188 (6.2.3) and section 215 (8.3.5), revision 82",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Zone code text (full section fetched) contains no \"setback\", \"set back\", \"boundary\" or \"frontage\" provisions. Dwelling house is accepted development in this zone; Class 10a building work is accepted development subject to requirements (Dwelling house code AO11.1, AO11.2 - GFA and wall height only)."
+    },
+    {
+      "rule_key": "chrc_emerging_community_front_absent",
+      "code": "Dwelling house code; 6.2.4 Emerging community zone code",
+      "clause": "Table 8.3.5.3.1 AO1-AO3 (Rural zone only); 6.2.4.3",
+      "provision_type": "OTHER",
+      "zones": [
+        "Emerging community zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10 buildings and structures",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "(No road frontage setback for Class 10 buildings is stated in the 6.2.4 Emerging community zone code or the Dwelling house code for the Emerging community zone; Dwelling house code AO1/AO2 apply only in the Rural zone; the QDC applies.)",
+      "structured": {
+        "parameter": "road frontage setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "defers to QDC"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council alternative provision for this zone; Table 1.6.1 alternative provisions (Dwelling house code PO1-PO3/AO1-AO3) are limited to the Rural zone",
+      "measurement_notes": "",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/187/0/0/0/82",
+      "page_or_anchor": "ePlan section 187 (6.2.4) and section 215 (8.3.5), revision 82",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Zone code text (full section fetched) contains no \"setback\", \"set back\", \"boundary\" or \"frontage\" provisions. Dwelling house is accepted development in this zone; Class 10a building work is accepted development subject to requirements (Dwelling house code AO11.1, AO11.2 - GFA and wall height only)."
+    },
+    {
+      "rule_key": "chrc_emerging_community_side_rear_absent",
+      "code": "Dwelling house code; 6.2.4 Emerging community zone code",
+      "clause": "Table 8.3.5.3.1 AO1-AO3 (Rural zone only); 6.2.4.3",
+      "provision_type": "OTHER",
+      "zones": [
+        "Emerging community zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10 buildings and structures",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear boundary setback for Class 10 buildings is stated in the 6.2.4 Emerging community zone code or the Dwelling house code for the Emerging community zone; Dwelling house code AO3 applies only in the Rural zone; the QDC applies.)",
+      "structured": {
+        "parameter": "side and rear boundary setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "defers to QDC"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council alternative provision for this zone; Table 1.6.1 alternative provisions (Dwelling house code PO1-PO3/AO1-AO3) are limited to the Rural zone",
+      "measurement_notes": "",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/187/0/0/0/82",
+      "page_or_anchor": "ePlan section 187 (6.2.4) and section 215 (8.3.5), revision 82",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Zone code text (full section fetched) contains no \"setback\", \"set back\", \"boundary\" or \"frontage\" provisions. Dwelling house is accepted development in this zone; Class 10a building work is accepted development subject to requirements (Dwelling house code AO11.1, AO11.2 - GFA and wall height only)."
+    },
+    {
+      "rule_key": "chrc_township_front_absent",
+      "code": "Dwelling house code; 6.2.17 Township zone code",
+      "clause": "Table 8.3.5.3.1 AO1-AO3 (Rural zone only); 6.2.17.3",
+      "provision_type": "OTHER",
+      "zones": [
+        "Township zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10 buildings and structures",
+      "topic": "FRONT_SETBACK",
+      "verbatim_text": "(No road frontage setback for Class 10 buildings is stated in the 6.2.17 Township zone code or the Dwelling house code for the Township zone; Dwelling house code AO1/AO2 apply only in the Rural zone; the QDC applies.)",
+      "structured": {
+        "parameter": "road frontage setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "defers to QDC"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council alternative provision for this zone; Table 1.6.1 alternative provisions (Dwelling house code PO1-PO3/AO1-AO3) are limited to the Rural zone",
+      "measurement_notes": "",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/174/0/0/0/82",
+      "page_or_anchor": "ePlan section 174 (6.2.17) and section 215 (8.3.5), revision 82",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Zone code text (full section fetched) contains no \"setback\", \"set back\", \"boundary\" or \"frontage\" provisions. Dwelling house is accepted development in this zone; Class 10a building work is accepted development subject to requirements (Dwelling house code AO11.1, AO11.2 - GFA and wall height only)."
+    },
+    {
+      "rule_key": "chrc_township_side_rear_absent",
+      "code": "Dwelling house code; 6.2.17 Township zone code",
+      "clause": "Table 8.3.5.3.1 AO1-AO3 (Rural zone only); 6.2.17.3",
+      "provision_type": "OTHER",
+      "zones": [
+        "Township zone"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10 buildings and structures",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear boundary setback for Class 10 buildings is stated in the 6.2.17 Township zone code or the Dwelling house code for the Township zone; Dwelling house code AO3 applies only in the Rural zone; the QDC applies.)",
+      "structured": {
+        "parameter": "side and rear boundary setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "defers to QDC"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - no council alternative provision for this zone; Table 1.6.1 alternative provisions (Dwelling house code PO1-PO3/AO1-AO3) are limited to the Rural zone",
+      "measurement_notes": "",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/174/0/0/0/82",
+      "page_or_anchor": "ePlan section 174 (6.2.17) and section 215 (8.3.5), revision 82",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Zone code text (full section fetched) contains no \"setback\", \"set back\", \"boundary\" or \"frontage\" provisions. Dwelling house is accepted development in this zone; Class 10a building work is accepted development subject to requirements (Dwelling house code AO11.1, AO11.2 - GFA and wall height only)."
+    },
+    {
+      "rule_key": "chrc_gemfields_side_rear_absent",
+      "code": "Dwelling house code",
+      "clause": "Table 8.3.5.3.1 AO3",
+      "provision_type": "OTHER",
+      "zones": [
+        "Rural zone - Gemfields precincts (Gemfields Core, Gemfields Frame, Gemfields Balance)"
+      ],
+      "overlay": null,
+      "local_plan": null,
+      "lot_conditions": null,
+      "structure_scope": "Class 10 buildings and structures",
+      "topic": "SIDE_SETBACK",
+      "verbatim_text": "(No side or rear boundary setback for Class 10 buildings is stated for the Gemfields Core, Gemfields Frame or Gemfields Balance precincts of the Rural zone; Dwelling house code AO3 excludes the Gemfields precincts and the Rural zone code states no setback; the QDC applies.)",
+      "structured": {
+        "parameter": "side and rear boundary setback",
+        "operator": "conditional",
+        "value": null,
+        "unit": "m",
+        "conditions": [
+          "applies to side AND rear boundaries",
+          "defers to QDC"
+        ],
+        "exceptions": [],
+        "formula_text": null
+      },
+      "alternative_provision_to_qdc_qhc": "NO - AO3 (the only side/rear alternative provision) expressly excludes the Gemfields precincts",
+      "measurement_notes": "",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/215/0/0/0/82",
+      "page_or_anchor": "ePlan section 215 (8.3.5) rule 10560; section 175 (6.2.16), revision 82",
+      "verification_status": "UNVERIFIED",
+      "needs_manual_review": false,
+      "notes": "Front setback in Gemfields precincts is covered by chrc_dh_ao2_gemfields_front."
+    }
+  ],
+  "overlays_affecting_siting": [
+    {
+      "overlay": "Bushfire hazard overlay code (7.2.3)",
+      "note": "Contains vegetation-related setbacks (e.g. \"achieve a setback of 10m from any retained vegetation strips or small areas of vegetation\"); not boundary setbacks, not recorded as rules.",
+      "source_url": "https://eplan.chrc.qld.gov.au/planningscheme/rules/0/198/0/0/0/82"
+    }
+  ],
+  "local_plan_mechanism": {
+    "summary": "Part 1.2 states \"there are no local plans\". Zone precincts: Medium density residential precinct (General residential zone); Gemfields Core, Gemfields Frame and Gemfields Balance precincts (Rural zone). Part 9 notes the Blackwater and Blackwater East Priority Development Areas (Economic Development Act 2012) override the scheme; council is consulting on revoking them (ePlan news, submissions to 10 April 2026)."
+  },
+  "open_questions": [
+    "Do Dwelling house code AO1-AO3 (worded \"the dwelling house\") reach detached Class 10a outbuildings? Headings say \"buildings and structures\", the use definition of Dwelling house includes domestic outbuildings, and the code note says it applies to associated Class 10 domestic outbuildings - treated as in scope, needs curator confirmation.",
+    "AO2 (Gemfields) says \"is set back 10m/6m\" rather than \"at least\"; assumed a minimum.",
+    "Rural-zone (non-Gemfields) Class 10a buildings are accepted development with no planning requirements (Table 5.6.1), but AO1/AO3 still bind as building assessment provisions via Table 1.6.1.",
+    "Blackwater PDA areas are outside the scheme until revocation."
+  ],
+  "fetch_log": [
+    "https://eplan.chrc.qld.gov.au/planningscheme/api/l/vpr -> OK (5 revisions; rev 82 Amendment No. 7 Current)",
+    "https://eplan.chrc.qld.gov.au/planningscheme/api/l/r/215/0/false/22-Oct-2026/false -> OK but rules:null",
+    "https://eplan.chrc.qld.gov.au/planningscheme/api/l/r/215/0/false/25-Jun-2025/false -> OK (Dwelling house code, 65 rules)",
+    "https://eplan.chrc.qld.gov.au/planningscheme/api/l/r/{1..800}/0/false/25-Jun-2025/false -> 122 sections with content (Part 1 = 4, zone codes 174-190, tables of assessment 231-247, Table 5.6.1 = 85, definitions 73/74, citation 249)",
+    "https://eplan.chrc.qld.gov.au/planningscheme/api/l/s/... -> [] / 500 (not used)"
+  ]
+}

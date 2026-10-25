@@ -21,7 +21,8 @@
     "check-services": "node dist/src/tools/check-services.js",
     "schema-doc": "node dist/src/tools/schema-doc.js",
     "import-research": "node dist/src/tools/import-council-research.js",
-    "data-register": "node dist/src/tools/data-register.js"
+    "data-register": "node dist/src/tools/data-register.js",
+    "validate-setbacks": "node dist/src/tools/validate-setbacks.js"
   },
   "dependencies": {
     "@tsed/core": "8.44.0",
