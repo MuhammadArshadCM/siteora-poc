@@ -75,7 +75,7 @@ export async function locate(db: Db, address?: string | null, lon?: number | nul
   loc.lon = lon;
   loc.lat = lat;
   loc.council = await geo.councilAt(lon!, lat!);
-  if (!loc.council.lg_id) throw new LookupError(`${loc.council.lga_name} is not one of the 7 councils in the dataset`);
+  if (!loc.council.lg_id) throw new LookupError(`${loc.council.lga_name} is not one of the councils in the dataset`);
   const points: [number, number][] = [[lon!, lat!]];
   try {
     const p = await geo.parcelAt(lon!, lat!);

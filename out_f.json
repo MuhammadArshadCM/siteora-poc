@@ -1,0 +1,5 @@
+
+> siteora-server@0.1.0 cli
+> node dist/src/tools/cli.js 78 Hursley Rd, Newtown QLD 4350, Australia --structure SHED --height 3 --length 6 --width 4 --json
+
+Error: Toowoomba Regional is not one of the 7 councils in the dataset
