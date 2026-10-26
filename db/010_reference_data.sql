@@ -172,6 +172,7 @@ INSERT INTO facts (fact_id, type, unit, allowed_values, source, description, der
  ('part_height_m',          'NUMBER',  'm',  NULL, 'DESIGN_INPUT', 'Height of the part of the building/structure being tested (MP 1.x: OMP above natural ground)', 'Evaluated per part along the boundary'),
  ('wall_height_m',          'NUMBER',  'm',  NULL, 'DESIGN_INPUT', 'QHC height of external wall at the relevant point', NULL),
  ('mean_height_m',          'NUMBER',  'm',  NULL, 'DESIGN_INPUT', 'Elevational area facing boundary / horizontal length facing boundary', NULL),
+ ('width_m',                'NUMBER',  'm',  NULL, 'DESIGN_INPUT', 'Structure width as entered for assessment (e.g. distinguishes a single from a double carport)', NULL),
  ('storey_number',          'NUMBER',  NULL, NULL, 'DESIGN_INPUT', 'Storey of the part being tested (1 = ground)', NULL),
  ('roof_area_m2',           'NUMBER',  'm2', NULL, 'DESIGN_INPUT', 'Roof area (gatehouse limits)', NULL),
  ('plan_area_m2',           'NUMBER',  'm2', NULL, 'DESIGN_INPUT', 'Plan area incl. overhangs (Building Reg sch 1 s13)', NULL),

@@ -263,6 +263,7 @@ export function buildFacts(loc: any, structure: string, inputs: Record<string, a
   put("structure_height_above_ground_m", h, "User input (height)");
   put("wall_height_m", num("wall_height_m") || h, num("wall_height_m") ? "User input" : "User input (height, used as wall height)");
   put("mean_height_m", num("mean_height_m") || h, num("mean_height_m") ? "User input" : "ASSUMED: mean height = height (conservative)");
+  put("width_m", width, "User input (width)");
   if (length && width) {
     put("plan_area_m2", pyRound(length * width, 2), "User input (length x width)");
     put("longest_side_m", Math.max(length, width), "User input");

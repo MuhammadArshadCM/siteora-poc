@@ -81,6 +81,12 @@
 - [PLANNING] GARAGE.OPENING_WIDTH (PRIMARY_FRONTAGE): <= 5.03 m  [DETERMINED]
     BCC.C.TBC_CARPORT_FORWARD_ACCEPTED@2026-09-18 — Character overlay: carport between the house and the front boundary needs no planning approval only if total width <= lesser of 6 m and 50% of average lot width
     source: Brisbane City Plan 2014 (v37.00/2026) — 5.3.4 Table 5.3.4.1 (Building work, Traditional building character overlay / Pre-1911 building overlay)
+- [PLANNING] SETBACK.FRONTAGE (PRIMARY_FRONTAGE): >= 2 m  [MANUAL_REVIEW]
+    BCC.C.DHC_SMALL_LOT_DOUBLE_CARPORT_FRONT@2026-09-18 — Dwelling house character overlay, small lot: double carport outside the building envelope needs no planning approval only if set back >= 2 m from the front boundary
+    source: Brisbane City Plan 2014 (v37.00/2026) — 5.3.4 Table 5.3.4.1 (Building work, Dwelling house character overlay, small lot)
+- [PLANNING] SETBACK.SIDE (SIDE): >= 1.5 m  [MANUAL_REVIEW]
+    BCC.C.DHC_SMALL_LOT_DOUBLE_CARPORT_SIDE@2026-09-18 — Dwelling house character overlay, small lot: double carport outside the building envelope needs no planning approval only if set back >= 1.5 m from the side boundary
+    source: Brisbane City Plan 2014 (v37.00/2026) — 5.3.4 Table 5.3.4.1 (Building work, Dwelling house character overlay, small lot)
   displaced:
     - QDC11.A3.SITE_COVER@2010-03-26 (None): OVERRIDES by BCC.C.SL_SITE_COVER@2026-09-18
     - QDC11.A4.BUILDING_HEIGHT@2010-03-26 (None): OVERRIDES by BCC.C.SL_HEIGHT@2026-09-18
