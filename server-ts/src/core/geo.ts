@@ -1,7 +1,16 @@
 /** Queensland Government spatial lookups: address -> point -> council, parcel, PDA. Port of poc/siteora_poc/geo.py. */
 import { LookupError, pyRepr, pyRound, urlencode } from "./py.js";
 
-export const QSPATIAL = "https://spatial-gis.information.qld.gov.au/arcgis/rest/services";
+/**
+ * The one coordinate system used for every query, answer and drawn shape: GDA2020 geographic (EPSG:7844), lon/lat degrees.
+ * The map services publish in mixed systems (Web Mercator, GDA94 and GDA2020 MGA zones, WGS 84). Asking for "4326" gives
+ * the State's Web Mercator layers (cadastre, bushfire …) with no GDA94→GDA2020 shift, about 1.5 m from the layers that
+ * are shifted (checked on the same lot, 16 Oct 2026: DCDB 4326 ≠ council parcel 4326, but DCDB 7844 = council parcel).
+ * Asking every service for 7844 puts them on one datum, and it is also where the aerial imagery lines up.
+ */
+export const SR = 7844;
+
+export const QSPATIAL ="https://spatial-gis.information.qld.gov.au/arcgis/rest/services";
 export const GEOCODER = `${QSPATIAL}/Location/QldLocator/GeocodeServer/findAddressCandidates`;
 export const CADASTRE = `${QSPATIAL}/PlanningCadastre/LandParcelPropertyFramework/MapServer`;
 export const ADDRESS_LAYER = `${CADASTRE}/0`;
@@ -123,8 +132,8 @@ async function withHostSlot<T>(host: string, fn: () => Promise<T>): Promise<T> {
 
 export async function pointQuery(layer: string, lon: number, lat: number, outFields = "*", geometry = false,
                                  where = "1=1", distanceM?: number): Promise<Feature[]> {
-  const params: Record<string, unknown> = { geometry: `${lon},${lat}`, geometryType: "esriGeometryPoint", inSR: 4326,
-    spatialRel: "esriSpatialRelIntersects", outFields, where, returnGeometry: String(geometry), outSR: 4326, f: "json" };
+  const params: Record<string, unknown> = { geometry: `${lon},${lat}`, geometryType: "esriGeometryPoint", inSR: SR,
+    spatialRel: "esriSpatialRelIntersects", outFields, where, returnGeometry: String(geometry), outSR: SR, f: "json" };
   if (distanceM) Object.assign(params, { distance: distanceM, units: "esriSRUnit_Meter" });
   return (await getJson(`${layer}/query`, params)).features;
 }
@@ -133,7 +142,7 @@ export async function pointQuery(layer: string, lon: number, lat: number, outFie
 export async function lotQuery(layer: string, rings: Rings, outFields = "*", distanceM?: number | null, where = "1=1",
                                excludeTouching = false): Promise<Feature[]> {
   const params: Record<string, unknown> = {
-    geometry: JSON.stringify({ rings, spatialReference: { wkid: 4326 } }), geometryType: "esriGeometryPolygon", inSR: 4326,
+    geometry: JSON.stringify({ rings, spatialReference: { wkid: SR } }), geometryType: "esriGeometryPolygon", inSR: SR,
     spatialRel: "esriSpatialRelIntersects", outFields, where, returnGeometry: "false", f: "json" };
   if (distanceM) Object.assign(params, { distance: distanceM, units: "esriSRUnit_Meter" });
   const data = await getJson(`${layer}/query`, params, 30, 3, true);
@@ -154,7 +163,7 @@ export interface Geocode { address: string; lon: number; lat: number; score: num
 
 /** Exact-enough match only (score >= 95, or >= 90 with nothing unmatched); otherwise list the candidates. */
 export async function geocode(address: string): Promise<Geocode> {
-  const data = await getJson(GEOCODER, { SingleLine: address, outSR: 4326, maxLocations: 5, outFields: "Match_addr,ExInfo,City,Subregion", f: "json" });
+  const data = await getJson(GEOCODER, { SingleLine: address, outSR: SR, maxLocations: 5, outFields: "Match_addr,ExInfo,City,Subregion", f: "json" });
   const cands: any[] = data.candidates ?? [];
   // the geocoder never matches postcodes, so a postcode alone in ExInfo is not a mismatch
   const unmatched = (c: any): string => String(c.attributes.ExInfo ?? "").split("|").map((t: string) => t.trim())
@@ -185,11 +194,21 @@ export async function parcelAt(lon: number, lat: number): Promise<Record<string,
     const lotplans = addrs.map((a) => a.attributes.lotplan).filter(Boolean);
     if (lotplans.length)
       feats = (await getJson(`${PARCEL_LAYER}/query`, { where: `lotplan = '${lotplans[0]}'`, outFields: "lot,plan,lotplan,lot_area,parcel_typ,tenure,acc_code,surv_ind",
-        returnGeometry: "true", outSR: 4326, f: "json" })).features;
+        returnGeometry: "true", outSR: SR, f: "json" })).features;
   }
   if (!feats.length) throw new LookupError("No land parcel found at this address");
   const f = feats[0];
   return { ...f.attributes, rings: f.geometry!.rings! };
+}
+
+export const BCC_PARCEL_LAYER = "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/property_boundaries_parcel/FeatureServer/0";
+
+/** Brisbane City Council's own copy of the lot outline (what the City Plan map draws). It sits up to a few metres from the State DCDB outline. */
+export async function bccParcelRings(lotplan: string): Promise<Rings | null> {
+  if (!/^[A-Za-z0-9]+$/.test(lotplan)) return null;
+  const feats: Feature[] = (await getJson(`${BCC_PARCEL_LAYER}/query`, { where: `LOTPLAN = '${lotplan}' AND PARCEL_TYP_DESC = 'Lot'`,
+    outFields: "LOTPLAN", returnGeometry: "true", outSR: SR, f: "json" })).features;
+  return feats.length === 1 && feats[0].geometry?.rings ? feats[0].geometry.rings : null;
 }
 
 export async function pdaAt(lon: number, lat: number): Promise<Record<string, any> | null> {

@@ -242,7 +242,7 @@ const CAT_COLORS = {
   Electricity: '#f59e0b', Sewer: '#92400e', Water: '#0284c7', Stormwater: '#0f766e', Easements: '#db2777',
   Flood: '#2563eb', Vegetation: '#16a34a', Waterway: '#06b6d4', Heritage: '#7e22ce', Bushfire: '#7f1d1d',
   Coastal: '#0891b2', Slope: '#78716c', Soils: '#a16207', Airport: '#475569', Noise: '#9333ea',
-  Infrastructure: '#be123c', Roads: '#525252',
+  Infrastructure: '#be123c', Roads: '#525252', Buildings: '#ea580c',
 };
 const catColor = cat => CAT_COLORS[cat] || '#334155';
 // Banded overlays (noise categories, flood planning areas …) store one polygon per category, and neighbouring bands
@@ -366,20 +366,40 @@ function sourcesCard(d) {
 
 // An area layer drawn from /api/features: reloads the visible part after each pan / zoom (from zoom 15), drawn on a
 // canvas (fast for thousands of grid steps), in the publisher's colours (loaded first, so nothing is restyled later).
+// ONE canvas for every layer on the map. Canvases stack on top of each other and only the topmost receives clicks
+// (a click on a lower canvas never reaches it), so one canvas per layer or per pane left only the top layer clickable.
+// A single canvas tests the click against all its shapes. The tolerance makes thin lines and small points clickable.
+// Drawing order inside it is set by bringToFront (see stackLayers): areas at the bottom, flood above, power lines on top.
+function paneRenderer(map) {
+  return map._renderer1 || (map._renderer1 = L.canvas({pane: 'constraints', padding: 0.3, tolerance: 8}));
+}
+const LAYER_PRIORITY = {Zone: 0, Flood: 2, Easements: 3, Heritage: 3, Buildings: 3.5, Electricity: 6};
+function stackLayers(map) {
+  clearTimeout(map._stackTimer);
+  map._stackTimer = setTimeout(() => {
+    const front = l => (l.eachLayer ? l.eachLayer(front) : l.bringToFront && l.bringToFront());
+    [...(map._clipped || [])].sort((a, b) => a._prio - b._prio).forEach(g => g.eachLayer(front));
+  }, 0);
+}
 const ClippedLayer = window.L ? L.FeatureGroup.extend({
-  initialize(c, style, popupHtml) {
+  initialize(c, style, popupHtml, pointToLayer) {
     L.FeatureGroup.prototype.initialize.call(this);
-    this._c = c; this._style = style; this._popup = popupHtml; this._seq = 0;
-    this._pane = c.category === 'Flood' ? 'flood' : 'constraints';   // flood above other areas: it matters most for siting
-    this._renderer = L.canvas({pane: this._pane, padding: 0.3});
+    this._c = c; this._style = style; this._popup = popupHtml; this._ptl = pointToLayer; this._seq = 0;
+    this._pane = 'constraints';
+    // stacking, bottom to top: zone areas, other areas, flood, easements / buildings (small areas must be clickable above
+    // the big overlays), lines, points, power lines. A click opens the topmost shape under it.
+    this._prio = LAYER_PRIORITY[c.category] ?? (c.geometry === 'point' ? 5 : c.geometry === 'line' ? 4 : 1);
   },
   onAdd(map) {
+    this._renderer = paneRenderer(map);
+    (map._clipped = map._clipped || new Set()).add(this);
     L.FeatureGroup.prototype.onAdd.call(this, map);
     map.on('moveend', this._schedule, this);
     this._load();
   },
   onRemove(map) {
     map.off('moveend', this._schedule, this);
+    if (map._clipped) map._clipped.delete(this);
     clearTimeout(this._timer);
     L.FeatureGroup.prototype.onRemove.call(this, map);
   },
@@ -408,8 +428,9 @@ const ClippedLayer = window.L ? L.FeatureGroup.extend({
         if (seq !== this._seq || !this._map) return;
         if (!fc || fc.error || !Array.isArray(fc.features)) return this._fallBack(fc && fc.error || 'bad response');
         this.clearLayers();
-        L.geoJSON(fc, {style: this._style, renderer: this._renderer,
+        L.geoJSON(fc, {style: this._style, renderer: this._renderer, pointToLayer: this._ptl,
           onEachFeature: (f, l) => l.bindPopup(() => this._popup(f))}).eachLayer(l => this.addLayer(l));
+        stackLayers(map);
       }).catch(e => { if (seq === this._seq) this._fallBack(e.message); });
   },
 }) : null;
@@ -428,9 +449,13 @@ function drawMap(d) {
   MAP = L.map('map', {maxBounds: limit, maxBoundsViscosity: 1.0}).setView(center, 18);
   MAP.setMinZoom(MAP.getBoundsZoom(limit, true));
   const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 20, maxNativeZoom: 19,
-    attribution: '&copy; OpenStreetMap contributors'}).addTo(MAP);
+    attribution: '&copy; OpenStreetMap contributors'});
   const sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     {maxZoom: 20, maxNativeZoom: 19, attribution: 'Imagery &copy; Esri'});
+  // Queensland Government statewide imagery (SISP, 10 cm in Brisbane): the same source as the Brisbane City Plan map,
+  // and much newer than Esri World Imagery. Cached to level 20 (1:564), in Web Mercator.
+  const qldSat = L.tileLayer('https://spatial-img.information.qld.gov.au/arcgis/rest/services/Basemaps/LatestStateProgram_AllUsers/ImageServer/tile/{z}/{y}/{x}',
+    {maxZoom: 21, maxNativeZoom: 20, attribution: 'Imagery &copy; State of Queensland (Department of Resources) and Brisbane City Council'}).addTo(MAP);   // the default basemap
   const overlays = {};
   const popup = f => '<div class="popup"><table>' + Object.entries(f.properties || {})
       .filter(([k, v]) => v !== null && v !== '' && !/^(shape|objectid|fid)/i.test(k))
@@ -443,9 +468,8 @@ function drawMap(d) {
   (L0.sources || []).filter(s => /Zone|plan|Overlay|Priority/.test(s.what) && /\/(FeatureServer|MapServer)\/\d+$/.test(s.layer))
     .forEach((s, i) => {
       const c = COLORS[i % COLORS.length];
-      const lyr = L.esri.featureLayer({url: s.layer, simplifyFactor: 0.5, precision: 6, minZoom: 14,
-        style: () => ({color: c, weight: 2, fillColor: c, fillOpacity: 0.12})});
-      lyr.bindPopup(l => `<b>${esc(s.source)}</b>` + popup(l.feature));
+      const lyr = new ClippedLayer({layer: s.layer, name: s.source, category: 'Zone', geometry: 'polygon'},
+        () => ({color: c, weight: 2, fillColor: c, fillOpacity: 0.12}), f => `<b>${esc(s.source)}</b>` + popup(f));
       const on = s.hit || s.what === 'Zone' || (s.what !== 'Overlay' && !/^(none|not)/.test(s.result));
       const name = `<span style="color:${c}">&#9632;</span> ${esc(s.what === 'Overlay' ? s.source : s.what)}${s.hit ? ' <b>(on this lot)</b>' : ''}`;
       overlays[name] = lyr; if (on) lyr.addTo(MAP);
@@ -461,35 +485,30 @@ function drawMap(d) {
         // modelled overlays are traced from 2.5–5 m model grid cells; an outline traces every cell step.
         // Property-shaped areas (easements, heritage places) keep a thin edge because the boundary itself matters.
         const fill = areaColor(c, p);
-        const edged = ['Easements', 'Heritage'].includes(c.category);
+        const edged = ['Easements', 'Heritage', 'Buildings'].includes(c.category);
         return {stroke: edged, color: fill, weight: 1.5, opacity: 0.9, fillColor: fill,
           fillOpacity: ['Noise', 'Airport'].includes(c.category) ? 0.15 : 0.3};
       }
       return {color: col, weight: power ? 4 : c.hit ? 3 : 2, opacity: 0.95,
         dashArray: power ? (underground ? '8 6' : null) : '6 4', fillOpacity: 0};
     };
-    let lyr;
-    if (c.geometry === 'polygon') {
-      // areas through our server (/api/features), clipped to the view: council overlays are often a few city-wide
-      // features (Brisbane's creek flood planning area is 13 MB per view straight from the service)
-      lyr = new ClippedLayer(c, style, f => `<b>${esc(c.name)}</b>` + popup(f));
-    } else {
-      const opts = {url: c.layer, where: c.where || '1=1', simplifyFactor: 0.5, precision: 6, minZoom: 15,
-        pane: power ? 'power' : 'constraints', style};
-      // pointToLayer only for point layers: esri-leaflet treats any layer with it as points when it updates a feature,
-      // which throws for lines and areas and stops the rest of that batch from drawing
-      if (c.geometry === 'point') opts.pointToLayer = (g, ll) => L.circleMarker(ll, {radius: power ? 6 : 5, color: '#fff', weight: 1.5,
-        fillColor: col, fillOpacity: 1, pane: power ? 'power' : 'constraints'});
-      lyr = L.esri.featureLayer(opts);
-      lyr.bindPopup(l => `<b>${esc(c.name)}</b>` + popup(l.feature));
-    }
+    // Every layer is drawn through our server (/api/features): it asks each service for the same coordinate system
+    // (GDA2020, see geo.SR) so all layers line up with each other and the imagery. Drawing straight from the services
+    // would use esri-leaflet's own request, and the State's Web Mercator layers then sit about 1.5 m off.
+    // Also: council overlays are often a few city-wide features (Brisbane's creek flood planning area is 13 MB per view
+    // straight from the service), and the server sends only the part in view.
+    const pane = 'constraints';
+    const pointToLayer = c.geometry === 'point' ? (g, ll) => L.circleMarker(ll, {radius: power ? 6 : 5, color: '#fff', weight: 1.5,
+      fillColor: col, fillOpacity: 1, pane, renderer: paneRenderer(MAP)}) : undefined;
+    const lyr = new ClippedLayer(c, style, f => `<b>${esc(c.name)}</b>` + popup(f), pointToLayer);
     overlays[`${swatch(col)} ${esc(c.category)}: ${esc(c.name)}${c.hit ? ' <b>(on this lot)</b>' : ''}`] = lyr;
-    if (c.hit) lyr.addTo(MAP);
+    // water mains normally run in the road beside the lot, so they are drawn whether or not one touches the lot
+    if (c.hit || c.category === 'Buildings' || /water (pressure )?main/i.test(c.name)) lyr.addTo(MAP);
   });
   let home = () => MAP.setView(center, 18);
   if (L0.parcel_geometry) {
-    const parcel = L.polygon(L0.parcel_geometry.map(r => r.map(([x, y]) => [y, x])),
-      {color: '#ef0000', weight: 4, fillOpacity: 0.04, pane: 'parcel'}).addTo(MAP);
+    const parcel = L.polygon((L0.parcel_map_geometry || L0.parcel_geometry).map(r => r.map(([x, y]) => [y, x])),
+      {color: '#ef0000', weight: 4, fillOpacity: 0.04, pane: 'parcel', interactive: false}).addTo(MAP);   // not clickable: it must not block the layers below
     overlays['<span style="color:#ef0000">&#9632;</span> Parcel'] = parcel;
     home = () => MAP.fitBounds(parcel.getBounds(), {maxZoom: 19, padding: [40, 40]});
   }
@@ -520,7 +539,7 @@ function drawMap(d) {
   overlays[`${swatch('#dc2626')} Bushfire prone area (QFD, picture only)${(L0.not_checked || []).includes('Bushfire') ? ' <b>(not checked automatically)</b>' : ''}`] = qfd;
   if ((L0.not_checked || []).includes('Bushfire')) qfd.addTo(MAP);
   L.marker(center).addTo(MAP).bindPopup(esc(L0.geocode ? L0.geocode.address : `${L0.lat}, ${L0.lon}`));
-  L.control.layers({'Streets': osm, 'Aerial imagery': sat}, overlays, {collapsed: Object.keys(overlays).length > 12}).addTo(MAP);
+  L.control.layers({'Streets': osm, 'Aerial imagery (Qld, latest)': qldSat, 'Aerial imagery (Esri)': sat}, overlays, {collapsed: Object.keys(overlays).length > 12}).addTo(MAP);
 }
 </script>
 </body>

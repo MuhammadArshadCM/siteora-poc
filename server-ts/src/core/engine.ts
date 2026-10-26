@@ -91,6 +91,13 @@ export async function locate(db: Db, address?: string | null, lon?: number | nul
           + "for a site plan, take boundaries from the registered survey plan or an identification survey, especially where the setback is small.");
     Object.assign(loc.parcel, geo.parcelMetrics(p.rings));
     loc.parcel_geometry = p.rings;   // lon/lat rings, for the map
+    // Brisbane: draw Council's own outline, as the City Plan map does (the checks above and below still use the State DCDB)
+    if (loc.council.lg_id === "BRISBANE" && p.lotplan) {
+      try {
+        const bcc = await geo.bccParcelRings(String(p.lotplan));
+        if (bcc) loc.parcel_map_geometry = bcc;
+      } catch { /* the State outline is drawn instead */ }
+    }
     const ring = p.rings.reduce((best, r) => (r.length > best.length ? r : best), p.rings[0]);
     const inner = ring.slice(0, -1);
     points.push([inner.reduce((s, [x]) => s + x, 0) / (ring.length - 1), inner.reduce((s, [, y]) => s + y, 0) / (ring.length - 1)]);
@@ -168,7 +175,7 @@ export async function locate(db: Db, address?: string | null, lon?: number | nul
 
 /** Links a person can open: the exact point query, the layer description, the layer on the ArcGIS Map Viewer. */
 function links(layer: string, lon: number, lat: number) {
-  const q = urlencode({ geometry: `${lon},${lat}`, geometryType: "esriGeometryPoint", inSR: 4326,
+  const q = urlencode({ geometry: `${lon},${lat}`, geometryType: "esriGeometryPoint", inSR: geo.SR,
     spatialRel: "esriSpatialRelIntersects", outFields: "*", returnGeometry: "false", f: "html" });
   const service = layer.slice(0, layer.lastIndexOf("/"));
   return { layer, query_url: `${layer}/query?${q}`, layer_url: `${layer}?f=html`,
@@ -199,6 +206,9 @@ export function sources(loc: any, cfg: any): any[] {
   if (cfg.local_plan_precinct_layer)
     out.push({ what: "Local plan precinct", source: "Council map", result: z.local_plan_precinct_text || z.local_plan_precinct_code || "none",
       ...links(cfg.local_plan_precinct_layer, lon, lat) });
+  if (loc.parcel_map_geometry)
+    out.push({ what: "Lot outline drawn on the map", source: "Brisbane City Council property parcels",
+      result: p.lotplan, ...links(geo.BCC_PARCEL_LAYER, lon, lat) });
   const hits = new Map<string, string[]>();
   for (const o of loc.overlays ?? []) {
     if (!hits.has(o.source)) hits.set(o.source, []);

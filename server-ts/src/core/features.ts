@@ -7,7 +7,7 @@
  * Only layers named in poc/site_layers.json or poc/zoning_layers.json are served, so this is not an open proxy.
  */
 import { Box, clipEsriGeometry } from "./clip.js";
-import { getJson } from "./geo.js";
+import { getJson, SR } from "./geo.js";
 import { LookupError, ValueError } from "./py.js";
 import * as site from "./site.js";
 import * as zoning from "./zoning.js";
@@ -34,9 +34,7 @@ function configuredWhere(layer: string): string {
   return "1=1";
 }
 
-const R = 6378137;
-const toMercator = (lon: number, lat: number) => [R * (lon * Math.PI) / 180, R * Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 360))];
-const toLonLat = (x: number, y: number) => [((x / R) * 180) / Math.PI, ((2 * Math.atan(Math.exp(y / R)) - Math.PI / 2) * 180) / Math.PI];
+const toLonLat = (x: number, y: number) => [x, y];   // the geometry is already lon/lat (GDA2020)
 
 /** Quantized ArcGIS geometry (integers; after the first point of each part, deltas) → lon/lat. */
 export function dequantize(g: any, t: any): any {
@@ -73,8 +71,8 @@ export function parseBox(s: string | undefined): Box {
 export async function featuresInBox(layer: string, box: Box): Promise<any> {
   if (!allowedLayers().has(layer)) throw new LookupError("layer is not one of the configured map layers");
   const where = configuredWhere(layer);
-  const envelope = JSON.stringify({ xmin: box[0], ymin: box[1], xmax: box[2], ymax: box[3], spatialReference: { wkid: 4326 } });
-  const ids = await getJson(`${layer}/query`, { where, geometry: envelope, geometryType: "esriGeometryEnvelope", inSR: 4326,
+  const envelope = JSON.stringify({ xmin: box[0], ymin: box[1], xmax: box[2], ymax: box[3], spatialReference: { wkid: SR } });
+  const ids = await getJson(`${layer}/query`, { where, geometry: envelope, geometryType: "esriGeometryEnvelope", inSR: SR,
     spatialRel: "esriSpatialRelIntersects", returnIdsOnly: "true", f: "json" }, 30, 3, true);
   const oidField: string = ids.objectIdFieldName ?? "OBJECTID";
   const wanted: number[] = ids.objectIds ?? [];
@@ -82,14 +80,14 @@ export async function featuresInBox(layer: string, box: Box): Promise<any> {
   // the cache key includes the filter, so the same layer with another filter never shares entries
   const key = (id: number) => `${layer}|${where}|${id}`;
   const missing = wanted.filter((id) => { const c = cache.get(key(id)); return !c || now - c.at > TTL_MS; });
-  // full geometry, once per feature: in Web Mercator (the services' native system, so no server-side reprojection of
-  // millions of points) and quantized to 0.25 m integers (about 5x smaller; flood steps are 2.5 m, nothing visible is lost)
-  const [mx0, my0] = toMercator(box[0], box[3]);
-  const quant = JSON.stringify({ mode: "view", originPosition: "upperLeft", tolerance: 0.25,
-    extent: { xmin: mx0, ymin: my0 - 1, xmax: mx0 + 1, ymax: my0, spatialReference: { wkid: 102100 } } });
+  // full geometry, once per feature: in the one common system (GDA2020 lon/lat, see geo.SR, so every layer lines up with the
+  // others and the imagery) and quantized to about 0.25 m integers (about 5x smaller; flood steps are 2.5 m, nothing
+  // visible is lost). The tolerance is in degrees: 0.25 m ≈ 2.25e-6 degrees.
+  const quant = JSON.stringify({ mode: "view", originPosition: "upperLeft", tolerance: 2.25e-6,
+    extent: { xmin: box[0], ymin: box[3] - 1e-5, xmax: box[0] + 1e-5, ymax: box[3], spatialReference: { wkid: SR } } });
   for (let i = 0; i < missing.length; i += 25) {
     const part = missing.slice(i, i + 25);
-    const r = await getJson(`${layer}/query`, { objectIds: part.join(","), outFields: "*", returnGeometry: "true", outSR: 102100,
+    const r = await getJson(`${layer}/query`, { objectIds: part.join(","), outFields: "*", returnGeometry: "true", outSR: SR,
       quantizationParameters: quant, f: "json" }, 120, 3, true);
     for (const f of r.features ?? []) {
       f.geometry = dequantize(f.geometry, r.transform);

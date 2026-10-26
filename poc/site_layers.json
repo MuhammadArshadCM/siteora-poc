@@ -16,6 +16,40 @@
       "copyright": "© State of Queensland (Department of Resources) 2024"
     },
     {
+      "category": "Buildings",
+      "name": "Existing building footprints (Queensland Building Footprints)",
+      "layer": "https://gisservices.qra.qld.gov.au/arcgis/rest/services/Foundation_Data/Queensland_Building_Footprints/FeatureServer/0",
+      "label_field": "Building_Area",
+      "show_fields": [
+        "Building_Area",
+        "BUILD_CLS",
+        "FLR_HEIGHT",
+        "LGA"
+      ],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Queensland Reconstruction Authority)",
+      "notes": "State-wide fallback. A council that publishes its own building footprints takes priority: give it a layer with category \"Buildings\" in its own list and this one is skipped for that council (no council publishes one in its open services as of 22 Oct 2026). Footprints are derived from imagery/LiDAR: outlines and areas are approximate, and height fields are mostly empty."
+    },
+    {
+      "category": "Buildings",
+      "name": "Building outlines from LiDAR (QSpatial, Dept of Resources)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Structure/BuildingsAndSettlements/MapServer/11",
+      "label_field": "featuresourceproject",
+      "show_fields": [
+        "featuresourceproject",
+        "capturestartdate",
+        "captureenddate",
+        "dimension_m2",
+        "bsm_max",
+        "bsm_min",
+        "dtm_centre",
+        "status"
+      ],
+      "geometry": "polygon",
+      "copyright": "© State of Queensland (Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development)",
+      "notes": "Government building outlines (10 m2 and larger) extracted automatically from LiDAR, per project area. Capture dates differ by area (checked 22 Oct 2026): Brisbane LGA Jun-Aug 2019, Redland and Gold Coast and Sunshine Coast 2022, Ipswich, Logan and Moreton Bay 2023. Generalised outlines; buildings built after the capture date are missing. No government footprint dataset newer than these was found for these councils."
+    },
+    {
       "category": "Vegetation",
       "name": "Regulated vegetation (categories A, B, C, R)",
       "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Biota/VegetationManagement/MapServer/109",
@@ -837,6 +871,83 @@
       "geometry": "line",
       "distance_m": 1,
       "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Water service (property connection)",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Water_OpenData/FeatureServer/28",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "SERVICETYPE",
+        "WATERTYPE",
+        "DIAMETER",
+        "OWNER"
+      ],
+      "geometry": "line",
+      "distance_m": 1
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Water hydrant",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Water_OpenData/FeatureServer/15",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "HYDRANTTYPE",
+        "WATERTYPE",
+        "OWNER"
+      ],
+      "geometry": "point",
+      "distance_m": 15
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Water control valve",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Water_OpenData/FeatureServer/1",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "WATERTYPE",
+        "DIAMETER",
+        "OWNER"
+      ],
+      "geometry": "point",
+      "distance_m": 15
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Water system valve",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Water_OpenData/FeatureServer/33",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "WATERTYPE",
+        "DIAMETER",
+        "OWNER"
+      ],
+      "geometry": "point",
+      "distance_m": 15
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Water fitting",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Water_OpenData/FeatureServer/14",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "FITTINGTYPE",
+        "WATERTYPE",
+        "DIAMETER",
+        "OWNER"
+      ],
+      "geometry": "point",
+      "distance_m": 15
     },
     {
       "category": "Water",
@@ -2491,6 +2602,83 @@
       "geometry": "line",
       "distance_m": 1,
       "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Water service (property connection)",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Water_OpenData/FeatureServer/28",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "SERVICETYPE",
+        "WATERTYPE",
+        "DIAMETER",
+        "OWNER"
+      ],
+      "geometry": "line",
+      "distance_m": 1
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Water hydrant",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Water_OpenData/FeatureServer/15",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "HYDRANTTYPE",
+        "WATERTYPE",
+        "OWNER"
+      ],
+      "geometry": "point",
+      "distance_m": 15
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Water control valve",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Water_OpenData/FeatureServer/1",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "WATERTYPE",
+        "DIAMETER",
+        "OWNER"
+      ],
+      "geometry": "point",
+      "distance_m": 15
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Water system valve",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Water_OpenData/FeatureServer/33",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "WATERTYPE",
+        "DIAMETER",
+        "OWNER"
+      ],
+      "geometry": "point",
+      "distance_m": 15
+    },
+    {
+      "category": "Water",
+      "name": "Urban Utilities - Water fitting",
+      "layer": "https://services3.arcgis.com/ocUCNI2h4moKOpKX/arcgis/rest/services/UU_Water_OpenData/FeatureServer/14",
+      "label_field": "SUBTYPECD",
+      "show_fields": [
+        "ASSETID",
+        "SUBTYPECD",
+        "FITTINGTYPE",
+        "WATERTYPE",
+        "DIAMETER",
+        "OWNER"
+      ],
+      "geometry": "point",
+      "distance_m": 15
     },
     {
       "category": "Water",
