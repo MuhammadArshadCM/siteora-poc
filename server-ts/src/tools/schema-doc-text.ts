@@ -5,7 +5,7 @@ export const GROUPS: [string, [string, string, string][]][] = [
   [
    [
     "authorities",
-    "Bodies that make the law: Parliament, State Government, ABCB, Standards Australia, the 7 councils.",
+    "Bodies that make the law: Parliament, State Government, ABCB, Standards Australia, the councils.",
     "db/010"
    ],
    [
