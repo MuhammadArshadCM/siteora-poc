@@ -176,7 +176,10 @@ function publisherOf(url: string): Publisher {
 
 const COUNCIL_NAMES: Record<string, string> = {
   BRISBANE: "Brisbane", GOLD_COAST: "Gold Coast", MORETON_BAY: "Moreton Bay", SUNSHINE_COAST: "Sunshine Coast",
-  LOGAN: "Logan", IPSWICH: "Ipswich", REDLAND: "Redland", STATE: "All 7 councils", ALL: "All 7 councils",
+  LOGAN: "Logan", IPSWICH: "Ipswich", REDLAND: "Redland",
+  BURKE: "Burke", CENTRAL_HIGHLANDS: "Central Highlands", LIVINGSTONE: "Livingstone", MOUNT_ISA: "Mount Isa",
+  ROCKHAMPTON: "Rockhampton", SOUTH_BURNETT: "South Burnett", TOOWOOMBA: "Toowoomba", TOWNSVILLE: "Townsville",
+  STATE: "All councils", ALL: "All councils",
 };
 
 // ----------------------------------------------------------------------------- what the app calls
@@ -740,7 +743,7 @@ async function main(): Promise<number> {
       median: answered.length ? answered[Math.floor(answered.length / 2)] : "",
     };
   };
-  const councilKeys = ["BRISBANE", "GOLD_COAST", "MORETON_BAY", "SUNSHINE_COAST", "LOGAN", "IPSWICH", "REDLAND"];
+  const councilKeys = Object.keys(COUNCIL_NAMES).filter((k) => !["STATE", "ALL"].includes(k));
   const summary = [
     summaryRow("All sources", rows),
     ...councilKeys.map((k) => summaryRow(COUNCIL_NAMES[k], rows.filter((r) => r.council === COUNCIL_NAMES[k]))),

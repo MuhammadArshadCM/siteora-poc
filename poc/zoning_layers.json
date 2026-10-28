@@ -438,5 +438,103 @@
       }
     ],
     "scheme_viewer": "https://www.redland.qld.gov.au/info/20292/redland_city_plan"
+  },
+  "TOOWOOMBA": {
+    "status": "WORKING",
+    "zone_layer": "https://maps.tr.qld.gov.au/arcgis/rest/services/External/External_PlanningScheme/MapServer/170",
+    "zone_field": "TRPS_Zones",
+    "precinct_field": "TRPS_Precinct",
+    "notes": "Toowoomba Regional Planning Scheme. Layer 170 ('Zones', under group layer 165) also carries QPP_Zone/Precinct numeric codes with no exposed domain — the TRPS_Zones/TRPS_Precinct string fields are used instead, confirmed by a live point query (verified 26 Oct 2026: CBD point returned TRPS_Zones='Principal Centre', TRPS_Precinct='No Precinct'). A dedicated precinct layer also exists at .../MapServer/167 (fields Precinct, Precinct_Label, Precinct_Description) if a standalone precinct lookup is ever needed. Only the zones this project has researched (Low Density Residential, Low-medium Density Residential, Community Facilities, Emerging Community, Rural, Rural Residential, Specialised Centre, Township) have rules; other live zone text (e.g. 'Principal Centre') correctly has none yet. Local plan layers (Charlton Wellcamp, Glenvale, Highfields/Meringandan) not yet located on this service — local plan detection remains to be wired up.",
+    "null_values": [
+      "No Precinct"
+    ],
+    "overlay_layers": [
+      {
+        "name": "Heritage Overlay",
+        "layer": "https://maps.tr.qld.gov.au/arcgis/rest/services/External/External_PlanningScheme/MapServer/152",
+        "field": "OVL_Name",
+        "map": {
+          "*": [
+            "TRC:OV:HERITAGE_OVERLAY"
+          ]
+        }
+      },
+      {
+        "name": "Neighbourhood Character Overlay",
+        "layer": "https://maps.tr.qld.gov.au/arcgis/rest/services/External/External_PlanningScheme/MapServer/154",
+        "field": "OVL_Name",
+        "map": {
+          "*": [
+            "TRC:OV:NEIGHBOURHOOD_CHARACTER_OVERLAY"
+          ]
+        }
+      }
+    ],
+    "scheme_viewer": "https://maps.tr.qld.gov.au/WAB/PlanningScheme/"
+  },
+  "TOWNSVILLE": {
+    "status": "WORKING",
+    "zone_layer": "https://services6.arcgis.com/3VCE6mezZtwKJeIR/arcgis/rest/services/TCC_City_Planning_Scheme_Zoning_GDA2020/FeatureServer/0",
+    "zone_field": "LVL2_ZONE",
+    "precinct_field": "ZONE_PREC",
+    "local_plan_field": "LP",
+    "local_plan_precinct_field": "LP_PREC",
+    "notes": "Townsville City Plan 2014. LVL2_ZONE is the specific zone name (LVL1_ZONE is the broader group, e.g. 'Centre' vs 'Principal Centre'); TCC_CODE carries the short code but is not used here since LVL2_ZONE already matches our zone names. Verified by a live point query (26 Oct 2026: Townsville CBD returned LVL1_ZONE='Centre', LVL2_ZONE='Principal Centre', TCC_CODE='PC'). No overlay (bushfire/flood/heritage/character precinct) layers are published by the council as public ArcGIS feature services -- none registered here; only the zone/precinct/local-plan fields on this one layer are queryable.",
+    "scheme_viewer": "https://townsville.qld.gov.au/building-planning-and-projects/mapping-services/townsvillemaps"
+  },
+  "LIVINGSTONE": {
+    "status": "WORKING",
+    "zone_layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Planning_Scheme_2018_v4_WFL1/FeatureServer/10",
+    "zone_field": "Zone",
+    "precinct_layers": [
+      "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Planning_Scheme_2018_v4_WFL1/FeatureServer/0"
+    ],
+    "precinct_layer_field": "Precinct",
+    "local_plan_layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Planning_Scheme_2018_v4_WFL1/FeatureServer/3",
+    "local_plan_layer_field": "Name",
+    "local_plan_precinct_layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Planning_Scheme_2018_v4_WFL1/FeatureServer/5",
+    "local_plan_precinct_code_field": "LPP",
+    "local_plan_precinct_name_field": "LPPName",
+    "null_values": [
+      "Unzoned"
+    ],
+    "notes": "Livingstone Shire Planning Scheme 2018 v4. Verified by live query (26 Oct 2026): Adopted Zones layer (/10) field 'Zone' gives plain names e.g. 'Rural', 'Community facilities'; Zone Precinct Boundaries layer (/0) field 'Precinct' gives e.g. 'Capricorn Coast Rural Precinct' (matches our registered precinct names directly). Seaspray local plan is on separate layers (/3 boundary, /5 precincts, fields Name/LPP/LPPName). Overlays (bushfire, flood, coastal, acid sulphate soils etc., ~20 'OMxx' layers) exist in the same org but are published as cached TilesOnly MapServers -- not queryable via REST, so none are wired here.",
+    "scheme_viewer": "https://experience.arcgis.com/experience/25f9cf783f3b437c9aa805acc25382a6"
+  },
+  "ROCKHAMPTON": {
+    "status": "WORKING",
+    "zone_layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Land_Use_Zones/FeatureServer/0",
+    "zone_field": "Zone_Lable",
+    "precinct_layers": [
+      "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Land_Use_Precinct/FeatureServer/0"
+    ],
+    "precinct_layer_field": "DESCRIPTION",
+    "notes": "Rockhampton Regional Planning Scheme. Verified by live query (26 Oct 2026): Land_Use_Zones field 'Zone_Lable' gives the plain zone name (e.g. 'Rural'), separate from 'Zone' which carries a 'L1 - ' map-sheet prefix. Precinct layer field 'DESCRIPTION' used as the precinct name. Heritage ('Heritage_Places', field PLACENAME/STATUS) and flood ('North_Rockhampton_Flood_Management_Area') layers exist and are queryable but not wired as overlays here -- our dataset has no RRC heritage/flood overlay_id registered yet, only RRC:OV:CHARACTER_OVERLAY_* / COASTAL_PROTECTION_OVERLAY / FLOOD_HAZARD_OVERLAY_* (not yet matched to a specific queryable layer). Bushfire is split into several per-class FeatureServers (Very High/High/Medium/Buffer), not a single combined layer. No Local Plan layer found.",
+    "scheme_viewer": "https://rockeplan.rockhamptonregion.qld.gov.au/"
+  },
+  "BURKE": {
+    "status": "WORKING",
+    "zone_layer": "https://services6.arcgis.com/Y1eHlY9NRfVWoL8v/arcgis/rest/services/PlanningScheme_Burke_Nov2024/FeatureServer/6",
+    "zone_field": "ZONE",
+    "precinct_field": "PRECINCT",
+    "notes": "Burke Shire Planning Scheme, Nov 2024. Verified by live query (26 Oct 2026): field 'ZONE' gives plain names (e.g. 'Rural', 'Township'); 'PRECINCT' gives the Township zone's precinct (e.g. 'Residential'), null outside Township. Hosted by Qld DSDIP on behalf of the council (ArcGIS item titled 'DRAFT ... PROD' is an internal versioning label, not an unpublished draft -- it is the service linked from the council's own public 'Interactive Mapping' page). Flood overlay layers (Queensland floodplain assessment overlay, Gregory/Burketown 1% AEP) exist on the same service but are not wired as overlays here (no BSC overlay_id registered yet).",
+    "scheme_viewer": "https://dsdip.maps.arcgis.com/apps/webappviewer/index.html?id=d61c4c30db2946e4b3cdd93d0cc4a124"
+  },
+  "MOUNT_ISA": {
+    "status": "WORKING",
+    "zone_layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/Planning_Scheme_Zones_(public)/FeatureServer/0",
+    "zone_field": "Zone_Legend",
+    "notes": "Mount Isa City Planning Scheme. Verified by live query (26 Oct 2026): field 'Zone_Legend' gives the full zone name (e.g. 'Rural', 'Environmental Management and Conservation', 'Special Purpose'); 'LVL2_Zone' is a coarser/sparser field, not used. No precinct field on this layer -- precinct-style areas (CBD, Airport, Stables, Leichhardt River) are published as separate named precinct/overlay layers instead, not wired here. A separate 'Planning_Scheme_Overlays_(public)' layer (field OverlayDescription) exists but is not wired (no MICC overlay_id registered yet).",
+    "scheme_viewer": "https://mountisa.qld.gov.au/maps"
+  },
+  "CENTRAL_HIGHLANDS": {
+    "status": "BLOCKED",
+    "notes": "No public GIS service exists for Central Highlands' planning-scheme zoning, confirmed by two passes (26 Oct 2026). First pass: no ArcGIS REST FeatureServer/MapServer (incl. the Qld DSDIP remote-council hosting program that covers Burke -- Central Highlands is not on it); the council's own ArcGIS org only carries shared disaster-management layers (flood extents), not zoning. Second, deeper pass checked (without touching the bot-protected ePlan portal itself): candidate GIS subdomains (maps/gis/data.chrc.qld.gov.au) all NXDOMAIN; the council website's only mapping links route to ePlan; the State's own ArcGIS platform (spatial-gis.information.qld.gov.au, PlanningCadastre folder) has no zoning/planning-scheme layer for any council, confirming QLD zoning is always council-hosted, never state-aggregated; data.qld.gov.au / data.gov.au / Queensland Globe have no matching dataset. Choose the zone manually; the council's own lookup tool is its ePlan portal.",
+    "scheme_viewer": "https://eplan.chrc.qld.gov.au/planningscheme/"
+  },
+  "SOUTH_BURNETT": {
+    "status": "BLOCKED",
+    "notes": "South Burnett's interactive zoning map runs on IntraMaps (TechnologyOne), not Esri ArcGIS, confirmed by two passes (26 Oct 2026). First pass: no ArcGIS endpoint or open-data portal with equivalent boundaries found. Second, deeper pass checked (without probing the IntraMaps viewer's own internal API): every alternative top-level path on the IntraMaps host (rest/services, wms, wfs, arcgis/rest) redirects back to the same viewer page -- no separate OGC/REST service sits alongside it; candidate GIS subdomains (maps/gis.southburnett.qld.gov.au) NXDOMAIN; the council's own 'Online Maps' page only links to the State's Queensland Globe/SARA tools and this same IntraMaps viewer; data.qld.gov.au / data.gov.au / the State's ArcGIS platform have no matching zoning dataset. Choose the zone manually using the council's own IntraMaps viewer.",
+    "scheme_viewer": "https://sbrc.spatial.t1cloud.com/spatial/intramaps/?configId=2c897da7-a1a0-43c7-b566-69662025e462&project=a4c451dc-08aa-414b-ba8c-9566a3e6e976&module=c8686587-1556-4846-bcd7-b593db74a298"
   }
 }
