@@ -394,11 +394,14 @@ const ClippedLayer = window.L ? L.FeatureGroup.extend({
     this._renderer = paneRenderer(map);
     (map._clipped = map._clipped || new Set()).add(this);
     L.FeatureGroup.prototype.onAdd.call(this, map);
-    map.on('moveend', this._schedule, this);
+    // point assets with a distance_m (hydrants, valves, poles…) are tied to the property, not the view: fetch once,
+    // in a small box around the property, instead of redrawing every nearby asset across whatever is panned into view
+    this._fixedBox = this._c.geometry === 'point' && this._c.distance_m != null;
+    if (!this._fixedBox) map.on('moveend', this._schedule, this);
     this._load();
   },
   onRemove(map) {
-    map.off('moveend', this._schedule, this);
+    if (!this._fixedBox) map.off('moveend', this._schedule, this);
     if (map._clipped) map._clipped.delete(this);
     clearTimeout(this._timer);
     L.FeatureGroup.prototype.onRemove.call(this, map);
@@ -418,9 +421,12 @@ const ClippedLayer = window.L ? L.FeatureGroup.extend({
   _load() {
     const map = this._map;
     if (!map || this._fb) return;
-    if (map.getZoom() < 15) { this.clearLayers(); return; }
-    const b = map.getBounds().pad(0.15), seq = ++this._seq;
-    const bbox = [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()].map(n => n.toFixed(6)).join(',');
+    if (!this._fixedBox && map.getZoom() < 15) { this.clearLayers(); return; }
+    const seq = ++this._seq;
+    const bbox = this._fixedBox ? propertyBox(map._propertyCenter, this._c.distance_m) : (() => {
+      const b = map.getBounds().pad(0.15);
+      return [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()].map(n => n.toFixed(6)).join(',');
+    })();
     Promise.all([applyPublisherColors(this._c),
       fetch(`/api/features?layer=${encodeURIComponent(this._c.layer)}&bbox=${bbox}`)
         .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)))])
@@ -437,6 +443,12 @@ const ClippedLayer = window.L ? L.FeatureGroup.extend({
 
 let MAP = null;
 const MAP_LIMIT_KM = 10;   // how far from the property the map can be moved
+// a small box around the property, distance_m plus a visual margin so a pin right at the edge isn't clipped
+function propertyBox(center, distanceM) {
+  const pad = Math.max(distanceM, 10) + 10;
+  const dLat = pad / 111320, dLon = pad / (111320 * Math.cos(center[0] * Math.PI / 180));
+  return [center[1] - dLon, center[0] - dLat, center[1] + dLon, center[0] + dLat].map(n => n.toFixed(6)).join(',');
+}
 const COLORS = ['#2457d6', '#1d7a46', '#a15c00', '#8a3ffc', '#b42318', '#0e7490', '#be185d', '#4d7c0f', '#7c2d12', '#334155'];
 function drawMap(d) {
   if (!window.L || !L.esri) { $('#map').innerHTML = '<p class="err" style="padding:12px">Map libraries could not load (offline?).</p>'; return; }
@@ -448,6 +460,7 @@ function drawMap(d) {
   const limit = L.latLngBounds([L0.lat - dLat, L0.lon - dLon], [L0.lat + dLat, L0.lon + dLon]);
   MAP = L.map('map', {maxBounds: limit, maxBoundsViscosity: 1.0}).setView(center, 18);
   MAP.setMinZoom(MAP.getBoundsZoom(limit, true));
+  MAP._propertyCenter = center;
   const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 20, maxNativeZoom: 19,
     attribution: '&copy; OpenStreetMap contributors'});
   const sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',

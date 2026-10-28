@@ -17,21 +17,6 @@
     },
     {
       "category": "Buildings",
-      "name": "Existing building footprints (Queensland Building Footprints)",
-      "layer": "https://gisservices.qra.qld.gov.au/arcgis/rest/services/Foundation_Data/Queensland_Building_Footprints/FeatureServer/0",
-      "label_field": "Building_Area",
-      "show_fields": [
-        "Building_Area",
-        "BUILD_CLS",
-        "FLR_HEIGHT",
-        "LGA"
-      ],
-      "geometry": "polygon",
-      "copyright": "© State of Queensland (Queensland Reconstruction Authority)",
-      "notes": "State-wide fallback. A council that publishes its own building footprints takes priority: give it a layer with category \"Buildings\" in its own list and this one is skipped for that council (no council publishes one in its open services as of 22 Oct 2026). Footprints are derived from imagery/LiDAR: outlines and areas are approximate, and height fields are mostly empty."
-    },
-    {
-      "category": "Buildings",
       "name": "Building outlines from LiDAR (QSpatial, Dept of Resources)",
       "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Structure/BuildingsAndSettlements/MapServer/11",
       "label_field": "featuresourceproject",
@@ -46,8 +31,9 @@
         "status"
       ],
       "geometry": "polygon",
+      "where": "status = 'Current'",
       "copyright": "© State of Queensland (Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development)",
-      "notes": "Government building outlines (10 m2 and larger) extracted automatically from LiDAR, per project area. Capture dates differ by area (checked 22 Oct 2026): Brisbane LGA Jun-Aug 2019, Redland and Gold Coast and Sunshine Coast 2022, Ipswich, Logan and Moreton Bay 2023. Generalised outlines; buildings built after the capture date are missing. No government footprint dataset newer than these was found for these councils."
+      "notes": "Government building outlines (10 m2 and larger) extracted automatically from LiDAR, per project area. Capture dates differ by area (checked 22 Oct 2026): Brisbane LGA Jun-Aug 2019, Redland and Gold Coast and Sunshine Coast 2022, Ipswich, Logan and Moreton Bay 2023. Generalised outlines; buildings built after the capture date are missing. No government footprint dataset newer than these was found for these councils. The service keeps every past survey of a building, not just the latest: a re-surveyed building (e.g. a newer LGA-wide capture, or a later project-specific capture after a renovation) has one feature per survey, all overlapping at the same location, with only the latest marked status='Current' and the rest 'Superseded'. The where clause below keeps only the current feature; without it the map draws every past survey on top of each other. State-wide fallback: a council that publishes its own building footprints takes priority (none does as of 27 Oct 2026). The Queensland Reconstruction Authority's Queensland Building Footprints layer used to run alongside this one under the same \"Buildings\" category; it was removed because the map force-draws every \"Buildings\" layer (poc/static/index.html), so both were always shown at once as two offset outlines for the same building. Do not re-add a second \"Buildings\" entry here without also changing that behaviour."
     },
     {
       "category": "Vegetation",
