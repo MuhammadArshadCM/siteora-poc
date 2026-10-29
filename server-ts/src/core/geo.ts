@@ -162,6 +162,23 @@ export async function lotQuery(layer: string, rings: Rings, outFields = "*", dis
   return feats;
 }
 
+/** Neighbouring parcels that share a boundary with the lot (Touches, not Intersects - excludes the lot itself and
+ *  anything that only overlaps). Returns each neighbour's centroid, for testing against another layer (e.g. which
+ *  precinct the neighbour is in) - never the neighbour's own attributes, since "shares a boundary" is all that
+ *  Touches establishes. */
+export async function touchingNeighbours(layer: string, rings: Rings, where = "1=1"): Promise<[number, number][]> {
+  const params: Record<string, unknown> = {
+    geometry: JSON.stringify({ rings, spatialReference: { wkid: SR } }), geometryType: "esriGeometryPolygon", inSR: SR,
+    spatialRel: "esriSpatialRelTouches", outFields: "", where, returnGeometry: "true", outSR: SR, f: "json" };
+  const data = await getJson(`${layer}/query`, params, 30, 3, true);
+  const feats: Feature[] = data.features ?? [];
+  return feats.map((f) => {
+    const ring = f.geometry?.rings?.[0] ?? [];
+    const n = ring.length || 1;
+    return [ring.reduce((s: number, p: number[]) => s + p[0], 0) / n, ring.reduce((s: number, p: number[]) => s + p[1], 0) / n];
+  });
+}
+
 export interface Geocode { address: string; lon: number; lat: number; score: number; unmatched_input: string | null; source: string }
 
 /** Exact-enough match only (score >= 95, or >= 90 with nothing unmatched); otherwise list the candidates. */

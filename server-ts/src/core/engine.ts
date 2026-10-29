@@ -223,8 +223,10 @@ export function sources(loc: any, cfg: any): any[] {
 
 type FactMap = Record<string, { value: any; source: string }>;
 
+const BURKE_PRECINCTS_LAYER = "https://services6.arcgis.com/Y1eHlY9NRfVWoL8v/arcgis/rest/services/PlanningScheme_Burke_Nov2024/FeatureServer/4";
+
 /** Step 2: facts with provenance. inputs = user-supplied values (strings/numbers/bools). */
-export function buildFacts(loc: any, structure: string, inputs: Record<string, any>): FactMap {
+export async function buildFacts(loc: any, structure: string, inputs: Record<string, any>): Promise<FactMap> {
   const facts: FactMap = {};
   const put = (name: string, value: any, source: string) => {
     if (value !== null && value !== undefined && value !== "") facts[name] = { value, source };
@@ -252,6 +254,41 @@ export function buildFacts(loc: any, structure: string, inputs: Record<string, a
     put(fact, hit, "Council overlay map (" + (hit ? "inside" : "outside") + " the mapped area)");
   if (loc.council.lg_id === "LOGAN" && zone && zone.dwelling_house_permitted && !("dwelling_house_code_applies" in facts))
     put("dwelling_house_code_applies", true, "ASSUMED: lot is in a 'residential area' on Logan's Residential overlay (not checked)");
+  if (loc.council.lg_id === "BURKE") {
+    // Table 5.8 (Building work, all zones): accepted development unless within 50m of a Schedule 5 heritage place or
+    // within the Burketown Airport operational airspace (Schedule 2 maps BTN AF1/BTN AF2). Heritage is a reliable
+    // GIS check; the airport is only bounded (see site_layers.json notes) - left UNKNOWN when within that bound and
+    // not already resolved true by heritage, never guessed false.
+    const nearHeritage = facts.burke_near_local_heritage_place?.value === true;
+    const nearAirport = facts.burke_near_burketown_airport?.value;
+    if (nearHeritage) put("burke_zone_code_applies", true, "DERIVED: within 50m of a Schedule 5 local heritage place (Table 5.8)");
+    else if (nearAirport === false)
+      put("burke_zone_code_applies", false, "DERIVED: not near a Schedule 5 heritage place, and more than 5km from Burketown Airport (Table 5.8)");
+    // else: within 5km of the airport and not near heritage - genuinely unresolved, left out of `facts`
+
+    // AO12.1 (Township zone, Commercial precinct): "any boundary shared with a residential precinct". A shared
+    // boundary means an actual neighbouring lot, not just nearby land, so this finds the parcels that really touch
+    // this one (Touches, not a distance buffer) and checks each one's precinct: true if any is Residential, false
+    // only once every touching neighbour has been checked and none is. A lookup failure, or no neighbour found at
+    // all (cadastral touch tests can miss a true neighbour over a tiny digitising gap), is left unresolved rather
+    // than guessed false.
+    if (loc.parcel_geometry) {
+      try {
+        const neighbours = await geo.touchingNeighbours(geo.PARCEL_LAYER, loc.parcel_geometry);
+        let adjoinsResidential: boolean | null = neighbours.length ? false : null;
+        for (const [nlon, nlat] of neighbours) {
+          const hit = await geo.pointQuery(BURKE_PRECINCTS_LAYER, nlon, nlat, "PRECINCT");
+          if (hit.some((f) => f.attributes.PRECINCT === "Residential")) { adjoinsResidential = true; break; }
+        }
+        if (adjoinsResidential !== null)
+          put("burke_boundary_adjoins_residential_precinct", adjoinsResidential,
+            "DERIVED: cadastre neighbour(s) sharing a boundary with this lot, checked against the Burke Precincts map");
+      } catch (e) {
+        loc.warnings.push(unavailable("The Burke precincts/cadastre neighbour lookup", e,
+          "whether any boundary is shared with a residential precinct (Township zone code AO12.1) is not resolved"));
+      }
+    }
+  }
   // Assumptions a POC has to make; all are listed in the output
   put("land_is_regulated_land", true, "ASSUMED: lot has (or will have) a dwelling");
   put("in_wind_region_c", false, "ASSUMED: SEQ councils are not in Wind Region C");
@@ -474,7 +511,7 @@ export async function run(db: Db, structure: string, inputs: Record<string, any>
       available_zones: loc.available_zones, available_precincts: loc.available_precincts,
     };
   }
-  const facts = buildFacts(loc, structure, inputs);
+  const facts = await buildFacts(loc, structure, inputs);
   const siteDef: evaluate.Site = { lg: loc.council.lg_id, zone: loc.zoning.zone_id, precincts: loc.zoning.precincts,
     local_plans: loc.zoning.local_plans, local_plan_precincts: loc.zoning.local_plan_precincts,
     overlays: unique<string>(loc.overlays.flatMap((x: any) => x.overlay_ids)).sort() };

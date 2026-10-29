@@ -14,9 +14,11 @@
 SET search_path = regs, public;
 
 INSERT INTO facts (fact_id, type, unit, allowed_values, source, description, derivation) VALUES
- ('burke_zone_code_applies','BOOLEAN',NULL,NULL,'PLANNING_DATA','Burke: the development (dwelling house MCU incl. its domestic outbuildings) is code assessable against the zone code (Tables 5.5.1 / 5.5.3 / 5.5.4 "Otherwise" row). False for accepted development subject to requirements (General development code only) and for Class 10 building work without an MCU (Table 5.8 accepted).', 'Township: not in the Residential precinct. Rural residential: not accepted subject to requirements. Rural: more than two dwellings, or bushfire prone (SPP mapping), or an identified abandoned mine area.'),
+ ('burke_zone_code_applies','BOOLEAN',NULL,NULL,'PLANNING_DATA','Burke: the Class 10 building work (no MCU) is code assessable under Table 5.8 (General development code) - not the dwelling house MCU tables 5.5.1/5.5.3/5.5.4, which do not reach building work on an existing dwelling house lot. Table 5.8 accepted development is unconditional except for two triggers: within 50m of a Schedule 5 local heritage place, or within the Burketown Airport operational airspace (Schedule 2 maps BTN AF1/BTN AF2).', 'TRUE if burke_near_local_heritage_place. FALSE if not near heritage AND burke_near_burketown_airport is false (>5km from the airport). Otherwise left unresolved: the airport''s obstacle limitation surface is not published as GIS and is not safely reconstructable from the scheme''s static map without the exact runway geometry - see poc/site_layers.json BURKE notes.'),
+ ('burke_near_local_heritage_place','BOOLEAN',NULL,NULL,'PROPERTY_DATA','Burke: the lot is within 50m of a Schedule 5 local heritage register parcel (Table 5.8)', 'State cadastre (lot/plan match against Table SC6.1), partial: see poc/site_layers.json BURKE notes for which of the 9 listed places still resolve'),
+ ('burke_near_burketown_airport','BOOLEAN',NULL,NULL,'PROPERTY_DATA','Burke: the lot is within 5km of the Burketown Airport reference point - a deliberately generous outer bound on its operational airspace, not the mapped boundary (Table 5.8)', 'State/council airport point layer, distance only'),
  ('burke_boundary_road_is_state_controlled','BOOLEAN',NULL,NULL,'PROPERTY_DATA','Burke: the boundary being tested adjoins a State-controlled road (Rural residential / Rural zone code AO1)', 'State-controlled road network mapping'),
- ('burke_boundary_adjoins_residential_precinct','BOOLEAN',NULL,NULL,'PLANNING_DATA','Burke: the boundary being tested is shared with land in the Township zone Residential precinct (Township zone code AO12.1)', 'Zone / precinct mapping of the adjoining lot');
+ ('burke_boundary_adjoins_residential_precinct','BOOLEAN',NULL,NULL,'PLANNING_DATA','Burke: the boundary being tested is shared with land in the Township zone Residential precinct (Township zone code AO12.1)', 'State cadastre: parcels that share a boundary with this lot (Touches, not a distance buffer), each checked against the Burke Precincts map. TRUE if any neighbour is in the Residential precinct, FALSE only once every neighbour found has been checked and none is; left unresolved if the lookup fails or finds no neighbour at all (a true neighbour can be missed by a tiny digitising gap, so that case is not read as "isolated lot = false").');
 
 -- ============================================================================ RURAL RESIDENTIAL ZONE
 SELECT define_rule($r${
@@ -28,11 +30,11 @@ SELECT define_rule($r${
  "on_noncompliance": "PLANNING_APPROVAL_REQUIRED", "verification": "VERIFIED_VERBATIM", "automatable": true,
  "scopes": [{"level": "LOCAL_GOVERNMENT", "lg": "BURKE"}, {"level": "ZONE", "zone": "BSC:RURAL_RESIDENTIAL"}],
  "subjects": ["ANY"],
- "conditions": [[{"fact": "planning_assessment_required", "op": "IS_TRUE"}, {"fact": "burke_zone_code_applies", "op": "IS_TRUE"},
+ "conditions": [[{"fact": "burke_zone_code_applies", "op": "IS_TRUE"},
                  {"fact": "boundary_type", "op": "IN", "value": ["PRIMARY_FRONTAGE", "SECONDARY_FRONTAGE_ROAD", "SECONDARY_FRONTAGE_LANE_PARKWAY", "SECONDARY_FRONTAGE_OTHER"]}]],
  "sources": [{"key": "bsc_rr_ao1_front_setback", "role": "PRIMARY",
               "quote": "AO1 Buildings and structures are setback 20m from a State-controlled road otherwise 6m from all boundaries."}],
- "interpretation_notes": "Zone code (Table 6.2.3.2 AO1) applies only when the dwelling house is code assessable (Table 5.5.3 'Otherwise'); an accepted dwelling house and later Class 10 building work (Table 5.8 accepted) get no council setback, so the QDC applies. Not a QDC alternative provision (s1.6(3), Table 5.8): planning benchmark only, the QDC still applies alongside. '6m from all boundaries' covers every frontage type. Table 7.2.1.4 (GDC AO5) excludes Dwelling houses and is not encoded.",
+ "interpretation_notes": "Zone code (Table 6.2.3.2 AO1) applies only when the Class 10 building work is code assessable under Table 5.8 (burke_zone_code_applies); otherwise it is accepted development and the QDC applies. Not gated on the generic 'planning_assessment_required' fact (that fact is a blanket ASSUMED-false default used by other councils' MCU-based rules; Burke's actual trigger for building work is Table 5.8, which burke_zone_code_applies already captures in full - see its fact description). Not a QDC alternative provision (s1.6(3), Table 5.8): planning benchmark only, the QDC still applies alongside. '6m from all boundaries' covers every frontage type. Table 7.2.1.4 (GDC AO5) excludes Dwelling houses and is not encoded.",
  "effective_from": "2020-02-07"}$r$);
 SELECT supersede_draft('BSC.C.RR_FRONT_SETBACK@2020-02-07', 'BSC.bsc_rr_ao1_front_setback');
 
@@ -44,11 +46,11 @@ SELECT define_rule($r${
  "on_noncompliance": "PLANNING_APPROVAL_REQUIRED", "verification": "VERIFIED_VERBATIM", "automatable": true,
  "scopes": [{"level": "LOCAL_GOVERNMENT", "lg": "BURKE"}, {"level": "ZONE", "zone": "BSC:RURAL_RESIDENTIAL"}],
  "subjects": ["ANY"],
- "conditions": [[{"fact": "planning_assessment_required", "op": "IS_TRUE"}, {"fact": "burke_zone_code_applies", "op": "IS_TRUE"},
+ "conditions": [[{"fact": "burke_zone_code_applies", "op": "IS_TRUE"},
                  {"fact": "boundary_type", "op": "IN", "value": ["SIDE", "REAR"]}]],
  "sources": [{"key": "bsc_rr_ao1_side_rear_setback", "role": "PRIMARY",
               "quote": "AO1 Buildings and structures are setback 20m from a State-controlled road otherwise 6m from all boundaries."}],
- "interpretation_notes": "As BSC.C.RR_FRONT_SETBACK: applies only to a code assessable dwelling house (Table 5.5.3 'Otherwise'); planning benchmark, not a QDC alternative provision. Side/rear boundaries are not road boundaries, so the 6 m limb applies. No built-to-boundary allowance for Class 10 is stated.",
+ "interpretation_notes": "As BSC.C.RR_FRONT_SETBACK: applies only when the Class 10 building work is code assessable under Table 5.8 (burke_zone_code_applies), not the generic 'planning_assessment_required' default; planning benchmark, not a QDC alternative provision. Side/rear boundaries are not road boundaries, so the 6 m limb applies. No built-to-boundary allowance for Class 10 is stated.",
  "effective_from": "2020-02-07"}$r$);
 SELECT supersede_draft('BSC.C.RR_SIDE_REAR_SETBACK@2020-02-07', 'BSC.bsc_rr_ao1_side_rear_setback');
 
@@ -62,11 +64,11 @@ SELECT define_rule($r${
  "on_noncompliance": "PLANNING_APPROVAL_REQUIRED", "verification": "VERIFIED_VERBATIM", "automatable": true,
  "scopes": [{"level": "LOCAL_GOVERNMENT", "lg": "BURKE"}, {"level": "ZONE", "zone": "BSC:RURAL"}],
  "subjects": ["ANY"],
- "conditions": [[{"fact": "planning_assessment_required", "op": "IS_TRUE"}, {"fact": "burke_zone_code_applies", "op": "IS_TRUE"},
+ "conditions": [[{"fact": "burke_zone_code_applies", "op": "IS_TRUE"},
                  {"fact": "boundary_type", "op": "IN", "value": ["PRIMARY_FRONTAGE", "SECONDARY_FRONTAGE_ROAD", "SECONDARY_FRONTAGE_LANE_PARKWAY", "SECONDARY_FRONTAGE_OTHER"]}]],
  "sources": [{"key": "bsc_rural_ao1_front_setback", "role": "PRIMARY",
               "quote": "AO1 Buildings and structures are setback 20m from a State-controlled road otherwise 6m from all boundaries."}],
- "interpretation_notes": "Zone code (Table 6.2.4.2 AO1) applies only when the dwelling house is code assessable (Table 5.5.4: more than two dwellings, bushfire prone, or abandoned mine area); otherwise accepted subject to requirements against the GDC only, and Class 10 building work without an MCU is accepted (Table 5.8): QDC applies. Not a QDC alternative provision: planning benchmark only. Table 7.2.1.4's 10 m Rural front setback excludes Dwelling houses and defers to the zone code (AO5), so it is not encoded.",
+ "interpretation_notes": "Zone code (Table 6.2.4.2 AO1) applies only when the Class 10 building work is code assessable under Table 5.8 (burke_zone_code_applies: the Rural zone's own dwelling-house-MCU trigger in Table 5.5.4 - more than two dwellings, bushfire prone, abandoned mine area - does not reach building work on an existing lot); otherwise accepted development and the QDC applies. Not gated on the generic 'planning_assessment_required' fact (see BSC.C.RR_FRONT_SETBACK). Not a QDC alternative provision: planning benchmark only. Table 7.2.1.4's 10 m Rural front setback excludes Dwelling houses and defers to the zone code (AO5), so it is not encoded.",
  "effective_from": "2020-02-07"}$r$);
 SELECT supersede_draft('BSC.C.RURAL_FRONT_SETBACK@2020-02-07', 'BSC.bsc_rural_ao1_front_setback');
 
@@ -78,11 +80,11 @@ SELECT define_rule($r${
  "on_noncompliance": "PLANNING_APPROVAL_REQUIRED", "verification": "VERIFIED_VERBATIM", "automatable": true,
  "scopes": [{"level": "LOCAL_GOVERNMENT", "lg": "BURKE"}, {"level": "ZONE", "zone": "BSC:RURAL"}],
  "subjects": ["ANY"],
- "conditions": [[{"fact": "planning_assessment_required", "op": "IS_TRUE"}, {"fact": "burke_zone_code_applies", "op": "IS_TRUE"},
+ "conditions": [[{"fact": "burke_zone_code_applies", "op": "IS_TRUE"},
                  {"fact": "boundary_type", "op": "IN", "value": ["SIDE", "REAR"]}]],
  "sources": [{"key": "bsc_rural_ao1_side_rear_setback", "role": "PRIMARY",
               "quote": "AO1 Buildings and structures are setback 20m from a State-controlled road otherwise 6m from all boundaries."}],
- "interpretation_notes": "As BSC.C.RURAL_FRONT_SETBACK: applies only to a code assessable dwelling house; planning benchmark, not a QDC alternative provision. Side/rear boundaries are not road boundaries, so the 6 m limb applies.",
+ "interpretation_notes": "As BSC.C.RURAL_FRONT_SETBACK: applies only when the Class 10 building work is code assessable under Table 5.8 (burke_zone_code_applies), not the generic 'planning_assessment_required' default; planning benchmark, not a QDC alternative provision. Side/rear boundaries are not road boundaries, so the 6 m limb applies.",
  "effective_from": "2020-02-07"}$r$);
 SELECT supersede_draft('BSC.C.RURAL_SIDE_REAR_SETBACK@2020-02-07', 'BSC.bsc_rural_ao1_side_rear_setback');
 
@@ -95,11 +97,11 @@ SELECT define_rule($r${
  "on_noncompliance": "PLANNING_APPROVAL_REQUIRED", "verification": "VERIFIED_VERBATIM", "automatable": false,
  "scopes": [{"level": "LOCAL_GOVERNMENT", "lg": "BURKE"}, {"level": "PRECINCT", "precinct": "BSC:TOWNSHIP/COMMERCIAL"}],
  "subjects": ["CLASS_1", "CLASS_10A"],
- "conditions": [[{"fact": "planning_assessment_required", "op": "IS_TRUE"}, {"fact": "burke_zone_code_applies", "op": "IS_TRUE"},
+ "conditions": [[{"fact": "burke_zone_code_applies", "op": "IS_TRUE"},
                  {"fact": "boundary_type", "op": "IN", "value": ["SIDE", "REAR"]},
                  {"fact": "burke_boundary_adjoins_residential_precinct", "op": "IS_TRUE"}]],
  "sources": [{"key": "bsc_township_commercial_ao12_1_side_rear_setback", "role": "PRIMARY",
               "quote": "AO12.1 Buildings are set back 2m from any boundary shared with a residential precinct."}],
- "interpretation_notes": "A dwelling house in the Commercial precinct is code assessable against the Township zone code (Table 5.5.1 'Otherwise'), so AO12.1 reaches its buildings incl. Class 10a outbuildings; later Class 10 building work without an MCU is accepted (Table 5.8). Not automatable: the research left open whether this commercial-amenity AO (PO12 refers to land 'in a residential zone') is meant to apply to dwelling house outbuildings; reviewer to confirm. Planning benchmark only, not a QDC alternative provision.",
+ "interpretation_notes": "Class 10 building work on an existing dwelling house lot is governed by Table 5.8 (burke_zone_code_applies), the same as every other zone/precinct - a new dwelling house MCU in the Commercial precinct is separately always code assessable (Table 5.5.1 'Otherwise', no accepted pathway), but that MCU table does not reach later building work. Not gated on the generic 'planning_assessment_required' fact (see BSC.C.RR_FRONT_SETBACK): that bug previously made this rule silently vanish rather than surface for review. Not automatable: the research left open whether this commercial-amenity AO (PO12 refers to land 'in a residential zone') is meant to apply to dwelling house outbuildings at all; reviewer to confirm. Planning benchmark only, not a QDC alternative provision.",
  "effective_from": "2020-02-07"}$r$);
 SELECT supersede_draft('BSC.C.TOWNSHIP_COMMERCIAL_RES_BOUNDARY_2M@2020-02-07', 'BSC.bsc_township_commercial_ao12_1_side_rear_setback');

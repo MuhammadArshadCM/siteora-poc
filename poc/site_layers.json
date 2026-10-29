@@ -259,6 +259,7 @@
       ],
       "geometry": "line",
       "distance_m": 1,
+      "fact": "burke_boundary_road_is_state_controlled",
       "copyright": "© State of Queensland (Transport and Main Roads), 2021"
     },
     {
@@ -2694,6 +2695,38 @@
       "geometry": "line",
       "distance_m": 1,
       "fact": "infrastructure_on_lot"
+    }
+  ],
+  "BURKE": [
+    {
+      "category": "Heritage",
+      "name": "Schedule 5 local heritage register parcel (partial match)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/LandParcelPropertyFramework/MapServer/4",
+      "where": "lotplan IN ('118PC41','1BK1','3GY15','5SP111112')",
+      "label_field": "lotplan",
+      "show_fields": [
+        "lotplan",
+        "locality"
+      ],
+      "geometry": "polygon",
+      "distance_m": 50,
+      "fact": "burke_near_local_heritage_place",
+      "copyright": "© State of Queensland (Department of Resources) 2024",
+      "notes": "Schedule 5 - Local heritage register (Burke Shire Planning Scheme 2020, Table SC6.1) lists ~9 places by Real Property Description, for Table 5.8's '50m of a Schedule 5 place' code-assessment trigger. Checked against the state cadastre 27 Oct 2026: 4 of 9 lot/plans still resolve as mapped parcels (1/BK1 and 118/PC41 near Gregory, 3/GY15 Adel's Grove, 5/SP111112 Joe Flick's grave - all remote, far from any township) and are wired here. 5 do not: Burketown Bore (74/PC21), Burketown Cemetery (121/B1366), Old Aboriginal Reserve (104/PC20) and Frederick Walker's grave (1906/PH1404 or /SP27284) no longer resolve by that lot/plan (likely renumbered/resurveyed since the register was compiled), and Old Burketown wharf / Woods Lake are given only as approximate coordinates, not a parcel. A hit here is reliable; a miss is not conclusive for those 5 - in particular Burketown Bore and Burketown Cemetery are in/near the township and worth re-checking against Council's current register before relying on a 'no hit' near town."
+    },
+    {
+      "category": "Airport",
+      "name": "Within 5km of Burketown Airport (bound only, not the mapped obstacle limitation surface)",
+      "layer": "https://services6.arcgis.com/Y1eHlY9NRfVWoL8v/arcgis/rest/services/Domestic_Airports/FeatureServer/0",
+      "where": "NAME='Burketown Airport'",
+      "label_field": "NAME",
+      "show_fields": [
+        "NAME"
+      ],
+      "geometry": "point",
+      "distance_m": 5000,
+      "fact": "burke_near_burketown_airport",
+      "notes": "Table 5.8's other code-assessment trigger is intruding into the airport's operational airspace (Schedule 2 maps BTN AF1/BTN AF2, a CASA Code 3C obstacle limitation surface - not published as a GIS layer anywhere, and not safely reconstructable from the scheme's static map image without the exact runway geometry). 5km is a deliberately generous outer bound on that surface's extent for a runway this size (Burketown's runway: Wikipedia/Acukwik give ~1,372m, threshold near 17°44'57\"S 139°32'11\"E): beyond it, 'no' is a genuine finding, not a guess. Inside it (which includes all of the Rural Residential zone's closest points, ~1.06km away, and parts of the Rural zone from ~225m), whether the surface is actually intruded needs the real OLS geometry or Council/Airservices Australia confirmation - this layer only narrows where that check still matters, it does not answer it."
     }
   ]
 }
