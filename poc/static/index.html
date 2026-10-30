@@ -32,6 +32,15 @@
   .req { font-weight:600; white-space:nowrap; }
   .tag { display:inline-block; padding:1px 6px; border-radius:10px; font-size:11px; font-weight:600; }
   .DETERMINED { background:#e5f4ec; color:var(--ok); } .MANUAL_REVIEW { background:#f1e9ff; color:var(--review); }
+  /* Weight: which row governs when several rules target the same boundary. primary = the number that applies today;
+     conditional = a relaxation that only replaces the primary if ITS OWN conditions (shown in its row) are met;
+     supplement = not competing with its paired rule at all, the two together are the answer; subsumed = a looser
+     minimum that a stricter primary row already satisfies, so it is true but not the deciding number. */
+  tr.w-conditional { border-left:3px solid var(--warn); } tr.w-supplement { border-left:3px solid var(--accent); }
+  tr.w-primary { border-left:3px solid var(--ok); } tr.w-subsumed { border-left:3px solid var(--line); opacity:.65; }
+  tr.w-displaced { border-left:3px solid #b42318; opacity:.7; }
+  .relnote { font-size:12px; margin-top:4px; }
+  .relnote.conditional { color:var(--warn); } .relnote.supplement { color:var(--accent); }
   .BUILDING { background:#e8eefc; color:var(--accent); } .PLANNING { background:#fdf1e1; color:var(--warn); }
   .POOL_SAFETY { background:#fde8e8; color:#b42318; } .INFRASTRUCTURE { background:#eef0f3; color:var(--mute); }
   details summary { cursor:pointer; color:var(--accent); font-size:12px; }
@@ -189,14 +198,46 @@ function render(d) {
     ${d.warnings.length ? `<ul class="warn">${d.warnings.map(w => `<li>${esc(w)}</li>`).join('')}</ul>` : ''}</div>`;
 
   if (showSetbacks) {
-    const rules = [...d.rules].sort((a, b) => (ORDER[a.boundary || ''] - ORDER[b.boundary || '']) || a.regime.localeCompare(b.regime));
-    h += `<div class="card"><h3 style="margin-top:0">Applicable rules — ${esc(d.structure.label)}</h3><table>
+    const WEIGHT_ORDER = {primary: 0, conditional: 1, supplement: 2, subsumed: 3, displaced: 4};
+    const rules = [...d.rules].sort((a, b) => (ORDER[a.boundary || ''] - ORDER[b.boundary || '']) || a.regime.localeCompare(b.regime)
+      || (WEIGHT_ORDER[a.weight || 'primary'] - WEIGHT_ORDER[b.weight || 'primary']));
+    // Explains, in the row itself, whether this is the number that applies today or one that only applies instead
+    // of (conditional) / together with (supplement) a sibling row — so several rows on one boundary never look like
+    // unranked, competing answers.
+    const relNote = r => {
+      if (r.weight === 'conditional') {
+        const base = (r.relations || []).find(x => x.type === 'RELAXES');
+        return base ? `<div class="relnote conditional">Only replaces "${esc(base.title)}" if the conditions on this row are met.</div>` : '';
+      }
+      if (r.weight === 'supplement') {
+        const other = (r.relations || [])[0];
+        return other ? `<div class="relnote supplement">Applies together with "${esc(other.title)}" — not an alternative to it.</div>` : '';
+      }
+      if (r.weight === 'subsumed') {
+        const stricter = (r.relations || []).find(x => x.type === 'SUBSUMED_BY');
+        return stricter ? `<div class="relnote mute">Already satisfied by the stricter "${esc(stricter.title)}" below — not an extra requirement to meet separately.</div>` : '';
+      }
+      if (r.weight === 'displaced') {
+        const winner = (r.relations || [])[0];
+        return winner ? `<div class="relnote" style="color:#b42318">Replaced by "${esc(winner.title)}" above — shown for reference only, does not apply here.</div>` : '';
+      }
+      const relaxedBy = (r.relations || []).find(x => x.type === 'RELAXES' && x.direction === 'to');
+      return relaxedBy ? `<div class="relnote mute">A closer setback may be allowed — see "${esc(relaxedBy.title)}" below.</div>` : '';
+    };
+    h += `<div class="card"><h3 style="margin-top:0">Applicable rules — ${esc(d.structure.label)}</h3>
+      <p class="mute" style="font-size:12px;margin:0 0 8px">Where more than one rule targets the same boundary: a
+      <span style="border-left:3px solid var(--ok);padding-left:4px">green-edged</span> row is the number that applies
+      today; an <span style="border-left:3px solid var(--warn);padding-left:4px">amber-edged</span> row only replaces
+      it if its own conditions are met; a <span style="border-left:3px solid var(--accent);padding-left:4px">blue-edged</span>
+      row applies together with its paired row, not instead of it; a faded grey-edged row is already met once the
+      stricter row is, and is not a separate requirement; a <span style="border-left:3px solid #b42318;padding-left:4px">faded
+      red-edged</span> row is the one a council rule has replaced outright (e.g. the QDC baseline) — shown for reference, not applicable here.</p><table>
       <tr><th>Boundary</th><th>Requirement</th><th>Rule</th><th>Source</th><th>Status</th></tr>` +
       rules.map(r => {
         const src = (r.source_detail || [])[0] || {};
         const where = r.boundary || (r.topic === 'SETBACK.WATERWAY' ? 'canal/lake boundary' : 'whole lot');
-        return `<tr><td>${esc(where.replaceAll('_', ' ').toLowerCase())}</td>
-          <td class="req">${esc(req(r))}<div class="mute" style="font-weight:400">${esc(r.topic)}</div></td>
+        return `<tr class="w-${r.weight || 'primary'}"><td>${esc(where.replaceAll('_', ' ').toLowerCase())}</td>
+          <td class="req">${esc(req(r))}<div class="mute" style="font-weight:400">${esc(r.topic)}</div>${relNote(r)}</td>
           <td>${esc(r.title)}<div><span class="tag ${r.regime}">${esc(r.regime)}</span>
               ${r.on_noncompliance ? `<span class="mute"> if not met: ${esc(r.on_noncompliance.replaceAll('_', ' ').toLowerCase())}</span>` : ''}</div>
               ${r.via ? `<div class="warn">${esc(r.via)}</div>` : ''}</td>
@@ -222,7 +263,6 @@ function render(d) {
       <ul>${d.applicable_instruments.map(i => `<li><span class="tag ${i.regime}">${esc(i.regime)}</span> ${esc(i.instrument)} — ${esc(i.version)}</li>`).join('')}</ul>
       <table><tr><th>Fact</th><th>Value</th><th>Source</th></tr>${Object.entries(d.facts).map(([k, v]) =>
         `<tr><td>${esc(k)}</td><td>${esc(JSON.stringify(v.value))}</td><td class="${v.source.startsWith('ASSUMED') || v.source.startsWith('ESTIMATED') ? 'warn' : 'mute'}">${esc(v.source)}</td></tr>`).join('')}</table>
-      ${d.displaced.length ? `<p class="mute">Displaced by precedence: ${d.displaced.map(x => esc(`${x.rule} (${x.why})`)).join('; ')}</p>` : ''}
       </details></div>`;
   }
   if (showMaps) {

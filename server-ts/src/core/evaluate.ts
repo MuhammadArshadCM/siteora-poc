@@ -223,11 +223,14 @@ export function scopeMatches(rule: { scopes: Scope[] | null }, site: Site): bool
 }
 
 // ----------------------------------------------------------------------------- resolution
+export interface RuleRelation { type: string; direction: "from" | "to"; rule: string; title?: string }
+
 export interface Result {
   structure: string; boundary: string | null; regime: string; topic: string; rule: string; state: string;
   title?: string; role?: string; measurement?: string | null; operator?: string | null; required?: any; unit?: string | null;
   on_noncompliance?: string | null; instrument?: string; sources?: string[]; source_detail?: Source[];
   interpretation_notes?: string | null; via?: string | null; why?: string;
+  weight?: "primary" | "conditional" | "supplement" | "subsumed" | "displaced"; relations?: RuleRelation[];
 }
 
 export async function resolve(db: Db, scenario: Scenario, loaded?: Loaded): Promise<Result[]> {
@@ -268,14 +271,14 @@ export function resolveWith(L: Loaded, scenario: Scenario): Result[] {
             cand.set(t.rule_version_id, { ...t, _via: `falls back from ${rel.from}` });
         }
       }
-      const removed = new Map<string, string>();
+      const removed = new Map<string, { type: string; from: string; why: string }>();
       for (const rel of rels) {
         if (!cand.has(rel.from)) continue;
         const targets = [...cand.entries()].filter(([rv, r]) => rv === rel.to_rv || r.rule_id === rel.to_rule).map(([rv]) => rv);
         if (rel.type === "OVERRIDES" || rel.type === "REPLACES" || (rel.type === "EXEMPTS" && status.get(rel.from) === true))
-          for (const t of targets) removed.set(t, `${rel.type} by ${rel.from}`);
+          for (const t of targets) removed.set(t, { type: rel.type, from: rel.from, why: `${rel.type} by ${rel.from}` });
         if (rel.type === "RELAXES" && status.get(rel.from) === true)
-          for (const t of targets) removed.set(t, `RELAXED by ${rel.from}`);
+          for (const t of targets) removed.set(t, { type: "RELAXES", from: rel.from, why: `RELAXED by ${rel.from}` });
       }
       const live = [...cand.entries()].filter(([rv, r]) => !removed.has(rv) && (r.role === "REQUIREMENT" || r.role === "RELAXATION")).map(([, r]) => r);
       const unresolved = new Map<string, string>();
@@ -290,22 +293,74 @@ export function resolveWith(L: Loaded, scenario: Scenario): Result[] {
           }
         }
       }
-      for (const r of live) {
+      // Builds a full Result row for any candidate rule (live or displaced) - value, state and sources are computed
+      // the same way regardless of whether the rule ends up governing or only informational, so a displaced row
+      // shows its real number instead of a bare "why" stub.
+      const rowFor = (r: Rule, weight: Result["weight"], relations: RuleRelation[]): Result => {
         const req = ev(r.value_expr, facts);
         const state = (status.get(r.rule_version_id) === UNKNOWN || req === UNKNOWN || req === null
           || !r.automatable || unresolved.has(r.rule_version_id)) ? "MANUAL_REVIEW" : "DETERMINED";
         const primary = (r.sources ?? []).filter((s) => s.role === "PRIMARY");
-        results.push({
+        const reqNum = req === null || req === UNKNOWN ? null : typeof req === "number" ? pyRound(req, 3) : req;
+        return {
           structure: item.label, boundary, regime: r.regime, topic: r.topic, rule: r.rule_version_id, title: r.title, role: r.role,
-          measurement: r.measurement_id, operator: r.operator,
-          required: req === null || req === UNKNOWN ? null : typeof req === "number" ? pyRound(req, 3) : req,
+          measurement: r.measurement_id, operator: r.operator, required: reqNum,
           unit: r.unit, state, on_noncompliance: r.on_noncompliance, instrument: `${r.instrument} (${r.version_label})`,
           sources: primary.map((s) => s.ref), source_detail: primary, interpretation_notes: r.interpretation_notes ?? null,
           via: r._via || unresolved.get(r.rule_version_id) || null,
-        });
+          weight, relations: relations.length ? relations : undefined,
+        };
+      };
+      const passRows: Result[] = [];
+      for (const r of live) {
+        // Relationships to OTHER rules still live for this same boundary pass (RELAXES/SUPPLEMENTS/etc. that did not
+        // remove anything - see `removed` above): lets the client show which row is the governing one and which are
+        // conditional on / paired with it, instead of listing several numbers with no indication of precedence.
+        const relations = rels.filter((rel) => (rel.from === r.rule_version_id
+            ? live.some((o) => o !== r && (o.rule_version_id === rel.to_rv || o.rule_id === rel.to_rule))
+            : (rel.to_rv === r.rule_version_id || rel.to_rule === r.rule_id) && live.some((o) => o !== r && o.rule_version_id === rel.from)))
+          .map((rel): RuleRelation => {
+            const out = rel.from === r.rule_version_id;
+            const other = out ? live.find((o) => o.rule_version_id === rel.to_rv || o.rule_id === rel.to_rule)! : live.find((o) => o.rule_version_id === rel.from)!;
+            return { type: rel.type, direction: out ? "from" : "to", rule: other.rule_version_id, title: other.title };
+          });
+        // "conditional": a RELAXATION only wins over the base requirement once its own conditions are confirmed, so
+        // it is never the headline number by itself. "supplement": linked via SUPPLEMENTS - not competing with the
+        // other rule, the two together are the answer. Anything else (incl. the REQUIREMENT a relaxation targets) is
+        // the governing number today.
+        const weight: "primary" | "conditional" | "supplement" = r.role === "RELAXATION" ? "conditional"
+          : relations.some((x) => x.type === "SUPPLEMENTS") ? "supplement" : "primary";
+        passRows.push(rowFor(r, weight, relations));
       }
-      for (const [rv, why] of removed)
-        results.push({ structure: item.label, boundary, rule: rv, state: "DISPLACED", why, topic: cand.get(rv)!.topic, regime: cand.get(rv)!.regime });
+      // Subsumption: two "primary" rows can both be independently-sourced minimum-clearance requirements (not a
+      // RELAXES/SUPPLEMENTS pair) where satisfying the stricter one always satisfies the looser one too (e.g. a
+      // council's own 0.2 m "no wall on the boundary" floor once the QDC's height-based clearance already requires
+      // 2 m). Only ever loosens a "primary" row to "subsumed" (never touches "conditional"/"supplement", which
+      // already carry their own meaning) - compares like-for-like minimum-distance setbacks only (topic prefix
+      // "SETBACK", operator >=/>, unit m) so a height or site-cover row is never weighed against a setback.
+      const isMinClearance = (x: Result) => x.weight === "primary" && typeof x.required === "number"
+        && (x.operator === ">=" || x.operator === ">") && x.unit === "m" && x.topic.startsWith("SETBACK");
+      for (const row of passRows) {
+        if (!isMinClearance(row)) continue;
+        const stricter = passRows.find((o) => o !== row && isMinClearance(o) && (o.required as number) > (row.required as number));
+        if (stricter) {
+          row.weight = "subsumed";
+          row.relations = [...(row.relations ?? []), { type: "SUBSUMED_BY", direction: "to", rule: stricter.rule, title: stricter.title }];
+        }
+      }
+      results.push(...passRows);
+      // A displaced rule still gets a full row (real computed value, source, etc.) with weight "displaced" so the
+      // client can show it as the informational/non-governing number alongside the rule that overrode it, instead
+      // of a bare "why" stub with no value - same principle as "subsumed" above, for a rule removed outright rather
+      // than merely outweighed.
+      for (const [rv, info] of removed) {
+        const r = cand.get(rv)!;
+        const winner = byRv.get(info.from);
+        const relations: RuleRelation[] = winner ? [{ type: info.type, direction: "to", rule: winner.rule_version_id, title: winner.title }] : [];
+        const row = rowFor(r, "displaced", relations);
+        row.why = info.why;
+        results.push(row);
+      }
     }
   }
   return results;
@@ -316,7 +371,7 @@ export function render(scenario: Scenario, res: Result[]): string {
   const out: string[] = [`# ${scenario.title}  (assessment date ${scenario.assessment_date})\n`];
   for (const s of [...new Set(res.map((r) => r.structure))]) {
     out.push(`## ${s}`);
-    const live = res.filter((x) => x.structure === s && x.state !== "DISPLACED")
+    const live = res.filter((x) => x.structure === s && x.weight !== "displaced")
       .sort((a, b) => cmp3([a.regime, a.topic, String(a.boundary ?? "None")], [b.regime, b.topic, String(b.boundary ?? "None")]));
     for (const r of live) {
       let req: string;
@@ -327,7 +382,7 @@ export function render(scenario: Scenario, res: Result[]): string {
       out.push(`    ${r.rule} — ${r.title}`);
       out.push(`    source: ${r.instrument} — ${(r.sources ?? []).join("; ")}` + (r.via ? `  (${r.via})` : ""));
     }
-    const disp = res.filter((x) => x.structure === s && x.state === "DISPLACED");
+    const disp = res.filter((x) => x.structure === s && x.weight === "displaced");
     if (disp.length) {
       out.push("  displaced:");
       for (const x of disp) out.push(`    - ${x.rule} (${x.boundary ?? "None"}): ${x.why}`);

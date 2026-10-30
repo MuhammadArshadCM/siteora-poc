@@ -638,3 +638,5 @@ SELECT define_rule($r${
  "interpretation_notes": "Mean height limits (2.7 / 3.5 m) not encoded as a separate rule. Only carports may be in front of the main building line (RAD26(c)). Amenity and aesthetics matter => MANUAL_REVIEW on failure.",
  "effective_from": "2026-09-11"}$r$);
 SELECT supersede_draft('CMB.C.OUTBUILDING_HEIGHT@2026-09-11', 'CMB.mb_dh_rad26_outbuilding_height');
+SELECT alt_overrides('CMB.C.OUTBUILDING_HEIGHT@2026-09-11', ARRAY['QDC12.A4.BUILDING_HEIGHT','QDC11.A4.BUILDING_HEIGHT'],
+       'RAD26(b): a more restrictive, Class 10a-specific height limit (4 m / mean 3.5 m, or 3.3 m / mean 2.7 m for a carport in front of the main building line) than the QDC''s general 8.5-10 m building height, which also lists CLASS_10A as a subject. Same pattern as RCC.C.LDR3_HEIGHT_8_5.');

@@ -292,7 +292,6 @@ export async function buildFacts(loc: any, structure: string, inputs: Record<str
   // Assumptions a POC has to make; all are listed in the output
   put("land_is_regulated_land", true, "ASSUMED: lot has (or will have) a dwelling");
   put("in_wind_region_c", false, "ASSUMED: SEQ councils are not in Wind Region C");
-  put("planning_assessment_required", false, "ASSUMED: house is accepted development (no planning application)");
   put("development_footprint_exists", false, "ASSUMED: no approved plan of development / footprint");
   // User inputs (structure + things public data cannot tell us)
   const blank = (k: string) => inputs[k] === null || inputs[k] === undefined || inputs[k] === "";
@@ -325,10 +324,19 @@ export async function buildFacts(loc: any, structure: string, inputs: Record<str
   let v = yes("in_front_of_main_building_line");
   put("in_front_of_main_building_line", Boolean(v), v !== null ? "User input" : "ASSUMED: behind the main building line of the house");
   // Not available from public data in this POC: default to "no" and say so
-  for (const [k, what] of [["is_corner_lot", "a corner lot"], ["adjoins_canal_or_lake", "next to a canal or lake"]]) {
+  for (const [k, what] of [["is_corner_lot", "a corner lot"], ["adjoins_canal_or_lake", "next to a canal or lake"],
+    ["has_secondary_dwelling", "a secondary dwelling on the lot"],
+    ["south_burnett_road_is_collector_or_higher", "fronting a collector or higher order road"]]) {
     v = yes(k);
     put(k, Boolean(v), v !== null ? "User input" : `ASSUMED: not ${what} (not checked)`);
   }
+  // Whether the dwelling house is accepted development (most lots) or requires a planning application - drives
+  // several councils' zone/use-code setbacks (e.g. Toowoomba, Rockhampton, South Burnett), which only reach
+  // Class 10 building work through code assessment. Previously hardcoded false with no way to answer "yes", which
+  // silently made every rule gated on it unreachable rather than surfacing for manual review - now user-answerable,
+  // same ASSUMED-false-by-default pattern as the rest of this block.
+  v = yes("planning_assessment_required");
+  put("planning_assessment_required", Boolean(v), v !== null ? "User input" : "ASSUMED: house is accepted development (no planning application)");
   // Gold Coast Emerging community zone: setbacks and site cover differ for a lot created through a residential
   // subdivision approval. Not in public data, so no default: unanswered, those rules go to manual review.
   v = yes("lot_from_residential_subdivision");
@@ -520,7 +528,10 @@ export async function run(db: Db, structure: string, inputs: Record<string, any>
     structures: [{ label: STRUCTURES[structure], structure_type: structure, facts: {}, boundaries: boundaries(facts) }] };
   const loaded = await evaluate.load(db, siteDef.lg, date);
   const results = evaluate.resolveWith(loaded, scenario);
-  const liveAll = results.filter((r) => r.state !== "DISPLACED")
+  // A displaced rule (weight "displaced") now carries a real computed value and stays in this list - shown as the
+  // informational/overridden number next to the rule that replaced it, instead of being dropped to a bare "why"
+  // note the client could not render as a row (see evaluate.ts resolveWith).
+  const liveAll = results
     .sort((a, b) => cmpTuple([a.regime, String(a.boundary || ""), a.topic], [b.regime, String(b.boundary || ""), b.topic]));
   const live = scope === "setbacks" ? liveAll.filter((r) => isSetbackTopic(r.topic)) : liveAll;
   // Planning triggers (e.g. a zone where any building work needs an impact-assessable application) carry no siting
@@ -541,7 +552,7 @@ export async function run(db: Db, structure: string, inputs: Record<string, any>
     applicable_instruments: await applicableInstruments(db, loc.council.lg_id, date),
     facts,
     rules: live,
-    displaced: results.filter((r) => r.state === "DISPLACED" && (scope !== "setbacks" || isSetbackTopic(r.topic))),
+    displaced: results.filter((r) => r.weight === "displaced" && (scope !== "setbacks" || isSetbackTopic(r.topic))),
     missing_inputs: await missingInputs(db, live, scenario.facts!),
     council_rules: await councilExplanation(db, scenario, results, loaded, scope),
     available_zones: loc.available_zones,

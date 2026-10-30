@@ -2518,6 +2518,15 @@
       ],
       "geometry": "polygon",
       "notes": "Redland City Plan bushfire hazard overlay (replaces the State Bushfire Prone Area proxy, private since Oct 2026)."
+    },
+    {
+      "category": "Heritage",
+      "name": "Local heritage place (significant tree)",
+      "layer": "https://gis.redland.qld.gov.au/arcgis/rest/services/planning/city_plan/MapServer/13",
+      "label_field": "DESCRIPTION",
+      "show_fields": ["DESCRIPTION", "SIGNIFICANCE", "STREET_ADDRESS"],
+      "geometry": "point",
+      "distance_m": 10
     }
   ],
   "IPSWICH": [
@@ -2713,6 +2722,513 @@
       "distance_m": 5000,
       "fact": "burke_near_burketown_airport",
       "notes": "Table 5.8's other code-assessment trigger is intruding into the airport's operational airspace (Schedule 2 maps BTN AF1/BTN AF2, a CASA Code 3C obstacle limitation surface - not published as a GIS layer anywhere, and not safely reconstructable from the scheme's static map image without the exact runway geometry). 5km is a deliberately generous outer bound on that surface's extent for a runway this size (Burketown's runway: Wikipedia/Acukwik give ~1,372m, threshold near 17°44'57\"S 139°32'11\"E): beyond it, 'no' is a genuine finding, not a guess. Inside it (which includes all of the Rural Residential zone's closest points, ~1.06km away, and parts of the Rural zone from ~225m), whether the surface is actually intruded needs the real OLS geometry or Council/Airservices Australia confirmation - this layer only narrows where that check still matters, it does not answer it."
+    },
+    {
+      "category": "Flood",
+      "name": "Queensland floodplain assessment overlay",
+      "layer": "https://services6.arcgis.com/Y1eHlY9NRfVWoL8v/arcgis/rest/services/PlanningScheme_Burke_Nov2024/FeatureServer/1",
+      "label_field": "SUB_NAME",
+      "show_fields": ["SUB_NAME", "VERSION"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Gregory 1 percent AEP flood overlay",
+      "layer": "https://services6.arcgis.com/Y1eHlY9NRfVWoL8v/arcgis/rest/services/PlanningScheme_Burke_Nov2024/FeatureServer/2",
+      "label_field": "town_event",
+      "show_fields": ["town_event"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Burketown 1 percent AEP flood overlay",
+      "layer": "https://services6.arcgis.com/Y1eHlY9NRfVWoL8v/arcgis/rest/services/PlanningScheme_Burke_Nov2024/FeatureServer/3",
+      "label_field": "TYPE",
+      "show_fields": ["TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Defined flood level - Burketown Township",
+      "layer": "https://services6.arcgis.com/Y1eHlY9NRfVWoL8v/arcgis/rest/services/PlanningScheme_Burke_Nov2024/FeatureServer/5",
+      "label_field": "FL_Label",
+      "show_fields": ["FL_Label", "FL_2011"],
+      "geometry": "polygon"
+    }
+  ],
+  "LIVINGSTONE": [
+    {
+      "category": "Coastal",
+      "name": "Land below Highest Astronomical Tide (HAT)",
+      "layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Storm_Tide_Tsunami/FeatureServer/0",
+      "show_fields": ["height"],
+      "geometry": "polygon",
+      "copyright": "© Livingstone Shire Council 2026",
+      "notes": "LSC Storm tide and Tsunami map. Verified live (29 Oct 2026): a real queryable FeatureServer, not a cached tile layer - corrects the earlier finding that this org only publishes cached TilesOnly MapServers (that held for the ~20 other 'OMxx' layers checked, but missed this one)."
+    },
+    {
+      "category": "Coastal",
+      "name": "Storm surge inundation 2.57m - 3.0m",
+      "layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Storm_Tide_Tsunami/FeatureServer/1",
+      "show_fields": ["height"],
+      "geometry": "polygon",
+      "copyright": "© Livingstone Shire Council 2026"
+    },
+    {
+      "category": "Coastal",
+      "name": "Storm surge inundation 3.0m - 3.5m",
+      "layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Storm_Tide_Tsunami/FeatureServer/2",
+      "show_fields": ["height"],
+      "geometry": "polygon",
+      "copyright": "© Livingstone Shire Council 2026"
+    },
+    {
+      "category": "Coastal",
+      "name": "Storm surge inundation 3.5m - 4.0m",
+      "layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Storm_Tide_Tsunami/FeatureServer/3",
+      "show_fields": ["height"],
+      "geometry": "polygon",
+      "copyright": "© Livingstone Shire Council 2026"
+    },
+    {
+      "category": "Coastal",
+      "name": "Storm surge inundation 4.0m - 4.5m",
+      "layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Storm_Tide_Tsunami/FeatureServer/4",
+      "show_fields": ["height"],
+      "geometry": "polygon",
+      "copyright": "© Livingstone Shire Council 2026"
+    },
+    {
+      "category": "Coastal",
+      "name": "Storm surge inundation 4.5m - 5.0m",
+      "layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Storm_Tide_Tsunami/FeatureServer/5",
+      "show_fields": ["height"],
+      "geometry": "polygon",
+      "copyright": "© Livingstone Shire Council 2026"
+    },
+    {
+      "category": "Coastal",
+      "name": "Storm surge inundation 5.0m - 5.5m",
+      "layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Storm_Tide_Tsunami/FeatureServer/6",
+      "show_fields": ["height"],
+      "geometry": "polygon",
+      "copyright": "© Livingstone Shire Council 2026"
+    },
+    {
+      "category": "Coastal",
+      "name": "Storm surge inundation 5.5m - 6.0m",
+      "layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Storm_Tide_Tsunami/FeatureServer/7",
+      "show_fields": ["height"],
+      "geometry": "polygon",
+      "copyright": "© Livingstone Shire Council 2026"
+    },
+    {
+      "category": "Coastal",
+      "name": "Tsunami 10m - possible inundation area",
+      "layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Storm_Tide_Tsunami/FeatureServer/8",
+      "show_fields": [],
+      "geometry": "polygon",
+      "copyright": "© Livingstone Shire Council 2026"
+    }
+  ],
+  "TOWNSVILLE": [
+    {
+      "category": "Bushfire",
+      "name": "Bushfire prone area (Gazetted OM02)",
+      "layer": "https://services6.arcgis.com/3VCE6mezZtwKJeIR/arcgis/rest/services/Gazetted_OM02_BushfireProneArea/FeatureServer/0",
+      "label_field": "Legend",
+      "show_fields": ["Legend", "CLASS"],
+      "geometry": "polygon",
+      "notes": "Verified live (29 Oct 2026) - corrects the earlier finding that Townsville publishes no overlay layers as public ArcGIS feature services."
+    },
+    {
+      "category": "Sewer",
+      "name": "Wastewater gravity main",
+      "layer": "https://services6.arcgis.com/3VCE6mezZtwKJeIR/arcgis/rest/services/Asset_WasteWater_Gravity_Main_GDA2020/FeatureServer/46",
+      "label_field": "DESCRIPT",
+      "show_fields": ["DESCRIPT"],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Sewer",
+      "name": "Wastewater pressure main",
+      "layer": "https://services6.arcgis.com/3VCE6mezZtwKJeIR/arcgis/rest/services/Asset_WasteWater_Pressure_Main_GDA2020/FeatureServer/48",
+      "label_field": "DESCRIPT",
+      "show_fields": ["DESCRIPT"],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Water main",
+      "layer": "https://services6.arcgis.com/3VCE6mezZtwKJeIR/arcgis/rest/services/Asset_Water_Water_Main_GDA2020/FeatureServer/15",
+      "label_field": "DESCRIPT",
+      "show_fields": ["DESCRIPT"],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    }
+  ],
+  "MOUNT_ISA": [
+    {
+      "category": "Flood",
+      "name": "1 in 100 yr flood hazard",
+      "layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/HAZARD_Mount_Isa_Hazards/FeatureServer/2",
+      "label_field": "Hazard",
+      "show_fields": ["Hazard"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "1 in 5 yr flood hazard",
+      "layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/HAZARD_Mount_Isa_Hazards/FeatureServer/1",
+      "show_fields": [],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Probable Maximum Flood (PMF) hazard",
+      "layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/HAZARD_Mount_Isa_Hazards/FeatureServer/3",
+      "show_fields": ["Value"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Bushfire",
+      "name": "Bushfire prone area (SPP)",
+      "layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/Bushfire_Prone_Areas_SPP/FeatureServer/1",
+      "label_field": "CLASS",
+      "show_fields": ["CLASS", "Region"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Bushfire",
+      "name": "Vegetation hazard",
+      "layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/Bushfire_Prone_Areas_SPP/FeatureServer/0",
+      "show_fields": ["VHC_Short_"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Heritage buffer",
+      "layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/Heritage_Buffer/FeatureServer/0",
+      "show_fields": [],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Local heritage area",
+      "layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/Local_Heritage_Area/FeatureServer/0",
+      "label_field": "PlaceName",
+      "show_fields": ["PlaceName", "LotPlan", "QHR"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Local heritage place",
+      "layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/Local_Heritage_Places/FeatureServer/0",
+      "label_field": "PlaceName",
+      "show_fields": ["PlaceName", "LotPlan", "QHR"],
+      "geometry": "point",
+      "distance_m": 50
+    },
+    {
+      "category": "Sewer",
+      "name": "Sewer mains",
+      "layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/MICC_Sewerage_Network_(public)/FeatureServer/5",
+      "label_field": "AssetType",
+      "show_fields": ["AssetType", "Dia_mm"],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Sewer",
+      "name": "Sewerage pump stations",
+      "layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/MICC_Sewerage_Network_(public)/FeatureServer/1",
+      "label_field": "Address",
+      "show_fields": ["Address"],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Water mains",
+      "layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/MICC_Water_Network_(public)/FeatureServer/3",
+      "label_field": "AssetName",
+      "show_fields": ["AssetName", "AssetType"],
+      "geometry": "line",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    },
+    {
+      "category": "Water",
+      "name": "Water pump stations",
+      "layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/MICC_Water_Network_(public)/FeatureServer/10",
+      "show_fields": ["PS_No", "Zone"],
+      "geometry": "point",
+      "distance_m": 1,
+      "fact": "infrastructure_on_lot"
+    }
+  ],
+  "TOOWOOMBA": [
+    {
+      "category": "Flood",
+      "name": "Flood Plain Area",
+      "layer": "https://maps.tr.qld.gov.au/arcgis/rest/services/External/External_PlanningScheme/MapServer/158",
+      "label_field": "StudyName",
+      "show_fields": ["StudyName"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Flood Risk Categories",
+      "layer": "https://maps.tr.qld.gov.au/arcgis/rest/services/External/External_PlanningScheme/MapServer/160",
+      "label_field": "FloodRiskCategory",
+      "show_fields": ["FloodRiskCategory", "StudyName"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Vulnerable Uses Restriction Area",
+      "layer": "https://maps.tr.qld.gov.au/arcgis/rest/services/External/External_PlanningScheme/MapServer/159",
+      "label_field": "StudyName",
+      "show_fields": ["StudyName"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Balance (mixed) flood area",
+      "layer": "https://maps.tr.qld.gov.au/arcgis/rest/services/External/External_PlanningScheme/MapServer/157",
+      "show_fields": ["MainFlowPath"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Bushfire",
+      "name": "Bushfire Hazard",
+      "layer": "https://maps.tr.qld.gov.au/arcgis/rest/services/External/External_PlanningScheme/MapServer/145",
+      "label_field": "OVL_Name",
+      "show_fields": ["OVL_Name", "OVL2_DESC"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Slope",
+      "name": "Landslide Hazard",
+      "layer": "https://maps.tr.qld.gov.au/arcgis/rest/services/External/External_PlanningScheme/MapServer/155",
+      "label_field": "OVL_Name",
+      "show_fields": ["OVL_Name", "OVL2_DESC"],
+      "geometry": "polygon"
+    }
+  ],
+  "CENTRAL_HIGHLANDS": [
+    {
+      "category": "Flood",
+      "name": "Flood Hazard Regional",
+      "layer": "https://services-ap1.arcgis.com/xYbmdyJFb3eEmMJp/arcgis/rest/services/OM5_Flood_Hazard_Adopted/FeatureServer/1",
+      "label_field": "CATEGORY",
+      "show_fields": ["CATEGORY", "OVL2_DESC"],
+      "geometry": "polygon",
+      "notes": "Zoning for this council is BLOCKED (no public zone layer), but this overlay is on the same org as the zone layer and is independently queryable; works even with a manually-chosen zone since site constraints only need lot geometry."
+    },
+    {
+      "category": "Flood",
+      "name": "Flood Hazard Urban",
+      "layer": "https://services-ap1.arcgis.com/xYbmdyJFb3eEmMJp/arcgis/rest/services/OM5_Flood_Hazard_Adopted/FeatureServer/0",
+      "label_field": "CATEGORY",
+      "show_fields": ["CATEGORY", "OVL2_DESC"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Flood QRA",
+      "layer": "https://services-ap1.arcgis.com/xYbmdyJFb3eEmMJp/arcgis/rest/services/OM5_Flood_Hazard_Adopted/FeatureServer/2",
+      "label_field": "OVL2_DESC",
+      "show_fields": ["OVL2_DESC", "NOTES"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Bushfire",
+      "name": "Bushfire Hazard",
+      "layer": "https://services-ap1.arcgis.com/xYbmdyJFb3eEmMJp/arcgis/rest/services/OM3_Bushfire_Hazard_Adopted/FeatureServer/0",
+      "label_field": "CLASS",
+      "show_fields": ["CLASS", "Region"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Local Heritage Area",
+      "layer": "https://services-ap1.arcgis.com/xYbmdyJFb3eEmMJp/arcgis/rest/services/OM7_Heritage_Adopted/FeatureServer/0",
+      "label_field": "HERITAGE_ITEM_NAME",
+      "show_fields": ["HERITAGE_ITEM_NAME", "ID_No"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Local Heritage Adjoining Area",
+      "layer": "https://services-ap1.arcgis.com/xYbmdyJFb3eEmMJp/arcgis/rest/services/OM7_Heritage_Adopted/FeatureServer/1",
+      "label_field": "OVL2_DESC",
+      "show_fields": ["OVL2_DESC"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "State Heritage Area",
+      "layer": "https://services-ap1.arcgis.com/xYbmdyJFb3eEmMJp/arcgis/rest/services/OM7_Heritage_Adopted/FeatureServer/2",
+      "label_field": "ID_No",
+      "show_fields": ["ID_No", "NOTES"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "State Heritage Adjoining Area",
+      "layer": "https://services-ap1.arcgis.com/xYbmdyJFb3eEmMJp/arcgis/rest/services/OM7_Heritage_Adopted/FeatureServer/3",
+      "label_field": "NOTES",
+      "show_fields": ["NOTES"],
+      "geometry": "polygon"
+    }
+  ],
+  "ROCKHAMPTON": [
+    {
+      "category": "Flood",
+      "name": "Fitzroy Floodplain Investigation Area",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Fitzroy_Floodplain_Investigation_Area/FeatureServer/0",
+      "label_field": "SUB_TYPE",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Fitzroy River Flood Hazard (minus NRFMA)",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Fitzroy_River_Flood_Hazard_Minus_NRFMA/FeatureServer/0",
+      "label_field": "SUB_TYPE",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Fitzroy River Flood Study Extent",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Fitzroy_River_Flood_Study_Extent/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Local Catchment Defined Flood Event (DFE)",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Local_Catchment_DFE/FeatureServer/0",
+      "label_field": "SUB_TYPE",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "Local Catchment Planning Area",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Local_Catchment_Planning_Area/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Flood",
+      "name": "North Rockhampton Flood Management Area",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/North_Rockhampton_Flood_Management_Area/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Bushfire",
+      "name": "Bushfire hazard class buffer",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Bushfire_Hazard_Class_Buffer/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Bushfire",
+      "name": "Bushfire hazard class - high potential",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Bushfire_Hazard_Class_High_Potential/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Bushfire",
+      "name": "Bushfire hazard class - medium potential",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Bushfire_Hazard_Class_Medium_Potential/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Bushfire",
+      "name": "Bushfire hazard class - very high potential",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Bushfire_Hazard_Class_Very_High_Potential/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Slope",
+      "name": "Steep land slope",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Steep_Land_Slope/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Coastal",
+      "name": "Coastal protection",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Coastal_Protection/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Coastal",
+      "name": "Defined storm surge potential",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Defined_Storm_Surge_Potential/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Soils",
+      "name": "Acid sulfate soils",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Acid_Sulphate_Soils/FeatureServer/0",
+      "label_field": "DESCRIPTION",
+      "show_fields": ["DESCRIPTION"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Heritage places",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Heritage_Places/FeatureServer/0",
+      "label_field": "PLACENAME",
+      "show_fields": ["PLACENAME", "STATUS"],
+      "geometry": "polygon",
+      "distance_m": 50
+    },
+    {
+      "category": "Heritage",
+      "name": "Areas adjoining a heritage place",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Areas_Adjoining_Heritage_Place/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Commercial character demolition control area",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Commercial_Character_Demolition_Control_Area/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Residential character demolition control area",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Residential_Character_Demolition_Control_Area/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
+    },
+    {
+      "category": "Heritage",
+      "name": "Residential character design controls",
+      "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Residential_Character_Design_Controls/FeatureServer/0",
+      "show_fields": ["SUB_TYPE"],
+      "geometry": "polygon"
     }
   ]
 }

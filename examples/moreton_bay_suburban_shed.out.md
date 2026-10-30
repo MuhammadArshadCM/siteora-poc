@@ -1,9 +1,6 @@
 # Moreton Bay, General residential — Suburban neighbourhood precinct, 650 m2 lot — shed near rear corner  (assessment date 2026-10-09)
 
 ## Shed 6.0 m x 4.0 m, 3.0 m high
-- [BUILDING] HEIGHT.BUILDING : <= 8.5 m  [DETERMINED]
-    QDC12.A4.BUILDING_HEIGHT@2010-03-26 — Maximum building height by lot slope
-    source: QDC MP 1.2 - Design and siting standard for single detached housing - on lots 450m2 and over (Publication date 11 March 2010) — A4
 - [BUILDING] HEIGHT.CLASS_10A : <= 4 m  [DETERMINED]
     CMB.C.OUTBUILDING_HEIGHT@2026-09-11 — Domestic outbuildings: max height 4 m (mean 3.5 m); carport in front of main building line 3.3 m (mean 2.7 m)
     source: Moreton Bay Regional Council Planning Scheme 2016 (MBRC Planning Scheme) (Version 8 (created by LGIP Amendment No. 2)) — Table 9.3.1.1 RAD26(b)
@@ -30,6 +27,7 @@
     source: Moreton Bay Regional Council Planning Scheme 2016 (MBRC Planning Scheme) (Version 8 (created by LGIP Amendment No. 2)) — Table 9.3.1.1 RAD5 (E4)
   displaced:
     - QDC12.A3.SITE_COVER@2010-03-26 (None): OVERRIDES by CMB.C.GR_SITE_COVER_50@2026-09-11
+    - QDC12.A4.BUILDING_HEIGHT@2010-03-26 (None): OVERRIDES by CMB.C.OUTBUILDING_HEIGHT@2026-09-11
     - QDC12.A1a.ROAD_SETBACK@2010-03-26 (PRIMARY_FRONTAGE): OVERRIDES by CMB.C.SUBURBAN_OUTBUILDING_FRONTAGES@2026-09-11
     - QDC12.A2a.SIDE_REAR_CLEARANCE@2010-03-26 (SIDE): RELAXED by QDC12.A2d.CLASS10A_WITHIN_CLEARANCE@2010-03-26
     - QDC12.A2a.SIDE_REAR_CLEARANCE@2010-03-26 (REAR): RELAXED by QDC12.A2d.CLASS10A_WITHIN_CLEARANCE@2010-03-26

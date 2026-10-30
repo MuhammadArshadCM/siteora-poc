@@ -7,11 +7,25 @@
 -- provision. No zone-code setback is a s33 Building Act alternative provision, so every rule here is a PLANNING
 -- benchmark (no alt_overrides): the QDC MP1.1/MP1.2 boundary clearances continue to apply alongside these rules.
 -- Absence drafts (verbatim text starting with "(") stay as drafts recording that the QDC applies.
+--
+-- Fixed 2026-10-30: every rule below except the Medium density residential small-lot ones (ADSR by Table 5.5.2
+-- regardless) is gated on planning_assessment_required, since AO2.5/Section 5/AO1.1/AO1.3/AO2.2-2.3 only reach a
+-- dwelling house or its outbuildings through code assessment (Tables 5.5.1/5.5.13/5.5.14/5.5.16), not as accepted
+-- development. That fact was hardcoded false in engine.ts with no way to ever answer "yes" - every one of these
+-- rules was silently unreachable, not merely defaulting to "no setback", the same dead-flag bug found and fixed for
+-- Burke earlier (see BSC.C.* interpretation_notes). engine.ts now takes planning_assessment_required as a user
+-- input (still ASSUMED false by default, so ordinary accepted-development addresses are unaffected). The Rural and
+-- Township rules also gained the more specific has_secondary_dwelling trigger their own research already
+-- identified (Tables 5.5.13/5.5.16). The Low density residential, LDR small-lot and Rural residential rules have no
+-- more specific identified trigger, so they remain on planning_assessment_required alone - correctly hidden by
+-- default, reachable (as MANUAL_REVIEW, since automatable is false throughout) once the user confirms the
+-- development needs a planning application.
 -- =============================================================================
 SET search_path = regs, public;
 
 INSERT INTO facts (fact_id, type, unit, allowed_values, source, description, derivation) VALUES
- ('south_burnett_road_is_collector_or_higher','BOOLEAN',NULL,NULL,'PLANNING_DATA','The road boundary being tested is a collector or higher order road (South Burnett Rural zone code AO1.1); the scheme does not define the road hierarchy', 'Council / State road hierarchy mapping (not defined in SC1)');
+ ('south_burnett_road_is_collector_or_higher','BOOLEAN',NULL,NULL,'PROPERTY_DATA','The road boundary being tested is a collector or higher order road (South Burnett Rural zone code AO1.1); the scheme does not define the road hierarchy', 'User input (engine.ts); ASSUMED false (not a collector or higher road) when left blank'),
+ ('has_secondary_dwelling','BOOLEAN',NULL,NULL,'PROPERTY_DATA','An existing or proposed secondary dwelling on the lot (South Burnett Rural/Township zone code triggers, Tables 5.5.13/5.5.16)', 'User input (engine.ts); ASSUMED false when left blank');
 
 -- ============================================================ Low density residential zone, AO2.5 ("Buildings")
 SELECT define_rule($r${
@@ -179,9 +193,12 @@ SELECT define_rule($r${
  "on_noncompliance": "PLANNING_APPROVAL_REQUIRED", "verification": "VERIFIED_VERBATIM", "automatable": false,
  "scopes": [{"level": "LOCAL_GOVERNMENT", "lg": "SOUTH_BURNETT"}, {"level": "ZONE", "zone": "SBRC:RURAL"}],
  "subjects": ["CLASS_1", "CLASS_10A"],
- "conditions": [[{"fact": "planning_assessment_required", "op": "IS_TRUE"}, {"fact": "boundary_type", "op": "IN", "value": ["PRIMARY_FRONTAGE", "SECONDARY_FRONTAGE_ROAD"]}]],
+ "conditions": [
+  [{"fact": "has_secondary_dwelling", "op": "IS_TRUE"}, {"fact": "boundary_type", "op": "IN", "value": ["PRIMARY_FRONTAGE", "SECONDARY_FRONTAGE_ROAD"]}],
+  [{"fact": "planning_assessment_required", "op": "IS_TRUE"}, {"fact": "boundary_type", "op": "IN", "value": ["PRIMARY_FRONTAGE", "SECONDARY_FRONTAGE_ROAD"]}]
+ ],
  "sources": [{"key": "sbrc_rural_buildings_road", "role": "PRIMARY", "quote": "AO1.1 Buildings are set back 20m from any collector or higher order road and 10m from any other road frontage."}],
- "interpretation_notes": "Applies to every road frontage. Table 5.5.13: a dwelling house is accepted development with no requirements unless it includes a secondary dwelling (then ADSR against Section 1, which includes AO1.1) or is otherwise assessable: hence planning_assessment_required. 'Collector or higher order road' is not defined in SC1 and needs road hierarchy mapping (fact south_burnett_road_is_collector_or_higher), so automatable false.",
+ "interpretation_notes": "Applies to every road frontage. Table 5.5.13: a dwelling house is accepted development with no requirements unless it includes a secondary dwelling (then ADSR against Section 1, which includes AO1.1 - encoded as has_secondary_dwelling) or is otherwise assessable (encoded as the general planning_assessment_required). Both facts are user-entered (not public GIS data) and default false, so this rule stays hidden for the ordinary accepted-development case and only surfaces when the applicant confirms one applies - previously planning_assessment_required was hardcoded false with no way to answer yes, which made this rule permanently unreachable rather than surfacing for manual review; fixed 2026-10-30 (engine.ts). 'Collector or higher order road' is not defined in SC1 and needs road hierarchy mapping (fact south_burnett_road_is_collector_or_higher, now a user input), so automatable false.",
  "effective_from": "2024-10-28"}$r$);
 SELECT supersede_draft('SBRC.C.RURAL_ROAD_SETBACK@2024-10-28', 'SBRC.sbrc_rural_buildings_road');
 
@@ -227,9 +244,12 @@ SELECT define_rule($r${
  "on_noncompliance": "PLANNING_APPROVAL_REQUIRED", "verification": "VERIFIED_VERBATIM", "automatable": false,
  "scopes": [{"level": "LOCAL_GOVERNMENT", "lg": "SOUTH_BURNETT"}, {"level": "ZONE", "zone": "SBRC:TOWNSHIP"}],
  "subjects": ["CLASS_1", "CLASS_10A"],
- "conditions": [[{"fact": "planning_assessment_required", "op": "IS_TRUE"}, {"fact": "boundary_type", "op": "IN", "value": ["PRIMARY_FRONTAGE", "SECONDARY_FRONTAGE_ROAD"]}]],
+ "conditions": [
+  [{"fact": "has_secondary_dwelling", "op": "IS_TRUE"}, {"fact": "boundary_type", "op": "IN", "value": ["PRIMARY_FRONTAGE", "SECONDARY_FRONTAGE_ROAD"]}],
+  [{"fact": "planning_assessment_required", "op": "IS_TRUE"}, {"fact": "boundary_type", "op": "IN", "value": ["PRIMARY_FRONTAGE", "SECONDARY_FRONTAGE_ROAD"]}]
+ ],
  "sources": [{"key": "sbrc_township_buildings_road", "role": "PRIMARY",
               "quote": "AO2.2 Buildings are built the same distance from the road alignment as the average of the 2 adjoining buildings. || AO2.3 If no adjoining buildings, or if the average setback of adjoining buildings from road alignments exceeds 6m, buildings are at least 3m from road alignments."}],
- "interpretation_notes": "Table 5.5.16: a dwelling house is accepted development unless it includes a secondary dwelling (then ADSR against Sections 1, 2, 3 & 7, including AO2.2/AO2.3): hence planning_assessment_required. AO2.2 sets an equal (averaging) setback, encoded as a minimum. 'Adjoining buildings' approximated by adjoining dwellings (adjoining_dwellings_both_sides, adjoining_road_setbacks_m); the case of only one adjoining building is not addressed by the text and is treated as AO2.3 (3 m). Applies to every road alignment. Automatable false for these approximations.",
+ "interpretation_notes": "Table 5.5.16: a dwelling house is accepted development unless it includes a secondary dwelling (then ADSR against Sections 1, 2, 3 & 7, including AO2.2/AO2.3 - encoded as has_secondary_dwelling) or is otherwise assessable (encoded as the general planning_assessment_required). Both facts are user-entered and default false, so this rule stays hidden for the ordinary accepted-development case; previously planning_assessment_required was hardcoded false with no way to answer yes, which made this rule permanently unreachable - fixed 2026-10-30 (engine.ts). AO2.2 sets an equal (averaging) setback, encoded as a minimum. 'Adjoining buildings' approximated by adjoining dwellings (adjoining_dwellings_both_sides, adjoining_road_setbacks_m); the case of only one adjoining building is not addressed by the text and is treated as AO2.3 (3 m). Applies to every road alignment. Automatable false for these approximations.",
  "effective_from": "2024-10-28"}$r$);
 SELECT supersede_draft('SBRC.C.TOWNSHIP_ROAD_SETBACK@2024-10-28', 'SBRC.sbrc_township_buildings_road');
