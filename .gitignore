@@ -3,6 +3,10 @@
 poc/.env
 __pycache__/
 
+# large source PDFs -- cited by URL/path in db/*.sql and research/*.json, not read at runtime;
+# keep locally but don't track (GitHub warns/rejects files over its size limits)
+research/sources/**/*.pdf
+
 # TypeScript server build output
 server-ts/node_modules/
 server-ts/dist/
