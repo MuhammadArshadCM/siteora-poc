@@ -94,8 +94,15 @@ council has adopted the QHC.
 * Curated: site cover **60 %**; height **9.5 m** to roof peak (planning track — OV6 is the declared height
   alternative); Rural zone front **10 m**, side **20 m** (manual: Class 10a coverage inferred from definitions).
   Front/side otherwise default to "QDC MP1.1, MP1.2 or MP1.3".
-* Character overlay limits on Class 10 (50 % of main building GFA; front carport 3.6 × 6 m) are drafts.
-* Gaps: no rear setback rule; OV6 maps; New Suburban precinct mapping.
+* Character Places and Areas Overlay (OV3): Class 10 placement curated and active 2026-11-16, once a
+  user-supplied screenshot of Figure 8.2.3.3.20.1 confirmed what Areas A-D mean (had sat as drafts since first
+  capture for exactly that reason, open_issues #112). Area A (rear of dwelling): Class 10 ≤ 50 % of main
+  building GFA. Area B (side, manual): open Class 10 ≤ 6 m wide, design-form conditions. Area C (front,
+  manual precondition: existing side setbacks < 3 m): single carport ≤ 3.6 × 6 m. Area D (secondary frontage
+  of a corner lot, `is_corner_lot`-gated): carport ≤ 6 × 6 m.
+* Gaps: no rear setback rule; OV6 maps (map-only, not GIS-wired — confirmed via screenshot, same mechanism as
+  the other councils' mapped-height overlays would apply); New Suburban precinct mapping (confirmed
+  determinable via the ePlan layer panel for a test address, not yet GIS-wired for live queries).
 
 ## Redland — City Plan 2018 Version 14 (10 Nov 2025)
 
