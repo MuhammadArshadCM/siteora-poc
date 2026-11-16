@@ -123,6 +123,210 @@
       "copyright": "© State of Queensland (Department of Resources) 2023"
     },
     {
+      "category": "Agriculture",
+      "name": "Agricultural land classification (ALC)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/SoilsAndLandResource/MapServer/51",
+      "label_field": "ag_land_class_meaning",
+      "show_fields": [
+        "ag_land_class",
+        "ag_land_class_meaning"
+      ],
+      "geometry": "polygon",
+      "always": true,
+      "copyright": "© State of Queensland (Department of Resources)",
+      "notes": "Confirmed queryable state-wide ALC dataset (verified 2 Nov 2026) - a state equivalent for councils (e.g. Livingstone OM02) whose own Agricultural Land Classification overlay is published only as cached map tiles. 'always' because several councils already have their own 'Agriculture'-category layer that would otherwise silently exclude this state fallback (site.ts: council-first-per-category)."
+    },
+    {
+      "category": "Vegetation",
+      "name": "Protected area or forest (national park, conservation park, state forest etc.)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/ParksTerrestrialProtectedAreas/MapServer/10",
+      "label_field": "estatename",
+      "show_fields": [
+        "estatename",
+        "esttype"
+      ],
+      "geometry": "polygon",
+      "always": true,
+      "copyright": "© State of Queensland (Department of Environment, Science and Innovation)",
+      "notes": "Confirmed queryable state-wide protected-area/forest estate dataset (verified 2 Nov 2026) - a state equivalent for councils (e.g. Livingstone OM09 Biodiversity Protected Area) whose own overlay is published only as cached map tiles. 'always' because several councils already have their own 'Vegetation'-category layer that would otherwise silently exclude this state fallback."
+    },
+    {
+      "category": "Coastal",
+      "name": "Great Barrier Reef Coast Marine Park zone",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/ParksMarineProtectedAreas/MapServer/1",
+      "label_field": "zone",
+      "show_fields": [
+        "zone",
+        "marinepark"
+      ],
+      "geometry": "polygon",
+      "always": true,
+      "copyright": "© State of Queensland (Department of Environment, Science and Innovation)",
+      "notes": "Confirmed queryable (verified 2 Nov 2026) - a state equivalent for councils (e.g. Livingstone OM08 Biodiversity Marine Park) whose own overlay is published only as cached map tiles. Covers the central/northern Qld coast (incl. Capricorn Coast / Great Keppel Island). 'always' because several councils already have their own 'Coastal'-category layer that would otherwise silently exclude this state fallback."
+    },
+    {
+      "category": "Coastal",
+      "name": "Moreton Bay Marine Park zone",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/ParksMarineProtectedAreas/MapServer/2",
+      "label_field": "zone_name",
+      "show_fields": [
+        "zone_name"
+      ],
+      "geometry": "polygon",
+      "always": true,
+      "copyright": "© State of Queensland (Department of Environment, Science and Innovation)",
+      "notes": "Confirmed queryable (verified 2 Nov 2026) - companion to the GBR Coast Marine Park zone layer, covering Moreton Bay (SEQ councils). 'always' for the same council-first-per-category reason as the GBR Coast zone layer above."
+    },
+    {
+      "category": "Coastal",
+      "name": "Great Sandy Marine Park zone",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/ParksMarineProtectedAreas/MapServer/15",
+      "label_field": "zone_name",
+      "show_fields": [
+        "zone_name"
+      ],
+      "geometry": "polygon",
+      "always": true,
+      "copyright": "© State of Queensland (Department of Environment, Science and Innovation)",
+      "notes": "Confirmed queryable (verified 2 Nov 2026) - companion to the GBR Coast Marine Park zone layer, covering the Great Sandy region (Sunshine Coast / Fraser area). 'always' for the same council-first-per-category reason as the GBR Coast zone layer above."
+    },
+    {
+      "category": "Vegetation",
+      "name": "Wetland protection area trigger area",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/WetlandProtection/MapServer/2",
+      "label_field": "ruleid",
+      "show_fields": [],
+      "geometry": "polygon",
+      "always": true,
+      "copyright": "© State of Queensland (Department of Environment, Science and Innovation)",
+      "notes": "Confirmed queryable state-wide wetland trigger-area dataset (verified 2 Nov 2026) - a state equivalent for councils (e.g. Livingstone OM10 Biodiversity Wetlands/Waterways) whose own overlay is published only as cached map tiles. 'always' because several councils already have their own 'Vegetation'-category layer that would otherwise silently exclude this state fallback."
+    },
+    {
+      "category": "Vegetation",
+      "name": "Wetland of high ecological significance",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/WetlandProtection/MapServer/1",
+      "label_field": "first_wetc",
+      "show_fields": [
+        "a_name",
+        "first_wetc"
+      ],
+      "geometry": "polygon",
+      "always": true,
+      "copyright": "© State of Queensland (Department of Environment, Science and Innovation)",
+      "notes": "Confirmed queryable (verified 2 Nov 2026) - companion to the wetland protection trigger-area layer, with the specific wetland's name and type. 'always' for the same council-first-per-category reason as the trigger-area layer above."
+    },
+    {
+      "category": "Waterway",
+      "name": "Declared fish habitat area",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Environment/Fisheries/MapServer/25",
+      "label_field": "fish_habitat",
+      "show_fields": [
+        "fish_habitat"
+      ],
+      "geometry": "polygon",
+      "always": true,
+      "copyright": "© State of Queensland (Department of Agriculture and Fisheries)",
+      "notes": "Confirmed queryable state-wide declared fish habitat area dataset (verified 2 Nov 2026) - a state equivalent for councils (e.g. Livingstone OM06 Biodiversity Declared Fish Habitat) whose own overlay is published only as cached map tiles. 'always' because several councils already have their own 'Waterway'-category layer that would otherwise silently exclude this state fallback."
+    },
+    {
+      "category": "Waterway",
+      "name": "Watercourse stream order",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/InlandWaters/WaterCoursesAndBodies/MapServer/37",
+      "label_field": "stream_order",
+      "show_fields": [
+        "name",
+        "stream_order"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "always": true,
+      "copyright": "© State of Queensland (Department of Resources)",
+      "notes": "Confirmed queryable state-wide watercourse stream-order dataset (verified 2 Nov 2026) - a state equivalent for councils (e.g. Livingstone OM11 Biodiversity Stream Order) whose own overlay is published only as cached map tiles. 'always' because several councils already have their own 'Waterway'-category layer that would otherwise silently exclude this state fallback."
+    },
+    {
+      "category": "Coastal",
+      "name": "Erosion prone area",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/AdminBoundariesFramework/MapServer/61",
+      "label_field": null,
+      "show_fields": [],
+      "geometry": "polygon",
+      "always": true,
+      "copyright": "© State of Queensland (Department of Environment, Science and Innovation)",
+      "notes": "Confirmed queryable state-wide erosion prone area dataset (verified 2 Nov 2026) - a state equivalent for councils (e.g. Livingstone OM13 Coastal Hazard Erosion Prone Area) whose own overlay is published only as cached map tiles. 'always' because several councils already have their own 'Coastal'-category layer that would otherwise silently exclude this state fallback - confirmed this was actually happening for Livingstone during verification."
+    },
+    {
+      "category": "Coastal",
+      "name": "Coastal management district",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/AdminBoundariesFramework/MapServer/41",
+      "label_field": "type",
+      "show_fields": [
+        "type"
+      ],
+      "geometry": "polygon",
+      "always": true,
+      "copyright": "© State of Queensland (Department of Environment, Science and Innovation)",
+      "notes": "Confirmed queryable (verified 2 Nov 2026) - state Coastal Protection and Management Act district, a broader coastal-hazard planning indicator alongside the erosion prone area layer. 'always' for the same council-first-per-category reason as the erosion prone area layer above."
+    },
+    {
+      "category": "Coastal",
+      "name": "Coastal plan building line",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/AdminBoundariesFramework/MapServer/197",
+      "label_field": "name",
+      "show_fields": [
+        "name",
+        "setbacktag"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "always": true,
+      "copyright": "© State of Queensland (Department of Environment, Science and Innovation)",
+      "notes": "Confirmed queryable (verified 2 Nov 2026) - a declared coastal building line under the State Coastal Plan; directly setback-relevant where it applies. 'always' for the same council-first-per-category reason as the erosion prone area layer above."
+    },
+    {
+      "category": "Extractive Resources",
+      "name": "Quarry area",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/AdminBoundariesFramework/MapServer/100",
+      "label_field": "quarry_name",
+      "show_fields": [
+        "quarry_name",
+        "status"
+      ],
+      "geometry": "polygon",
+      "always": true,
+      "copyright": "© State of Queensland (Department of Resources)",
+      "notes": "Confirmed queryable (verified 2 Nov 2026) - a state equivalent for councils (e.g. Livingstone OM16 Extractive Resources) whose own overlay is published only as cached map tiles. 'always' set defensively in case a council later registers its own 'Extractive Resources'-category layer."
+    },
+    {
+      "category": "Extractive Resources",
+      "name": "Quarry reserve (Key Resource Area)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/AdminBoundariesFramework/MapServer/101",
+      "label_field": "description",
+      "show_fields": [
+        "description",
+        "kra"
+      ],
+      "geometry": "polygon",
+      "always": true,
+      "copyright": "© State of Queensland (Department of Resources)",
+      "notes": "Confirmed queryable (verified 2 Nov 2026) - companion to the quarry area layer, carrying the Key Resource Area (kra) reference. 'always' set defensively in case a council later registers its own 'Extractive Resources'-category layer."
+    },
+    {
+      "category": "Roads",
+      "name": "State road hierarchy classification (TMR)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Transportation/RoadsAndTracks/MapServer/10",
+      "label_field": "class",
+      "show_fields": [
+        "road_name_full",
+        "class",
+        "sub_class"
+      ],
+      "geometry": "line",
+      "distance_m": 1,
+      "always": true,
+      "copyright": "© State of Queensland (Department of Transport and Main Roads)",
+      "notes": "Confirmed queryable (verified 2 Nov 2026) - a state equivalent for councils (e.g. Livingstone OM20 Road Hierarchy) whose own overlay is published only as cached map tiles. 'always' set defensively in case a council later registers its own 'Roads'-category layer. CAUTION: this layer's class values (Connector/Local/Secondary/Restricted) are TMR's own road classification, not confirmed to correspond 1:1 with a given council or state scheme's own hierarchy terms (e.g. South Burnett's 'collector or higher order road', Livingstone's own Road Hierarchy categories) - shown as an informational hit only; do not use it to auto-resolve a rule condition without first checking the specific scheme's definition against these class values."
+    },
+    {
       "category": "Electricity",
       "name": "GA Power Lines (transmission incl. Powerlink)",
       "layer": "https://services.ga.gov.au/gis/rest/services/Electricity_Infrastructure/MapServer/2",
@@ -2758,6 +2962,19 @@
   ],
   "LIVINGSTONE": [
     {
+      "category": "Heritage",
+      "name": "Schedule 3 local heritage place, 2005 scheme (partial match)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/LandParcelPropertyFramework/MapServer/4",
+      "where": "lotplan IN ('22CP905907','1RP620027','5RP903529','4RP887496','1LN804951','4LN1726','3RP836469','132CP906603','39RP604074','46RP604074','83SP113132','78LN1285','2CP839294','6RP907117','2RP620519','8LN2832','5RP899412','3RP618394','2RP604415','1RP604415','4RP894248','45LN2780','1RP606184','3RP604418','32LN2641','1RP600674','9RP600753','3RP809632','15RP600753','1RP605098','16RP600753','2RP617880','5LN826','19LN1961','43LN1961','5RP898686','1RP604382','2RP618113','893NPW29','192CP886579','2RP602217','4RP602217','1RP619943','82LN2526','32RP607841','565LN1690','1080LIV40337','1RP619153','2RP613494','437Y16911','79LN1344','2RP601811','3RP601811','1RP605351','3RP862682','3Y17124','1SP155351','22RP601614','98RP602184','2RP620460','3SP104438','39RP600689','68RP601977')",
+      "label_field": "lotplan",
+      "show_fields": ["lotplan", "locality"],
+      "geometry": "polygon",
+      "distance_m": 50,
+      "fact": "livingstone_near_local_heritage_place",
+      "copyright": "© State of Queensland (Department of Resources) 2024",
+      "notes": "Livingstone's own Local Heritage Register (2018 scheme, OM25 / Heritage Place overlay code 8.2.9) is published only as cached map tiles (not queryable), and the 2018 scheme's own text does not list the register's places anywhere (only the Heritage Place Overlay Code's assessment benchmarks, not the places themselves). Council's fact sheet states the current register was derived from the 103 listings in the superseded 2005 scheme's Schedule 3 'Identified Cultural Features'. That 2005 list was recovered from Schedules.pdf (full detail: research/councils/livingstone_heritage_schedule3_2005.json) and matched against the state cadastre 3 Nov 2026: 63 unique lot/plans (of 104 places; some places share a lotplan) still resolve as real, current parcels and are wired here. The other places either no longer resolve by their 2005 lot/plan (likely renumbered/resurveyed in the ~20 years since) or were only ever given a road/description location, not a lot/plan - a hit here is a reliable historical local-heritage reference, a miss is not conclusive (see the research file's caveat before treating absence as 'not heritage listed'). This 2005 list may also differ from the exact 2018 register (places can be added/removed on transfer) - treat a hit as 'confirm against Council's current register', not a definitive current citation."
+    },
+    {
       "category": "Coastal",
       "name": "Land below Highest Astronomical Tide (HAT)",
       "layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Storm_Tide_Tsunami/FeatureServer/0",
@@ -2832,6 +3049,19 @@
     }
   ],
   "TOWNSVILLE": [
+    {
+      "category": "Heritage",
+      "name": "Schedule 7 place of cultural heritage value (Local or State listed)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/LandParcelPropertyFramework/MapServer/4",
+      "where": "lotplan IN ('100SP310918','101RP703359','101T11887','104T1181','105T1186','10T118248','11RP903759','11USL50631','120EP2264','122RP703476','12RP745387','12T118573','133T11884','134RP701591','137T11884','138T11884','13RP750121','141T1186','143RP703359','148RP701649','14T118194','153T11884','156EP2335','156T118105','156T118192','157T118105','158RP701649','158T118105','159T118105','15T118173','160EP708','160T11884','165SP116238','169EP2263','169RP703537','169T118105','16RP706831','16RP707412','171T1181','17P8366','181T1181','18RP701558','191EP1742','19RP745707','19RP745719','19T118157','1GTP70153','1P8363','1RP701544','1RP701590','1RP701615','1RP701632','1RP701648','1RP701658','1RP701662','1RP701722','1RP701816','1RP701861','1RP701912','1RP701927','1RP701930','1RP701933','1RP702042','1RP702069','1RP702085','1RP706700','1RP708141','1RP708320','1RP708807','1RP709895','1RP710003','1RP710504','1RP712313','1RP712482','1RP716252','1RP716539','1RP716793','1RP717329','1RP718874','1RP719858','1RP721229','1RP722451','1RP727464','1RP732245','1RP735183','1RP739077','1RP739248','1RP743522','1RP744965','1RP748513','1RP865807','1SP168605','1SP188739','1SP205746','1SP229803','1SP233941','1SP253510','1SP257303','1SP332266','1T11868','1USL50891','201CP850698','201SP126605','202T118101','202T118159','203P8363','203T11823','20RP745707','20RP853743','219T1186','21RP906488','21T118288','21T118638','221RP703399','224RP713516','23RP745911','23SP314313','23T118176','247EP2301','24EP352','24RP701633','251SP223215','254T11869','257EP513','25RP703382','264EP543','26SP149308','275T11868','28RP745913','28T118117','290CP859212','29RP701601','2EP1107','2P83613','2P8363','2RP701523','2RP701606','2RP701607','2RP701623','2RP701653','2RP701659','2RP701818','2RP701898','2RP701959','2RP702016','2RP702042','2RP702069','2RP703361','2RP706700','2RP707023','2RP707272','2RP707340','2RP709434','2RP709750','2RP709895','2RP712908','2RP715005','2RP716527','2RP717551','2RP725278','2RP728420','2RP733821','2RP743712','2RP745100','2RP745103','2RP748152','2RP860274','2RP885982','2SP123456','2SP172356','2SP205746','2SP212760','2SP278231','2SP346827','2T118125','304T11823','308P8363','30RP703409','31T11860','322T118105','322T1185','325T1185','327SP171614','32RP729858','33T118105','33T11860','34T118567','36RP703477','36T118105','36T11868','37T11868','3RP701633','3RP701665','3RP702042','3RP712293','3RP721229','3RP882869','3SP205746','3SP253509','3SP253510','3SP257303','401P8363','409EP996','40SP189822','41T11884','42RP703389','453EP1600','47RP701649','48RP703409','48SP263522','491E12463','4RP701523','4RP716211','4SP120464','4SP257303','500E12466','505NPW643','50RP703409','50T118105','51RP701649','51SP126582','52RP701649','52T11884','53T11884','56EP1573','57RP703364','58RP737741','5RP711405','5SP211556','5SP263496','5T118365','5USL50632','626EP1920','633EP1908','69T11884','6H7329','6T118212','6T118300','707SP327134','70T11884','716T118501','71T118105','71T11867','72RP703359','73EP228','73SP346827','788CP855219','85T1186','85T11884','8RP701633','8RP745387','900SP293599','905SP253659','907SP273225','92T11884','97RP706831','99T118105')",
+      "label_field": "lotplan",
+      "show_fields": ["lotplan", "locality"],
+      "geometry": "polygon",
+      "distance_m": 50,
+      "fact": "townsville_near_schedule7_heritage_place",
+      "copyright": "© State of Queensland (Department of Resources) 2024",
+      "notes": "Added 3 Nov 2026: Townsville's Heritage overlay is not published as a queryable feature service (only Bushfire/zoning/sewer/water are). Schedule 7 'Places of cultural heritage value' (Version 2025/01, Table SC7.1.1) is a CURRENT scheme table listing all local- and state-listed heritage places by lot/plan. 257 of 283 listed properties (90.8%) matched to a real cadastre parcel; the rest are mostly Community Title common-property lots with no independent cadastre polygon. A hit is a reliable positive signal; a miss is not conclusive (property may be one of the 26 unmatched). Full provenance, extraction method and caveats: research/councils/townsville_heritage_schedule7.json."
+    },
     {
       "category": "Bushfire",
       "name": "Bushfire prone area (Gazetted OM02)",
@@ -3229,6 +3459,21 @@
       "layer": "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Residential_Character_Design_Controls/FeatureServer/0",
       "show_fields": ["SUB_TYPE"],
       "geometry": "polygon"
+    }
+  ],
+  "SOUTH_BURNETT": [
+    {
+      "category": "Heritage",
+      "name": "Schedule 6 non-indigenous cultural heritage site, pre-amalgamation shire scheme (partial match)",
+      "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/LandParcelPropertyFramework/MapServer/4",
+      "where": "lotplan IN ('10N2366','117C8278','129SP115387','13RP6090','14RP7914','15SP109081','16RP32386','16RP6086','174FY803924','17RP36991','198FY1776','1B3811','1M55124','1P6977','1RP160714','1RP178865','1RP199583','1RP4259','1RP51973','1RP6089','1RP6092','1RP63105','1RP7930','204FY2879','218C879','228N231','228SP136942','23RP32391','2RP172529','2RP208277','2RP36987','2RP4224','2RP4263','2RP4266','2RP6083','2RP87321','301FY809053','347FY2445','34RP32377','3RP103849','3RP178260','3RP204514','3RP52813','3RP6090','3RP7913','3W53514','40RP32384','42RP32376','45RP116831','48RP7914','490FY2838','4RP176913','502W5355','53N25485','54FTZ37384','569CSH2449','5RP159359','5RP36992','5RP813097','66RP7914','6FY1221','6N2342','708N231','79N231','7FY2239','7RP4283','7RP47277','9N2358')",
+      "label_field": "lotplan",
+      "show_fields": ["lotplan", "locality"],
+      "geometry": "polygon",
+      "distance_m": 50,
+      "fact": "south_burnett_near_schedule6_heritage_place",
+      "copyright": "© State of Queensland (Department of Resources) 2024",
+      "notes": "Added 3 Nov 2026: South Burnett's whole GIS platform (IntraMaps) has no queryable REST/OGC endpoint at all (see zoning_layers.json SOUTH_BURNETT, status BLOCKED), so no heritage overlay can be looked up directly. Schedule 6 'Non Indigenous Cultural Heritage Sites Listings' is a gazetted statutory instrument from each of the four pre-amalgamation shire schemes (Kingaroy/Murgon/Nanango/Wondai, 2006), linked by the council's current Local Heritage Register page alongside its 2016 Heritage Study (which identified 78 places but publishes no simple machine-readable place/lot-plan table of its own). 68 of 88 listed places (77%) matched to a real cadastre parcel; 3 are within road reserves (no lot/plan exists); the rest are mostly pre-digital plan references that may have been resubdivided or renumbered since 2006. A hit is a reliable positive signal; a miss is not conclusive. Full provenance, extraction method and caveats: research/councils/south_burnett_heritage_schedule6.json."
     }
   ]
 }

@@ -25,6 +25,9 @@
 - [BUILDING] SITE_COVER : <= 50 %  [DETERMINED]
     CMB.C.GR_SITE_COVER_50@2026-09-11 — General residential (Coastal communities / Suburban neighbourhood) and Redcliffe Interim residential: site cover <= 50%
     source: Moreton Bay Regional Council Planning Scheme 2016 (MBRC Planning Scheme) (Version 8 (created by LGIP Amendment No. 2)) — Table 9.3.1.1 RAD5 (E4)
+- [FIRE_SAFETY] CONSTRUCTION.FIRE_SEPARATION : must hold  [MANUAL_REVIEW]
+    NCC.PT9_2.CLASS10A_FIRE_SEPARATION@2022-05-01 — Class 10a wall within 900 mm of a boundary (not a road) or 1.8 m of another building must be fire-separated construction
+    source: National Construction Code (NCC 2022, adopted Housing Provisions (Volume Two equivalent)) — 9.2.4(1)(a), 9.2.5; 9.2.4(1)(b), 9.2.6
   displaced:
     - QDC12.A3.SITE_COVER@2010-03-26 (None): OVERRIDES by CMB.C.GR_SITE_COVER_50@2026-09-11
     - QDC12.A4.BUILDING_HEIGHT@2010-03-26 (None): OVERRIDES by CMB.C.OUTBUILDING_HEIGHT@2026-09-11

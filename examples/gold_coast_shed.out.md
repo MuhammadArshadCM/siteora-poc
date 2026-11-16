@@ -22,6 +22,9 @@
 - [BUILDING] SITE_COVER : <= 50 %  [DETERMINED]
     CGC.C.LDR_SITE_COVER@2026-09-29 — Low density residential: site cover <= 50%
     source: Gold Coast City Plan (City Plan 2016) (Version 14 (incorporates Minor and administrative amendment 13 and Interim LGIP amendment)) — 6.2.1.3 Table 6.2.1-1 RO2; Table 6.2.1-2 AO2
+- [FIRE_SAFETY] CONSTRUCTION.FIRE_SEPARATION : must hold  [MANUAL_REVIEW]
+    NCC.PT9_2.CLASS10A_FIRE_SEPARATION@2022-05-01 — Class 10a wall within 900 mm of a boundary (not a road) or 1.8 m of another building must be fire-separated construction
+    source: National Construction Code (NCC 2022, adopted Housing Provisions (Volume Two equivalent)) — 9.2.4(1)(a), 9.2.5; 9.2.4(1)(b), 9.2.6
   displaced:
     - QDC12.A3.SITE_COVER@2010-03-26 (None): OVERRIDES by CGC.C.LDR_SITE_COVER@2026-09-29
     - QDC12.A4.BUILDING_HEIGHT@2010-03-26 (None): OVERRIDES by CGC.C.LDR_HEIGHT@2026-09-29

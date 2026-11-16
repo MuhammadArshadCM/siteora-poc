@@ -22,7 +22,10 @@
     "schema-doc": "node dist/src/tools/schema-doc.js",
     "import-research": "node dist/src/tools/import-council-research.js",
     "data-register": "node dist/src/tools/data-register.js",
-    "validate-setbacks": "node dist/src/tools/validate-setbacks.js"
+    "validate-setbacks": "node dist/src/tools/validate-setbacks.js",
+    "migration:run": "npm run build && typeorm migration:run -d dist/src/core/datasource.js",
+    "migration:revert": "npm run build && typeorm migration:revert -d dist/src/core/datasource.js",
+    "migration:show": "npm run build && typeorm migration:show -d dist/src/core/datasource.js"
   },
   "dependencies": {
     "@tsed/core": "8.44.0",
@@ -36,13 +39,13 @@
     "@tsed/platform-params": "8.44.0",
     "@tsed/platform-views": "8.44.0",
     "@tsed/schema": "8.44.0",
-    "body-parser": "^2.2.0",
     "exceljs": "^4.4.0",
     "express": "^5.1.0",
-    "multer": "^2.0.0",
     "pg": "^8.16.0",
+    "reflect-metadata": "^0.2.2",
     "siteora": "file:..",
-    "tslib": "^2.8.0"
+    "tslib": "^2.8.0",
+    "typeorm": "^0.3.27"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",

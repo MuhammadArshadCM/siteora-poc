@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Siteora POC — blocked sources</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1d2330; --mute:#5c6577; --line:#dfe3ea; --accent:#2457d6;
+          --ok:#1d7a46; --warn:#a15c00; --review:#8a3ffc; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:16px 24px; background:var(--card); border-bottom:1px solid var(--line); }
+  header h1 { margin:0; font-size:18px; } header p { margin:4px 0 0; color:var(--mute); }
+  main { max-width:1100px; margin:0 auto; padding:16px 24px 48px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; }
+  th, td { text-align:left; padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-size:12px; color:var(--mute); font-weight:600; }
+  td.lg { white-space:nowrap; font-weight:600; }
+  .url { font-size:12px; word-break:break-all; color:var(--mute); }
+  .notes { font-size:12px; color:var(--mute); margin-top:4px; }
+  .tag { display:inline-block; padding:1px 8px; border-radius:10px; font-size:11px; font-weight:600; white-space:nowrap; }
+  .BLOCKED { background:#fde8e8; color:#b42318; }
+  .DOCUMENT_UPLOADED { background:#e5f4ec; color:var(--ok); }
+  .QHC_OPTED_UNBLOCKED { background:#eef0f3; color:var(--mute); }
+  button { font:inherit; padding:6px 12px; border:0; border-radius:6px; background:var(--accent); color:#fff; cursor:pointer; }
+  button.secondary { background:#eef0f3; color:var(--ink); }
+  button:disabled { opacity:.6; cursor:progress; }
+  .row-actions { display:flex; flex-direction:column; gap:6px; align-items:flex-start; min-width:180px; }
+  input[type=file] { font-size:12px; max-width:170px; }
+  .status-msg { font-size:12px; margin-top:4px; }
+  .status-msg.ok { color:var(--ok); } .status-msg.err { color:#b42318; }
+  .mute { color:var(--mute); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Siteora POC — blocked sources</h1>
+  <p>Council/department sources that return HTTP 403 to automated fetching. Fetch the document yourself in a
+     browser and upload it here, or mark it unblocked if the council has since adopted the Queensland Housing Code.</p>
+</header>
+<main>
+  <div class="card">
+    <table id="tbl">
+      <thead>
+        <tr><th>Council</th><th>Source</th><th>Status</th><th style="min-width:180px">Actions</th></tr>
+      </thead>
+      <tbody id="rows"><tr><td colspan="4" class="mute">Loading…</td></tr></tbody>
+    </table>
+  </div>
+</main>
+<script>
+const STATUS_LABEL = { BLOCKED: 'Blocked', DOCUMENT_UPLOADED: 'Document uploaded', QHC_OPTED_UNBLOCKED: 'QHC opted — unblocked' };
+
+async function load() {
+  const rowsEl = document.getElementById('rows');
+  rowsEl.innerHTML = '<tr><td colspan="4" class="mute">Loading…</td></tr>';
+  let data;
+  try {
+    data = await fetch('/api/admin/blocked-sources').then(r => r.json());
+  } catch (e) {
+    rowsEl.innerHTML = `<tr><td colspan="4" class="err">Failed to load: ${e}</td></tr>`;
+    return;
+  }
+  if (!data.length) { rowsEl.innerHTML = '<tr><td colspan="4" class="mute">No blocked sources recorded.</td></tr>'; return; }
+  rowsEl.innerHTML = '';
+  for (const row of data) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="lg">${row.lg_id || '<span class="mute">(statewide)</span>'}</td>
+      <td>
+        <div>${row.label}</div>
+        ${row.url ? `<div class="url"><a href="${row.url}" target="_blank" rel="noopener">${row.url}</a></div>` : '<div class="url mute">no URL on record</div>'}
+        ${row.notes ? `<div class="notes">${row.notes}</div>` : ''}
+        ${row.uploaded_file_path ? `<div class="notes">Uploaded: ${row.uploaded_file_path} (${new Date(row.uploaded_at).toLocaleString()})</div>` : ''}
+      </td>
+      <td><span class="tag ${row.status}">${STATUS_LABEL[row.status] || row.status}</span></td>
+      <td class="row-actions">
+        <input type="file" data-id="${row.id}" />
+        <button type="button" data-action="upload" data-id="${row.id}">Upload document</button>
+        <button type="button" class="secondary" data-action="qhc" data-id="${row.id}">Mark council QHC-opted</button>
+        <div class="status-msg" data-msg="${row.id}"></div>
+      </td>`;
+    rowsEl.appendChild(tr);
+  }
+}
+
+function setMsg(id, text, ok) {
+  const el = document.querySelector(`[data-msg="${id}"]`);
+  if (el) { el.textContent = text; el.className = 'status-msg ' + (ok ? 'ok' : 'err'); }
+}
+
+document.getElementById('rows').addEventListener('click', async (ev) => {
+  const btn = ev.target.closest('button');
+  if (!btn) return;
+  const id = btn.dataset.id;
+  btn.disabled = true;
+  try {
+    if (btn.dataset.action === 'upload') {
+      const input = document.querySelector(`input[type=file][data-id="${id}"]`);
+      const file = input && input.files[0];
+      if (!file) { setMsg(id, 'Choose a file first.', false); return; }
+      const res = await fetch(`/api/admin/blocked-sources/${id}/upload?filename=${encodeURIComponent(file.name)}`,
+        { method: 'POST', body: file, headers: { 'Content-Type': 'application/octet-stream' } });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || res.statusText);
+      setMsg(id, `Saved to ${json.saved_to} (${json.bytes} bytes).`, true);
+      await load();
+    } else if (btn.dataset.action === 'qhc') {
+      const res = await fetch(`/api/admin/blocked-sources/${id}/qhc-opted`, { method: 'POST' });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || res.statusText);
+      setMsg(id, 'Marked QHC-opted; linked open_issue resolved if there was one.', true);
+      await load();
+    }
+  } catch (e) {
+    setMsg(id, String(e.message || e), false);
+  } finally {
+    btn.disabled = false;
+  }
+});
+
+load();
+</script>
+</body>
+</html>

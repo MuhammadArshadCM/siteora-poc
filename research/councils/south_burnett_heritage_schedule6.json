@@ -1,0 +1,915 @@
+{
+ "source": "South Burnett -- four predecessor shire IPA Planning Schemes, Schedule 6 \"Non Indigenous Cultural Heritage Sites Listings\" (statutory instruments, gazetted 2006, still in force as the South Burnett Planning Scheme 2017 carries forward pre-amalgamation local heritage listings pending the 2016 Heritage Study register taking full effect)",
+ "source_urls": {
+  "KINGAROY": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/kingaroy_shire_ipa_planning_scheme_schedule_6_heritage_listings.pdf",
+  "MURGON": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/murgon_shire_ipa_scheme_schedule_6_heritage_listings.pdf",
+  "NANANGO": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/nanango_shire_ipa_planning_scheme_schedule_6_heritage_listings.pdf",
+  "WONDAI": "https://www.southburnett.qld.gov.au/files/assets/public/v/1/business/documents/wondai_shire_ipa_planning_scheme_schedule_6_heritage_listings.pdf"
+ },
+ "purpose": "South Burnett does not publish a Heritage overlay as a queryable ArcGIS feature service. The council itself links these four Schedule 6 documents from its current Local Heritage Register page (alongside the 2016 Heritage Study final report, which identified 78 places but has no simple machine-readable place/lot-plan table of its own). Schedule 6 is the clean, structured, already-gazetted predecessor to that study -- same role as Livingstone Schedule 3 / Townsville Schedule 7 / Burke Schedule 5.",
+ "extraction_method": "PyMuPDF plain-text extraction (p.get_text()), read directly off the page -- automated column-position reconstruction was attempted but proved unreliable (row and wrapped-line spacing are nearly identical, so a Y-gap heuristic cannot distinguish a wrapped cell from the next row). All 88 records were hand-transcribed from the legible plain-text dump by direct reading, consistent with the project convention of visually verifying any extraction that automation cannot be trusted to get right.",
+ "cadastre_match_method": "Each record was transcribed with one or more lot/plan candidates (parsed from free-text RPD descriptions like \"Lot 5 on RP36992\" or \"L3/RP103849\"), then queried against the state cadastre (PlanningCadastre/LandParcelPropertyFramework/MapServer/4); the first candidate to resolve to a real parcel is used. 68 of 88 records (77%) resolved. 3 records (war memorials/a well within road reserves) have no lot/plan at all by nature. The remaining 17 unresolved had plausible lot/plan text that did not match any current parcel -- most likely subdivided, renumbered, or superseded since the schedule was gazetted in 2006 (these are mostly 1850s-1920s heritage buildings; a couple of ambiguous single-digit near-misses were found during matching, e.g. a candidate differing by one digit resolved to a real parcel, but these were deliberately NOT substituted in since there is no way to confirm from the source text alone which digit is correct -- only genuine prefix normalisations (e.g. adding an omitted \"RP\") were applied.",
+ "caveat": "A hit (within 50m of one of the 68 matched lot/plans) is a reliable positive signal that the property is Schedule 6-listed heritage. A miss is NOT conclusive -- it may be one of the 20 unmatched/road-reserve records. This is a supplementary heads-up, not a substitute for checking the schedules or the councils 2016 Heritage Study directly for a specific address.",
+ "records": [
+  {
+   "shire": "KINGAROY",
+   "place": "Carroll Cottage (formerly Daniel Carroll's House)",
+   "address": "6 Edward Street, Kingaroy",
+   "lotplans": [
+    "5RP36992"
+   ],
+   "listing": "QHR/NTQ",
+   "resolved_lotplan": "5RP36992"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Wylarah",
+   "address": "2431 Ironpot Road",
+   "lotplans": [
+    "24FT237261"
+   ],
+   "listing": "RNE/QHR/NTQ",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Burrandowan Homestead",
+   "address": "Burra Burri Road",
+   "lotplans": [
+    "1209965"
+   ],
+   "listing": "RNE/QHR/NTQ",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Taabinga Homestead",
+   "address": "7 Old Taabinga Road",
+   "lotplans": [
+    "2RP208277"
+   ],
+   "listing": "RNE/QHR/NTQ",
+   "resolved_lotplan": "2RP208277"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "First Kingaroy Shire Council Chambers",
+   "address": "130 Haly Street / 1 Edward Street, Kingaroy",
+   "lotplans": [
+    "3RP103849",
+    "4RP55126",
+    "2RP103849",
+    "1RP103849"
+   ],
+   "listing": "",
+   "resolved_lotplan": "3RP103849"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Carrollee Hotel",
+   "address": "4 King Street, Kingaroy",
+   "lotplans": [
+    "2RP36987"
+   ],
+   "listing": "NTQ",
+   "resolved_lotplan": "2RP36987"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Wooroolin Memorial Hall",
+   "address": "31 Alexander Street, Wooroolin",
+   "lotplans": [
+    "490FY2838"
+   ],
+   "listing": "",
+   "resolved_lotplan": "490FY2838"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Grand Hotel, Wooroolin",
+   "address": "4 Fredrick Street, Wooroolin",
+   "lotplans": [
+    "2W6023"
+   ],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Broadway Hotel",
+   "address": "153/155 Kingaroy Street",
+   "lotplans": [
+    "66RP7914"
+   ],
+   "listing": "",
+   "resolved_lotplan": "66RP7914"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Former Union Bank",
+   "address": "194/196 Kingaroy Street",
+   "lotplans": [
+    "45RP116831"
+   ],
+   "listing": "",
+   "resolved_lotplan": "45RP116831"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Miller's Corner",
+   "address": "205-219 Kingaroy Street",
+   "lotplans": [
+    "48RP7914"
+   ],
+   "listing": "",
+   "resolved_lotplan": "48RP7914"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Former Railway Station building, Kingaroy",
+   "address": "King Street",
+   "lotplans": [
+    "15SP109081"
+   ],
+   "listing": "",
+   "resolved_lotplan": "15SP109081"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Former Kingaroy Shire Offices / Kingaroy War Memorial",
+   "address": "233-253 Haly Street",
+   "lotplans": [
+    "7RP47277",
+    "7P47277"
+   ],
+   "listing": "",
+   "resolved_lotplan": "7RP47277"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Former Kingaroy Electricity Building (now Kingaroy Historical Museum)",
+   "address": "124 Haly Street",
+   "lotplans": [
+    "6FY1221"
+   ],
+   "listing": "",
+   "resolved_lotplan": "6FY1221"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Bethany Lutheran Church",
+   "address": "83 Youngman Street",
+   "lotplans": [
+    "15RP7924"
+   ],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Civic Centre, Kingaroy",
+   "address": "Glendon Street",
+   "lotplans": [
+    "28RP68577"
+   ],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Peanut Silos, Kingaroy",
+   "address": "133 Haly Street / 117-131 Haly Street",
+   "lotplans": [
+    "28RP68577",
+    "3RP7913",
+    "4RP7913",
+    "5RP7913",
+    "6RP7913",
+    "7RP7913",
+    "8RP7913",
+    "9RP7913",
+    "10RP7913",
+    "11RP7913",
+    "12RP7913",
+    "13RP7913",
+    "14RP7913",
+    "138FY1569"
+   ],
+   "listing": "",
+   "resolved_lotplan": "3RP7913"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Kingaroy Butter Factory",
+   "address": "67 William Street",
+   "lotplans": [
+    "2RP172529"
+   ],
+   "listing": "",
+   "resolved_lotplan": "2RP172529"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Bethany",
+   "address": "218 Peterson Drive",
+   "lotplans": [
+    "54FTZ37384"
+   ],
+   "listing": "",
+   "resolved_lotplan": "54FTZ37384"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Booie Cemetery",
+   "address": "Radunzs Road",
+   "lotplans": [
+    "117C8278"
+   ],
+   "listing": "",
+   "resolved_lotplan": "117C8278"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Stolzenberg Engineering Works",
+   "address": "21-27 Haly Street",
+   "lotplans": [
+    "1RP63105"
+   ],
+   "listing": "",
+   "resolved_lotplan": "1RP63105"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "St Michael's and All Angels' Anglican Church",
+   "address": "2/6 Alford Street",
+   "lotplans": [
+    "1RP7930"
+   ],
+   "listing": "",
+   "resolved_lotplan": "1RP7930"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "Crawford War Memorial",
+   "address": "215-227 Siefert Street, Crawford",
+   "lotplans": [
+    "37FY568"
+   ],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "St. Mary's Church",
+   "address": "9 Albert Street",
+   "lotplans": [
+    "17RP36991"
+   ],
+   "listing": "",
+   "resolved_lotplan": "17RP36991"
+  },
+  {
+   "shire": "KINGAROY",
+   "place": "St. Andrew's Presbyterian Church",
+   "address": "48 Alford Street",
+   "lotplans": [
+    "14RP7914"
+   ],
+   "listing": "",
+   "resolved_lotplan": "14RP7914"
+  },
+  {
+   "shire": "MURGON",
+   "place": "National Bank, Murgon",
+   "address": "88 Lamb Street, Murgon",
+   "lotplans": [
+    "2RP4224"
+   ],
+   "listing": "RNE/QHR/NTQ",
+   "resolved_lotplan": "2RP4224"
+  },
+  {
+   "shire": "MURGON",
+   "place": "Murgon Town Hall Group",
+   "address": "62-70 Lamb Street, Murgon (cnr. Lamb and Gore Streets)",
+   "lotplans": [
+    "1M55124",
+    "2M55124"
+   ],
+   "listing": "RNE",
+   "resolved_lotplan": "1M55124"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Taromeo Station",
+   "address": "Benarkin",
+   "lotplans": [
+    "5RP159359"
+   ],
+   "listing": "RNE/QHR/NTQ",
+   "resolved_lotplan": "5RP159359"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Court House",
+   "address": "30 Henry Street, Nanango",
+   "lotplans": [
+    "185FY1534"
+   ],
+   "listing": "RNE/QHR/NTQ",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Post and Telegraph office (former)",
+   "address": "George Street, Nanango",
+   "lotplans": [
+    "2RP87321"
+   ],
+   "listing": "",
+   "resolved_lotplan": "2RP87321"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "St Anne's Anglican Church",
+   "address": "114 Burnett Street, Nanango",
+   "lotplans": [
+    "228N231"
+   ],
+   "listing": "",
+   "resolved_lotplan": "228N231"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "King's House (coach stop)",
+   "address": "Cooyar-Maidenwell Road, near Maidenwell",
+   "lotplans": [
+    "1RP199583"
+   ],
+   "listing": "",
+   "resolved_lotplan": "1RP199583"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Tarong Homestead",
+   "address": "2846 Kingaroy Cooyar Road",
+   "lotplans": [
+    "1B3811"
+   ],
+   "listing": "QHR/NTQ",
+   "resolved_lotplan": "1B3811"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Presbyterian Church (now Scots Community Centre)",
+   "address": "53 Gipps Street, Nanango",
+   "lotplans": [
+    "2RP177409"
+   ],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Freemason's Hall",
+   "address": "42 Gipps Street, Nanango",
+   "lotplans": [
+    "1RP4259"
+   ],
+   "listing": "",
+   "resolved_lotplan": "1RP4259"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Dwelling",
+   "address": "55 Chester Street, Nanango",
+   "lotplans": [
+    "7RP4283",
+    "9RP4283"
+   ],
+   "listing": "",
+   "resolved_lotplan": "7RP4283"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Nanango Butter Factory (former)",
+   "address": "George Street, Nanango",
+   "lotplans": [
+    "8RP22117",
+    "3N2342",
+    "6N2342"
+   ],
+   "listing": "",
+   "resolved_lotplan": "6N2342"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Ringsfield Historic House",
+   "address": "41-45 Alfred Street, Nanango",
+   "lotplans": [
+    "7N2316",
+    "8N2316",
+    "6N2316"
+   ],
+   "listing": "NTQ",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Methodist (Uniting) Church",
+   "address": "44 Gipps Street, Nanango",
+   "lotplans": [
+    "1RP76317"
+   ],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Railway Remnants",
+   "address": "41 Drayton Street, Nanango",
+   "lotplans": [
+    "9N2358"
+   ],
+   "listing": "",
+   "resolved_lotplan": "9N2358"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "'Shop House' (Mead's Corner Store)",
+   "address": "45-47 Drayton Street, Nanango",
+   "lotplans": [
+    "5RP813097"
+   ],
+   "listing": "",
+   "resolved_lotplan": "5RP813097"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Salvation Army Citadel (former)",
+   "address": "106 Drayton Street, Nanango",
+   "lotplans": [
+    "2RP4266"
+   ],
+   "listing": "",
+   "resolved_lotplan": "2RP4266"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Bank premises (former)",
+   "address": "Corner of Drayton and Fitzroy Streets, Nanango",
+   "lotplans": [
+    "1RP51973",
+    "1RP53898"
+   ],
+   "listing": "",
+   "resolved_lotplan": "1RP51973"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Dwelling",
+   "address": "29 Gipps Street, Nanango",
+   "lotplans": [
+    "4RP176913"
+   ],
+   "listing": "",
+   "resolved_lotplan": "4RP176913"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Fitzroy Hotel",
+   "address": "Fitzroy Street, Nanango",
+   "lotplans": [
+    "2RP4263",
+    "6RP22118"
+   ],
+   "listing": "",
+   "resolved_lotplan": "2RP4263"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Muller's Sawmill",
+   "address": "Old Esk/Taromeo Rd, Benarkin",
+   "lotplans": [
+    "228SP136942",
+    "229SP136942"
+   ],
+   "listing": "",
+   "resolved_lotplan": "228SP136942"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Railway Ticket Office",
+   "address": "Nanango Racecourse, Nanango",
+   "lotplans": [
+    "174FY803924"
+   ],
+   "listing": "",
+   "resolved_lotplan": "174FY803924"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "King's Hotel",
+   "address": "Crn Maidenwell-Bunya Mountains Rd and Maidenwell-Cooyar Rd",
+   "lotplans": [
+    "1RP55955"
+   ],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Our Lady Help of Christians Church",
+   "address": "35 Gipps Street, Nanango",
+   "lotplans": [
+    "1RP178865"
+   ],
+   "listing": "",
+   "resolved_lotplan": "1RP178865"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "War Memorial Nanango",
+   "address": "48 Drayton Street, Nanango",
+   "lotplans": [
+    "346FY2623"
+   ],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Goode's Inn Monument Plaque",
+   "address": "Nanango State School grounds, Burnett Street, Nanango",
+   "lotplans": [
+    "10N2366"
+   ],
+   "listing": "",
+   "resolved_lotplan": "10N2366"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Booie Hall",
+   "address": "1218 Booie Road",
+   "lotplans": [
+    "129SP115387"
+   ],
+   "listing": "",
+   "resolved_lotplan": "129SP115387"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Pioneer Cemetery",
+   "address": "Gold Street, Nanango",
+   "lotplans": [
+    "347FY2445"
+   ],
+   "listing": "",
+   "resolved_lotplan": "347FY2445"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Seven-Mile Diggings",
+   "address": "Old Esk North Road, Nanango",
+   "lotplans": [
+    "569CSH2449"
+   ],
+   "listing": "",
+   "resolved_lotplan": "569CSH2449"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Graves",
+   "address": "At Coomba Reserve, Maidenwell",
+   "lotplans": [
+    "7FY2239"
+   ],
+   "listing": "",
+   "resolved_lotplan": "7FY2239"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "St Patrick's School",
+   "address": "18 Alfred Street, Nanango",
+   "lotplans": [
+    "79N231"
+   ],
+   "listing": "",
+   "resolved_lotplan": "79N231"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Residence",
+   "address": "6 Fitzroy Street, Nanango",
+   "lotplans": [
+    "708N231"
+   ],
+   "listing": "",
+   "resolved_lotplan": "708N231"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Taromeo Cemetery",
+   "address": "Old Esk North Road",
+   "lotplans": [
+    "218C879"
+   ],
+   "listing": "",
+   "resolved_lotplan": "218C879"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Pavilion at Nanango Showgrounds",
+   "address": "Corner of Cairns & Drayton Street",
+   "lotplans": [
+    "198FY1776"
+   ],
+   "listing": "",
+   "resolved_lotplan": "198FY1776"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Uniting Church Blackbutt",
+   "address": "Coulson Street, Blackbutt",
+   "lotplans": [
+    "23RP32391"
+   ],
+   "listing": "",
+   "resolved_lotplan": "23RP32391"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Dwelling (Old Mill House)",
+   "address": "70 Hart Street, Blackbutt",
+   "lotplans": [
+    "1RP160714"
+   ],
+   "listing": "",
+   "resolved_lotplan": "1RP160714"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Anglican Church",
+   "address": "Crn Douglas & Gladys Streets, Blackbutt",
+   "lotplans": [
+    "40RP32384"
+   ],
+   "listing": "",
+   "resolved_lotplan": "40RP32384"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Hotel",
+   "address": "37 Coulson Street, Blackbutt",
+   "lotplans": [
+    "42RP32376"
+   ],
+   "listing": "",
+   "resolved_lotplan": "42RP32376"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Dwelling (former school house)",
+   "address": "97 Crows Nest Road, Blackbutt",
+   "lotplans": [
+    "53N25485"
+   ],
+   "listing": "",
+   "resolved_lotplan": "53N25485"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Salvation Army Hall",
+   "address": "37 Hart Street, Blackbutt",
+   "lotplans": [
+    "34RP32377"
+   ],
+   "listing": "",
+   "resolved_lotplan": "34RP32377"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Dwelling (Ogilvies old house)",
+   "address": "43 Hart Street, Blackbutt",
+   "lotplans": [
+    "37RP32375"
+   ],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Catholic Church",
+   "address": "Crn James and Gladys Street, Blackbutt",
+   "lotplans": [
+    "16RP32386"
+   ],
+   "listing": "",
+   "resolved_lotplan": "16RP32386"
+  },
+  {
+   "shire": "NANANGO",
+   "place": "War Memorial Blackbutt (within road reserve)",
+   "address": "Coulson Street, Blackbutt",
+   "lotplans": [],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "NANANGO",
+   "place": "War Memorial Maidenwell (within road reserve)",
+   "address": "Main Street, Maidenwell",
+   "lotplans": [],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "NANANGO",
+   "place": "Jessie's Well (within road reserve)",
+   "address": "Old Esk Road, Benarkin",
+   "lotplans": [],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Boondooma Homestead",
+   "address": "Mundubbera-Durong Road, Boondooma",
+   "lotplans": [
+    "1SP106937"
+   ],
+   "listing": "RNE/QHR/NTQ",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Shepherd Memorial, Church of St. Peter",
+   "address": "Wondai Road, Proston",
+   "lotplans": [
+    "1P6977"
+   ],
+   "listing": "RNE/QHR/NTQ",
+   "resolved_lotplan": "1P6977"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Marshlands Station",
+   "address": "Hivesville Road",
+   "lotplans": [
+    "3RP52813"
+   ],
+   "listing": "QHR/NTQ",
+   "resolved_lotplan": "3RP52813"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Hotel Cecil",
+   "address": "Mackenzie Street, Wondai",
+   "lotplans": [
+    "3RP204514"
+   ],
+   "listing": "",
+   "resolved_lotplan": "3RP204514"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Wondai Post Office",
+   "address": "Mackenzie Street, Wondai",
+   "lotplans": [
+    "3RP178260"
+   ],
+   "listing": "",
+   "resolved_lotplan": "3RP178260"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "St. John the Baptist Catholic Church",
+   "address": "Bramston Street, Wondai",
+   "lotplans": [
+    "1RP27219"
+   ],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Wondai Masonic Lodge",
+   "address": "Cadell Street, Wondai",
+   "lotplans": [
+    "13RP6090"
+   ],
+   "listing": "",
+   "resolved_lotplan": "13RP6090"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Wondai Baptist Church",
+   "address": "Cadell Street, Wondai",
+   "lotplans": [
+    "1RP6092"
+   ],
+   "listing": "",
+   "resolved_lotplan": "1RP6092"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "McAllister Hall",
+   "address": "Wondai Showgrounds",
+   "lotplans": [
+    "301FY809053"
+   ],
+   "listing": "",
+   "resolved_lotplan": "301FY809053"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "St Mary's Anglican Church",
+   "address": "Baynes Street, Wondai",
+   "lotplans": [
+    "11W5358"
+   ],
+   "listing": "",
+   "resolved_lotplan": null
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Nurse Higman's hospital",
+   "address": "42 Baynes Street, Wondai",
+   "lotplans": [
+    "3RP6090"
+   ],
+   "listing": "",
+   "resolved_lotplan": "3RP6090"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Wondai Presbyterian Church",
+   "address": "Pring Street, Wondai",
+   "lotplans": [
+    "502W5355"
+   ],
+   "listing": "",
+   "resolved_lotplan": "502W5355"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Former Oddfellows Hall",
+   "address": "Mackenzie Street, Wondai",
+   "lotplans": [
+    "2RP6083"
+   ],
+   "listing": "",
+   "resolved_lotplan": "2RP6083"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "'The Manor' (formerly maternity hospital)",
+   "address": "92 Mackenzie Street, Wondai",
+   "lotplans": [
+    "204FY2879"
+   ],
+   "listing": "",
+   "resolved_lotplan": "204FY2879"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Wondai Hotel",
+   "address": "Haly Street, Wondai",
+   "lotplans": [
+    "16RP6086"
+   ],
+   "listing": "",
+   "resolved_lotplan": "16RP6086"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Boisen's Store and former Slade's Store",
+   "address": "Haly Street, Wondai",
+   "lotplans": [
+    "1RP6089"
+   ],
+   "listing": "",
+   "resolved_lotplan": "1RP6089"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "St John Trinity Lutheran Church",
+   "address": "Edwards Street, Wondai",
+   "lotplans": [
+    "3W53514"
+   ],
+   "listing": "",
+   "resolved_lotplan": "3W53514"
+  },
+  {
+   "shire": "WONDAI",
+   "place": "Former Westpac Bank Building",
+   "address": "Haly Street, Wondai",
+   "lotplans": [
+    "1RP50808"
+   ],
+   "listing": "",
+   "resolved_lotplan": null
+  }
+ ]
+}

@@ -22,6 +22,9 @@
 - [BUILDING] SITE_COVER : <= 20 %  [DETERMINED]
     LCC.C.SITE_COVER_LDR_ACREAGE@2025-07-01 — LDR Acreage precinct: site cover <= 20%
     source: Logan Planning Scheme 2015 (Version 9.2 (printed with TLPI No. 1/2024 - flood)) — Table 9.3.2.3.1 PO3/AO3(c)
+- [FIRE_SAFETY] CONSTRUCTION.FIRE_SEPARATION : must hold  [MANUAL_REVIEW]
+    NCC.PT9_2.CLASS10A_FIRE_SEPARATION@2022-05-01 — Class 10a wall within 900 mm of a boundary (not a road) or 1.8 m of another building must be fire-separated construction
+    source: National Construction Code (NCC 2022, adopted Housing Provisions (Volume Two equivalent)) — 9.2.4(1)(a), 9.2.5; 9.2.4(1)(b), 9.2.6
   displaced:
     - QDC12.A3.SITE_COVER@2010-03-26 (None): OVERRIDES by LCC.C.SITE_COVER_LDR_ACREAGE@2025-07-01
     - LCC.C.OUTBUILDING_FLOOR_AREA_150@2025-07-01 (None): RELAXED by LCC.C.LARGE_OUTBUILDING_MAX_300@2025-07-01

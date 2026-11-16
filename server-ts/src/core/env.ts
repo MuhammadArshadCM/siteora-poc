@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 export const ROOT = process.env.SITEORA_ROOT
   ?? path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..", "..", "..");
 export const POC_DIR = path.join(ROOT, "poc");
+export const SOURCES_DIR = path.join(ROOT, "research", "sources");
 
 const ALIASES: Record<string, string> = {
   PG_PASSWORD: "PGPASSWORD", PG_HOST: "PGHOST", PG_PORT: "PGPORT", PG_DATABASE: "PGDATABASE", PG_USER: "PGUSER",

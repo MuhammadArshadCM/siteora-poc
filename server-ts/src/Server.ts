@@ -1,6 +1,7 @@
 import "@tsed/platform-express";
 import { Configuration } from "@tsed/di";
 import { RulesController } from "./controllers/RulesController.js";
+import { AdminController } from "./controllers/AdminController.js";
 
 @Configuration({
   httpPort: Number(process.env.POC_PORT ?? 8766),
@@ -8,7 +9,7 @@ import { RulesController } from "./controllers/RulesController.js";
   disableComponentsScan: true,
   logger: { level: "info", disableRoutesSummary: false },
   mount: {
-    "/": [RulesController],
+    "/": [RulesController, AdminController],
   },
   middlewares: [],
 })

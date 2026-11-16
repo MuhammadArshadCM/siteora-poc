@@ -90,6 +90,7 @@ export async function locate(db: Db, address?: string | null, lon?: number | nul
         : `The mapped lot boundary is accurate only to ±${acc.boundary_accuracy_m} m (State cadastre: ${p.acc_code}). Setbacks measured from it can be out by that much: `
           + "for a site plan, take boundaries from the registered survey plan or an identification survey, especially where the setback is small.");
     Object.assign(loc.parcel, geo.parcelMetrics(p.rings));
+    Object.assign(loc.parcel, geo.battleAxeSignal(p.rings));
     loc.parcel_geometry = p.rings;   // lon/lat rings, for the map
     // Brisbane: draw Council's own outline, as the City Plan map does (the checks above and below still use the State DCDB)
     if (loc.council.lg_id === "BRISBANE" && p.lotplan) {
@@ -101,7 +102,18 @@ export async function locate(db: Db, address?: string | null, lon?: number | nul
     const ring = p.rings.reduce((best, r) => (r.length > best.length ? r : best), p.rings[0]);
     const inner = ring.slice(0, -1);
     points.push([inner.reduce((s, [x]) => s + x, 0) / (ring.length - 1), inner.reduce((s, [, y]) => s + y, 0) / (ring.length - 1)]);
-    if (["SP", "BUP", "GTP"].some((pre) => String(p.plan ?? "").startsWith(pre)) && p.parcel_typ !== "Lot Type Parcel")
+    // DCDB's parcel_typ never distinguishes common property from an ordinary lot -- the whole DCDB vocabulary is
+    // just {Easement, Lot Type Parcel, Road Type Parcel, Transport Route, Unlinked parcel or inter, Watercourse}
+    // (checked live against the service), and common property IS a "Lot Type Parcel" like any other -- so a
+    // parcel_typ check can never fire. Queensland's actual common-property marker is lot number "00000".
+    if (p.lot === "00000")
+      loc.warnings.push("This is the registered COMMON PROPERTY of a community titles scheme (lot \"00000\"), "
+        + "not an individual ground lot — its outline is the whole site shared by every unit, not this unit's own "
+        + "boundary. Lot area/width/depth and any setback measured from it describe the scheme, not this address: "
+        + "siting a Class 10 structure here is a body corporate / Community Management Statement matter, not a "
+        + "standard individual-lot setback assessment — the figures below are left unresolved rather than computed "
+        + "from the wrong site.");
+    else if (["SP", "BUP", "GTP"].some((pre) => String(p.plan ?? "").startsWith(pre)))
       loc.warnings.push("Parcel may be part of a community titles / strata scheme — check which lot the work is on.");
   } catch (e) {
     if (e instanceof LookupError) {
@@ -173,6 +185,30 @@ export async function locate(db: Db, address?: string | null, lon?: number | nul
   return loc;
 }
 
+// `locate()` is the expensive step -- geocoding plus a round trip to every council/state GIS layer (zone, overlays,
+// parcel, PDA, site constraints). None of that changes when a request only differs by a property-specific manual
+// input (e.g. filling in a missing pre-1946 setback and resubmitting): re-running it every time is pure waste on
+// the same (address, date). Cache the resolved location for a couple of minutes -- long enough to cover a
+// lookup-then-fill-in-the-blanks loop, short enough that stale GIS data is never a real concern -- and skip
+// straight to buildFacts()/resolve() on a hit. Keyed on the server process only (an in-memory Map): a fresh CLI
+// invocation always starts cold, which is fine, the benefit is for the long-running server process.
+const LOCATE_CACHE_TTL_MS = 120_000;
+const LOCATE_CACHE_MAX = 500;
+const locateCache = new Map<string, { loc: any; expiresAt: number }>();
+function locateCacheKey(address: string | null | undefined, lon: number | null | undefined, lat: number | null | undefined, date: string): string {
+  return address ? `a:${address.trim().toLowerCase()}|${date}` : `c:${lon}:${lat}|${date}`;
+}
+async function locateCached(db: Db, address: string | null | undefined, lon: number | null | undefined, lat: number | null | undefined, date: string): Promise<any> {
+  if (!address && (lon === null || lon === undefined || lat === null || lat === undefined)) return locate(db, address, lon, lat);
+  const key = locateCacheKey(address, lon, lat, date);
+  const hit = locateCache.get(key);
+  if (hit && hit.expiresAt > Date.now()) return structuredClone(hit.loc);   // caller mutates (e.g. zone override) -- never hand out the stored copy itself
+  const loc = await locate(db, address, lon, lat);
+  if (locateCache.size >= LOCATE_CACHE_MAX) locateCache.delete(locateCache.keys().next().value as string);
+  locateCache.set(key, { loc: structuredClone(loc), expiresAt: Date.now() + LOCATE_CACHE_TTL_MS });
+  return loc;
+}
+
 /** Links a person can open: the exact point query, the layer description, the layer on the ArcGIS Map Viewer. */
 function links(layer: string, lon: number, lat: number) {
   const q = urlencode({ geometry: `${lon},${lat}`, geometryType: "esriGeometryPoint", inSR: geo.SR,
@@ -232,13 +268,22 @@ export async function buildFacts(loc: any, structure: string, inputs: Record<str
     if (value !== null && value !== undefined && value !== "") facts[name] = { value, source };
   };
   const parcel = loc.parcel ?? {};
+  // DCDB lot "00000" is Queensland's placeholder for registered COMMON PROPERTY on a community titles scheme
+  // (Building Units Plan, Group Titles Plan, Standard Format/Volumetric Plan): the whole site's outline, shared
+  // by every unit, not this unit's own ground footprint -- a Building Format Plan unit has no ground footprint
+  // of its own at all. Area/width/depth/shape computed from that outline would describe the SCHEME, not the
+  // addressed unit, so none of it is put into facts here: every area- or shape-gated rule correctly falls to
+  // manual review instead of silently assessing this unit against the wrong site.
+  const isCommonProperty = parcel.lot === "00000";
   const area = parcel.lot_area || null;
-  put("lot_area_m2", area ? area : parcel.computed_area_m2, area ? "Registered lot area (DCDB)" : "Computed from parcel outline");
-  put("lot_width_m", parcel.est_width_m, "ESTIMATED from parcel outline (minimum bounding rectangle)");
-  put("road_frontage_m", parcel.est_width_m, "ESTIMATED: assumed equal to lot width");
-  put("average_lot_depth_m", parcel.est_depth_m, "ESTIMATED from parcel outline");
-  if (parcel.rectangularity !== null && parcel.rectangularity !== undefined)
-    put("lot_is_rectangular_or_near", parcel.rectangularity >= 0.9, `ESTIMATED: rectangularity ${pyStr(parcel.rectangularity)} (>= 0.9)`);
+  if (!isCommonProperty) {
+    put("lot_area_m2", area ? area : parcel.computed_area_m2, area ? "Registered lot area (DCDB)" : "Computed from parcel outline");
+    put("lot_width_m", parcel.est_width_m, "ESTIMATED from parcel outline (minimum bounding rectangle)");
+    put("road_frontage_m", parcel.est_width_m, "ESTIMATED: assumed equal to lot width");
+    put("average_lot_depth_m", parcel.est_depth_m, "ESTIMATED from parcel outline");
+    if (parcel.rectangularity !== null && parcel.rectangularity !== undefined)
+      put("lot_is_rectangular_or_near", parcel.rectangularity >= 0.9, `ESTIMATED: rectangularity ${pyStr(parcel.rectangularity)} (>= 0.9)`);
+  }
   put("in_priority_development_area", Boolean(loc.pda), "Priority Development Areas layer (Queensland Government)");
   for (const [fact, v] of Object.entries(site.factsFrom(loc.site_constraints ?? [])))
     put(fact, v, "Network / constraint map: " + (v ? "mapped on or near the lot" : "nothing mapped on the lot (maps can be incomplete)"));
@@ -289,6 +334,36 @@ export async function buildFacts(loc: any, structure: string, inputs: Record<str
       }
     }
   }
+  // QDC MP 1.1 Table A1 (primary frontage setback) needs the street's functional classification. A user-supplied
+  // answer always wins (e.g. for the councils with no public road-classification source at all -- Ipswich,
+  // Redland, Livingstone, Burke, Central Highlands, South Burnett -- this is the only way to resolve it; it also
+  // lets anyone override a derived guess they know is wrong). "Access place" and "access street" give identical
+  // Table A1 figures, so both normalise to the same fact value.
+  if (inputs.street_type !== null && inputs.street_type !== undefined && inputs.street_type !== "") {
+    const v = String(inputs.street_type).trim().toLowerCase().replace(/[^a-z]+/g, "_");
+    if (v === "collector") put("street_type", "COLLECTOR", "User input");
+    else if (["access", "access_street", "access_place"].includes(v)) put("street_type", "ACCESS_STREET", "User input");
+    else throw new ValueError(`street_type must be 'access' or 'collector' (got ${JSON.stringify(inputs.street_type)})`);
+  }
+  if (loc.council.lg_id in geo.STREET_HIERARCHY_SOURCES && !("street_type" in facts)) {
+    // Each registered council has its own public road-classification source; see geo.STREET_HIERARCHY_SOURCES.
+    try {
+      const streetName = (loc.geocode?.address && geo.streetNameFromAddress(loc.geocode.address)) || await geo.streetNameAt(loc.lon, loc.lat);
+      if (streetName) {
+        const st = await geo.streetHierarchyType(loc.council.lg_id, streetName, loc.lon, loc.lat);
+        const src = geo.STREET_HIERARCHY_SOURCES[loc.council.lg_id];
+        const note = src.confidenceNote ? ` (${src.confidenceNote})` : "";
+        if (st === "COLLECTOR") put("street_type", st, `DERIVED: '${streetName}' is a Collector street on Council's road-hierarchy map${note}`);
+        else if (st === "ACCESS_STREET")
+          put("street_type", st, (src.sparseCollectorOnly
+            ? `DERIVED: '${streetName}' is not on Council's road-hierarchy map (collector-and-above roads only), so an ordinary access place/access street`
+            : `DERIVED: '${streetName}' is an ordinary access place/access street on Council's road-hierarchy map`) + note);
+        // else (Arterial/Sub-Arterial/Motorway/etc., or no match found at all): genuinely unresolved, left for manual review
+      }
+    } catch (e) {
+      loc.warnings.push(unavailable("Council's road-hierarchy lookup", e, "street hierarchy (QDC MP 1.1 Table A1) is not resolved"));
+    }
+  }
   // Assumptions a POC has to make; all are listed in the output
   put("land_is_regulated_land", true, "ASSUMED: lot has (or will have) a dwelling");
   put("in_wind_region_c", false, "ASSUMED: SEQ councils are not in Wind Region C");
@@ -313,8 +388,16 @@ export async function buildFacts(loc: any, structure: string, inputs: Record<str
   if (length && width) {
     put("plan_area_m2", pyRound(length * width, 2), "User input (length x width)");
     put("longest_side_m", Math.max(length, width), "User input");
-    put("btb_length_on_boundary_m", num("btb_length_m") || Math.max(length, width),
-      num("btb_length_m") ? "User input" : "ASSUMED: longest side runs along the boundary");
+    // QDC A2(d): the 9 m limit is the TOTAL of every building or part (of any class, including the existing
+    // house) within the clearance along that boundary -- not just this structure's own footprint. Guessing
+    // "just this structure" when a house wall is also in that clearance could silently understate the true
+    // total and pass a rule that should be manual review, so this is never defaulted from length/width alone:
+    // only "no other building nearby" (a genuine user answer) makes the structure's own footprint a safe value;
+    // otherwise (answered "yes", or left unanswered) the combined total is unknown and stays MANUAL_REVIEW.
+    const btbLenInput = num("btb_length_m");
+    const otherBuildingNearby = yes("other_building_on_boundary");
+    if (btbLenInput) put("btb_length_on_boundary_m", btbLenInput, "User input (combined length of all buildings on this boundary within the clearance, incl. the house)");
+    else if (otherBuildingNearby === false) put("btb_length_on_boundary_m", Math.max(length, width), "User input: no other building within the clearance on this boundary");
     put("btb_max_single_part_length_m", Math.max(length, width), "User input");
     put("total_outbuilding_floor_area_m2", pyRound((num("existing_outbuildings_m2") || 0) + length * width, 2),
       "User input (this structure + existing outbuildings)");
@@ -323,13 +406,22 @@ export async function buildFacts(loc: any, structure: string, inputs: Record<str
   for (const k of ["is_roofed", "is_enclosed", "is_attached_to_dwelling"]) put(k, yes(k), "User input");
   let v = yes("in_front_of_main_building_line");
   put("in_front_of_main_building_line", Boolean(v), v !== null ? "User input" : "ASSUMED: behind the main building line of the house");
-  // Not available from public data in this POC: default to "no" and say so
-  for (const [k, what] of [["is_corner_lot", "a corner lot"], ["adjoins_canal_or_lake", "next to a canal or lake"],
+  // Not available from public data in this POC: default to "no" and say so. Only for facts where assuming "no" is
+  // itself conservative (never understates a setback/height limit) -- is_corner_lot affects which boundaries get
+  // assessed at all, not a clearance figure; has_secondary_dwelling / collector-road gate extra obligations that
+  // only apply when true, so assuming false just means "treated like the common case", same direction as every
+  // other default below.
+  for (const [k, what] of [["is_corner_lot", "a corner lot"],
     ["has_secondary_dwelling", "a secondary dwelling on the lot"],
     ["south_burnett_road_is_collector_or_higher", "fronting a collector or higher order road"]]) {
     v = yes(k);
     put(k, Boolean(v), v !== null ? "User input" : `ASSUMED: not ${what} (not checked)`);
   }
+  // Canal/lake frontage (Redland, Sunshine Coast): that clearance is LARGER than the general setback, so assuming
+  // "no" here is not conservative -- it would understate the real requirement for a lot that actually is
+  // waterfront, the same reasoning as is_battle_axe_lot above. No default: unanswered, stays manual review.
+  v = yes("adjoins_canal_or_lake");
+  if (v !== null) put("adjoins_canal_or_lake", v, "User input");
   // Whether the dwelling house is accepted development (most lots) or requires a planning application - drives
   // several councils' zone/use-code setbacks (e.g. Toowoomba, Rockhampton, South Burnett), which only reach
   // Class 10 building work through code assessment. Previously hardcoded false with no way to answer "yes", which
@@ -341,9 +433,32 @@ export async function buildFacts(loc: any, structure: string, inputs: Record<str
   // subdivision approval. Not in public data, so no default: unanswered, those rules go to manual review.
   v = yes("lot_from_residential_subdivision");
   if (v !== null) put("lot_from_residential_subdivision", v, "User input");
+  // Battle-axe/rear lot: a user answer always wins. Otherwise, pre-fill from the parcel-shape heuristic
+  // (handle+body profile -- see geo.battleAxeSignal) when it reaches a view either way, but keep the "no
+  // default" rule unanswered when the shape is inconclusive: several councils (e.g. Gold Coast) require a
+  // LARGER setback on a rear lot than the general low-density figure, so an unexamined false here is not
+  // conservative -- it would understate the real requirement, not just leave it at manual review.
+  v = yes("is_battle_axe_lot");
+  if (v !== null) put("is_battle_axe_lot", v, "User input");
+  else if (!isCommonProperty && parcel.likely_battle_axe !== null && parcel.likely_battle_axe !== undefined)
+    put("is_battle_axe_lot", parcel.likely_battle_axe,
+      `ESTIMATED from parcel shape (handle ~${pyStr(parcel.handle_width_m)} m vs body ~${pyStr(parcel.body_width_m)} m wide) -- confirm against the actual driveway/access`);
   if (num("lot_slope_pct") !== null) put("lot_slope_pct", num("lot_slope_pct"), "User input");
   else put("lot_slope_pct", 0, "ASSUMED: flat lot (height limits rise on slopes over 15 %; enter the slope if steep)");
+  // Logan Table 9.3.2.3.1 AO4(a): a carport may be built to the front boundary if it stays within 6m x 6m, 3.5m
+  // high, and is "entirely unenclosed except where the rear attaches to a structure" -- not the same test as the
+  // generic is_enclosed checkbox (used elsewhere for ornamental-pergola exemptions): a carport with its rear wall
+  // against the house legitimately has a wall on one side and would read "enclosed" there, but AO4(a) explicitly
+  // still counts that as qualifying. No default: this swaps a full zone-based road setback (e.g. 10m in an
+  // acreage precinct) for a built-to-boundary allowance, so it is never guessed from is_enclosed or anything else.
+  v = yes("carport_is_unenclosed");
+  if (v !== null) put("carport_is_unenclosed", v, "User input");
   put("distance_to_adjoining_habitable_window_m", num("window_distance_m"), "User input");
+  // Not automatable (BCC.C.TBC_FRONT_SETBACK_AVERAGE, City Plan 2014 8.2.22.3 AO1.2): needs the average front
+  // setback of the nearest pre-1946 houses on the same street, which requires a site/aerial-photo determination
+  // (Council's own "determining the construction date of a building" practice note exists for exactly this reason).
+  // Only resolvable from a user-supplied figure once that determination has been made.
+  put("pre1946_neighbour_avg_front_setback_m", num("pre1946_setback_m"), "User input");
   // Not available from public data in this POC (which lot has an existing detached dwelling, and its road setback):
   // optional "neighbour road setback" inputs. Not in public data, so no default when left blank (as for
   // lot_from_residential_subdivision above) — unanswered, the rules that need it stay manual review, same as today.
@@ -366,8 +481,14 @@ export async function buildFacts(loc: any, structure: string, inputs: Record<str
   if (structure.startsWith("POOL")) {
     put("pool_capable_depth_m", 1.5, "ASSUMED: pool holds 300 mm or more");
     put("pool_is_indoor", false, "ASSUMED: outdoor pool");
-    put("solid_wall_between_pool_and_boundary_height_m", 0, "ASSUMED: no solid wall between pool and boundary");
-    put("solid_wall_top_above_coping_m", 0, "ASSUMED");
+    // QDC A2(e): a pool may come within the side/rear clearance (down to 0 m) behind a solid wall/fence >= 1.8 m
+    // high whose top sits >= 1.0 m above the pool coping. Optional, no default (same reasoning as the neighbour
+    // window distance above): guessing "no wall" would be conservative for THIS rule alone, but silently forecloses
+    // a relaxation the user never got asked about, so it is left unknown when blank -- the base 1.5 m requirement
+    // (A2a.POOL_SIDE_REAR, keyed only on height) still resolves independently either way; this relaxation just
+    // stays MANUAL_REVIEW/conditional until answered, same pattern as every other optional relaxation input here.
+    put("solid_wall_between_pool_and_boundary_height_m", num("pool_wall_height_m"), "User input");
+    put("solid_wall_top_above_coping_m", num("pool_wall_top_above_coping_m"), "User input");
     put("solid_fence_above_pool_deck_m", 0, "ASSUMED");
   }
   if (structure === "POOL_FENCE") {
@@ -383,8 +504,11 @@ export async function buildFacts(loc: any, structure: string, inputs: Record<str
 }
 
 export function boundaries(facts: FactMap) {
-  const b = [{ boundary_type: "PRIMARY_FRONTAGE" }, { boundary_type: "SIDE" }, { boundary_type: "REAR" }];
-  if (facts.is_corner_lot?.value) b.splice(1, 0, { boundary_type: "SECONDARY_FRONTAGE_ROAD" });
+  // is_nominated_road_frontage (QDC12.A1b.CORNER_NOMINATED_FRONTAGE) asks the same primary-vs-secondary-frontage
+  // question every other A1 rule already answers via boundary_type -- PRIMARY_FRONTAGE is the nominated frontage,
+  // SECONDARY_FRONTAGE_ROAD is the corner lot's other road frontage, same as everywhere else in this rule set.
+  const b = [{ boundary_type: "PRIMARY_FRONTAGE", is_nominated_road_frontage: true }, { boundary_type: "SIDE" }, { boundary_type: "REAR" }];
+  if (facts.is_corner_lot?.value) b.splice(1, 0, { boundary_type: "SECONDARY_FRONTAGE_ROAD", is_nominated_road_frontage: false });
   return b;
 }
 
@@ -496,7 +620,7 @@ export async function run(db: Db, structure: string, inputs: Record<string, any>
   if (!(structure in STRUCTURES)) throw new ValueError(`structure must be one of ${pyStr(Object.keys(STRUCTURES).sort())}`);
   const date = o.assessmentDate || today();
   const scope = o.scope ?? "all";
-  const loc = await locate(db, o.address, o.lon, o.lat);
+  const loc = await locateCached(db, o.address, o.lon, o.lat, date);
   if (o.zoneId) {   // manual override / no map service
     if (!loc.available_zones.some((z: any) => z.zone_id === o.zoneId))
       throw new ValueError(`Zone ${o.zoneId} is not a zone of ${loc.council.lga_name}. Valid: ${loc.available_zones.map((z: any) => z.zone_id).join(", ")}`);
@@ -540,9 +664,24 @@ export async function run(db: Db, structure: string, inputs: Record<string, any>
   const triggers = loaded.rules.filter((r) => r.role === "TRIGGER" && r.regime === "PLANNING" && loaded.activeIvs.has(r.instrument_version_id)
     && evaluate.scopeMatches(r, siteDef) && evaluate.subjectMatches(r, structure, loaded.parents))
     .map((r) => `Planning approval: ${r.title} (${r.rule_version_id}). ${r.interpretation_notes ?? ""}`.trim());
+  // Aggregate confidence signal, surfaced once up front rather than making the user count MANUAL_REVIEW
+  // tags row by row: how much of what's shown is a clean computed number vs a reminder needing manual
+  // interpretation. Over `live` as shown (not re-weighted by primary/subsumed/etc.) — deliberately simple
+  // and honest about overall composition rather than a legal judgement on which rows matter most.
+  const manualReview = live.filter((r) => r.state === "MANUAL_REVIEW").length;
+  const confidence = live.length ? {
+    total_rules: live.length,
+    determined: live.length - manualReview,
+    manual_review: manualReview,
+    manual_review_pct: pyRound((manualReview / live.length) * 100, 1),
+    summary: manualReview === 0
+      ? `All ${live.length} applicable rule(s) are fully computed.`
+      : `${manualReview} of ${live.length} applicable rule(s) (${pyRound((manualReview / live.length) * 100, 1)}%) require manual review — not fully automated.`,
+  } : null;
   return {
     scope,
     assessment_date: date,
+    confidence,
     structure: { type: structure, label: STRUCTURES[structure] },
     location: Object.fromEntries(LOCATION_FIELDS.filter((k) => k in loc).map((k) => [k, loc[k]])),
     scheme_viewer: zoning.loadConfig()[loc.council.lg_id]?.scheme_viewer ?? null,

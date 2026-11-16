@@ -1,0 +1,3493 @@
+{
+ "source": "Townsville City Plan, Schedule 7 - Places of cultural heritage value, Version 2025/01, Table SC7.1.1",
+ "source_url": "https://tccplanningscheme.z8.web.core.windows.net/current/Schedule%207%20Places%20of%20cultural%20heritage%20value.pdf",
+ "purpose": "Townsville does not publish its Heritage overlay (or the Pre-1911 building overlay) as a queryable ArcGIS feature service (only Bushfire/zoning/sewer/water are queryable - see poc/site_layers.json and poc/zoning_layers.json TOWNSVILLE notes). Schedule 7 is a CURRENT (not superseded) scheme table that lists every local- and state-listed heritage place by lot/plan, street address and place name, giving a usable text-schedule alternative to a missing overlay layer - same technique as Livingstone Schedule 3 and Burke Schedule 5.",
+ "extraction_method": "PyMuPDF word-level extraction with tolerance-based line clustering (tol=1.5) and fixed column X-bands over the table's 5 columns (Property number / Lot on plan / Street address / Place name / Listing). 283 of 283 rows extracted; 19 rows (6.7%) were corrupted by column-boundary drift between sub-table blocks (street-number digits bleeding into the lot/plan column), detected via a POSTCODE_RE regex quality gate and hand-corrected by visually reading zoomed crops of the specific source pages (1, 5, 13, 16, 17). Final dataset: 283 records, 0 remaining quality-gate failures.",
+ "cadastre_match_method": "Each record's lot/plan text field (which may list multiple lot/plans per property, e.g. a building spanning several lots) was parsed into individual lotplan candidates via regex, then queried one at a time against the state cadastre (PlanningCadastre/LandParcelPropertyFramework/MapServer/4) until the first one resolved to a real parcel; that parcel is used to represent the whole property. 257 of 283 records (90.8%) resolved to a real cadastre parcel. The 26 unresolved are mostly Community Title / Building Units Plan common-property lots (\"CP\" lot number - a legal/registration construct with no independent cadastre polygon), a National Park (NPW) parcel, and a handful of plan-type prefixes (GTP - Group Titles Plan) not present in this cadastre layer - expected limitations, not extraction errors.",
+ "caveat": "A hit (within 50m of one of the 257 matched lot/plans) is a reliable positive signal that the property is Schedule 7-listed (Local or State). A miss is NOT conclusive proof a property is unlisted - it may be one of the 26 unresolved records, or a transcription/matching gap. Always treat this as a supplementary heads-up, not an authoritative substitute for checking Schedule 7 directly for a specific address. The Listing column (Local/State) is preserved per-record but not currently exposed as a separate fact - all 257 matched places are surfaced under one generic 'near a Schedule 7 heritage place' site-constraint hit.",
+ "records": [
+  {
+   "page": 0,
+   "property_number": "171510",
+   "lotplan": "1 RP 727464",
+   "street": "98-100 Charlotte Street, Aitkenvale 4814",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP727464"
+   ],
+   "resolved_lotplan": "1RP727464"
+  },
+  {
+   "page": 0,
+   "property_number": "176950",
+   "lotplan": "169 RP 703537, 170 RP 703537, 171 RP 703537",
+   "street": "5 Sabadine Street, Aitkenvale 4814",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "169RP703537",
+    "170RP703537",
+    "171RP703537"
+   ],
+   "resolved_lotplan": "169RP703537"
+  },
+  {
+   "page": 0,
+   "property_number": "249020",
+   "lotplan": "456 NPW 22485",
+   "street": "0 Armand Way, Arcadia 4819",
+   "placename": "Fort Complex, Magnetic Island",
+   "listing": "State",
+   "lotplan_candidates": [
+    "456NPW22485"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 0,
+   "property_number": "249270",
+   "lotplan": "160 EP 708",
+   "street": "31 Hayles Avenue, Arcadia 4819",
+   "placename": "RSL",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "160EP708"
+   ],
+   "resolved_lotplan": "160EP708"
+  },
+  {
+   "page": 0,
+   "property_number": "249430",
+   "lotplan": "97 RP 706831",
+   "street": "36 Hayles Avenue, Arcadia 4819",
+   "placename": "Dell-Orana",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "97RP706831"
+   ],
+   "resolved_lotplan": "97RP706831"
+  },
+  {
+   "page": 0,
+   "property_number": "249960",
+   "lotplan": "16 RP 706831",
+   "street": "27 Marine Parade, Arcadia 4819",
+   "placename": "Centaur House (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "16RP706831"
+   ],
+   "resolved_lotplan": "16RP706831"
+  },
+  {
+   "page": 0,
+   "property_number": "551181",
+   "lotplan": "2 SP 278231",
+   "street": "8 Marine Parade, Arcadia 4819",
+   "placename": "Hayles House (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2SP278231"
+   ],
+   "resolved_lotplan": "2SP278231"
+  },
+  {
+   "page": 0,
+   "property_number": "27750",
+   "lotplan": "3 RP 712293",
+   "street": "29 Evans Street, Belgian Gardens 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "3RP712293"
+   ],
+   "resolved_lotplan": "3RP712293"
+  },
+  {
+   "page": 0,
+   "property_number": "30080",
+   "lotplan": "1 RP 748513",
+   "street": "142 Bundock Street, Belgian Gardens 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP748513"
+   ],
+   "resolved_lotplan": "1RP748513"
+  },
+  {
+   "page": 0,
+   "property_number": "33100",
+   "lotplan": "32 RP 729858",
+   "street": "13 St James Drive, Belgian Gardens 4810",
+   "placename": "Bishop's Lodge",
+   "listing": "State",
+   "lotplan_candidates": [
+    "32RP729858"
+   ],
+   "resolved_lotplan": "32RP729858"
+  },
+  {
+   "page": 0,
+   "property_number": "347088",
+   "lotplan": "11 USL 50631, 87 USL 50632,",
+   "street": "0 Potts Street, Belgian Gardens 4810",
+   "placename": "Castle Hill",
+   "listing": "State",
+   "lotplan_candidates": [
+    "11USL50631",
+    "87USL50632"
+   ],
+   "resolved_lotplan": "11USL50631"
+  },
+  {
+   "page": 0,
+   "property_number": "24690",
+   "lotplan": "257 EP 513",
+   "street": "0 Castle Hill Road, Castle Hill 4810",
+   "placename": "Castle Hill",
+   "listing": "State",
+   "lotplan_candidates": [
+    "257EP513"
+   ],
+   "resolved_lotplan": "257EP513"
+  },
+  {
+   "page": 0,
+   "property_number": "24700",
+   "lotplan": "156 EP 2335",
+   "street": "265 Castle Hill Road, Castle Hill 4810",
+   "placename": "Castle Hill",
+   "listing": "State",
+   "lotplan_candidates": [
+    "156EP2335"
+   ],
+   "resolved_lotplan": "156EP2335"
+  },
+  {
+   "page": 0,
+   "property_number": "24710",
+   "lotplan": "264 EP 543",
+   "street": "0 Castle Hill Road, Castle Hill 4810",
+   "placename": "Castle Hill",
+   "listing": "State",
+   "lotplan_candidates": [
+    "264EP543"
+   ],
+   "resolved_lotplan": "264EP543"
+  },
+  {
+   "page": 0,
+   "property_number": "24730",
+   "lotplan": "409 EP 996",
+   "street": "84 Castle Hill Road, Castle Hill 4810",
+   "placename": "Castle Hill",
+   "listing": "State",
+   "lotplan_candidates": [
+    "409EP996"
+   ],
+   "resolved_lotplan": "409EP996"
+  },
+  {
+   "page": 0,
+   "property_number": "24740",
+   "lotplan": "788 CP 855219 460 CP 854058",
+   "street": "10 Castle Hill Road, Castle Hill 4810",
+   "placename": "Castle Hill",
+   "listing": "State",
+   "lotplan_candidates": [
+    "788CP855219",
+    "460CP854058"
+   ],
+   "resolved_lotplan": "788CP855219"
+  },
+  {
+   "page": 1,
+   "property_number": "361608",
+   "lotplan": "IAP9206",
+   "street": "468 Meehan Road, Cape Cleveland 4810",
+   "placename": "Cape Cleveland Lightstation",
+   "listing": "State",
+   "lotplan_candidates": [],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 1,
+   "property_number": "2100",
+   "lotplan": "15 T 118173 12 T 118144",
+   "street": "16 Wickham Street, 4810",
+   "placename": "Customs House (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "15T118173",
+    "12T118144"
+   ],
+   "resolved_lotplan": "15T118173"
+  },
+  {
+   "page": 1,
+   "property_number": "2110",
+   "lotplan": "10 T 118248",
+   "street": "12-14 Wickham Street, 4810",
+   "placename": "State Government Offices",
+   "listing": "State",
+   "lotplan_candidates": [
+    "10T118248"
+   ],
+   "resolved_lotplan": "10T118248"
+  },
+  {
+   "page": 1,
+   "property_number": "556395",
+   "lotplan": "1 SP 332266",
+   "street": "108 Flinders Street, 4810",
+   "placename": "Burns Philp & Company Ltd Building (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1SP332266"
+   ],
+   "resolved_lotplan": "1SP332266"
+  },
+  {
+   "page": 1,
+   "property_number": "2170",
+   "lotplan": "2 RP 701607",
+   "street": "247 Flinders Street, 4810",
+   "placename": "Samuel Allen & Sons Building (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "2RP701607"
+   ],
+   "resolved_lotplan": "2RP701607"
+  },
+  {
+   "page": 1,
+   "property_number": "2180",
+   "lotplan": "2 RP 702069, 2 RP 701585, 1 RP 711511",
+   "street": "87-95 Flinders Street, 4810",
+   "placename": "Tattersalls Hotel (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "2RP702069",
+    "2RP701585",
+    "1RP711511"
+   ],
+   "resolved_lotplan": "2RP702069"
+  },
+  {
+   "page": 1,
+   "property_number": "2190",
+   "lotplan": "1 RP 716793, 2 RP 716793",
+   "street": "101-111 Flinders Street, 4810",
+   "placename": "Bank NSW, and AMIEU (QLD Branch) (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP716793",
+    "2RP716793"
+   ],
+   "resolved_lotplan": "1RP716793"
+  },
+  {
+   "page": 1,
+   "property_number": "2220",
+   "lotplan": "2 SP 172356",
+   "street": "129-135 Flinders Street, 4810",
+   "placename": "Commercial Hotel (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2SP172356"
+   ],
+   "resolved_lotplan": "2SP172356"
+  },
+  {
+   "page": 1,
+   "property_number": "2240",
+   "lotplan": "1 RP 701590",
+   "street": "143-149 Flinders Street, 4810",
+   "placename": "Magnetic House",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP701590"
+   ],
+   "resolved_lotplan": "1RP701590"
+  },
+  {
+   "page": 1,
+   "property_number": "2250",
+   "lotplan": "327 SP 171614 1 AP 13623",
+   "street": "151-157 Flinders Street, 4810",
+   "placename": "Exchange Hotel",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "327SP171614",
+    "1AP13623"
+   ],
+   "resolved_lotplan": "327SP171614"
+  },
+  {
+   "page": 1,
+   "property_number": "2270",
+   "lotplan": "325 T 1185",
+   "street": "167-173 Flinders Street, 4810",
+   "placename": "Australian Joint Stock Bank (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "325T1185"
+   ],
+   "resolved_lotplan": "325T1185"
+  },
+  {
+   "page": 1,
+   "property_number": "557314",
+   "lotplan": "1 RP 716252, 4 RP 716252, 3 RP 701624",
+   "street": "175-179 Flinders Street, 4810",
+   "placename": "Queens Building",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP716252",
+    "4RP716252",
+    "3RP701624"
+   ],
+   "resolved_lotplan": "1RP716252"
+  },
+  {
+   "page": 1,
+   "property_number": "2290",
+   "lotplan": "2 RP 701623, 2 RP 716252, 3 RP 716252",
+   "street": "181-183 Flinders Street, 4810",
+   "placename": "Atkinson & Powell Building (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "2RP701623",
+    "2RP716252",
+    "3RP716252"
+   ],
+   "resolved_lotplan": "2RP701623"
+  },
+  {
+   "page": 2,
+   "property_number": "2310",
+   "lotplan": "CP SP 162432",
+   "street": "193-195 Flinders Street, 4810",
+   "placename": "T. Willmetts & Sons printery and stationery warehouse (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "CPSP162432"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 2,
+   "property_number": "2320",
+   "lotplan": "322 T 1185",
+   "street": "197-203 Flinders Street, 4810",
+   "placename": "Stanton House",
+   "listing": "State",
+   "lotplan_candidates": [
+    "322T1185"
+   ],
+   "resolved_lotplan": "322T1185"
+  },
+  {
+   "page": 2,
+   "property_number": "3840",
+   "lotplan": "CP GTP 70037",
+   "street": "205-207 Flinders Street, 4810",
+   "placename": "Commercial Banking Company Sydney (former)",
+   "listing": "",
+   "lotplan_candidates": [
+    "CPGTP70037"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 2,
+   "property_number": "2350",
+   "lotplan": "1 RP 701615",
+   "street": "221-223 Flinders Street, 4810",
+   "placename": "Clayton's Apothecaries Hall (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP701615"
+   ],
+   "resolved_lotplan": "1RP701615"
+  },
+  {
+   "page": 2,
+   "property_number": "2400",
+   "lotplan": "CP SP 125906",
+   "street": "241-245 Flinders Street, 4810",
+   "placename": "Rooney Building",
+   "listing": "State",
+   "lotplan_candidates": [
+    "CPSP125906"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 2,
+   "property_number": "2420",
+   "lotplan": "1 RP 701658",
+   "street": "253-259 Flinders Street, 4810",
+   "placename": "Perc Tucker Regional Gallery",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP701658"
+   ],
+   "resolved_lotplan": "1RP701658"
+  },
+  {
+   "page": 2,
+   "property_number": "2450",
+   "lotplan": "1 RP 701662, 2 RP 701662",
+   "street": "269-275 Flinders Street, 4810",
+   "placename": "W. H. Green Building (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP701662",
+    "2RP701662"
+   ],
+   "resolved_lotplan": "1RP701662"
+  },
+  {
+   "page": 2,
+   "property_number": "2490",
+   "lotplan": "3 RP 701665",
+   "street": "287-289 Flinders Street, 4810",
+   "placename": "Willmett's Stationery Shop (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "3RP701665"
+   ],
+   "resolved_lotplan": "3RP701665"
+  },
+  {
+   "page": 2,
+   "property_number": "2500",
+   "lotplan": "2 RP 707340",
+   "street": "291-293 Flinders Street, 4810",
+   "placename": "Kodak Building (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP707340"
+   ],
+   "resolved_lotplan": "2RP707340"
+  },
+  {
+   "page": 2,
+   "property_number": "2510",
+   "lotplan": "16 RP 707412",
+   "street": "295-303 Flinders Street, 4810",
+   "placename": "Queensland National Bank (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "16RP707412"
+   ],
+   "resolved_lotplan": "16RP707412"
+  },
+  {
+   "page": 2,
+   "property_number": "2540",
+   "lotplan": "171 T 1181",
+   "street": "337-343 Flinders Street, 4810",
+   "placename": "Westpac Bank (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "171T1181"
+   ],
+   "resolved_lotplan": "171T1181"
+  },
+  {
+   "page": 2,
+   "property_number": "2650",
+   "lotplan": "CP SP 141326",
+   "street": "419-433 Flinders Street, 4810",
+   "placename": "State Government Offices (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "CPSP141326"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 2,
+   "property_number": "2790",
+   "lotplan": "1 RP 708141, 2 RP 701742",
+   "street": "495-499 Flinders Street, 4810",
+   "placename": "Newmarket Hotel",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP708141",
+    "2RP701742"
+   ],
+   "resolved_lotplan": "1RP708141"
+  },
+  {
+   "page": 2,
+   "property_number": "3020",
+   "lotplan": "1 SP 229803",
+   "street": "719-741 Flinders Street, 4810",
+   "placename": "Lion Brewery (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1SP229803"
+   ],
+   "resolved_lotplan": "1SP229803"
+  },
+  {
+   "page": 2,
+   "property_number": "3030",
+   "lotplan": "1 RP 739077",
+   "street": "743-765 Flinders Street, 4810",
+   "placename": "Mansfield Hotel",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP739077"
+   ],
+   "resolved_lotplan": "1RP739077"
+  },
+  {
+   "page": 2,
+   "property_number": "3070",
+   "lotplan": "1 RP 701861, 320 T 11823",
+   "street": "807-813 Flinders Street, 4810",
+   "placename": "Sovereign Hotel",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP701861",
+    "320T11823"
+   ],
+   "resolved_lotplan": "1RP701861"
+  },
+  {
+   "page": 2,
+   "property_number": "7930",
+   "lotplan": "2 RP 701898",
+   "street": "8 Murray Street, 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP701898"
+   ],
+   "resolved_lotplan": "2RP701898"
+  },
+  {
+   "page": 2,
+   "property_number": "3190",
+   "lotplan": "103 SP 253492",
+   "street": "502 Flinders Street, 4810",
+   "placename": "Railway Station and North Yards Railway Workshops",
+   "listing": "State",
+   "lotplan_candidates": [
+    "103SP253492"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 3,
+   "property_number": "544267",
+   "lotplan": "1 SP 253510",
+   "street": "538 Flinders Street, 4810",
+   "placename": "Railway Station and North Yards Railway Workshops",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1SP253510"
+   ],
+   "resolved_lotplan": "1SP253510"
+  },
+  {
+   "page": 3,
+   "property_number": "544268",
+   "lotplan": "CP SP 253511",
+   "street": "5 Kingsway Place, 4810",
+   "placename": "Railway Station and North Yards Railway Workshops",
+   "listing": "State",
+   "lotplan_candidates": [
+    "CPSP253511"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 3,
+   "property_number": "552447",
+   "lotplan": "102 SP 299511",
+   "street": "534 Flinders Street, 4810",
+   "placename": "Railway Station and North Yards Railway Workshops",
+   "listing": "State",
+   "lotplan_candidates": [
+    "102SP299511"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 3,
+   "property_number": "547783",
+   "lotplan": "3 SP 253510",
+   "street": "546 Flinders Street, 4810",
+   "placename": "Railway Station and North Yards Railway Workshops",
+   "listing": "State",
+   "lotplan_candidates": [
+    "3SP253510"
+   ],
+   "resolved_lotplan": "3SP253510"
+  },
+  {
+   "page": 3,
+   "property_number": "547558",
+   "lotplan": "3 SP 253509",
+   "street": "2 Aplin Street, 4810",
+   "placename": "Railway Station and North Yards Railway Workshops",
+   "listing": "State",
+   "lotplan_candidates": [
+    "3SP253509"
+   ],
+   "resolved_lotplan": "3SP253509"
+  },
+  {
+   "page": 3,
+   "property_number": "502628",
+   "lotplan": "1 SP 253509",
+   "street": "10 Kingsway Place, 4810",
+   "placename": "Railway Station and North Yards Railway Workshops",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1SP253509"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 3,
+   "property_number": "3220",
+   "lotplan": "181 T 1181, 182 T 1181",
+   "street": "486-500 Flinders Street, 4810",
+   "placename": "Great Northern Hotel",
+   "listing": "State",
+   "lotplan_candidates": [
+    "181T1181",
+    "182T1181"
+   ],
+   "resolved_lotplan": "181T1181"
+  },
+  {
+   "page": 3,
+   "property_number": "3340",
+   "lotplan": "31 T 11860",
+   "street": "416-418 Flinders Street, 4810",
+   "placename": "Australian Mutual Provident Society Building (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "31T11860"
+   ],
+   "resolved_lotplan": "31T11860"
+  },
+  {
+   "page": 3,
+   "property_number": "3360",
+   "lotplan": "33 T 11860",
+   "street": "408-410 Flinders Street, 4810",
+   "placename": "Henlein & Co. (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "33T11860"
+   ],
+   "resolved_lotplan": "33T11860"
+  },
+  {
+   "page": 3,
+   "property_number": "3480",
+   "lotplan": "2 RP 707272, 20 RP 707272",
+   "street": "336-344 Flinders Street, 4810",
+   "placename": "Commercial Banking Company Sydney (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP707272",
+    "20RP707272"
+   ],
+   "resolved_lotplan": "2RP707272"
+  },
+  {
+   "page": 3,
+   "property_number": "3520",
+   "lotplan": "6 T 118212",
+   "street": "272-278 Flinders Street, 4810",
+   "placename": "Commonwealth Bank Australia (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "6T118212"
+   ],
+   "resolved_lotplan": "6T118212"
+  },
+  {
+   "page": 3,
+   "property_number": "3530",
+   "lotplan": "1 RP 735183",
+   "street": "252-270 Flinders Street, 4810",
+   "placename": "Post Office (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP735183"
+   ],
+   "resolved_lotplan": "1RP735183"
+  },
+  {
+   "page": 3,
+   "property_number": "3540",
+   "lotplan": "12 T 118573",
+   "street": "232-234 Flinders Street, 4810",
+   "placename": "Aplin Brown & Company Building (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "12T118573"
+   ],
+   "resolved_lotplan": "12T118573"
+  },
+  {
+   "page": 3,
+   "property_number": "3550",
+   "lotplan": "2 RP 701523, 3 RP 701523",
+   "street": "228-230 Flinders Street, 4810",
+   "placename": "Adelaide Steamship Co. (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP701523",
+    "3RP701523"
+   ],
+   "resolved_lotplan": "2RP701523"
+  },
+  {
+   "page": 3,
+   "property_number": "3560",
+   "lotplan": "4 RP 701523, 5 RP 701523",
+   "street": "224-226 Flinders Street, 4810",
+   "placename": "Agora House",
+   "listing": "State",
+   "lotplan_candidates": [
+    "4RP701523",
+    "5RP701523"
+   ],
+   "resolved_lotplan": "4RP701523"
+  },
+  {
+   "page": 4,
+   "property_number": "3840",
+   "lotplan": "CP GTP 70037",
+   "street": "205-207 Flinders Street, 4810",
+   "placename": "Commercial Banking Company Sydney (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "CPGTP70037"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 4,
+   "property_number": "3930",
+   "lotplan": "1 RP 701816",
+   "street": "11 Melton Terrace, 4810",
+   "placename": "Melton Lodge Flats (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP701816"
+   ],
+   "resolved_lotplan": "1RP701816"
+  },
+  {
+   "page": 4,
+   "property_number": "3940",
+   "lotplan": "2 RP 701818",
+   "street": "13 Melton Terrace, 4810",
+   "placename": "Biralee Flats (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP701818"
+   ],
+   "resolved_lotplan": "2RP701818"
+  },
+  {
+   "page": 4,
+   "property_number": "4040",
+   "lotplan": "2 RP 716527",
+   "street": "35-39 Sturt Street, 4810",
+   "placename": "Osler House",
+   "listing": "State",
+   "lotplan_candidates": [
+    "2RP716527"
+   ],
+   "resolved_lotplan": "2RP716527"
+  },
+  {
+   "page": 4,
+   "property_number": "4080",
+   "lotplan": "453 EP 1600 3 RP 701686 4 RP 701686",
+   "street": "81-99 Sturt Street, 4810",
+   "placename": "Magistrates Court (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "453EP1600",
+    "3RP701686",
+    "4RP701686"
+   ],
+   "resolved_lotplan": "453EP1600"
+  },
+  {
+   "page": 4,
+   "property_number": "4400",
+   "lotplan": "1 RP 718874",
+   "street": "485-493 Sturt Street, 4810",
+   "placename": "Choral & Orchestral Society Building",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP718874"
+   ],
+   "resolved_lotplan": "1RP718874"
+  },
+  {
+   "page": 4,
+   "property_number": "4420",
+   "lotplan": "1 RP 865807",
+   "street": "513 Sturt Street, 4810",
+   "placename": "Potters House",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP865807"
+   ],
+   "resolved_lotplan": "1RP865807"
+  },
+  {
+   "page": 4,
+   "property_number": "4540",
+   "lotplan": "304 T 11823, 319 T 11823",
+   "street": "654-662 Sturt Street, 4810",
+   "placename": "Saint Theodore's Greek Orthodox Church",
+   "listing": "State",
+   "lotplan_candidates": [
+    "304T11823",
+    "319T11823"
+   ],
+   "resolved_lotplan": "304T11823"
+  },
+  {
+   "page": 4,
+   "property_number": "4730",
+   "lotplan": "23 SP 314313",
+   "street": "246-254 Sturt Street, 4810",
+   "placename": "Sturt Shops",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "23SP314313"
+   ],
+   "resolved_lotplan": "23SP314313"
+  },
+  {
+   "page": 4,
+   "property_number": "4760",
+   "lotplan": "1 RP 701648, 2 RP 701648",
+   "street": "42-50 Sturt Street, 4810",
+   "placename": "Commonwealth Offices",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP701648",
+    "2RP701648"
+   ],
+   "resolved_lotplan": "1RP701648"
+  },
+  {
+   "page": 4,
+   "property_number": "4880",
+   "lotplan": "716 T 118501",
+   "street": "31-69 Walker Street, 4810",
+   "placename": "Courts Building",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "716T118501"
+   ],
+   "resolved_lotplan": "716T118501"
+  },
+  {
+   "page": 4,
+   "property_number": "4900",
+   "lotplan": "1 RP 744965, 2 RP 744965, 1 RP 701696, 2 RP 701696, 3 RP 701696, 12 T 11817, 137 T 1181, 140 T 1181",
+   "street": "103-141 Walker Street, 4810",
+   "placename": "Administration Building",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP744965",
+    "2RP744965",
+    "1RP701696",
+    "2RP701696",
+    "3RP701696",
+    "12T11817",
+    "137T1181",
+    "140T1181"
+   ],
+   "resolved_lotplan": "1RP744965"
+  },
+  {
+   "page": 4,
+   "property_number": "4920",
+   "lotplan": "5 SP 263496",
+   "street": "215 Walker Street, 4810",
+   "placename": "Technical College (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "5SP263496"
+   ],
+   "resolved_lotplan": "5SP263496"
+  },
+  {
+   "page": 4,
+   "property_number": "5260",
+   "lotplan": "203 T 11823",
+   "street": "412 Walker Street, 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "203T11823"
+   ],
+   "resolved_lotplan": "203T11823"
+  },
+  {
+   "page": 4,
+   "property_number": "5500",
+   "lotplan": "104 T 1181",
+   "street": "42-50 Walker Street, 4810",
+   "placename": "Masonic Temple",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "104T1181"
+   ],
+   "resolved_lotplan": "104T1181"
+  },
+  {
+   "page": 4,
+   "property_number": "5540",
+   "lotplan": "2 SP 293624",
+   "street": "120 Denham Street, 4810",
+   "placename": "Australian Mercantile and Finance Co (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2SP293624"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 4,
+   "property_number": "6820",
+   "lotplan": "47 T 1181, 48 T 1181",
+   "street": "10 The Strand, 4810",
+   "placename": "Criterion Hotel",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "47T1181",
+    "48T1181"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 4,
+   "property_number": "6890",
+   "lotplan": "290 CP 859212",
+   "street": "14 The Strand, 4810",
+   "placename": "Anzac Memorial Park and Bandstand",
+   "listing": "State",
+   "lotplan_candidates": [
+    "290CP859212"
+   ],
+   "resolved_lotplan": "290CP859212"
+  },
+  {
+   "page": 4,
+   "property_number": "6960",
+   "lotplan": "1 RP 745353, 1 RP 702069, 2 RP 717290",
+   "street": "45 Flinders Street, 4810",
+   "placename": "Queens Hotel (former) and Lilac House",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP745353",
+    "1RP702069",
+    "2RP717290"
+   ],
+   "resolved_lotplan": "1RP702069"
+  },
+  {
+   "page": 5,
+   "property_number": "7120",
+   "lotplan": "1 RP 722451, 2 RP 701633",
+   "street": "26 Cleveland Terrace, 4810",
+   "placename": "Warringa",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP722451",
+    "2RP701633"
+   ],
+   "resolved_lotplan": "1RP722451"
+  },
+  {
+   "page": 5,
+   "property_number": "7130",
+   "lotplan": "3 RP 701633, 4 RP 701633",
+   "street": "24 Cleveland Terrace, 4810",
+   "placename": "Selhurst",
+   "listing": "State",
+   "lotplan_candidates": [
+    "3RP701633",
+    "4RP701633"
+   ],
+   "resolved_lotplan": "3RP701633"
+  },
+  {
+   "page": 5,
+   "property_number": "7160",
+   "lotplan": "1 RP 702085",
+   "street": "20 Cleveland Terrace, 4810",
+   "placename": "The Rocks Guesthouse",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP702085"
+   ],
+   "resolved_lotplan": "1RP702085"
+  },
+  {
+   "page": 5,
+   "property_number": "7170",
+   "lotplan": "8 RP 701633",
+   "street": "18 Cleveland Terrace, 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "8RP701633"
+   ],
+   "resolved_lotplan": "8RP701633"
+  },
+  {
+   "page": 5,
+   "property_number": "7190",
+   "lotplan": "1 RP 702042",
+   "street": "14 Cleveland Terrace, 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP702042"
+   ],
+   "resolved_lotplan": "1RP702042"
+  },
+  {
+   "page": 5,
+   "property_number": "7200",
+   "lotplan": "3 RP 702042",
+   "street": "12 Cleveland Terrace, 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "3RP702042"
+   ],
+   "resolved_lotplan": "3RP702042"
+  },
+  {
+   "page": 5,
+   "property_number": "7210",
+   "lotplan": "6 T 118300",
+   "street": "4 Cleveland Terrace, 4810",
+   "placename": "Drystone Wall Melton Hill and Duncragen",
+   "listing": "State",
+   "lotplan_candidates": [
+    "6T118300"
+   ],
+   "resolved_lotplan": "6T118300"
+  },
+  {
+   "page": 5,
+   "property_number": "7230",
+   "lotplan": "CP SP 171329",
+   "street": "2A Cleveland Terrace, 4810",
+   "placename": "Drystone Wall Melton Hill",
+   "listing": "State",
+   "lotplan_candidates": [
+    "CPSP171329"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 5,
+   "property_number": "7310",
+   "lotplan": "24 RP 701633 1 RP 701812",
+   "street": "2 Herbert Street, 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "24RP701633",
+    "1RP701812"
+   ],
+   "resolved_lotplan": "24RP701633"
+  },
+  {
+   "page": 5,
+   "property_number": "7320",
+   "lotplan": "2 RP 702042",
+   "street": "1 Herbert Street, 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP702042"
+   ],
+   "resolved_lotplan": "2RP702042"
+  },
+  {
+   "page": 5,
+   "property_number": "7460",
+   "lotplan": "1 RP 701632, 2 RP 701632, 18 RP 701633",
+   "street": "13-15 Willmett Street, 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP701632",
+    "2RP701632",
+    "18RP701633"
+   ],
+   "resolved_lotplan": "1RP701632"
+  },
+  {
+   "page": 5,
+   "property_number": "7610",
+   "lotplan": "2 SP 346827, 73 SP 346827",
+   "street": "36 & 44 Cleveland Terrace, Townsville City 4810",
+   "placename": "St. James Cathedral & Synod Hall",
+   "listing": "State",
+   "lotplan_candidates": [
+    "2SP346827",
+    "73SP346827"
+   ],
+   "resolved_lotplan": "2SP346827"
+  },
+  {
+   "page": 5,
+   "property_number": "557868",
+   "lotplan": "73 SP 346827,",
+   "street": "4810",
+   "placename": "& Synod Hall",
+   "listing": "",
+   "lotplan_candidates": [
+    "73SP346827"
+   ],
+   "resolved_lotplan": "73SP346827"
+  },
+  {
+   "page": 5,
+   "property_number": "557869",
+   "lotplan": "2 SP 701819",
+   "street": "5 Armati Street, 4810",
+   "placename": "",
+   "listing": "",
+   "lotplan_candidates": [
+    "2SP701819"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 5,
+   "property_number": "7730",
+   "lotplan": "2 RP 701653",
+   "street": "60-66 Denham Street, 4810",
+   "placename": "Denham Chambers",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP701653"
+   ],
+   "resolved_lotplan": "2RP701653"
+  },
+  {
+   "page": 5,
+   "property_number": "7740",
+   "lotplan": "2 RP 701659",
+   "street": "54-56 Denham Street, 4810",
+   "placename": "Roberts Leu & North Building (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP701659"
+   ],
+   "resolved_lotplan": "2RP701659"
+  },
+  {
+   "page": 5,
+   "property_number": "8090",
+   "lotplan": "2 SP 123456, 3 SP 123456",
+   "street": "266-272 Stanley Street, 4810",
+   "placename": "Sacred Heart Cathedral",
+   "listing": "State",
+   "lotplan_candidates": [
+    "2SP123456",
+    "3SP123456"
+   ],
+   "resolved_lotplan": "2SP123456"
+  },
+  {
+   "page": 5,
+   "property_number": "8100",
+   "lotplan": "11 RP 903759, 219 T 1181",
+   "street": "188-210 Stanley Street, 4810",
+   "placename": "School Arts (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "11RP903759",
+    "219T1181"
+   ],
+   "resolved_lotplan": "11RP903759"
+  },
+  {
+   "page": 5,
+   "property_number": "8270",
+   "lotplan": "2 RP 709895",
+   "street": "151-155 Stanley Street, 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP709895"
+   ],
+   "resolved_lotplan": "2RP709895"
+  },
+  {
+   "page": 5,
+   "property_number": "8280",
+   "lotplan": "1 RP 709895",
+   "street": "157 Stanley Street, 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP709895"
+   ],
+   "resolved_lotplan": "1RP709895"
+  },
+  {
+   "page": 5,
+   "property_number": "13490",
+   "lotplan": "247 EP 2301",
+   "street": "32 The Strand, 4810",
+   "placename": "Tobruk Memorial Baths",
+   "listing": "State",
+   "lotplan_candidates": [
+    "247EP2301"
+   ],
+   "resolved_lotplan": "247EP2301"
+  },
+  {
+   "page": 5,
+   "property_number": "353331",
+   "lotplan": "752 EP 2218",
+   "street": "Stokes Street, 4810",
+   "placename": "Victoria Bridge (entire bridge)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "752EP2218"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 5,
+   "property_number": "543458",
+   "lotplan": "2 SP 212760, CP SP 222359",
+   "street": "1-13 Sturt Street, 4810",
+   "placename": "Dalgety Offices and former warehouse frontage",
+   "listing": "State",
+   "lotplan_candidates": [
+    "2SP212760",
+    "CPSP222359"
+   ],
+   "resolved_lotplan": "2SP212760"
+  },
+  {
+   "page": 6,
+   "property_number": "215510",
+   "lotplan": "2 RP 748152",
+   "street": "1-105 Racecourse Road, Cluden 4811",
+   "placename": "Grandstand, former totalisator building and main entrance gates, Cluden Racecourse",
+   "listing": "State",
+   "lotplan_candidates": [
+    "2RP748152"
+   ],
+   "resolved_lotplan": "2RP748152"
+  },
+  {
+   "page": 6,
+   "property_number": "274430",
+   "lotplan": "40 SP 189822",
+   "street": "150 Angus Smith Drive, Douglas 4814",
+   "placename": "Eddie Koiki Mabo Library Building, James Cook University",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "40SP189822"
+   ],
+   "resolved_lotplan": "40SP189822"
+  },
+  {
+   "page": 7,
+   "property_number": "59180",
+   "lotplan": "156 T 118192, 157 T 118192",
+   "street": "62-66 Lonerganne Street, Garbutt 4814",
+   "placename": "St Theresa's War Memorial Church",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "156T118192",
+    "157T118192"
+   ],
+   "resolved_lotplan": "156T118192"
+  },
+  {
+   "page": 7,
+   "property_number": "51910",
+   "lotplan": "CP SP 205746",
+   "street": "3-5 Ramsay Street, Garbutt 4814",
+   "placename": "US 5th Air Force Operations and Signals Building (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "CPSP205746"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 7,
+   "property_number": "509161",
+   "lotplan": "1 SP 205746",
+   "street": "3-5 Ramsay Street, Garbutt 4814",
+   "placename": "US 5th Air Force Operations and Signals Building (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1SP205746"
+   ],
+   "resolved_lotplan": "1SP205746"
+  },
+  {
+   "page": 7,
+   "property_number": "509162",
+   "lotplan": "2 SP 205746",
+   "street": "3-5 Ramsay Street, Garbutt 4814",
+   "placename": "US 5th Air Force Operations and Signals Building (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2SP205746"
+   ],
+   "resolved_lotplan": "2SP205746"
+  },
+  {
+   "page": 7,
+   "property_number": "509163",
+   "lotplan": "3 SP 205746",
+   "street": "3-5 Ramsay Street, Garbutt 4814",
+   "placename": "US 5th Air Force Operations and Signals Building (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "3SP205746"
+   ],
+   "resolved_lotplan": "3SP205746"
+  },
+  {
+   "page": 8,
+   "property_number": "95520",
+   "lotplan": "122 RP 703476, 123 RP 703476",
+   "street": "25-27 Norris Street, Hermit Park 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "122RP703476",
+    "123RP703476"
+   ],
+   "resolved_lotplan": "122RP703476"
+  },
+  {
+   "page": 8,
+   "property_number": "97940",
+   "lotplan": "36 RP 703477",
+   "street": "56 Queens Road, Hermit Park 4812",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "36RP703477"
+   ],
+   "resolved_lotplan": "36RP703477"
+  },
+  {
+   "page": 8,
+   "property_number": "102430",
+   "lotplan": "221 RP 703399",
+   "street": "37 Ackers Street, Hermit Park 4812",
+   "placename": "Trevose",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "221RP703399"
+   ],
+   "resolved_lotplan": "221RP703399"
+  },
+  {
+   "page": 8,
+   "property_number": "105210",
+   "lotplan": "48 RP 703409, 49 RP 703409",
+   "street": "6 The Avenue, Hermit Park 4812",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "48RP703409",
+    "49RP703409"
+   ],
+   "resolved_lotplan": "48RP703409"
+  },
+  {
+   "page": 8,
+   "property_number": "105230",
+   "lotplan": "50 RP 703409, 51 RP 703409, 52 RP 703409",
+   "street": "8-10 The Avenue, Hermit Park 4812",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "50RP703409",
+    "51RP703409",
+    "52RP703409"
+   ],
+   "resolved_lotplan": "50RP703409"
+  },
+  {
+   "page": 8,
+   "property_number": "105330",
+   "lotplan": "30 RP 703409, 31 RP 703409, 32 RP 703409, 33 RP 703409",
+   "street": "5-7 The Avenue, Hermit Park 4812",
+   "placename": "Weroona",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "30RP703409",
+    "31RP703409",
+    "32RP703409",
+    "33RP703409"
+   ],
+   "resolved_lotplan": "30RP703409"
+  },
+  {
+   "page": 8,
+   "property_number": "107640",
+   "lotplan": "5 RP 711405",
+   "street": "5 Riverview Street, Hermit Park 4812",
+   "placename": "Rosslea",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "5RP711405"
+   ],
+   "resolved_lotplan": "5RP711405"
+  },
+  {
+   "page": 8,
+   "property_number": "532234",
+   "lotplan": "26 SP 149308",
+   "street": "2679 Hervey Range Road, Hervey Range 4817",
+   "placename": "Range Hotel, Burial Ground and Camping Reserve",
+   "listing": "State",
+   "lotplan_candidates": [
+    "26SP149308"
+   ],
+   "resolved_lotplan": "26SP149308"
+  },
+  {
+   "page": 8,
+   "property_number": "535200",
+   "lotplan": "379 EP 352",
+   "street": "Page Road, Lynam 4817",
+   "placename": "Stock Route, Camping Reserve",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "379EP352"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 8,
+   "property_number": "251320",
+   "lotplan": "6 H 7329",
+   "street": "2-10 Heath Street, Horseshoe Bay 4819",
+   "placename": "Horseshoe Bay State School (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "6H7329"
+   ],
+   "resolved_lotplan": "6H7329"
+  },
+  {
+   "page": 9,
+   "property_number": "117800",
+   "lotplan": "4 RP 716211",
+   "street": "22 Bayswater Terrace, Hyde Park 4812",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "4RP716211"
+   ],
+   "resolved_lotplan": "4RP716211"
+  },
+  {
+   "page": 9,
+   "property_number": "546420",
+   "lotplan": "905 SP 253659",
+   "street": "2 Kokoda Street, Idalia 4811",
+   "placename": "Ross River Meatworks Chimney",
+   "listing": "State",
+   "lotplan_candidates": [
+    "905SP253659"
+   ],
+   "resolved_lotplan": "905SP253659"
+  },
+  {
+   "page": 9,
+   "property_number": "520786",
+   "lotplan": "3 RP 882869",
+   "street": "Veales Road, Jensen 4818",
+   "placename": "Jensen Uniting Church",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "3RP882869"
+   ],
+   "resolved_lotplan": "3RP882869"
+  },
+  {
+   "page": 9,
+   "property_number": "526676",
+   "lotplan": "34 T 118567",
+   "street": "8 Hudson Street, Kirwan 4817",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "34T118567"
+   ],
+   "resolved_lotplan": "34T118567"
+  },
+  {
+   "page": 9,
+   "property_number": "551825",
+   "lotplan": "907 SP 273225",
+   "street": "43 Toll Street, Mount St John 4818",
+   "placename": "Y Station 16 Heavy Anti -aircraft Battery",
+   "listing": "State",
+   "lotplan_candidates": [
+    "907SP273225"
+   ],
+   "resolved_lotplan": "907SP273225"
+  },
+  {
+   "page": 9,
+   "property_number": "67030",
+   "lotplan": "900 SP293599",
+   "street": "789 Dalrymple Road (main), Mount Louisa 4814",
+   "placename": "Bohle Hotel Site (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "900SP293599"
+   ],
+   "resolved_lotplan": "900SP293599"
+  },
+  {
+   "page": 10,
+   "property_number": "132270",
+   "lotplan": "2 RP 743712",
+   "street": "70 Love Lane, Mundingburra 4812",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP743712"
+   ],
+   "resolved_lotplan": "2RP743712"
+  },
+  {
+   "page": 10,
+   "property_number": "119890",
+   "lotplan": "2 RP 717551",
+   "street": "21 Lawson Street, Mysterton, 4812",
+   "placename": "Rosebank",
+   "listing": "State",
+   "lotplan_candidates": [
+    "2RP717551"
+   ],
+   "resolved_lotplan": "2RP717551"
+  },
+  {
+   "page": 10,
+   "property_number": "241480",
+   "lotplan": "73 EP 228",
+   "street": "118-120 Sooning Street, Nelly Bay 4819",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "73EP228"
+   ],
+   "resolved_lotplan": "73EP228"
+  },
+  {
+   "page": 10,
+   "property_number": "10020",
+   "lotplan": "1 RP 710504",
+   "street": "5 Victoria Street, North Ward 4810",
+   "placename": "Maida Vale",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP710504"
+   ],
+   "resolved_lotplan": "1RP710504"
+  },
+  {
+   "page": 10,
+   "property_number": "10050",
+   "lotplan": "71 T 11867",
+   "street": "11-13 Victoria Street, North Ward 4810",
+   "placename": "Kardinia",
+   "listing": "State",
+   "lotplan_candidates": [
+    "71T11867"
+   ],
+   "resolved_lotplan": "71T11867"
+  },
+  {
+   "page": 10,
+   "property_number": "10070",
+   "lotplan": "1 RP 701912",
+   "street": "21 Victoria Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP701912"
+   ],
+   "resolved_lotplan": "1RP701912"
+  },
+  {
+   "page": 10,
+   "property_number": "10090",
+   "lotplan": "1 RP 719858",
+   "street": "25 Victoria Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP719858"
+   ],
+   "resolved_lotplan": "1RP719858"
+  },
+  {
+   "page": 10,
+   "property_number": "10120",
+   "lotplan": "1 RP 701927, 3 RP 701927",
+   "street": "37 Victoria Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP701927",
+    "3RP701927"
+   ],
+   "resolved_lotplan": "1RP701927"
+  },
+  {
+   "page": 10,
+   "property_number": "10130",
+   "lotplan": "3 RP 721229",
+   "street": "39 Victoria Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "3RP721229"
+   ],
+   "resolved_lotplan": "3RP721229"
+  },
+  {
+   "page": 10,
+   "property_number": "10140",
+   "lotplan": "1 RP 721229",
+   "street": "43 Victoria Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP721229"
+   ],
+   "resolved_lotplan": "1RP721229"
+  },
+  {
+   "page": 10,
+   "property_number": "10330",
+   "lotplan": "1 RP 739248",
+   "street": "13 Queen Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP739248"
+   ],
+   "resolved_lotplan": "1RP739248"
+  },
+  {
+   "page": 10,
+   "property_number": "12240",
+   "lotplan": "21 T 118288",
+   "street": "37 Howitt Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "21T118288"
+   ],
+   "resolved_lotplan": "21T118288"
+  },
+  {
+   "page": 10,
+   "property_number": "13300",
+   "lotplan": "2 RP 707346, 262 T 1181 100 SP 310918",
+   "street": "55 The Strand, North Ward 4810",
+   "placename": "The Seaview Hotel",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP707346",
+    "262T1181",
+    "100SP310918"
+   ],
+   "resolved_lotplan": "100SP310918"
+  },
+  {
+   "page": 10,
+   "property_number": "13370",
+   "lotplan": "1 RP 710003, 30 T 1187, 31 T 1187",
+   "street": "45 The Strand, North Ward 4810",
+   "placename": "St Patrick's Convent",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1RP710003",
+    "30T1187",
+    "31T1187"
+   ],
+   "resolved_lotplan": "1RP710003"
+  },
+  {
+   "page": 10,
+   "property_number": "550665",
+   "lotplan": "48 SP 263522",
+   "street": "27 Carter Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "48SP263522"
+   ],
+   "resolved_lotplan": "48SP263522"
+  },
+  {
+   "page": 10,
+   "property_number": "14490",
+   "lotplan": "2 RP 733821",
+   "street": "1 Carter Street, North Ward 4810",
+   "placename": "Rockton",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP733821"
+   ],
+   "resolved_lotplan": "2RP733821"
+  },
+  {
+   "page": 10,
+   "property_number": "15180",
+   "lotplan": "188 SP 302853",
+   "street": "9 Cleveland Terrace, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "188SP302853"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 10,
+   "property_number": "15220",
+   "lotplan": "2 RP 702016, 37 T 11813",
+   "street": "11 Fryer Street, North Ward 4810",
+   "placename": "Yongala Lodge",
+   "listing": "State",
+   "lotplan_candidates": [
+    "2RP702016",
+    "37T11813"
+   ],
+   "resolved_lotplan": "2RP702016"
+  },
+  {
+   "page": 11,
+   "property_number": "15250",
+   "lotplan": "3 SP 257303",
+   "street": "Mitchell Street, North Ward 4810",
+   "placename": "Former North Ward Defence Complex,",
+   "listing": "State",
+   "lotplan_candidates": [
+    "3SP257303"
+   ],
+   "resolved_lotplan": "3SP257303"
+  },
+  {
+   "page": 11,
+   "property_number": "547887",
+   "lotplan": "4 SP 257303",
+   "street": "38 Oxley Street, North Ward 4810",
+   "placename": "Former North Ward Defence Complex,",
+   "listing": "State",
+   "lotplan_candidates": [
+    "4SP257303"
+   ],
+   "resolved_lotplan": "4SP257303"
+  },
+  {
+   "page": 11,
+   "property_number": "547886",
+   "lotplan": "1 SP 257303",
+   "street": "46 Oxley Street, North Ward 4810",
+   "placename": "Former North Ward Defence Complex,",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1SP257303"
+   ],
+   "resolved_lotplan": "1SP257303"
+  },
+  {
+   "page": 11,
+   "property_number": "16660",
+   "lotplan": "141 T 1186",
+   "street": "82 Eyre Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "141T1186"
+   ],
+   "resolved_lotplan": "141T1186"
+  },
+  {
+   "page": 11,
+   "property_number": "16870",
+   "lotplan": "14 T 118194",
+   "street": "207 Denham Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "14T118194"
+   ],
+   "resolved_lotplan": "14T118194"
+  },
+  {
+   "page": 11,
+   "property_number": "16970",
+   "lotplan": "2 RP 707023",
+   "street": "2 Eyre Street, North Ward 4810",
+   "placename": "Edgecliff",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP707023"
+   ],
+   "resolved_lotplan": "2RP707023"
+  },
+  {
+   "page": 11,
+   "property_number": "17320",
+   "lotplan": "105 T 1186",
+   "street": "117 Eyre Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "105T1186"
+   ],
+   "resolved_lotplan": "105T1186"
+  },
+  {
+   "page": 11,
+   "property_number": "17420",
+   "lotplan": "85 T 1186",
+   "street": "137 Eyre Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "85T1186"
+   ],
+   "resolved_lotplan": "85T1186"
+  },
+  {
+   "page": 11,
+   "property_number": "19810",
+   "lotplan": "219 T 1186",
+   "street": "37 Rose Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "219T1186"
+   ],
+   "resolved_lotplan": "219T1186"
+  },
+  {
+   "page": 11,
+   "property_number": "253590",
+   "lotplan": "251 SP 223215",
+   "street": "4-6 Warburton Street, North Ward 4810",
+   "placename": "Central State School",
+   "listing": "State",
+   "lotplan_candidates": [
+    "251SP223215"
+   ],
+   "resolved_lotplan": "251SP223215"
+  },
+  {
+   "page": 11,
+   "property_number": "21180",
+   "lotplan": "92 T 11884",
+   "street": "64 Paxton Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "92T11884"
+   ],
+   "resolved_lotplan": "92T11884"
+  },
+  {
+   "page": 11,
+   "property_number": "21290",
+   "lotplan": "1 RP 708807",
+   "street": "40 Paxton Street, North Ward 4810",
+   "placename": "David House",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP708807"
+   ],
+   "resolved_lotplan": "1RP708807"
+  },
+  {
+   "page": 11,
+   "property_number": "21360",
+   "lotplan": "53 T 11884",
+   "street": "26 Paxton Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "53T11884"
+   ],
+   "resolved_lotplan": "53T11884"
+  },
+  {
+   "page": 11,
+   "property_number": "21370",
+   "lotplan": "52 T 11884",
+   "street": "24 Paxton Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "52T11884"
+   ],
+   "resolved_lotplan": "52T11884"
+  },
+  {
+   "page": 11,
+   "property_number": "21470",
+   "lotplan": "202 T 118159",
+   "street": "1-13 Paxton Street, North Ward 4810",
+   "placename": "Queens Gardens",
+   "listing": "State",
+   "lotplan_candidates": [
+    "202T118159"
+   ],
+   "resolved_lotplan": "202T118159"
+  },
+  {
+   "page": 11,
+   "property_number": "20330",
+   "lotplan": "201 SP 126605",
+   "street": "19-43 Paxton Street, North Ward 4810",
+   "placename": "Queens Gardens",
+   "listing": "State",
+   "lotplan_candidates": [
+    "201SP126605"
+   ],
+   "resolved_lotplan": "201SP126605"
+  },
+  {
+   "page": 11,
+   "property_number": "21490",
+   "lotplan": "120 EP 2264",
+   "street": "85 Paxton Street, North Ward 4810",
+   "placename": "School House",
+   "listing": "State",
+   "lotplan_candidates": [
+    "120EP2264"
+   ],
+   "resolved_lotplan": "120EP2264"
+  },
+  {
+   "page": 11,
+   "property_number": "21970",
+   "lotplan": "1 RP 717329",
+   "street": "21 Queen Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP717329"
+   ],
+   "resolved_lotplan": "1RP717329"
+  },
+  {
+   "page": 11,
+   "property_number": "21980",
+   "lotplan": "1 RP 716539",
+   "street": "22 Murray Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP716539"
+   ],
+   "resolved_lotplan": "1RP716539"
+  },
+  {
+   "page": 11,
+   "property_number": "22020",
+   "lotplan": "21 RP 906488",
+   "street": "3 Victoria Street, North Ward 4810",
+   "placename": "Cummins House (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "21RP906488"
+   ],
+   "resolved_lotplan": "21RP906488"
+  },
+  {
+   "page": 11,
+   "property_number": "22030",
+   "lotplan": "23 T 118176",
+   "street": "9A Murray Street, North Ward 4810",
+   "placename": "Astronomical Trigonometrical Station",
+   "listing": "State",
+   "lotplan_candidates": [
+    "23T118176"
+   ],
+   "resolved_lotplan": "23T118176"
+  },
+  {
+   "page": 11,
+   "property_number": "22320",
+   "lotplan": "138 T 11884",
+   "street": "49 Alexandra Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "138T11884"
+   ],
+   "resolved_lotplan": "138T11884"
+  },
+  {
+   "page": 11,
+   "property_number": "22330",
+   "lotplan": "137 T 11884",
+   "street": "47 Alexandra Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "137T11884"
+   ],
+   "resolved_lotplan": "137T11884"
+  },
+  {
+   "page": 11,
+   "property_number": "22370",
+   "lotplan": "133 T 11884",
+   "street": "39 Alexandra Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "133T11884"
+   ],
+   "resolved_lotplan": "133T11884"
+  },
+  {
+   "page": 11,
+   "property_number": "22400",
+   "lotplan": "160 T 11884",
+   "street": "33 Alexandra Street, North Ward 4810",
+   "placename": "Morningside",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "160T11884"
+   ],
+   "resolved_lotplan": "160T11884"
+  },
+  {
+   "page": 11,
+   "property_number": "22430",
+   "lotplan": "2 RP 885982",
+   "street": "29 Alexandra Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP885982"
+   ],
+   "resolved_lotplan": "2RP885982"
+  },
+  {
+   "page": 11,
+   "property_number": "22470",
+   "lotplan": "153 T 11884",
+   "street": "21 Alexandra Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "153T11884"
+   ],
+   "resolved_lotplan": "153T11884"
+  },
+  {
+   "page": 11,
+   "property_number": "22610",
+   "lotplan": "41 T 11884",
+   "street": "14 Alexandra Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "41T11884"
+   ],
+   "resolved_lotplan": "41T11884"
+  },
+  {
+   "page": 11,
+   "property_number": "22630",
+   "lotplan": "70 T 11884",
+   "street": "14 Kennedy Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "70T11884"
+   ],
+   "resolved_lotplan": "70T11884"
+  },
+  {
+   "page": 11,
+   "property_number": "22640",
+   "lotplan": "69 T 11884",
+   "street": "18 Alexandra Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "69T11884"
+   ],
+   "resolved_lotplan": "69T11884"
+  },
+  {
+   "page": 12,
+   "property_number": "22760",
+   "lotplan": "85 T 11884",
+   "street": "38 Alexandra Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "85T11884"
+   ],
+   "resolved_lotplan": "85T11884"
+  },
+  {
+   "page": 12,
+   "property_number": "23350",
+   "lotplan": "19 T 118157 20 T 118157",
+   "street": "352-354 Stanley Street, North Ward 4810",
+   "placename": "Castlecrag",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "19T118157",
+    "20T118157"
+   ],
+   "resolved_lotplan": "19T118157"
+  },
+  {
+   "page": 12,
+   "property_number": "23420",
+   "lotplan": "2 T 118125",
+   "street": "338 Stanley Street, North Ward 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2T118125"
+   ],
+   "resolved_lotplan": "2T118125"
+  },
+  {
+   "page": 12,
+   "property_number": "351851",
+   "lotplan": "16 SP 236486",
+   "street": "11-13 Clifton Street, North Ward 4810",
+   "placename": "Australian Institute Tropical Medicine (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "16SP236486"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 12,
+   "property_number": "500058",
+   "lotplan": "1 SP 168605",
+   "street": "336 Stanley Street, North Ward 4810",
+   "placename": "Harcourt",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1SP168605"
+   ],
+   "resolved_lotplan": "1SP168605"
+  },
+  {
+   "page": 12,
+   "property_number": "1506865",
+   "lotplan": "CP SP 271012",
+   "street": "45-47 Gregory Street, North Ward 4810",
+   "placename": "General Hospital (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "CPSP271012"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 12,
+   "property_number": "541615",
+   "lotplan": "5 SP 211556, SP 211556",
+   "street": "38-52 Howitt Street, North Ward 4810",
+   "placename": "Kissing Point Fortifications & Jezzine Barracks",
+   "listing": "State",
+   "lotplan_candidates": [
+    "5SP211556"
+   ],
+   "resolved_lotplan": "5SP211556"
+  },
+  {
+   "page": 12,
+   "property_number": "360408",
+   "lotplan": "58 RP 737741",
+   "street": "12 Chisholm Trail, Oak Valley 4811",
+   "placename": "Tobacco Kiln",
+   "listing": "State",
+   "lotplan_candidates": [
+    "58RP737741"
+   ],
+   "resolved_lotplan": "58RP737741"
+  },
+  {
+   "page": 12,
+   "property_number": "34790",
+   "lotplan": "633 EP 1908",
+   "street": "1A The Esplanade, Pallarenda, 4810",
+   "placename": "Cape Pallarenda Quarantine Station (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "633EP1908"
+   ],
+   "resolved_lotplan": "633EP1908"
+  },
+  {
+   "page": 13,
+   "property_number": "512763",
+   "lotplan": "203 P 8363",
+   "street": "66 Mt Spec Road, Paluma 4816",
+   "placename": "Ivy Cottage",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "203P8363"
+   ],
+   "resolved_lotplan": "203P8363"
+  },
+  {
+   "page": 13,
+   "property_number": "527786",
+   "lotplan": "2 RP 728420",
+   "street": "13 Lennox Crescent, Paluma 4816",
+   "placename": "WW2 igloo",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP728420"
+   ],
+   "resolved_lotplan": "2RP728420"
+  },
+  {
+   "page": 13,
+   "property_number": "530972",
+   "lotplan": "2 P 83613",
+   "street": "3 Lookout Road, Paluma 4816",
+   "placename": "Misthaven Units",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2P83613"
+   ],
+   "resolved_lotplan": "2P83613"
+  },
+  {
+   "page": 13,
+   "property_number": "528857",
+   "lotplan": "15 P 8366, 17 P 8366, 18 P 8366",
+   "street": "25 Lennox Crescent, Paluma 4816",
+   "placename": "WW2 igloo",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "15P8366",
+    "17P8366",
+    "18P8366"
+   ],
+   "resolved_lotplan": "17P8366"
+  },
+  {
+   "page": 13,
+   "property_number": "530970",
+   "lotplan": "2 P 8363",
+   "street": "63 Mount Spec Road, Paluma 4816",
+   "placename": "Tennis Court",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2P8363"
+   ],
+   "resolved_lotplan": "2P8363"
+  },
+  {
+   "page": 13,
+   "property_number": "530971",
+   "lotplan": "1 P 8363",
+   "street": "61 Mount Spec Road, Paluma 4816",
+   "placename": "Tennis Court",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1P8363"
+   ],
+   "resolved_lotplan": "1P8363"
+  },
+  {
+   "page": 13,
+   "property_number": "534148",
+   "lotplan": "401 P 8363",
+   "street": "24 Mount Spec Road, Paluma 4816",
+   "placename": "Cavilcade guesthouse (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "401P8363"
+   ],
+   "resolved_lotplan": "401P8363"
+  },
+  {
+   "page": 13,
+   "property_number": "534150",
+   "lotplan": "308 P 8363",
+   "street": "52 Mt Spec Road, Paluma 4816",
+   "placename": "RAAF No 6 MRU (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "308P8363"
+   ],
+   "resolved_lotplan": "308P8363"
+  },
+  {
+   "page": 13,
+   "property_number": "534155",
+   "lotplan": "95 AP 15524",
+   "street": "9 Mt Spec Road, Paluma 4816",
+   "placename": "WW2 Yank Hut",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "95AP15524"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 13,
+   "property_number": "534160",
+   "lotplan": "13 RP 750121",
+   "street": "17-19 Lennox Crescent, Paluma 4816",
+   "placename": "WW2 igloo",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "13RP750121"
+   ],
+   "resolved_lotplan": "13RP750121"
+  },
+  {
+   "page": 13,
+   "property_number": "240900",
+   "lotplan": "201 CP 850698",
+   "street": "11-15 Granite Street, Picnic Bay 4819 Off Yule Street, Picnic Bay 4819",
+   "placename": "Magnetic Island Craft Shop Picnic Bay Jetty",
+   "listing": "State State",
+   "lotplan_candidates": [
+    "201CP850698"
+   ],
+   "resolved_lotplan": "201CP850698"
+  },
+  {
+   "page": 13,
+   "property_number": "552836",
+   "lotplan": "116 P 9381 117 P 9381",
+   "street": "15 Barbarra Street, Picnic Bay 4819",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "116P9381",
+    "117P9381"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 13,
+   "property_number": "84650",
+   "lotplan": "25 RP 703382",
+   "street": "71 Robertson Street, Railway Estate 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "25RP703382"
+   ],
+   "resolved_lotplan": "25RP703382"
+  },
+  {
+   "page": 14,
+   "property_number": "83880",
+   "lotplan": "15 USL 51135",
+   "street": "0 Hotson Street, Railway Estate 4810",
+   "placename": "World War II fuel tanks site",
+   "listing": "",
+   "lotplan_candidates": [
+    "15USL51135"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 14,
+   "property_number": "88600",
+   "lotplan": "2 RP 703361 117 RP 703355, 118 RP 703355",
+   "street": "5 Ninth Avenue, Railway Estate 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP703361",
+    "117RP703355",
+    "118RP703355"
+   ],
+   "resolved_lotplan": "2RP703361"
+  },
+  {
+   "page": 14,
+   "property_number": "88860",
+   "lotplan": "51 SP 126582",
+   "street": "60 Railway Avenue, Railway Estate 4810",
+   "placename": "Byer's Store (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "51SP126582"
+   ],
+   "resolved_lotplan": "51SP126582"
+  },
+  {
+   "page": 14,
+   "property_number": "89350",
+   "lotplan": "626 EP 1920",
+   "street": "29-47 Railway Avenue, Railway Estate 4810",
+   "placename": "Railway Estate State School",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "626EP1920"
+   ],
+   "resolved_lotplan": "626EP1920"
+  },
+  {
+   "page": 14,
+   "property_number": "91440",
+   "lotplan": "2 RP 860274",
+   "street": "99-101 Boundary Street, Railway Estate 4810",
+   "placename": "Ross Island Hotel",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP860274"
+   ],
+   "resolved_lotplan": "2RP860274"
+  },
+  {
+   "page": 14,
+   "property_number": "92410",
+   "lotplan": "101 RP 703359",
+   "street": "41 Second Street, Railway Estate 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "101RP703359"
+   ],
+   "resolved_lotplan": "101RP703359"
+  },
+  {
+   "page": 14,
+   "property_number": "92460",
+   "lotplan": "165 SP 116238",
+   "street": "19 Second Street, Railway Estate 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "165SP116238"
+   ],
+   "resolved_lotplan": "165SP116238"
+  },
+  {
+   "page": 14,
+   "property_number": "92530",
+   "lotplan": "72 RP 703359, 182 RP 703359, 183 RP 703359",
+   "street": "5 Second Street, Railway Estate 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "72RP703359",
+    "182RP703359",
+    "183RP703359"
+   ],
+   "resolved_lotplan": "72RP703359"
+  },
+  {
+   "page": 15,
+   "property_number": "92990",
+   "lotplan": "143 RP 703359",
+   "street": "3 Third Street, Railway Estate 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "143RP703359"
+   ],
+   "resolved_lotplan": "143RP703359"
+  },
+  {
+   "page": 15,
+   "property_number": "93620",
+   "lotplan": "57 RP 703364",
+   "street": "17 Anderson Street, Railway Estate 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "57RP703364"
+   ],
+   "resolved_lotplan": "57RP703364"
+  },
+  {
+   "page": 15,
+   "property_number": "510460",
+   "lotplan": "1 RP 743522",
+   "street": "1087 Riverway Drive, Rasmussen 4815",
+   "placename": "Gollogly's House (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP743522"
+   ],
+   "resolved_lotplan": "1RP743522"
+  },
+  {
+   "page": 15,
+   "property_number": "511429",
+   "lotplan": "20 RP 853743",
+   "street": "1199 Riverway Drive, Rasmussen 4815",
+   "placename": "Kennedy Hotel Site (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "20RP853743"
+   ],
+   "resolved_lotplan": "20RP853743"
+  },
+  {
+   "page": 16,
+   "property_number": "237850",
+   "lotplan": "491 E 12463",
+   "street": "521-549 Stuart Drive, Roseneath 4811",
+   "placename": "St Brigid's Church",
+   "listing": "State",
+   "lotplan_candidates": [
+    "491E12463"
+   ],
+   "resolved_lotplan": "491E12463"
+  },
+  {
+   "page": 16,
+   "property_number": "512997",
+   "lotplan": "4 RP 736178",
+   "street": "17 Bolinda Court, Alice River 4817",
+   "placename": "Alice Hotel Site (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "4RP736178"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 16,
+   "property_number": "76270",
+   "lotplan": "4 SP 120464 42",
+   "street": "Nelson Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "4SP120464"
+   ],
+   "resolved_lotplan": "4SP120464"
+  },
+  {
+   "page": 16,
+   "property_number": "76280",
+   "lotplan": "50 T 118105 40",
+   "street": "Nelson Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "50T118105"
+   ],
+   "resolved_lotplan": "50T118105"
+  },
+  {
+   "page": 16,
+   "property_number": "76320",
+   "lotplan": "1 RP 712482 32",
+   "street": "Nelson Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP712482"
+   ],
+   "resolved_lotplan": "1RP712482"
+  },
+  {
+   "page": 16,
+   "property_number": "76370",
+   "lotplan": "169 T 118105 20",
+   "street": "Nelson Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "169T118105"
+   ],
+   "resolved_lotplan": "169T118105"
+  },
+  {
+   "page": 16,
+   "property_number": "76520",
+   "lotplan": "2 RP 745103 15",
+   "street": "Nelson Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP745103"
+   ],
+   "resolved_lotplan": "2RP745103"
+  },
+  {
+   "page": 16,
+   "property_number": "76530",
+   "lotplan": "99 T 118105 17",
+   "street": "Nelson Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "99T118105"
+   ],
+   "resolved_lotplan": "99T118105"
+  },
+  {
+   "page": 16,
+   "property_number": "76610",
+   "lotplan": "71 T 118105, 72 T 118105, 73 T 118105",
+   "street": "32 Hubert Street, South Townsville 4810",
+   "placename": "St Patrick's Church",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "71T118105",
+    "72T118105",
+    "73T118105"
+   ],
+   "resolved_lotplan": "71T118105"
+  },
+  {
+   "page": 16,
+   "property_number": "76810",
+   "lotplan": "42 RP 703389, 18 43 RP 703389",
+   "street": "Fifth Avenue, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "42RP703389",
+    "43RP703389"
+   ],
+   "resolved_lotplan": "42RP703389"
+  },
+  {
+   "page": 16,
+   "property_number": "77120",
+   "lotplan": "19 RP 745719, 40 20 RP 745719",
+   "street": "Bell Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "19RP745719",
+    "20RP745719"
+   ],
+   "resolved_lotplan": "19RP745719"
+  },
+  {
+   "page": 16,
+   "property_number": "77330",
+   "lotplan": "159 T 118105 3",
+   "street": "Bell Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "159T118105"
+   ],
+   "resolved_lotplan": "159T118105"
+  },
+  {
+   "page": 16,
+   "property_number": "77340",
+   "lotplan": "158 T 118105 5",
+   "street": "Bell Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "158T118105"
+   ],
+   "resolved_lotplan": "158T118105"
+  },
+  {
+   "page": 16,
+   "property_number": "77350",
+   "lotplan": "157 T 118105",
+   "street": "Bell Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "157T118105"
+   ],
+   "resolved_lotplan": "157T118105"
+  },
+  {
+   "page": 16,
+   "property_number": "77360",
+   "lotplan": "156 T 118105 9",
+   "street": "Bell Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "156T118105"
+   ],
+   "resolved_lotplan": "156T118105"
+  },
+  {
+   "page": 16,
+   "property_number": "77460",
+   "lotplan": "36 T 118105 29",
+   "street": "Bell Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "36T118105"
+   ],
+   "resolved_lotplan": "36T118105"
+  },
+  {
+   "page": 16,
+   "property_number": "77500",
+   "lotplan": "33 T 118105 35",
+   "street": "Bell Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "33T118105"
+   ],
+   "resolved_lotplan": "33T118105"
+  },
+  {
+   "page": 16,
+   "property_number": "77770",
+   "lotplan": "1 T 11868",
+   "street": "78 Tully Street, South Townsville 4810",
+   "placename": "South Townsville State School",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1T11868"
+   ],
+   "resolved_lotplan": "1T11868"
+  },
+  {
+   "page": 16,
+   "property_number": "77940",
+   "lotplan": "101 T 11887, 102 T 11887",
+   "street": "20 Macrossan Street, South Townsville 4810",
+   "placename": "Commonwealth Hotel",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "101T11887",
+    "102T11887"
+   ],
+   "resolved_lotplan": "101T11887"
+  },
+  {
+   "page": 16,
+   "property_number": "77950",
+   "lotplan": "1 RP 708320 39",
+   "street": "Allen Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP708320"
+   ],
+   "resolved_lotplan": "1RP708320"
+  },
+  {
+   "page": 16,
+   "property_number": "77990",
+   "lotplan": "275 T 11868, 276 T 11868, 277 T 11868",
+   "street": "30 Macrossan Street, South Townsville 4810",
+   "placename": "St John's Anglican Church Precinct",
+   "listing": "State",
+   "lotplan_candidates": [
+    "275T11868",
+    "276T11868",
+    "277T11868"
+   ],
+   "resolved_lotplan": "275T11868"
+  },
+  {
+   "page": 17,
+   "property_number": "79240",
+   "lotplan": "23 RP 745911",
+   "street": "57 Perkins Street, South Townsville 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "23RP745911"
+   ],
+   "resolved_lotplan": "23RP745911"
+  },
+  {
+   "page": 17,
+   "property_number": "79460",
+   "lotplan": "2 RP 745100",
+   "street": "103 Perkins Street, South Townsville 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP745100"
+   ],
+   "resolved_lotplan": "2RP745100"
+  },
+  {
+   "page": 17,
+   "property_number": "79520",
+   "lotplan": "21 T 118638",
+   "street": "115-147 Perkins Street, South Townsville 4810",
+   "placename": "Warehouse",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "21T118638"
+   ],
+   "resolved_lotplan": "21T118638"
+  },
+  {
+   "page": 17,
+   "property_number": "80960",
+   "lotplan": "322 T 118105, 29-31 323 T 118105",
+   "street": "McIlwraith Street, South Republic 4810",
+   "placename": "Hotel",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "322T118105",
+    "323T118105"
+   ],
+   "resolved_lotplan": "322T118105"
+  },
+  {
+   "page": 17,
+   "property_number": "81100",
+   "lotplan": "1 RP 701930 3",
+   "street": "Palmer Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP701930"
+   ],
+   "resolved_lotplan": "1RP701930"
+  },
+  {
+   "page": 17,
+   "property_number": "81140",
+   "lotplan": "28 RP 745913, 35 T 11868, 52 T 11868",
+   "street": "11 Palmer Street, South Townsville 4810",
+   "placename": "The Australian Hotel",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "28RP745913",
+    "35T11868",
+    "52T11868"
+   ],
+   "resolved_lotplan": "28RP745913"
+  },
+  {
+   "page": 17,
+   "property_number": "81150",
+   "lotplan": "36 T 11868",
+   "street": "13 Palmer Street, South Townsville 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "36T11868"
+   ],
+   "resolved_lotplan": "36T11868"
+  },
+  {
+   "page": 17,
+   "property_number": "81160",
+   "lotplan": "37 T 11868",
+   "street": "15 Palmer Street, South Townsville 4810",
+   "placename": "Queensland Teachers Union Building",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "37T11868"
+   ],
+   "resolved_lotplan": "37T11868"
+  },
+  {
+   "page": 17,
+   "property_number": "81210",
+   "lotplan": "1 RP 701933, 43 T 11868",
+   "street": "31 Palmer Street, South Townsville 4810",
+   "placename": "Shamrock Hotel",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP701933",
+    "43T11868"
+   ],
+   "resolved_lotplan": "1RP701933"
+  },
+  {
+   "page": 17,
+   "property_number": "81360",
+   "lotplan": "CP SP 225259",
+   "street": "84 McIlwraith Street, South Townsville 4810",
+   "placename": "Metropole Hotel",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "CPSP225259"
+   ],
+   "resolved_lotplan": null
+  },
+  {
+   "page": 17,
+   "property_number": "81520",
+   "lotplan": "2 RP 701959 24",
+   "street": "Archer Street, South 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP701959"
+   ],
+   "resolved_lotplan": "2RP701959"
+  },
+  {
+   "page": 17,
+   "property_number": "82110",
+   "lotplan": "2 RP 706700",
+   "street": "65 Morey Street, South Townsville 4810",
+   "placename": "Overseas Telecommunications Centre (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP706700"
+   ],
+   "resolved_lotplan": "2RP706700"
+  },
+  {
+   "page": 17,
+   "property_number": "253320",
+   "lotplan": "1 RP 706700",
+   "street": "65 Morey Street, South Townsville 4810",
+   "placename": "Overseas Telecommunications Centre (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP706700"
+   ],
+   "resolved_lotplan": "1RP706700"
+  },
+  {
+   "page": 17,
+   "property_number": "502604",
+   "lotplan": "2 RP 715005",
+   "street": "262 Boundary Street, South Townsville 4810",
+   "placename": "(Former Scown Butchery)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP715005"
+   ],
+   "resolved_lotplan": "2RP715005"
+  },
+  {
+   "page": 17,
+   "property_number": "254620",
+   "lotplan": "57 SP 152800, 56 EP 1573",
+   "street": "22 Dwyer Street, Stuart 4811",
+   "placename": "Stewart's Creek Gaol (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "57SP152800",
+    "56EP1573"
+   ],
+   "resolved_lotplan": "56EP1573"
+  },
+  {
+   "page": 17,
+   "property_number": "34340",
+   "lotplan": "505 NPW 643",
+   "street": "0 Mouth of the Bohle, Town Common 4810",
+   "placename": "World War II fortifications",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "505NPW643"
+   ],
+   "resolved_lotplan": "505NPW643"
+  },
+  {
+   "page": 18,
+   "property_number": "355408",
+   "lotplan": "5 USL 50632, 18 USL 50632",
+   "street": "0 William Street, West End 4810",
+   "placename": "Castle Hill",
+   "listing": "State",
+   "lotplan_candidates": [
+    "5USL50632",
+    "18USL50632"
+   ],
+   "resolved_lotplan": "5USL50632"
+  },
+  {
+   "page": 18,
+   "property_number": "38200",
+   "lotplan": "12 RP 745387",
+   "street": "28 Greenslade Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "12RP745387"
+   ],
+   "resolved_lotplan": "12RP745387"
+  },
+  {
+   "page": 18,
+   "property_number": "38470",
+   "lotplan": "8 RP 745387",
+   "street": "33 Greenslade Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "8RP745387"
+   ],
+   "resolved_lotplan": "8RP745387"
+  },
+  {
+   "page": 18,
+   "property_number": "38480",
+   "lotplan": "1 RP 701544",
+   "street": "35 Greenslade Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP701544"
+   ],
+   "resolved_lotplan": "1RP701544"
+  },
+  {
+   "page": 18,
+   "property_number": "38600",
+   "lotplan": "28 T 118117",
+   "street": "2 Castling Street, West End 4810",
+   "placename": "Jean Devanny home (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "28T118117"
+   ],
+   "resolved_lotplan": "28T118117"
+  },
+  {
+   "page": 18,
+   "property_number": "38630",
+   "lotplan": "191 EP 1742",
+   "street": "5 Castling Street, West End 4810",
+   "placename": "Currajong",
+   "listing": "State",
+   "lotplan_candidates": [
+    "191EP1742"
+   ],
+   "resolved_lotplan": "191EP1742"
+  },
+  {
+   "page": 18,
+   "property_number": "39380",
+   "lotplan": "1 RP 732245",
+   "street": "22-26 Echlin Street, West End 4810",
+   "placename": "Plaza Cinema (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP732245"
+   ],
+   "resolved_lotplan": "1RP732245"
+  },
+  {
+   "page": 18,
+   "property_number": "39980",
+   "lotplan": "2 RP 709750 3 RP 709750",
+   "street": "96-134 Leigh Street, West End 4810",
+   "placename": "St Peter's Church",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP709750",
+    "3RP709750"
+   ],
+   "resolved_lotplan": "2RP709750"
+  },
+  {
+   "page": 18,
+   "property_number": "40050",
+   "lotplan": "158 RP 701649, 159 RP 701649",
+   "street": "26 Leigh Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "158RP701649",
+    "159RP701649"
+   ],
+   "resolved_lotplan": "158RP701649"
+  },
+  {
+   "page": 18,
+   "property_number": "40100",
+   "lotplan": "148 RP 701649, 149 RP 701649",
+   "street": "16 Leigh Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "148RP701649",
+    "149RP701649"
+   ],
+   "resolved_lotplan": "148RP701649"
+  },
+  {
+   "page": 18,
+   "property_number": "40240",
+   "lotplan": "29 RP 701601",
+   "street": "11 Leigh Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "29RP701601"
+   ],
+   "resolved_lotplan": "29RP701601"
+  },
+  {
+   "page": 18,
+   "property_number": "41480",
+   "lotplan": "52 RP 701649",
+   "street": "11 Edwards Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "52RP701649"
+   ],
+   "resolved_lotplan": "52RP701649"
+  },
+  {
+   "page": 18,
+   "property_number": "41490",
+   "lotplan": "51 RP 701649",
+   "street": "9 Edwards Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "51RP701649"
+   ],
+   "resolved_lotplan": "51RP701649"
+  },
+  {
+   "page": 18,
+   "property_number": "41510",
+   "lotplan": "47 RP 701649 48 RP 701649",
+   "street": "5 Edwards Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "47RP701649",
+    "48RP701649"
+   ],
+   "resolved_lotplan": "47RP701649"
+  },
+  {
+   "page": 18,
+   "property_number": "42120",
+   "lotplan": "1 SP 188739",
+   "street": "40 Percy Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1SP188739"
+   ],
+   "resolved_lotplan": "1SP188739"
+  },
+  {
+   "page": 18,
+   "property_number": "42890",
+   "lotplan": "224 RP 713516",
+   "street": "21-25 Green Street, West End 4810",
+   "placename": "RAAF Operations Building Site (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "224RP713516"
+   ],
+   "resolved_lotplan": "224RP713516"
+  },
+  {
+   "page": 18,
+   "property_number": "43050",
+   "lotplan": "1 RP 712313",
+   "street": "32 William Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP712313"
+   ],
+   "resolved_lotplan": "1RP712313"
+  },
+  {
+   "page": 18,
+   "property_number": "43070",
+   "lotplan": "2 RP 712908",
+   "street": "36 William Street, West End 4810",
+   "placename": "Mona Vale",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP712908"
+   ],
+   "resolved_lotplan": "2RP712908"
+  },
+  {
+   "page": 18,
+   "property_number": "43900",
+   "lotplan": "169 EP 2263, 170 EP 2263",
+   "street": "1-5 Stagpole Street, West End 4810",
+   "placename": "Mater Hospital (former)",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "169EP2263",
+    "170EP2263"
+   ],
+   "resolved_lotplan": "169EP2263"
+  },
+  {
+   "page": 18,
+   "property_number": "44080",
+   "lotplan": "2 RP 725278",
+   "street": "47 Stagpole Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP725278"
+   ],
+   "resolved_lotplan": "2RP725278"
+  },
+  {
+   "page": 18,
+   "property_number": "44310",
+   "lotplan": "254 T 11869",
+   "street": "95 Stagpole Street, West End 4810",
+   "placename": "Wolverton",
+   "listing": "State",
+   "lotplan_candidates": [
+    "254T11869"
+   ],
+   "resolved_lotplan": "254T11869"
+  },
+  {
+   "page": 18,
+   "property_number": "45090",
+   "lotplan": "1 GTP 70153",
+   "street": "77 Harold Street, West End 4810",
+   "placename": "Harold Mini Mart",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1GTP70153"
+   ],
+   "resolved_lotplan": "1GTP70153"
+  },
+  {
+   "page": 18,
+   "property_number": "45170",
+   "lotplan": "1 USL 50891",
+   "street": "13 Scully Street, West End 4810",
+   "placename": "Castle Hill",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1USL50891"
+   ],
+   "resolved_lotplan": "1USL50891"
+  },
+  {
+   "page": 18,
+   "property_number": "45650",
+   "lotplan": "1 RP 701722, 2 RP 701722, 3 RP 701722",
+   "street": "10 Ralston Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "1RP701722",
+    "2RP701722",
+    "3RP701722"
+   ],
+   "resolved_lotplan": "1RP701722"
+  },
+  {
+   "page": 18,
+   "property_number": "46300",
+   "lotplan": "2 RP 701606, 5 RP 701603",
+   "street": "128 Francis Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP701606",
+    "5RP701603"
+   ],
+   "resolved_lotplan": "2RP701606"
+  },
+  {
+   "page": 18,
+   "property_number": "46630",
+   "lotplan": "5 T 118365",
+   "street": "33 Church Street, West End 4810",
+   "placename": "West End Cemetery",
+   "listing": "State",
+   "lotplan_candidates": [
+    "5T118365"
+   ],
+   "resolved_lotplan": "5T118365"
+  },
+  {
+   "page": 18,
+   "property_number": "47900",
+   "lotplan": "134 RP 701591, 135 RP 701591,",
+   "street": "1 North Street, West End 4810",
+   "placename": "Wirrianda",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "134RP701591",
+    "135RP701591"
+   ],
+   "resolved_lotplan": "134RP701591"
+  },
+  {
+   "page": 19,
+   "property_number": "50210",
+   "lotplan": "202 T 118101, 203 T 118101",
+   "street": "28-34 Ingham Road, West End 4810",
+   "placename": "St Mary's Church",
+   "listing": "State",
+   "lotplan_candidates": [
+    "202T118101",
+    "203T118101"
+   ],
+   "resolved_lotplan": "202T118101"
+  },
+  {
+   "page": 19,
+   "property_number": "547145",
+   "lotplan": "707 SP 327134",
+   "street": "37 Ingham Road, West End 4810",
+   "placename": "District Education Centre and Memorial Gates",
+   "listing": "State",
+   "lotplan_candidates": [
+    "707SP327134"
+   ],
+   "resolved_lotplan": "707SP327134"
+  },
+  {
+   "page": 19,
+   "property_number": "50440",
+   "lotplan": "2 RP 709434",
+   "street": "71 Ingham Road, West End 4810",
+   "placename": "West End Uniting Church",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2RP709434"
+   ],
+   "resolved_lotplan": "2RP709434"
+  },
+  {
+   "page": 19,
+   "property_number": "50510",
+   "lotplan": "18 RP 701558, 19 RP 701558",
+   "street": "89 Ingham Road, West End 4810",
+   "placename": "West End Hotel",
+   "listing": "State",
+   "lotplan_candidates": [
+    "18RP701558",
+    "19RP701558"
+   ],
+   "resolved_lotplan": "18RP701558"
+  },
+  {
+   "page": 19,
+   "property_number": "50950",
+   "lotplan": "20 RP 745707",
+   "street": "90 Livingstone Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "20RP745707"
+   ],
+   "resolved_lotplan": "20RP745707"
+  },
+  {
+   "page": 19,
+   "property_number": "50960",
+   "lotplan": "19 RP 745707",
+   "street": "86 Livingstone Street, West End 4810",
+   "placename": "",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "19RP745707"
+   ],
+   "resolved_lotplan": "19RP745707"
+  },
+  {
+   "page": 19,
+   "property_number": "360653",
+   "lotplan": "24 EP 352",
+   "street": "42 Woodstock Avenue, Woodstock 4816",
+   "placename": "Woodstock CWA Hall",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "24EP352"
+   ],
+   "resolved_lotplan": "24EP352"
+  },
+  {
+   "page": 19,
+   "property_number": "360850",
+   "lotplan": "2 EP 1107",
+   "street": "13 Manton Cemetery Road, Woodstock 4816",
+   "placename": "Manton Cemetery",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "2EP1107"
+   ],
+   "resolved_lotplan": "2EP1107"
+  },
+  {
+   "page": 19,
+   "property_number": "501444",
+   "lotplan": "500 E 12466",
+   "street": "132 Bidwilli Road, Woodstock 4816",
+   "placename": "Lansdown Station Homestead Site (former) and Unmarked Grave",
+   "listing": "Local",
+   "lotplan_candidates": [
+    "500E12466"
+   ],
+   "resolved_lotplan": "500E12466"
+  },
+  {
+   "page": 19,
+   "property_number": "508574",
+   "lotplan": "1 SP 233941",
+   "street": "343-345 Stuart Drive, Wulguru 4811",
+   "placename": "Operations and Signals Bunker (former)",
+   "listing": "State",
+   "lotplan_candidates": [
+    "1SP233941"
+   ],
+   "resolved_lotplan": "1SP233941"
+  }
+ ]
+}

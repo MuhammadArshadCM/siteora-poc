@@ -1,3 +1,9 @@
+-- SUPERSEDED — kept for history only. This file was always incomplete (it only ever \i'd db/001-040; it
+-- never included db/041-069 at all) and gave no record of what had actually been applied to any given
+-- database. Building a fresh database now goes through server-ts/src/migrations/ (TypeORM) instead:
+--   cd server-ts && npm run migration:run
+-- See README.md's "Database migrations" section for the full story.
+--
 -- Load the full regulatory dataset into an empty database:
 --   psql -d <db> -v ON_ERROR_STOP=1 -f db/load_all.sql      (run from the repository root)
 \i db/001_schema.sql

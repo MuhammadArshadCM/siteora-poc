@@ -20,6 +20,8 @@
   label { display:flex; flex-direction:column; gap:4px; font-size:12px; color:var(--mute); }
   input, select { font:inherit; padding:7px 8px; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); }
   .wide { grid-column:span 3; } .full { grid-column:1 / -1; }
+  #dynamicInputs { display:contents; }
+  #dynamicInputs .hdr { font-size:13px; font-weight:600; color:var(--ink); margin-top:4px; }
   .checks { display:flex; gap:16px; flex-wrap:wrap; grid-column:span 4; }
   .checks label { flex-direction:row; align-items:center; gap:6px; color:var(--ink); font-size:13px; }
   button { font:inherit; padding:8px 16px; border:0; border-radius:6px; background:var(--accent); color:#fff; cursor:pointer; }
@@ -39,7 +41,10 @@
   tr.w-conditional { border-left:3px solid var(--warn); } tr.w-supplement { border-left:3px solid var(--accent); }
   tr.w-primary { border-left:3px solid var(--ok); } tr.w-subsumed { border-left:3px solid var(--line); opacity:.65; }
   tr.w-displaced { border-left:3px solid #b42318; opacity:.7; }
-  .relnote { font-size:12px; margin-top:4px; }
+  /* pending = the sole candidate for this boundary, but its own value is not known yet (MANUAL REVIEW) -- never
+     green (nothing applies "today" here), dashed purple to match the MANUAL REVIEW badge colour. */
+  tr.w-pending { border-left:3px dashed var(--review); }
+  .relnote { font-size:12px; margin-top:4px; white-space:normal; }
   .relnote.conditional { color:var(--warn); } .relnote.supplement { color:var(--accent); }
   .BUILDING { background:#e8eefc; color:var(--accent); } .PLANNING { background:#fdf1e1; color:var(--warn); }
   .POOL_SAFETY { background:#fde8e8; color:#b42318; } .INFRASTRUCTURE { background:#eef0f3; color:var(--mute); }
@@ -77,23 +82,16 @@
       <label>Width (m)<input name="width_m" type="number" step="0.1" value="4"></label>
       <label>Mean height (m)<input name="mean_height_m" type="number" step="0.1" placeholder="= height"></label>
       <label>Lot slope (%)<input name="lot_slope_pct" type="number" step="0.5" placeholder="unknown"></label>
-      <label>Neighbour window (m)<input name="window_distance_m" type="number" step="0.1" placeholder="unknown"></label>
       <label>Existing outbuildings (m²)<input name="existing_outbuildings_m2" type="number" step="1" placeholder="0"></label>
-      <label title="An existing detached dwelling's road setback on the adjoining lot — lets the road setback align with it instead of the default 6 m (QDC MP 1.1/1.2 A1(a)(ii)/(iii)), where a council rule allows it">
-        Neighbour 1 road setback (m)<input name="adjoining_setback_1_m" type="number" step="0.1" placeholder="unknown"></label>
-      <label title="The adjoining lot on the other side, if it also has an existing detached dwelling">
-        Neighbour 2 road setback (m)<input name="adjoining_setback_2_m" type="number" step="0.1" placeholder="unknown"></label>
-      <label title="Gold Coast Emerging community zone: the setbacks and site cover depend on it">Lot from a residential subdivision<select name="lot_from_residential_subdivision">
-        <option value="">unknown</option><option value="yes">yes</option><option value="no">no</option></select></label>
       <label>Assessment date<input name="date" type="date"></label>
       <label>Zone (override)<select name="zone_id" id="zone"><option value="">from council map</option></select></label>
+      <label title="Only needed when the council map's zone has more than one precinct and the automatic match is ambiguous or wrong (e.g. Moreton Bay's Emerging Community 'Transition' precinct). Filtered to the zone selected above, if any.">
+        Precinct (override)<select name="precinct" id="precinct"><option value="">from council map</option></select></label>
       <div class="checks">
-        <label><input type="checkbox" name="is_roofed" checked> Roofed</label>
-        <label><input type="checkbox" name="is_enclosed" checked> Enclosed</label>
-        <label><input type="checkbox" name="is_attached_to_dwelling"> Attached to house</label>
-        <label><input type="checkbox" name="is_corner_lot"> Corner lot</label>
-        <label><input type="checkbox" name="adjoins_canal_or_lake"> Next to canal/lake</label>
+        <label title="Needed before the lookup even runs: a corner lot gets an extra SECONDARY_FRONTAGE_ROAD boundary pass, which has to be decided before the council/zone/rules for that boundary can be resolved. The only one of this row's fields that is genuinely relevant to every property everywhere -- the rest only matter for specific structures or councils, so they are asked below, after the lookup, only when a rule actually needs them.">
+        <input type="checkbox" name="is_corner_lot"> Corner lot</label>
       </div>
+      <div class="full" id="dynamicInputs"></div>
       <div class="checks full" id="scopeChecks">
         <label title="Show only setback rules (front / side / rear / side-and-rear) — no height, site cover, pool or garage-width rules. The location is still looked up, since rules need the zone.">
           <input type="checkbox" id="scopeSetbacks"> Setbacks only</label>
@@ -113,6 +111,35 @@ const req = r => ['IS_TRUE','IS_FALSE'].includes(r.operator) ? (r.operator === '
                : (r.required === 0 && r.operator === '>=') ? 'built to boundary permitted'
                : `${r.operator} ${r.required ?? '?'} ${r.unit ?? ''}`;
 const ORDER = {'':0, 'PRIMARY_FRONTAGE':1, 'SECONDARY_FRONTAGE_ROAD':2, 'SIDE':3, 'REAR':4};
+// QDC MP 1.1 Table A1 street hierarchy (access place/street vs collector) -- auto-derived for most councils from
+// Council's own road-hierarchy map (see server-ts/src/core/geo.ts STREET_HIERARCHY_SOURCES), or set with
+// --street-type / street_type= for councils with no such source, or to override a derived guess known to be wrong.
+function streetTypeHtml(facts) {
+  const st = (facts || {}).street_type;
+  if (!st) return '<span class="warn">Not resolved — manual review</span> <span class="mute">(set street_type=access|collector to resolve)</span>';
+  const label = st.value === 'COLLECTOR' ? 'Collector' : st.value === 'ACCESS_STREET' ? 'Access place/street' : esc(st.value);
+  return `${esc(label)} <span class="mute" title="${esc(st.source || '')}">ⓘ</span>`;
+}
+// Battle-axe/rear lot: pre-filled from a parcel-shape heuristic (handle+body profile, see
+// geo.battleAxeSignal) when the shape gives a clear read either way. It is a shape SIGNAL, not a ground
+// truth -- shown here (not silently applied) so a wrong guess is visible; override with
+// is_battle_axe_lot=yes|no (API/CLI) if the actual driveway/access disagrees with it.
+// Raw DCDB lot_area is 0 for a Building/Group Titles Plan's common property (lot "00000") -- the whole site
+// shared by every unit, not any one unit's own ground lot -- so showing it directly read as "lot size: 0", when
+// the real answer is "no individual lot area here at all". Show the resolved fact (left unset server-side for
+// common property, see engine.ts buildFacts) instead of the raw attribute, and say why when it's missing.
+function lotAreaHtml(p, facts) {
+  if (p.lot === '00000') return '<span class="warn">Common property — no individual lot area</span>';
+  const f = (facts || {}).lot_area_m2;
+  if (!f) return '<span class="mute">—</span>';
+  return `${esc(f.value)} m² <span class="mute" title="${esc(f.source || '')}">ⓘ</span>`;
+}
+function battleAxeHtml(facts) {
+  const f = (facts || {}).is_battle_axe_lot;
+  if (!f) return '<span class="warn">Not resolved — manual review</span> <span class="mute">(answer the "Battle-axe / rear lot" field below, or set is_battle_axe_lot=yes|no to resolve)</span>';
+  const estimated = /^ESTIMATED/.test(f.source || '');
+  return `${f.value ? 'Yes' : 'No'}${estimated ? ' <span class="mute">(estimated — check the driveway)</span>' : ''} <span class="mute" title="${esc(f.source || '')}">ⓘ</span>`;
+}
 let lastLg = null;
 
 // "Setbacks only" / "Maps only": checking one unchecks the other, so the scope sent to the server is never
@@ -147,28 +174,121 @@ function showError(e) {
     <div style="margin-top:8px"><button type="button" onclick="document.querySelector('#f').requestSubmit()">Try again</button></div></div>`;
 }
 
+let allPrecincts = [];
 async function loadZones(lg) {
   if (lg === lastLg) return;
   let z;
   try { z = await api(`/api/zones?lg_id=${encodeURIComponent(lg)}`, 30); }
-  catch { return; }   // the zone list is optional: the form still works without it
+  catch { return; }   // the zone/precinct lists are optional: the form still works without them
   lastLg = lg;
+  allPrecincts = z.precincts;
   const sel = $('#zone'), cur = sel.value;
   sel.innerHTML = '<option value="">from council map</option>' + z.zones.map(x => `<option value="${esc(x.zone_id)}">${esc(x.name)}</option>`).join('');
   sel.value = cur;
+  fillPrecinctOptions();
+}
+
+// The precinct list is filtered to whichever zone is selected above (a precinct belongs to exactly one
+// zone), so re-run this whenever the zone selection changes, not just after a fresh /api/zones load.
+function fillPrecinctOptions() {
+  const zoneId = $('#zone').value, sel = $('#precinct'), cur = sel.value;
+  const list = zoneId ? allPrecincts.filter(p => p.zone_id === zoneId) : allPrecincts;
+  sel.innerHTML = '<option value="">from council map</option>' + list.map(x => `<option value="${esc(x.precinct_id)}">${esc(x.name)}</option>`).join('');
+  sel.value = cur;
+}
+$('#zone').addEventListener('change', fillPrecinctOptions);
+
+// Shown only after a lookup, and only for the facts this property's own manual-review results actually need
+// (d.missing_inputs, computed server-side from the real candidate rules for this council/zone/precinct) --
+// so the form asks for exactly what's relevant here, not every optional field that exists across every council.
+const FIELD_GROUPS = [
+  { facts: ['street_type'], html: () =>
+    `<label title="QDC MP 1.1 Table A1: the frontage street's functional classification. Auto-derived for most councils; set this yourself if it came back unresolved, or to override a derived guess you know is wrong.">
+      Street type<select name="street_type"><option value="">unknown</option><option value="access">Access place/street</option><option value="collector">Collector</option></select></label>` },
+  { facts: ['distance_to_adjoining_habitable_window_m'], html: () =>
+    `<label class="full" title="Distance from this structure to the nearest required habitable-room window of an adjoining dwelling.">Neighbour window (m)
+      <input name="window_distance_m" type="number" step="0.1" placeholder="unknown">
+      <span class="mute" style="font-size:11px;font-weight:400">Left blank, the privacy/screening rule shown below stays <b>MANUAL REVIEW</b> — it is never assumed to be far enough away. Enter the distance and press "Find rules" again to turn it <b>DETERMINED</b> (green).</span></label>` },
+  { facts: ['btb_length_on_boundary_m'], html: () =>
+    `<label title="QDC A2(d): the 9 m built-to-boundary limit counts every building or part along this boundary, including the existing house -- not just this structure.">Other building (e.g. house) also within 1.5 m of this boundary?<select name="other_building_on_boundary">
+      <option value="">unknown</option><option value="yes">yes</option><option value="no">no</option></select>
+      <span class="mute" style="font-size:11px;font-weight:400">Answer "no" and this structure's own footprint is used as the total. Answer "yes" (or leave this blank) and the row below stays <b>MANUAL REVIEW</b> until you give the actual combined length -- guessing "no" when something else is there could understate the true total and wrongly clear a boundary that's really over the limit.</span></label>
+      <label class="full" title="Combined length of every building/part within the clearance along this boundary, including the existing house.">Combined length on this boundary (m)
+      <input name="btb_length_m" type="number" step="0.1" placeholder="unknown"></label>` },
+  { facts: ['lot_from_residential_subdivision'], html: () =>
+    `<label title="Gold Coast Emerging community zone: the setbacks and site cover depend on it">Lot from a residential subdivision<select name="lot_from_residential_subdivision">
+      <option value="">unknown</option><option value="yes">yes</option><option value="no">no</option></select></label>` },
+  { facts: ['is_battle_axe_lot'], html: () =>
+    `<label title="Battle-axe/rear lot: behind another lot, reached by a narrow access handle rather than directly fronting the street.">Battle-axe / rear lot<select name="is_battle_axe_lot">
+      <option value="">unknown</option><option value="yes">yes</option><option value="no">no</option></select>
+      <span class="mute" style="font-size:11px;font-weight:400">Shown because the parcel shape didn't give a clear read either way (see "Battle-axe / rear lot" above). Some councils require a <i>larger</i> setback on a rear lot than the general figure, so this is never assumed "no" — left blank, the rear-lot rule below stays <b>MANUAL REVIEW</b>.</span></label>` },
+  { facts: ['carport_is_unenclosed'], html: () =>
+    `<label title="Logan's 6m x 6m built-to-boundary carport concession (Table 9.3.2.3.1 AO4(a)).">Carport is unenclosed (Logan)<select name="carport_is_unenclosed">
+      <option value="">unknown</option><option value="yes">yes</option><option value="no">no</option></select>
+      <span class="mute" style="font-size:11px;font-weight:400">Open on the front and both sides — no garage doors or walls there. The rear may attach to the house; that still counts as "unenclosed" here, so this is a different, narrower question than "Roofed/Enclosed" below. Left blank, the built-to-boundary row below stays <b>MANUAL REVIEW</b> instead of assuming either way — getting it wrong would swap a full road setback for a built-to-boundary allowance or vice versa.</span></label>` },
+  { facts: ['is_roofed', 'is_enclosed'], html: () =>
+    `<label title="QDC MP 1.1/1.2 A2(c) (and the Queensland Housing Code's 'covered outdoor room' rows): whether this structure is roofed, and whether it's enclosed by walls.">Roofed<select name="is_roofed">
+      <option value="">unknown</option><option value="yes">yes</option><option value="no">no</option></select></label>
+      <label>Enclosed<select name="is_enclosed"><option value="">unknown</option><option value="yes">yes</option><option value="no">no</option></select>
+      <span class="mute" style="font-size:11px;font-weight:400">Same meaning in every council (it is a State code test, not a council-specific one) — but only relevant for an outdoor/pergola-type structure, which is why it is asked here rather than always: a true ornamental pergola is normally open/unroofed, which is the state of affairs the exemption below actually tests for. Left blank, that row stays <b>MANUAL REVIEW</b> rather than assuming either way.</span></label>` },
+  { facts: ['is_attached_to_dwelling'], html: () =>
+    `<label title="Gold Coast, Moreton Bay and Logan only: freestanding (detached) garages/carports/outbuildings have a different height limit than ones attached to the dwelling.">Attached to the house<select name="is_attached_to_dwelling">
+      <option value="">unknown</option><option value="yes">yes</option><option value="no">no</option></select>
+      <span class="mute" style="font-size:11px;font-weight:400">Shown because this council's height limit for this structure depends on it. Not asked for councils whose rules don't use this distinction.</span></label>` },
+  { facts: ['adjoins_canal_or_lake'], html: () =>
+    `<label title="Redland and Sunshine Coast only: a canal/lake-frontage lot has its own, larger boundary clearance for buildings and structures (including outbuildings and pools).">Lot adjoins a canal or lake<select name="adjoins_canal_or_lake">
+      <option value="">unknown</option><option value="yes">yes</option><option value="no">no</option></select>
+      <span class="mute" style="font-size:11px;font-weight:400">Never assumed "no": that clearance (4.5-9 m depending on council) is <i>larger</i> than the general setback, so guessing "not waterfront" could understate the real requirement for a lot that actually is. Left blank, the canal/lake-specific row stays <b>MANUAL REVIEW</b>.</span></label>` },
+  { facts: ['pre1946_neighbour_avg_front_setback_m'], html: () =>
+    `<label class="full" title="Brisbane Traditional building character overlay only: average front setback of the nearest pre-1946 houses on the same street.">Avg. pre-1946 neighbour setback (m)
+      <input name="pre1946_setback_m" type="number" step="0.1" placeholder="unknown">
+      <span class="mute" style="font-size:11px;font-weight:400">This lot is in Brisbane's Traditional building character overlay, so this rule applies — but the actual figure needs a site/aerial-photo check of which neighbouring houses are pre-1946 and how far back they sit; it is never guessed. Left blank it stays <b>MANUAL REVIEW</b>; enter it and resubmit to turn it <b>DETERMINED</b> (green).</span></label>` },
+  { facts: ['solid_wall_between_pool_and_boundary_height_m', 'solid_wall_top_above_coping_m'], html: () =>
+    `<label title="QDC A2(e): a pool may come within the standard clearance (down to 0 m) behind a solid wall/fence that is tall enough, built between the pool and this boundary.">Pool boundary wall height (m)
+      <input name="pool_wall_height_m" type="number" step="0.1" placeholder="unknown"></label>
+      <label title="How far the top of that wall/fence sits above the pool coping.">Wall top above coping (m)
+      <input name="pool_wall_top_above_coping_m" type="number" step="0.1" placeholder="unknown">
+      <span class="mute" style="font-size:11px;font-weight:400">Needs >= 1.8 m wall height and >= 1.0 m above coping to qualify. Left blank, the row below stays <b>MANUAL REVIEW</b> rather than assuming no wall — the standard clearance above still applies either way.</span></label>` },
+  { facts: ['has_adjoining_dwelling', 'adjoining_road_setbacks_m', 'adjoining_dwellings_both_sides', 'any_adjoining_setback_3_to_6m', 'both_adjoining_setbacks_le_3m'], html: () =>
+    `<label title="An existing detached dwelling's road setback on the adjoining lot — lets the road setback align with it instead of the default (QDC MP 1.1/1.2 A1(a)(ii)/(iii)), where a council rule allows it">
+      Neighbour 1 road setback (m)<input name="adjoining_setback_1_m" type="number" step="0.1" placeholder="unknown"></label>
+      <label title="The adjoining lot on the other side, if it also has an existing detached dwelling">
+      Neighbour 2 road setback (m)<input name="adjoining_setback_2_m" type="number" step="0.1" placeholder="unknown"></label>` },
+];
+let lastInputsAddress = null, shownFieldGroups = new Set();
+function renderDynamicInputs(missing, address) {
+  if (address !== lastInputsAddress) { lastInputsAddress = address; shownFieldGroups = new Set(); }   // new property: start over
+  const box = $('#dynamicInputs'), prev = {};
+  box.querySelectorAll('input, select').forEach(el => { prev[el.name] = el.value; });   // keep what's already typed
+  const have = new Set((missing || []).map(m => m.fact));
+  // Once a field has been shown for this property, keep it in the form even after its rule resolves -- otherwise
+  // the input vanishes the moment it's answered and there is no way to go back and correct it.
+  for (const g of FIELD_GROUPS) if (g.facts.some(f => have.has(f))) shownFieldGroups.add(g);
+  const matched = FIELD_GROUPS.filter(g => shownFieldGroups.has(g));
+  const covered = new Set(matched.flatMap(g => g.facts));
+  const leftover = (missing || []).filter(m => !covered.has(m.fact));
+  if (!matched.length && !leftover.length) { box.innerHTML = ''; return; }
+  box.innerHTML = '<div class="hdr full">Inputs specific to this property'
+    + '<div class="mute" style="font-weight:400;font-size:11px;margin-top:2px">Shown only because a rule below needs them and is sitting at '
+    + '<b>MANUAL REVIEW</b> (purple). Left blank, that rule is never guessed or defaulted to a fallback — it stays manual review. '
+    + 'Fill one in and press "Find rules" again: only then does that row\'s badge turn <b>DETERMINED</b> (green).</div></div>'
+    + matched.map(g => g.html()).join('')
+    + (leftover.length ? `<div class="full mute" style="font-size:12px">Also unresolved, with no direct input yet: `
+      + leftover.map(m => `<b>${esc(m.fact)}</b> (${esc(m.description || '')})`).join('; ') + '</div>' : '');
+  box.querySelectorAll('input, select').forEach(el => { if (el.name in prev) el.value = prev[el.name]; });
 }
 
 $('#f').addEventListener('submit', async ev => {
   ev.preventDefault();
   const fd = new FormData(ev.target), qs = new URLSearchParams();
   for (const [k, v] of fd) if (v !== '') qs.append(k, v === 'on' ? 'yes' : v);
-  for (const k of ['is_roofed','is_enclosed','is_attached_to_dwelling','is_corner_lot','adjoins_canal_or_lake']) if (!fd.has(k)) qs.set(k, 'no');
+  if (!fd.has('is_corner_lot')) qs.set('is_corner_lot', 'no');
   if (scopeSetbacks.checked) qs.set('scope', 'setbacks');
   else if (scopeMaps.checked) qs.set('scope', 'maps');
   $('#go').disabled = true; $('#out').innerHTML = '<div class="card mute">Looking up the property and resolving rules…</div>';
   try {
     const d = await api('/api/rules?' + qs);
-    try { render(d); }
+    try { render(d); renderDynamicInputs(d.missing_inputs || [], d.location.geocode ? d.location.geocode.address : `${d.location.lat},${d.location.lon}`); }
     catch (e) { console.error(e); throw new Error(`The result could not be displayed (${e.message}). Please report this with the address used.`); }
     loadZones(d.location.council.lg_id);
   } catch (e) { showError(e); }
@@ -184,12 +304,14 @@ function render(d) {
     <div><span>Matched address</span>${esc(L.geocode ? L.geocode.address : `${L.lat}, ${L.lon}`)}</div>
     <div><span>Council</span>${esc(L.council.lga_name)}</div>
     <div><span>Lot / plan</span>${esc(p.lotplan ?? '—')}</div>
-    <div><span>Lot area</span>${esc(p.lot_area ?? '—')} m²</div>
+    <div><span>Lot area</span>${lotAreaHtml(p, d.facts)}</div>
     <div><span>Boundary accuracy</span><span class="${p.boundary_accuracy_m > 0.5 || p.boundary_accuracy_m === null ? 'warn' : ''}"
       title="${esc(p.boundary_accuracy_code || '')}">${p.boundary_accuracy_m != null ? `±${esc(p.boundary_accuracy_m)} m` : 'unknown'}</span>
       <span class="mute">(State cadastre${p.boundary_surveyed ? ', surveyed' : ''})</span></div>
     <div><span>Zone</span>${esc(zoneName || z.zone_id || 'unknown')}${z.manual ? ' <span class="mute">(manual)</span>' : ''}</div>
     <div><span>Precinct</span>${esc(precincts || '—')}</div>
+    <div><span>Street type</span>${streetTypeHtml(d.facts)}</div>
+    <div><span>Battle-axe / rear lot</span>${battleAxeHtml(d.facts)}</div>
     <div><span>Overlays</span>${esc((L.overlays || []).map(o => `${o.name} (${o.text})`).join('; ') || (L.overlays ? 'none found' : '—'))}</div>
     <div><span>Neighbourhood / local plan</span>${esc([...z.local_plans, ...z.local_plan_precincts].join(', ') || (z.from_map && z.from_map.local_plan_text) || '—')}</div>
     <div><span>Est. lot width × depth</span>${esc(p.est_width_m ?? '—')} × ${esc(p.est_depth_m ?? '—')} m</div>
@@ -198,45 +320,84 @@ function render(d) {
     ${d.warnings.length ? `<ul class="warn">${d.warnings.map(w => `<li>${esc(w)}</li>`).join('')}</ul>` : ''}</div>`;
 
   if (showSetbacks) {
-    const WEIGHT_ORDER = {primary: 0, conditional: 1, supplement: 2, subsumed: 3, displaced: 4};
-    const rules = [...d.rules].sort((a, b) => (ORDER[a.boundary || ''] - ORDER[b.boundary || '']) || a.regime.localeCompare(b.regime)
-      || (WEIGHT_ORDER[a.weight || 'primary'] - WEIGHT_ORDER[b.weight || 'primary']));
+    const WEIGHT_ORDER = {primary: 0, pending: 0, conditional: 1, supplement: 2, subsumed: 3, displaced: 4};
+    const rules = [...d.rules];
+    // Display-only, and the same for every council's rules (this is driven purely by weight/state/relations, never
+    // by which rule_id or instrument it is): an OVERRIDES/REPLACES winner that itself can't be resolved yet
+    // (MANUAL_REVIEW, pending a property-specific input) must not be shown as the governing row — the rule it
+    // displaced is the one actually determined and in force right now. Swap which row reads as primary/green vs
+    // displaced/red for rendering only; this never changes what the server computed, just which row the page
+    // highlights.
+    for (const r of rules) {
+      if (r.weight !== 'displaced' || r.state !== 'DETERMINED') continue;
+      const rel = (r.relations || []).find(x => x.type === 'OVERRIDES' || x.type === 'REPLACES');
+      const winner = rel && rules.find(o => o.rule === rel.rule && o.boundary === r.boundary);
+      if (winner && winner.weight === 'primary' && winner.state === 'MANUAL_REVIEW') (winner._candidates || (winner._candidates = [])).push(r);
+    }
+    // An unresolved rule's override list can name several already-redundant fallbacks at once -- e.g. both the
+    // QDC/MP state baseline AND the council rule that already supersedes that baseline on its own, independent of
+    // this unresolved rule. Promoting every one of them would show several contradictory "green" rows for one
+    // boundary. Only the most specific survivor (not a QDC/MP/QHC state provision) is actually "in force" as the
+    // interim answer; the state baseline stays displaced exactly as it would be even without this unresolved rule.
+    const isStateBaseline = id => /^(QDC|MP\d|QHC)/.test(id);
+    for (const r of rules) {
+      if (!r._candidates) continue;
+      const picked = r._candidates.find(c => !isStateBaseline(c.rule)) || r._candidates[0];
+      picked.effWeight = 'primary'; r.effWeight = 'displaced'; r.pendingBy = picked;
+    }
+    // A "primary" row left MANUAL REVIEW with nothing to swap against (no fallback rule, or its would-be fallback
+    // is unresolved too) is never shown green — green means "this is the number that applies today", which isn't
+    // true for an unresolved row. Dashed purple (see tr.w-pending) instead, same colour as the MANUAL REVIEW badge.
+    for (const r of rules) if (!r.effWeight) r.effWeight = (r.weight === 'primary' && r.state === 'MANUAL_REVIEW') ? 'pending' : r.weight;
+    rules.sort((a, b) => (ORDER[a.boundary || ''] - ORDER[b.boundary || '']) || a.regime.localeCompare(b.regime)
+      || (WEIGHT_ORDER[a.effWeight || 'primary'] - WEIGHT_ORDER[b.effWeight || 'primary']));
     // Explains, in the row itself, whether this is the number that applies today or one that only applies instead
     // of (conditional) / together with (supplement) a sibling row — so several rows on one boundary never look like
     // unranked, competing answers.
     const relNote = r => {
-      if (r.weight === 'conditional') {
+      if (r.pendingBy) return `<div class="relnote" style="color:#b42318">This rule's own figure isn't known yet — enter the input(s) `
+        + `in the form above to resolve it. Until then, "${esc(r.pendingBy.title)}" is the figure that applies instead.</div>`;
+      if (r.effWeight === 'conditional') {
         const base = (r.relations || []).find(x => x.type === 'RELAXES');
+        if (r.state === 'MANUAL_REVIEW') return `<div class="relnote" style="color:#b42318">Whether this replaces `
+          + (base ? `"${esc(base.title)}" above` : 'the row above') + ` isn't known yet — enter the input(s) in the form above to resolve it.</div>`;
         return base ? `<div class="relnote conditional">Only replaces "${esc(base.title)}" if the conditions on this row are met.</div>` : '';
       }
-      if (r.weight === 'supplement') {
+      if (r.effWeight === 'supplement') {
         const other = (r.relations || [])[0];
         return other ? `<div class="relnote supplement">Applies together with "${esc(other.title)}" — not an alternative to it.</div>` : '';
       }
-      if (r.weight === 'subsumed') {
+      if (r.effWeight === 'subsumed') {
         const stricter = (r.relations || []).find(x => x.type === 'SUBSUMED_BY');
         return stricter ? `<div class="relnote mute">Already satisfied by the stricter "${esc(stricter.title)}" below — not an extra requirement to meet separately.</div>` : '';
       }
-      if (r.weight === 'displaced') {
+      if (r.effWeight === 'displaced') {
         const winner = (r.relations || [])[0];
         return winner ? `<div class="relnote" style="color:#b42318">Replaced by "${esc(winner.title)}" above — shown for reference only, does not apply here.</div>` : '';
       }
       const relaxedBy = (r.relations || []).find(x => x.type === 'RELAXES' && x.direction === 'to');
+      if (r.effWeight === 'pending') return `<div class="relnote" style="color:#b42318">Needs the input(s) in the form above to resolve — `
+        + `nothing else applies instead, this is the only rule for this boundary.`
+        + (relaxedBy ? ` A closer setback may also be allowed — see "${esc(relaxedBy.title)}" below.` : '') + `</div>`;
       return relaxedBy ? `<div class="relnote mute">A closer setback may be allowed — see "${esc(relaxedBy.title)}" below.</div>` : '';
     };
-    h += `<div class="card"><h3 style="margin-top:0">Applicable rules — ${esc(d.structure.label)}</h3>
+    const conf = d.confidence;
+    h += `<div class="card"><h3 style="margin-top:0">Applicable rules — ${esc(d.structure.label)}</h3>` +
+      (conf ? `<p style="margin:0 0 8px"><span class="tag ${conf.manual_review === 0 ? 'DETERMINED' : 'MANUAL_REVIEW'}">${esc(conf.summary)}</span></p>` : '') + `
       <p class="mute" style="font-size:12px;margin:0 0 8px">Where more than one rule targets the same boundary: a
       <span style="border-left:3px solid var(--ok);padding-left:4px">green-edged</span> row is the number that applies
       today; an <span style="border-left:3px solid var(--warn);padding-left:4px">amber-edged</span> row only replaces
       it if its own conditions are met; a <span style="border-left:3px solid var(--accent);padding-left:4px">blue-edged</span>
       row applies together with its paired row, not instead of it; a faded grey-edged row is already met once the
       stricter row is, and is not a separate requirement; a <span style="border-left:3px solid #b42318;padding-left:4px">faded
-      red-edged</span> row is the one a council rule has replaced outright (e.g. the QDC baseline) — shown for reference, not applicable here.</p><table>
+      red-edged</span> row is the one a council rule has replaced outright (e.g. the QDC baseline) — shown for reference, not applicable here;
+      a <span style="border-left:3px dashed var(--review);padding-left:4px">dashed purple</span> row is Manual review with nothing to fall
+      back on — fill in the input(s) it names to resolve it.</p><table>
       <tr><th>Boundary</th><th>Requirement</th><th>Rule</th><th>Source</th><th>Status</th></tr>` +
       rules.map(r => {
         const src = (r.source_detail || [])[0] || {};
         const where = r.boundary || (r.topic === 'SETBACK.WATERWAY' ? 'canal/lake boundary' : 'whole lot');
-        return `<tr class="w-${r.weight || 'primary'}"><td>${esc(where.replaceAll('_', ' ').toLowerCase())}</td>
+        return `<tr class="w-${r.effWeight || 'primary'}"><td>${esc(where.replaceAll('_', ' ').toLowerCase())}</td>
           <td class="req">${esc(req(r))}<div class="mute" style="font-weight:400">${esc(r.topic)}</div>${relNote(r)}</td>
           <td>${esc(r.title)}<div><span class="tag ${r.regime}">${esc(r.regime)}</span>
               ${r.on_noncompliance ? `<span class="mute"> if not met: ${esc(r.on_noncompliance.replaceAll('_', ' ').toLowerCase())}</span>` : ''}</div>

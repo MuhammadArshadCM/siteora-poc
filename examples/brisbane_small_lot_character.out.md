@@ -4,12 +4,12 @@
 - [BUILDING] HEIGHT.BUILDING : <= 9.5 m  [DETERMINED]
     BCC.C.SL_HEIGHT@2026-09-18 — Small lot (LDR, CR, LMR 2-storey mix): height 7.5 m at side/rear walls rising at no more than 30 degrees to 9.5 m, 2 storeys
     source: Brisbane City Plan 2014 (v37.00/2026) — 9.3.8.3 Table 9.3.8.3.A, PO3/AO3
-- [BUILDING] SETBACK.FRONTAGE (PRIMARY_FRONTAGE): >= 4.5 m  [DETERMINED]
-    BCC.C.SL_FRONT_PRIMARY@2026-09-18 — Small lot: primary street setback 6 m / least adjoining setback (min 3 m) / 3 m if no adjoining house
-    source: Brisbane City Plan 2014 (v37.00/2026) — 9.3.8.3 Table 9.3.8.3.A, PO5/AO5(a)
 - [BUILDING] SETBACK.FRONTAGE (PRIMARY_FRONTAGE): >= None m  [MANUAL_REVIEW]
     BCC.C.TBC_FRONT_SETBACK_AVERAGE@2026-09-18 — Character overlay (LMR, CR zones): front setback within 20% of the average of nearby pre-1946 houses (excl. eaves, stairs, garage)
     source: Brisbane City Plan 2014 (v37.00/2026) — 8.2.22.3 Table 8.2.22.3, PO1/AO1.2
+- [BUILDING] SETBACK.FRONTAGE (PRIMARY_FRONTAGE): >= 4.5 m  [DETERMINED]
+    BCC.C.SL_FRONT_PRIMARY@2026-09-18 — Small lot: primary street setback 6 m / least adjoining setback (min 3 m) / 3 m if no adjoining house
+    source: Brisbane City Plan 2014 (v37.00/2026) — 9.3.8.3 Table 9.3.8.3.A, PO5/AO5(a)
 - [BUILDING] SETBACK.REAR (REAR): >= 6 m  [DETERMINED]
     BCC.C.SL_REAR@2026-09-18 — Small lot: rear setback 6 m (lot deeper than 25 m) or 3 m / 4.5 m by height (lot 25 m deep or less) — applies to all buildings and structures
     source: Brisbane City Plan 2014 (v37.00/2026) — 9.3.8.3 Table 9.3.8.3.A, PO7/AO7
@@ -22,6 +22,9 @@
 - [BUILDING] SITE_COVER : <= 60 %  [DETERMINED]
     BCC.C.SL_SITE_COVER@2026-09-18 — Small lot: site cover 50% (400 m2+), 60% (300-400), 70% (200-300), 80% (under 200)
     source: Brisbane City Plan 2014 (v37.00/2026) — 9.3.8.3 Table 9.3.8.3.A, PO8/AO8
+- [FIRE_SAFETY] CONSTRUCTION.FIRE_SEPARATION : must hold  [MANUAL_REVIEW]
+    NCC.PT9_2.CLASS10A_FIRE_SEPARATION@2022-05-01 — Class 10a wall within 900 mm of a boundary (not a road) or 1.8 m of another building must be fire-separated construction
+    source: National Construction Code (NCC 2022, adopted Housing Provisions (Volume Two equivalent)) — 9.2.4(1)(a), 9.2.5; 9.2.4(1)(b), 9.2.6
 - [INFRASTRUCTURE] INFRASTRUCTURE.SEPARATION : >= 1.2 m  [MANUAL_REVIEW]
     MP14.A2_1.FOOTING_1_2M@2014-12-15 — Wall/footing/pile/pier/floor at least 1.2 m from infrastructure centreline (not light-weight Class 10)
     source: QDC MP 1.4 - Building over or near relevant infrastructure (Version 1.2, published 13 November 2014) — A2.1(2)
@@ -51,12 +54,12 @@
 - [BUILDING] HEIGHT.BUILDING : <= 9.5 m  [DETERMINED]
     BCC.C.SL_HEIGHT@2026-09-18 — Small lot (LDR, CR, LMR 2-storey mix): height 7.5 m at side/rear walls rising at no more than 30 degrees to 9.5 m, 2 storeys
     source: Brisbane City Plan 2014 (v37.00/2026) — 9.3.8.3 Table 9.3.8.3.A, PO3/AO3
-- [BUILDING] SETBACK.FRONTAGE (PRIMARY_FRONTAGE): >= 4.5 m  [DETERMINED]
-    BCC.C.SL_FRONT_PRIMARY@2026-09-18 — Small lot: primary street setback 6 m / least adjoining setback (min 3 m) / 3 m if no adjoining house
-    source: Brisbane City Plan 2014 (v37.00/2026) — 9.3.8.3 Table 9.3.8.3.A, PO5/AO5(a)
 - [BUILDING] SETBACK.FRONTAGE (PRIMARY_FRONTAGE): >= None m  [MANUAL_REVIEW]
     BCC.C.TBC_FRONT_SETBACK_AVERAGE@2026-09-18 — Character overlay (LMR, CR zones): front setback within 20% of the average of nearby pre-1946 houses (excl. eaves, stairs, garage)
     source: Brisbane City Plan 2014 (v37.00/2026) — 8.2.22.3 Table 8.2.22.3, PO1/AO1.2
+- [BUILDING] SETBACK.FRONTAGE (PRIMARY_FRONTAGE): >= 4.5 m  [DETERMINED]
+    BCC.C.SL_FRONT_PRIMARY@2026-09-18 — Small lot: primary street setback 6 m / least adjoining setback (min 3 m) / 3 m if no adjoining house
+    source: Brisbane City Plan 2014 (v37.00/2026) — 9.3.8.3 Table 9.3.8.3.A, PO5/AO5(a)
 - [BUILDING] SETBACK.REAR (REAR): >= 6 m  [DETERMINED]
     BCC.C.SL_REAR@2026-09-18 — Small lot: rear setback 6 m (lot deeper than 25 m) or 3 m / 4.5 m by height (lot 25 m deep or less) — applies to all buildings and structures
     source: Brisbane City Plan 2014 (v37.00/2026) — 9.3.8.3 Table 9.3.8.3.A, PO7/AO7
@@ -69,6 +72,9 @@
 - [BUILDING] SITE_COVER : <= 60 %  [DETERMINED]
     BCC.C.SL_SITE_COVER@2026-09-18 — Small lot: site cover 50% (400 m2+), 60% (300-400), 70% (200-300), 80% (under 200)
     source: Brisbane City Plan 2014 (v37.00/2026) — 9.3.8.3 Table 9.3.8.3.A, PO8/AO8
+- [FIRE_SAFETY] CONSTRUCTION.FIRE_SEPARATION : must hold  [MANUAL_REVIEW]
+    NCC.PT9_2.CLASS10A_FIRE_SEPARATION@2022-05-01 — Class 10a wall within 900 mm of a boundary (not a road) or 1.8 m of another building must be fire-separated construction
+    source: National Construction Code (NCC 2022, adopted Housing Provisions (Volume Two equivalent)) — 9.2.4(1)(a), 9.2.5; 9.2.4(1)(b), 9.2.6
 - [INFRASTRUCTURE] INFRASTRUCTURE.SEPARATION : >= 1.2 m  [MANUAL_REVIEW]
     MP14.A2_1.FOOTING_1_2M@2014-12-15 — Wall/footing/pile/pier/floor at least 1.2 m from infrastructure centreline (not light-weight Class 10)
     source: QDC MP 1.4 - Building over or near relevant infrastructure (Version 1.2, published 13 November 2014) — A2.1(2)

@@ -5,7 +5,7 @@
     "zone_layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Zoning_opendata/FeatureServer/0",
     "zone_field": "LVL2_ZONE",
     "precinct_field": "ZONE_PREC",
-    "notes": "Brisbane City Plan 2014 open data (edited 2026-09-17). LVL2_ZONE carries the precinct in brackets, e.g. 'Character residential (Character)'. The zoning layer's NP / NP_PREC fields are empty or repeat the zone precinct (checked 12 Oct 2026), so neighbourhood plans come from the separate NP boundary / precinct layers. Overlays: Traditional building character (sub-category in OVL2_DESC) and Dwelling house character. Not looked up: Pre-1911 building, flood, heritage and other overlays.",
+    "notes": "Brisbane City Plan 2014 open data (edited 2026-09-17). LVL2_ZONE carries the precinct in brackets, e.g. 'Character residential (Character)'. The zoning layer's NP / NP_PREC fields are empty or repeat the zone precinct (checked 12 Oct 2026), so neighbourhood plans come from the separate NP boundary / precinct layers. Overlays: Traditional building character (sub-category in OVL2_DESC) and Dwelling house character. Heritage, Pre-1911 building and Flood overlays (added 3 Nov 2026) are wired as informational hits only: researched against City Plan 2014's own Heritage overlay code (8.2.12) and Flood overlay code (8.2.11) text plus the existing Pre-1911/Table 5.3.4.1 rule -- none sets a numeric Class 10 siting standard (Heritage overlay's PO1-PO5/PO16-PO24 explicitly carry 'No acceptable outcome is prescribed'; Flood overlay only sets floor-level freeboard; Pre-1911 only changes accepted-development category). All three raise the assessment category but QDC/QHC still governs the actual setback, so no new SETBACK rule was added (db/041; open issue resolved). Added 3 Nov 2026: QDC MP 1.1 Table A1 (primary frontage setback by street hierarchy) is now auto-resolved from Council's own Road hierarchy layer (server-ts/src/core/geo.ts, STREET_HIERARCHY_SOURCES.BRISBANE) -- ROUTE_TYPE 'Neighbourhood / local' -> access place/access street row, 'District' -> collector row, 'Arterial'/'Future Arterial' stays unresolved (outside Table A1's coverage).",
     "local_plan_layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Neighbourhood_Plan_boundaries/FeatureServer/0",
     "local_plan_layer_field": "LP",
     "local_plan_precinct_layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Neighbourhood_Plan_precints/FeatureServer/0",
@@ -35,6 +35,62 @@
             "BCC:OV:DWELLING_HOUSE_CHARACTER_OVERLAY"
           ]
         }
+      },
+      {
+        "name": "Heritage overlay (Local heritage place)",
+        "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Hertiage_overlay_Local_heritage_area/FeatureServer/0",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": ["BCC:OV:HERITAGE_OVERLAY_LOCAL_HERITAGE_AREA"]
+        }
+      },
+      {
+        "name": "Heritage overlay (State heritage place)",
+        "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Heritage_overlay_State_heritage_area/FeatureServer/0",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": ["BCC:OV:HERITAGE_OVERLAY_STATE_HERITAGE_AREA"]
+        }
+      },
+      {
+        "name": "Heritage overlay (Area adjoining a heritage place)",
+        "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Heritage_overlay_Area_adjoining/FeatureServer/0",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": ["BCC:OV:HERITAGE_OVERLAY_AREA_ADJOINING"]
+        }
+      },
+      {
+        "name": "Pre-1911 building overlay",
+        "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Pre1911_building_overlay/FeatureServer/0",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": ["BCC:OV:TRADITIONAL_BUILDING_CHARACTER_OVERLAY_PRE_1911_BUILDING_OVERLAY"]
+        }
+      },
+      {
+        "name": "Flood overlay (Brisbane River flood planning area)",
+        "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Flood_overlay_Brisbane_River_flood_planning_area/FeatureServer/0",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": ["BCC:OV:FLOOD_OVERLAY"]
+        }
+      },
+      {
+        "name": "Flood overlay (Creek/waterway flood planning area)",
+        "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Flood_overlay_Creek_waterway_flood_planning_area/FeatureServer/0",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": ["BCC:OV:FLOOD_OVERLAY"]
+        }
+      },
+      {
+        "name": "Flood overlay (Overland flow flood planning area)",
+        "layer": "https://services2.arcgis.com/dEKgZETqwmDAh1rP/arcgis/rest/services/Flood_overlay_Overland_flow/FeatureServer/0",
+        "field": "OVL2_DESC",
+        "map": {
+          "*": ["BCC:OV:FLOOD_OVERLAY"]
+        }
       }
     ],
     "scheme_viewer": "https://cityplan.brisbane.qld.gov.au/eplan"
@@ -47,7 +103,7 @@
     "null_values": [
       "None"
     ],
-    "notes": "City Plan Version 13 open data; the scheme in force is Version 14 (no V14 zone layer published) — check for zoning changes. Overlays (tested 15 Oct 2026): City Plan V13 open data FeatureServer (CC BY 4.0, last edit 2026-06-01), except road widening from the council's V14 MapServer (maps1). Building height: HEIGHT_IN_METRES ('9m', '15m'…; 'HX' and PDA/Spit text give no number).",
+    "notes": "City Plan Version 13 open data; the scheme in force is Version 14 (no V14 zone layer published) — check for zoning changes. Overlays (tested 15 Oct 2026): City Plan V13 open data FeatureServer (CC BY 4.0, last edit 2026-06-01), except road widening from the council's V14 MapServer (maps1). Building height: HEIGHT_IN_METRES ('9m', '15m'…; 'HX' and PDA/Spit text give no number). Added 3 Nov 2026: QDC MP 1.1 Table A1 (primary frontage setback by street hierarchy) is now auto-resolved from the Road_Segment_view layer's LDG_HIERARCHY (server-ts/src/core/geo.ts, STREET_HIERARCHY_SOURCES.GOLD_COAST) -- LOWER CONFIDENCE than other councils: this layer has no reliable per-segment road name, so the match is spatial-only (nearest classified road-surface segment within 60m), not verified against the lot's actual frontage street.",
     "overlay_layers": [
       {
         "name": "Ridges and significant hills protection overlay",
@@ -147,6 +203,17 @@
           ]
         },
         "value_fact": "mapped_max_height_m"
+      },
+      {
+        "name": "Bushfire hazard overlay",
+        "layer": "https://services-ap1.arcgis.com/lnVW0dLI3fvST2hd/arcgis/rest/services/City_Plan_Version_13_Open_Data/FeatureServer/35",
+        "field": "OVL2_DESC",
+        "map": {
+          "High Potential Bushfire Intensity": ["CGC:OV:BUSHFIRE_HAZARD_OVERLAY", "CGC:OV:BUSHFIRE_HAZARD_OVERLAY_HIGH_POTENTIAL_BUSHFIRE_INTENSITY"],
+          "Medium Potential Bushfire Intensity": ["CGC:OV:BUSHFIRE_HAZARD_OVERLAY", "CGC:OV:BUSHFIRE_HAZARD_OVERLAY_MEDIUM_POTENTIAL_BUSHFIRE_INTENSITY"],
+          "Very High Potential Bushfire Intensity": ["CGC:OV:BUSHFIRE_HAZARD_OVERLAY", "CGC:OV:BUSHFIRE_HAZARD_OVERLAY_VERY_HIGH_POTENTIAL_BUSHFIRE_INTENSITY"],
+          "Potential Impact Buffer": ["CGC:OV:BUSHFIRE_HAZARD_OVERLAY", "CGC:OV:BUSHFIRE_HAZARD_OVERLAY_POTENTIAL_IMPACT_BUFFER"]
+        }
       }
     ],
     "scheme_viewer": "https://cityplan.goldcoast.qld.gov.au/eplan"
@@ -158,7 +225,7 @@
     "precinct_field": "ZONE_PREC",
     "local_plan_field": "LP",
     "local_plan_precinct_field": "LP_PREC",
-    "notes": "Parcel-based zone polygons; last edited Oct 2024 — may lag recent amendments. Overlays (tested 15 Oct 2026): council open data on ArcGIS Online, CC BY 4.0 (building heights Oct 2021; others 2016 versions, edited 2022). Building height parsed from OVL2_DESC ('Max 8.5m'); OVL2_CAT has a data error. North Lakes Locality is outside the scheme overlays (zoning returns 'Not applicable'). Local plan precincts come from LP / LP_PREC; Caboolture West sub-precincts (e.g. Next generation) are not in any public queryable layer. Changes since Oct 2024 are by TLPI (PlanningScheme_Temporary_Local_Planning_Instruments) — not looked up.",
+    "notes": "Parcel-based zone polygons; last edited Oct 2024 — may lag recent amendments. Overlays (tested 15 Oct 2026): council open data on ArcGIS Online, CC BY 4.0 (building heights Oct 2021; others 2016 versions, edited 2022). Building height parsed from OVL2_DESC ('Max 8.5m'); OVL2_CAT has a data error. North Lakes Locality is outside the scheme overlays (zoning returns 'Not applicable'). Local plan precincts come from LP / LP_PREC; Caboolture West sub-precincts (e.g. Next generation) are not in any public queryable layer; the same applies to the Emerging community zone's Transition precinct, whose Morayfield South urban area sub-split (Dwelling house code Table 9.3.1.6 vs 9.3.1.5, Figure 9.3.1.1) is not separately mapped either -- the raw ZONE_PREC value is just 'Transition' with no further distinction, so use --zone/--precinct to override when the specific lot is known to be inside/outside Figure 9.3.1.1. Changes since Oct 2024 are by TLPI (PlanningScheme_Temporary_Local_Planning_Instruments) — not looked up. Added 3 Nov 2026: QDC MP 1.1 Table A1 (primary frontage setback by street hierarchy) is now auto-resolved for this council from Council's own Road hierarchy open-data layer (OM_Road_Hierarchy_WebMercator_OpenData, server-ts/src/core/geo.ts mbrcStreetType()) — that layer only maps collector-and-above roads (Local/District Collector, Sub-Arterial, Arterial, Motorway), so a name match with Hierarchy 'Local Collector'/'District Collector' resolves to the Collector street row, no match at all resolves to the ordinary access place/access street row (Table A1 gives both the same figures), and a match against Arterial/Sub-Arterial/Motorway correctly stays unresolved (genuinely outside Table A1's coverage). First council in the project with this fact auto-derived rather than left to manual input — see open issue #155 (South Burnett) for the same gap on a council with no equivalent public road-hierarchy layer found yet.",
     "overlay_layers": [
       {
         "name": "Building heights overlay",
@@ -249,7 +316,7 @@
       "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Zoning_SCC/MapServer/3"
     ],
     "precinct_layer_field": "LABEL",
-    "notes": "Layer carries no version/date. Overlays and local plans (tested 15 Oct 2026): council MapServers Overlays_SCC / Boundaries_SCC on geoimage.scc.qld.gov.au (current amended scheme; CC BY 3.0 AU). Height from LABEL ('8.5 metres'; 'Unspecified maximum height' gives no number). Do not use the 2024 OpenData copy (lags amendments) or the 'scrcpublic' layers (proposed 2025 scheme, not in force).",
+    "notes": "Layer carries no version/date. Overlays and local plans (tested 15 Oct 2026): council MapServers Overlays_SCC / Boundaries_SCC on geoimage.scc.qld.gov.au (current amended scheme; CC BY 3.0 AU). Height from LABEL ('8.5 metres'; 'Unspecified maximum height' gives no number). Do not use the 2024 OpenData copy (lags amendments) or the 'scrcpublic' layers (proposed 2025 scheme, not in force). Added 3 Nov 2026: QDC MP 1.1 Table A1 (primary frontage setback by street hierarchy) is now auto-resolved from Council's own '2031 Functional Transport Hierarchy' layer (Fig 9.4.8A; server-ts/src/core/geo.ts, STREET_HIERARCHY_SOURCES.SUNSHINE_COAST) -- LOWER CONFIDENCE than other councils: this layer has no per-segment road name, so the match is spatial-only (nearest classified line within 60m), not verified against the lot's actual frontage street. LABEL 'Local, Current' -> access place/access street row, '...Collector Street, Current' -> collector row, Arterial/Distributor/Highway stays unresolved.",
     "local_plan_layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Boundaries_SCC/MapServer/3",
     "local_plan_layer_field": "LAPNAME",
     "local_plan_precinct_layer": "https://geoimage.scc.qld.gov.au/arcgis/rest/services/PlanningCadastre/PlanningScheme_SunshineCoast_Boundaries_SCC/MapServer/6",
@@ -308,7 +375,7 @@
       "https://services5.arcgis.com/ZUCWDRj8F77Xo351/arcgis/rest/services/Zones_V9_2_WFL1/FeatureServer/1"
     ],
     "precinct_layer_field": "Zone_Precinct",
-    "notes": "Logan Planning Scheme 2015 v9.2 incorporating TLPI No.1 2024 (registered by Logan City Council on ArcGIS Online, CC BY 3.0 AU). Hosted on a consultant's (WSP) server; service names carry the version and date, so re-check the URL at each amendment (a draft new scheme exists, Aug 2025). The non-TLPI v9_2 service has no TLPI flood layers. Residential overlay (OM-10.00) decides whether the Dwelling house code applies. Tested 15 Oct 2026. Zones and precincts: Logan's own 'Zones_V9_2_WFL1' (edited 17 Jul 2025, after v9.2 commenced; identical to the contractor-hosted v9.2 service: 6,920 zones and 6,710 precincts, the same answer at every one of 197 test points; checked 2026-10-21). Local plans, local-plan precincts and overlays: the contractor-hosted LoganHub service (registered by Logan City Council).",
+    "notes": "Logan Planning Scheme 2015 v9.2 incorporating TLPI No.1 2024 (registered by Logan City Council on ArcGIS Online, CC BY 3.0 AU). Hosted on a consultant's (WSP) server; service names carry the version and date, so re-check the URL at each amendment (a draft new scheme exists, Aug 2025). The non-TLPI v9_2 service has no TLPI flood layers. Residential overlay (OM-10.00) decides whether the Dwelling house code applies. Tested 15 Oct 2026. Zones and precincts: Logan's own 'Zones_V9_2_WFL1' (edited 17 Jul 2025, after v9.2 commenced; identical to the contractor-hosted v9.2 service: 6,920 zones and 6,710 precincts, the same answer at every one of 197 test points; checked 2026-10-21). Local plans, local-plan precincts and overlays: the contractor-hosted LoganHub service (registered by Logan City Council). Added 4 Nov 2026: QDC MP 1.1 Table A1 (primary frontage setback by street hierarchy) is now auto-resolved from the same LoganHub service's own 'Road hierarchy' layer (MapServer/328, field Road_Type; server-ts/src/core/geo.ts, STREET_HIERARCHY_SOURCES.LOGAN) -- LOWER CONFIDENCE: this layer has no per-segment road name, so the match is spatial-only (nearest classified road-surface polygon within 60m), not verified against the lot's actual frontage street. Road_Type values are near-verbatim QDC terms ('Urban/Rural/Industrial Access ...' -> access row, '...Collector...' -> collector row).",
     "local_plan_layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/129",
     "local_plan_layer_field": "Local_Plan",
     "local_plan_precinct_layer": "https://arcgis.lcc.wspdigital.com/server/rest/services/LoganHub/Logan_Planning_Scheme_v9_2_TLPI_No_1_2024_20250527/MapServer/130",
@@ -383,7 +450,7 @@
   "IPSWICH": {
     "status": "BLOCKED",
     "zone_layer": "https://services9.arcgis.com/Rmbsssqb3knXA9RA/arcgis/rest/services/Zones_and_Precincts_V2_A1/FeatureServer/1",
-    "notes": "Ipswich City Plan 2025 zones layer requires a login token (499 Token Required). Choose the zone manually; ask Ipswich City Council for open-data access.",
+    "notes": "Ipswich City Plan 2025 zones layer requires a login token (499 Token Required). Choose the zone manually; ask Ipswich City Council for open-data access. Checked 3-4 Nov 2026: no public road-hierarchy/classification source found either (council, state, or OpenStreetMap -- the latter's public Overpass API explicitly disallows automated use, confirmed live). QDC MP 1.1 Table A1 (street hierarchy) stays manual review; use --street-type access|collector (server-ts/src/core/engine.ts) when known.",
     "scheme_viewer": "https://ipswich.isoplan.com.au/eplan"
   },
   "REDLAND": {
@@ -391,7 +458,7 @@
     "zone_layer": "https://services7.arcgis.com/VGRM775aS3HJEeB7/arcgis/rest/services/Current_Version_14_City_Plan_Zones_and_Overlays/FeatureServer/44",
     "zone_field": "QPP_Description",
     "precinct_field": "QPP_Precinct",
-    "notes": "Redland City Plan Version 14. Precincts are codes (LDR1-LDR5). Overlays from the same open-data service (CC BY-SA 4.0 — share-alike; data 2025-11-10). Precinct values are codes; '<Null>' means none. Canal/lake revetment walls (LDR5 9 m) are only in council asset data (gis.redland.qld.gov.au assets/a_parks_transport/MapServer/18) — not looked up yet.",
+    "notes": "Redland City Plan Version 14. Precincts are codes (LDR1-LDR5). Overlays from the same open-data service (CC BY-SA 4.0 — share-alike; data 2025-11-10). Precinct values are codes; '<Null>' means none. Canal/lake revetment walls (LDR5 9 m) are only in council asset data (gis.redland.qld.gov.au assets/a_parks_transport/MapServer/18) — not looked up yet. Checked 3-4 Nov 2026: no public road-hierarchy/classification source found either (council, state, or OpenStreetMap -- the latter's public Overpass API explicitly disallows automated use, confirmed live). QDC MP 1.1 Table A1 (street hierarchy) stays manual review; use --street-type access|collector (server-ts/src/core/engine.ts) when known.",
     "null_values": [
       "<Null>"
     ],
@@ -444,7 +511,7 @@
     "zone_layer": "https://maps.tr.qld.gov.au/arcgis/rest/services/External/External_PlanningScheme/MapServer/170",
     "zone_field": "TRPS_Zones",
     "precinct_field": "TRPS_Precinct",
-    "notes": "Toowoomba Regional Planning Scheme. Layer 170 ('Zones', under group layer 165) also carries QPP_Zone/Precinct numeric codes with no exposed domain — the TRPS_Zones/TRPS_Precinct string fields are used instead, confirmed by a live point query (verified 26 Oct 2026: CBD point returned TRPS_Zones='Principal Centre', TRPS_Precinct='No Precinct'). A dedicated precinct layer also exists at .../MapServer/167 (fields Precinct, Precinct_Label, Precinct_Description) if a standalone precinct lookup is ever needed. Only the zones this project has researched (Low Density Residential, Low-medium Density Residential, Community Facilities, Emerging Community, Rural, Rural Residential, Specialised Centre, Township) have rules; other live zone text (e.g. 'Principal Centre') correctly has none yet. Local plan layers (Charlton Wellcamp, Glenvale, Highfields/Meringandan) not yet located on this service — local plan detection remains to be wired up.",
+    "notes": "Toowoomba Regional Planning Scheme. Layer 170 ('Zones', under group layer 165) also carries QPP_Zone/Precinct numeric codes with no exposed domain — the TRPS_Zones/TRPS_Precinct string fields are used instead, confirmed by a live point query (verified 26 Oct 2026: CBD point returned TRPS_Zones='Principal Centre', TRPS_Precinct='No Precinct'). A dedicated precinct layer also exists at .../MapServer/167 (fields Precinct, Precinct_Label, Precinct_Description) if a standalone precinct lookup is ever needed. Only the zones this project has researched (Low Density Residential, Low-medium Density Residential, Community Facilities, Emerging Community, Rural, Rural Residential, Specialised Centre, Township) have rules; other live zone text (e.g. 'Principal Centre') correctly has none yet. Local plan layers (Charlton Wellcamp, Glenvale, Highfields/Meringandan) not yet located on this service — local plan detection remains to be wired up. Added 4 Nov 2026: QDC MP 1.1 Table A1 (primary frontage setback by street hierarchy) is now auto-resolved from this same service's own 'Road Hierarchy' layer (MapServer/8, fields ROAD_NAME + HIERARCHY; server-ts/src/core/geo.ts, STREET_HIERARCHY_SOURCES.TOOWOOMBA) -- HIERARCHY 'LOCAL' -> access row, 'COLLECTOR' -> collector row, DISTRIBUTOR/SUB-ARTERIAL/REGIONAL ARTERIAL/HIGHWAY stays unresolved. Do NOT use the separate TTM_Road_Category_External service -- its TTMRoadCategory is a traffic-management/clearway classification, not a land-use hierarchy, and does not map to Table A1 at all.",
     "null_values": [
       "No Precinct"
     ],
@@ -479,7 +546,7 @@
     "precinct_field": "ZONE_PREC",
     "local_plan_field": "LP",
     "local_plan_precinct_field": "LP_PREC",
-    "notes": "Townsville City Plan 2014. LVL2_ZONE is the specific zone name (LVL1_ZONE is the broader group, e.g. 'Centre' vs 'Principal Centre'); TCC_CODE carries the short code but is not used here since LVL2_ZONE already matches our zone names. Verified by a live point query (26 Oct 2026: Townsville CBD returned LVL1_ZONE='Centre', LVL2_ZONE='Principal Centre', TCC_CODE='PC'). No *scheme* overlay (flood/heritage/character precinct) layers are published by the council as public ArcGIS feature services -- only the zone/precinct/local-plan fields on this one layer are queryable for zoning. Correction, 29 Oct 2026: the council DOES publish a bushfire-prone-area layer plus its own sewer/water asset layers on this same org -- wired in poc/site_layers.json under TOWNSVILLE (categories Bushfire/Sewer/Water).",
+    "notes": "Townsville City Plan 2014. LVL2_ZONE is the specific zone name (LVL1_ZONE is the broader group, e.g. 'Centre' vs 'Principal Centre'); TCC_CODE carries the short code but is not used here since LVL2_ZONE already matches our zone names. Verified by a live point query (26 Oct 2026: Townsville CBD returned LVL1_ZONE='Centre', LVL2_ZONE='Principal Centre', TCC_CODE='PC'). No *scheme* overlay (flood/heritage/character precinct) layers are published by the council as public ArcGIS feature services -- only the zone/precinct/local-plan fields on this one layer are queryable for zoning. Correction, 29 Oct 2026: the council DOES publish a bushfire-prone-area layer plus its own sewer/water asset layers on this same org -- wired in poc/site_layers.json under TOWNSVILLE (categories Bushfire/Sewer/Water). Added 4 Nov 2026: QDC MP 1.1 Table A1 (primary frontage setback by street hierarchy) is now auto-resolved from TCC_Road_Centerlines_GDA2020 (fields ROAD_NAME + HIERARCHY; server-ts/src/core/geo.ts, STREET_HIERARCHY_SOURCES.TOWNSVILLE) -- HIERARCHY is a numeric code with no domain in the field metadata, read instead from the layer's own renderer legend (1=Freeway, 2=Highway, 3=Main Road, 4=Secondary Road, 5=Trafficable Road). 5 (the layer's own default, the ordinary/local case) -> access row, 4 -> collector row. MEDIUM CONFIDENCE: a standard 5-tier hierarchy, but neither label uses QDC's own terms the way other councils' layers do.",
     "scheme_viewer": "https://townsville.qld.gov.au/building-planning-and-projects/mapping-services/townsvillemaps"
   },
   "LIVINGSTONE": {
@@ -495,10 +562,19 @@
     "local_plan_precinct_layer": "https://services6.arcgis.com/0feS4n90HMqhF4HA/arcgis/rest/services/Planning_Scheme_2018_v4_WFL1/FeatureServer/5",
     "local_plan_precinct_code_field": "LPP",
     "local_plan_precinct_name_field": "LPPName",
+    "overlay_layers": [
+      {
+        "name": "State Heritage Register (within the Heritage Place overlay, 8.2.9)",
+        "layer": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/AdminBoundariesFramework/MapServer/78",
+        "field": "placename",
+        "map": {"*": []},
+        "notes": "Added 3 Nov 2026: council's own OM26 State Heritage Register Sites layer is ArcGIS TilesOnly (not queryable); this is the State's own copy of the same register (confirmed queryable, Map,Query,Data), already relied on generally in site_layers.json. map:{'*':[]} because no regs.overlays id is registered yet for Livingstone's Heritage Place overlay code (8.2.9, PO1-PO9) - every hit is shown as informational only ('within/near a State Heritage Register place') until that code is actually encoded as a rule. This covers only STATE-listed places (OM26); the council's own LOCAL heritage register (OM25) is a separate, still-unresolved gap - no state equivalent exists for it (see the Livingstone Schedule 3 / 2005-scheme research note)."
+      }
+    ],
     "null_values": [
       "Unzoned"
     ],
-    "notes": "Livingstone Shire Planning Scheme 2018 v4. Verified by live query (26 Oct 2026): Adopted Zones layer (/10) field 'Zone' gives plain names e.g. 'Rural', 'Community facilities'; Zone Precinct Boundaries layer (/0) field 'Precinct' gives e.g. 'Capricorn Coast Rural Precinct' (matches our registered precinct names directly). Seaspray local plan is on separate layers (/3 boundary, /5 precincts, fields Name/LPP/LPPName). Overlays (bushfire, flood, coastal, acid sulphate soils etc., ~20 'OMxx' layers) exist in the same org but are published as cached TilesOnly MapServers -- not queryable via REST, so none are wired here. Exception found 29 Oct 2026: 'Storm_Tide_Tsunami' (not an 'OMxx' name) is a real queryable FeatureServer on this same org -- its 9 layers (HAT, 6 storm-surge bands, tsunami) are wired in poc/site_layers.json under LIVINGSTONE, category Coastal.",
+    "notes": "Livingstone Shire Planning Scheme 2018 v4. Verified by live query (26 Oct 2026): Adopted Zones layer (/10) field 'Zone' gives plain names e.g. 'Rural', 'Community facilities'; Zone Precinct Boundaries layer (/0) field 'Precinct' gives e.g. 'Capricorn Coast Rural Precinct' (matches our registered precinct names directly). Seaspray local plan is on separate layers (/3 boundary, /5 precincts, fields Name/LPP/LPPName). Overlays (bushfire, flood, coastal, acid sulphate soils etc., ~20 'OMxx' layers) exist in the same org but are published as cached TilesOnly MapServers -- not queryable via REST, so none are wired here (a pilot attempt 2 Nov 2026 to digitize the bushfire overlay from the council's own PDF overlay maps succeeded at georeferencing but failed at reliable polygon extraction -- not usable, not wired). Exception found 29 Oct 2026: 'Storm_Tide_Tsunami' (not an 'OMxx' name) is a real queryable FeatureServer on this same org -- its 9 layers (HAT, 6 storm-surge bands, tsunami) are wired in poc/site_layers.json under LIVINGSTONE, category Coastal. Heritage Place overlay (8.2.9) partially addressed 3 Nov 2026: the council's own OM26 State Heritage Register layer is also TilesOnly, but the State's own copy of the same register is queryable and wired above under overlay_layers -- covers State-listed places only; the council's own Local heritage register (OM25, ~103 places) has no queryable source at all, council or state, but a usable text alternative was found: the superseded 2005 scheme's Schedule 3 'Identified Cultural Features' lists the same places by lot/plan (research/queued, not yet encoded). Checked 3-4 Nov 2026: no public road-hierarchy/classification source found either (council, state, or OpenStreetMap -- the latter's public Overpass API explicitly disallows automated use, confirmed live). QDC MP 1.1 Table A1 (street hierarchy) stays manual review; use --street-type access|collector (server-ts/src/core/engine.ts) when known.",
     "scheme_viewer": "https://experience.arcgis.com/experience/25f9cf783f3b437c9aa805acc25382a6"
   },
   "ROCKHAMPTON": {
@@ -509,7 +585,7 @@
       "https://services-ap1.arcgis.com/hx2J5p82likyGt5G/arcgis/rest/services/Land_Use_Precinct/FeatureServer/0"
     ],
     "precinct_layer_field": "DESCRIPTION",
-    "notes": "Rockhampton Regional Planning Scheme. Verified by live query (26 Oct 2026): Land_Use_Zones field 'Zone_Lable' gives the plain zone name (e.g. 'Rural'), separate from 'Zone' which carries a 'L1 - ' map-sheet prefix. Precinct layer field 'DESCRIPTION' used as the precinct name. Heritage, flood, bushfire (per-class), steep land, coastal and acid sulfate soils layers exist on this same org and are now wired in poc/site_layers.json under ROCKHAMPTON (19 layers total, verified live 29 Oct 2026) -- as site constraints, not as zoning_layers overlay_layers, since our dataset has no RRC heritage/flood overlay_id registered to map them to (only RRC:OV:CHARACTER_OVERLAY_* / COASTAL_PROTECTION_OVERLAY / FLOOD_HAZARD_OVERLAY_* exist, not yet matched to a specific layer -- that rule-scoping link, if needed, is separate follow-up work). No Local Plan layer found.",
+    "notes": "Rockhampton Regional Planning Scheme. Verified by live query (26 Oct 2026): Land_Use_Zones field 'Zone_Lable' gives the plain zone name (e.g. 'Rural'), separate from 'Zone' which carries a 'L1 - ' map-sheet prefix. Precinct layer field 'DESCRIPTION' used as the precinct name. Heritage, flood, bushfire (per-class), steep land, coastal and acid sulfate soils layers exist on this same org and are now wired in poc/site_layers.json under ROCKHAMPTON (19 layers total, verified live 29 Oct 2026) -- as site constraints, not as zoning_layers overlay_layers, since our dataset has no RRC heritage/flood overlay_id registered to map them to (only RRC:OV:CHARACTER_OVERLAY_* / COASTAL_PROTECTION_OVERLAY / FLOOD_HAZARD_OVERLAY_* exist, not yet matched to a specific layer -- that rule-scoping link, if needed, is separate follow-up work). No Local Plan layer found. Added 3 Nov 2026: QDC MP 1.1 Table A1 (primary frontage setback by street hierarchy) is now auto-resolved from Council's own Road_Heirarchy layer (server-ts/src/core/geo.ts, STREET_HIERARCHY_SOURCES.ROCKHAMPTON) -- RoadClass values are near-verbatim QDC terms ('Urban/Rural Access Place/Street' -> access row, '...Collector' -> collector row); FEAT_NAME is null on some polygon segments, worked around with a 200m buffer and picking the first name-matching segment, not just the nearest.",
     "scheme_viewer": "https://rockeplan.rockhamptonregion.qld.gov.au/"
   },
   "BURKE": {
@@ -517,14 +593,14 @@
     "zone_layer": "https://services6.arcgis.com/Y1eHlY9NRfVWoL8v/arcgis/rest/services/PlanningScheme_Burke_Nov2024/FeatureServer/6",
     "zone_field": "ZONE",
     "precinct_field": "PRECINCT",
-    "notes": "Burke Shire Planning Scheme, Nov 2024. Verified by live query (26 Oct 2026): field 'ZONE' gives plain names (e.g. 'Rural', 'Township'); 'PRECINCT' gives the Township zone's precinct (e.g. 'Residential'), null outside Township. Hosted by Qld DSDIP on behalf of the council (ArcGIS item titled 'DRAFT ... PROD' is an internal versioning label, not an unpublished draft -- it is the service linked from the council's own public 'Interactive Mapping' page). Flood overlay layers (Queensland floodplain assessment overlay, Gregory/Burketown 1% AEP) exist on the same service but are not wired as overlays here (no BSC overlay_id registered yet).",
+    "notes": "Burke Shire Planning Scheme, Nov 2024. Verified by live query (26 Oct 2026): field 'ZONE' gives plain names (e.g. 'Rural', 'Township'); 'PRECINCT' gives the Township zone's precinct (e.g. 'Residential'), null outside Township. Hosted by Qld DSDIP on behalf of the council (ArcGIS item titled 'DRAFT ... PROD' is an internal versioning label, not an unpublished draft -- it is the service linked from the council's own public 'Interactive Mapping' page). Flood overlay layers (Queensland floodplain assessment overlay, Gregory/Burketown 1% AEP) exist on the same service but are not wired as overlays here (no BSC overlay_id registered yet). Checked 3-4 Nov 2026: no public road-hierarchy/classification source found either (council, state, or OpenStreetMap -- the latter's public Overpass API explicitly disallows automated use, confirmed live). QDC MP 1.1 Table A1 (street hierarchy) stays manual review; use --street-type access|collector (server-ts/src/core/engine.ts) when known.",
     "scheme_viewer": "https://dsdip.maps.arcgis.com/apps/webappviewer/index.html?id=d61c4c30db2946e4b3cdd93d0cc4a124"
   },
   "MOUNT_ISA": {
     "status": "WORKING",
     "zone_layer": "https://services8.arcgis.com/g9mppFwSsmIw9E0Z/arcgis/rest/services/Planning_Scheme_Zones_(public)/FeatureServer/0",
     "zone_field": "Zone_Legend",
-    "notes": "Mount Isa City Planning Scheme. Verified by live query (26 Oct 2026): field 'Zone_Legend' gives the full zone name (e.g. 'Rural', 'Environmental Management and Conservation', 'Special Purpose'); 'LVL2_Zone' is a coarser/sparser field, not used. No precinct field on this layer -- precinct-style areas (CBD, Airport, Stables, Leichhardt River) are published as separate named precinct/overlay layers instead, not wired here. The combined 'Planning_Scheme_Overlays_(public)' layer (field OverlayDescription) is wired below (29 Oct 2026) -- no MICC overlay_id is registered in regs.overlays for any of its 7 values (Airport local plan, Extractive resources, Flood hazard, Heritage, Lake Moondarra environs, Major infrastructure, Scenic amenity), since no curated Mount Isa rule is scoped to an overlay yet, so every hit surfaces as an informational 'not mapped to an overlay in the rules dataset' note rather than driving a rule -- still real signal (which overlay a lot sits in), not a blocked lookup.",
+    "notes": "Mount Isa City Planning Scheme. Verified by live query (26 Oct 2026): field 'Zone_Legend' gives the full zone name (e.g. 'Rural', 'Environmental Management and Conservation', 'Special Purpose'); 'LVL2_Zone' is a coarser/sparser field, not used. No precinct field on this layer -- precinct-style areas (CBD, Airport, Stables, Leichhardt River) are published as separate named precinct/overlay layers instead, not wired here. The combined 'Planning_Scheme_Overlays_(public)' layer (field OverlayDescription) is wired below (29 Oct 2026) -- no MICC overlay_id is registered in regs.overlays for any of its 7 values (Airport local plan, Extractive resources, Flood hazard, Heritage, Lake Moondarra environs, Major infrastructure, Scenic amenity), since no curated Mount Isa rule is scoped to an overlay yet, so every hit surfaces as an informational 'not mapped to an overlay in the rules dataset' note rather than driving a rule -- still real signal (which overlay a lot sits in), not a blocked lookup. Added 3 Nov 2026: QDC MP 1.1 Table A1 (primary frontage setback by street hierarchy) is now auto-resolved from Council's own Road Heirarchy layer (server-ts/src/core/geo.ts, STREET_HIERARCHY_SOURCES.MOUNT_ISA) -- Hierarchy values are literally 'Access'/'Collector'/'Sub-Arterial'/'Distributor'/etc., matched by road name within 200m.",
     "scheme_viewer": "https://mountisa.qld.gov.au/maps",
     "overlay_layers": [
      {
@@ -537,12 +613,12 @@
   },
   "CENTRAL_HIGHLANDS": {
     "status": "BLOCKED",
-    "notes": "No public GIS service exists for Central Highlands' planning-scheme zoning, confirmed by two passes (26 Oct 2026). First pass: no ArcGIS REST FeatureServer/MapServer (incl. the Qld DSDIP remote-council hosting program that covers Burke -- Central Highlands is not on it); the council's own ArcGIS org only carries shared disaster-management layers (flood extents), not zoning. Correction, 29 Oct 2026: that same org (xYbmdyJFb3eEmMJp) carries a fuller set of genuinely queryable overlays than flood extents alone -- flood (3 layers), bushfire, and heritage (4 layers) are wired in poc/site_layers.json under CENTRAL_HIGHLANDS. These work independent of zoning (site constraints only need lot geometry), so they're usable even with a manually-chosen zone. Second, deeper pass checked (without touching the bot-protected ePlan portal itself): candidate GIS subdomains (maps/gis/data.chrc.qld.gov.au) all NXDOMAIN; the council website's only mapping links route to ePlan; the State's own ArcGIS platform (spatial-gis.information.qld.gov.au, PlanningCadastre folder) has no zoning/planning-scheme layer for any council, confirming QLD zoning is always council-hosted, never state-aggregated; data.qld.gov.au / data.gov.au / Queensland Globe have no matching dataset. Choose the zone manually; the council's own lookup tool is its ePlan portal.",
+    "notes": "No public GIS service exists for Central Highlands' planning-scheme zoning, confirmed by two passes (26 Oct 2026). First pass: no ArcGIS REST FeatureServer/MapServer (incl. the Qld DSDIP remote-council hosting program that covers Burke -- Central Highlands is not on it); the council's own ArcGIS org only carries shared disaster-management layers (flood extents), not zoning. Correction, 29 Oct 2026: that same org (xYbmdyJFb3eEmMJp) carries a fuller set of genuinely queryable overlays than flood extents alone -- flood (3 layers), bushfire, and heritage (4 layers) are wired in poc/site_layers.json under CENTRAL_HIGHLANDS. These work independent of zoning (site constraints only need lot geometry), so they're usable even with a manually-chosen zone. Second, deeper pass checked (without touching the bot-protected ePlan portal itself): candidate GIS subdomains (maps/gis/data.chrc.qld.gov.au) all NXDOMAIN; the council website's only mapping links route to ePlan; the State's own ArcGIS platform (spatial-gis.information.qld.gov.au, PlanningCadastre folder) has no zoning/planning-scheme layer for any council, confirming QLD zoning is always council-hosted, never state-aggregated; data.qld.gov.au / data.gov.au / Queensland Globe have no matching dataset. Choose the zone manually; the council's own lookup tool is its ePlan portal. Checked 3-4 Nov 2026: no public road-hierarchy/classification source found either (council, state, or OpenStreetMap -- the latter's public Overpass API explicitly disallows automated use, confirmed live). QDC MP 1.1 Table A1 (street hierarchy) stays manual review; use --street-type access|collector (server-ts/src/core/engine.ts) when known.",
     "scheme_viewer": "https://eplan.chrc.qld.gov.au/planningscheme/"
   },
   "SOUTH_BURNETT": {
     "status": "BLOCKED",
-    "notes": "South Burnett's interactive zoning map runs on IntraMaps (TechnologyOne), not Esri ArcGIS, confirmed by two passes (26 Oct 2026). First pass: no ArcGIS endpoint or open-data portal with equivalent boundaries found. Second, deeper pass checked (without probing the IntraMaps viewer's own internal API): every alternative top-level path on the IntraMaps host (rest/services, wms, wfs, arcgis/rest) redirects back to the same viewer page -- no separate OGC/REST service sits alongside it; candidate GIS subdomains (maps/gis.southburnett.qld.gov.au) NXDOMAIN; the council's own 'Online Maps' page only links to the State's Queensland Globe/SARA tools and this same IntraMaps viewer; data.qld.gov.au / data.gov.au / the State's ArcGIS platform have no matching zoning dataset. Choose the zone manually using the council's own IntraMaps viewer.",
+    "notes": "South Burnett's interactive zoning map runs on IntraMaps (TechnologyOne), not Esri ArcGIS, confirmed by two passes (26 Oct 2026). First pass: no ArcGIS endpoint or open-data portal with equivalent boundaries found. Second, deeper pass checked (without probing the IntraMaps viewer's own internal API): every alternative top-level path on the IntraMaps host (rest/services, wms, wfs, arcgis/rest) redirects back to the same viewer page -- no separate OGC/REST service sits alongside it; candidate GIS subdomains (maps/gis.southburnett.qld.gov.au) NXDOMAIN; the council's own 'Online Maps' page only links to the State's Queensland Globe/SARA tools and this same IntraMaps viewer; data.qld.gov.au / data.gov.au / the State's ArcGIS platform have no matching zoning dataset. Choose the zone manually using the council's own IntraMaps viewer. Checked 3-4 Nov 2026: no public road-hierarchy/classification source found either (council, state, or OpenStreetMap -- the latter's public Overpass API explicitly disallows automated use, confirmed live). QDC MP 1.1 Table A1 (street hierarchy) stays manual review; use --street-type access|collector (server-ts/src/core/engine.ts) when known.",
     "scheme_viewer": "https://sbrc.spatial.t1cloud.com/spatial/intramaps/?configId=2c897da7-a1a0-43c7-b566-69662025e462&project=a4c451dc-08aa-414b-ba8c-9566a3e6e976&module=c8686587-1556-4846-bcd7-b593db74a298"
   }
 }
