@@ -19,6 +19,7 @@
     "check": "node dist/src/tools/check.js",
     "verify-load": "node dist/src/tools/verify-load.js",
     "check-services": "node dist/src/tools/check-services.js",
+    "check-qhc": "node dist/src/tools/check-qhc-adoption.js",
     "schema-doc": "node dist/src/tools/schema-doc.js",
     "import-research": "node dist/src/tools/import-council-research.js",
     "data-register": "node dist/src/tools/data-register.js",
