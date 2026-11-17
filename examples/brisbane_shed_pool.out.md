@@ -60,15 +60,15 @@
 - [POOL_SAFETY] POOL_SAFETY.BARRIER_CONSTRUCTION : must hold  [MANUAL_REVIEW]
     MP34.S1_16.RETAINING_WALL_BARRIER_NO_FOOTHOLD@2012-07-27 — Overhang/return fencing atop a retaining wall used as a barrier must have no foothold/handhold surface
     source: QDC MP 3.4 - Swimming pool barriers (Publication date 18 July 2012) — Sch 1 item 16
-- [POOL_SAFETY] POOL_SAFETY.BARRIER_CONSTRUCTION : must hold  [MANUAL_REVIEW]
-    MP34.S1_17.WATER_BODY_AS_BARRIER@2012-07-27 — A canal/lake/river/creek/stream/pond/ocean/dam may form part of the pool barrier, subject to depth/width/access/overhang-or-return conditions
-    source: QDC MP 3.4 - Swimming pool barriers (Publication date 18 July 2012) — Sch 1 item 17
 - [POOL_SAFETY] POOL_SAFETY.BARRIER_CONSTRUCTION : <= 100 mm  [MANUAL_REVIEW]
     MP34.AS1926.BARRIER_MAX_GAP_100@2012-07-27 — No gap or hole greater than 100 mm anywhere in the pool barrier
     source: QDC MP 3.4 - Swimming pool barriers (Publication date 18 July 2012) — 2.3.7
 - [POOL_SAFETY] POOL_SAFETY.BARRIER_CONSTRUCTION : <= 100 mm  [MANUAL_REVIEW]
     MP34.AS1926.BARRIER_GROUND_GAP_100@2012-07-27 — Maximum 100 mm gap from finished ground level to the bottom of the pool barrier
     source: QDC MP 3.4 - Swimming pool barriers (Publication date 18 July 2012) — 2.4
+- [POOL_SAFETY] POOL_SAFETY.BARRIER_CONSTRUCTION : must hold  [MANUAL_REVIEW]
+    MP34.S1_17.WATER_BODY_AS_BARRIER@2012-07-27 — A canal/lake/river/creek/stream/pond/ocean/dam may form part of the pool barrier, subject to depth/width/access/overhang-or-return conditions
+    source: QDC MP 3.4 - Swimming pool barriers (Publication date 18 July 2012) — Sch 1 item 17
 - [POOL_SAFETY] POOL_SAFETY.BARRIER_NCZ : >= 900 mm  [MANUAL_REVIEW]
     MP34.S1_13.NCZ_HORIZONTAL_MEMBER_GAP_900@2012-07-27 — Non-climbable zone: clear gap between horizontal members >= 900 mm
     source: QDC MP 3.4 - Swimming pool barriers (Publication date 18 July 2012) — Sch 1 item 13
