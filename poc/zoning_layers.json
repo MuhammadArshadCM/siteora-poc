@@ -450,7 +450,7 @@
   "IPSWICH": {
     "status": "BLOCKED",
     "zone_layer": "https://services9.arcgis.com/Rmbsssqb3knXA9RA/arcgis/rest/services/Zones_and_Precincts_V2_A1/FeatureServer/1",
-    "notes": "Ipswich City Plan 2025 zones layer requires a login token (499 Token Required). Choose the zone manually; ask Ipswich City Council for open-data access. Checked 3-4 Nov 2026: no public road-hierarchy/classification source found either (council, state, or OpenStreetMap -- the latter's public Overpass API explicitly disallows automated use, confirmed live). QDC MP 1.1 Table A1 (street hierarchy) stays manual review; use --street-type access|collector (server-ts/src/core/engine.ts) when known.",
+    "notes": "Ipswich City Plan 2025 zones layer requires a login token (499 Token Required). Choose the zone manually; ask Ipswich City Council for open-data access. Checked 3-4 Nov 2026: no public road-hierarchy/classification source found on the council's own GIS, the state's 'Roads and tracks' dataset, or OpenStreetMap (whose public Overpass API explicitly disallows automated use, confirmed live). Found 19 Nov 2026, supersedes that: 'Ipswich Road Network' on data.gov.au -- a separate, no-auth GeoServer WFS dataset, council-owned (OWNER='Ipswich City Council'), 13,737 road segments, field ROAD_HIERA -- now wired for QDC MP 1.1 Table A1 (server-ts/src/core/geo.ts, STREET_HIERARCHY_SOURCES.IPSWICH). The zoning/overlay layer itself (this file's zone_layer, above) is still token-blocked and unrelated to this fix -- zone/precinct/overlay still need manual choice.",
     "scheme_viewer": "https://ipswich.isoplan.com.au/eplan"
   },
   "REDLAND": {

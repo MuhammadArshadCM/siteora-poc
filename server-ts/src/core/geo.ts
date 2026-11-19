@@ -193,6 +193,21 @@ export async function pointQuery(layer: string, lon: number, lat: number, outFie
   return (await getJson(`${layer}/query`, params)).features;
 }
 
+/** Same job as pointQuery, for a GeoServer WFS endpoint (GeoJSON) instead of an ArcGIS REST FeatureServer -- e.g. a
+ *  dataset published on data.gov.au/CKAN rather than the council's own GIS. A lon/lat bounding box (CQL BBOX, in
+ *  degrees) stands in for ArcGIS's point+distance search; GeoJSON properties are remapped to `attributes` so
+ *  callers (streetHierarchyType) don't need to know which kind of source they got. */
+async function wfsPointQuery(layer: string, typeName: string, lon: number, lat: number, distanceM: number): Promise<Feature[]> {
+  const dLat = distanceM / 111320, dLon = distanceM / (111320 * Math.cos(lat * Math.PI / 180));
+  // WFS 2.0.0's CQL BBOX wants EPSG:4326's own (lat, lon) axis order here, confirmed live (19 Nov 2026) against
+  // data.gov.au's GeoServer -- (lon, lat), the GeoJSON/ArcGIS convention used everywhere else, silently matches 0
+  // features instead of erroring.
+  const bbox = [lat - dLat, lon - dLon, lat + dLat, lon + dLon].join(",");
+  const data = await getJson(layer, { service: "WFS", version: "2.0.0", request: "GetFeature", typeName,
+    outputFormat: "json", cql_filter: `BBOX(the_geom,${bbox})` });
+  return (data.features ?? []).map((f: any) => ({ attributes: f.properties ?? {} }));
+}
+
 /** Features that intersect the lot (or lie within distanceM). excludeTouching: drop polygons that only share the boundary. */
 export async function lotQuery(layer: string, rings: Rings, outFields = "*", distanceM?: number | null, where = "1=1",
                                excludeTouching = false): Promise<Feature[]> {
@@ -315,6 +330,9 @@ export interface StreetHierarchySource {
   /** Appended to the fact's displayed source string when a council caveats the layer itself (not just the spatial
    *  match), so the caveat travels with the result the user actually sees instead of staying a code comment. */
   confidenceNote?: string;
+  /** Set when `layer` is a GeoServer WFS endpoint (GeoJSON), not an ArcGIS REST FeatureServer -- e.g. a dataset
+   *  published via data.gov.au/CKAN rather than the council's own GIS. The value is the WFS typeName. */
+  wfsTypeName?: string;
 }
 
 export const STREET_HIERARCHY_SOURCES: Record<string, StreetHierarchySource> = {
@@ -415,15 +433,31 @@ export const STREET_HIERARCHY_SOURCES: Record<string, StreetHierarchySource> = {
     nameField: null, classField: "Road_Type", distanceM: 60, sparseCollectorOnly: false,
     classify: (t) => (/Access/i.test(t) ? "ACCESS_STREET" : /Collector/i.test(t) ? "COLLECTOR" : null),
   },
+  // Not the council's own GIS (Ipswich City Plan's zoning/overlay service is token-gated -- see poc/zoning_layers.json)
+  // but a separate, no-auth, council-owned dataset published on data.gov.au (a GeoServer WFS, not ArcGIS REST --
+  // see wfsTypeName): "Ipswich Road Network", OWNER='Ipswich City Council', 13,737 segments covering the whole LGA.
+  // Found 19 Nov 2026 -- supersedes the 3 Nov conclusion below that no public source exists; that check predates
+  // this dataset's current data.gov.au listing (it moved platforms, breaking the old CKAN API path it was likely
+  // checked through). ROAD_HIERA values, confirmed by sampling the full dataset: Access Place/Laneway, Access
+  // Street, Industrial Access, Rural Access Way, Local, Rural Street -> access; Industrial/Major/Minor/Rural
+  // Collector -> collector; everything Sub-Arterial and above (incl. Highway, Freeway/Motorway) and "To Be
+  // Advised" is outside Table A1's coverage either way, same treatment as Brisbane's Arterial.
+  IPSWICH: {
+    layer: "https://data.gov.au/geoserver/ipswich-road-centre-lines/wfs", wfsTypeName: "ckan_c4fa7932_6485_4b05_98b5_5a1ea5db7dd2",
+    nameField: "ROAD_NAME", classField: "ROAD_HIERA", distanceM: 200, sparseCollectorOnly: false,
+    classify: (h) => (/^(Access Place\/Laneway|Access Street|Industrial Access|Rural Access Way|Local|Rural Street)$/i.test(h) ? "ACCESS_STREET"
+      : /Collector/i.test(h) ? "COLLECTOR" : null),
+  },
 };
 
-// Ipswich, Redland, Livingstone, Burke, Central Highlands, South Burnett: confirmed (3 Nov 2026, after a thorough
-// pass of each council's own GIS and the state's own "Roads and tracks" dataset -- its 'class' field is too
-// coarse, classifying both a known Brisbane collector and a known access street as "Local") to have no usable
+// Redland, Livingstone, Burke, Central Highlands, South Burnett: confirmed (3 Nov 2026, after a thorough pass of
+// each council's own GIS and the state's own "Roads and tracks" dataset -- its 'class' field is too coarse,
+// classifying both a known Brisbane collector and a known access street as "Local") to have no usable
 // road-classification source of their own. The only fallback found, OpenStreetMap's Overpass API, explicitly
 // states its public endpoint "is intended for browser-based and human-operated tools... for automated use, run a
 // local Overpass API instance" -- confirmed live (3 Nov 2026) by querying it directly, so it is not used here.
-// These 6 councils rely on the manual --street-type input instead (see cli.ts / buildFacts below).
+// These 5 councils rely on the manual --street-type input instead (see cli.ts / buildFacts below). Ipswich was in
+// this list too until 19 Nov 2026 (see STREET_HIERARCHY_SOURCES.IPSWICH above).
 
 /** QDC MP 1.1 Table A1 needs the street's functional classification (access place/access street vs. collector
  *  street -- everything above that is outside the table's coverage and stays unresolved either way). Derives it
@@ -431,7 +465,9 @@ export const STREET_HIERARCHY_SOURCES: Record<string, StreetHierarchySource> = {
 export async function streetHierarchyType(lgId: string, streetName: string, lon: number, lat: number): Promise<StreetType | null> {
   const src = STREET_HIERARCHY_SOURCES[lgId];
   if (!src) return null;
-  const feats = await pointQuery(src.layer, lon, lat, src.nameField ? `${src.nameField},${src.classField}` : src.classField, false, "1=1", src.distanceM);
+  const feats = src.wfsTypeName
+    ? await wfsPointQuery(src.layer, src.wfsTypeName, lon, lat, src.distanceM)
+    : await pointQuery(src.layer, lon, lat, src.nameField ? `${src.nameField},${src.classField}` : src.classField, false, "1=1", src.distanceM);
   let hit: Feature | undefined;
   if (src.nameField) {
     const target = normStreet(streetName);
