@@ -53,12 +53,33 @@
   .warn { color:var(--warn); } .mute { color:var(--mute); } .err { color:#b42318; font-weight:600; }
   ul { margin:6px 0; padding-left:18px; }
   #map { height:460px; border-radius:6px; border:1px solid var(--line); }
-  .map-home { font-size:18px; line-height:30px !important; text-align:center; text-decoration:none; color:#333; }
-  .compass { background:var(--card); border:1px solid var(--line); border-radius:50%; box-shadow:0 1px 4px rgba(0,0,0,.25);
+  .map-home { font-size:18px; line-height:30px !important; text-align:center; text-decoration:none; color:var(--ink); }
+  .compass { background:var(--card); border:1px solid var(--line); border-radius:50%; box-shadow:0 1px 4px rgba(16,24,40,.18);
              width:36px; height:36px; display:flex; align-items:center; justify-content:center; }
   .src td a { margin-right:10px; white-space:nowrap; }
   .hit { font-weight:600; }
-  .popup table td { padding:2px 6px; border-bottom:1px solid var(--line); font-size:12px; }
+  /* Leaflet's own controls are plain white boxes with no border -- restyle them to match this app's card
+     look (border + soft shadow) instead of leaving the stock Leaflet chrome untouched. */
+  .leaflet-bar { box-shadow:0 1px 4px rgba(16,24,40,.18); }
+  .leaflet-control-zoom a, .map-home { background:var(--card); color:var(--ink); }
+  .leaflet-control-zoom a:hover, .map-home:hover { background:var(--bg); }
+  .leaflet-control-layers, .leaflet-popup-content-wrapper { box-shadow:0 1px 4px rgba(16,24,40,.18); border:1px solid var(--line); border-radius:8px; }
+  .leaflet-control-layers-expanded { padding:10px 12px; font-size:13px; }
+  .leaflet-control-layers label { margin:3px 0; }
+  .leaflet-control-layers-base::before, .layer-group-label {
+    display:block; font-size:10px; font-weight:700; color:var(--mute); text-transform:uppercase;
+    letter-spacing:.04em; margin:2px 0 4px; padding-top:6px; border-top:1px solid var(--line);
+  }
+  .leaflet-control-layers-base::before { content:"Basemap"; border-top:none; padding-top:0; }
+  .layer-group-label:first-child { border-top:none; padding-top:0; }
+  .leaflet-popup-content { margin:10px 12px; }
+  .leaflet-control-attribution { background:rgba(255,255,255,.85); border-radius:4px 0 0 0; font-size:10px; }
+  .property-marker { background:transparent; border:none; filter:drop-shadow(0 2px 2px rgba(0,0,0,.35)); }
+  .popup-title { font-weight:600; font-size:13px; margin-bottom:4px; padding-bottom:4px; border-bottom:1px solid var(--line); }
+  .popup-row { display:flex; gap:10px; font-size:12px; padding:2px 0; }
+  .popup-row .popup-k { color:var(--mute); flex:0 0 auto; }
+  .popup-row .popup-v { font-weight:500; word-break:break-word; }
+  .popup details { margin-top:4px; } .popup details summary { font-size:11px; }
   @media (max-width: 800px) { form { grid-template-columns:1fr 1fr; } .wide, .checks { grid-column:1 / -1; } .kv { grid-template-columns:1fr 1fr; } }
 </style>
 </head>
@@ -651,6 +672,26 @@ function propertyBox(center, distanceM) {
   return [center[1] - dLon, center[0] - dLat, center[1] + dLon, center[0] + dLat].map(n => n.toFixed(6)).join(',');
 }
 const COLORS = ['#2457d6', '#1d7a46', '#a15c00', '#8a3ffc', '#b42318', '#0e7490', '#be185d', '#4d7c0f', '#7c2d12', '#334155'];
+// A small pin in the app's accent colour, replacing Leaflet's stock blue teardrop marker.
+const propertyIcon = window.L ? L.divIcon({className: 'property-marker',
+  html: '<svg width="26" height="34" viewBox="0 0 26 34" xmlns="http://www.w3.org/2000/svg"><path d="M13 0C5.8 0 0 5.8 0 13c0 9.7 13 21 13 21s13-11.3 13-21C26 5.8 20.2 0 13 0z" fill="#2457d6"/><circle cx="13" cy="13" r="5" fill="#fff"/></svg>',
+  iconSize: [26, 34], iconAnchor: [13, 34], popupAnchor: [0, -30]}) : null;
+// Splits the overlay checklist into labelled sections (Leaflet's layer control has no native grouping) --
+// `groups` in the same order the overlay entries were added to the `overlays` object.
+function groupOverlayControl(control, groups) {
+  const list = control.getContainer().querySelector('.leaflet-control-layers-overlays');
+  if (!list) return;
+  const items = [...list.children];
+  let offset = 0;
+  groups.forEach(g => {
+    if (g.count > 0 && items[offset]) {
+      const h = document.createElement('div');
+      h.className = 'layer-group-label'; h.textContent = g.label;
+      list.insertBefore(h, items[offset]);
+    }
+    offset += g.count;
+  });
+}
 function drawMap(d) {
   if (!window.L || !L.esri) { $('#map').innerHTML = '<p class="err" style="padding:12px">Map libraries could not load (offline?).</p>'; return; }
   if (MAP) { MAP.remove(); MAP = null; }
@@ -662,8 +703,11 @@ function drawMap(d) {
   MAP = L.map('map', {maxBounds: limit, maxBoundsViscosity: 1.0}).setView(center, 18);
   MAP.setMinZoom(MAP.getBoundsZoom(limit, true));
   MAP._propertyCenter = center;
-  const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 20, maxNativeZoom: 19,
-    attribution: '&copy; OpenStreetMap contributors'});
+  // CartoDB Positron: a muted light basemap (free, no key) for a calmer default view than raw OSM tiles --
+  // same OpenStreetMap data underneath, just redrawn.
+  const streets = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {maxZoom: 20,
+    maxNativeZoom: 19, subdomains: 'abcd', detectRetina: true,
+    attribution: '&copy; OpenStreetMap contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'});
   const sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     {maxZoom: 20, maxNativeZoom: 19, attribution: 'Imagery &copy; Esri'});
   // Queensland Government statewide imagery (SISP, 10 cm in Brisbane): the same source as the Brisbane City Plan map,
@@ -671,9 +715,15 @@ function drawMap(d) {
   const qldSat = L.tileLayer('https://spatial-img.information.qld.gov.au/arcgis/rest/services/Basemaps/LatestStateProgram_AllUsers/ImageServer/tile/{z}/{y}/{x}',
     {maxZoom: 21, maxNativeZoom: 20, attribution: 'Imagery &copy; State of Queensland (Department of Resources) and Brisbane City Council'}).addTo(MAP);   // the default basemap
   const overlays = {};
-  const popup = f => '<div class="popup"><table>' + Object.entries(f.properties || {})
-      .filter(([k, v]) => v !== null && v !== '' && !/^(shape|objectid|fid)/i.test(k))
-      .map(([k, v]) => `<tr><td>${esc(k)}</td><td>${esc(fmtVal(k, v))}</td></tr>`).join('') + '</table></div>';
+  // Shows the first few non-empty fields directly; the rest (raw GeoJSON attributes, which vary by layer) sit
+  // behind "All fields" so the popup reads as a feature summary, not a database dump, without hiding anything.
+  const popup = f => {
+    const entries = Object.entries(f.properties || {}).filter(([k, v]) => v !== null && v !== '' && !/^(shape|objectid|fid)/i.test(k));
+    const row = ([k, v]) => `<div class="popup-row"><span class="popup-k">${esc(k)}</span><span class="popup-v">${esc(fmtVal(k, v))}</span></div>`;
+    const head = entries.slice(0, 4), rest = entries.slice(4);
+    return '<div class="popup">' + head.map(row).join('')
+      + (rest.length ? `<details><summary>All ${entries.length} fields</summary>${rest.map(row).join('')}</details>` : '') + '</div>';
+  };
   // drawing order: planning layers at the bottom, site constraints above, power lines on top
   MAP.createPane('constraints').style.zIndex = 420;
   MAP.createPane('flood').style.zIndex = 430;
@@ -683,11 +733,12 @@ function drawMap(d) {
     .forEach((s, i) => {
       const c = COLORS[i % COLORS.length];
       const lyr = new ClippedLayer({layer: s.layer, name: s.source, category: 'Zone', geometry: 'polygon'},
-        () => ({color: c, weight: 2, fillColor: c, fillOpacity: 0.12}), f => `<b>${esc(s.source)}</b>` + popup(f));
+        () => ({color: c, weight: 2, fillColor: c, fillOpacity: 0.12}), f => `<div class="popup-title">${esc(s.source)}</div>` + popup(f));
       const on = s.hit || s.what === 'Zone' || (s.what !== 'Overlay' && !/^(none|not)/.test(s.result));
       const name = `<span style="color:${c}">&#9632;</span> ${esc(s.what === 'Overlay' ? s.source : s.what)}${s.hit ? ' <b>(on this lot)</b>' : ''}`;
       overlays[name] = lyr; if (on) lyr.addTo(MAP);
     });
+  const zoneCount = Object.keys(overlays).length;
   (L0.site_constraints || []).filter(c => c.status === 'ok' && /\/(FeatureServer|MapServer)\/\d+$/.test(c.layer)).forEach(c => {
     const col = catColor(c.category), power = c.category === 'Electricity';
     // the same filter as the check, so the map shows what was tested (only easements, only substations …)
@@ -696,12 +747,16 @@ function drawMap(d) {
       const underground = p.ASSET_TYPE === 'UG' || p.UG_OH === 'U';
       if (c.geometry === 'polygon') {
         // areas: the publisher's colours, filled without outlines, as the councils draw them. Flood and other
-        // modelled overlays are traced from 2.5–5 m model grid cells; an outline traces every cell step.
+        // modelled overlays are traced from 2.5-5 m model grid cells, each its own tiny polygon (see features.ts) --
+        // at a low fillOpacity, same-value neighbouring cells each anti-alias their shared edge independently and
+        // double-blend it against the basemap, which reads as a visible seam/checkerboard. Near-solid fill makes
+        // touching same-colour cells indistinguishable (same look official flood-map viewers use: solid colour
+        // bands with a legend, not a translucent wash); anyone who wants the plain photo can toggle the layer off.
         // Property-shaped areas (easements, heritage places) keep a thin edge because the boundary itself matters.
         const fill = areaColor(c, p);
         const edged = ['Easements', 'Heritage', 'Buildings'].includes(c.category);
         return {stroke: edged, color: fill, weight: 1.5, opacity: 0.9, fillColor: fill,
-          fillOpacity: ['Noise', 'Airport'].includes(c.category) ? 0.15 : 0.3};
+          fillOpacity: ['Noise', 'Airport'].includes(c.category) ? 0.45 : 0.78};
       }
       return {color: col, weight: power ? 4 : c.hit ? 3 : 2, opacity: 0.95,
         dashArray: power ? (underground ? '8 6' : null) : '6 4', fillOpacity: 0};
@@ -714,11 +769,18 @@ function drawMap(d) {
     const pane = 'constraints';
     const pointToLayer = c.geometry === 'point' ? (g, ll) => L.circleMarker(ll, {radius: power ? 6 : 5, color: '#fff', weight: 1.5,
       fillColor: col, fillOpacity: 1, pane, renderer: paneRenderer(MAP)}) : undefined;
-    const lyr = new ClippedLayer(c, style, f => `<b>${esc(c.name)}</b>` + popup(f), pointToLayer);
+    const lyr = new ClippedLayer(c, style, f => `<div class="popup-title">${esc(c.name)}</div>` + popup(f), pointToLayer);
     overlays[`${swatch(col)} ${esc(c.category)}: ${esc(c.name)}${c.hit ? ' <b>(on this lot)</b>' : ''}`] = lyr;
     // water mains normally run in the road beside the lot, so they are drawn whether or not one touches the lot
     if (c.hit || c.category === 'Buildings' || /water (pressure )?main/i.test(c.name)) lyr.addTo(MAP);
   });
+  // Queensland Fire Department's Bushfire Prone Area (SEQ, July 2017): published only as a picture map, so it cannot be
+  // tested against the lot. Shown for reference; switched on where bushfire is not checked automatically (Ipswich).
+  const qfd = L.esri.tiledMapLayer({url: 'https://tiles.arcgis.com/tiles/vkTwD8kHw2woKBqV/arcgis/rest/services/Bushfire_Prone_Areas/MapServer',
+    opacity: 0.55, pane: 'constraints', attribution: 'Bushfire Prone Area &copy; Queensland Fire Department'});
+  overlays[`${swatch('#dc2626')} Bushfire prone area (QFD, picture only)${(L0.not_checked || []).includes('Bushfire') ? ' <b>(not checked automatically)</b>' : ''}`] = qfd;
+  if ((L0.not_checked || []).includes('Bushfire')) qfd.addTo(MAP);
+  const constraintsCount = Object.keys(overlays).length - zoneCount;
   let home = () => MAP.setView(center, 18);
   if (L0.parcel_geometry) {
     const parcel = L.polygon((L0.parcel_map_geometry || L0.parcel_geometry).map(r => r.map(([x, y]) => [y, x])),
@@ -746,14 +808,14 @@ function drawMap(d) {
     return div;
   };
   compass.addTo(MAP);
-  // Queensland Fire Department's Bushfire Prone Area (SEQ, July 2017): published only as a picture map, so it cannot be
-  // tested against the lot. Shown for reference; switched on where bushfire is not checked automatically (Ipswich).
-  const qfd = L.esri.tiledMapLayer({url: 'https://tiles.arcgis.com/tiles/vkTwD8kHw2woKBqV/arcgis/rest/services/Bushfire_Prone_Areas/MapServer',
-    opacity: 0.55, pane: 'constraints', attribution: 'Bushfire Prone Area &copy; Queensland Fire Department'});
-  overlays[`${swatch('#dc2626')} Bushfire prone area (QFD, picture only)${(L0.not_checked || []).includes('Bushfire') ? ' <b>(not checked automatically)</b>' : ''}`] = qfd;
-  if ((L0.not_checked || []).includes('Bushfire')) qfd.addTo(MAP);
-  L.marker(center).addTo(MAP).bindPopup(esc(L0.geocode ? L0.geocode.address : `${L0.lat}, ${L0.lon}`));
-  L.control.layers({'Streets': osm, 'Aerial imagery (Qld, latest)': qldSat, 'Aerial imagery (Esri)': sat}, overlays, {collapsed: Object.keys(overlays).length > 12}).addTo(MAP);
+  const parcelCount = Object.keys(overlays).length - zoneCount - constraintsCount;
+  L.marker(center, {icon: propertyIcon}).addTo(MAP).bindPopup(esc(L0.geocode ? L0.geocode.address : `${L0.lat}, ${L0.lon}`));
+  const layersControl = L.control.layers({'Streets': streets, 'Aerial imagery (Qld, latest)': qldSat, 'Aerial imagery (Esri)': sat}, overlays, {collapsed: Object.keys(overlays).length > 12}).addTo(MAP);
+  groupOverlayControl(layersControl, [
+    {label: 'Zoning & planning', count: zoneCount},
+    {label: 'Site constraints', count: constraintsCount},
+    {label: 'Property', count: parcelCount},
+  ]);
 }
 </script>
 </body>
