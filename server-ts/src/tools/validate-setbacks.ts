@@ -31,11 +31,15 @@ const TOOLS = path.dirname(fileURLToPath(import.meta.url));
  *  front/side/rear setbacks for Class 10, so they are primary too. Everything else setback-like is reported separately.
  *  An empty measurement list means any measurement is accepted. */
 const PRIMARY: Record<string, { measurements: string[]; boundaries: string[] }> = {
-  "SETBACK.FRONTAGE": { measurements: ["SCHEME_SETBACK_FRONT"], boundaries: ["PRIMARY_FRONTAGE"] },
+  // SETBACK.FRONTAGE also covers a PRESENCE-type "is it behind the main building line" test (e.g. Moreton Bay's
+  // Emerging community outbuilding-position rule) -- not just a plain distance.
+  "SETBACK.FRONTAGE": { measurements: ["SCHEME_SETBACK_FRONT", "CMB_EC_OUTBUILDING_MAIN_BUILDING_LINE_POSITION"], boundaries: ["PRIMARY_FRONTAGE"] },
   "SETBACK.SIDE": { measurements: ["SCHEME_SETBACK_SIDE"], boundaries: ["SIDE"] },
   "SETBACK.REAR": { measurements: ["SCHEME_SETBACK_REAR"], boundaries: ["REAR"] },
   "SETBACK.SIDE_REAR": { measurements: ["SCHEME_SETBACK_SIDE", "SCHEME_SETBACK_REAR"], boundaries: ["SIDE", "REAR"] },
-  "GARAGE.FRONTAGE": { measurements: ["SCHEME_SETBACK_FRONT", "SCHEME_GARAGE_CARPORT"], boundaries: ["PRIMARY_FRONTAGE"] },
+  // GARAGE.FRONTAGE also covers the QDC-style opening-width test (MP 1.1 A1(b)(ii): a WIDTH measurement, not a
+  // distance) and Mount Isa's AO23.2(c) "is the carport side facing the frontage open" PRESENCE test.
+  "GARAGE.FRONTAGE": { measurements: ["SCHEME_SETBACK_FRONT", "SCHEME_GARAGE_CARPORT", "GARAGE_OPENING_WIDTH_FACING_STREET", "MICC_CARPORT_FRONTAGE_SIDE_OPEN"], boundaries: ["PRIMARY_FRONTAGE"] },
   "SETBACK.SIDE_REAR.BTB": { measurements: ["SCHEME_SETBACK_SIDE", "SCHEME_SETBACK_REAR"], boundaries: ["SIDE", "REAR"] },
   "POOL.SETBACK": { measurements: [], boundaries: ["PRIMARY_FRONTAGE", "SIDE", "REAR"] },
   "POOL.SETBACK.FRONTAGE": { measurements: [], boundaries: ["PRIMARY_FRONTAGE"] },
@@ -136,7 +140,7 @@ async function loadRecords(db: Db, lg: string): Promise<any[]> {
   return db.q(`
     SELECT coalesce(json_agg(x ORDER BY x.rule_version_id), '[]') FROM (
       SELECT rv.rule_version_id, rv.rule_id, r.topic, r.title, rv.status, rv.verification, rv.automatable, rv.role,
-             rv.measurement_id, rv.operator, rv.value_expr, rv.unit, rv.effective_from, rv.effective_to,
+             rv.measurement_id, m.measurement_type, rv.operator, rv.value_expr, rv.unit, rv.effective_from, rv.effective_to,
              rv.interpretation_notes, i.instrument_id, i.lg_id AS instrument_lg, i.kind AS instrument_kind,
              iv.instrument_version_id, iv.instrument_id AS iv_instrument, iv.version_label, iv.effective_from AS iv_from,
              iv.effective_to AS iv_to, iv.status AS iv_status, iv.source_url AS iv_url,
@@ -163,6 +167,7 @@ async function loadRecords(db: Db, lg: string): Promise<any[]> {
                WHERE rr.type = 'REPLACES' AND rr.to_rule_version_id = rv.rule_version_id) AS replaced_by
         FROM regs.rule_versions rv
         JOIN regs.rules r USING (rule_id)
+        LEFT JOIN regs.measurements m ON m.measurement_id = rv.measurement_id
         JOIN regs.instruments i ON i.instrument_id = r.instrument_id
         JOIN regs.instrument_versions iv ON iv.instrument_version_id = rv.instrument_version_id
        WHERE i.kind = 'PLANNING_SCHEME'
@@ -349,12 +354,21 @@ async function main(): Promise<number> {
           if (r.automatable) { flag(r, "ERROR", "INTEGRITY_ACTIVE_UNENCODED", "ACTIVE automatable rule has an unencoded value"); counters.integrity++; }
           else flag(r, "WARNING", "MANUAL_REVIEW_QUALITATIVE", "ACTIVE rule is qualitative (unencoded value); always manual review", { evidence: clip(r.value_expr?.text) });
         }
-        if (active && r.role !== "EXEMPTION" && r.unit !== "m") { flag(r, "ERROR", "INTEGRITY_UNIT", `Unit is ${JSON.stringify(r.unit)}, expected m`); counters.integrity++; }
+        // PRESENCE measurements (e.g. "is the carport side open", "is it behind the main building line") are
+        // boolean, not a distance -- they carry no unit by design, unlike every other active primary rule here.
+        if (active && r.role !== "EXEMPTION" && r.measurement_type !== "PRESENCE" && r.unit !== "m") { flag(r, "ERROR", "INTEGRITY_UNIT", `Unit is ${JSON.stringify(r.unit)}, expected m`); counters.integrity++; }
         if (!active && r.unit && !/^(m|metres?)$/i.test(r.unit)) flag(r, "WARNING", "INTEGRITY_UNIT", `Draft unit ${JSON.stringify(r.unit)}`);
         for (const v of out.values) if (!(v >= 0 && v <= 500)) { flag(r, "ERROR", "INTEGRITY_VALUE_RANGE", `Setback value ${v} outside 0–500 m`); counters.integrity++; }
         if (active && r.role !== "EXEMPTION" && r.operator !== ">=") flag(r, "WARNING", "INTEGRITY_OPERATOR", `Operator ${r.operator} (minimum setbacks use >=)`);
         if (r.status === "SUPERSEDED" && !r.replaced_by.some((x: string) => x.endsWith(":ACTIVE"))) {
-          flag(r, "ERROR", "INTEGRITY_SUPERSEDED_ORPHAN", "SUPERSEDED but no ACTIVE rule REPLACES it"); counters.integrity++;
+          // Two distinct cases read identically here: a lost REPLACES link (a real bug), and a draft the
+          // researcher deliberately superseded with nothing to replace it, because the source text itself has no
+          // scheme-specific figure (QDC/QHC governs) -- confirmed by example on Moreton Bay's mb_dh_t93116_urban_*
+          // and mb_rural_rad3_*_non_dwelling rows, each carrying its own dated "RESOLVED ... no active rule needed"
+          // interpretation_notes. Only a human can tell those apart, so this is a WARNING (needing a look), not an
+          // ERROR (failing the council), unlike every other integrity check here, which has no legitimate exception.
+          flag(r, "WARNING", "INTEGRITY_SUPERSEDED_ORPHAN",
+            "SUPERSEDED but no ACTIVE rule REPLACES it -- either a lost REPLACES link, or deliberately superseded by a documented-absence finding (check interpretation_notes)");
         }
 
         // classification (topic vs measurement vs boundary condition); active requirements/relaxations only — drafts carry

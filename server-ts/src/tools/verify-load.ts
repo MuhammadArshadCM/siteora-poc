@@ -55,7 +55,15 @@ async function main(): Promise<number> {
         ovl: [await countKind("ref_label LIKE 'overlay %'"), (d.overlays_affecting_siting ?? []).length],
         issues: [await q(`SELECT count(*) FROM regs.open_issues WHERE instrument_id = ${lit(inst)}`), (d.open_questions ?? []).length],
       };
-      const ok = textOk === rules.length && ruleRows === expectedRules.length && Object.values(got).every(([a, b]) => a === b);
+      // "issues" is the one count that's expected to grow on its own: research_key-backed counts (defs/loa/qdc/ovl)
+      // are a fixed extraction from the scheme text, frozen at research time, but open_issues is a live,
+      // append-only ledger that later maintenance sessions keep adding to (and resolving) long after a council's
+      // research file was last hand-edited -- confirmed here (2026-11-18) by checking that every one of Brisbane's
+      // 19 open_issues rows already carries a resolved_at date, i.e. they're follow-up triage, not the original
+      // open_questions. So the DB having MORE issues than the file recorded is healthy, not a mismatch; having
+      // FEWER would mean a question got lost.
+      const ok = textOk === rules.length && ruleRows === expectedRules.length
+        && Object.entries(got).every(([k, [a, b]]) => (k === "issues" ? a >= b : a === b));
       problems += ok ? 0 : 1;
       const f = (k: string) => `${got[k][0]}/${got[k][1]}`;
       console.log(`${left(slugName, 15)} ${right(rules.length, 6)} ${right(textOk, 8)} ${right(ruleRows, 4)}/${left(expectedRules.length, 4)} ${right(f("defs"), 5)} ${right(f("loa"), 4)} `

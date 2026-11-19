@@ -6,7 +6,7 @@
 
 * Database **`siteora`**, schema **`regs`** (26 tables, 7 views). The `public` schema is intentionally empty.
 * In pgAdmin / DBeaver: `siteora → Schemas → regs → Tables`. `search_path` is set to `regs, public`, so plain `SELECT * FROM zones` works after reconnecting.
-* Load or reload everything: `psql -h localhost -U postgres -d siteora -c "DROP SCHEMA IF EXISTS regs CASCADE"` then `psql -h localhost -U postgres -d siteora -v ON_ERROR_STOP=1 -f db/load_all.sql`.
+* Build or rebuild the database from scratch: `npm run migration:run` against an empty `siteora` database (server-ts/src/migrations/, 100+ migrations, each forward-only). `db/load_all.sql` is a historical snapshot only — it replays the project's hand-applied SQL history up to 2026-11-13 (db/001 through db/069), but every change since then was authored as a migration with no backing db/0xx.sql file, so load_all.sql can no longer build a complete, current database on its own.
 * Verify: `npm run verify-load` (research files → tables, record by record) and `npm run check` (integrity + worked examples).
 
 ## Relationships
@@ -119,7 +119,7 @@ A legal document: Act, Regulation, QDC part, planning scheme, Australian Standar
 | `citation` | text | yes |  |
 | `notes` | text | yes |  |
 
-#### `instrument_versions` — 27 rows
+#### `instrument_versions` — 28 rows
 
 One published version / reprint of a document, with dates, URL, archived file and SHA-256.
 
@@ -143,7 +143,7 @@ One published version / reprint of a document, with dates, URL, archived file an
 | `verified_by` | text | yes |  |
 | `notes` | text | yes |  |
 
-#### `provisions` — 1,125 rows
+#### `provisions` — 1,152 rows
 
 One clause, table row or figure with its exact words (verbatim_text). Council provisions carry research_key = the record in research/councils/*.json they came from.
 
@@ -204,7 +204,7 @@ The 41 zones a planning scheme may use (Planning Regulation 2017 s6, sch 2).
 | `category` | text | no |  |
 | `source_provision_id` | bigint | yes | → `provisions.provision_id` |
 
-#### `zones` — 112 rows
+#### `zones` — 113 rows
 
 Each council scheme's zones, linked to the regulated zone, with whether a dwelling house is a permitted use.
 
@@ -237,7 +237,7 @@ Precincts inside a zone.
 | `name` | text | no |  |
 | `notes` | text | yes |  |
 
-#### `overlays` — 54 rows
+#### `overlays` — 62 rows
 
 Overlays (flood, character, ridges, canals…).
 
@@ -253,7 +253,7 @@ Overlays (flood, character, ridges, canals…).
 | `is_relevant_overlay` | boolean | yes |  |
 | `notes` | text | yes |  |
 
-#### `local_plans` — 14 rows
+#### `local_plans` — 15 rows
 
 Neighbourhood / local plans.
 
@@ -326,7 +326,7 @@ A document's own words mapped to the structure tree (not yet populated).
 | `definition_provision_id` | bigint | yes | → `provisions.provision_id` |
 | `notes` | text | yes |  |
 
-#### `facts` — 117 rows
+#### `facts` — 121 rows
 
 The only inputs a rule may use (lot area, wall height, boundary type…), with type, unit and how to derive them.
 
@@ -343,7 +343,7 @@ The only inputs a rule may use (lot area, wall height, boundary type…), with t
 | `derivation` | text | yes |  |
 | `definition_provision_id` | bigint | yes | → `provisions.provision_id` |
 
-#### `measurements` — 47 rows
+#### `measurements` — 65 rows
 
 What a numeric requirement is measured on: from where, to where, how.
 
@@ -364,7 +364,7 @@ What a numeric requirement is measured on: from where, to where, how.
 
 ### Rules — the regulatory content
 
-#### `rules` — 898 rows
+#### `rules` — 937 rows
 
 Stable identity of a rule across versions (id, document, topic, title).
 
@@ -378,7 +378,7 @@ Stable identity of a rule across versions (id, document, topic, title).
 | `title` | text | no |  |
 | `notes` | text | yes |  |
 
-#### `rule_versions` — 898 rows
+#### `rule_versions` — 937 rows
 
 The rule content for one period: role, regime, enforceability, measurement, operator, value/formula (value_expr), unit, consequence of failure, dates, status (DRAFT/ACTIVE/SUPERSEDED), verification, automatable.
 
@@ -407,7 +407,7 @@ The rule content for one period: role, regime, enforceability, measurement, oper
 | `interpretation_notes` | text | yes |  |
 | `created_at` | timestamp with time zone | no |  |
 
-#### `rule_scopes` — 2,730 rows
+#### `rule_scopes` — 2,820 rows
 
 Where a rule applies: council, zone, precinct, local plan, overlay (include or exclude).
 
@@ -425,7 +425,7 @@ Where a rule applies: council, zone, precinct, local plan, overlay (include or e
 | `local_plan_precinct_id` | text | yes | → `local_plan_precincts.local_plan_precinct_id` |
 | `exclude` | boolean | no |  |
 
-#### `rule_subjects` — 1,428 rows
+#### `rule_subjects` — 1,493 rows
 
 Which structure types a rule applies to (include or exclude).
 
@@ -437,7 +437,7 @@ Which structure types a rule applies to (include or exclude).
 | `structure_type_id` | text | no | **PK** → `structure_types.structure_type_id` |
 | `exclude` | boolean | no |  |
 
-#### `rule_conditions` — 862 rows
+#### `rule_conditions` — 886 rows
 
 When a rule applies, e.g. lot_area_m2 >= 450. Rows with the same group_no are AND-ed; groups are OR-ed.
 
@@ -455,7 +455,7 @@ When a rule applies, e.g. lot_area_m2 >= 450. Rows with the same group_no are AN
 | `source_provision_id` | bigint | yes | → `provisions.provision_id` |
 | `notes` | text | yes |  |
 
-#### `rule_sources` — 985 rows
+#### `rule_sources` — 1,032 rows
 
 Why: the provision(s) a rule relies on, with the exact quote. Every active rule has a PRIMARY source.
 
@@ -468,7 +468,7 @@ Why: the provision(s) a rule relies on, with the exact quote. Every active rule 
 | `role` | text | no | **PK** |
 | `quote` | text | yes |  |
 
-#### `rule_relationships` — 1,478 rows
+#### `rule_relationships` — 1,492 rows
 
 Precedence between rules: OVERRIDES, REPLACES, EXEMPTS, RELAXES, SUPPLEMENTS, ALTERNATIVE_TO, CONDITIONAL_ON, FALLS_BACK_TO, UNRESOLVED, each with its legal basis.
 
@@ -506,7 +506,7 @@ Who checked which rule/provision, when, how (not yet populated).
 | `result` | verification_status | no |  |
 | `notes` | text | yes |  |
 
-#### `open_issues` — 167 rows
+#### `open_issues` — 175 rows
 
 Known gaps and questions that block automation (incl. each research file's open_questions).
 
@@ -522,6 +522,25 @@ Known gaps and questions that block automation (incl. each research file's open_
 | `description` | text | no |  |
 | `raised_at` | date | no |  |
 | `resolved_at` | date | yes |  |
+
+#### `blocked_sources` — 7 rows
+
+External council/department sources that returned HTTP 403 (or similar) to automated fetching, so an admin can see them in one place and upload a document fetched manually in a browser.
+
+*Loaded by:* db/067
+
+| Column | Type | Null | Key / references |
+|---|---|---|---|
+| `blocked_source_id` | bigint | no | **PK** |
+| `issue_id` | bigint | yes | → `open_issues.issue_id` |
+| `lg_id` | text | yes |  |
+| `label` | text | no |  |
+| `url` | text | yes |  |
+| `status` | text | no |  |
+| `uploaded_file_path` | text | yes |  |
+| `uploaded_at` | timestamp with time zone | yes |  |
+| `notes` | text | yes |  |
+| `created_at` | timestamp with time zone | no |  |
 
 ## Views
 

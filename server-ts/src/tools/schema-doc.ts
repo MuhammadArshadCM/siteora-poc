@@ -62,7 +62,7 @@ async function main(): Promise<number> {
     "",
     "* Database **`siteora`**, schema **`regs`** (26 tables, 7 views). The `public` schema is intentionally empty.",
     "* In pgAdmin / DBeaver: `siteora → Schemas → regs → Tables`. `search_path` is set to `regs, public`, so plain `SELECT * FROM zones` works after reconnecting.",
-    "* Load or reload everything: `psql -h localhost -U postgres -d siteora -c \"DROP SCHEMA IF EXISTS regs CASCADE\"` then `psql -h localhost -U postgres -d siteora -v ON_ERROR_STOP=1 -f db/load_all.sql`.",
+    "* Build or rebuild the database from scratch: `npm run migration:run` against an empty `siteora` database (server-ts/src/migrations/, 100+ migrations, each forward-only). `db/load_all.sql` is a historical snapshot only — it replays the project's hand-applied SQL history up to 2026-11-13 (db/001 through db/069), but every change since then was authored as a migration with no backing db/0xx.sql file, so load_all.sql can no longer build a complete, current database on its own.",
     "* Verify: `npm run verify-load` (research files → tables, record by record) and `npm run check` (integrity + worked examples).",
     "",
     "## Relationships",

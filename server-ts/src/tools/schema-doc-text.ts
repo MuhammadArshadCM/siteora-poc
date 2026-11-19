@@ -152,6 +152,11 @@ export const GROUPS: [string, [string, string, string][]][] = [
     "open_issues",
     "Known gaps and questions that block automation (incl. each research file's open_questions).",
     "db/021, db/030"
+   ],
+   [
+    "blocked_sources",
+    "External council/department sources that returned HTTP 403 (or similar) to automated fetching, so an admin can see them in one place and upload a document fetched manually in a browser.",
+    "db/067"
    ]
   ]
  ]
